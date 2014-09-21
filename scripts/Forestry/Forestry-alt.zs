@@ -3,6 +3,12 @@ Main script by DreamMasterXXl
 Minor tweak by SatanicSanta
 */
 
+recipes.remove(<Forestry:sturdyMachine>);
+recipes.addShaped(<Forestry:sturdyMachine>, [
+[<gregtech:gt.metaitem.01:17300>, <gregtech:gt.metaitem.01:17300>, <gregtech:gt.metaitem.01:17300>],
+[<gregtech:gt.metaitem.01:17300>, <IC2:blockMachine>, <gregtech:gt.metaitem.01:17300>],
+[<gregtech:gt.metaitem.01:17300>, <gregtech:gt.metaitem.01:17300>, <gregtech:gt.metaitem.01:17300>]]);
+
 recipes.remove(<Forestry:factory:1>);
 recipes.addShaped(<Forestry:factory:1>, [
 [<gregtech:gt.metaitem.01:17300>, <gregtech:gt.metaitem.01:32621>, <gregtech:gt.metaitem.01:17300>],
