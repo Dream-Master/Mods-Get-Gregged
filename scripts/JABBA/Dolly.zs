@@ -7,7 +7,7 @@ recipes.remove(<JABBA:mover>);
 recipes.addShaped(<JABBA:mover>, [
 [null, <minecraft:iron_bars>, <gregtech:gt.metaitem.01:23032>],
 [null, <minecraft:iron_bars>, <gregtech:gt.metaitem.01:23032>],
-[<Railcraft:part.plate>, <Railcraft:part.plate>, <gregtech:gt.metaitem.01:25880>]]);
+[<ore:plateIron>, <ore:plateIron>, <gregtech:gt.metaitem.01:25880>]]);
 
 
 recipes.remove(<JABBA:mover>);
