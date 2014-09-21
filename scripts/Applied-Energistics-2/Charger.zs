@@ -6,6 +6,6 @@ recipes.remove(<appliedenergistics2:tile.BlockQuartzGrowthAccelerator>);
 recipes.remove(<appliedenergistics2:tile.BlockCharger>);
 
 recipes.addShaped(<appliedenergistics2:tile.BlockCharger>, [
-[<Railcraft:part.plate>, <appliedenergistics2:item.ItemMultiMaterial:7>, <Railcraft:part.plate>],
-[<Railcraft:part.plate>, <IC2:blockMachine>, <Railcraft:part.plate>],
-[<Railcraft:part.plate>, <appliedenergistics2:item.ItemMultiMaterial:7>, <Railcraft:part.plate>]]);
+[<ore:plateIron>, <appliedenergistics2:item.ItemMultiMaterial:7>, <ore:plateIron>],
+[<ore:plateIron>, <IC2:blockMachine>, <ore:plateIron>],
+[<ore:plateIron>, <appliedenergistics2:item.ItemMultiMaterial:7>, <ore:plateIron>]]);
