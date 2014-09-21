@@ -3,13 +3,13 @@
 recipes.remove(<Forestry:factory2:1>);
 
 recipes.addShaped(<Forestry:factory2:1>, [
-[<Railcraft:part.plate>, <Railcraft:tile.railcraft.machine.beta:14>, <Railcraft:part.plate>],
-[<Railcraft:part.plate>, <Forestry:sturdyMachine>, <Railcraft:part.plate>],
-[<Railcraft:part.plate>, <Railcraft:tile.railcraft.machine.beta:14>, <Railcraft:part.plate>]]);
+[<ore:plateIron>, <Railcraft:tile.railcraft.machine.beta:14>, <ore:plateIron>],
+[<ore:plateIron>, <Forestry:sturdyMachine>, <ore:plateIron>],
+[<ore:plateIron>, <Railcraft:tile.railcraft.machine.beta:14>, <ore:plateIron>]]);
 
 recipes.remove(<Forestry:factory>);
 
 recipes.addShaped(<Forestry:factory>, [
 [<Forestry:canEmpty>, <Railcraft:tile.railcraft.machine.beta:14>, <Forestry:canEmpty>],
-[<Railcraft:part.plate>, <Railcraft:part.plate>, <Railcraft:part.plate>],
+[<ore:plateIron>, <ore:plateIron>, <ore:plateIron>],
 [<Forestry:canEmpty>, <Railcraft:tile.railcraft.machine.beta:14>, <Forestry:canEmpty>]]);
