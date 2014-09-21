@@ -1,3 +1,5 @@
+//Created by malcanteth
+
 //sturdy casing nerf
 recipes.remove(<Forestry:sturdyMachine>);
 recipes.addShaped(<Forestry:sturdyMachine>, [[<ore:plateBronze>, <ore:plateBronze>, <ore:plateBronze>], [<ore:plateBronze>, <ore:craftingToolWrench>.transformDamage(800), <ore:plateBronze>], [<ore:plateBronze>, <ore:plateBronze>, <ore:plateBronze>]]);
@@ -14,7 +16,6 @@ recipes.remove(<Forestry:gearTin>);
 recipes.remove(<Forestry:engine:*>);
 //electric engine
 recipes.addShaped(<Forestry:engine:0>, [[<ore:plateTin>, <ore:plateTin>, <ore:plateTin>], [null, <minecraft:glass>, null], [<ore:gearTin>, <ore:craftingPiston>, <ore:gearTin>]]);
-//Created by malcanteth
 
 //peat-fired engine
 recipes.addShaped(<Forestry:engine:1>, [[<ore:plateCopper>, <ore:plateCopper>, <ore:plateCopper>], [null, <minecraft:glass>, null], [<ore:gearCopper>, <ore:craftingPiston>, <ore:gearCopper>]]);
