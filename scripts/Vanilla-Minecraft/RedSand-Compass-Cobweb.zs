@@ -1,11 +1,8 @@
-//Created by DreamMasterXXL
+//Created by DreamMasterXXL, tweaked by Chocohead
 
 recipes.remove(<minecraft:compass>);
 
-recipes.addShaped(<minecraft:sand:1>, [
-[<minecraft:sand>, <minecraft:dye:1>, null],
-[null, null, null],
-[null, null, null]]);
+recipes.addShapeless(<minecraft:sand:1>, [<minecraft:sand:0>, <ore:dyeRed>]);
 
 recipes.addShaped(<minecraft:web>, [
 [<minecraft:string>, null, <minecraft:string>],
