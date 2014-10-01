@@ -2,6 +2,15 @@
 
 import mods.gregtech.Assembler;
 import mods.gregtech.Wiremill;
+
+<ore:certusQuartzPure>.add(<appliedenergistics2:item.ItemMultiMaterial:1>);
+<ore:certusQuartzPure>.add(<appliedenergistics2:item.ItemMultiMaterial:10>);
+<ore:certusQuartzPure>.add(<gregtech:gt.metaitem.01:8516>);
+
+//WARNING!!!
+//Remove this line if you don't have RotaryCraft installed!
+<ore:certusQuartzPure>.add(<RotaryCraft:rotarycraft_item_modingots:9>);
+
  
 val quartzglass = <ore:plateGlass>;
  
@@ -136,9 +145,9 @@ recipes.addShaped(<appliedenergistics2:item.ItemSpatialStorageCell.128Cubed>,
  
 //1k ME
 recipes.addShaped(<appliedenergistics2:item.ItemMultiMaterial:35>,
- [[<ore:plateRedAlloy>, <ore:gemCertusQuartz>, <ore:plateRedAlloy>],
-  [<ore:gemCertusQuartz>, <appliedenergistics2:item.ItemMultiMaterial:22>, <ore:gemCertusQuartz>],
-  [<ore:plateRedAlloy>, <ore:gemCertusQuartz>, <ore:plateRedAlloy>]]);
+ [[<ore:plateRedAlloy>, <ore:certusQuartzPure>, <ore:plateRedAlloy>],
+  [<ore:certusQuartzPure>, <appliedenergistics2:item.ItemMultiMaterial:22>, <ore:certusQuartzPure>],
+  [<ore:plateRedAlloy>, <ore:certusQuartzPure>, <ore:plateRedAlloy>]]);
  
 //4k ME
 recipes.addShaped(<appliedenergistics2:item.ItemMultiMaterial:36>,
