@@ -1,4 +1,7 @@
-//Created by SteamT
+/*CREDITS
+SteamT for creating it initally
+digger6 for doing a lot of work on it
+*/
 
 import mods.gregtech.Assembler;
 import mods.gregtech.Wiremill;
