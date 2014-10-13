@@ -1,6 +1,6 @@
 //Created by DreamMasterXXL
 
-im port mods.thaumcraft.Arcane;
+import mods.thaumcraft.Arcane;
 
 recipes.remove(<Railcraft:tool.crowbar>);
 recipes.remove(<Railcraft:tool.crowbar.reinforced>);
