@@ -13,6 +13,11 @@ Assembler.addRecipe(<AdvancedSolarPanel:asp_crafting_items:3>, <AdvancedSolarPan
 //Enriched Sunnarium Alloy
 Assembler.addRecipe(<AdvancedSolarPanel:asp_crafting_items:4>, <AdvancedSolarPanel:asp_crafting_items:1>, <AdvancedSolarPanel:asp_crafting_items:3> *4,  1600, 256);
 
+//IC2
+
+//Solar Panels
+Assembler.addRecipe(<IC2:blockGenerator:3>, <IC2:blockMachine>, <gregtech:gt.metaitem.01:32750>,  6000, 8);
+
 //Iron Chests
 
 //Iron to Gold Chest
