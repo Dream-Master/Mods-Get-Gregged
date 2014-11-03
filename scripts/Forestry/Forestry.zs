@@ -468,8 +468,3 @@ recipes.addShaped(<Forestry:canEmpty> * 3, [
 [null, <ore:plateTin>, null],
 [<ore:plateTin>, <gregtech:gt.metatool.01:12>, <ore:plateTin>],
 [null, null, null]]);
-
-recipes.addShaped(<Forestry:canEmpty> * 3, [
-[null, <ore:plateIron>, null],
-[<ore:plateIron>, <gregtech:gt.metatool.01:12>, <ore:plateIron>],
-[null, null, null]]);
