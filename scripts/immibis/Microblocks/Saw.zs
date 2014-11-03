@@ -1,9 +1,15 @@
 //Created by DreamMasterXXL
 
+//remove Recipes
+
+//Hacksaw
 recipes.remove(<ImmibisMicroblocks:immibis.microblocksaw>);
 
+//add Recipes
+
+//Hacksaw
 recipes.addShaped(<ImmibisMicroblocks:immibis.microblocksaw>, [
 [null, null, null],
-[<gregtech:gt.metaitem.01:23032>, <gregtech:gt.metaitem.01:23032>, <gregtech:gt.metaitem.01:23032>],
-[<gregtech:gt.metaitem.02:7500>, <gregtech:gt.metaitem.02:7500>, <gregtech:gt.metaitem.01:28032>],
+[<ore:stickIron>, <ore:stickIron>, <ore:ringIron>],
+[<ore:toolHeadSawDiamond>, <ore:toolHeadSawDiamond>, <ore:stickIron>],
 [null, null, null]]);
