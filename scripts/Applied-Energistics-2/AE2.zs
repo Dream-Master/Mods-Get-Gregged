@@ -540,7 +540,7 @@ recipes.addShapeless(<appliedenergistics2:item.ItemSpatialStorageCell.128Cubed>,
 
 //Quartz Wrench
 recipes.addShaped(<appliedenergistics2:item.ToolCertusQuartzWrench>, [
-[<appliedenergistics2:item.ItemMultiMaterial:1>, <ore:craftingToolWrenche>, <appliedenergistics2:item.ItemMultiMaterial:1>],
+[<appliedenergistics2:item.ItemMultiMaterial:1>, <ore:craftingToolWrench>, <appliedenergistics2:item.ItemMultiMaterial:1>],
 [<appliedenergistics2:item.ItemMultiMaterial:1>, <appliedenergistics2:item.ItemMultiMaterial:1>, <appliedenergistics2:item.ItemMultiMaterial:1>],
 [null, <appliedenergistics2:item.ItemMultiMaterial:1>, null]]);
 
