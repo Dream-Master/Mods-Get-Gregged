@@ -1,5 +1,7 @@
-//
+//SteamT for creating it initally
+//digger6 for doing a lot of work on it
 //Some changings and addition by Dream MasterXXL
+
 //remove recipes
 
 //Crafting Unit
