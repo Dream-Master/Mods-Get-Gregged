@@ -105,3 +105,7 @@ recipes.addShapeless(<gregtech:gt.metaitem.01:2322> *3,
 recipes.addShapeless(<gregtech:gt.metaitem.01:2336> *3, 
 [<ore:dustIron>, <ore:dustThaumium>, <ore:dustThaumium>, <ore:dustThaumium>]);
 
+//Wood Ring
+recipes.addShaped(<gregtech:gt.metaitem.01:28809>, [
+[<gregtech:gt.metatool.01:34>, null, null],
+[<gregtech:gt.metaitem.01:17809>, null, null]]);
