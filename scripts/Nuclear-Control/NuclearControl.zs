@@ -30,6 +30,24 @@ recipes.remove(<IC2NuclearControl:blockNuclearControlLight>);
 recipes.remove(<IC2NuclearControl:ItemToolThermometer>);
 //Digital Themometer
 recipes.remove(<IC2NuclearControl:ItemToolDigitalThermometer>);
+//Remote Sensor Kit
+recipes.remove(<IC2NuclearControl:ItemRemoteSensorKit>);
+//Energy Sensor Kit
+recipes.remove(<IC2NuclearControl:ItemEnergySensorKit>);
+//Counter Sensor Kit
+recipes.remove(<IC2NuclearControl:ItemMultipleSensorKit>);
+//Liquid Sensor Kit
+recipes.remove(<IC2NuclearControl:ItemMultipleSensorKit:1>);
+//Generator Sensor Kit
+recipes.remove(<IC2NuclearControl:ItemMultipleSensorKit:2>);
+//Time Card
+recipes.remove(<IC2NuclearControl:ItemTimeCard>);
+//Range Upgrade
+recipes.remove(<IC2NuclearControl:ItemUpgrade>);
+//Color Upgrade
+recipes.remove(<IC2NuclearControl:ItemUpgrade:1>);
+//Text Card
+recipes.remove(<IC2NuclearControl:ItemTextCard>);
 
 //add recipes
 
@@ -116,3 +134,9 @@ recipes.addShaped(<IC2NuclearControl:ItemToolDigitalThermometer>, [
 [<IC2NuclearControl:ItemToolThermometer>, <ore:plateGlass>, null],
 [<gregtech:gt.metaitem.01:32702>, <gregtech:gt.metaitem.01:32740>, <gregtech:gt.metaitem.01:32702>],
 [null, <ore:plateGlass>, <IC2:itemRecipePart:3>]]);
+
+//Color Upgrade
+recipes.addShaped(<IC2NuclearControl:ItemUpgrade:1>, [
+[<ore:dyeRed>, <ore:dyeYellow>, <ore:dyeGreen>],
+[<ore:dyeWhite>, <ore:circuitAdvanced>, <ore:dyeMagenta>],
+[<ore:dyeBlack>, <ore:dyeCyan>, <ore:dyeBlue>]]);
