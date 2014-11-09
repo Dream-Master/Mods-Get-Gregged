@@ -8,13 +8,16 @@ recipes.remove(<IC2NuclearControl:blockNuclearControlMain>);
 recipes.remove(<IC2NuclearControl:blockNuclearControlMain:1>);
 //Howler Alarm
 recipes.remove(<IC2NuclearControl:blockNuclearControlMain:2>);
+//Remote Thermal Monitor
+recipes.remove(<IC2NuclearControl:blockNuclearControlMain:3>);
+//Industrial Information Panel
+recipes.remove(<IC2NuclearControl:blockNuclearControlMain:4>);
+//Information Panel Extender
+recipes.remove(<IC2NuclearControl:blockNuclearControlMain:5>);
 //Thermometer
 recipes.remove(<IC2NuclearControl:ItemToolThermometer>);
 //Digital Themometer
 recipes.remove(<IC2NuclearControl:ItemToolDigitalThermometer>);
-//Remote Thermal Monitor
-recipes.remove(<IC2NuclearControl:blockNuclearControlMain:3>);
-//
 
 //add recipes
 
@@ -26,7 +29,7 @@ recipes.addShaped(<IC2NuclearControl:blockNuclearControlMain>, [
 
 //Industrial Alarm
 recipes.addShaped(<IC2NuclearControl:blockNuclearControlMain:1>, [
-[<IC2:blockAlloyGlass>, <IC2NuclearControl:blockNuclearControlLight>, <IC2:blockAlloyGlass>],
+[<ore:glassReinforced>, <IC2NuclearControl:blockNuclearControlLight>, <ore:glassReinforced>],
 [<minecraft:repeater>, <IC2NuclearControl:blockNuclearControlMain:2>, <minecraft:repeater>],
 [<ore:cableGt01Gold>, <gregtech:gt.blockmachines:1>, <ore:cableGt01Gold>]]);
 
@@ -34,7 +37,7 @@ recipes.addShaped(<IC2NuclearControl:blockNuclearControlMain:1>, [
 recipes.addShaped(<IC2NuclearControl:blockNuclearControlMain:2>, [
 [<ore:plateIron>, <minecraft:noteblock>, <ore:plateIron>],
 [<ore:circuitBasic>, <IC2:itemRecipePart>, <ore:circuitBasic>],
-[<ore:cableGt01Gold>, <IC2:blockMachine>, <ore:cableGt01Gold>]]);
+[<ore:cableGt01RedAlloy>, <IC2:blockMachine>, <ore:cableGt01RedAlloy>]]);
 
 //Remote Thermal Monitor
 recipes.addShaped(<IC2NuclearControl:blockNuclearControlMain:3>, [
@@ -42,9 +45,21 @@ recipes.addShaped(<IC2NuclearControl:blockNuclearControlMain:3>, [
 [<gregtech:gt.metaitem.01:32740>, <gregtech:gt.blockcasings2>, <gregtech:gt.metaitem.01:32740>],
 [<ore:circuitBasic>, <IC2NuclearControl:blockNuclearControlMain>, <ore:circuitBasic>]]);
 
+//Industrial Information Panel
+recipes.addShaped(<IC2NuclearControl:blockNuclearControlMain:4>, [
+[<gregtech:gt.metaitem.01:32740>, <minecraft:stained_glass_pane:5>, <gregtech:gt.metaitem.01:32740>],
+[<ore:circuitBasic>, <IC2:blockMachine>, <ore:circuitBasic>],
+[<ore:plateIron>, <ore:cableGt01RedAlloy>, <ore:plateIron>]]);
+
+//Information Panel Extender
+recipes.addShaped(<IC2NuclearControl:blockNuclearControlMain:5>, [
+[<gregtech:gt.metaitem.01:32740>, <minecraft:stained_glass_pane:5>, <gregtech:gt.metaitem.01:32740>],
+[<gregtech:gt.metaitem.01:17809>, <gregtech:gt.metaitem.01:17809>, <gregtech:gt.metaitem.01:17809>],
+[<gregtech:gt.metaitem.01:17809>, <ore:cableGt01RedAlloy>, <gregtech:gt.metaitem.01:17809>]]);
+
 //Thermometer
 recipes.addShaped(<IC2NuclearControl:ItemToolThermometer>, [
-[<ore:stickIron>, <ore:plateGlass>, <ore:stickIron>],
+[<ore:stickIron>, <ore:plateGlass>, null],
 [<ore:plateGlass>, <ore:cellMercury>, <ore:plateGlass>],
 [null, <ore:plateGlass>, <ore:plateGlass>]]);
 
