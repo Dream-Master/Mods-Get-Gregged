@@ -14,6 +14,12 @@ recipes.remove(<IC2NuclearControl:blockNuclearControlMain:3>);
 recipes.remove(<IC2NuclearControl:blockNuclearControlMain:4>);
 //Information Panel Extender
 recipes.remove(<IC2NuclearControl:blockNuclearControlMain:5>);
+//Energy Counter
+recipes.remove(<IC2NuclearControl:blockNuclearControlMain:6>);
+//Average Counter
+recipes.remove(<IC2NuclearControl:blockNuclearControlMain:7>);
+//Range Trigger
+recipes.remove(<IC2NuclearControl:blockNuclearControlMain:8>);
 //Thermometer
 recipes.remove(<IC2NuclearControl:ItemToolThermometer>);
 //Digital Themometer
@@ -56,6 +62,24 @@ recipes.addShaped(<IC2NuclearControl:blockNuclearControlMain:5>, [
 [<gregtech:gt.metaitem.01:32740>, <minecraft:stained_glass_pane:5>, <gregtech:gt.metaitem.01:32740>],
 [<gregtech:gt.metaitem.01:17809>, <gregtech:gt.metaitem.01:17809>, <gregtech:gt.metaitem.01:17809>],
 [<gregtech:gt.metaitem.01:17809>, <ore:cableGt01RedAlloy>, <gregtech:gt.metaitem.01:17809>]]);
+
+//Energy Counter
+recipes.addShaped(<IC2NuclearControl:blockNuclearControlMain:6>, [
+[<ore:plateIron>, <gregtech:gt.metaitem.01:32740>, <ore:plateIron>],
+[<ore:cableGt01Platinum>, <gregtech:gt.blockmachines:24>, <ore:cableGt01Platinum>],
+[<ore:plateIron>, <ore:circuitAdvanced>, <ore:plateIron>]]);
+
+//Average Counter
+recipes.addShaped(<IC2NuclearControl:blockNuclearControlMain:7>, [
+[<ore:plateLead>, <gregtech:gt.metaitem.01:32740>, <ore:plateLead>],
+[<ore:cableGt01Platinum>, <gregtech:gt.blockmachines:24>, <ore:cableGt01Platinum>],
+[<ore:plateLead>, <ore:circuitAdvanced>, <ore:plateLead>]]);
+
+//Range Trigger
+recipes.addShaped(<IC2NuclearControl:blockNuclearControlMain:8>, [
+[<ore:plateSteel>, <gregtech:gt.metaitem.01:32740>, <ore:plateSteel>],
+[<ore:cableGt01Platinum>, <IC2:blockMachine:12>, <ore:cableGt01Platinum>],
+[<ore:circuitAdvanced>, <IC2:itemFreq>, <ore:circuitAdvanced>]]);
 
 //Thermometer
 recipes.addShaped(<IC2NuclearControl:ItemToolThermometer>, [
