@@ -1,17 +1,20 @@
 //Created by DreamMaster
+
 //remove Recipes
 
 //Thermal Monitor
 recipes.remove(<IC2NuclearControl:blockNuclearControlMain>);
+//Industrial Alarm
+recipes.remove(<IC2NuclearControl:blockNuclearControlMain:1>);
+//Howler Alarm
+recipes.remove(<IC2NuclearControl:blockNuclearControlMain:2>);
 //Thermometer
 recipes.remove(<IC2NuclearControl:ItemToolThermometer>);
 //Digital Themometer
 recipes.remove(<IC2NuclearControl:ItemToolDigitalThermometer>);
-//Industrial Alarm
-recipes.remove
-//Howler Alarm
-recipes.remove(<IC2NuclearControl:blockNuclearControlMain:2>);
-
+//Remote Thermal Monitor
+recipes.remove(<IC2NuclearControl:blockNuclearControlMain:3>);
+//
 
 //add recipes
 
@@ -32,6 +35,12 @@ recipes.addShaped(<IC2NuclearControl:blockNuclearControlMain:2>, [
 [<ore:plateIron>, <minecraft:noteblock>, <ore:plateIron>],
 [<ore:circuitBasic>, <IC2:itemRecipePart>, <ore:circuitBasic>],
 [<ore:cableGt01Gold>, <IC2:blockMachine>, <ore:cableGt01Gold>]]);
+
+//Remote Thermal Monitor
+recipes.addShaped(<IC2NuclearControl:blockNuclearControlMain:3>, [
+[<gregtech:gt.metaitem.01:32690>, <ore:glassReinforced>, <gregtech:gt.metaitem.01:32680>],
+[<gregtech:gt.metaitem.01:32740>, <gregtech:gt.blockcasings2>, <gregtech:gt.metaitem.01:32740>],
+[<ore:circuitBasic>, <IC2NuclearControl:blockNuclearControlMain>, <ore:circuitBasic>]]);
 
 //Thermometer
 recipes.addShaped(<IC2NuclearControl:ItemToolThermometer>, [
