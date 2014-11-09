@@ -38,3 +38,29 @@ Assembler.addRecipe(<IronChest:BlockIronChest:1>, <gregtech:gt.metaitem.01:17086
 Assembler.addRecipe(<IronChest:BlockIronChest:2>, <gregtech:gt.metaitem.01:17500> * 3, <IronChest:BlockIronChest:4>, 600, 32);
 //Iron to Silver Chest
 Assembler.addRecipe(<IronChest:BlockIronChest:4>, <gregtech:gt.metaitem.01:17054> * 4, <IronChest:BlockIronChest>, 600, 32);
+
+//Nuclear Control
+
+//Remote Sensor Kit
+Assembler.addRecipe(<IC2NuclearControl:ItemRemoteSensorKit>, <IC2NuclearControl:ItemToolDigitalThermometer:*>, <IC2:itemFreq>, 1600, 2);
+
+//Energy Sensor Kit
+Assembler.addRecipe(<IC2NuclearControl:ItemEnergySensorKit>, <gregtech:gt.metaitem.01:32734>, <IC2:itemFreq>, 1600, 2);
+
+//Counter Sensor Kit
+Assembler.addRecipe(<IC2NuclearControl:ItemMultipleSensorKit>, <gregtech:gt.metaitem.01:32731>, <IC2:itemFreq>, 1600, 2);
+
+//Liquid Sensor Kit
+Assembler.addRecipe(<IC2NuclearControl:ItemMultipleSensorKit:1>, <gregtech:gt.metaitem.01:32732>, <IC2:itemFreq>, 1600, 2);
+
+//Generator Sensor Kit
+Assembler.addRecipe(<IC2NuclearControl:ItemMultipleSensorKit:2>, <IC2:upgradeModule:2>, <IC2:itemFreq>, 1600, 2);
+
+//Time Card
+Assembler.addRecipe(<IC2NuclearControl:ItemTimeCard>, <minecraft:clock>, <IC2:itemFreq>, 1600, 2);
+
+//Range Upgrade
+Assembler.addRecipe(<IC2NuclearControl:ItemUpgrade>, <gregtech:gt.metaitem.01:32690>, <IC2:itemFreq>, 1600, 2);
+
+//Text Card
+Assembler.addRecipe(<IC2NuclearControl:ItemTextCard>, <gregtech:gt.metaitem.01:32740>, <IC2:itemFreq>, 1600, 2);
