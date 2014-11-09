@@ -20,6 +20,12 @@ recipes.remove(<IC2NuclearControl:blockNuclearControlMain:6>);
 recipes.remove(<IC2NuclearControl:blockNuclearControlMain:7>);
 //Range Trigger
 recipes.remove(<IC2NuclearControl:blockNuclearControlMain:8>);
+//Advanced Information Panel
+recipes.remove(<IC2NuclearControl:blockNuclearControlMain:9>);
+//Advanced Panel Extender
+recipes.remove(<IC2NuclearControl:blockNuclearControlMain:10>);
+//White Lamp
+recipes.remove(<IC2NuclearControl:blockNuclearControlLight>);
 //Thermometer
 recipes.remove(<IC2NuclearControl:ItemToolThermometer>);
 //Digital Themometer
@@ -80,6 +86,24 @@ recipes.addShaped(<IC2NuclearControl:blockNuclearControlMain:8>, [
 [<ore:plateSteel>, <gregtech:gt.metaitem.01:32740>, <ore:plateSteel>],
 [<ore:cableGt01Platinum>, <IC2:blockMachine:12>, <ore:cableGt01Platinum>],
 [<ore:circuitAdvanced>, <IC2:itemFreq>, <ore:circuitAdvanced>]]);
+
+//Advanced Information Panel
+recipes.addShaped(<IC2NuclearControl:blockNuclearControlMain:9>, [
+[<IC2NuclearControl:ItemUpgrade>, <IC2NuclearControl:blockNuclearControlMain:4>, <IC2NuclearControl:ItemUpgrade:1>],
+[<ore:plateAlloyCarbon>, <ore:circuitAdvanced>, <ore:plateAlloyCarbon>],
+[<ore:craftingToolWrench>, <ore:craftingToolHardHammer>, <ore:craftingToolScrewdriver>]]);
+
+//Advanced Panel Extender
+recipes.addShaped(<IC2NuclearControl:blockNuclearControlMain:10>, [
+[<IC2NuclearControl:ItemUpgrade>, <IC2NuclearControl:blockNuclearControlMain:5>, <IC2NuclearControl:ItemUpgrade:1>],
+[<ore:plateAlloyCarbon>, <ore:plateSteel>, <ore:plateAlloyCarbon>],
+[<ore:craftingToolWrench>, <ore:craftingToolHardHammer>, <ore:craftingToolScrewdriver>]]);
+
+//White Lamp
+recipes.addShaped(<IC2NuclearControl:blockNuclearControlLight>, [
+[<ore:paneGlassWhite> , <ore:paneGlassWhite>, <ore:paneGlassWhite>],
+[<ore:paneGlassWhite>, <minecraft:redstone_lamp>, <ore:paneGlassWhite>],
+[<ore:paneGlassWhite>, <ore:wireGt01RedAlloy>, <ore:paneGlassWhite>]]);
 
 //Thermometer
 recipes.addShaped(<IC2NuclearControl:ItemToolThermometer>, [
