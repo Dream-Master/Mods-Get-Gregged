@@ -2,6 +2,20 @@
 
 import mods.ic2.Compressor;
 
+//Advanced Solar Panel
+
+//Sunnarium Dust
+Compressor.addRecipe(<AdvancedSolarPanel:asp_crafting_items>, <gregtech:gt.metaitem.01:2318>);
+
+//AE
+
+//Fluix Block
+Compressor.addRecipe(<appliedenergistics2:tile.BlockFluix>, <ore:gemFluix> * 4);
+
+//Biome O Plenty
+
+Compressor.addRecipe(<BiomesOPlenty:gemOre:11>, <BiomesOPlenty:gems:5> * 9);
+
 //Carpenters Blocks
 
 //Collapsible Block
@@ -25,6 +39,9 @@ Compressor.addRecipe(<gregtech:gt.metaitem.01:8503>, <ExtraBees:misc:4> * 9);
 Compressor.addRecipe(<minecraft:dye:4>, <ExtraBees:misc:5> * 4);
 
 //IC 2
+
+//Coal Chunk
+Compressor.addRecipe(<IC2:itemPartCoalBlock>, <IC2:itemPartCarbonPlate> * 2);
 
 //Uranium Block
 Compressor.addRecipe(<IC2:blockMetal:3>, <IC2:itemUran238> * 9);
