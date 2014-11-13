@@ -2,6 +2,11 @@
 
 import mods.gregtech.Wiremill;
 
+//AE2
+
+//Quartz Fiber
+Wiremill.addRecipe(<appliedenergistics2:item.ItemMultiPart:140> * 4, <appliedenergistics2:tile.BlockQuartzGlass>, 100, 2);
+
 //IC2
 
 //Copper Cable
