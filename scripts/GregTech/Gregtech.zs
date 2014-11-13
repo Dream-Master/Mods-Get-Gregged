@@ -1,4 +1,5 @@
 //Created by DreamMasterXXL
+
 //remove Recipes
 
 //Diamond Sword Blade
@@ -60,6 +61,13 @@ recipes.remove(<ore:ingotZinc>);
 
 //add Recipes
 
+//UV Machine Casing
+recipes.addShaped(<gregtech:gt.blockcasings:8>, [
+[<ore:plateAlloyIridium>, <ore:plateAlloyIridium>, <ore:plateAlloyIridium>],
+[<ore:plateAlloyIridium>, <ore:craftingToolWrench>, <ore:plateAlloyIridium>],
+[<ore:plateAlloyIridium>, <ore:plateAlloyIridium>, <ore:plateAlloyIridium>]]);
+
+
 //Diamond Sword Blade
 recipes.addShaped(<gregtech:gt.metaitem.02:500>, [
 [null, <gregtech:gt.metaitem.01:17500>, null],
@@ -104,6 +112,10 @@ recipes.addShapeless(<gregtech:gt.metaitem.01:2322> *3,
 //Shadow Iron Dust
 recipes.addShapeless(<gregtech:gt.metaitem.01:2336> *3, 
 [<ore:dustIron>, <ore:dustThaumium>, <ore:dustThaumium>, <ore:dustThaumium>]);
+
+//Osmiridium Dust
+recipes.addShapeless(<gregtech:gt.metaitem.01:2317> *3, 
+[<ore:dustOsmium>, <ore:dustIridium>, <ore:dustIridium>, <ore:dustIridium>]);
 
 //Wood Ring
 recipes.addShaped(<gregtech:gt.metaitem.01:28809>, [
