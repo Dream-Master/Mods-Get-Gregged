@@ -341,9 +341,9 @@ recipes.addShaped(<appliedenergistics2:item.ItemMultiMaterial:33>, [
 
 //16k ME Storage Component
 recipes.addShaped(<appliedenergistics2:item.ItemMultiMaterial:37>, [
-[<ore:plateGlowstone>, <appliedenergistics2:item.ItemMultiMaterial:24>, <ore:plateGlowstone>],
+[<ore:plateSteel>, <appliedenergistics2:item.ItemMultiMaterial:24>, <ore:plateSteel>],
 [<appliedenergistics2:item.ItemMultiMaterial:36>, <ore:plateGlass>, <appliedenergistics2:item.ItemMultiMaterial:36>],
-[<ore:plateGlowstone>, <appliedenergistics2:item.ItemMultiMaterial:36>, <ore:plateGlowstone>]]);
+[<ore:plateSteel>, <appliedenergistics2:item.ItemMultiMaterial:36>, <ore:plateSteel>]]);
 
 //1K ME Storage Component
 recipes.addShaped(<appliedenergistics2:item.ItemMultiMaterial:35>, [
@@ -359,15 +359,15 @@ recipes.addShaped(<appliedenergistics2:item.ItemMultiMaterial:32>, [
 
 //4k ME Storage Component
 recipes.addShaped(<appliedenergistics2:item.ItemMultiMaterial:36>, [
-[<ore:plateRedAlloy>, <appliedenergistics2:item.ItemMultiMaterial:23>, <ore:plateRedAlloy>],
+[<ore:plateGlowstone>, <appliedenergistics2:item.ItemMultiMaterial:23>, <ore:plateGlowstone>],
 [<appliedenergistics2:item.ItemMultiMaterial:35>, <ore:plateGlass>, <appliedenergistics2:item.ItemMultiMaterial:35>],
-[<ore:plateRedAlloy>, <appliedenergistics2:item.ItemMultiMaterial:35>, <ore:plateRedAlloy>]]);
+[<ore:plateGlowstone>, <appliedenergistics2:item.ItemMultiMaterial:35>, <ore:plateGlowstone>]]);
 
 //64K ME Storage Component
 recipes.addShaped(<appliedenergistics2:item.ItemMultiMaterial:38>, [
-[<ore:plateGlowstone>, <appliedenergistics2:item.ItemMultiMaterial:24>, <ore:plateGlowstone>],
+[<ore:plateAluminium>, <appliedenergistics2:item.ItemMultiMaterial:24>, <ore:plateAluminium>],
 [<appliedenergistics2:item.ItemMultiMaterial:37>, <ore:plateGlass>, <appliedenergistics2:item.ItemMultiMaterial:37>],
-[<ore:plateGlowstone>, <appliedenergistics2:item.ItemMultiMaterial:37>, <ore:plateGlowstone>]]);
+[<ore:plateAluminium>, <appliedenergistics2:item.ItemMultiMaterial:37>, <ore:plateAluminium>]]);
 
 //ME Storage Housing
 recipes.addShaped(<appliedenergistics2:item.ItemMultiMaterial:39>, [
