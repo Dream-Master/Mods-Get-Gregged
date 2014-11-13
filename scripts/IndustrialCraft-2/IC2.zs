@@ -1,4 +1,5 @@
 //Created by DreamMasterXXL
+
 //remove Recipes
 
 //Generator
@@ -25,6 +26,10 @@ recipes.remove(<IC2:itemCable:2>);
 recipes.remove(<IC2:itemCable:5>);
 //Tin Cable
 recipes.remove(<IC2:itemCable:10>);
+//Coal Chunk
+recipes.remove(<IC2:itemPartCoalChunk>);
+//Raw Carbon Mesh
+recipes.remove(<IC2:itemPartCarbonMesh>);
 
 //add Recipes
 
