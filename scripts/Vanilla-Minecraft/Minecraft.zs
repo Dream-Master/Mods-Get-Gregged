@@ -1,28 +1,69 @@
 //Created by Dream Master
+
 //remove Recipes
 
-//Piston
-recipes.remove(<minecraft:piston>);
-//Enchanting Table
-recipes.remove(<minecraft:enchanting_table>);
-//Brewing Stand
-recipes.remove(<minecraft:brewing_stand>);
-//Sanstone
+//Sandstone
 recipes.remove(<minecraft:sandstone>);
-//Chiseld Sanstone
+//Chiseld Sandstone
 recipes.remove(<minecraft:sandstone:1>);
-//Smooth Sanstone
+//Smooth Sandstone
 recipes.remove(<minecraft:sandstone:2>);
-//Snow
-recipes.remove(<minecraft:snow>);
 //Clay
 recipes.remove(<minecraft:clay>);
+//Coal
+recipes.removeShapeless(<minecraft:coal>);
+//Gunpowder
+recipes.removeShapeless(<minecraft:gunpowder>, [<minecraft:coal:1>, <minecraft:coal:1>, <minecraft:coal:1>, <minecraft:glowstone_dust>]);
 //nether Brick
 recipes.remove(<minecraft:nether_brick>);
 //Quartz Block
 recipes.remove(<minecraft:quartz_block>);
 //Chiseld Quartz
 recipes.remove(<minecraft:quartz_block:1>);
+//Snow
+recipes.remove(<minecraft:snow>);
+//Piston
+recipes.remove(<minecraft:piston>);
+//Note Block
+recipes.remove(<minecraft:noteblock>);
+//Jukebox
+recipes.remove(<minecraft:jukebox>);
+//Enchanting Table
+recipes.remove(<minecraft:enchanting_table>);
+//Beacon
+recipes.remove(<minecraft:beacon>);
+//Anvil
+recipes.remove(<minecraft:anvil>);
+//Dropper
+recipes.remove(<minecraft:dropper>);
+//TNT
+recipes.remove(<minecraft:tnt>);
+//Bookshelf
+recipes.remove(<minecraft:bookshelf>);
+//Brewing Stand
+recipes.remove(<minecraft:brewing_stand>);
+//Redstone Lamp
+recipes.remove(<minecraft:redstone_lamp>);
+//Track
+recipes.remove(<minecraft:rail>);
+//Boster Track
+recipes.remove(<minecraft:golden_rail>);
+//Glass Pane
+recipes.remove(<minecraft:glass_pane>);
+//Clock
+recipes.remove(<minecraft:clock>);
+//Compass
+recipes.remove(<minecraft:compass>);
+//Arrow
+recipes.remove(<minecraft:arrow>);
+//Minecart with Chest
+recipes.remove(<minecraft:chest_minecart>);
+//Minecart with Furnace
+recipes.remove(<minecraft:furnace_minecart>);
+//Minecart with Hopper
+recipes.remove(<minecraft:hopper_minecart>);
+//Minecart with TNT
+recipes.remove(<minecraft:tnt_minecart>);
 //Diamond Sword
 recipes.remove(<minecraft:diamond_sword>);
 //Diamond Shovel
@@ -41,10 +82,6 @@ recipes.remove(<minecraft:diamond_chestplate>);
 recipes.remove(<minecraft:diamond_leggings>);
 //Diamond Boots
 recipes.remove(<minecraft:diamond_boots>);
-//Clock
-recipes.remove(<minecraft:clock>);
-//Compass
-recipes.remove(<minecraft:compass>);
 //Ender Eye
 recipes.remove(<minecraft:ender_eye>);
 //Ender Chest
@@ -57,6 +94,30 @@ recipes.remove(<ore:nuggetIron>);
 recipes.remove(<minecraft:gold_ingot>);
 //Gold Nuggets
 recipes.remove(<ore:nuggetGold>);
+//Golden Apple small
+recipes.remove(<minecraft:golden_apple>);
+//Golden Apple big
+recipes.remove(<minecraft:golden_apple:1>);
+//Golden Carrot
+recipes.remove(<minecraft:golden_carrot>);
+//Sugar
+recipes.removeShaped(<minecraft:sugar>);
+//Cake
+recipes.remove(<minecraft:cake>);
+//Pumpkin Seeds
+recipes.remove(<minecraft:pumpkin_seeds>);
+//Melon Seeds
+recipes.remove(<minecraft:melon_seeds>);
+//Fermented Spider Eye
+recipes.remove(<minecraft:fermented_spider_eye>);
+//Magma Creme
+recipes.remove(<minecraft:magma_cream>);
+//Tripwire Hook
+recipes.remove(<minecraft:tripwire_hook>);
+//Trapped Chest
+recipes.remove(<minecraft:trapped_chest>);
+
+//add Recipes
 
 //Piston
 recipes.addShaped(<minecraft:piston>, [
@@ -154,12 +215,6 @@ recipes.addShaped(<minecraft:saddle>, [
 [<minecraft:carpet:*>, <minecraft:carpet:*>, <minecraft:carpet:*>],
 [<gregtech:gt.metaitem.01:28032>, <minecraft:string>, <gregtech:gt.metaitem.01:28032>]]);
 
-//Name Tag
-recipes.addShaped(<minecraft:name_tag>, [
-[<minecraft:paper>, <minecraft:paper>, <minecraft:paper>],
-[<minecraft:paper>, <minecraft:paper>, <minecraft:paper>],
-[<minecraft:string>, <minecraft:string>, <minecraft:string>]]);
-
 //Clock
 recipes.addShaped(<minecraft:clock>, [
 [<gregtech:gt.metaitem.01:28086>, <ore:plateGold>, <gregtech:gt.metaitem.01:28086>],
@@ -177,3 +232,18 @@ recipes.addShaped(<minecraft:ender_chest>, [
 [<ore:plateDenseObsidian>, <ore:gemEnderEye>, <ore:plateDenseObsidian>],
 [<ore:plateDenseObsidian>, <ore:chestObsidian>, <ore:plateDenseObsidian>],
 [<ore:plateDenseObsidian>, <ore:gemNetherStar>, <ore:plateDenseObsidian>]]);
+
+//Pumpkin Seeds
+recipes.addShapeless(<minecraft:pumpkin_seeds> * 4, [<ore:craftingToolHardHammer>, <minecraft:pumpkin>]);
+
+//Melon Seeds
+recipes.addShapeless(<minecraft:melon_seeds>, [<ore:craftingToolHardHammer>, <minecraft:melon>]);
+
+//Gunpowder
+recipes.addShapeless(<minecraft:gunpowder>, [<ore:dustSmallGunpowder>, <ore:dustSmallGunpowder>, <ore:dustSmallGunpowder>, <ore:dustSmallGunpowder>]);
+
+//Arrow
+recipes.addShaped(<minecraft:arrow>, [
+[<minecraft:flint>, null, null],
+[<ore:stickWood>, null, null],
+[<minecraft:feather>, null, null]]);
