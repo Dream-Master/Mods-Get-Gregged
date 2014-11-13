@@ -4,6 +4,8 @@
 
 //Block of Malachit
 recipes.remove(<BiomesOPlenty:gemOre:11>);
+//Gem Malachit
+recipes.remove(<BiomesOPlenty:gems:5>);
 //Emty Jar
 recipes.remove(<BiomesOPlenty:jar Empty>);
 //Dart Blower
