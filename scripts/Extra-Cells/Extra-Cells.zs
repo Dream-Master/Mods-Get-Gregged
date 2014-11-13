@@ -169,7 +169,7 @@ recipes.addShapeless(<extracells:storage.physical:0>, [<extracells:storage.compo
 //ME 1024k Storage
 recipes.addShaped(<extracells:storage.physical:1>, [
 [<ore:plateSilicon>, <ore:plateAluminium>, <ore:plateSilicon>],
-[<ore:plateAluminium>, <extracells:storage.component:1>, <ore:plateAlluminium>],
+[<ore:plateAluminium>, <extracells:storage.component:1>, <ore:plateAluminium>],
 [<ore:plateTungstenSteel>, <ore:plateTungstenSteel>, <ore:plateTungstenSteel>]]);
 
 recipes.addShapeless(<extracells:storage.physical:1>, [<extracells:storage.component:1>, <extracells:storage.casing:0>]);
