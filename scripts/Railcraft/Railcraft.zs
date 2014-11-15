@@ -15,6 +15,9 @@ recipes.remove(<Railcraft:tile.railcraft.machine.alpha:15>);
 recipes.removeShaped(<Railcraft:tile.railcraft.machine.beta>, [
 [<Railcraft:part.plate>, <Railcraft:part.plate>],
 [<Railcraft:part.plate>, <Railcraft:part.plate>]]);
+recipes.removeShaped(<Railcraft:tile.railcraft.machine.beta>, [
+[<ore:craftingToolWrench>, <Railcraft:part.plate>, <Railcraft:part.plate>],
+[<ore:craftingToolHardHammer>, <Railcraft:part.plate>, <Railcraft:part.plate>]]);
 //Iron Tank Gauge
 recipes.removeShaped(<Railcraft:tile.railcraft.machine.beta:1>, [
 [<minecraft:glass_pane>, <Railcraft:part.plate>,<minecraft:glass_pane>],
@@ -43,6 +46,9 @@ recipes.remove(<Railcraft:tile.railcraft.machine.beta:9>);
 recipes.removeShaped(<Railcraft:tile.railcraft.machine.beta:13>, [
 [<Railcraft:part.plate:1>, <Railcraft:part.plate:1>],
 [<Railcraft:part.plate:1>, <Railcraft:part.plate:1>]]);
+recipes.removeShaped(<Railcraft:tile.railcraft.machine.beta:13>, [
+[<ore:craftingToolWrench>, <Railcraft:part.plate:1>, <Railcraft:part.plate:1>],
+[<ore:craftingToolHardHammer>, <Railcraft:part.plate:1>, <Railcraft:part.plate:1>]]);
 //Steel Tank Gauge
 recipes.removeShaped(<Railcraft:tile.railcraft.machine.beta:14>, [
 [<minecraft:glass_pane>, <Railcraft:part.plate:1>,<minecraft:glass_pane>],
