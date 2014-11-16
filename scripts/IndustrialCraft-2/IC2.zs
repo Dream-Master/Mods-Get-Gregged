@@ -12,6 +12,14 @@ recipes.remove(<IC2:blockGenerator:3>);
 recipes.remove(<IC2:blockKineticGenerator>);
 //Reactor Chamber
 recipes.remove(<IC2:blockReactorChamber>);
+//Fluid/Solid Canning Machine
+recipes.remove(<IC2:blockMachine:6>);
+//Solid Canning Machine
+recipes.remove(<IC2:blockMachine2:9>);
+//Fermernter
+recipes.remove(<IC2:blockMachine2:13>);
+//Heat Conductor
+recipes.remove(<IC2:itemRecipePart:5>);
 //Wood Scaffold
 recipes.remove(<IC2:blockScaffold>);
 //Iron Scaffold
@@ -74,6 +82,12 @@ recipes.addShaped(<IC2:blockReactorChamber>, [
 [<ore:plateDenseLead>, <ore:plateAlloyAdvanced>, <ore:plateDenseLead>],
 [<ore:plateDenseLead>, <IC2:blockMachine:12>, <ore:plateDenseLead>],
 [<ore:plateDenseLead>, <ore:plateAlloyAdvanced>, <ore:plateDenseLead>]]);
+
+//Heat Conductor
+recipes.addShaped(<IC2:itemRecipePart:5>, [
+[<ore:plateRubber>, <ore:plateCopper>, <ore:plateRubber>],
+[<ore:plateCopper>, <ore:plateSilver>, <ore:plateCopper>],
+[<ore:plateRubber>, <ore:plateCopper>, <ore:plateRubber>]]);
 
 //Wood Scaffold
 recipes.addShapeless(<IC2:blockScaffold>, [<ore:frameGtWood>, <gregtech:gt.metaitem.01:17809>]);
