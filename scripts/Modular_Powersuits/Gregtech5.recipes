@@ -1,0 +1,222 @@
+[
+	{
+		"ingredients" : [
+			[ { "oredictName" : "plateMagnalium" }, { "oredictName" : "plateMagnalium" } ],
+			[ { "oredictName" : "circuitBasic" }, { "oredictName" : "plateMagnalium" } ],
+			[ { "oredictName" : "plateMagnalium" }, { "oredictName" : "plateMagnalium" } ]
+		],
+		"result" : {
+			"oredictName" : "componentPlatingBasic"
+		}
+	},
+	{
+		"ingredients" : [
+			[ { "oredictName" : "plateAlloyIridium" }, { "oredictName" : "plateAlloyIridium" } ],
+			[ { "oredictName" : "circuitAdvanced" }, { "oredictName" : "plateAlloyIridium" } ],
+			[ { "oredictName" : "plateAlloyIridium" }, { "oredictName" : "plateAlloyIridium" } ]
+		],
+		"result" : {
+			"oredictName" : "componentPlatingAdvanced"
+		}
+	},
+	{
+		"ingredients" : [
+			[ { "oredictName" : "componentWiring" }, { "oredictName" : "circuitAdvanced" }, { "oredictName" : "plateElectrum" } ],
+			[ { "oredictName" : "circuitData" }, { "oredictName" : "circuitMaster" }, { "oredictName" : "circuitAdvanced" } ],
+			[ { "oredictName" : "plateElectrum" }, { "oredictName" : "circuitData" }, { "oredictName" : "componentWiring" } ]
+		],
+		"result" : {
+			"oredictName" : "componentControlCircuit"
+		},
+		"mirror" : true
+	},
+	{
+		"ingredients" : [
+			[ { "oredictName" : "componentPlatingBasic" } ]
+		],
+		"result" : {
+			"oredictName" : "plateMagnalium",
+			"quantity" : 5
+		}
+	},
+	{
+		"ingredients" : [
+			[ { "oredictName" : "componentPlatingAdvanced" } ]
+		],
+		"result" : {
+			"oredictName" : "plateAlloyIridium",
+			"quantity" : 5
+		}
+	},
+	{
+		"ingredients" : [
+			[ { "oredictName" : "crystalQuartzite" }, { "oredictName" : "circuitGood" }, { "oredictName" : "crystalQuartzite" } ],
+			[ { "oredictName" : "craftingLensRed" }, { "oredictName" : "craftingLensGreen" }, { "oredictName" : "craftingLensBlue" } ],
+			[ { "oredictName" : "crystalQuartzite" }, { "oredictName" : "circuitGood" }, { "oredictName" : "crystalQuartzite" } ]
+		],
+		"result" : {
+			"oredictName" : "componentLaserEmitter"
+		}
+	},
+	{
+		"ingredients" : [
+			[ { "oredictName" : "circuitAdvanced" }, { "oredictName" : "plateGlass" }, { "oredictName" : "circuitAdvanced" } ],
+			[ { "oredictName" : "plateSteel" }, { "oredictName" : "plateEmerald" }, { "oredictName" : "plateSteel" } ],
+			[ { "oredictName" : "plateSteel" }, { "oredictName" : "blockSteel" }, { "oredictName" : "plateSteel" } ]
+		],
+		"result" : {
+			"unlocalizedName" : "tile.tinkerTable"
+		}
+	},
+	{
+		"ingredients" : [
+			[ { "oredictName" : "plateAluminium" }, { "oredictName" : "circuitData" }, { "oredictName" : "plateAluminium" } ],
+			[ { "oredictName" : "componentWiring" }, { "oredictName" : "plateSteel" }, { "oredictName" : "componentWiring" } ]
+		],
+		"result" : {
+			"unlocalizedName" : "item.powerArmorHelmet"
+		}
+	},
+	{
+		"ingredients" : [
+			[ { "oredictName" : "plateAluminium" }, { "oredictName" : "componentWiring" }, { "oredictName" : "plateAluminium" } ],
+			[ { "oredictName" : "plateAluminium" }, { "oredictName" : "circuitData" }, { "oredictName" : "plateAluminium" } ],
+			[ { "oredictName" : "plateAluminium" }, { "oredictName" : "plateAluminium" }, { "oredictName" : "plateAluminium" } ]
+		],
+		"result" : {
+			"unlocalizedName" : "item.powerArmorChestplate"
+		}
+	},
+	{
+		"ingredients" : [
+			[ { "oredictName" : "componentWiring" }, { "oredictName" : "circuitData" }, { "oredictName" : "componentWiring" } ],
+			[ { "oredictName" : "plateAluminium" }, null, { "oredictName" : "plateAluminium" } ],
+			[ { "oredictName" : "plateAluminium" }, null, { "oredictName" : "plateAluminium" } ]
+		],
+		"result" : {
+			"unlocalizedName" : "item.powerArmorLeggings"
+		}
+	},
+	{
+		"ingredients" : [
+			[ { "oredictName" : "componentWiring" }, null, { "oredictName" : "componentWiring" } ],
+			[ { "oredictName" : "plateAluminium" }, { "oredictName" : "circuitData" }, { "oredictName" : "plateAluminium" } ]
+		],
+		"result" : {
+			"unlocalizedName" : "item.powerArmorBoots"
+		}
+	},
+	{
+		"ingredients" : [
+			[ { "oredictName" : "plateAluminium" }, null, { "oredictName" : "plateAluminium" } ],
+			[ { "oredictName" : "plateAluminium" }, { "oredictName" : "componentWiring" }, { "oredictName" : "plateAluminium" } ],
+			[ null, { "oredictName" : "circuitData" }, null ]
+		],
+		"result" : {
+			"unlocalizedName" : "item.powerFist"
+		}
+	},
+	{
+		"ingredients" : [
+			[ { "oredictName" : "wireGt02AnnealedCopper" }, { "oredictName" : "wireGt02AnnealedCopper" }, { "oredictName" : "wireGt02AnnealedCopper" } ],
+			[ { "oredictName" : "wireGt02Silver" }, { "oredictName" : "wireGt02Silver" }, { "oredictName" : "wireGt02Silver" } ],
+			[ { "oredictName" : "wireGt02AnnealedCopper" }, { "oredictName" : "wireGt02AnnealedCopper" }, { "oredictName" : "wireGt02AnnealedCopper" } ]
+		],
+		"result" : {
+			"oredictName" : "componentWiring",
+			"quantity" : 4
+		}
+	},
+	{
+		"ingredients" : [
+			[  { "oredictName" : "blockWool" }, { "oredictName" : "blockWool" }, { "oredictName" : "blockWool" } ],
+			[  { "unlocalizedName" : "item.string" }, null, { "unlocalizedName" : "item.string" } ],
+			[ { "oredictName" : "plateAlloyCarbon" }, { "oredictName" : "cellNitrogen" }, { "oredictName" : "plateAlloyCarbon" } ]
+		],
+		"result" : {
+			"oredictName" : "componentParachute"
+		}
+	},
+	{
+		"ingredients" : [
+			[  { "oredictName" : "plateSteel" }, { "oredictName" : "circuitData" }, { "oredictName" : "plateSteel" } ],
+			[  { "oredictName" : "plateSteel" }, { "oredictName" : "batteryElite" }, { "oredictName" : "plateSteel" } ],
+			[  { "oredictName" : "plateSteel" }, { "oredictName" : "batteryElite" }, { "oredictName" : "plateSteel" } ]
+		],
+		"result" : {
+			"oredictName" : "componentLVCapacitor"
+		}
+	},
+	{
+		"ingredients" : [
+			[  { "oredictName" : "plateMagnalium" }, { "oredictName" : "circuitData" }, { "oredictName" : "plateMagnalium" } ],
+			[  { "oredictName" : "plateMagnalium" }, { "oredictName" : "batteryMaster" }, { "oredictName" : "plateMagnalium" } ],
+			[  { "oredictName" : "plateMagnalium" }, { "oredictName" : "batteryMaster" }, { "oredictName" : "plateMagnalium" } ]
+		],
+		"result" : {
+			"oredictName" : "componentMVCapacitor"
+		}
+	},
+	{
+		"ingredients" : [
+			[  { "oredictName" : "plateChrome" }, { "oredictName" : "circuitData" }, { "oredictName" : "plateChrome" } ],
+			[  { "oredictName" : "plateChrome" }, { "oredictName" : "batteryUltimate" }, { "oredictName" : "plateChrome" } ],
+			[  { "oredictName" : "plateChrome" }, { "oredictName" : "batteryUltimate" }, { "oredictName" : "plateChrome" } ]
+		],
+		"result" : {
+			"oredictName" : "componentHVCapacitor"
+		}
+	},
+	{
+		"ingredients" : [
+			[  { "oredictName" : "componentWiring" }, { "oredictName" : "plateSteel" }, { "oredictName" : "componentWiring" } ],
+			[  { "oredictName" : "componentWiring" }, { "oredictName" : "plateSteel" }, { "oredictName" : "componentWiring" } ],
+			[  { "oredictName" : "componentWiring" }, { "oredictName" : "plateSteel" }, { "oredictName" : "componentWiring" } ]
+		],
+		"result" : {
+			"oredictName" : "componentSolenoid"
+		}
+	},
+	{
+		"ingredients" : [
+			[  null, { "oredictName" : "plateMagnalium" }, { "oredictName" : "circuitAdvanced" } ],
+			[  { "oredictName" : "plateMagnalium" }, { "oredictName" : "plateAlloyCarbon" }, { "oredictName" : "componentSolenoid" } ],
+			[  { "oredictName" : "plateMagnalium" }, null, null ]
+		],
+		"result" : {
+			"oredictName" : "componentGliderWing"
+		}
+	},
+	{
+		"ingredients" : [
+			[  { "oredictName" : "plateSteel" }, { "oredictName" : "plateBrass" }, { "oredictName" : "plateSteel" } ],
+			[  { "oredictName" : "circuitAdvanced" }, { "oredictName" : "componentSolenoid" }, { "oredictName" : "circuitAdvanced" } ],
+			[  { "oredictName" : "plateSteel" }, { "oredictName" : "plateBrass" }, { "oredictName" : "plateSteel" } ]
+		],
+		"result" : {
+			"oredictName" : "componentServo"
+		}
+	},
+	{
+		"ingredients" : [
+			[  { "oredictName" : "plateAlloyIridium" }, { "oredictName" : "componentSolenoid" }, { "oredictName" : "plateAlloyIridium" } ],
+			[  { "oredictName" : "wireGt02Superconductor" }, { "oredictName" : "circuitMaster" }, { "oredictName" : "wireGt02Superconductor" } ],
+			[  { "oredictName" : "plateAlloyIridium" }, { "oredictName" : "componentSolenoid" }, { "oredictName" : "plateAlloyIridium" } ]
+		],
+		"result" : {
+			"oredictName" : "componentFieldEmitter"
+		},
+		"mirror" : true
+	},
+	{
+		"ingredients" : [
+			[  { "oredictName" : "plateAlloyIridium" }, { "oredictName" : "wireGt02Superconductor" }, { "oredictName" : "plateAlloyIridium" } ],
+			[  { "oredictName" : "componentFieldEmitter" }, {"oredictName" : "componentHVCapacitor"}, { "oredictName" : "componentFieldEmitter" }],
+			[  { "oredictName" : "pipeRestrictiveMediumOsmium" }, null, { "oredictName" : "pipeRestrictiveMediumOsmium" } ]
+		],
+		"result" : {
+			"oredictName" : "componentIonThruster"
+		}
+
+	}
+]
