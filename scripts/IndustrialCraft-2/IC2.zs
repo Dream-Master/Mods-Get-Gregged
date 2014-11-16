@@ -20,6 +20,8 @@ recipes.remove(<IC2:blockMachine2:9>);
 recipes.remove(<IC2:blockMachine2:13>);
 //Heat Conductor
 recipes.remove(<IC2:itemRecipePart:5>);
+//Coil
+recipes.remove(<IC2:itemRecipePart>);
 //Wood Scaffold
 recipes.remove(<IC2:blockScaffold>);
 //Iron Scaffold
@@ -56,6 +58,22 @@ recipes.remove(<IC2:itemToolChainsaw>);
 recipes.remove(<IC2:itemToolWrenchElectric>);
 //Electric Treetap
 recipes.remove(<IC2:itemTreetapElectric>);
+//Wood Rotor Blade
+recipes.remove(<IC2:itemRecipePart:7>);
+//Kinetic Wind Generator Rotor Blade (Wood)
+recipes.remove(<IC2:itemwoodrotor>);
+//Iron Rotor Blade
+recipes.remove(<IC2:itemRecipePart:8>);
+//Kinetic Wind Generator Rotor Blade (Iron)
+recipes.remove(<IC2:itemironrotor>);
+//Steel Rotor Blade
+recipes.remove(<IC2:itemRecipePart:10>);
+//Kinetic Wind Generator Rotor Blade (Steel)
+recipes.remove(<IC2:itemsteelrotor>);
+//Carbon Rotor Blade
+recipes.remove(<IC2:itemRecipePart:9>);
+//Kinetic Wind Generator Rotor Blade (Carbon)
+recipes.remove(<IC2:itemwcarbonrotor>);
 
 //add Recipes
 
@@ -63,17 +81,17 @@ recipes.remove(<IC2:itemTreetapElectric>);
 recipes.addShaped(<IC2:blockGenerator>, [
 [<ore:cableGt01Tin>, <ore:batteryBasic>, <ore:cableGt01Tin>],
 [<ore:plateAluminium>, <gregtech:gt.blockcasings:1>, <ore:plateAluminium>],
-[<IC2:itemRecipePart>, <gregtech:gt.blockmachines:104>, <IC2:itemRecipePart>]]);
+[<gregtech:gt.metaitem.01:32600>, <gregtech:gt.blockmachines:104>, <IC2:itemRecipePart>]]);
 
 //Geothermal Generator
 recipes.addShaped(<IC2:blockGenerator:1>, [
 [<ore:cableGt01Tin>, <gregtech:gt.metaitem.01:32405>, <ore:cableGt01Tin>],
 [<ore:plateAluminium>, <gregtech:gt.blockcasings2>, <ore:plateAluminium>],
-[<IC2:itemRecipePart>, <IC2:blockGenerator>, <IC2:itemRecipePart>]]);
+[<gregtech:gt.metaitem.01:32600>, <IC2:blockGenerator>, <IC2:itemRecipePart>]]);
 
 //Kinetic Wind Generator
 recipes.addShaped(<IC2:blockKineticGenerator>, [
-[<ore:plateAluminium>, <ore:circuitAdvanced>, <ore:plateAluminium>],
+[<ore:plateTungstenSteel>, <ore:circuitAdvanced>, <ore:plateTungstenSteel>],
 [<ore:cableGt02Gold>, <ore:craftingGenerator>, <ore:cableGt02Gold>],
 [<gregtech:gt.metaitem.01:32602>, <IC2:itemRecipePart>, <gregtech:gt.metaitem.01:32602>]]);
 
@@ -124,3 +142,51 @@ recipes.addShaped(<IC2:itemCable:10>, [
 [<ore:craftingToolWireCutter>, <ore:plateTin>, null],
 [null, null, null],
 [null, null, null]]);
+
+//Wood Rotor Blade
+recipes.addShaped(<IC2:itemRecipePart:7>, [
+[<gregtech:gt.metaitem.01:17809>, <gregtech:gt.metaitem.01:17809>, <gregtech:gt.metaitem.01:17809>],
+[<gregtech:gt.metaitem.01:17809>, <ore:ringWood>, <gregtech:gt.metaitem.01:17809>],
+[<gregtech:gt.metaitem.01:17809>, <gregtech:gt.metaitem.01:17809>, <gregtech:gt.metaitem.01:17809>]]);
+
+//Kinetic Wind Generator Rotor Blade (Wood)
+recipes.addShaped(<IC2:itemwoodrotor>, [
+[<ore:stickIron>, <IC2:itemRecipePart:7>, <ore:craftingToolHardHammer>],
+[<IC2:itemRecipePart:7>, <ore:ringIron>, <IC2:itemRecipePart:7>],
+[<ore:craftingToolScrewdriver>, <IC2:itemRecipePart:7>, <ore:screwIron>]]);
+
+//Iron Rotor Blade
+recipes.addShaped(<IC2:itemRecipePart:8>, [
+[<ore:plateIron>, <ore:plateIron>, <ore:plateIron>],
+[<ore:plateIron>, <ore:ringSteel>, <ore:plateIron>],
+[<ore:plateIron>, <ore:plateIron>, <ore:plateIron>]]);
+
+//Kinetic Wind Generator Rotor Blade (Iron)
+recipes.addShaped(<IC2:itemironrotor>, [
+[<IC2:itemRecipePart:11>, <IC2:itemRecipePart:8>, <ore:craftingToolHardHammer>],
+[<IC2:itemRecipePart:8>, <ore:ringSteel>, <IC2:itemRecipePart:8>],
+[<ore:craftingToolWrench>, <IC2:itemRecipePart:8>, <IC2:itemRecipePart:11>]]);
+
+//Steel Rotor Blade
+recipes.addShaped(<IC2:itemRecipePart:10>, [
+[<ore:plateSteel>, <ore:plateSteel>, <ore:plateSteel>],
+[<ore:plateSteel>, <ore:ringTungstenSteel>, <ore:plateSteel>],
+[<ore:plateSteel>, <ore:plateSteel>, <ore:plateSteel>]]);
+
+//Kinetic Wind Generator Rotor Blade (Steel)
+recipes.addShaped(<IC2:itemsteelrotor>, [
+[<IC2:itemRecipePart:12>, <IC2:itemRecipePart:10>, <ore:craftingToolHardHammer>],
+[<IC2:itemRecipePart:10>, <ore:ringTungstenSteel>, <IC2:itemRecipePart:10>],
+[<ore:craftingToolWrench>, <IC2:itemRecipePart:10>, <IC2:itemRecipePart:12>]]);
+
+//Carbon Rotor Blade
+recipes.addShaped(<IC2:itemRecipePart:9>, [
+[<IC2:itemPartCarbonPlate>, <IC2:itemPartCarbonPlate>, <IC2:itemPartCarbonPlate>],
+[<IC2:itemPartCarbonPlate>, <ore:ringIridium>, <IC2:itemPartCarbonPlate>],
+[<IC2:itemPartCarbonPlate>, <IC2:itemPartCarbonPlate>, <IC2:itemPartCarbonPlate>]]);
+
+//Kinetic Wind Generator Rotor Blade (Carbon)
+recipes.addShaped(<IC2:itemwcarbonrotor>, [
+[<ore:screwIridium>, <IC2:itemRecipePart:9>, <ore:craftingToolHardHammer>],
+[<IC2:itemRecipePart:9>, <IC2:itemsteelrotor>, <IC2:itemRecipePart:9>],
+[<ore:craftingToolWrench>, <IC2:itemRecipePart:9>, <ore:screwIridium>]]);
