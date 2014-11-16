@@ -83,26 +83,26 @@ recipes.addShaped(<GraviSuite:graviChestPlate>, [
 //Advanced Nano Chest
 recipes.addShaped(<GraviSuite:advNanoChestPlate>, [
 [<IC2:itemPartCarbonPlate>, <GraviSuite:advJetpack>, <IC2:itemPartCarbonPlate>],
-[<ore:plateSilicon>, <IC2:itemArmorNanoChestplate>, <ore:plateSilicon>],
-[<gregtech:gt.blockmachines:1643>, <ore:circuitAdvanced>, <gregtech:gt.blockmachines:1643>]]);
+[<ore:plateIridium>, <IC2:itemArmorNanoChestplate>, <ore:plateIridium>],
+[<ore:wireGt12Platinum>, <ore:circuitAdvanced>, <ore:wireGt12Platinum>]]);
  
 //Advanced Jetpack
 recipes.addShaped(<GraviSuite:advJetpack>,[
 [<ore:plateSilicon>, <IC2:itemArmorJetpackElectric>, <ore:plateSilicon>],
 [<GraviSuite:itemSimpleItem:6>, <GraviSuite:advLappack>, <GraviSuite:itemSimpleItem:6>],
-[<gregtech:gt.blockmachines:1643>, <ore:circuitAdvanced>, <gregtech:gt.blockmachines:1643>]]);
+[<gregtech:gt.blockmachines:1643>, <ore:circuitMaster>, <gregtech:gt.blockmachines:1643>]]);
 
 //Advanced Lappack
 recipes.addShaped(<GraviSuite:advLappack:1>,[
 [<ore:batteryElite>, <ore:plateStainlessSteel>, <ore:batteryElite>],
 [<ore:batteryElite>, <IC2:itemArmorEnergypack:1>, <ore:batteryElite>],
-[<ore:batteryElite>, <ore:circuitGood>, <ore:batteryElite>]]);
+[<ore:circuitAdvanced>, <ore:wireGt12TungstenSteel> , <ore:circuitAdvanced>]]);
 
 //Ultimate Lappack
 recipes.addShaped(<GraviSuite:ultimateLappack:1>,[
 [<ore:batteryMaster>, <ore:plateAlloyIridium>, <ore:batteryMaster>],
 [<ore:batteryMaster>, <GraviSuite:advLappack>, <ore:batteryMaster>],
-[<ore:batteryMaster>, <ore:circuitAdvanced>, <ore:batteryMaster>]]);
+[<ore:wireGt16Platinum>, <ore:circuitMaster>, <ore:wireGt16Platinum>]]);
 
 //Nei change Names
 
