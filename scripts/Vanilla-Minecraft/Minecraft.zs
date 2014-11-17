@@ -57,13 +57,13 @@ recipes.remove(<minecraft:compass>);
 //Arrow
 recipes.remove(<minecraft:arrow>);
 //Minecart with Chest
-recipes.remove(<minecraft:chest_minecart>);
+recipes.removeShaped(<minecraft:chest_minecart>);
 //Minecart with Furnace
-recipes.remove(<minecraft:furnace_minecart>);
+recipes.removeShaped(<minecraft:furnace_minecart>);
 //Minecart with Hopper
-recipes.remove(<minecraft:hopper_minecart>);
+recipes.removeShaped(<minecraft:hopper_minecart>);
 //Minecart with TNT
-recipes.remove(<minecraft:tnt_minecart>);
+recipes.removeShaped(<minecraft:tnt_minecart>);
 //Diamond Sword
 recipes.remove(<minecraft:diamond_sword>);
 //Diamond Shovel
