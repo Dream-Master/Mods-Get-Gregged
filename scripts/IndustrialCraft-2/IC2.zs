@@ -18,6 +18,15 @@ recipes.remove(<IC2:blockMachine:6>);
 recipes.remove(<IC2:blockMachine2:9>);
 //Fermernter
 recipes.remove(<IC2:blockMachine2:13>);
+//LV Transformer
+recipes.remove(<IC2:blockElectric:3>);
+//MV Transformer
+recipes.remove(<IC2:blockElectric:4>);
+//HV Transformer
+recipes.remove(<IC2:blockElectric:5>);
+//EV Transformer
+recipes.remove(<IC2:blockElectric:6>);
+
 //Heat Conductor
 recipes.remove(<IC2:itemRecipePart:5>);
 //Coil
@@ -42,6 +51,12 @@ recipes.remove(<IC2:itemArmorEnergypack>);
 recipes.remove(<IC2:itemArmorJetpackElectric>);
 //Biogas Jetpack
 recipes.remove(<IC2:itemArmorJetpack:*>);
+//Reactor Plating
+recipes.remove(<IC2:reactorPlating>);
+//Heat Capacity Reactor Plating
+recipes.remove(<IC2:reactorPlatingHeat>);
+//Containment Reactor Plating
+recipes.remove(<IC2:reactorPlatingExplosive>);
 //Wire Cutter
 recipes.remove(<IC2:itemToolCutter>);
 //Copper Cable
@@ -56,20 +71,20 @@ recipes.remove(<IC2:itemCable:10>);
 recipes.remove(<IC2:itemPartCoalChunk>);
 //Raw Carbon Mesh
 recipes.remove(<IC2:itemPartCarbonMesh>);
-//reinforced Glass
+//Reinforced Glass
 recipes.remove(<IC2:blockAlloyGlass>);
 //Mining Drill
-recipes.remove(<IC2:itemToolDrill>);
+recipes.remove(<IC2:itemToolDrill:*>);
 //Diamond Drill
-recipes.remove(<IC2:itemToolDDrill>);
+recipes.remove(<IC2:itemToolDDrill:*>);
 //Iridium Drill
-recipes.remove(<IC2:itemToolIridiumDrill>);
+recipes.remove(<IC2:itemToolIridiumDrill:*>);
 //Chainsaw
-recipes.remove(<IC2:itemToolChainsaw>);
+recipes.remove(<IC2:itemToolChainsaw:*>);
 //Electric Wrenche
-recipes.remove(<IC2:itemToolWrenchElectric>);
+recipes.remove(<IC2:itemToolWrenchElectric:*>);
 //Electric Treetap
-recipes.remove(<IC2:itemTreetapElectric>);
+recipes.remove(<IC2:itemTreetapElectric:*>);
 //Wood Rotor Blade
 recipes.remove(<IC2:itemRecipePart:7>);
 //Kinetic Wind Generator Rotor Blade (Wood)
@@ -166,6 +181,24 @@ recipes.addShaped(<IC2:itemArmorJetpack>, [
 [<ore:plateTungstenSteel>, <IC2:reactorCoolantSix>, <ore:plateTungstenSteel>],
 [<gregtech:gt.metaitem.01:32405>, <IC2:itemRecipePart:6>, <gregtech:gt.metaitem.01:32405>],
 [<GraviSuite:itemSimpleItem:6>, <ore:circuitAdvanced>, <GraviSuite:itemSimpleItem:6>]]);
+
+//Reactor Plating
+recipes.addShaped(<IC2:reactorPlating>, [
+[<ore:plateAlloyAdvanced>, <ore:plateAlloyAdvanced>, <ore:plateAlloyAdvanced>],
+[<ore:plateAlloyAdvanced>, <ore:plateDenseLead>, <ore:plateAlloyAdvanced>],
+[<ore:plateAlloyAdvanced>, <ore:plateAlloyAdvanced>, <ore:plateAlloyAdvanced>]]);
+
+//Heat Capacity Reactor Plating
+recipes.addShaped(<IC2:reactorPlatingHeat>, [
+[<ore:plateDenseCopper>, <ore:plateCopper>, <ore:plateDenseCopper>],
+[<ore:plateSilver>, <IC2:reactorPlating>, <ore:plateSilver>],
+[<ore:plateDenseCopper>, <ore:plateCopper>, <ore:plateDenseCopper>]]);
+
+//Containment Reactor Plating
+recipes.addShaped(<IC2:reactorPlatingExplosive>, [
+[<ore:plateDenseLead>, <ore:plateAlloyAdvanced>, <ore:plateDenseLead>],
+[<ore:plateAlloyAdvanced>, <IC2:reactorPlating>, <ore:plateAlloyAdvanced>],
+[<ore:plateDenseLead>, <ore:plateAlloyAdvanced>, <ore:plateDenseLead>]]);
 
 //Copper Cable
 recipes.addShaped(<IC2:itemCable:1>, [
