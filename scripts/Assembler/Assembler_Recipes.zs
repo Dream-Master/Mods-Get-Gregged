@@ -32,6 +32,10 @@ Assembler.addRecipe(<IC2:blockGenerator:3>, <IC2:blockMachine>, <gregtech:gt.met
 Assembler.addRecipe(<IC2:blockMachine:6>, <gregtech:gt.blockmachines:231>, <gregtech:gt.blockmachines:431>, 600, 64);
 //Fermenter
 Assembler.addRecipe(<IC2:blockMachine2:13>, <gregtech:gt.blockmachines:501>, <IC2:itemRecipePart:5> * 2, 600, 64);
+//Radioisotope Heat Generatpr
+Assembler.addRecipe(<IC2:blockHeatGenerator:2>, <IC2:blockReactorChamber>, <IC2:itemRecipePart:5> * 3, 400, 32);
+//Radioisotope Thermoelectric Generator
+Assembler.addRecipe(<IC2:blockGenerator:6>, <IC2:blockReactorChamber>, <IC2:blockGenerator:8>, 400, 32);
 //LV Transformer
 Assembler.addRecipe(<IC2:blockElectric:3>, <gregtech:gt.blockmachines:21>, <IC2:itemCable:13> * 2, 300, 32);
 //MV Transformer
