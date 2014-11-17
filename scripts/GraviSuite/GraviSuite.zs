@@ -1,5 +1,6 @@
 //Created by SteamT
 //Some Changes and Addons from DreamMasterXXL
+//Some Tweaks from DarkForce
 
 //import mods
 
@@ -76,32 +77,32 @@ recipes.addShaped(<GraviSuite:itemSimpleItem:6>, [
 
 //GraviChest
 recipes.addShaped(<GraviSuite:graviChestPlate>, [
-[<GraviSuite:itemSimpleItem:1>, <IC2:itemArmorQuantumChestplate>, <GraviSuite:itemSimpleItem:1>],
+[<GraviSuite:itemSimpleItem:1>, <IC2:itemArmorQuantumChestplate:*>, <GraviSuite:itemSimpleItem:1>],
 [<GraviSuite:itemSimpleItem:3>, <gregtech:gt.blockmachines:23>, <GraviSuite:itemSimpleItem:3>],
-[<GraviSuite:itemSimpleItem:1>, <GraviSuite:ultimateLappack>, <GraviSuite:itemSimpleItem:1>]]);
+[<GraviSuite:itemSimpleItem:1>, <GraviSuite:ultimateLappack:*>, <GraviSuite:itemSimpleItem:1>]]);
  
 //Advanced Nano Chest
 recipes.addShaped(<GraviSuite:advNanoChestPlate>, [
-[<IC2:itemPartCarbonPlate>, <GraviSuite:advJetpack>, <IC2:itemPartCarbonPlate>],
-[<ore:plateIridium>, <IC2:itemArmorNanoChestplate>, <ore:plateIridium>],
+[<IC2:itemPartCarbonPlate>, <GraviSuite:advJetpack:*>, <IC2:itemPartCarbonPlate>],
+[<ore:plateIridium>, <IC2:itemArmorNanoChestplate:*>, <ore:plateIridium>],
 [<ore:wireGt12Platinum>, <ore:circuitAdvanced>, <ore:wireGt12Platinum>]]);
  
 //Advanced Jetpack
 recipes.addShaped(<GraviSuite:advJetpack>,[
-[<ore:plateSilicon>, <IC2:itemArmorJetpackElectric>, <ore:plateSilicon>],
-[<GraviSuite:itemSimpleItem:6>, <GraviSuite:advLappack>, <GraviSuite:itemSimpleItem:6>],
+[<ore:plateSilicon>, <IC2:itemArmorJetpackElectric:*>, <ore:plateSilicon>],
+[<GraviSuite:itemSimpleItem:6>, <GraviSuite:advLappack:*>, <GraviSuite:itemSimpleItem:6>],
 [<gregtech:gt.blockmachines:1643>, <ore:circuitMaster>, <gregtech:gt.blockmachines:1643>]]);
 
 //Advanced Lappack
-recipes.addShaped(<GraviSuite:advLappack:1>,[
+recipes.addShaped(<GraviSuite:advLappack>,[
 [<ore:batteryElite>, <ore:plateStainlessSteel>, <ore:batteryElite>],
-[<ore:batteryElite>, <IC2:itemArmorEnergypack:1>, <ore:batteryElite>],
+[<ore:batteryElite>, <IC2:itemArmorEnergypack:*>, <ore:batteryElite>],
 [<ore:circuitAdvanced>, <ore:wireGt12TungstenSteel> , <ore:circuitAdvanced>]]);
 
 //Ultimate Lappack
-recipes.addShaped(<GraviSuite:ultimateLappack:1>,[
+recipes.addShaped(<GraviSuite:ultimateLappack>,[
 [<ore:batteryMaster>, <ore:plateAlloyIridium>, <ore:batteryMaster>],
-[<ore:batteryMaster>, <GraviSuite:advLappack>, <ore:batteryMaster>],
+[<ore:batteryMaster>, <GraviSuite:advLappack:*>, <ore:batteryMaster>],
 [<ore:wireGt16Platinum>, <ore:circuitMaster>, <ore:wireGt16Platinum>]]);
 
 //Nei change Names
