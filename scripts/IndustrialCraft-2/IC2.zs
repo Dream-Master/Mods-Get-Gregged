@@ -26,13 +26,20 @@ recipes.remove(<IC2:blockElectric:4>);
 recipes.remove(<IC2:blockElectric:5>);
 //EV Transformer
 recipes.remove(<IC2:blockElectric:6>);
-
 //Heat Conductor
 recipes.remove(<IC2:itemRecipePart:5>);
 //Coil
 recipes.remove(<IC2:itemRecipePart>);
 //Advanced Battery
 recipes.remove(<IC2:itemAdvBat>);
+//Bat Box
+recipes.remove(<IC2:blockElectric>);
+//CESU
+recipes.remove(<IC2:blockElectric:7>);
+//MFE
+recipes.remove(<IC2:blockElectric:1>);
+//MFSU
+recipes.remove(<IC2:blockElectric:2>);
 //Wood Scaffold
 recipes.remove(<IC2:blockScaffold>);
 //Iron Scaffold
@@ -139,6 +146,30 @@ recipes.addShaped(<IC2:itemAdvBat>, [
 [<ore:wireGt08Copper>, <gregtech:gt.metaitem.01:32501>, <ore:wireGt08Copper>],
 [<IC2:itemCasing>, <IC2:itemFluidCell>.withTag({Fluid: {Amount: 1000, FluidName: "sulfuricacid"}}), <IC2:itemCasing>],
 [<IC2:itemCasing>, <IC2:itemCasing:6>, <IC2:itemCasing>]]);
+
+//Bat Box
+recipes.addShaped(<IC2:blockElectric>, [
+[<IC2:itemCable:13>, <ore:plateSteel>, <IC2:itemCable:13>],
+[<IC2:itemBatREDischarged>, <gregtech:gt.blockmachines:11>, <IC2:itemBatREDischarged>],
+[<ore:plateSteel>, <IC2:itemBatREDischarged>, <ore:plateSteel>]]);
+
+//CESU
+recipes.addShaped(<IC2:blockElectric:7>, [
+[<IC2:itemCable>, <ore:plateBronze>, <IC2:itemCable>],
+[<IC2:itemAdvBat:*>, <gregtech:gt.blockmachines:12>, <IC2:itemAdvBat:*>],
+[<ore:plateBronze>, <IC2:itemAdvBat:*>, <ore:plateBronze>]]);
+
+//MFE
+recipes.addShaped(<IC2:blockElectric:1>, [
+[<IC2:itemCable:3>, <ore:batteryElite>, <IC2:itemCable:3>],
+[<ore:batteryElite>, <gregtech:gt.blockmachines:13>, <ore:batteryElite>],
+[<ore:plateStainlessSteel>, <ore:batteryElite>, <ore:plateStainlessSteel>]]);
+
+//MFSU
+recipes.addShaped(<IC2:blockElectric:2>, [
+[<ore:cableGt01TungstenSteel>, <ore:batteryMaster>, <ore:cableGt01TungstenSteel>],
+[<ore:batteryMaster>, <gregtech:gt.blockmachines:14>, <ore:batteryMaster>],
+[<ore:circuitMaster>, <ore:batteryMaster>, <ore:circuitMaster>]]);
 
 //Wood Scaffold
 recipes.addShapeless(<IC2:blockScaffold>, [<ore:frameGtWood>, <gregtech:gt.metaitem.01:17809>]);
