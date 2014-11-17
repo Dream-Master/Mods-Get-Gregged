@@ -153,11 +153,11 @@ recipes.addShaped(<IC2:itemArmorAdvBatpack>, [
 recipes.addShaped(<IC2:itemArmorEnergypack>, [
 [<ore:circuitAdvanced>, <IC2:itemCasing:5>, <ore:circuitAdvanced>],
 [<ore:batteryElite>, <IC2:itemArmorAdvBatpack:*>, <ore:batteryElite>],
-[<IC2:itemCasing:5>, <ore:wireGt8Gold>, <IC2:itemCasing:5>]]);
+[<IC2:itemCasing:5>, <ore:wireGt08Gold>, <IC2:itemCasing:5>]]);
 
 //Electric Jetpack
 recipes.addShaped(<IC2:itemArmorJetpackElectric>, [
-[<ore:plateAluminium>, <IC2:itemArmorBatpack:1>, <ore:plateAluminium>],
+[<ore:plateAluminium>, <IC2:itemArmorBatpack:*>, <ore:plateAluminium>],
 [<GraviSuite:itemSimpleItem:6>, <gregtech:gt.metaitem.01:32603>, <GraviSuite:itemSimpleItem:6>],
 [<ore:wireGt04Kanthal>, <ore:circuitAdvanced>, <ore:wireGt04Kanthal>]]);
 
