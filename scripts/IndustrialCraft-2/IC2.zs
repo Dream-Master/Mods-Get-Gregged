@@ -6,12 +6,20 @@
 recipes.remove(<IC2:blockGenerator>);
 //Geothermal Generator
 recipes.remove(<IC2:blockGenerator:1>);
+//Electric Heat Generator
+recipes.remove(<IC2:blockHeatGenerator:3>);
+//Sterling Heat Generator
+recipes.remove(<IC2:blockGenerator:8>);
 //Solar Panel
 recipes.remove(<IC2:blockGenerator:3>);
 //Kinetic Wind Generator
 recipes.remove(<IC2:blockKineticGenerator>);
 //Reactor Chamber
 recipes.remove(<IC2:blockReactorChamber>);
+//Radioisotope Heat Generator
+recipes.remove(<IC2:blockHeatGenerator:2>);
+//Radioisotope Thermoelectric Generator
+recipes.remove(<IC2:blockGenerator:6>);
 //Fluid/Solid Canning Machine
 recipes.remove(<IC2:blockMachine:6>);
 //Solid Canning Machine
@@ -114,14 +122,26 @@ recipes.remove(<IC2:itemwcarbonrotor>);
 //Generator
 recipes.addShaped(<IC2:blockGenerator>, [
 [<ore:cableGt01Tin>, <ore:batteryBasic>, <ore:cableGt01Tin>],
-[<ore:plateAluminium>, <gregtech:gt.blockcasings:1>, <ore:plateAluminium>],
-[<gregtech:gt.metaitem.01:32600>, <gregtech:gt.blockmachines:104>, <IC2:itemRecipePart>]]);
+[<ore:plateSteel>, <gregtech:gt.blockmachines:1120>, <ore:plateSteel>],
+[<gregtech:gt.metaitem.01:32600>, <gregtech:gt.blockmachines:100>, <IC2:itemRecipePart>]]);
 
 //Geothermal Generator
 recipes.addShaped(<IC2:blockGenerator:1>, [
 [<ore:cableGt01Tin>, <gregtech:gt.metaitem.01:32405>, <ore:cableGt01Tin>],
 [<ore:plateAluminium>, <gregtech:gt.blockcasings2>, <ore:plateAluminium>],
 [<gregtech:gt.metaitem.01:32600>, <IC2:blockGenerator>, <IC2:itemRecipePart>]]);
+
+//Electric Heat Generator
+recipes.addShaped(<IC2:blockHeatGenerator:3>, [
+[<IC2:itemCable>, <gregtech:gt.metaitem.01:32501>, <IC2:itemCable>],
+[<ore:circuitBasic>, <gregtech:gt.blockcasings:2>, <ore:circuitBasic>],
+[<IC2:itemCasing:4>, <IC2:itemRecipePart:5>, <IC2:itemCasing:4>]]);
+
+//Sterling Heat Generator
+recipes.addShaped(<IC2:blockGenerator:8>, [
+[<IC2:itemCasing:4>, <IC2:itemRecipePart:5>, <IC2:itemCasing:4>],
+[<IC2:itemBatREDischarged>, <IC2:blockGenerator>, <IC2:itemBatREDischarged>],
+[<IC2:itemCable>, <IC2:itemBatREDischarged>, <IC2:itemCable>]]);
 
 //Kinetic Wind Generator
 recipes.addShaped(<IC2:blockKineticGenerator>, [
