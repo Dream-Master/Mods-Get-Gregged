@@ -83,6 +83,20 @@ recipes.remove(<Railcraft:part.gear:3>);
 recipes.remove(<Railcraft:tool.crowbar>);
 //Reinforced Crowbar
 recipes.remove(<Railcraft:tool.crowbar.reinforced>);
+//Batbox Cart
+recipes.removeShaped(<Railcraft:cart.energy.batbox>);
+//CESU Cart
+recipes.removeShaped(<Railcraft:cart.energy.cesu>);
+//MFE Cart
+recipes.removeShaped(<Railcraft:cart.energy.mfe>);
+//Tank Cart
+recipes.removeShaped(<Railcraft:cart.tank>);
+//Personal Anchor Cart
+recipes.removeShaped(<Railcraft:cart.anchor.personal>);
+//World Anchor Cart
+recipes.removeShaped(<Railcraft:cart.anchor>);
+//Work Cart
+recipes.removeShaped(<Railcraft:cart.work>);
 
 //add Recipes
 
