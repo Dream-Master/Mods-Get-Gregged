@@ -7,6 +7,9 @@ import mods.ic2.Compressor;
 //Sunnarium Dust
 Compressor.addRecipe(<AdvancedSolarPanel:asp_crafting_items>, <gregtech:gt.metaitem.01:2318>);
 
+//Sunnarium Parts
+Compressor.addRecipe(<AdvancedSolarPanel:asp_crafting_items>, <AdvancedSolarPanel:asp_crafting_items:9> * 9);
+
 //AE
 
 //Fluix Block
