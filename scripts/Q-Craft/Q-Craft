@@ -1,0 +1,35 @@
+//Thanks to Invultri and Kirara Server
+
+#qCraft items
+val dustQuantum = <qCraft:dust>;
+val computerQuantum = <qCraft:computer>;
+
+#railcraft items
+
+val plateSteel = <Railcraft:part.plate:1>;
+
+#ic2 items
+val plateIridiumReinforced = <IC2:itemPartIridium>;
+val plateNaquadahEnriched = <gregtech:gt.metaitem.01:17326>;
+val generatorFieldEV = <gregtech:gt.metaitem.01:32673>;
+val orbData = <gregtech:gt.metaitem.01:32707>;
+
+#Gregtech items
+val dustEnderEye = <gregtech:gt.metaitem.01:2533>;
+val dustPerditio = <gregtech:gt.metaitem.01:2544>;
+val dustOrdo = <gregtech:gt.metaitem.01:2545>;
+val dustAer = <gregtech:gt.metaitem.01:2540>;
+val dustTerra = <gregtech:gt.metaitem.01:2542>;
+val dustAqua = <gregtech:gt.metaitem.01:2543>;
+val dustIgnis = <gregtech:gt.metaitem.01:2541>;
+
+#Recipe for qCraft quantum dust
+recipes.addShapeless(dustQuantum, [dustEnderEye, dustEnderEye, dustEnderEye, dustPerditio, dustOrdo, dustAer, dustTerra, dustAqua, dustIgnis]);
+
+#Recipe for qCraft quantum computer
+#Blame SpwnX
+recipes.remove(computerQuantum);
+recipes.addShaped(computerQuantum, [
+	[plateIridiumReinforced, plateNaquadahEnriched, plateIridiumReinforced],
+	[plateIridiumReinforced, generatorFieldEV, plateIridiumReinforced],
+	[orbData, dustQuantum, orbData]]);
