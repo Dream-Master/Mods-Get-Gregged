@@ -1,3 +1,5 @@
+//Thanks to Invultri and Kirara Server
+
 import mods.nei.NEI;
 import mods.gregtech.ChemicalReactor;
 import mods.gregtech.Wiremill;
