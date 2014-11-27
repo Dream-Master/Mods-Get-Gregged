@@ -66,6 +66,8 @@ recipes.remove(<IC2:itemArmorEnergypack>);
 recipes.remove(<IC2:itemArmorJetpackElectric>);
 //Biogas Jetpack
 recipes.remove(<IC2:itemArmorJetpack:*>);
+//ITNT
+recipes.remove(<IC2:blockITNT>);
 //Reactor Plating
 recipes.remove(<IC2:reactorPlating>);
 //Heat Capacity Reactor Plating
@@ -116,6 +118,10 @@ recipes.remove(<IC2:itemsteelrotor>);
 recipes.remove(<IC2:itemRecipePart:9>);
 //Kinetic Wind Generator Rotor Blade (Carbon)
 recipes.remove(<IC2:itemwcarbonrotor>);
+//Wrenche
+recipes.remove(<IC2:itemToolWrench>);
+//MFSU upgrade Kit
+recipes.remove(<IC2:itemupgradekit>);
 
 //add Recipes
 
