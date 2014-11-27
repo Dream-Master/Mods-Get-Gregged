@@ -13,11 +13,16 @@ Compressor.addRecipe(<AdvancedSolarPanel:asp_crafting_items>, <AdvancedSolarPane
 //AE
 
 //Fluix Block
-Compressor.addRecipe(<appliedenergistics2:tile.BlockFluix>, <ore:gemFluix> * 4);
+Compressor.addRecipe(<appliedenergistics2:tile.BlockFluix>, <appliedenergistics2:item.ItemMultiMaterial:7> * 4);
 
 //Biome O Plenty
 
+//Malachite
 Compressor.addRecipe(<BiomesOPlenty:gemOre:11>, <BiomesOPlenty:gems:5> * 9);
+//Hardened Ice
+Compressor.addRecipe(<BiomesOPlenty:hardIce>, <minecraft:packed_ice>);
+//Ash Block
+Compressor.addRecipe(<BiomesOPlenty:ash>, <BiomesOPlenty:misc:1> * 4);
 
 //Carpenters Blocks
 
