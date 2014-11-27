@@ -1,14 +1,23 @@
 //Created by Arch-Nihil
 
-//remove Recipes
+// #======= Removing Recipes =======#
 
-//EnderQuarry
+// --- Ender Quarry
 recipes.remove(<ExtraUtilities:enderQuarry>);
 
-//add Recipes
+// --- Glowstone Glass
+recipes.remove(<ExtraUtilities:decorativeBlock2:7>);
 
-//EnderQuarry
+// #======= Add Recipes =======#
+
+// --- Ender Quarry
 recipes.addShaped(<ExtraUtilities:enderQuarry>, [
 [<ore:plateTitanium>, <ExtraUtilities:decorativeBlock1:11>, <ore:plateTitanium>],
 [<ExtraUtilities:enderThermicPump>, <BuildCraft|Factory:machineBlock>, <ExtraUtilities:enderThermicPump>],
 [<ore:plateTitanium>, <ExtraUtilities:decorativeBlock1:11>, <ore:plateTitanium>]]);
+
+// --- Glowstone Glass
+recipes.addShaped(<ExtraUtilities:decorativeBlock2:7>, [
+[<ore:dustGlowstone>, <ore:plateGlowstone>, <ore:dustGlowstone>],
+[<ore:plateGlowstone>, <TConstruct:GlassBlock>, <ore:plateGlowstone>],
+[<ore:dustGlowstone>, <ore:plateGlowstone>, <ore:dustGlowstone>]]);
