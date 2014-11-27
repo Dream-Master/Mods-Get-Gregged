@@ -32,6 +32,8 @@ recipes.remove(<appliedenergistics2:tile.BlockCharger>);
 recipes.remove(<appliedenergistics2:tile.BlockQuartzGrowthAccelerator>);
 //Inscriber
 recipes.remove(<appliedenergistics2:tile.BlockInscriber>);
+//Tiny TNT
+recipes.remove(<appliedenergistics2:tile.BlockTinyTNT>);
 //ME Quantum Ring
 recipes.remove(<appliedenergistics2:tile.BlockQuantumRing>);
 //ME Quantum Link Chamber
