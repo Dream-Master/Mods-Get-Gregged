@@ -2,7 +2,7 @@
 
 //Flans Mod
 
-//Fibreglass
+//remove Fibreglass
 furnace.remove(<flansmod:fiberglass>);
 
 //IC2
