@@ -11,7 +11,7 @@ recipes.remove(<minecraft:sandstone:2>);
 //Clay
 recipes.remove(<minecraft:clay>);
 //Coal
-recipes.removeShapeless(<minecraft:coal>);
+recipes.remove(<minecraft:coal>);
 //Gunpowder
 recipes.removeShapeless(<minecraft:gunpowder>, [<minecraft:coal:1>, <minecraft:coal:1>, <minecraft:coal:1>, <minecraft:glowstone_dust>]);
 //nether Brick
