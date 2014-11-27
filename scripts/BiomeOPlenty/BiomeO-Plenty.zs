@@ -14,6 +14,8 @@ recipes.remove(<BiomesOPlenty:dartBlower>);
 recipes.remove(<BiomesOPlenty:dart>);
 //Diamond Scythe
 recipes.remove(<BiomesOPlenty:scytheDiamond>);
+//Ash Block
+recipes.remove(<BiomesOPlenty:ash>);
 
 //add Recipes
 
@@ -40,3 +42,6 @@ recipes.addShaped(<BiomesOPlenty:scytheDiamond>, [
 [<ore:gemDiamond>, <ore:plateDiamond>, <ore:craftingToolHardHammer>],
 [<ore:stickWood>, <ore:craftingToolFile>, <ore:plateDiamond>],
 [<ore:stickWood>, null, null]]);
+
+//Pile of Ash
+recipes.addShapeless(<gregtech:gt.metaitem.01:2816>, [<BiomesOPlenty:misc:1>, <BiomesOPlenty:misc:1>, <BiomesOPlenty:misc:1>, <BiomesOPlenty:misc:1>]);
