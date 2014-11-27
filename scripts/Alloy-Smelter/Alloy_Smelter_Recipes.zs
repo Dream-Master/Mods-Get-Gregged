@@ -10,3 +10,11 @@ AlloySmelter.addRecipe(<appliedenergistics2:tile.BlockQuartzGlass> * 4, <minecra
 
 //Quartz Lamp
 AlloySmelter.addRecipe(<appliedenergistics2:tile.BlockQuartzLamp>, <appliedenergistics2:tile.BlockQuartzGlass> , <minecraft:glowstone_dust> * 2, 400, 32);
+
+//Quartz Tank
+AlloySmelter.addRecipe(<extracells:certustank>, <appliedenergistics2:tile.BlockQuartzGlass> * 8, <gregtech:gt.metaitem.01:2516> * 8, 800, 32);
+
+//Flasn Mod
+
+//Fibreglass
+AlloySmelter.addRecipe(<flansmod:fiberglass>, <gregtech:gt.metaitem.01:23890> * 2, <gregtech:gt.metaitem.01:23874> * 2, 400, 32);
