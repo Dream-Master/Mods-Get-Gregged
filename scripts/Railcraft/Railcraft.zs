@@ -42,6 +42,10 @@ recipes.remove(<Railcraft:tile.railcraft.machine.beta:7>);
 recipes.remove(<Railcraft:tile.railcraft.machine.beta:8>);
 //Industrial Steam Engine
 recipes.remove(<Railcraft:tile.railcraft.machine.beta:9>);
+//Anchor
+recipes.remove(<Railcraft:tile.railcraft.machine.alpha>);
+//Personal Anchor
+recipes.remove(<Railcraft:tile.railcraft.machine.alpha:2>);
 //Steel Tank Wall
 recipes.removeShaped(<Railcraft:tile.railcraft.machine.beta:13>, [
 [<Railcraft:part.plate:1>, <Railcraft:part.plate:1>],
@@ -176,6 +180,12 @@ recipes.addShaped(<Railcraft:tile.railcraft.machine.beta:9>, [
 [<ore:plateSteel>, <ore:plateLapis>, <ore:plateSteel>],
 [<minecraft:glass>, <gregtech:gt.blockcasings:3>, <minecraft:glass>],
 [<ore:gearGtTungstenSteel>, <minecraft:piston>, <ore:gearGtTungstenSteel>]]);
+
+//Personal Anchor
+recipes.addShaped(<Railcraft:tile.railcraft.machine.alpha:2>, [
+[<ore:plateEmerald>, <ore:plateDenseObsidian>, <ore:plateEmerald>],
+[<ore:plateGold>, <ore:gemEnderEye>, <ore:plateGold>],
+[<ore:plateEmerald>, <ore:plateDenseObsidian>, <ore:plateEmerald>]]);
 
 //Steel Tank Wall
 recipes.addShaped(<Railcraft:tile.railcraft.machine.beta:13> *4, [
