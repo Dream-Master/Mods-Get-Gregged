@@ -36,6 +36,8 @@ recipes.remove(<GraviSuite:graviTool>);
 recipes.remove(<GraviSuite:advLappack>);
 //Ultimate Lappack
 recipes.remove(<GraviSuite:ultimateLappack>);
+//Relocator
+recipes.remove(<GraviSuite:relocator:*>);
  
 //add Recipes
 
@@ -104,6 +106,12 @@ recipes.addShaped(<GraviSuite:ultimateLappack>,[
 [<ore:batteryMaster>, <ore:plateAlloyIridium>, <ore:batteryMaster>],
 [<ore:batteryMaster>, <GraviSuite:advLappack:*>, <ore:batteryMaster>],
 [<ore:wireGt16Platinum>, <ore:circuitMaster>, <ore:wireGt16Platinum>]]);
+
+//Relocator
+recipes.addShaped(<GraviSuite:relocator>,[
+[<ore:plateAlloyIridium>, <ore:gemNetherStar>, <ore:plateNeutronium>],
+[<ore:gemEnderEye>, <ore:craftingTeleporter>, <minecraft:dragon_egg>.reuse()],
+[<ore:plateNaquadah>, <Thaumcraft:FocusPortableHole>, <ore:plateOsmium>]]);
 
 //Nei change Names
 
