@@ -3,6 +3,8 @@
 
 //remove Recipes
 
+//Quartz Tank
+recipes.remove(<extracells:certustank>);
 //ME Fluid Export Bus
 recipes.remove(<extracells:part.base>);
 //ME Fluid Import Bus
