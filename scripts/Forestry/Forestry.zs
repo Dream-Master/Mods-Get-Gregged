@@ -66,6 +66,20 @@ recipes.remove(<Forestry:gearBronze>);
 recipes.remove(<Forestry:gearCopper>);
 //Tin Gear
 recipes.remove(<Forestry:gearTin>);
+//Stamp 1n
+recipes.remove(<Forestry:stamps>);
+//Stamp 2n
+recipes.remove(<Forestry:stamps:1>);
+//Stamp 5n
+recipes.remove(<Forestry:stamps:2>);
+//Stamp 10n
+recipes.remove(<Forestry:stamps:3>);
+//Wrenche
+recipes.remove(<Forestry:wrench>);
+//Pipette
+recipes.remove(<Forestry:pipette>);
+//Spectacles
+recipes.remove(<Forestry:naturalistHelmet>);
 
 //add Recipes
 
@@ -467,4 +481,16 @@ recipes.addShaped(<Forestry:infuser>, [
 recipes.addShaped(<Forestry:canEmpty> * 3, [
 [null, <ore:plateTin>, null],
 [<ore:plateTin>, <gregtech:gt.metatool.01:12>, <ore:plateTin>],
+[null, null, null]]);
+
+//Pipette
+recipes.addShaped(<Forestry:pipette>, [
+[null, <ore:ingotRubber>, <ore:ingotRubber>],
+[null, <ore:cellEmpty>, <ore:ingotRubber>],
+[<ore:boltGlass>, null, null]]);
+
+//Spectacles
+recipes.addShaped(<Forestry:naturalistHelmet>, [
+[<ore:screwIron>, <ore:ringIron>, <ore:screwIron>],
+[<ore:lensGlass>, null, <ore:lensGlass>],
 [null, null, null]]);
