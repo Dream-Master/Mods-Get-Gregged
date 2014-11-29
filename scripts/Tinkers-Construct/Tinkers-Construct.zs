@@ -1,4 +1,5 @@
-//Created by DreamMasterXXL, modified by Arch-Nihil
+//Created by DreamMasterXXL
+
 
 //remove Recipes
 
@@ -24,6 +25,3 @@ recipes.remove(<TConstruct:MetalBlock:8>);
 recipes.remove(<TConstruct:MetalBlock:9>);
 //Block of Solid Ender
 recipes.remove(<TConstruct:MetalBlock:10>);
-
-//Disabling Aluminium Ingot Casting
-mods.tconstruct.Casting.removeTableRecipe(<GalacticraftCore:item.basicItem:5>);
