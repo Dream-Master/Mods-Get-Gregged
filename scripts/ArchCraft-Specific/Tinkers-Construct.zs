@@ -1,4 +1,4 @@
-//Created by DreamMasterXXL & Arch-Nihil
+//Created by Arch-Nihil
 
 
 
@@ -17,37 +17,37 @@ val SilkyJewel = <TConstruct:materials:26>;
 // ||||| Blocks |||||
 
 
-// --- Block of Cobalt
+// --- Block Of Cobalt
 recipes.remove(<TConstruct:MetalBlock>);
 
-// --- Block of Ardite
+// --- Block Of Ardite
 recipes.remove(<TConstruct:MetalBlock:1>);
 
-// --- Block of Manyullyn
+// --- Block Of Manyullyn
 recipes.remove(<TConstruct:MetalBlock:2>);
 
-// --- Block of Copper
+// --- Block Of Copper
 recipes.remove(<TConstruct:MetalBlock:3>);
 
-// --- Block of Bronze
+// --- Block Of Bronze
 recipes.remove(<TConstruct:MetalBlock:4>);
 
-// --- Block of Tin
+// --- Block Of Tin
 recipes.remove(<TConstruct:MetalBlock:5>);
 
-// --- Block of Aluminium
+// --- Block Of Aluminium
 recipes.remove(<TConstruct:MetalBlock:6>);
 
-// --- Block of Aluminium Brass
+// --- Block Of Aluminium Brass
 recipes.remove(<TConstruct:MetalBlock:7>);
 
-// --- Block of Alumite
+// --- Block Of Alumite
 recipes.remove(<TConstruct:MetalBlock:8>);
 
-// --- Block of Steel
+// --- Block Of Steel
 recipes.remove(<TConstruct:MetalBlock:9>);
 
-// --- Block of Solid Ender
+// --- Block Of Solid Ender
 recipes.remove(<TConstruct:MetalBlock:10>);
 
 
