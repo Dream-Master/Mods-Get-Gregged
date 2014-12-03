@@ -19,6 +19,7 @@ import mods.nei.NEI;
 val HSHAScrap = <RotaryCraft:rotarycraft_item_shaftcraft:9>;
 val LSHAScrap = <RotaryCraft:rotarycraft_item_shaftcraft:10>;
 val HSHAIngot = <RotaryCraft:rotarycraft_item_shaftcraft:1>;
+
 val HSLAIngot = <gregtech:gt.metaitem.01:11322>;
 val HSLAPlate = <gregtech:gt.metaitem.01:17322>;
 val HSLARod = <gregtech:gt.metaitem.01:23322>;
@@ -99,6 +100,7 @@ val DenseObsidian = <IC2:itemDensePlates:7>;
 val IronBars = <minecraft:iron_bars>;
 val StoneSlab = <minecraft:stone_slab>;
 val IronNoteBlock = <computronics:computronics.ironNoteBlock>;
+
 val WoodGear2x = <RotaryCraft:rotarycraft_item_gearunits>;
 val WoodGear4x = <RotaryCraft:rotarycraft_item_gearunits:1>;
 val WoodGear8x = <RotaryCraft:rotarycraft_item_gearunits:2>;
@@ -732,7 +734,6 @@ recipes.remove(<RotaryCraft:rotarycraft_item_flywheel:3>);
 // #======= Adding Recipes Back =======#
 
 
-
 // ||||| Base |||||
 
 
@@ -897,7 +898,7 @@ recipes.addShaped(Lens, [
 // --- Heat Ray Core
 recipes.addShaped(HeatRayCore, [
 [<ore:plateDiamond>, <TConstruct:materials:7>, <ore:plateDiamond>],
-[<TConstruct:materials:7> , <minecraft:nether_star>, <TConstruct:materials:7>],
+[<TConstruct:materials:7> , EVFieldGen, <TConstruct:materials:7>],
 [<ore:plateDiamond>, <TConstruct:materials:7>, <ore:plateDiamond>]]);
 
 // --- Heat Ray Barrel
@@ -1475,6 +1476,7 @@ recipes.addShaped(<RotaryCraft:rotarycraft_item_machine:61>, [
 [DenseObsidian, EVFieldGen, DenseObsidian],
 [BasePanel, <ore:plateDenseGold>, BasePanel]]);
 
+
 // ||||| Engines |||||
 
 
@@ -1789,15 +1791,6 @@ recipes.addShaped(<RotaryCraft:rotarycraft_item_machine:58>, [
 [HSLAPlate, IronChest, HSLAPlate],
 [BasePanel, BasePanel, BasePanel]]);
 
-// --- HSLA Steel Block
-Compressor.addRecipe(<RotaryCraft:rotarycraft_block_deco>, HSLAIngot * 9);
-
-// --- Anthracite Block
-Compressor.addRecipe(<RotaryCraft:rotarycraft_block_deco:1>, <RotaryCraft:rotarycraft_item_compacts> * 9);
-
-// --- Lonsdaleite Block
-Compressor.addRecipe(<RotaryCraft:rotarycraft_block_deco:2>, <RotaryCraft:rotarycraft_item_compacts:2> * 9);
-
 // --- Bedrock Block
 ImplosionCompressor.addRecipe(BedrockBlock, BedrockIngot * 9, 16);
 
@@ -1987,6 +1980,7 @@ recipes.addShaped(<RotaryCraft:rotarycraft_item_handcraft>, [
 
 // #======= Renaming Stuff =======#
 
+
 // --- HSHA Steel Scrap
 NEI.overrideName(HSHAScrap, "HSHA Steel Scrap");
 
@@ -2012,8 +2006,10 @@ NEI.overrideName(<RotaryCraft:rotarycraft_item_machine:31>, "Aerial Sprinkler");
 
 // #======= Hiding Stuff =======#
 
+
 // --- Worktable (Made Useless.)
 NEI.hide(<RotaryCraft:rotarycraft_item_machine:75>);
 
 // --- Blast Furnace (Made Useless.)
 NEI.hide(<RotaryCraft:rotarycraft_item_machine:45>);
+
