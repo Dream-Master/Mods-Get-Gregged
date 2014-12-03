@@ -24,6 +24,8 @@ val QuadDirt = <ExtraUtilities:cobblestone_compressed:11>;
 val SilkyJewel = <TConstruct:materials:26>;
 val HardDiamondGear = <RotaryCraft:rotarycraft_item_enginecraft:11>;
 val StainlessPipe = <ore:pipeSmallStainlessSteel>;
+val Paintbrush = <ExtraUtilities:paintbrush>;
+val WovenCloth = <harvestcraft:wovencottonItem>;
 
 
 
@@ -83,6 +85,13 @@ recipes.remove(<ExtraUtilities:enderQuarryUpgrade:8>);
 
 // --- Quarry Pump Upgrade
 recipes.remove(<ExtraUtilities:enderQuarryUpgrade:9>);
+
+// --- Paintbrush
+recipes.remove(Paintbrush);
+
+
+// ||||| Compressed Blocks |||||
+
 
 // --- Compressed Cobblestone
 recipes.remove(<ExtraUtilities:cobblestone_compressed>);
@@ -240,3 +249,9 @@ recipes.addShaped(<ExtraUtilities:enderQuarryUpgrade:9>, [
 [UpgradeBase, EnderPump, UpgradeBase],
 [EnderPump, StainlessPipe, EnderPump],
 [UpgradeBase, EnderPump, UpgradeBase]]);
+
+// --- Paintbrush
+recipes.addShaped(Paintbrush, [
+[null, WovenCloth, WovenCloth],
+[null, <ore:stickWood>, WovenCloth],
+[<ore:stickWood>, null, null]]);
