@@ -67,6 +67,16 @@ recipes.remove(<GalacticraftCore:tile.enclosed:15>);
 recipes.remove(<GalacticraftCore:tile.aluminumWire>);
 //Heavy Aluminium Wire
 recipes.remove(<GalacticraftCore:tile.aluminumWire:1>);
+//Basic Solar Panel
+recipes.remove(<GalacticraftCore:tile.solar>);
+//Advanced Solar Panel
+recipes.remove(<GalacticraftCore:tile.solar:4>);
+//Wafer Solar
+recipes.remove(<GalacticraftCore:item.basicItem:12>);
+//Single Solar Modul
+recipes.remove(<GalacticraftCore:item.basicItem>);
+//Full Solar Panel
+recipes.remove(<GalacticraftCore:item.basicItem:1>);
 
 //add Recipes
 
@@ -197,6 +207,24 @@ recipes.addShaped(<GalacticraftCore:tile.aluminumWire:1> * 3, [
 [<ore:compressedAluminium>, <ore:compressedAluminium>, <ore:compressedAluminium>],
 [<GalacticraftCore:tile.aluminumWire>, <GalacticraftCore:tile.aluminumWire>, <GalacticraftCore:tile.aluminumWire>],
 [<ore:compressedAluminium>, <ore:compressedAluminium>, <ore:compressedAluminium>]]);
+
+//Basic Solar Panel
+recipes.addShaped(<GalacticraftCore:tile.solar>, [
+[<ore:compressedAluminium>, <GalacticraftCore:item.basicItem:1>, <ore:compressedAluminium>],
+[<GalacticraftCore:tile.aluminumWire>, <GalacticraftCore:item.steelPole>, <GalacticraftCore:tile.aluminumWire>],
+[<ore:compressedSteel>, <ore:waferBasic>, <ore:compressedSteel>]]);
+
+//Advanced Solar Panel
+recipes.addShaped(<GalacticraftCore:tile.solar:4>, [
+[<ore:compressedAluminium>, <GalacticraftCore:item.basicItem:1>, <ore:compressedAluminium>],
+[<GalacticraftCore:tile.aluminumWire:1>, <GalacticraftCore:item.steelPole>, <GalacticraftCore:tile.aluminumWire:1>],
+[<gregtech:gt.metaitem.01:32600>, <ore:waferAdvanced>, <gregtech:gt.metaitem.01:32690>]]);
+
+//Full Solar Panel
+recipes.addShaped(<GalacticraftCore:item.basicItem:1>, [
+[<gregtech:gt.metaitem.01:32750>, <gregtech:gt.metaitem.01:32750>, <gregtech:gt.metaitem.01:32750>],
+[<GalacticraftCore:tile.aluminumWire>, <ore:waferBasic>, <GalacticraftCore:tile.aluminumWire>],
+[<gregtech:gt.metaitem.01:32750>, <gregtech:gt.metaitem.01:32750>, <gregtech:gt.metaitem.01:32750>]]);
 
 //Compressor Recipes
 
