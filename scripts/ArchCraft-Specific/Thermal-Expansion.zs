@@ -3,6 +3,7 @@
 
 // #======= Variables =======#
 
+
 val Servo = <ThermalExpansion:material>;
 val TSteelPipe = <gregtech:gt.blockmachines:5162>;
 val LTitaniumPipe = <gregtech:gt.blockmachines:5153>;
@@ -25,10 +26,16 @@ val SSteelFluid = <gregtech:gt.blockmachines:5142>;
 val XLOsmiumWire = <gregtech:gt.blockmachines:1625>;
 val AdvCircuit = <gregtech:gt.metaitem.01:32703>;
 val SterlingPlate = <gregtech:gt.metaitem.01:17350>;
+val LeadstoneCell = <ThermalExpansion:Cell:1>;
+val LeadstoneFrame = <ThermalExpansion:Frame:4>;
+val EVBatBuffer = <gregtech:gt.blockmachines:194>;
+val DiamondKinesis = <BuildCraft|Transport:item.buildcraftPipe.pipepowerdiamond>;
+val RedAlloyPlate = <ore:plateRedAlloy>;
 
 
 
 // #======= Removing all TE Recipes (Yes, the mod becomes unusable.) =======#
+
 
 recipes.remove(<ThermalExpansion:Machine:*>);
 recipes.remove(<ThermalExpansion:Dynamo>);
@@ -59,6 +66,7 @@ recipes.remove(<ThermalExpansion:Device:2>);
 
 // #======= Adding back a few recipes =======#
 
+
 // --- Tesseract
 recipes.addShaped(<ThermalExpansion:Tesseract>, [
 [XLOsmiumWire, XLTSteelFluid, XLOsmiumWire],
@@ -67,9 +75,9 @@ recipes.addShaped(<ThermalExpansion:Tesseract>, [
 
 // --- Tesseract Frame
 recipes.addShaped(<ThermalExpansion:Frame:7>, [
-[NaquadriaPlate, UVHull, NaquadriaPlate],
-[UVHull, <gregtech:gt.metaitem.01:32674>, UVHull],
-[NaquadriaPlate, UVHull, NaquadriaPlate]]);
+[UVHull, NaquadriaPlate, UVHull],
+[NaquadriaPlate, <gregtech:gt.metaitem.01:32674>, NaquadriaPlate],
+[UVHull, NaquadriaPlate, UVHull]]);
 
 // --- Magma Crucible
 recipes.addShaped(<ThermalExpansion:Machine:4>, [
@@ -109,6 +117,18 @@ recipes.addShaped(<ThermalExpansion:Device:2>, [
 [HSLAShaft, ResonantFrame, HSLAShaft],
 [<ore:gearTungstenSteel>, Servo, <ore:gearTungstenSteel>]]);
 
+// --- Leadstone Energy Cell ---
+recipes.addShaped(LeadstoneFrame, [
+[<ore:stickStainlessSteel>, DiamondKinesis, <ore:stickStainlessSteel>],
+[DiamondKinesis, LeadstoneFrame, DiamondKinesis],
+[<ore:stickStainlessSteel>, DiamondKinesis, <ore:stickStainlessSteel>]]);
+
+// --- Leadstone Energy Cell Frame ---
+recipes.addShaped(LeadstoneFrame, [
+[<ore:stickLead>, RedAlloyPlate, <ore:stickLead>],
+[RedAlloyPlate, HardenedFrame, RedAlloyPlate],
+[<ore:stickLead>, RedAlloyPlate, <ore:stickLead>]]);
+
 // --- Machine Frame (Hardened)
 recipes.addShaped(HardenedFrame, [
 [<ore:plateAluminium>, SSteelRod, <ore:plateAluminium>],
@@ -129,9 +149,9 @@ recipes.addShaped(ResonantFrame, [
 
 // --- Redstone Reception Coil
 recipes.addShaped(<ThermalExpansion:material:1>, [
-[null, null, <ore:circuitAdvanced>],
+[null, null, <ore:circuitGood>],
 [null, <gregtech:gt.metaitem.01:17351>, null],
-[<ore:circuitAdvanced>, null, null]]);
+[<ore:circuitGood>, null, null]]);
 
 // --- Redstone Transmission Coil
 recipes.addShaped(<ThermalExpansion:material:2>, [
