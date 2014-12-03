@@ -1,4 +1,11 @@
-//Created by Arch-Nihil
+// ******** Created By Arch-Nihil *******
+
+
+
+// #======= Importing Stuff =======#
+
+
+import mods.ic2.Compressor;
 
 
 
@@ -17,37 +24,37 @@ val SilkyJewel = <TConstruct:materials:26>;
 // ||||| Blocks |||||
 
 
-// --- Block Of Cobalt
+// --- Block of Cobalt
 recipes.remove(<TConstruct:MetalBlock>);
 
-// --- Block Of Ardite
+// --- Block of Ardite
 recipes.remove(<TConstruct:MetalBlock:1>);
 
-// --- Block Of Manyullyn
+// --- Block of Manyullyn
 recipes.remove(<TConstruct:MetalBlock:2>);
 
-// --- Block Of Copper
+// --- Block of Copper
 recipes.remove(<TConstruct:MetalBlock:3>);
 
-// --- Block Of Bronze
+// --- Block of Bronze
 recipes.remove(<TConstruct:MetalBlock:4>);
 
-// --- Block Of Tin
+// --- Block of Tin
 recipes.remove(<TConstruct:MetalBlock:5>);
 
-// --- Block Of Aluminium
+// --- Block of Aluminium
 recipes.remove(<TConstruct:MetalBlock:6>);
 
-// --- Block Of Aluminium Brass
+// --- Block of Aluminium Brass
 recipes.remove(<TConstruct:MetalBlock:7>);
 
-// --- Block Of Alumite
+// --- Block of Alumite
 recipes.remove(<TConstruct:MetalBlock:8>);
 
-// --- Block Of Steel
+// --- Block of Steel
 recipes.remove(<TConstruct:MetalBlock:9>);
 
-// --- Block Of Solid Ender
+// --- Block of Solid Ender
 recipes.remove(<TConstruct:MetalBlock:10>);
 
 
@@ -70,6 +77,13 @@ recipes.remove(SilkyJewel);
 
 
 // #======= Adding Back Recipes =======#
+
+
+// --- Block of Manyullyn
+Compressor.addRecipe(<TConstruct:MetalBlock:2>, <ore:ingotManyullyn> * 9);
+
+// --- Block of Alumite
+Compressor.addRecipe(<TConstruct:MetalBlock:8>, <ore:ingotAlumite> * 9);
 
 
 
