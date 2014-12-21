@@ -1,39 +1,575 @@
-//SteamT for creating it initally
-//digger6 for doing a lot of work on it
-//Some changings and addition by Dream MasterXXL
+// ******** Created by Arch-Nihil ********
 
-//remove recipes
+// *======= Importing Stuff =======*
 
-//Crafting Unit
-recipes.remove(<appliedenergistics2:tile.BlockCraftingUnit>);
-//Crafting Co Processing Unit
-recipes.remove(<appliedenergistics2:tile.BlockCraftingUnit:1>);
-//Molecular Assembler
-recipes.remove(<appliedenergistics2:tile.BlockMolecularAssembler>);
-//Block Quartz
-recipes.remove(<appliedenergistics2:tile.BlockQuartz>);
-//Chiseld Quartz Block
-recipes.remove(<appliedenergistics2:tile.BlockQuartzChiseled>);
-//Block Fluix
-recipes.remove(<appliedenergistics2:tile.BlockFluix>);
-//Meteorite Compass
-recipes.remove(<appliedenergistics2:tile.BlockSkyCompass>);
-//Quartz Glass
-recipes.remove(<appliedenergistics2:tile.BlockQuartzGlass>);
-//Quartz Lamp
-recipes.remove(<appliedenergistics2:tile.BlockQuartzLamp>);
-//Charged Quartz Fixture
-recipes.remove(<appliedenergistics2:tile.BlockQuartzTorch>);
-//Light Detecting Fixture
-recipes.remove(<appliedenergistics2:tile.BlockLightDetector>);
-//Charger
-recipes.remove(<appliedenergistics2:tile.BlockCharger>);
-//Crystal Gwoth Accelerator
-recipes.remove(<appliedenergistics2:tile.BlockQuartzGrowthAccelerator>);
-//Inscriber
-recipes.remove(<appliedenergistics2:tile.BlockInscriber>);
-//Tiny TNT
-recipes.remove(<appliedenergistics2:tile.BlockTinyTNT>);
+import mods.gregtech.AlloySmelter;
+import mods.ic2.Compressor;
+import mods.gregtech.Centrifuge;
+import mods.ic2.Macerator;
+
+
+import mods.nei.NEI;
+
+
+
+// *======= Variables =======*
+
+
+val FluixBlock = <appliedenergistics2:tile.BlockFluix>;
+val CertusQBlock = <appliedenergistics2:tile.BlockQuartz>;
+val CCrtusQBlock = <appliedenergistics2:tile.BlockQuartzChiseled>;
+val EnergyCell = <appliedenergistics2:tile.BlockEnergyCell>;
+val DEnergyCell = <appliedenergistics2:tile.BlockDenseEnergyCell>;
+val MEChest = <appliedenergistics2:tile.BlockChest>;
+val MEDrive = <appliedenergistics2:tile.BlockDrive>;
+val MEController = <appliedenergistics2:tile.BlockController>;
+val Interface = <appliedenergistics2:item.ItemMultiPart:440>;
+val Compass = <appliedenergistics2:tile.BlockSkyCompass>;
+val ObsidianChest = <IronChest:BlockIronChest:6>;
+val CraftingUnit = <appliedenergistics2:tile.BlockCraftingUnit>;
+val CoCraftingUnit = <appliedenergistics2:tile.BlockCraftingUnit:1>;
+
+val CrystalAccelerator = <appliedenergistics2:tile.BlockQuartzGrowthAccelerator>;
+val MolecularAssembler = <appliedenergistics2:tile.BlockMolecularAssembler>;
+val Inscriber = <appliedenergistics2:tile.BlockInscriber>;
+val Charger = <appliedenergistics2:tile.BlockCharger>;
+val FluixCrystal = <appliedenergistics2:item.ItemMultiMaterial:7>;
+val FluixDust = <appliedenergistics2:item.ItemMultiMaterial:8>;
+val PureFluixCrystal = <appliedenergistics2:item.ItemMultiMaterial:12>;
+val CCertusQuartz = <appliedenergistics2:item.ItemMultiMaterial:1>;
+val PureCertusQCrystal = <appliedenergistics2:item.ItemMultiMaterial:10>;
+val FluixGlassCable = <appliedenergistics2:item.ItemMultiPart:16>;
+val FluixCoveredC = <appliedenergistics2:item.ItemMultiPart:36>;
+val FormationCore = <appliedenergistics2:item.ItemMultiMaterial:43>;
+val AnnihilationCore = <appliedenergistics2:item.ItemMultiMaterial:44>;
+val WirelessReceiver = <appliedenergistics2:item.ItemMultiMaterial:41>;
+val Quartzite = <ore:gemQuartzite>;
+val FluixPearl = <appliedenergistics2:item.ItemMultiMaterial:9>;
+val EnderEyeRod = <ore:stickEnderEye>;
+val EnderEyePlate = <ore:plateEnderEye>;
+val EnderPearl = <ore:gemEnderPearl>;
+val QuartzFixture = <appliedenergistics2:tile.BlockQuartzTorch>;
+val LightDetector = <appliedenergistics2:tile.BlockLightDetector>;
+val TinyTNT = <appliedenergistics2:tile.BlockTinyTNT>;
+val ITNT = <IC2:blockITNT>;
+
+val HVMachineHull = <gregtech:gt.blockmachines:12>;
+val AdvElectrolyzer = <gregtech:gt.blockmachines:372>;
+val AlCable = <ore:cableGt08Aluminium>;
+val CopperCable = <ore:cableGt01Copper>;
+val PlatinumCable = <ore:cableGt04Platinum>;
+val AdvAssembler = <gregtech:gt.blockmachines:212>;
+
+val NANDChip = <gregtech:gt.metaitem.01:32700>;
+val BasicCircuit = <gregtech:gt.metaitem.01:32701>;
+val GoodCircuit = <gregtech:gt.metaitem.01:32702>;
+val AdvCircuit = <gregtech:gt.metaitem.01:32703>;
+val DataCircuit = <gregtech:gt.metaitem.01:32704>;
+val EFlow = <gregtech:gt.metaitem.01:32706>;
+
+val StainlessPlate = <ore:plateStainlessSteel>;
+val EVBatBuffer = <gregtech:gt.blockmachines:194>;
+
+val Terminal = <appliedenergistics2:item.ItemMultiPart:380>;
+val CraftingTerminal = <appliedenergistics2:item.ItemMultiPart:360>;
+val InterfaceTerminal = <appliedenergistics2:item.ItemMultiPart:480>;
+val PatternTerminal = <appliedenergistics2:item.ItemMultiPart:340>;
+val WirelessTerminal = <appliedenergistics2:item.ToolWirelessTerminal>;
+
+val QuartzFiber = <appliedenergistics2:item.ItemMultiPart:140>;
+val Illuminated = <appliedenergistics2:item.ItemMultiPart:180>;
+val GlowstoneGlass = <ExtraUtilities:decorativeBlock2:7>;
+val QuartzGlass = <appliedenergistics2:tile.BlockQuartzGlass>;
+val VibrantQGlass =<appliedenergistics2:tile.BlockQuartzLamp>;
+val SlabCTable = <TConstruct:CraftingSlab>;
+val Pattern = <appliedenergistics2:item.ItemMultiMaterial:52>;
+val ClearPane = <TConstruct:GlassPane>;
+val ClearGlass = <TConstruct:GlassBlock>;
+val GlowstonePlate = <ore:plateGlowstone>;
+val GlowstoneDust = <ore:dustGlowstone>;
+
+val Storage1K = <appliedenergistics2:item.ItemBasicStorageCell.1k>;
+val Storage4K = <appliedenergistics2:item.ItemBasicStorageCell.4k>;
+val Storage16K = <appliedenergistics2:item.ItemBasicStorageCell.16k>;
+val Storage64K = <appliedenergistics2:item.ItemBasicStorageCell.64k>;
+
+val UStorageHousing = <appliedenergistics2:item.ItemMultiMaterial:39>;
+val StorageComponent1K = <appliedenergistics2:item.ItemMultiMaterial:35>;
+val StorageComponent4K = <appliedenergistics2:item.ItemMultiMaterial:36>;
+val StorageComponent16K = <appliedenergistics2:item.ItemMultiMaterial:37>;
+val StorageComponent64K = <appliedenergistics2:item.ItemMultiMaterial:38>;
+
+val Saw = <ore:craftingToolSaw>;
+val Screwdriver = <ore:craftingToolScrewdriver>;
+val SHammer = <ore:craftingToolSoftHammer>;
+val HHammer = <ore:craftingToolHardHammer>;
+
+val CalculationCircuit = <appliedenergistics2:item.ItemMultiMaterial:16>;
+val GoldCircuit = <appliedenergistics2:item.ItemMultiMaterial:22>;
+val CertusCircuit = <appliedenergistics2:item.ItemMultiMaterial:23>;
+val DiamondCircuit = <appliedenergistics2:item.ItemMultiMaterial:24>;
+
+val SteelPlate = <ore:plateSteel>;
+val AlPlate = <ore:plateAluminium>;
+val TitaniumPlate = <ore:plateTitanium>;
+val RubberPlate = <ore:plateRubber>;
+val CertusPlate = <gregtech:gt.metaitem.01:17516>;
+val NQuartzPlate = <gregtech:gt.metaitem.01:17522>;
+val QuartzitePlate = <gregtech:gt.metaitem.01:17523>;
+val SiliconPlate = <gregtech:gt.metaitem.01:17020>;
+val SiliconRod = <ore:stickSilicon>;
+val CertusRod = <ore:stickCertusQuartz>;
+val NQuartzRod = <ore:stickNetherQuartz>;
+val QuartziteScrew = <ore:screwQuartzite>;
+val NQuartzScrew = <ore:screwNetherQuartz>;
+val CertusScrew = <ore:screwCertusQuartz>;
+val MSteelRod = <ore:stickSteelMagnetic>;
+val CertusQuartz = <ore:gemCertusQuartz>;
+val ALRod = <ore:stickAluminium>;
+val IronRod = <ore:stickIron>;
+
+
+
+// *======= Removing Recipes =======*
+
+
+// ||||| Blocks |||||
+
+
+// --- Fluix Block
+recipes.remove(FluixBlock);
+
+// --- Certus Quartz Block
+recipes.remove(CertusQBlock);
+
+// --- Chiseled Certus Quartz Block
+recipes.remove(CCrtusQBlock);
+
+// --- ME Controller
+recipes.remove(MEController);
+
+// --- Energy Cell
+recipes.remove(EnergyCell);
+
+// --- Dense Energy Cell
+recipes.remove(DEnergyCell);
+
+// --- ME Chest
+recipes.remove(MEChest);
+
+// --- ME Drive
+recipes.remove(MEDrive);
+
+// --- Crystal Growth Accelerator
+recipes.remove(CrystalAccelerator);
+
+// --- Crafting Unit
+recipes.remove(CraftingUnit);
+
+// --- Crafting Co Processing Unit
+recipes.remove(CoCraftingUnit);
+
+// --- Molecular Assembler
+recipes.remove(MolecularAssembler);
+
+// --- Charger
+recipes.remove(Charger);
+
+// --- Inscriber
+recipes.remove(Inscriber);
+
+
+// ||||| Items |||||
+
+
+// --- Quartz Fiber
+recipes.remove(QuartzFiber);
+
+// --- Fluix Glass Cable
+recipes.remove(FluixGlassCable);
+
+// --- Fluix Covered Cable
+recipes.remove(FluixCoveredC);
+
+// --- Fluix Crystal
+recipes.remove(FluixCrystal);
+
+// --- Pure Fluix Crystal
+recipes.remove(PureFluixCrystal);
+
+// --- Fluix Pearl
+recipes.remove(FluixPearl);
+
+// --- Annihilation Core
+recipes.remove(AnnihilationCore);
+
+// --- Formation Core
+recipes.remove(FormationCore);
+
+// --- Wireless Receiver
+recipes.remove(WirelessReceiver);
+
+// --- Meteorite Compass
+recipes.remove(Compass);
+
+// --- Illuminated Panel
+recipes.remove(Illuminated);
+
+// --- Terminal
+recipes.remove(Terminal);
+
+// --- Crafting Terminal
+recipes.remove(CraftingTerminal);
+
+// --- Interface Terminal
+recipes.remove(InterfaceTerminal);
+
+// --- Pattern Terminal
+recipes.remove(PatternTerminal);
+
+// --- Wireless Terminal
+recipes.remove(WirelessTerminal);
+
+// --- Quartz Glass
+recipes.remove(QuartzGlass);
+
+// --- Vibrant Quartz Glass
+recipes.remove(VibrantQGlass);
+
+// --- Charged Quartz Fixture
+recipes.remove(QuartzFixture);
+
+// --- Light Detecting Fixture
+recipes.remove(LightDetector);
+
+// --- Tiny TNT
+recipes.remove(TinyTNT);
+
+
+// ||||| Cells |||||
+
+
+// --- Storage Cell - 1K
+recipes.remove(Storage1K);
+
+// --- Storage Cell - 4K
+recipes.remove(Storage4K);
+
+// --- Storage Cell - 16K
+recipes.remove(Storage16K);
+
+// --- Storage Cell - 64K
+recipes.remove(Storage64K);
+
+// --- Universal Storage Housing
+recipes.remove(UStorageHousing);
+
+// --- Storage Cell Component - 1K
+recipes.remove(StorageComponent1K);
+
+// --- Storage Cell Component - 4K
+recipes.remove(StorageComponent4K);
+
+// --- Storage Cell Component - 16K
+recipes.remove(StorageComponent16K);
+
+// --- Storage Cell Component - 64K
+recipes.remove(StorageComponent64K);
+
+
+
+// *======= Adding Back Recipes =======*
+
+
+// ||||| Blocks |||||
+
+
+// --- Fluix Block --- This one conflicts with itself for some reason.
+Compressor.addRecipe(FluixBlock, PureFluixCrystal * 9);
+Compressor.addRecipe(FluixBlock, FluixCrystal * 4);
+Compressor.addRecipe(CertusQBlock, PureCertusQCrystal * 9);
+
+//Fluix Dust
+Macerator.addRecipe(<appliedenergistics2:item.ItemMultiMaterial:8> * 4, <appliedenergistics2:tile.BlockFluix>);
+
+// --- ME Controller
+recipes.addShaped(MEController, [
+[SiliconRod, AdvCircuit, SiliconRod],
+[DiamondCircuit, FluixBlock, DiamondCircuit],
+[SiliconRod, AdvCircuit, SiliconRod]]);
+
+// --- Energy Cell
+recipes.addShaped(EnergyCell, [
+[CertusRod, FluixDust, CertusRod],
+[AdvCircuit, FluixBlock, AdvCircuit],
+[CertusRod, AlCable, CertusRod]]);
+
+// --- Dense Energy Cell
+recipes.addShaped(DEnergyCell, [
+[EnergyCell, EnergyCell, EnergyCell],
+[EFlow, DiamondCircuit, EFlow],
+[EnergyCell, EVBatBuffer, EnergyCell]]);
+
+// --- ME Chest
+recipes.addShaped(MEChest, [
+[CertusRod, Terminal, CertusRod],
+[FluixGlassCable, ObsidianChest, FluixGlassCable],
+[CertusRod, GoodCircuit, CertusRod]]);
+
+// --- ME Drive
+recipes.addShaped(MEDrive, [
+[SiliconRod, DiamondCircuit, SiliconRod],
+[FluixGlassCable, MEChest, FluixGlassCable],
+[SiliconRod, AdvCircuit, SiliconRod]]);
+
+// --- Crystal Growth Accelerator ---- Gregtech do that in the Autoclave
+//recipes.addShaped(CrystalAccelerator, [
+//[SiliconPlate, FluixGlassCable, SiliconPlate],
+//[FluixBlock, DiamondCircuit, FluixBlock],
+//[SiliconPlate, FluixGlassCable, SiliconPlate]]);
+
+// --- CraftingUnit
+recipes.addShaped(CraftingUnit, [
+[AlPlate, GoldCircuit, AlPlate],
+[BasicCircuit, DiamondCircuit, BasicCircuit],
+[AlPlate, CertusCircuit, AlPlate]]);
+
+// --- CoCraftingUnit
+recipes.addShapeless(CoCraftingUnit, [CraftingUnit, CertusCircuit, GoldCircuit, DiamondCircuit]);
+
+// --- Molecular Assembler
+recipes.addShaped(MolecularAssembler, [
+[AlPlate, ClearGlass, AlPlate],
+[AnnihilationCore, AdvAssembler, FormationCore],
+[AlPlate, ClearGlass, AlPlate]]);
+
+// --- Charger
+recipes.addShaped(Charger, [
+[AlPlate, FluixCrystal, AlPlate],
+[CopperCable, AdvElectrolyzer, CopperCable],
+[AlPlate, FluixCrystal, AlPlate]]);
+
+// ||||| Items |||||
+
+
+// --- Fluix Glass Cable
+recipes.addShaped(FluixGlassCable * 2, [
+[CertusRod, Saw, CertusRod],
+[QuartzFiber, QuartzFiber, QuartzFiber],
+[CertusRod, FluixDust, CertusRod]]);
+
+// --- Fluix Covered Cable
+recipes.addShaped(FluixCoveredC * 2, [
+[RubberPlate, Saw, RubberPlate],
+[QuartzFiber, QuartzFiber, QuartzFiber],
+[RubberPlate, null, RubberPlate]]);
+// - Alternate Recipe
+recipes.addShaped(FluixCoveredC * 2, [
+[RubberPlate, null, RubberPlate],
+[QuartzFiber, QuartzFiber, QuartzFiber],
+[RubberPlate, Saw, RubberPlate]]);
+
+// --- Quartz Fiber
+recipes.addShaped(QuartzFiber * 2, [
+[CertusRod, NQuartzPlate, CertusRod],
+[NQuartzPlate, Saw, NQuartzPlate],
+[CertusRod, NQuartzPlate, CertusRod]]);
+
+// --- Annihilation Core
+recipes.addShaped(AnnihilationCore, [
+[NQuartzRod, GoldCircuit, NQuartzRod],
+[GoldCircuit, PureFluixCrystal, GoldCircuit],
+[NQuartzRod, GoldCircuit, NQuartzRod]]);
+
+// --- Formation Core
+recipes.addShaped(FormationCore, [
+[CertusRod, GoldCircuit, CertusRod],
+[GoldCircuit, PureFluixCrystal, GoldCircuit],
+[CertusRod, GoldCircuit, CertusRod]]);
+
+// --- Fluix Pearl
+recipes.addShaped(FluixPearl, [
+[PureFluixCrystal, EnderEyePlate, PureFluixCrystal],
+[EnderEyePlate, EnderPearl, EnderEyePlate],
+[PureFluixCrystal, EnderEyePlate, PureFluixCrystal]]);
+// - Alternate Recipe
+recipes.addShaped(FluixPearl, [
+[FluixCrystal, EnderEyePlate, FluixCrystal],
+[EnderEyePlate, EnderPearl, EnderEyePlate],
+[FluixCrystal, EnderEyePlate, FluixCrystal]]);
+
+// --- Wireless Receiver
+recipes.addShaped(WirelessReceiver, [
+[QuartzFiber, FluixPearl, QuartzFiber],
+[null, EnderEyeRod, null],
+[CertusPlate, AdvCircuit, CertusPlate]]);
+
+// --- Meteorite Compass
+recipes.addShaped(Compass, [
+[Screwdriver, ClearPane, CertusScrew],
+[SteelPlate, MSteelRod, SteelPlate],
+[CertusScrew, SteelPlate, HHammer]]);
+// - Alternate Recipe
+recipes.addShaped(Compass, [
+[HHammer, ClearPane, CertusScrew],
+[SteelPlate, MSteelRod, SteelPlate],
+[CertusScrew, SteelPlate, Screwdriver]]);
+
+// --- Illuminated Panel
+recipes.addShaped(Illuminated, [
+[CertusRod, QuartzGlass, CertusRod],
+[QuartzGlass, GlowstoneGlass, QuartzGlass],
+[CertusRod, QuartzGlass, CertusRod]]);
+
+// --- Terminal
+recipes.addShaped(Terminal, [
+[NQuartzRod, QuartziteScrew, NQuartzRod],
+[Illuminated, GoodCircuit, CertusPlate],
+[NQuartzRod, Screwdriver, NQuartzRod]]);
+// - Alternate Recipe
+recipes.addShaped(Terminal, [
+[NQuartzRod, Screwdriver, NQuartzRod],
+[Illuminated, GoodCircuit, CertusPlate],
+[NQuartzRod, QuartziteScrew, NQuartzRod]]);
+
+// --- Crafting Terminal
+recipes.addShaped(CraftingTerminal, [
+[Screwdriver, Terminal, SHammer],
+[CertusScrew, SlabCTable, CertusScrew],
+[NQuartzPlate, DiamondCircuit, NQuartzPlate]]);
+
+// --- Interface Terminal
+recipes.addShaped(InterfaceTerminal, [
+[Screwdriver, Terminal, SHammer],
+[CertusScrew, Interface, CertusScrew],
+[NQuartzPlate, DiamondCircuit, NQuartzPlate]]);
+
+// --- Pattern Terminal
+recipes.addShaped(PatternTerminal, [
+[Screwdriver, Terminal, SHammer],
+[CertusScrew, Pattern, CertusScrew],
+[NQuartzPlate, DiamondCircuit, NQuartzPlate]]);
+
+// --- Wireless Terminal
+recipes.addShaped(WirelessTerminal, [
+[WirelessReceiver, Terminal, WirelessReceiver],
+[NQuartzPlate, DiamondCircuit, NQuartzPlate],
+[NQuartzPlate, DEnergyCell, NQuartzPlate]]);
+
+// --- Vibrant Quartz Glass
+recipes.addShaped(VibrantQGlass, [
+[GlowstoneDust, GlowstonePlate, GlowstoneDust],
+[GlowstonePlate, QuartzGlass, GlowstonePlate],
+[GlowstoneDust, GlowstonePlate, GlowstoneDust]]);
+// - Alternate Recipe
+recipes.addShaped(VibrantQGlass, [
+[CertusRod, FluixDust, CertusRod],
+[FluixDust, GlowstoneGlass, FluixDust],
+[CertusRod, FluixDust, CertusRod]]);
+
+// --- Charged Quartz Fixture
+recipes.addShapeless(QuartzFixture, [CertusQuartz, ALRod]);
+
+// --- Light Detecting Fixture
+recipes.addShapeless(LightDetector, [CCertusQuartz, IronRod]); 
+
+// --- Tiny TNT
+Centrifuge.addRecipe([TinyTNT, TinyTNT], ITNT, 0, 600);
+
+
+// ||||| Cells |||||
+
+// --- Storage Cell - 1K
+recipes.addShaped(Storage1K, [
+[HHammer, CertusPlate, QuartziteScrew],
+[SteelPlate, StorageComponent1K, SteelPlate],
+[QuartziteScrew, SteelPlate, Screwdriver]]);
+// - Alternative Recipe
+recipes.addShaped(Storage1K, [
+[Screwdriver, CertusPlate, QuartziteScrew],
+[SteelPlate, StorageComponent1K, SteelPlate],
+[QuartziteScrew, SteelPlate, HHammer]]);
+
+// --- Storage Cell - 4K
+recipes.addShaped(Storage4K, [
+[HHammer, CertusPlate, QuartziteScrew],
+[AlPlate, StorageComponent4K, AlPlate],
+[QuartziteScrew, AlPlate, Screwdriver]]);
+// - Alternative Recipe
+recipes.addShaped(Storage4K, [
+[Screwdriver, CertusPlate, QuartziteScrew],
+[AlPlate, StorageComponent4K, AlPlate],
+[QuartziteScrew, AlPlate, HHammer]]);
+
+// --- Storage Cell - 16K
+recipes.addShaped(Storage16K, [
+[HHammer, CertusPlate, QuartziteScrew],
+[StainlessPlate, StorageComponent16K, StainlessPlate],
+[QuartziteScrew, StainlessPlate, Screwdriver]]);
+// - Alternative Recipe
+recipes.addShaped(Storage16K, [
+[Screwdriver, CertusPlate, QuartziteScrew],
+[StainlessPlate, StorageComponent16K, StainlessPlate],
+[QuartziteScrew, StainlessPlate, HHammer]]);
+
+// --- Storage Cell - 64K
+recipes.addShaped(Storage64K, [
+[HHammer, CertusPlate, NQuartzScrew],
+[TitaniumPlate, StorageComponent64K, TitaniumPlate],
+[NQuartzScrew, TitaniumPlate, Screwdriver]]);
+// - Alternative Recipe
+recipes.addShaped(Storage64K, [
+[Screwdriver, CertusPlate, NQuartzScrew],
+[TitaniumPlate, StorageComponent64K, TitaniumPlate],
+[NQuartzScrew, TitaniumPlate, HHammer]]);
+
+// --- Universal Storage Housing
+recipes.addShaped(UStorageHousing, [
+[HHammer, CertusPlate, QuartziteScrew],
+[SteelPlate, ClearPane, SteelPlate],
+[QuartziteScrew, AlPlate, Screwdriver]]);
+// - Alternative Recipe
+recipes.addShaped(UStorageHousing, [
+[Screwdriver, CertusPlate, QuartziteScrew],
+[SteelPlate, ClearPane, SteelPlate],
+[QuartziteScrew, AlPlate, HHammer]]);
+
+// --- Storage Cell Component - 1K
+recipes.addShaped(StorageComponent1K, [
+[NANDChip, FluixDust, NANDChip],
+[FluixDust, GoldCircuit, FluixDust],
+[NANDChip, FluixDust, NANDChip]]);
+
+// --- Storage Cell Component - 4K
+recipes.addShaped(StorageComponent4K, [
+[BasicCircuit, StorageComponent1K, BasicCircuit],
+[StorageComponent1K, GoldCircuit, StorageComponent1K],
+[BasicCircuit, StorageComponent1K, BasicCircuit]]);
+
+// --- Storage Cell Component - 16K
+recipes.addShaped(StorageComponent16K, [
+[GoodCircuit, StorageComponent4K, GoodCircuit],
+[StorageComponent4K, CertusCircuit, StorageComponent4K],
+[GoodCircuit, StorageComponent4K, GoodCircuit]]);
+
+// --- Storage Cell Component - 64K
+recipes.addShaped(StorageComponent64K, [
+[AdvCircuit, StorageComponent16K, AdvCircuit],
+[StorageComponent16K, CertusCircuit, StorageComponent16K],
+[AdvCircuit, StorageComponent16K, AdvCircuit]]);
+
+
+// #======= Hiding Stuff =======#
+
+
+
+// #======= Renaming Stuff =======#
+
+
+NEI.overrideName(UStorageHousing, "Universal Storage Housing");
+
+//Arch can you add that please in your Script
+
 //ME Quantum Ring
 recipes.remove(<appliedenergistics2:tile.BlockQuantumRing>);
 //ME Quantum Link Chamber
@@ -42,12 +578,6 @@ recipes.remove(<appliedenergistics2:tile.BlockQuantumLinkChamber>);
 recipes.remove(<appliedenergistics2:tile.BlockSpatialPylon>);
 //Spatial IO Port
 recipes.remove(<appliedenergistics2:tile.BlockSpatialIOPort>);
-//ME Controller
-recipes.remove(<appliedenergistics2:tile.BlockController>);
-//ME Drive
-recipes.remove(<appliedenergistics2:tile.BlockDrive>);
-//ME Chest
-recipes.remove(<appliedenergistics2:tile.BlockChest>);
 //ME Interface
 recipes.remove(<appliedenergistics2:tile.BlockInterface>);
 //Cell Workbench
@@ -60,14 +590,10 @@ recipes.remove(<appliedenergistics2:tile.BlockCondenser>);
 recipes.remove(<appliedenergistics2:tile.BlockEnergyAcceptor>);
 //Vibration Chamber
 recipes.remove(<appliedenergistics2:tile.BlockVibrationChamber>);
-//Energy Cell
-recipes.remove(<appliedenergistics2:tile.BlockEnergyCell>);
 //ME Security Terminal
 recipes.remove(<appliedenergistics2:tile.BlockSecurity>);
 //Advanced Card
 recipes.remove(<appliedenergistics2:item.ItemMultiMaterial:28>);
-//Annihilation Core
-recipes.remove(<appliedenergistics2:item.ItemMultiMaterial:44>);
 //Blank Pattern
 recipes.remove(<appliedenergistics2:item.ItemMultiMaterial:52>);
 //Basic Card
@@ -90,24 +616,8 @@ recipes.remove(<appliedenergistics2:item.ItemMultiMaterial:30>);
 recipes.remove(<appliedenergistics2:item.ItemMultiMaterial:34>);
 //16³ Spatial Component
 recipes.remove(<appliedenergistics2:item.ItemMultiMaterial:33>);
-//16k ME Storage Component
-recipes.remove(<appliedenergistics2:item.ItemMultiMaterial:37>);
-//1K ME Storage Component
-recipes.remove(<appliedenergistics2:item.ItemMultiMaterial:35>);
 //2³ Spatial Component
 recipes.remove(<appliedenergistics2:item.ItemMultiMaterial:32>);
-//4k ME Storage Component
-recipes.remove(<appliedenergistics2:item.ItemMultiMaterial:36>);
-//64K Storage Component
-recipes.remove(<appliedenergistics2:item.ItemMultiMaterial:38>);
-//ME Storage Housing
-recipes.remove(<appliedenergistics2:item.ItemMultiMaterial:39>);
-//Fluix Crystal
-recipes.remove(<appliedenergistics2:item.ItemMultiMaterial:7>);
-//Formation Core
-recipes.remove(<appliedenergistics2:item.ItemMultiMaterial:43>);
-//Wireless Receiver
-recipes.remove(<appliedenergistics2:item.ItemMultiMaterial:41>);
 //Wireless Booster
 recipes.remove(<appliedenergistics2:item.ItemMultiMaterial:42>);
 //ME Annihilation Plane
@@ -122,28 +632,12 @@ recipes.remove(<appliedenergistics2:item.ItemMultiPart:320>);
 recipes.remove(<appliedenergistics2:item.ItemMultiPart:240>);
 //P2P Tunnel - ME
 recipes.remove(<appliedenergistics2:item.ItemMultiPart:460>);
-//Quartz Fiber
-recipes.remove(<appliedenergistics2:item.ItemMultiPart:140>);
 //Illuminated Panel
 recipes.remove(<appliedenergistics2:item.ItemMultiPart:180>);
 //ME Toggle Bus
 recipes.remove(<appliedenergistics2:item.ItemMultiPart:80>);
 //View Cell
 recipes.remove(<appliedenergistics2:item.ItemViewCell>);
-//1K ME Storage Cell
-recipes.remove(<appliedenergistics2:item.ItemBasicStorageCell.1k>);
-//4K ME Storage Cell
-recipes.remove(<appliedenergistics2:item.ItemBasicStorageCell.4k>);
-//16K ME Storage Cell
-recipes.remove(<appliedenergistics2:item.ItemBasicStorageCell.16k>);
-//64K ME Storage Cell
-recipes.remove(<appliedenergistics2:item.ItemBasicStorageCell.64k>);
-//2³ Spatial Storage Cell
-recipes.remove(<appliedenergistics2:item.ItemSpatialStorageCell.2Cubed>);
-//16³ Spatial Storage Cell
-recipes.remove(<appliedenergistics2:item.ItemSpatialStorageCell.16Cubed>);
-//128³ Spatial Storage Cell
-recipes.remove(<appliedenergistics2:item.ItemSpatialStorageCell.128Cubed>);
 //Quartz Cutting Knife
 recipes.remove(<appliedenergistics2:item.ToolCertusQuartzCuttingKnife>);
 //Quartz Wrench
@@ -166,36 +660,16 @@ recipes.remove(<appliedenergistics2:item.ItemCrystalSeed>);
 recipes.remove(<appliedenergistics2:item.ItemCrystalSeed:600>);
 //Fluix Seed
 recipes.remove(<appliedenergistics2:item.ItemCrystalSeed:1200>);
-
-//add Recipes
-
-//Crafting Unit
-recipes.addShaped(<appliedenergistics2:tile.BlockCraftingUnit>, [
-[<ore:plateAluminium>, <appliedenergistics2:item.ItemMultiMaterial:22>, <ore:plateAluminium>],
-[<appliedenergistics2:item.ItemMultiPart:16>, <appliedenergistics2:item.ItemMultiMaterial:23>, <appliedenergistics2:item.ItemMultiPart:16>],
-[<ore:plateAluminium>, <appliedenergistics2:item.ItemMultiMaterial:24>, <ore:plateAluminium>]]);
-
-//Crafting Co Processing Unit
-recipes.addShapeless(<appliedenergistics2:tile.BlockCraftingUnit:1>,
-[<appliedenergistics2:tile.BlockCraftingUnit>, <appliedenergistics2:item.ItemMultiMaterial:22>, <appliedenergistics2:item.ItemMultiMaterial:23>, <appliedenergistics2:item.ItemMultiMaterial:24>]);
-
-//Molecular Assembler
-recipes.addShaped(<appliedenergistics2:tile.BlockMolecularAssembler>, [
-[<ore:plateAluminium>, <ore:plateGlass>, <ore:plateAluminium>],
-[<appliedenergistics2:item.ItemMultiMaterial:44>, <gregtech:gt.blockmachines:212>, <appliedenergistics2:item.ItemMultiMaterial:43>],
-[<ore:plateAluminium>, <ore:plateGlass>, <ore:plateAluminium>]]);
-
-//Charged Quartz Fixture
-recipes.addShapeless(<appliedenergistics2:tile.BlockQuartzTorch>, [<ore:gemCertusQuartz>, <gregtech:gt.metaitem.01:23019>]);
-
-//Light Detecting Fixture
-recipes.addShapeless(<appliedenergistics2:tile.BlockLightDetector>, [<ore:craftingQuartz>, <ore:stickIron>]); 
-
-//Charger
-recipes.addShaped(<appliedenergistics2:tile.BlockCharger>, [
-[<ore:plateAluminium>, <appliedenergistics2:item.ItemMultiMaterial:7>, <ore:plateAluminium>],
-[<gregtech:gt.blockmachines:1366>, <gregtech:gt.blockmachines:372>, <gregtech:gt.blockmachines:1366>],
-[<ore:plateAluminium>, <appliedenergistics2:item.ItemMultiMaterial:7>, <ore:plateAluminium>]]);
+//2 Spatial Storage Cell
+recipes.remove(<appliedenergistics2:item.ItemSpatialStorageCell.2Cubed>);
+//16 Spatial Storage Cell
+recipes.remove(<appliedenergistics2:item.ItemSpatialStorageCell.16Cubed>);
+//128 Spatial Storage Cell
+recipes.remove(<appliedenergistics2:item.ItemSpatialStorageCell.128Cubed>);
+//Nether Quartz Knife
+recipes.remove(<appliedenergistics2:item.ToolNetherQuartzCuttingKnife>);
+//Nether Quartz Wrench
+recipes.remove(<appliedenergistics2:item.ToolNetherQuartzWrench>);
 
 //ME Quantum Ring
 recipes.addShaped(<appliedenergistics2:tile.BlockQuantumRing>, [
@@ -220,24 +694,6 @@ recipes.addShaped(<appliedenergistics2:tile.BlockSpatialIOPort>, [
 [<ore:plateGlass>, <ore:plateGlass>, <ore:plateGlass>],
 [<appliedenergistics2:item.ItemMultiPart:16>, <appliedenergistics2:tile.BlockIOPort>, <appliedenergistics2:item.ItemMultiPart:16>],
 [<ore:plateAluminium>, <appliedenergistics2:item.ItemMultiMaterial:24>, <ore:plateAluminium>]]);
-  
-//ME Controller
-recipes.addShaped(<appliedenergistics2:tile.BlockController>, [
-[<gregtech:gt.blockcasings2>, <gregtech:gt.metaitem.01:32740>, <gregtech:gt.blockcasings2>],
-[<appliedenergistics2:item.ItemMultiMaterial:7>, <appliedenergistics2:item.ItemMultiMaterial:24>, <appliedenergistics2:item.ItemMultiMaterial:7>],
-[<gregtech:gt.blockcasings2>, <appliedenergistics2:item.ItemMultiMaterial:7>, <gregtech:gt.blockcasings2>]]);
-
-//ME Drive
-recipes.addShaped(<appliedenergistics2:tile.BlockDrive>, [
-[<ore:plateAluminium>, <appliedenergistics2:item.ItemMultiMaterial:24>, <ore:plateAluminium>],
-[<appliedenergistics2:item.ItemMultiPart:16>, <gregtech:gt.blockmachines:12>, <appliedenergistics2:item.ItemMultiPart:16>],
-[<ore:plateAluminium>, <appliedenergistics2:item.ItemMultiMaterial:24>, <ore:plateAluminium>]]);
- 
-//ME Chest
-recipes.addShaped(<appliedenergistics2:tile.BlockChest>, [
-[<ore:plateGlass>, <appliedenergistics2:item.ItemMultiPart:380>, <ore:plateGlass>],
-[<appliedenergistics2:item.ItemMultiPart:16>, <gregtech:gt.blockmachines:12>, <appliedenergistics2:item.ItemMultiPart:16>],
-[<ore:plateAluminium>, <appliedenergistics2:item.ItemMultiMaterial:7>, <ore:plateAluminium>]]);
 
 //ME Interface
 recipes.addShaped(<appliedenergistics2:tile.BlockInterface>, [
@@ -275,12 +731,6 @@ recipes.addShaped(<appliedenergistics2:tile.BlockVibrationChamber>, [
 [<ore:plateAluminium>, <gregtech:gt.blockmachines:262>, <ore:plateAluminium>],
 [<ore:plateAluminium>, <appliedenergistics2:tile.BlockEnergyAcceptor>, <ore:plateAluminium>]]);
 
-//Energy Cell
-recipes.addShaped(<appliedenergistics2:tile.BlockEnergyCell>, [
-[<ore:plateCertusQuartz>, <appliedenergistics2:item.ItemMultiMaterial:8>, <ore:plateCertusQuartz>],
-[<appliedenergistics2:item.ItemMultiMaterial:8>, <gregtech:gt.blockmachines:192>, <appliedenergistics2:item.ItemMultiMaterial:8>],
-[<ore:plateCertusQuartz>, <appliedenergistics2:item.ItemMultiMaterial:8>, <ore:plateCertusQuartz>]]);
-  
 //ME Security Terminal
 recipes.addShaped(<appliedenergistics2:tile.BlockSecurity>, [
 [<ore:plateAluminium>, <appliedenergistics2:tile.BlockChest>, <ore:plateAluminium>],
@@ -292,12 +742,6 @@ recipes.addShaped(<appliedenergistics2:item.ItemMultiMaterial:28>, [
 [<ore:platePlatinum>, <ore:plateAluminium>, null],
 [<ore:plateRedAlloy>, <appliedenergistics2:item.ItemMultiMaterial:23>, <ore:plateAluminium>],
 [<ore:platePlatinum>, <ore:plateAluminium>, null]]);
-
-//Annihilation Core
-recipes.addShaped(<appliedenergistics2:item.ItemMultiMaterial:44>, [
-[<ore:plateNetherQuartz>, <appliedenergistics2:item.ItemMultiMaterial:8>, <appliedenergistics2:item.ItemMultiMaterial:22>],
-[null, null, null],
-[null, null, null]]);
 
 //Basic Card
 recipes.addShaped(<appliedenergistics2:item.ItemMultiMaterial:25>, [
@@ -331,63 +775,21 @@ recipes.addShapeless(<appliedenergistics2:item.ItemMultiMaterial:30>, [<appliede
 
 //128³ Spatial Component
 recipes.addShaped(<appliedenergistics2:item.ItemMultiMaterial:34>, [
-[<ore:plateGlowstone>, <appliedenergistics2:item.ItemMultiMaterial:33>, <ore:plateGlowstone>],
+[<ore:plateEnderEye>, <appliedenergistics2:item.ItemMultiMaterial:33>, <ore:plateEnderEye>],
 [<appliedenergistics2:item.ItemMultiMaterial:33>, <appliedenergistics2:item.ItemMultiMaterial:24>, <appliedenergistics2:item.ItemMultiMaterial:33>],
-[<ore:plateGlowstone>, <appliedenergistics2:item.ItemMultiMaterial:33>, <ore:plateGlowstone>]]);
+[<ore:plateEnderEye>, <appliedenergistics2:item.ItemMultiMaterial:33>, <ore:plateEnderEye>]]);
  
 //16³ Spatial Component
 recipes.addShaped(<appliedenergistics2:item.ItemMultiMaterial:33>, [
-[<ore:plateGlowstone>, <appliedenergistics2:item.ItemMultiMaterial:32>, <ore:plateGlowstone>],
+[<ore:plateEnderPearl>, <appliedenergistics2:item.ItemMultiMaterial:32>, <ore:plateEnderPearl>],
 [<appliedenergistics2:item.ItemMultiMaterial:32>, <appliedenergistics2:item.ItemMultiMaterial:24>, <appliedenergistics2:item.ItemMultiMaterial:32>],
-[<ore:plateGlowstone>, <appliedenergistics2:item.ItemMultiMaterial:32>, <ore:plateGlowstone>]]); 
-
-//16k ME Storage Component
-recipes.addShaped(<appliedenergistics2:item.ItemMultiMaterial:37>, [
-[<ore:plateSteel>, <appliedenergistics2:item.ItemMultiMaterial:24>, <ore:plateSteel>],
-[<appliedenergistics2:item.ItemMultiMaterial:36>, <ore:plateGlass>, <appliedenergistics2:item.ItemMultiMaterial:36>],
-[<ore:plateSteel>, <appliedenergistics2:item.ItemMultiMaterial:36>, <ore:plateSteel>]]);
-
-//1K ME Storage Component
-recipes.addShaped(<appliedenergistics2:item.ItemMultiMaterial:35>, [
-[<ore:plateRedAlloy>, <ore:gemCertusQuartz>, <ore:plateRedAlloy>],
-[<ore:gemCertusQuartz>, <appliedenergistics2:item.ItemMultiMaterial:22>, <ore:gemCertusQuartz>],
-[<ore:plateRedAlloy>, <ore:gemCertusQuartz>, <ore:plateRedAlloy>]]);
+[<ore:plateEnderPearl>, <appliedenergistics2:item.ItemMultiMaterial:32>, <ore:plateEnderPearl>]]);
 
 //2³ Spatial Component
 recipes.addShaped(<appliedenergistics2:item.ItemMultiMaterial:32>, [
 [<ore:plateGlowstone>, <appliedenergistics2:item.ItemMultiMaterial:9>, <ore:plateGlowstone>],
 [<appliedenergistics2:item.ItemMultiMaterial:9>, <appliedenergistics2:item.ItemMultiMaterial:24>, <appliedenergistics2:item.ItemMultiMaterial:9>],
 [<ore:plateGlowstone>, <appliedenergistics2:item.ItemMultiMaterial:9>, <ore:plateGlowstone>]]);
-
-//4k ME Storage Component
-recipes.addShaped(<appliedenergistics2:item.ItemMultiMaterial:36>, [
-[<ore:plateGlowstone>, <appliedenergistics2:item.ItemMultiMaterial:23>, <ore:plateGlowstone>],
-[<appliedenergistics2:item.ItemMultiMaterial:35>, <ore:plateGlass>, <appliedenergistics2:item.ItemMultiMaterial:35>],
-[<ore:plateGlowstone>, <appliedenergistics2:item.ItemMultiMaterial:35>, <ore:plateGlowstone>]]);
-
-//64K ME Storage Component
-recipes.addShaped(<appliedenergistics2:item.ItemMultiMaterial:38>, [
-[<ore:plateAluminium>, <appliedenergistics2:item.ItemMultiMaterial:24>, <ore:plateAluminium>],
-[<appliedenergistics2:item.ItemMultiMaterial:37>, <ore:plateGlass>, <appliedenergistics2:item.ItemMultiMaterial:37>],
-[<ore:plateAluminium>, <appliedenergistics2:item.ItemMultiMaterial:37>, <ore:plateAluminium>]]);
-
-//ME Storage Housing
-recipes.addShaped(<appliedenergistics2:item.ItemMultiMaterial:39>, [
-[<ore:plateGlass>, <ore:plateRedAlloy>, <ore:plateGlass>],
-[<ore:plateRedAlloy>, null, <ore:plateRedAlloy>],
-[<ore:plateAluminium>, <ore:plateAluminium>, <ore:plateAluminium>]]);
-
-//Formation Core
-recipes.addShaped(<appliedenergistics2:item.ItemMultiMaterial:43>, [
-[<ore:plateCertusQuartz>, <appliedenergistics2:item.ItemMultiMaterial:8>, <appliedenergistics2:item.ItemMultiMaterial:22>],
-[null, null, null],
-[null, null, null]]);
-
-//Wireless Receiver
-recipes.addShaped(<appliedenergistics2:item.ItemMultiMaterial:41>, [
-[null, <appliedenergistics2:item.ItemMultiMaterial:9>, null],
-[<ore:plateAluminium>, <appliedenergistics2:item.ItemMultiPart:140>, <ore:plateAluminium>],
-[null, <ore:plateAluminium>, null]]);
 
 //Wireless Booster
 recipes.addShaped(<appliedenergistics2:item.ItemMultiMaterial:42>, [
@@ -478,64 +880,59 @@ recipes.addShaped(<appliedenergistics2:item.ItemViewCell>, [
 recipes.addShapeless(<appliedenergistics2:item.ItemViewCell>, [<appliedenergistics2:item.ItemMultiMaterial:39>, <ore:gemCertusQuartz>]);
 
 //1K ME Storage Cell
-recipes.addShaped(<appliedenergistics2:item.ItemBasicStorageCell.1k>, [
-[<ore:plateGlass>, <ore:plateRedAlloy>, <ore:plateGlass>],
-[<ore:plateRedAlloy>, <appliedenergistics2:item.ItemMultiMaterial:35>, <ore:plateRedAlloy>],
-[<ore:plateAluminium>, <ore:plateAluminium>, <ore:plateAluminium>]]);
-  
 recipes.addShapeless(<appliedenergistics2:item.ItemBasicStorageCell.1k>, 
 [<appliedenergistics2:item.ItemMultiMaterial:39>, <appliedenergistics2:item.ItemMultiMaterial:35>]);
 
 //4K ME Storage Cell
-recipes.addShaped(<appliedenergistics2:item.ItemBasicStorageCell.4k>, [
-[<ore:plateGlass>, <ore:plateRedAlloy>, <ore:plateGlass>],
-[<ore:plateRedAlloy>, <appliedenergistics2:item.ItemMultiMaterial:36>, <ore:plateRedAlloy>],
-[<ore:plateAluminium>, <ore:plateAluminium>, <ore:plateAluminium>]]);
-  
 recipes.addShapeless(<appliedenergistics2:item.ItemBasicStorageCell.4k>, 
 [<appliedenergistics2:item.ItemMultiMaterial:39>, <appliedenergistics2:item.ItemMultiMaterial:36>]);
  
 //16K ME Storage Cell 
-recipes.addShaped(<appliedenergistics2:item.ItemBasicStorageCell.16k>, [
-[<ore:plateGlass>, <ore:plateRedAlloy>, <ore:plateGlass>],
-[<ore:plateRedAlloy>, <appliedenergistics2:item.ItemMultiMaterial:37>, <ore:plateRedAlloy>],
-[<ore:plateAluminium>, <ore:plateAluminium>, <ore:plateAluminium>]]);
-  
 recipes.addShapeless(<appliedenergistics2:item.ItemBasicStorageCell.16k>, 
 [<appliedenergistics2:item.ItemMultiMaterial:39>, <appliedenergistics2:item.ItemMultiMaterial:37>]);
 
 //64K ME Storage Cell
-recipes.addShaped(<appliedenergistics2:item.ItemBasicStorageCell.64k>, [
-[<ore:plateGlass>, <ore:plateRedAlloy>, <ore:plateGlass>],
-[<ore:plateRedAlloy>, <appliedenergistics2:item.ItemMultiMaterial:38>, <ore:plateRedAlloy>],
-[<ore:plateAluminium>, <ore:plateAluminium>, <ore:plateAluminium>]]);
-  
 recipes.addShapeless(<appliedenergistics2:item.ItemBasicStorageCell.64k>, 
 [<appliedenergistics2:item.ItemMultiMaterial:39>, <appliedenergistics2:item.ItemMultiMaterial:38>]);
 
-//2³ Spatial Storage Cell
+//2 Spatial Storage Cell
 recipes.addShaped(<appliedenergistics2:item.ItemSpatialStorageCell.2Cubed>, [
-[<ore:plateGlass>, <ore:plateRedAlloy>, <ore:plateGlass>],
-[<ore:plateRedAlloy>, <appliedenergistics2:item.ItemMultiMaterial:32>, <ore:plateRedAlloy>],
-[<ore:plateAluminium>, <ore:plateAluminium>, <ore:plateAluminium>]]);
+[HHammer, CertusPlate, QuartziteScrew],
+[SteelPlate, <appliedenergistics2:item.ItemMultiMaterial:32>, SteelPlate],
+[QuartziteScrew, AlPlate, Screwdriver]]);
+// - Alternative Recipe
+recipes.addShaped(<appliedenergistics2:item.ItemSpatialStorageCell.2Cubed>, [
+[Screwdriver, CertusPlate, QuartziteScrew],
+[SteelPlate, <appliedenergistics2:item.ItemMultiMaterial:32>, SteelPlate],
+[QuartziteScrew, AlPlate, HHammer]]);
 
 recipes.addShapeless(<appliedenergistics2:item.ItemSpatialStorageCell.2Cubed>, 
 [<appliedenergistics2:item.ItemMultiMaterial:39>, <appliedenergistics2:item.ItemMultiMaterial:32>]);
 
-//16³ Spatial Storage Cell
+//16 Spatial Storage Cell
 recipes.addShaped(<appliedenergistics2:item.ItemSpatialStorageCell.16Cubed>, [
-[<ore:plateGlass>, <ore:plateRedAlloy>, <ore:plateGlass>],
-[<ore:plateRedAlloy>, <appliedenergistics2:item.ItemMultiMaterial:33>, <ore:plateRedAlloy>],
-[<ore:plateAluminium>, <ore:plateAluminium>, <ore:plateAluminium>]]);
+[HHammer, CertusPlate, QuartziteScrew],
+[SteelPlate, <appliedenergistics2:item.ItemMultiMaterial:33>, SteelPlate],
+[QuartziteScrew, AlPlate, Screwdriver]]);
+// - Alternative Recipe
+recipes.addShaped(<appliedenergistics2:item.ItemSpatialStorageCell.16Cubed>, [
+[Screwdriver, CertusPlate, QuartziteScrew],
+[SteelPlate, <appliedenergistics2:item.ItemMultiMaterial:33>, SteelPlate],
+[QuartziteScrew, AlPlate, HHammer]]);
 
 recipes.addShapeless(<appliedenergistics2:item.ItemSpatialStorageCell.16Cubed>, 
 [<appliedenergistics2:item.ItemMultiMaterial:39>, <appliedenergistics2:item.ItemMultiMaterial:33>]);
 
-//128³ Spatial Storage Cell
+//128 Spatial Storage Cell
 recipes.addShaped(<appliedenergistics2:item.ItemSpatialStorageCell.128Cubed>, [
-[<ore:plateGlass>, <ore:plateRedAlloy>, <ore:plateGlass>],
-[<ore:plateRedAlloy>, <appliedenergistics2:item.ItemMultiMaterial:34>, <ore:plateRedAlloy>],
-[<ore:plateAluminium>, <ore:plateAluminium>, <ore:plateAluminium>]]);
+[HHammer, CertusPlate, QuartziteScrew],
+[SteelPlate, <appliedenergistics2:item.ItemMultiMaterial:34>, SteelPlate],
+[QuartziteScrew, AlPlate, Screwdriver]]);
+// - Alternative Recipe
+recipes.addShaped(<appliedenergistics2:item.ItemSpatialStorageCell.128Cubed>, [
+[Screwdriver, CertusPlate, QuartziteScrew],
+[SteelPlate, <appliedenergistics2:item.ItemMultiMaterial:34>, SteelPlate],
+[QuartziteScrew, AlPlate, HHammer]]);
 
 recipes.addShapeless(<appliedenergistics2:item.ItemSpatialStorageCell.128Cubed>, 
 [<appliedenergistics2:item.ItemMultiMaterial:39>, <appliedenergistics2:item.ItemMultiMaterial:34>]);
@@ -545,6 +942,12 @@ recipes.addShaped(<appliedenergistics2:item.ToolCertusQuartzWrench>, [
 [<appliedenergistics2:item.ItemMultiMaterial:1>, <ore:craftingToolWrench>, <appliedenergistics2:item.ItemMultiMaterial:1>],
 [<appliedenergistics2:item.ItemMultiMaterial:1>, <appliedenergistics2:item.ItemMultiMaterial:1>, <appliedenergistics2:item.ItemMultiMaterial:1>],
 [null, <appliedenergistics2:item.ItemMultiMaterial:1>, null]]);
+
+//Nether Quartz Wrench
+recipes.addShaped(<appliedenergistics2:item.ToolNetherQuartzWrench>, [
+[<ore:gemQuartz>, <ore:craftingToolWrench>, <ore:gemQuartz>],
+[<ore:gemQuartz>, <ore:gemQuartz>, <ore:gemQuartz>],
+[null, <ore:gemQuartz>, null]]);
 
 //Matter Cannon
 recipes.addShaped(<appliedenergistics2:item.ToolMassCannon>, [
@@ -580,3 +983,6 @@ recipes.addShaped(<appliedenergistics2:item.ToolColorApplicator>, [
 recipes.addShaped(<appliedenergistics2:item.ToolBiometricCard>, [
 [<appliedenergistics2:item.ItemMultiMaterial:24>, <ore:plateAluminium>, <ore:plateAluminium>],
 [<ore:plateGold>, <ore:plateRedAlloy>, <ore:plateGold>],[null, null, null]]);
+
+//Quartz Glass
+AlloySmelter.addRecipe(<appliedenergistics2:tile.BlockQuartzGlass> * 4, <minecraft:glass> * 4, <gregtech:gt.metaitem.01:2516> * 4, 400, 16);
