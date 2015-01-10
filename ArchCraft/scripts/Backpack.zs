@@ -1,4 +1,4 @@
-//Created by DreamMasterXXL
+// ******** Created by Arch-Nihil ********
 
 
 
@@ -318,3 +318,5 @@ recipes.addShaped(BigWorkB, [
 [null, <ore:plateStainlessSteel>, null]]);
 
 // #======= Hiding Stuff =======#
+
+
