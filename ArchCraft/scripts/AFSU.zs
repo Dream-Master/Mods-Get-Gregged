@@ -17,6 +17,8 @@ val SuperconductorWire = <ore:wireGt01Superconductor>;
 val IVMachineHull = <gregtech:gt.blockmachines:15>;
 val LapotronicEOrb = <ore:batteryUltimate>;
 val LapotronChip = <gregtech:gt.metaitem.01:32714>;
+val UUMatterCell = <IC2:itemFluidCell>.withTag({Fluid:{FluidName:"ic2uumatter", Amount:1000}});
+val IridiumAlloy = <ore:plateAlloyIridium>;
 
 val GrandmasterCircuit = <adc:ItemGrandmasterCircuit>;
 
@@ -37,9 +39,9 @@ recipes.remove(AFSU);
 
 // --- AFB
 recipes.addShaped(AFB, [
-[SuperconductorWire, GrandmasterCircuit, SuperconductorWire],
-[LapotronChip, LapotronicEOrb, LapotronChip],
-[SuperconductorWire, GrandmasterCircuit, SuperconductorWire]]);
+[IridiumAlloy, LapotronicEOrb, IridiumAlloy],
+[SuperconductorWire, UUMatterCell, SuperconductorWire],
+[IridiumAlloy, LapotronicEOrb, IridiumAlloy]]);
 
 // --- AFSU
 recipes.addShaped(AFSU, [
