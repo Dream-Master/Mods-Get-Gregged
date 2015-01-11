@@ -52,4 +52,3 @@ recipes.addShaped(AFSU, [
 
 
 // #======= Hiding Stuff =======#
-
