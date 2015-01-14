@@ -3,74 +3,79 @@
 //cobble pipe nerf
 recipes.removeShaped(<BuildCraft|Transport:item.buildcraftPipe.pipeitemscobblestone>);
 recipes.addShaped(<BuildCraft|Transport:item.buildcraftPipe.pipeitemscobblestone> * 1,
-  [[<ore:stoneCobble>, <minecraft:glass>, <ore:stoneCobble>] ] );
+  [[<ore:stoneCobble>, <ore:blockGlass>, <ore:stoneCobble>] ] );
   
 //stone pipe nerf
 recipes.removeShaped(<BuildCraft|Transport:item.buildcraftPipe.pipeitemsstone>);
 recipes.addShaped(<BuildCraft|Transport:item.buildcraftPipe.pipeitemsstone> * 1,
-  [[<ore:stone>, <minecraft:glass>, <ore:stone>] ] );
+  [[<ore:stone>, <ore:blockGlass>, <ore:stone>] ] );
 
 //wood pipe nerf
 recipes.removeShaped(<BuildCraft|Transport:item.buildcraftPipe.pipeitemswood>);
 recipes.addShaped(<BuildCraft|Transport:item.buildcraftPipe.pipeitemswood> * 1,
-  [[<ore:plankWood>, <minecraft:glass>, <ore:plankWood>] ] );    
+  [[<ore:plankWood>, <ore:blockGlass>, <ore:plankWood>] ] );    
 
 //quartz pipe nerf
   recipes.removeShaped(<BuildCraft|Transport:item.buildcraftPipe.pipeitemsquartz>);
 recipes.addShaped(<BuildCraft|Transport:item.buildcraftPipe.pipeitemsquartz> * 1,
-  [[<ore:plateNetherQuartz>, <minecraft:glass>, <ore:plateNetherQuartz>] ] );
+  [[<ore:plateNetherQuartz>, <ore:blockGlass>, <ore:plateNetherQuartz>] ] );
 
 //iron pipe nerf  
 recipes.removeShaped(<BuildCraft|Transport:item.buildcraftPipe.pipeitemsiron>);
 recipes.addShaped(<BuildCraft|Transport:item.buildcraftPipe.pipeitemsiron> * 1,
-  [[<ore:plateIron>, <minecraft:glass>, <ore:plateIron>] ] );
+  [[<ore:plateIron>, <ore:blockGlass>, <ore:plateIron>] ] );
 
 //sandstone pipe nerf
 recipes.removeShaped(<BuildCraft|Transport:item.buildcraftPipe.pipeitemssandstone>);
 recipes.addShaped(<BuildCraft|Transport:item.buildcraftPipe.pipeitemssandstone> * 1,
-  [[<ore:stoneSand>, <minecraft:glass>, <ore:stoneSand>] ] );
+  [[<ore:stoneSand>, <ore:blockGlass>, <ore:stoneSand>] ] );
   
 //gold pipe nerf
 recipes.removeShaped(<BuildCraft|Transport:item.buildcraftPipe.pipeitemsgold>);
 recipes.addShaped(<BuildCraft|Transport:item.buildcraftPipe.pipeitemsgold> * 1,
-  [[<ore:plateGold>, <minecraft:glass>, <ore:plateGold>] ] );
+  [[<ore:plateGold>, <ore:blockGlass>, <ore:plateGold>] ] );
 
 //diamond pipe nerf  
 recipes.removeShaped(<BuildCraft|Transport:item.buildcraftPipe.pipeitemsdiamond>);
 recipes.addShaped(<BuildCraft|Transport:item.buildcraftPipe.pipeitemsdiamond> * 4,
-  [[<ore:gearGtDiamond>, <minecraft:glass>, <ore:gearGtDiamond>],[null, <ore:circuitBasic>, null] ] );
+  [[<ore:gearGtDiamond>, <ore:blockGlass>, <ore:gearGtDiamond>],[null, <ore:circuitBasic>, null] ] );
 
 //obsidian pipe nerf  
  recipes.removeShaped(<BuildCraft|Transport:item.buildcraftPipe.pipeitemsobsidian>);
 recipes.addShaped(<BuildCraft|Transport:item.buildcraftPipe.pipeitemsobsidian> * 1,
-  [[<ore:plateObsidian>, <minecraft:glass>, <ore:plateObsidian>] ] );
+  [[<ore:plateObsidian>, <ore:blockGlass>, <ore:plateObsidian>] ] );
 
 //emerald pipe nerf
 recipes.removeShaped(<BuildCraft|Transport:item.buildcraftPipe.pipeitemsemerald>);
 recipes.addShaped(<BuildCraft|Transport:item.buildcraftPipe.pipeitemsemerald> * 1,
-  [[<ore:plateEmerald>, <minecraft:glass>, <ore:plateEmerald>] ] );       
+  [[<ore:plateEmerald>, <ore:blockGlass>, <ore:plateEmerald>] ] );       
   
 //lazuli pipe nerf  
 recipes.removeShaped(<BuildCraft|Transport:item.buildcraftPipe.pipeitemslapis>);
 recipes.addShaped(<BuildCraft|Transport:item.buildcraftPipe.pipeitemslapis> * 4,
-  [[<minecraft:lapis_block>, <minecraft:glass>, <minecraft:lapis_block>] ] );
+  [[<minecraft:lapis_block>, <ore:blockGlass>, <minecraft:lapis_block>] ] );
  
 //daizuli pipe nerf  
 recipes.removeShaped(<BuildCraft|Transport:item.buildcraftPipe.pipeitemsdaizuli>);
 recipes.addShaped(<BuildCraft|Transport:item.buildcraftPipe.pipeitemsdaizuli> * 4,
-  [[<minecraft:lapis_block>, <minecraft:glass>, <ore:gearGtDiamond>] ] );
+  [[<minecraft:lapis_block>, <ore:blockGlass>, <ore:gearGtDiamond>] ] );
 
 //emzuli pipe nerf  
 recipes.removeShaped(<BuildCraft|Transport:item.buildcraftPipe.pipeitemsemzuli>);
 recipes.addShaped(<BuildCraft|Transport:item.buildcraftPipe.pipeitemsemzuli> * 1,
-  [[<ore:plateLapis>, <minecraft:glass>, <ore:plateEmerald>] ] );  
+  [[<ore:plateLapis>, <ore:blockGlass>, <ore:plateEmerald>] ] );  
 
 //void pipe nerf
 recipes.removeShaped(<BuildCraft|Transport:item.buildcraftPipe.pipeitemsvoid>);
 recipes.addShaped(<BuildCraft|Transport:item.buildcraftPipe.pipeitemsvoid> * 1,
-  [[<ore:gemEnderPearl>, <minecraft:glass>, <ore:plateRedstone>] ] );
+  [[<ore:gemEnderPearl>, <ore:blockGlass>, <ore:plateRedstone>] ] );
   
 //stripes pipe nerf
 recipes.removeShaped(<BuildCraft|Transport:item.buildcraftPipe.pipeitemsstripes>);
 recipes.addShaped(<BuildCraft|Transport:item.buildcraftPipe.pipeitemsstripes> * 4,
-  [[<ore:gearGtGold>, <minecraft:glass>, <ore:gearGtGold>] ] );
+  [[<ore:gearGtGold>, <ore:blockGlass>, <ore:gearGtGold>] ] );
+
+//clay pipe nerf
+recipes.removeShaped(<BuildCraft|Transport:item.buildcraftPipe.pipeitemsclay>);
+recipes.addShaped(<BuildCraft|Transport:item.buildcraftPipe.pipeitemsclay> * 1,
+[[<minecraft:clay_ball>, <ore:blockGlass>, <minecraft:clay_ball>] ]  );
