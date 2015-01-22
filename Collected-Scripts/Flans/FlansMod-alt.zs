@@ -155,7 +155,7 @@ recipes.addShaped(<flansmod:m21Ammo>,
   
 recipes.addShaped(<flansmod:rpgAmmo>,
  [[null, <ore:stickIron>, <ore:boltSteel>],
-  [<ore:plateSteel>, <appliedenergistics2:tile.BlockTinyTNT>, <ore:stickIron>],
+  [<ore:plateSteel>, <minecraft:tnt>, <ore:stickIron>],
   [<minecraft:fire_charge>, <ore:plateSteel>, null]]);
 
 
@@ -163,12 +163,12 @@ recipes.addShaped(<flansmod:rpgAmmo>,
 //Explosives
 recipes.addShaped(<flansmod:m67>,
  [[<ore:ingotIron>, <ore:ingotIron>, <ore:ingotIron>],
-  [<ore:ingotIron>, <appliedenergistics2:tile.BlockTinyTNT>, <ore:ingotIron>],
+  [<ore:ingotIron>, <minecraft:tnt>, <ore:ingotIron>],
   [<ore:ingotIron>, <ore:ingotIron>, <ore:ingotIron>]]);
   
 recipes.addShaped(<flansmod:c4>,
  [[<ore:ingotRubber>, <ore:circuitBasic>, <ore:ingotRubber>],
-  [<ore:ingotPlastic>, <appliedenergistics2:tile.BlockTinyTNT>, <ore:ingotPlastic>],
+  [<ore:ingotPlastic>, <minecraft:tnt>, <ore:ingotPlastic>],
   [<ore:ingotPlastic>, <ore:ingotPlastic>, <ore:ingotPlastic>]]);  
   
 recipes.addShaped(<flansmod:c4Remote>,
