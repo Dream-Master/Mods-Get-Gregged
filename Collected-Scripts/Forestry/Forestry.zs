@@ -50,8 +50,12 @@ recipes.remove(<Forestry:ffarm:4>);
 recipes.remove(<Forestry:ffarm:5>);
 //Survivalist´s Pickaxe
 recipes.remove(<Forestry:bronzePickaxe>);
+//Pickaxe Kit
+recipes.remove(<Forestry:kitPickaxe>);
 //Survivalist´s Shovel
 recipes.remove(<Forestry:bronzeShovel>);
+//Shovel Kit
+recipes.remove(<Forestry:kitShovel>);
 //Infuser
 recipes.remove(<Forestry:infuser>);
 //Can
@@ -89,12 +93,6 @@ recipes.addShaped(<Forestry:core>, [
 [<minecraft:glass>, <Forestry:sturdyMachine>, <minecraft:glass>],
 [<ore:plateBronze>, <minecraft:piston>, <ore:plateBronze>]]);
 
-//Analyzer
-recipes.addShaped(<Forestry:core>, [
-[<ore:plateBronze>, <Forestry:treealyzer>, <ore:plateBronze>],
-[<minecraft:glass>, <Forestry:sturdyMachine>, <minecraft:glass>],
-[<ore:plateBronze>, <minecraft:piston>, <ore:plateBronze>]]);
-
 //Sturdy Casing
 recipes.addShaped(<Forestry:sturdyMachine>, [
 [<ore:plateBronze>, <ore:plateIron>, <ore:plateBronze>],
@@ -109,19 +107,19 @@ recipes.addShaped(<Forestry:factory>, [
 
 //Carpenter
 recipes.addShaped(<Forestry:factory:1>, [
-[<ore:plateBronze>, <gregtech:gt.metaitem.01:32620>, <ore:plateBronze>],
+[<ore:plateBronze>, <gregtech:gt.metaitem.02:21057>, <ore:plateBronze>],
 [<ore:gearTin>, <Forestry:sturdyMachine>, <ore:gearTin>],
 [<ore:plateBronze>, <ore:screwBronze>, <ore:plateBronze>]]);
 
 //Centrifuge
 recipes.addShaped(<Forestry:factory:2>, [
-[<ore:plateCopper>, <gregtech:gt.metaitem.01:32620>, <ore:plateCopper>],
+[<ore:plateCopper>, <gregtech:gt.metaitem.02:21057>, <ore:plateCopper>],
 [<ore:gearTin>, <Forestry:sturdyMachine>, <ore:gearTin>],
-[<ore:plateCopper>, <gregtech:gt.metaitem.01:32620>, <ore:plateCopper>]]);
+[<ore:plateCopper>, <gregtech:gt.metaitem.02:21057>, <ore:plateCopper>]]);
 
 //Fermenter
 recipes.addShaped(<Forestry:factory:3>, [
-[<ore:plateGold>, <gregtech:gt.metaitem.01:32620>, <ore:plateGold>],
+[<ore:plateGold>, <gregtech:gt.metaitem.02:21057>, <ore:plateGold>],
 [<ore:gearTin>, <Forestry:sturdyMachine>, <ore:gearTin>],
 [<ore:plateGold>, <ore:plateGold>, <ore:plateGold>]]);
 
@@ -133,14 +131,14 @@ recipes.addShaped(<Forestry:factory:4>, [
 
 //Squeezer
 recipes.addShaped(<Forestry:factory:5>, [
-[<ore:plateTin>, <gregtech:gt.metaitem.01:32620>, <ore:plateTin>],
+[<ore:plateTin>, <gregtech:gt.metaitem.02:21057>, <ore:plateTin>],
 [<ore:gearGold>, <Forestry:sturdyMachine>, <ore:gearGold>],
 [<ore:plateTin>, <ore:screwTin>, <ore:plateTin>]]);
 
 //Still
 recipes.addShaped(<Forestry:factory:6>, [
 [<minecraft:redstone_block>, <ore:plateGlass>, <minecraft:redstone_block>],
-[<gregtech:gt.metaitem.01:32621>, <Forestry:sturdyMachine>, <gregtech:gt.metaitem.01:32621>],
+[<gregtech:gt.metaitem.02:21300>, <Forestry:sturdyMachine>, <gregtech:gt.metaitem.02:21300>],
 [<extracells:certustank>, <ore:plateGlass>, <extracells:certustank>]]);
 
 //Rain Maker
@@ -193,283 +191,283 @@ recipes.addShaped(<Forestry:engine:4>, [
 
 //Farm Block
 recipes.addShaped(<Forestry:ffarm>.withTag({FarmBlock:0}), [
-[<ore:stickCopper>, <minecraft:stonebrick>, <ore:stickCopper>],
-[<gregtech:gt.metaitem.01:17809>, <Forestry:thermionicTubes:1>, <gregtech:gt.metaitem.01:17809>],
-[<ore:craftingToolHardHammer>, null, <ore:craftingToolFile>]]);
+[<Forestry:thermionicTubes:10>, <ore:plateCopper>, <Forestry:thermionicTubes:10>],
+[<ore:plateCopper>, <minecraft:stonebrick>, <ore:plateCopper>],
+[<ore:craftingToolHardHammer>, <ore:plateCopper>, <ore:craftingToolFile>]]);
 
 recipes.addShaped(<Forestry:ffarm>.withTag({FarmBlock:1}), [
-[<ore:stickCopper>, <minecraft:stonebrick:1>, <ore:stickCopper>],
-[<gregtech:gt.metaitem.01:17809>, <Forestry:thermionicTubes:1>, <gregtech:gt.metaitem.01:17809>],
-[<ore:craftingToolHardHammer>, null, <ore:craftingToolFile>]]);
+[<Forestry:thermionicTubes:10>, <ore:plateCopper>, <Forestry:thermionicTubes:10>],
+[<ore:plateCopper>, <minecraft:stonebrick:1>, <ore:plateCopper>],
+[<ore:craftingToolHardHammer>, <ore:plateCopper>, <ore:craftingToolFile>]]);
 
 recipes.addShaped(<Forestry:ffarm>.withTag({FarmBlock:2}), [
-[<ore:stickCopper>, <minecraft:stonebrick:2>, <ore:stickCopper>],
-[<gregtech:gt.metaitem.01:17809>, <Forestry:thermionicTubes:1>, <gregtech:gt.metaitem.01:17809>],
-[<ore:craftingToolHardHammer>, null, <ore:craftingToolFile>]]);
+[<Forestry:thermionicTubes:10>, <ore:plateCopper>, <Forestry:thermionicTubes:10>],
+[<ore:plateCopper>, <minecraft:stonebrick:2>, <ore:plateCopper>],
+[<ore:craftingToolHardHammer>, <ore:plateCopper>, <ore:craftingToolFile>]]);
 
 recipes.addShaped(<Forestry:ffarm>.withTag({FarmBlock:3}), [
-[<ore:stickCopper>, <minecraft:brick_block>, <ore:stickCopper>],
-[<gregtech:gt.metaitem.01:17809>, <Forestry:thermionicTubes:1>, <gregtech:gt.metaitem.01:17809>],
-[<ore:craftingToolHardHammer>, null, <ore:craftingToolFile>]]);
+[<Forestry:thermionicTubes:10>, <ore:plateCopper>, <Forestry:thermionicTubes:10>],
+[<ore:plateCopper>, <minecraft:brick_block>, <ore:plateCopper>],
+[<ore:craftingToolHardHammer>, <ore:plateCopper>, <ore:craftingToolFile>]]);
 
 recipes.addShaped(<Forestry:ffarm>.withTag({FarmBlock:4}), [
-[<ore:stickCopper>, <minecraft:sandstone:2>, <ore:stickCopper>],
-[<gregtech:gt.metaitem.01:17809>, <Forestry:thermionicTubes:1>, <gregtech:gt.metaitem.01:17809>],
-[<ore:craftingToolHardHammer>, null, <ore:craftingToolFile>]]);
+[<Forestry:thermionicTubes:10>, <ore:plateCopper>, <Forestry:thermionicTubes:10>],
+[<ore:plateCopper>, <minecraft:sandstone:2>, <ore:plateCopper>],
+[<ore:craftingToolHardHammer>, <ore:plateCopper>, <ore:craftingToolFile>]]);
 
 recipes.addShaped(<Forestry:ffarm>.withTag({FarmBlock:5}), [
-[<ore:stickCopper>, <minecraft:sandstone:1>, <ore:stickCopper>],
-[<gregtech:gt.metaitem.01:17809>, <Forestry:thermionicTubes:1>, <gregtech:gt.metaitem.01:17809>],
-[<ore:craftingToolHardHammer>, null, <ore:craftingToolFile>]]);
+[<Forestry:thermionicTubes:10>, <ore:plateCopper>, <Forestry:thermionicTubes:10>],
+[<ore:plateCopper>, <minecraft:sandstone:1>, <ore:plateCopper>],
+[<ore:craftingToolHardHammer>, <ore:plateCopper>, <ore:craftingToolFile>]]);
 
 recipes.addShaped(<Forestry:ffarm>.withTag({FarmBlock:6}), [
-[<ore:stickCopper>, <minecraft:nether_brick>, <ore:stickCopper>],
-[<gregtech:gt.metaitem.01:17809>, <Forestry:thermionicTubes:1>, <gregtech:gt.metaitem.01:17809>],
-[<ore:craftingToolHardHammer>, null, <ore:craftingToolFile>]]);
+[<Forestry:thermionicTubes:10>, <ore:plateCopper>, <Forestry:thermionicTubes:10>],
+[<ore:plateCopper>, <minecraft:nether_brick>, <ore:plateCopper>],
+[<ore:craftingToolHardHammer>, <ore:plateCopper>, <ore:craftingToolFile>]]);
 
 recipes.addShaped(<Forestry:ffarm>.withTag({FarmBlock:7}), [
-[<ore:stickCopper>, <minecraft:stonebrick:3>, <ore:stickCopper>],
-[<gregtech:gt.metaitem.01:17809>, <Forestry:thermionicTubes:1>, <gregtech:gt.metaitem.01:17809>],
-[<ore:craftingToolHardHammer>, null, <ore:craftingToolFile>]]);
+[<Forestry:thermionicTubes:10>, <ore:plateCopper>, <Forestry:thermionicTubes:10>],
+[<ore:plateCopper>, <minecraft:stonebrick:3>, <ore:plateCopper>],
+[<ore:craftingToolHardHammer>, <ore:plateCopper>, <ore:craftingToolFile>]]);
 
 recipes.addShaped(<Forestry:ffarm>.withTag({FarmBlock:8}), [
-[<ore:stickCopper>, <minecraft:quartz_block>, <ore:stickCopper>],
-[<gregtech:gt.metaitem.01:17809>, <Forestry:thermionicTubes:1>, <gregtech:gt.metaitem.01:17809>],
-[<ore:craftingToolHardHammer>, null, <ore:craftingToolFile>]]);
+[<Forestry:thermionicTubes:10>, <ore:plateCopper>, <Forestry:thermionicTubes:10>],
+[<ore:plateCopper>, <minecraft:quartz_block>, <ore:plateCopper>],
+[<ore:craftingToolHardHammer>, <ore:plateCopper>, <ore:craftingToolFile>]]);
 
 recipes.addShaped(<Forestry:ffarm>.withTag({FarmBlock:9}), [
-[<ore:stickCopper>, <minecraft:quartz_block:1>, <ore:stickCopper>],
-[<gregtech:gt.metaitem.01:17809>, <Forestry:thermionicTubes:1>, <gregtech:gt.metaitem.01:17809>],
-[<ore:craftingToolHardHammer>, null, <ore:craftingToolFile>]]);
+[<Forestry:thermionicTubes:10>, <ore:plateCopper>, <Forestry:thermionicTubes:10>],
+[<ore:plateCopper>, <minecraft:quartz_block:1>, <ore:plateCopper>],
+[<ore:craftingToolHardHammer>, <ore:plateCopper>, <ore:craftingToolFile>]]);
 
 recipes.addShaped(<Forestry:ffarm>.withTag({FarmBlock:10}), [
-[<ore:stickCopper>, <minecraft:quartz_block:2>, <ore:stickCopper>],
-[<gregtech:gt.metaitem.01:17809>, <Forestry:thermionicTubes:1>, <gregtech:gt.metaitem.01:17809>],
-[<ore:craftingToolHardHammer>, null, <ore:craftingToolFile>]]);
+[<Forestry:thermionicTubes:10>, <ore:plateCopper>, <Forestry:thermionicTubes:10>],
+[<ore:plateCopper>, <minecraft:quartz_block:2>, <ore:plateCopper>],
+[<ore:craftingToolHardHammer>, <ore:plateCopper>, <ore:craftingToolFile>]]);
 
 //Farm Gearbox
 recipes.addShaped(<Forestry:ffarm:2>.withTag({FarmBlock:0}), [
-[<ore:gearTin>, <Forestry:ffarm>.withTag({FarmBlock:0}), <ore:gearTin>],
-[<minecraft:chest>, <minecraft:iron_axe>, <minecraft:chest>],
-[<ore:craftingToolHardHammer>, null, <ore:craftingToolFile>]]);
+[<ore:gearAnyBronze>, <ore:plateBronze>, <ore:gearAnyBronze>],
+[<IC2:itemToolBronzeHoe>, <Forestry:ffarm>.withTag({FarmBlock:0}), <IC2:itemToolBronzeAxe>],
+[<ore:craftingToolHardHammer>, <ore:chestCopper>, <ore:craftingToolFile>]]);
 
 recipes.addShaped(<Forestry:ffarm:2>.withTag({FarmBlock:1}), [
-[<ore:gearTin>, <Forestry:ffarm>.withTag({FarmBlock:1}), <ore:gearTin>],
-[<minecraft:chest>, <minecraft:iron_axe>, <minecraft:chest>],
-[<ore:craftingToolHardHammer>, null, <ore:craftingToolFile>]]);
+[<ore:gearAnyBronze>, <ore:plateBronze>, <ore:gearAnyBronze>],
+[<IC2:itemToolBronzeHoe>, <Forestry:ffarm>.withTag({FarmBlock:1}), <IC2:itemToolBronzeAxe>],
+[<ore:craftingToolHardHammer>, <ore:chestCopper>, <ore:craftingToolFile>]]);
 
 recipes.addShaped(<Forestry:ffarm:2>.withTag({FarmBlock:2}), [
-[<ore:gearTin>, <Forestry:ffarm>.withTag({FarmBlock:2}), <ore:gearTin>],
-[<minecraft:chest>, <minecraft:iron_axe>, <minecraft:chest>],
-[<ore:craftingToolHardHammer>, null, <ore:craftingToolFile>]]);
+[<ore:gearAnyBronze>, <ore:plateBronze>, <ore:gearAnyBronze>],
+[<IC2:itemToolBronzeHoe>, <Forestry:ffarm>.withTag({FarmBlock:2}), <IC2:itemToolBronzeAxe>],
+[<ore:craftingToolHardHammer>, <ore:chestCopper>, <ore:craftingToolFile>]]);
 
 recipes.addShaped(<Forestry:ffarm:2>.withTag({FarmBlock:3}), [
-[<ore:gearTin>, <Forestry:ffarm>.withTag({FarmBlock:3}), <ore:gearTin>],
-[<minecraft:chest>, <minecraft:iron_axe>, <minecraft:chest>],
-[<ore:craftingToolHardHammer>, null, <ore:craftingToolFile>]]);
+[<ore:gearAnyBronze>, <ore:plateBronze>, <ore:gearAnyBronze>],
+[<IC2:itemToolBronzeHoe>, <Forestry:ffarm>.withTag({FarmBlock:3}), <IC2:itemToolBronzeAxe>],
+[<ore:craftingToolHardHammer>, <ore:chestCopper>, <ore:craftingToolFile>]]);
 
 recipes.addShaped(<Forestry:ffarm:2>.withTag({FarmBlock:4}), [
-[<ore:gearTin>, <Forestry:ffarm>.withTag({FarmBlock:4}), <ore:gearTin>],
-[<minecraft:chest>, <minecraft:iron_axe>, <minecraft:chest>],
-[<ore:craftingToolHardHammer>, null, <ore:craftingToolFile>]]);
+[<ore:gearAnyBronze>, <ore:plateBronze>, <ore:gearAnyBronze>],
+[<IC2:itemToolBronzeHoe>, <Forestry:ffarm>.withTag({FarmBlock:4}), <IC2:itemToolBronzeAxe>],
+[<ore:craftingToolHardHammer>, <ore:chestCopper>, <ore:craftingToolFile>]]);
 
 recipes.addShaped(<Forestry:ffarm:2>.withTag({FarmBlock:5}), [
-[<ore:gearTin>, <Forestry:ffarm>.withTag({FarmBlock:5}), <ore:gearTin>],
-[<minecraft:chest>, <minecraft:iron_axe>, <minecraft:chest>],
-[<ore:craftingToolHardHammer>, null, <ore:craftingToolFile>]]);
+[<ore:gearAnyBronze>, <ore:plateBronze>, <ore:gearAnyBronze>],
+[<IC2:itemToolBronzeHoe>, <Forestry:ffarm>.withTag({FarmBlock:5}), <IC2:itemToolBronzeAxe>],
+[<ore:craftingToolHardHammer>, <ore:chestCopper>, <ore:craftingToolFile>]]);
 
 recipes.addShaped(<Forestry:ffarm:2>.withTag({FarmBlock:6}), [
-[<ore:gearTin>, <Forestry:ffarm>.withTag({FarmBlock:6}), <ore:gearTin>],
-[<minecraft:chest>, <minecraft:iron_axe>, <minecraft:chest>],
-[<ore:craftingToolHardHammer>, null, <ore:craftingToolFile>]]);
+[<ore:gearAnyBronze>, <ore:plateBronze>, <ore:gearAnyBronze>],
+[<IC2:itemToolBronzeHoe>, <Forestry:ffarm>.withTag({FarmBlock:6}), <IC2:itemToolBronzeAxe>],
+[<ore:craftingToolHardHammer>, <ore:chestCopper>, <ore:craftingToolFile>]]);
 
 recipes.addShaped(<Forestry:ffarm:2>.withTag({FarmBlock:7}), [
-[<ore:gearTin>, <Forestry:ffarm>.withTag({FarmBlock:7}), <ore:gearTin>],
-[<minecraft:chest>, <minecraft:iron_axe>, <minecraft:chest>],
-[<ore:craftingToolHardHammer>, null, <ore:craftingToolFile>]]);
+[<ore:gearAnyBronze>, <ore:plateBronze>, <ore:gearAnyBronze>],
+[<IC2:itemToolBronzeHoe>, <Forestry:ffarm>.withTag({FarmBlock:7}), <IC2:itemToolBronzeAxe>],
+[<ore:craftingToolHardHammer>, <ore:chestCopper>, <ore:craftingToolFile>]]);
 
 recipes.addShaped(<Forestry:ffarm:2>.withTag({FarmBlock:8}), [
-[<ore:gearTin>, <Forestry:ffarm>.withTag({FarmBlock:8}), <ore:gearTin>],
-[<minecraft:chest>, <minecraft:iron_axe>, <minecraft:chest>],
-[<ore:craftingToolHardHammer>, null, <ore:craftingToolFile>]]);
+[<ore:gearAnyBronze>, <ore:plateBronze>, <ore:gearAnyBronze>],
+[<IC2:itemToolBronzeHoe>, <Forestry:ffarm>.withTag({FarmBlock:8}), <IC2:itemToolBronzeAxe>],
+[<ore:craftingToolHardHammer>, <ore:chestCopper>, <ore:craftingToolFile>]]);
 
 recipes.addShaped(<Forestry:ffarm:2>.withTag({FarmBlock:9}), [
-[<ore:gearTin>, <Forestry:ffarm>.withTag({FarmBlock:9}), <ore:gearTin>],
-[<minecraft:chest>, <minecraft:iron_axe>, <minecraft:chest>],
-[<ore:craftingToolHardHammer>, null, <ore:craftingToolFile>]]);
+[<ore:gearAnyBronze>, <ore:plateBronze>, <ore:gearAnyBronze>],
+[<IC2:itemToolBronzeHoe>, <Forestry:ffarm>.withTag({FarmBlock:9}), <IC2:itemToolBronzeAxe>],
+[<ore:craftingToolHardHammer>, <ore:chestCopper>, <ore:craftingToolFile>]]);
 
 recipes.addShaped(<Forestry:ffarm:2>.withTag({FarmBlock:10}), [
-[<ore:gearTin>, <Forestry:ffarm>.withTag({FarmBlock:10}), <ore:gearTin>],
-[<minecraft:chest>, <minecraft:iron_axe>, <minecraft:chest>],
-[<ore:craftingToolHardHammer>, null, <ore:craftingToolFile>]]);
+[<ore:gearAnyBronze>, <ore:plateBronze>, <ore:gearAnyBronze>],
+[<IC2:itemToolBronzeHoe>, <Forestry:ffarm>.withTag({FarmBlock:10}), <IC2:itemToolBronzeAxe>],
+[<ore:craftingToolHardHammer>, <ore:chestCopper>, <ore:craftingToolFile>]]);
 
 //Farm Hatch
 recipes.addShaped(<Forestry:ffarm:3>.withTag({FarmBlock:0}), [
-[<ore:gearTin>, <Forestry:ffarm>.withTag({FarmBlock:0}), <ore:gearTin>],
-[<minecraft:hopper>, <ore:pipeMediumBrass>, <minecraft:hopper>],
-[<ore:craftingToolHardHammer>, null, <ore:craftingToolFile>]]);
+[<ore:gearAnyBronze>, <ore:pipeLargeElectrum>, <ore:gearAnyBronze>],
+[<gregtech:gt.metaitem.01:32630>, <Forestry:ffarm>.withTag({FarmBlock:0}), <gregtech:gt.metaitem.01:32630>],
+[<ore:craftingToolHardHammer>, <minecraft:hopper>, <ore:craftingToolFile>]]);
 
 recipes.addShaped(<Forestry:ffarm:3>.withTag({FarmBlock:1}), [
-[<ore:gearTin>, <Forestry:ffarm>.withTag({FarmBlock:1}), <ore:gearTin>],
-[<minecraft:hopper>, <ore:pipeMediumBrass>, <minecraft:hopper>],
-[<ore:craftingToolHardHammer>, null, <ore:craftingToolFile>]]);
+[<ore:gearAnyBronze>, <ore:pipeLargeElectrum>, <ore:gearAnyBronze>],
+[<gregtech:gt.metaitem.01:32630>, <Forestry:ffarm>.withTag({FarmBlock:1}), <gregtech:gt.metaitem.01:32630>],
+[<ore:craftingToolHardHammer>, <minecraft:hopper>, <ore:craftingToolFile>]]);
 
 recipes.addShaped(<Forestry:ffarm:3>.withTag({FarmBlock:2}), [
-[<ore:gearTin>, <Forestry:ffarm>.withTag({FarmBlock:2}), <ore:gearTin>],
-[<minecraft:hopper>, <ore:pipeMediumBrass>, <minecraft:hopper>],
-[<ore:craftingToolHardHammer>, null, <ore:craftingToolFile>]]);
+[<ore:gearAnyBronze>, <ore:pipeLargeElectrum>, <ore:gearAnyBronze>],
+[<gregtech:gt.metaitem.01:32630>, <Forestry:ffarm>.withTag({FarmBlock:2}), <gregtech:gt.metaitem.01:32630>],
+[<ore:craftingToolHardHammer>, <minecraft:hopper>, <ore:craftingToolFile>]]);
 
 recipes.addShaped(<Forestry:ffarm:3>.withTag({FarmBlock:3}), [
-[<ore:gearTin>, <Forestry:ffarm>.withTag({FarmBlock:3}), <ore:gearTin>],
-[<minecraft:hopper>, <ore:pipeMediumBrass>, <minecraft:hopper>],
-[<ore:craftingToolHardHammer>, null, <ore:craftingToolFile>]]);
+[<ore:gearAnyBronze>, <ore:pipeLargeElectrum>, <ore:gearAnyBronze>],
+[<gregtech:gt.metaitem.01:32630>, <Forestry:ffarm>.withTag({FarmBlock:3}), <gregtech:gt.metaitem.01:32630>],
+[<ore:craftingToolHardHammer>, <minecraft:hopper>, <ore:craftingToolFile>]]);
 
 recipes.addShaped(<Forestry:ffarm:3>.withTag({FarmBlock:4}), [
-[<ore:gearTin>, <Forestry:ffarm>.withTag({FarmBlock:4}), <ore:gearTin>],
-[<minecraft:hopper>, <ore:pipeMediumBrass>, <minecraft:hopper>],
-[<ore:craftingToolHardHammer>, null, <ore:craftingToolFile>]]);
+[<ore:gearAnyBronze>, <ore:pipeLargeElectrum>, <ore:gearAnyBronze>],
+[<gregtech:gt.metaitem.01:32630>, <Forestry:ffarm>.withTag({FarmBlock:4}), <gregtech:gt.metaitem.01:32630>],
+[<ore:craftingToolHardHammer>, <minecraft:hopper>, <ore:craftingToolFile>]]);
 
 recipes.addShaped(<Forestry:ffarm:3>.withTag({FarmBlock:5}), [
-[<ore:gearTin>, <Forestry:ffarm>.withTag({FarmBlock:5}), <ore:gearTin>],
-[<minecraft:hopper>, <ore:pipeMediumBrass>, <minecraft:hopper>],
-[<ore:craftingToolHardHammer>, null, <ore:craftingToolFile>]]);
+[<ore:gearAnyBronze>, <ore:pipeLargeElectrum>, <ore:gearAnyBronze>],
+[<gregtech:gt.metaitem.01:32630>, <Forestry:ffarm>.withTag({FarmBlock:5}), <gregtech:gt.metaitem.01:32630>],
+[<ore:craftingToolHardHammer>, <minecraft:hopper>, <ore:craftingToolFile>]]);
 
 recipes.addShaped(<Forestry:ffarm:3>.withTag({FarmBlock:6}), [
-[<ore:gearTin>, <Forestry:ffarm>.withTag({FarmBlock:6}), <ore:gearTin>],
-[<minecraft:hopper>, <ore:pipeMediumBrass>, <minecraft:hopper>],
-[<ore:craftingToolHardHammer>, null, <ore:craftingToolFile>]]);
+[<ore:gearAnyBronze>, <ore:pipeLargeElectrum>, <ore:gearAnyBronze>],
+[<gregtech:gt.metaitem.01:32630>, <Forestry:ffarm>.withTag({FarmBlock:6}), <gregtech:gt.metaitem.01:32630>],
+[<ore:craftingToolHardHammer>, <minecraft:hopper>, <ore:craftingToolFile>]]);
 
 recipes.addShaped(<Forestry:ffarm:3>.withTag({FarmBlock:7}), [
-[<ore:gearTin>, <Forestry:ffarm>.withTag({FarmBlock:7}), <ore:gearTin>],
-[<minecraft:hopper>, <ore:pipeMediumBrass>, <minecraft:hopper>],
-[<ore:craftingToolHardHammer>, null, <ore:craftingToolFile>]]);
+[<ore:gearAnyBronze>, <ore:pipeLargeElectrum>, <ore:gearAnyBronze>],
+[<gregtech:gt.metaitem.01:32630>, <Forestry:ffarm>.withTag({FarmBlock:7}), <gregtech:gt.metaitem.01:32630>],
+[<ore:craftingToolHardHammer>, <minecraft:hopper>, <ore:craftingToolFile>]]);
 
 recipes.addShaped(<Forestry:ffarm:3>.withTag({FarmBlock:8}), [
-[<ore:gearTin>, <Forestry:ffarm>.withTag({FarmBlock:8}), <ore:gearTin>],
-[<minecraft:hopper>, <ore:pipeMediumBrass>, <minecraft:hopper>],
-[<ore:craftingToolHardHammer>, null, <ore:craftingToolFile>]]);
+[<ore:gearAnyBronze>, <ore:pipeLargeElectrum>, <ore:gearAnyBronze>],
+[<gregtech:gt.metaitem.01:32630>, <Forestry:ffarm>.withTag({FarmBlock:8}), <gregtech:gt.metaitem.01:32630>],
+[<ore:craftingToolHardHammer>, <minecraft:hopper>, <ore:craftingToolFile>]]);
 
 recipes.addShaped(<Forestry:ffarm:3>.withTag({FarmBlock:9}), [
-[<ore:gearTin>, <Forestry:ffarm>.withTag({FarmBlock:9}), <ore:gearTin>],
-[<minecraft:hopper>, <ore:pipeMediumBrass>, <minecraft:hopper>],
-[<ore:craftingToolHardHammer>, null, <ore:craftingToolFile>]]);
+[<ore:gearAnyBronze>, <ore:pipeLargeElectrum>, <ore:gearAnyBronze>],
+[<gregtech:gt.metaitem.01:32630>, <Forestry:ffarm>.withTag({FarmBlock:9}), <gregtech:gt.metaitem.01:32630>],
+[<ore:craftingToolHardHammer>, <minecraft:hopper>, <ore:craftingToolFile>]]);
 
 recipes.addShaped(<Forestry:ffarm:3>.withTag({FarmBlock:10}), [
-[<ore:gearTin>, <Forestry:ffarm>.withTag({FarmBlock:10}), <ore:gearTin>],
-[<minecraft:hopper>, <ore:pipeMediumBrass>, <minecraft:hopper>],
-[<ore:craftingToolHardHammer>, null, <ore:craftingToolFile>]]);
+[<ore:gearAnyBronze>, <ore:pipeLargeElectrum>, <ore:gearAnyBronze>],
+[<gregtech:gt.metaitem.01:32630>, <Forestry:ffarm>.withTag({FarmBlock:10}), <gregtech:gt.metaitem.01:32630>],
+[<ore:craftingToolHardHammer>, <minecraft:hopper>, <ore:craftingToolFile>]]);
 
 //Farm Valve
 recipes.addShaped(<Forestry:ffarm:4>.withTag({FarmBlock:0}), [
-[<ore:gearTin>, <Forestry:ffarm>.withTag({FarmBlock:0}), <ore:gearTin>],
-[<Forestry:factory2:1>, <ore:pipeSmallWood>, <Forestry:factory2:1>],
-[<ore:craftingToolHardHammer>, null, <ore:craftingToolFile>]]);
+[<ore:gearAnyBronze>, <Forestry:factory2:1>, <ore:gearAnyBronze>],
+[<gregtech:gt.metaitem.01:32610>, <Forestry:ffarm>.withTag({FarmBlock:0}), <gregtech:gt.metaitem.01:32610>],
+[<ore:craftingToolHardHammer>, <ore:pipeLargeSteel>, <ore:craftingToolFile>]]);
 
 recipes.addShaped(<Forestry:ffarm:4>.withTag({FarmBlock:1}), [
-[<ore:gearTin>, <Forestry:ffarm>.withTag({FarmBlock:1}), <ore:gearTin>],
-[<Forestry:factory2:1>, <ore:pipeSmallWood>, <Forestry:factory2:1>],
-[<ore:craftingToolHardHammer>, null, <ore:craftingToolFile>]]);
+[<ore:gearAnyBronze>, <Forestry:factory2:1>, <ore:gearAnyBronze>],
+[<gregtech:gt.metaitem.01:32610>, <Forestry:ffarm>.withTag({FarmBlock:1}), <gregtech:gt.metaitem.01:32610>],
+[<ore:craftingToolHardHammer>, <ore:pipeLargeSteel>, <ore:craftingToolFile>]]);
 
 recipes.addShaped(<Forestry:ffarm:4>.withTag({FarmBlock:2}), [
-[<ore:gearTin>, <Forestry:ffarm>.withTag({FarmBlock:2}), <ore:gearTin>],
-[<Forestry:factory2:1>, <ore:pipeSmallWood>, <Forestry:factory2:1>],
-[<ore:craftingToolHardHammer>, null, <ore:craftingToolFile>]]);
+[<ore:gearAnyBronze>, <Forestry:factory2:1>, <ore:gearAnyBronze>],
+[<gregtech:gt.metaitem.01:32610>, <Forestry:ffarm>.withTag({FarmBlock:2}), <gregtech:gt.metaitem.01:32610>],
+[<ore:craftingToolHardHammer>, <ore:pipeLargeSteel>, <ore:craftingToolFile>]]);
 
 recipes.addShaped(<Forestry:ffarm:4>.withTag({FarmBlock:3}), [
-[<ore:gearTin>, <Forestry:ffarm>.withTag({FarmBlock:3}), <ore:gearTin>],
-[<Forestry:factory2:1>, <ore:pipeSmallWood>, <Forestry:factory2:1>],
-[<ore:craftingToolHardHammer>, null, <ore:craftingToolFile>]]);
+[<ore:gearAnyBronze>, <Forestry:factory2:1>, <ore:gearAnyBronze>],
+[<gregtech:gt.metaitem.01:32610>, <Forestry:ffarm>.withTag({FarmBlock:3}), <gregtech:gt.metaitem.01:32610>],
+[<ore:craftingToolHardHammer>, <ore:pipeLargeSteel>, <ore:craftingToolFile>]]);
 
 recipes.addShaped(<Forestry:ffarm:4>.withTag({FarmBlock:4}), [
-[<ore:gearTin>, <Forestry:ffarm>.withTag({FarmBlock:4}), <ore:gearTin>],
-[<Forestry:factory2:1>, <ore:pipeSmallWood>, <Forestry:factory2:1>],
-[<ore:craftingToolHardHammer>, null, <ore:craftingToolFile>]]);
+[<ore:gearAnyBronze>, <Forestry:factory2:1>, <ore:gearAnyBronze>],
+[<gregtech:gt.metaitem.01:32610>, <Forestry:ffarm>.withTag({FarmBlock:4}), <gregtech:gt.metaitem.01:32610>],
+[<ore:craftingToolHardHammer>, <ore:pipeLargeSteel>, <ore:craftingToolFile>]]);
 
 recipes.addShaped(<Forestry:ffarm:4>.withTag({FarmBlock:5}), [
-[<ore:gearTin>, <Forestry:ffarm>.withTag({FarmBlock:5}), <ore:gearTin>],
-[<Forestry:factory2:1>, <ore:pipeSmallWood>, <Forestry:factory2:1>],
-[<ore:craftingToolHardHammer>, null, <ore:craftingToolFile>]]);
+[<ore:gearAnyBronze>, <Forestry:factory2:1>, <ore:gearAnyBronze>],
+[<gregtech:gt.metaitem.01:32610>, <Forestry:ffarm>.withTag({FarmBlock:5}), <gregtech:gt.metaitem.01:32610>],
+[<ore:craftingToolHardHammer>, <ore:pipeLargeSteel>, <ore:craftingToolFile>]]);
 
 recipes.addShaped(<Forestry:ffarm:4>.withTag({FarmBlock:6}), [
-[<ore:gearTin>, <Forestry:ffarm>.withTag({FarmBlock:6}), <ore:gearTin>],
-[<Forestry:factory2:1>, <ore:pipeSmallWood>, <Forestry:factory2:1>],
-[<ore:craftingToolHardHammer>, null, <ore:craftingToolFile>]]);
+[<ore:gearAnyBronze>, <Forestry:factory2:1>, <ore:gearAnyBronze>],
+[<gregtech:gt.metaitem.01:32610>, <Forestry:ffarm>.withTag({FarmBlock:6}), <gregtech:gt.metaitem.01:32610>],
+[<ore:craftingToolHardHammer>, <ore:pipeLargeSteel>, <ore:craftingToolFile>]]);
 
 recipes.addShaped(<Forestry:ffarm:4>.withTag({FarmBlock:7}), [
-[<ore:gearTin>, <Forestry:ffarm>.withTag({FarmBlock:7}), <ore:gearTin>],
-[<Forestry:factory2:1>, <ore:pipeSmallWood>, <Forestry:factory2:1>],
-[<ore:craftingToolHardHammer>, null, <ore:craftingToolFile>]]);
+[<ore:gearAnyBronze>, <Forestry:factory2:1>, <ore:gearAnyBronze>],
+[<gregtech:gt.metaitem.01:32610>, <Forestry:ffarm>.withTag({FarmBlock:7}), <gregtech:gt.metaitem.01:32610>],
+[<ore:craftingToolHardHammer>, <ore:pipeLargeSteel>, <ore:craftingToolFile>]]);
 
 recipes.addShaped(<Forestry:ffarm:4>.withTag({FarmBlock:8}), [
-[<ore:gearTin>, <Forestry:ffarm>.withTag({FarmBlock:8}), <ore:gearTin>],
-[<Forestry:factory2:1>, <ore:pipeSmallWood>, <Forestry:factory2:1>],
-[<ore:craftingToolHardHammer>, null, <ore:craftingToolFile>]]);
+[<ore:gearAnyBronze>, <Forestry:factory2:1>, <ore:gearAnyBronze>],
+[<gregtech:gt.metaitem.01:32610>, <Forestry:ffarm>.withTag({FarmBlock:8}), <gregtech:gt.metaitem.01:32610>],
+[<ore:craftingToolHardHammer>, <ore:pipeLargeSteel>, <ore:craftingToolFile>]]);
 
 recipes.addShaped(<Forestry:ffarm:4>.withTag({FarmBlock:9}), [
-[<ore:gearTin>, <Forestry:ffarm>.withTag({FarmBlock:9}), <ore:gearTin>],
-[<Forestry:factory2:1>, <ore:pipeSmallWood>, <Forestry:factory2:1>],
-[<ore:craftingToolHardHammer>, null, <ore:craftingToolFile>]]);
+[<ore:gearAnyBronze>, <Forestry:factory2:1>, <ore:gearAnyBronze>],
+[<gregtech:gt.metaitem.01:32610>, <Forestry:ffarm>.withTag({FarmBlock:9}), <gregtech:gt.metaitem.01:32610>],
+[<ore:craftingToolHardHammer>, <ore:pipeLargeSteel>, <ore:craftingToolFile>]]);
 
 recipes.addShaped(<Forestry:ffarm:4>.withTag({FarmBlock:10}), [
-[<ore:gearTin>, <Forestry:ffarm>.withTag({FarmBlock:10}), <ore:gearTin>],
-[<Forestry:factory2:1>, <ore:pipeSmallWood>, <Forestry:factory2:1>],
-[<ore:craftingToolHardHammer>, null, <ore:craftingToolFile>]]);
+[<ore:gearAnyBronze>, <Forestry:factory2:1>, <ore:gearAnyBronze>],
+[<gregtech:gt.metaitem.01:32610>, <Forestry:ffarm>.withTag({FarmBlock:10}), <gregtech:gt.metaitem.01:32610>],
+[<ore:craftingToolHardHammer>, <ore:pipeLargeSteel>, <ore:craftingToolFile>]]);
 
 //Farm Control
 recipes.addShaped(<Forestry:ffarm:5>.withTag({FarmBlock:0}), [
+[<Forestry:thermionicTubes:4>, <ore:plateRedAlloy>, <Forestry:thermionicTubes:4>],
 [<ore:circuitBasic>, <Forestry:ffarm>.withTag({FarmBlock:0}), <ore:circuitBasic>],
-[<minecraft:redstone_torch>, <Forestry:thermionicTubes:4>, <minecraft:redstone_torch>],
-[<ore:craftingToolHardHammer>, null, <ore:craftingToolFile>]]);
+[<ore:craftingToolHardHammer>, <gregtech:gt.metaitem.01:32740>, <ore:craftingToolFile>]]);
 
 recipes.addShaped(<Forestry:ffarm:5>.withTag({FarmBlock:1}), [
+[<Forestry:thermionicTubes:4>, <ore:plateRedAlloy>, <Forestry:thermionicTubes:4>],
 [<ore:circuitBasic>, <Forestry:ffarm>.withTag({FarmBlock:1}), <ore:circuitBasic>],
-[<minecraft:redstone_torch>, <Forestry:thermionicTubes:4>, <minecraft:redstone_torch>],
-[<ore:craftingToolHardHammer>, null, <ore:craftingToolFile>]]);
+[<ore:craftingToolHardHammer>, <gregtech:gt.metaitem.01:32740>, <ore:craftingToolFile>]]);
 
 recipes.addShaped(<Forestry:ffarm:5>.withTag({FarmBlock:2}), [
+[<Forestry:thermionicTubes:4>, <ore:plateRedAlloy>, <Forestry:thermionicTubes:4>],
 [<ore:circuitBasic>, <Forestry:ffarm>.withTag({FarmBlock:2}), <ore:circuitBasic>],
-[<minecraft:redstone_torch>, <Forestry:thermionicTubes:4>, <minecraft:redstone_torch>],
-[<ore:craftingToolHardHammer>, null, <ore:craftingToolFile>]]);
+[<ore:craftingToolHardHammer>, <gregtech:gt.metaitem.01:32740>, <ore:craftingToolFile>]]);
 
 recipes.addShaped(<Forestry:ffarm:5>.withTag({FarmBlock:3}), [
+[<Forestry:thermionicTubes:4>, <ore:plateRedAlloy>, <Forestry:thermionicTubes:4>],
 [<ore:circuitBasic>, <Forestry:ffarm>.withTag({FarmBlock:3}), <ore:circuitBasic>],
-[<minecraft:redstone_torch>, <Forestry:thermionicTubes:4>, <minecraft:redstone_torch>],
-[<ore:craftingToolHardHammer>, null, <ore:craftingToolFile>]]);
+[<ore:craftingToolHardHammer>, <gregtech:gt.metaitem.01:32740>, <ore:craftingToolFile>]]);
 
 recipes.addShaped(<Forestry:ffarm:5>.withTag({FarmBlock:4}), [
+[<Forestry:thermionicTubes:4>, <ore:plateRedAlloy>, <Forestry:thermionicTubes:4>],
 [<ore:circuitBasic>, <Forestry:ffarm>.withTag({FarmBlock:4}), <ore:circuitBasic>],
-[<minecraft:redstone_torch>, <Forestry:thermionicTubes:4>, <minecraft:redstone_torch>],
-[<ore:craftingToolHardHammer>, null, <ore:craftingToolFile>]]);
+[<ore:craftingToolHardHammer>, <gregtech:gt.metaitem.01:32740>, <ore:craftingToolFile>]]);
 
 recipes.addShaped(<Forestry:ffarm:5>.withTag({FarmBlock:5}), [
+[<Forestry:thermionicTubes:4>, <ore:plateRedAlloy>, <Forestry:thermionicTubes:4>],
 [<ore:circuitBasic>, <Forestry:ffarm>.withTag({FarmBlock:5}), <ore:circuitBasic>],
-[<minecraft:redstone_torch>, <Forestry:thermionicTubes:4>, <minecraft:redstone_torch>],
-[<ore:craftingToolHardHammer>, null, <ore:craftingToolFile>]]);
+[<ore:craftingToolHardHammer>, <gregtech:gt.metaitem.01:32740>, <ore:craftingToolFile>]]);
 
 recipes.addShaped(<Forestry:ffarm:5>.withTag({FarmBlock:6}), [
+[<Forestry:thermionicTubes:4>, <ore:plateRedAlloy>, <Forestry:thermionicTubes:4>],
 [<ore:circuitBasic>, <Forestry:ffarm>.withTag({FarmBlock:6}), <ore:circuitBasic>],
-[<minecraft:redstone_torch>, <Forestry:thermionicTubes:4>, <minecraft:redstone_torch>],
-[<ore:craftingToolHardHammer>, null, <ore:craftingToolFile>]]);
+[<ore:craftingToolHardHammer>, <gregtech:gt.metaitem.01:32740>, <ore:craftingToolFile>]]);
 
 recipes.addShaped(<Forestry:ffarm:5>.withTag({FarmBlock:7}), [
+[<Forestry:thermionicTubes:4>, <ore:plateRedAlloy>, <Forestry:thermionicTubes:4>],
 [<ore:circuitBasic>, <Forestry:ffarm>.withTag({FarmBlock:7}), <ore:circuitBasic>],
-[<minecraft:redstone_torch>, <Forestry:thermionicTubes:4>, <minecraft:redstone_torch>],
-[<ore:craftingToolHardHammer>, null, <ore:craftingToolFile>]]);
+[<ore:craftingToolHardHammer>, <gregtech:gt.metaitem.01:32740>, <ore:craftingToolFile>]]);
 
 recipes.addShaped(<Forestry:ffarm:5>.withTag({FarmBlock:8}), [
+[<Forestry:thermionicTubes:4>, <ore:plateRedAlloy>, <Forestry:thermionicTubes:4>],
 [<ore:circuitBasic>, <Forestry:ffarm>.withTag({FarmBlock:8}), <ore:circuitBasic>],
-[<minecraft:redstone_torch>, <Forestry:thermionicTubes:4>, <minecraft:redstone_torch>],
-[<ore:craftingToolHardHammer>, null, <ore:craftingToolFile>]]);
+[<ore:craftingToolHardHammer>, <gregtech:gt.metaitem.01:32740>, <ore:craftingToolFile>]]);
 
 recipes.addShaped(<Forestry:ffarm:5>.withTag({FarmBlock:9}), [
+[<Forestry:thermionicTubes:4>, <ore:plateRedAlloy>, <Forestry:thermionicTubes:4>],
 [<ore:circuitBasic>, <Forestry:ffarm>.withTag({FarmBlock:9}), <ore:circuitBasic>],
-[<minecraft:redstone_torch>, <Forestry:thermionicTubes:4>, <minecraft:redstone_torch>],
-[<ore:craftingToolHardHammer>, null, <ore:craftingToolFile>]]);
+[<ore:craftingToolHardHammer>, <gregtech:gt.metaitem.01:32740>, <ore:craftingToolFile>]]);
 
 recipes.addShaped(<Forestry:ffarm:5>.withTag({FarmBlock:10}), [
+[<Forestry:thermionicTubes:4>, <ore:plateRedAlloy>, <Forestry:thermionicTubes:4>],
 [<ore:circuitBasic>, <Forestry:ffarm>.withTag({FarmBlock:10}), <ore:circuitBasic>],
-[<minecraft:redstone_torch>, <Forestry:thermionicTubes:4>, <minecraft:redstone_torch>],
-[<ore:craftingToolHardHammer>, null, <ore:craftingToolFile>]]);
+[<ore:craftingToolHardHammer>, <gregtech:gt.metaitem.01:32740>, <ore:craftingToolFile>]]);
 
 //Infuser
 recipes.addShaped(<Forestry:infuser>, [

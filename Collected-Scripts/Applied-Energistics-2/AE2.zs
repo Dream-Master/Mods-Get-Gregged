@@ -1,20 +1,17 @@
-// ********* Created by Arch-Nihil *********
-// *** Modified and Completed by DreamMaster ****
+//Created by DreamMasterXXL
 
 
-// *======= Importing Stuff =======*
+// --- Importing
 
 import mods.gregtech.AlloySmelter;
 import mods.ic2.Compressor;
 import mods.gregtech.Centrifuge;
 import mods.ic2.Macerator;
-
-
 import mods.nei.NEI;
+import mods.gregtech.Wiremill;
 
 
-
-// *======= Variables =======*
+// --- Variables
 
 
 val FluixBlock = <appliedenergistics2:tile.BlockFluix>;
@@ -132,10 +129,10 @@ val IronRod = <ore:stickIron>;
 
 
 
-// *======= Removing Recipes =======*
+// --- Removing Recipes
 
 
-// ||||| Blocks |||||
+// --- Blocks ---
 
 
 // --- Fluix Block
@@ -296,9 +293,9 @@ Macerator.addRecipe(<appliedenergistics2:item.ItemMultiMaterial:8> * 4, <applied
 
 // --- ME Controller
 recipes.addShaped(MEController, [
-[SiliconRod, AdvCircuit, SiliconRod],
+[<ore:plateTitanium>, <ore:circuitAdvanced>, <ore:plateTitanium>],
 [DiamondCircuit, FluixBlock, DiamondCircuit],
-[SiliconRod, AdvCircuit, SiliconRod]]);
+[<ore:plateTitanium>, <ore:circuitAdvanced>, <ore:plateTitanium>]]);
 
 // --- Energy Cell
 recipes.addShaped(EnergyCell, [
@@ -314,15 +311,16 @@ recipes.addShaped(DEnergyCell, [
 
 // --- ME Chest
 recipes.addShaped(MEChest, [
-[CertusRod, Terminal, CertusRod],
-[FluixGlassCable, ObsidianChest, FluixGlassCable],
-[CertusRod, GoodCircuit, CertusRod]]);
+[StainlessPlate, GoodCircuit, StainlessPlate],
+[FluixGlassCable, <IronChest:BlockIronChest:4>, FluixGlassCable],
+[StainlessPlate, GoodCircuit, StainlessPlate]]);
 
 // --- ME Drive
-recipes.addShaped(MEDrive, [
-[SiliconRod, DiamondCircuit, SiliconRod],
-[FluixGlassCable, MEChest, FluixGlassCable],
-[SiliconRod, AdvCircuit, SiliconRod]]);
+recipes.addShaped(<appliedenergistics2:tile.BlockDrive>, [
+[<gregtech:gt.metaitem.01:17028>, <appliedenergistics2:item.ItemMultiMaterial:24>, <ore:plateTitanium>], 
+[<appliedenergistics2:item.ItemMultiPart:16>, <appliedenergistics2:tile.BlockChest>, <appliedenergistics2:item.ItemMultiPart:16>], 
+[<ore:plateTitanium>, <IC2:itemPartCircuitAdv>, <ore:plateTitanium>]]);
+
 
 // --- Crystal Growth Accelerator ---- Gregtech do that in the Autoclave
 //recipes.addShaped(CrystalAccelerator, [
@@ -351,12 +349,61 @@ recipes.addShaped(Charger, [
 [CopperCable, AdvElectrolyzer, CopperCable],
 [AlPlate, FluixCrystal, AlPlate]]);
 
+// --- Sky Stone Stairs
+recipes.addShaped(<appliedenergistics2:tile.SkyStoneStairBlock> * 4, [
+[null, null, <appliedenergistics2:tile.BlockSkyStone>],
+[null, <appliedenergistics2:tile.BlockSkyStone>, <appliedenergistics2:tile.BlockSkyStone>],
+[<appliedenergistics2:tile.BlockSkyStone>, <appliedenergistics2:tile.BlockSkyStone>, <appliedenergistics2:tile.BlockSkyStone>]]);
+
+// --- Skytone Block Stairs
+recipes.addShaped(<appliedenergistics2:tile.SkyStoneBlockStairBlock> * 4, [
+[null, null, <appliedenergistics2:tile.BlockSkyStone:1>],
+[null, <appliedenergistics2:tile.BlockSkyStone:1>, <appliedenergistics2:tile.BlockSkyStone:1>],
+[<appliedenergistics2:tile.BlockSkyStone:1>, <appliedenergistics2:tile.BlockSkyStone:1>, <appliedenergistics2:tile.BlockSkyStone:1>]]);
+
+// --- Skystone Brick Stairs
+recipes.addShaped(<appliedenergistics2:tile.SkyStoneBrickStairBlock> * 4, [
+[null, null, <appliedenergistics2:tile.BlockSkyStone:2>],
+[null, <appliedenergistics2:tile.BlockSkyStone:2>, <appliedenergistics2:tile.BlockSkyStone:2>],
+[<appliedenergistics2:tile.BlockSkyStone:2>, <appliedenergistics2:tile.BlockSkyStone:2>, <appliedenergistics2:tile.BlockSkyStone:2>]]);
+
+// --- Skystone small Brick Stairs
+recipes.addShaped(<appliedenergistics2:tile.SkyStoneSmallBrickStairBlock> * 4, [
+[null, null, <appliedenergistics2:tile.BlockSkyStone:3>],
+[null, <appliedenergistics2:tile.BlockSkyStone:3>, <appliedenergistics2:tile.BlockSkyStone:3>],
+[<appliedenergistics2:tile.BlockSkyStone:3>, <appliedenergistics2:tile.BlockSkyStone:3>, <appliedenergistics2:tile.BlockSkyStone:3>]]);
+
+// --- Fluix Staris
+recipes.addShaped(<appliedenergistics2:tile.FluixStairBlock> * 4, [
+[null, null, <appliedenergistics2:tile.BlockFluix>],
+[null, <appliedenergistics2:tile.BlockFluix>, <appliedenergistics2:tile.BlockFluix>],
+[<appliedenergistics2:tile.BlockFluix>, <appliedenergistics2:tile.BlockFluix>, <appliedenergistics2:tile.BlockFluix>]]);
+
+// --- Certus Quartz Stairs
+recipes.addShaped(<appliedenergistics2:tile.QuartzStairBlock> * 4, [
+[null, null, <appliedenergistics2:tile.BlockQuartz>],
+[null, <appliedenergistics2:tile.BlockQuartz>, <appliedenergistics2:tile.BlockQuartz>],
+[<appliedenergistics2:tile.BlockQuartz>, <appliedenergistics2:tile.BlockQuartz>, <appliedenergistics2:tile.BlockQuartz>]]);
+
+// --- Chiseled Certus Quartz Stairs
+recipes.addShaped(<appliedenergistics2:tile.ChiseledQuartzStairBlock> * 4, [
+[null, null, <appliedenergistics2:tile.BlockQuartzChiseled>],
+[null, <appliedenergistics2:tile.BlockQuartzChiseled>, <appliedenergistics2:tile.BlockQuartzChiseled>],
+[<appliedenergistics2:tile.BlockQuartzChiseled>, <appliedenergistics2:tile.BlockQuartzChiseled>, <appliedenergistics2:tile.BlockQuartzChiseled>]]);
+
+// --- Certus Quartz Pillar Stairs
+recipes.addShaped(<appliedenergistics2:tile.QuartzPillarStairBlock> * 4, [
+[null, null, <appliedenergistics2:tile.BlockQuartzPillar>],
+[null, <appliedenergistics2:tile.BlockQuartzPillar>, <appliedenergistics2:tile.BlockQuartzPillar>],
+[<appliedenergistics2:tile.BlockQuartzPillar>, <appliedenergistics2:tile.BlockQuartzPillar>, <appliedenergistics2:tile.BlockQuartzPillar>]]);
+
+
 // ||||| Items |||||
 
 
 // --- Fluix Glass Cable
 recipes.addShaped(FluixGlassCable * 2, [
-[CertusRod, Saw, CertusRod],
+[CertusRod, FluixDust, CertusRod],
 [QuartzFiber, QuartzFiber, QuartzFiber],
 [CertusRod, FluixDust, CertusRod]]);
 
@@ -370,12 +417,6 @@ recipes.addShaped(FluixCoveredC * 2, [
 [RubberPlate, null, RubberPlate],
 [QuartzFiber, QuartzFiber, QuartzFiber],
 [RubberPlate, Saw, RubberPlate]]);
-
-// --- Quartz Fiber
-recipes.addShaped(QuartzFiber * 2, [
-[CertusRod, NQuartzPlate, CertusRod],
-[NQuartzPlate, Saw, NQuartzPlate],
-[CertusRod, NQuartzPlate, CertusRod]]);
 
 // --- Annihilation Core
 recipes.addShaped(AnnihilationCore, [
@@ -528,12 +569,12 @@ recipes.addShaped(Storage64K, [
 // --- Universal Storage Housing
 recipes.addShaped(UStorageHousing, [
 [HHammer, CertusPlate, QuartziteScrew],
-[SteelPlate, ClearPane, SteelPlate],
+[StainlessPlate, ClearPane, StainlessPlate],
 [QuartziteScrew, AlPlate, Screwdriver]]);
 // - Alternative Recipe
 recipes.addShaped(UStorageHousing, [
 [Screwdriver, CertusPlate, QuartziteScrew],
-[SteelPlate, ClearPane, SteelPlate],
+[StainlessPlate, ClearPane, StainlessPlate],
 [QuartziteScrew, AlPlate, HHammer]]);
 
 // --- Storage Cell Component - 1K
@@ -614,11 +655,11 @@ recipes.remove(<appliedenergistics2:item.ItemMultiMaterial:29>);
 recipes.remove(<appliedenergistics2:item.ItemMultiMaterial:31>);
 //Acceleration Card
 recipes.remove(<appliedenergistics2:item.ItemMultiMaterial:30>);
-//128³ Spatial Component
+//128 Spatial Component
 recipes.remove(<appliedenergistics2:item.ItemMultiMaterial:34>);
-//16³ Spatial Component
+//16 Spatial Component
 recipes.remove(<appliedenergistics2:item.ItemMultiMaterial:33>);
-//2³ Spatial Component
+//2 Spatial Component
 recipes.remove(<appliedenergistics2:item.ItemMultiMaterial:32>);
 //Wireless Booster
 recipes.remove(<appliedenergistics2:item.ItemMultiMaterial:42>);
@@ -775,19 +816,19 @@ recipes.addShapeless(<appliedenergistics2:item.ItemMultiMaterial:31>, [<appliede
 //Acceleration Card
 recipes.addShapeless(<appliedenergistics2:item.ItemMultiMaterial:30>, [<appliedenergistics2:item.ItemMultiMaterial:28>, <appliedenergistics2:item.ItemMultiMaterial:24>, <appliedenergistics2:item.ItemMultiMaterial:22>, <appliedenergistics2:item.ItemMultiMaterial:7>]);
 
-//128³ Spatial Component
+//128 Spatial Component
 recipes.addShaped(<appliedenergistics2:item.ItemMultiMaterial:34>, [
 [<ore:plateEnderEye>, <appliedenergistics2:item.ItemMultiMaterial:33>, <ore:plateEnderEye>],
 [<appliedenergistics2:item.ItemMultiMaterial:33>, <appliedenergistics2:item.ItemMultiMaterial:24>, <appliedenergistics2:item.ItemMultiMaterial:33>],
 [<ore:plateEnderEye>, <appliedenergistics2:item.ItemMultiMaterial:33>, <ore:plateEnderEye>]]);
  
-//16³ Spatial Component
+//16 Spatial Component
 recipes.addShaped(<appliedenergistics2:item.ItemMultiMaterial:33>, [
 [<ore:plateEnderPearl>, <appliedenergistics2:item.ItemMultiMaterial:32>, <ore:plateEnderPearl>],
 [<appliedenergistics2:item.ItemMultiMaterial:32>, <appliedenergistics2:item.ItemMultiMaterial:24>, <appliedenergistics2:item.ItemMultiMaterial:32>],
 [<ore:plateEnderPearl>, <appliedenergistics2:item.ItemMultiMaterial:32>, <ore:plateEnderPearl>]]);
 
-//2³ Spatial Component
+//2 Spatial Component
 recipes.addShaped(<appliedenergistics2:item.ItemMultiMaterial:32>, [
 [<ore:plateGlowstone>, <appliedenergistics2:item.ItemMultiMaterial:9>, <ore:plateGlowstone>],
 [<appliedenergistics2:item.ItemMultiMaterial:9>, <appliedenergistics2:item.ItemMultiMaterial:24>, <appliedenergistics2:item.ItemMultiMaterial:9>],
@@ -988,3 +1029,13 @@ recipes.addShaped(<appliedenergistics2:item.ToolBiometricCard>, [
 
 //Quartz Glass
 AlloySmelter.addRecipe(<appliedenergistics2:tile.BlockQuartzGlass> * 4, <minecraft:glass> * 4, <gregtech:gt.metaitem.01:2516> * 4, 400, 16);
+
+//Quartz Fiber
+
+Wiremill.addRecipe(<appliedenergistics2:item.ItemMultiPart:140>, <gregtech:gt.metaitem.01:23516> * 2, 200, 128);
+
+Wiremill.addRecipe(<appliedenergistics2:item.ItemMultiPart:140>, <gregtech:gt.metaitem.01:23517> * 1, 200, 128);
+
+Wiremill.addRecipe(<appliedenergistics2:item.ItemMultiPart:140>, <gregtech:gt.metaitem.01:23522> * 8, 200, 128);
+
+Wiremill.addRecipe(<appliedenergistics2:item.ItemMultiPart:140>, <gregtech:gt.metaitem.01:23523>  * 4, 200, 128);
