@@ -19,6 +19,8 @@ val LCraftingT = <LogisticsPipes:logisticsSolidBlock:3>;
 val LFuzzyCraftingT = <LogisticsPipes:logisticsSolidBlock:4>;
 val EUProvider = <LogisticsPipes:logisticsSolidBlock:12>;
 
+val Remote = <LogisticsPipes:item.remoteOrdererItem>;
+
 val BasicLPipe = <LogisticsPipes:item.PipeItemsBasicLogistics>;
 val RequestLPipe = <LogisticsPipes:item.PipeItemsRequestLogistics>;
 val RequestLPipeMK2 = <LogisticsPipes:item.PipeItemsRequestLogisticsMk2>;
@@ -67,6 +69,7 @@ val AllUpgrades = <LogisticsPipes:item.itemUpgrade:*>;
 
 val GoldCircuit = <appliedenergistics2:item.ItemMultiMaterial:22>;
 val CertusCircuit = <appliedenergistics2:item.ItemMultiMaterial:23>;
+val WLessReveiver = <appliedenergistics2:item.ItemMultiMaterial:41>;
 
 val SteelPlate = <ore:plateSteel>;
 val SSteelPlate = <ore:plateStainlessSteel>;
@@ -91,6 +94,7 @@ val RedAlloyDust = <ore:dustRedAlloy>;
 
 val AdvCircuit = <ore:circuitAdvanced>;
 val GoodCircuit = <ore:circuitGood>;
+val LapotronEOrb = <ore:circuitUltimate>;
 
 val IronChip = <BuildCraft|Silicon:redstoneChipset:1>;
 val GoldChip = <BuildCraft|Silicon:redstoneChipset:2>;
@@ -101,6 +105,7 @@ val MVTransformer = <gregtech:gt.blockmachines:22>;
 val MVEBuffer = <gregtech:gt.blockmachines:162>;
 val ElectrumCable8x = <gregtech:gt.blockmachines:1449>;
 val LElectrumPipe = <gregtech:gt.blockmachines:5613>;
+val IVEmitter = <gregtech:gt.metaitem.01:32684>;
 
 val OverclockerUp = <IC2:upgradeModule>;
 val TransformerUp = <IC2:upgradeModule:1>;
@@ -109,9 +114,11 @@ val StorageUp = <IC2:upgradeModule:2>;
 val PaperStack = <TConstruct:materials>;
 val CraftingT = <minecraft:crafting_table>;
 val EnderPearl = <ore:gemEnderPearl>;
+val Screen = <RotaryCraft:rotarycraft_item_borecraft:5>;
 
 val Screwdriver = <ore:craftingToolScrewdriver>;
 val Wrench = <ore:craftingToolWrench>;
+
 
 
 // *======= Removing Recipes =======*
@@ -137,6 +144,13 @@ recipes.remove(LFuzzyCraftingT);
 
 // --- EU Power Provider
 recipes.remove(EUProvider);
+
+
+// ||||| Items |||||
+
+
+// --- Remote Orderer
+recipes.remove(Remote);
 
 
 // ||||| Modules |||||
@@ -300,6 +314,16 @@ recipes.addShaped(EUProvider, [
 [AlPlate, TransformerUp, AlPlate],
 [OverclockerUp, MVEBuffer, StorageUp],
 [AlPlate, BasicLPipe, AlPlate]]);
+
+
+// ||||| Items |||||
+
+
+// --- Remote Orderer
+recipes.addShapedMirrored(Remote, [
+[WLessReveiver, IVEmitter, null],
+[Screen, Screen, null],
+[DiamondChip, LapotronEOrb, null]]);
 
 
 // ||||| Modules |||||
@@ -1151,3 +1175,4 @@ recipes.addShaped(LChassiMK5, [
 
 
 // #======= Hiding Stuff =======#
+
