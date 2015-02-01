@@ -1,4 +1,5 @@
-// ******** Created by Arch-Nihil ********
+// ******* Created by Arch-Nihil for the *******
+// ******* Grind-Complex Supreme modpack *******
 
 
 
@@ -173,7 +174,6 @@ val GreenDye = <ore:dyeGreen>;
 val RedDye = <ore:dyeRed>;
 val BlackDye = <ore:dyeBlack>;
 
-val BedrockDust = <RotaryCraft:rotarycraft_item_powders:4>;
 val Bowstring = <TConstruct:bowstring>;
 val IronBars = <minecraft:iron_bars>;
 val IronPlate = <ore:plateAnyIron>;
@@ -217,7 +217,6 @@ val Nitor = <Thaumcraft:ItemResource:1>;
 val ObsidianChest = <IronChest:BlockIronChest:6>;
 val TinyNStarDust = <ore:dustTinyNetherStar>;
 val EnderEyeRod = <ore:stickEnderEye>;
-val Lens = <RotaryCraft:rotarycraft_item_misccraft:1>;
 val GlowstoneGlass = <ExtraUtilities:decorativeBlock2:7>;
 val AnyQuartz = <ore:craftingQuartz>;
 val CertusPlate = <ore:plateCertusQuartz>;
@@ -722,9 +721,6 @@ recipes.addShaped(TrappedChest, [
 [IronScrew, Chest, IronScrew],
 [null, Screwdriver, null]]);
 
-// --- Bedrock
-ImplosionCompressor.addRecipe(Bedrock, BedrockDust * 9, 8);
-
 // --- Dispenser
 recipes.addShaped(Dispenser, [
 [StoneRod, IronPlate, StoneRod],
@@ -1113,7 +1109,7 @@ recipes.addShaped(Tripwire * 2, [
 
 // --- Beacon
 recipes.addShaped(Beacon, [
-[GlowstoneGlass, Lens, GlowstoneGlass],
+[GlowstoneGlass, <ore:lensDiamond>, GlowstoneGlass],
 [GlowstoneGlass, NetherStar, GlowstoneGlass],
 [DenseObsidianPlate, DenseObsidianPlate, DenseObsidianPlate]]);
 
@@ -1134,9 +1130,6 @@ recipes.addShaped(Hopper, [
 [IronPlate, Chest, IronPlate],
 [IronPlate, IronGear, IronPlate],
 [null, IronPlate, null]]);
-
-// --- Bow
-// --- Assembler.addRecipe(Bow, <Forestry:oakStick> * 3, <TConstruct:bowstring:2>, 400, 128);
 
 
 // ||||| Wool |||||

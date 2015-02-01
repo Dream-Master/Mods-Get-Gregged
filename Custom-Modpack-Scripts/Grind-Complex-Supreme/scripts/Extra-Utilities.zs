@@ -1,4 +1,5 @@
-// ******* Created by Arch-Nihil *******
+// ******* Created by Arch-Nihil for the *******
+// ******* Grind-Complex Supreme modpack *******
 
 
 
@@ -23,10 +24,9 @@ val BurntQuartz = <ExtraUtilities:decorativeBlock1:2>;
 val TSteelRod = <ore:stickTungstenSteel>;
 val UpgradeBase = <ExtraUtilities:enderQuarryUpgrade>;
 val SeptupleCobble = <ExtraUtilities:cobblestone_compressed:6>;
+val OctupleCobble = <ExtraUtilities:cobblestone_compressed:7>;
 val QuadDirt = <ExtraUtilities:cobblestone_compressed:11>;
 val Plank = <ore:plankWood>;
-val BedrockGear = <RotaryCraft:rotarycraft_item_enginecraft:12>;
-val HardDiamondGear = <RotaryCraft:rotarycraft_item_enginecraft:11>;
 val StainlessPipe = <ore:pipeSmallStainlessSteel>;
 val Paintbrush = <ExtraUtilities:paintbrush>;
 val WovenCloth = <harvestcraft:wovencottonItem>;
@@ -35,7 +35,6 @@ val RSClock = <ExtraUtilities:timer>;
 val Clock = <minecraft:clock>;
 val Drum = <ExtraUtilities:drum>;
 val BedDrum = <ExtraUtilities:drum:1>;
-val BedrockIngot = <RotaryCraft:rotarycraft_item_compacts:3>;
 val Cauldron = <minecraft:cauldron>;
 val BedrockiumIngot = <ExtraUtilities:bedrockiumIngot>;
 val BedrockiumBlock = <ExtraUtilities:block_bedrockium>;
@@ -250,7 +249,7 @@ recipes.remove(<ExtraUtilities:cobblestone_compressed:5>);
 recipes.remove(SeptupleCobble);
 
 // --- Octuple Compressed Cobblestone
-recipes.remove(<ExtraUtilities:cobblestone_compressed:7>);
+recipes.remove(OctupleCobble);
 
 // --- Compressed Dirt
 recipes.remove(<ExtraUtilities:cobblestone_compressed:8>);
@@ -358,13 +357,13 @@ recipes.addShaped(<ExtraUtilities:enderQuarryUpgrade:1>, [
 // --- Quarry Silk Touch Upgrade
 recipes.addShaped(<ExtraUtilities:enderQuarryUpgrade:2>, [
 [UpgradeBase, SilkyJewel, UpgradeBase],
-[SilkyJewel, HardDiamondGear, SilkyJewel],
+[SilkyJewel, DiamondGear, SilkyJewel],
 [UpgradeBase, SilkyJewel, UpgradeBase]]);
 
 // --- Quarry Fortune I Upgrade
 recipes.addShaped(<ExtraUtilities:enderQuarryUpgrade:3>, [
 [UpgradeBase, <ore:plateTitanium>, UpgradeBase],
-[<ore:plateTitanium>, HardDiamondGear, <ore:plateTitanium>],
+[<ore:plateTitanium>, DiamondGear, <ore:plateTitanium>],
 [UpgradeBase, <ore:plateTitanium>, UpgradeBase]]);
 
 // --- Quarry Fortune II Upgrade
@@ -417,12 +416,12 @@ recipes.addShaped(Drum, [
 
 // --- Bedrock Drum
 recipes.addShaped(BedDrum, [
-[BedrockIngot, BedrockiumIngot, BedrockIngot],
+[BedrockiumIngot, BedrockiumIngot, BedrockiumIngot],
 [BedrockiumIngot, Cauldron, BedrockiumIngot],
-[BedrockIngot, BedrockiumIngot, BedrockIngot]]);
+[BedrockiumIngot, BedrockiumIngot, BedrockiumIngot]]);
 
 // --- Bedrockium Ingot
-BlastFurnace.addRecipe([BedrockiumIngot, DarkAshes * 4], BedrockIngot, <IC2:itemPartIndustrialDiamond>, 1800, 256, 3500);
+BlastFurnace.addRecipe([BedrockiumIngot, DarkAshes * 4], OctupleCobble, <IC2:itemPartIndustrialDiamond>, 1800, 256, 3500);
 
 // --- Bedrockium Block
 ImplosionCompressor.addRecipe(BedrockiumBlock, BedrockiumIngot * 9, 8);

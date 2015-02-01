@@ -1,4 +1,6 @@
-// ******** Created by Arch-Nihil ********
+// ******* Created by Arch-Nihil for the *******
+// ******* Grind-Complex Supreme modpack *******
+
 
 // *======= Importing Stuff =======*
 
