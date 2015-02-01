@@ -16,6 +16,8 @@ import mods.nei.NEI;
 
 val CastingBasin = <TConstruct:SearedBlock:2>;
 val String = <minecraft:string>;
+val Plank = <ore:plankWood>;
+val Stick = <ore:stickWood>;
 val SilkyCloth = <TConstruct:materials:25>;
 val SilkyJewel = <TConstruct:materials:26>;
 val BallOfMoss = <TConstruct:materials:6>;
@@ -25,15 +27,14 @@ val EmptyCanister = <TConstruct:heartCanister>;
 val AlPlate = <ore:plateAluminium>;
 val AlRod = <ore:stickAluminium>;
 val ClearPane = <TConstruct:GlassPane>;
-val Moss = <TwilightForest:tile.TFPlant:3>;
-val BOPMoss = <BiomesOPlenty:moss>;
-val MossyStoneBricks = <minecraft:stonebrick:1>;
 val Grout = <TConstruct:CraftedSoil:1>;
 val Gravel = <minecraft:gravel>;
 val Sand = <minecraft:sand>;
 val Clay = <minecraft:clay_ball>;
 val Slimeball = <minecraft:slime_ball>;
 val Gelatinous = <TConstruct:strangeFood>;
+val MossBall = <chisel:ballomoss>;
+val Pattern = <TConstruct:blankPattern>;
 
 val Knapsack = <TConstruct:knapsack>;
 val TBelt = <TConstruct:travelBelt>;
@@ -180,6 +181,9 @@ recipes.remove(BallOfMoss);
 // --- Grout
 recipes.remove(Grout);
 
+// --- Blank Pattern
+recipes.remove(Pattern);
+
 
 // ||||| Gear |||||
 
@@ -217,11 +221,11 @@ Compressor.addRecipe(<TConstruct:MetalBlock:2>, <ore:ingotManyullyn> * 9);
 Compressor.addRecipe(<TConstruct:MetalBlock:8>, <ore:ingotAlumite> * 9);
 
 // --- Aluminium Smelting
-// --- Dust
+// - Dust
 mods.tconstruct.Smeltery.addMelting(<gregtech:gt.metaitem.01:2019>, <liquid:aluminum.molten> * 144, 500, <gregtech:gt.blockmachines:1585>);
-// --- Tiny Pile
+// - Tiny Pile
 mods.tconstruct.Smeltery.addMelting(<gregtech:gt.metaitem.01:19>, <liquid:aluminum.molten> * 16, 500, <gregtech:gt.blockmachines:1585>);
-// --- Small Pile
+// - Small Pile
 mods.tconstruct.Smeltery.addMelting(<gregtech:gt.metaitem.01:1019>, <liquid:aluminum.molten> * 36, 500, <gregtech:gt.blockmachines:1585>);
 
 
@@ -252,14 +256,16 @@ recipes.addShaped(SilkyJewel, [
 [SilkyCloth, SilkyCloth, SilkyCloth]]);
 
 // --- Ball Of Moss
-recipes.addShaped(BallOfMoss, [
-[BOPMoss, Moss, BOPMoss],
-[Moss, MossyStoneBricks, Moss],
-[BOPMoss, Moss, BOPMoss]]);
+Compressor.addRecipe(BallOfMoss, MossBall * 9);
 
 // --- Grout
 recipes.addShapeless(Grout,
 [Sand, Gravel, Clay]);
+
+// --- Blank Pattern
+recipes.addShaped(Pattern, [
+[Plank, Stick],
+[Stick, Plank]]);
 
 // --- Gelatinous Slimes
 Compressor.addRecipe(Slimeball, <TConstruct:slime.gel>);
@@ -274,8 +280,11 @@ Compressor.addRecipe(<TConstruct:slime.gel:1>, Slimeball * 4);
 // ||||| Gear |||||
 
 
-// #======= Hiding Stuff =======#
+// #======= Other Stuff =======#
 
 
-// --- Block Of Solid Ender
+// --- Hiding Block Of Solid Ender
 NEI.hide(EnderBlock);
+
+// --- Renaming Big Ball O' Moss
+NEI.overrideName(BallOfMoss, "Big Ball O' Moss");
