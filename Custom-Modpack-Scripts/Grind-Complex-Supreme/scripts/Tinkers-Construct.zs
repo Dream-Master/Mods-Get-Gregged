@@ -1,4 +1,5 @@
-// ******** Created By Arch-Nihil *******
+// ******* Created by Arch-Nihil for the *******
+// ******* Grind-Complex Supreme modpack *******
 
 
 
