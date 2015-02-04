@@ -171,6 +171,8 @@ recipes.remove(<IC2:reactorHeatSwitchDiamond>);
 recipes.remove(<IC2:reactorCondensator>);
 //LZH Condensator
 recipes.remove(<IC2:reactorCondensatorLap>);
+//Treetap
+recipes.remove(<IC2:itemTreetap>);
 
 
 
@@ -474,6 +476,13 @@ recipes.addShaped(<IC2:reactorCondensatorLap>, [
 
 recipes.addShapeless(<IC2:reactorCondensatorLap>, [<IC2:reactorCondensatorLap:9999>, <ore:plateLapis>, <ore:plateLapis>, <minecraft:lapis_block>]);
 
+//Treetap
+recipes.addShaped(<IC2:itemTreetap>, [
+[<ore:craftingToolHardHammer>, <ore:screwWood>, <ore:craftingToolScrewdriver>],
+[<ore:pipeMediumWood>, <ore:pipeMediumWood>, <ore:pipeSmallWood>],
+[<ore:pipeLargeWood>, <ore:craftingToolSaw>, <ore:craftingToolFile>]]);
+
+
 //Assembler Recipes
 
 //Solar Panels
@@ -510,7 +519,10 @@ Assembler.addRecipe(<IC2:itemRecipePart>, <gregtech:gt.metaitem.01:23355>, <greg
 Assembler.addRecipe(<IC2:itemPartCoalChunk>, <minecraft:coal_block>, <IC2:itemPartCoalBlock> * 8, 1200, 64);
 
 //Thick Neutron Reflector
-Assembler.addRecipe(<IC2:reactorReflectorThick>, <IC2:reactorReflector>, <gregtech:gt.metaitem.01:17008> * 4, 600 ,64);
+Assembler.addRecipe(<IC2:reactorReflectorThick>, <IC2:reactorReflector>, <gregtech:gt.metaitem.01:17008> * 4, 600, 64);
+
+//Treetap
+Assembler.addRecipe(<IC2:itemTreetap>, <gregtech:gt.blockmachines:5102> * 3, <gregtech:gt.metaitem.01:27809>, 200, 8);
 
 //Compressor Recipes//
 
