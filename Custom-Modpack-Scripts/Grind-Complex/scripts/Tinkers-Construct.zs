@@ -228,6 +228,17 @@ mods.tconstruct.Smeltery.addMelting(<gregtech:gt.metaitem.01:19>, <liquid:alumin
 // - Small Pile
 mods.tconstruct.Smeltery.addMelting(<gregtech:gt.metaitem.01:1019>, <liquid:aluminum.molten> * 36, 500, <gregtech:gt.blockmachines:1585>);
 
+// --- Chalcopyrite Smelting
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.blockores:855>, <liquid:molten.copper> * 144, 500, <gregtech:gt.blockores:855>);
+// -
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.blockores:1855>, <liquid:molten.copper> * 144, 500, <gregtech:gt.blockores:1855>);
+// -
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.blockores:2855>, <liquid:molten.copper> * 144, 500, <gregtech:gt.blockores:2855>);
+// -
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.blockores:3855>, <liquid:molten.copper> * 144, 600, <gregtech:gt.blockores:3855>);
+// -
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.blockores:4855>, <liquid:molten.copper> * 144, 600, <gregtech:gt.blockores:4855>);
+
 
 // ||||| Items |||||
 

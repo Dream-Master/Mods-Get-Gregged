@@ -39,6 +39,7 @@ val NeutronNqxPlate = <adc:ItemNeutroniumNaquadriaPlate>;
 // ||||| GregTech |||||
 
 
+val DataOrb = <gregtech:gt.metaitem.01:32707>;
 val LapotronEOrb = <gregtech:gt.metaitem.01:32597>;
 val SapphireLens = <gregtech:gt.metaitem.01:24503>;
 val DiamondLens = <gregtech:gt.metaitem.01:24500>;
@@ -66,10 +67,10 @@ recipes.addShapedMirrored(CobblestoneRod, [
 [Cobblestone, null]]);
 
 // --- Grandmaster Circuit
-Assembler.addRecipe(GrandmasterCircuit, LapotronEOrb * 4, EngravedOsmiumNqChip * 16, 600, 4096);
+Assembler.addRecipe(GrandmasterCircuit, DataOrb * 4, EngravedOsmiumNqChip * 4, 600, 4096);
 
 // --- Prototype XK8
-Assembler.addRecipe(PrototypeXK8, GrandmasterCircuit * 4, EngravedNeutronNqxChip * 16, 800, 8192);
+Assembler.addRecipe(PrototypeXK8, GrandmasterCircuit * 4, EngravedNeutronNqxChip * 8, 800, 8192);
 
 // --- Engraved Osmium-Naquadah Chip
 Assembler.addRecipe(EngravedOsmiumNqChip, OsmiumNqPlate, SapphireLens, 300, 2048);
@@ -100,4 +101,14 @@ ImplosionCompressor.addRecipe(NeutronNqxPlate, NeutronNqxAlloy, 16);
 // #======= Ore Dictionary Stuff =======#
 
 
+// --- Grandmaster Circuit
 oreDict.circuitGrandmaster.add(GrandmasterCircuit);
+
+// --- Prototype XK8
+oreDict.circuitPrototype.add(PrototypeXK8);
+
+// --- Osmium-Naquadah Plate
+oreDict.plateAlloyOsmiumNaquadah.add(OsmiumNqPlate);
+
+// --- Neutronium-Naquadria Plate
+oreDict.plateAlloyNeutroniumNaquadria.add(NeutronNqxPlate);
