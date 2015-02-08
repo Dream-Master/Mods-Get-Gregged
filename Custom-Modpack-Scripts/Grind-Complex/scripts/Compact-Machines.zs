@@ -45,8 +45,8 @@ val DataCircuit = <ore:circuitElite>;
 val EFlowCircuit = <ore:circuitMaster>;
 val DataOrb = <ore:circuitUltimate>;
 
-val GMCircuit = <adc:ItemGrandmasterCircuit>;
-val PrototypeXK = <adc:ItemPrototypeXK>;
+val GMCircuit = <ore:circuitGrandmaster>;
+val PrototypeXK = <ore:circuitPrototype>;
 
 
 // *======= Removing Recipes =======*

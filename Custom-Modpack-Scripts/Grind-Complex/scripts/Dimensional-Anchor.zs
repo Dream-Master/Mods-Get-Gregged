@@ -15,7 +15,7 @@ val NeutronPlate = <ore:plateNeutronium>;
 val EnrichedNaquadahPlate = <ore:plateNaquadahEnriched>;
 val AFB = <AFSU:ALC>;
 val LapotronEOrb = <ore:batteryUltimate>;
-val PrototypeXK = <adc:ItemPrototypeXK>;
+val PrototypeXK = <ore:circuitPrototype>;
 
 
 // *======= Removing Recipes =======*

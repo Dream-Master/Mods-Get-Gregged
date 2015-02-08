@@ -59,8 +59,8 @@ val GoldRod = <ore:stickGold>;
 val EmeraldRod = <ore:stickEmerald>;
 val DiamondRod = <ore:stickDiamond>;
 
-val SStoneRod = <adc:ItemSandstoneRod>;
-val CobbleRod = <adc:ItemCobblestoneRod>;
+val SStoneRod = <ore:stickSandstone>;
+val CobbleRod = <ore:stickCobblestone>;
 
 val ClearPane = <TConstruct:GlassPane>;
 
