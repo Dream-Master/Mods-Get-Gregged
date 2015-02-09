@@ -81,6 +81,8 @@ val HopperCart = <minecraft:hopper_minecart>;
 val TNTCart = <minecraft:tnt_minecart>;
 val Cauldron = <minecraft:cauldron>;
 val BrewingStand = <minecraft:brewing_stand>;
+val WoodDoor = <minecraft:wooden_door>;
+val IronDoor = <minecraft:iron_door>;
 
 
 // ||||||| Vanilla Items |||||||
@@ -140,6 +142,12 @@ val GoldIngot = <minecraft:gold_ingot>;
 val GoldNugget = <ore:nuggetGold>;
 val AllGoldenApples = <minecraft:golden_apple:*>;
 val GoldenCarrot = <minecraft:golden_carrot>;
+val Painting = <minecraft:painting>;
+val CopperRing = <ore:ringCopper>;
+val CopperScrew = <ore:screwCopper>;
+val Sign = <minecraft:sign>;
+val Boat = <minecraft:boat>;
+val Paper = <minecraft:paper>;
 
 
 // ||||||| Colored Vanilla Blocks |||||||
@@ -314,7 +322,9 @@ val IronBolt = <ore:boltAnyIron>;
 val SteelRod = <ore:stickSteel>;
 val SteelRing = <ore:ringSteel>;
 val GoldPlate = <ore:plateGold>;
-
+val ImpLeather = <Natura:barleyFood:6>;
+val WaterBucket = <ore:bucketWater>;
+val WoodPulp = <ore:dustWood>;
 
 
 // ||||||| Tools |||||||
@@ -469,6 +479,12 @@ recipes.remove(<minecraft:glass_pane>);
 // --- Brewing Stand
 recipes.remove(BrewingStand);
 
+// --- Wooden Door
+recipes.remove(WoodDoor);
+
+// --- Iron Door
+recipes.remove(IronDoor);
+
 
 // ||||||| Items |||||||
 
@@ -494,8 +510,8 @@ recipes.remove(Tripwire);
 // --- Book
 recipes.remove(Book);
 
-// --- Bow
-recipes.remove(Bow);
+// --- Leather
+recipes.removeShaped(Leather);
 
 // --- Diamond Sword
 recipes.remove(DSword);
@@ -580,6 +596,18 @@ recipes.remove(GoldenCarrot);
 
 // --- Sugar
 recipes.remove(Sugar);
+
+// --- Painting
+recipes.remove(Painting);
+
+// --- Sign
+recipes.remove(Sign);
+
+// --- Boat
+recipes.remove(Boat);
+
+// --- Paper
+recipes.remove(Paper);
 
 
 // ||||| Colored Wool |||||
@@ -870,6 +898,12 @@ recipes.addShaped(TrappedChest, [
 [null, Tripwire, null],
 [IronScrew, Chest, IronScrew],
 [null, Screwdriver, null]]);
+
+// --- Leather
+recipes.addShaped(Leather * 2, [
+[ImpLeather, String, ImpLeather],
+[String, ImpLeather, String],
+[ImpLeather, String, ImpLeather]]);
 
 // --- Dispenser
 recipes.addShaped(Dispenser, [
@@ -1491,6 +1525,38 @@ recipes.addShaped(BrewingStand, [
 [IronBolt, SteelRod, IronScrew],
 [EmptyBottle, Cauldron, EmptyBottle]]);
 
+// --- Wooden Door
+recipes.addShapedMirrored(WoodDoor, [
+[Plank, Plank, Screwdriver],
+[Plank, IronRing, IronScrew],
+[Plank, Plank, Saw]]);
+// - Alternate Recipe
+recipes.addShapedMirrored(WoodDoor, [
+[Plank, Plank, Screwdriver],
+[Plank, CopperRing, CopperScrew],
+[Plank, Plank, Saw]]);
+// -
+recipes.addShapedMirrored(WoodDoor, [
+[Plank, Plank, Saw],
+[Plank, IronRing, IronScrew],
+[Plank, Plank, Screwdriver]]);
+// -
+recipes.addShapedMirrored(WoodDoor, [
+[Plank, Plank, Saw],
+[Plank, CopperRing, CopperScrew],
+[Plank, Plank, Screwdriver]]);
+
+// --- Iron Door
+recipes.addShaped(IronDoor, [
+[IronPlate, IronPlate, HHammer],
+[IronPlate, SteelRing, SteelScrew],
+[IronPlate, IronPlate, Screwdriver]]);
+// - Alternate Recipe
+recipes.addShaped(IronDoor, [
+[IronPlate, IronPlate, Screwdriver],
+[IronPlate, SteelRing, SteelScrew],
+[IronPlate, IronPlate, HHammer]]);
+
 // --- Iron Horse Armor
 recipes.addShaped(IronHArmor, [
 [null, null, IronHelm],
@@ -1539,6 +1605,65 @@ recipes.addShaped(Compass, [
 [IronScrew, IronRing, MagIronRod],
 [ClearPane, SteelPlate, ClearPane],
 [RedAlloyBolt, Screwdriver, RedAlloyBolt]]);
+
+// --- Painting
+recipes.addShaped(Painting, [
+[String, IronRing, String],
+[Stick, AnyWool, Stick],
+[Stick, Stick, Stick]]);
+
+// --- Sign
+recipes.addShaped(Sign, [
+[Plank, Plank, Plank],
+[Plank, Plank, Plank],
+[null, Stick, null]]);
+// - Alternate Recipe
+recipes.addShaped(Sign * 2, [
+[CarpentersBlock, CarpentersBlock, CarpentersBlock],
+[CarpentersBlock, CarpentersBlock, CarpentersBlock],
+[Screwdriver, Stick, IronScrew]]);
+// -
+recipes.addShaped(Sign * 2, [
+[CarpentersBlock, CarpentersBlock, CarpentersBlock],
+[CarpentersBlock, CarpentersBlock, CarpentersBlock],
+[IronScrew, Stick, Screwdriver]]);
+
+// --- Boat
+recipes.addShaped(Boat, [
+[IronScrew, Screwdriver, IronScrew],
+[Plank, Saw, Plank],
+[Plank, Plank, Plank]]);
+// - Alternate Recipe
+recipes.addShaped(Boat, [
+[IronScrew, Saw, IronScrew],
+[Plank, Screwdriver, Plank],
+[Plank, Plank, Plank]]);
+// -
+recipes.addShaped(Boat, [
+[CopperScrew, Screwdriver, CopperScrew],
+[Plank, Saw, Plank],
+[Plank, Plank, Plank]]);
+// - Alternate Recipe
+recipes.addShaped(Boat, [
+[CopperScrew, Saw, CopperScrew],
+[Plank, Screwdriver, Plank],
+[Plank, Plank, Plank]]);
+
+// --- Paper
+recipes.addShapedMirrored(Paper, [
+[null, null, null],
+[SugarCane, SugarCane, SugarCane],
+[null, null, null]]);
+// - Alternate Recipe
+recipes.addShapedMirrored(Paper * 2, [
+[WoodPulp, WoodPulp, WoodPulp],
+[SHammer, WaterBucket, null],
+[null, null, null]]);
+// -
+recipes.addShapedMirrored(Paper * 2, [
+[WoodPulp, WoodPulp, WoodPulp],
+[null, WaterBucket, SHammer],
+[null, null, null]]);
 
 
 // ||||| Wool |||||
@@ -2433,4 +2558,3 @@ recipes.addShapeless(Sugar,
 
 
 // #======= Other Stuff =======#
-
