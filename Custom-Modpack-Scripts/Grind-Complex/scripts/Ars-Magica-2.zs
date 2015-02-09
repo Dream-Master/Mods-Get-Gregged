@@ -1,5 +1,5 @@
-// ******* Created by Arch-Nihil for the *******
-// ******* Grind-Complex Supreme modpack *******
+// ******* Created by Arch-Nihil for *******
+// ******* the Grind-Complex modpack *******
 
 
 
@@ -12,10 +12,11 @@
 
 val Occulus = <arsmagica2:occulus>;
 
-val VoidPlate = <Thaumcraft:ItemResource:16>;
+val VoidPlate = <grindcore:item.VoidPlate>;
+val DVoidPlate = <grindcore:item.VoidPlate>;
 val RunicMatrix = <Thaumcraft:blockStoneDevice:2>;
 
-val OcculusEye = <Thaumcraft:ItemEldritchObject:3>;
+val OcculusEye = <grindcore:item.OcculusEye>;
 
 val UltimetSpring = <ore:springUltimet>;
 
@@ -44,9 +45,9 @@ recipes.addShaped(Occulus, [
 recipes.addShaped(Occulus, [
 [VoidPlate, OcculusEye, VoidPlate],
 [Wrench, UltimetSpring, HHammer],
-[VoidPlate, RunicMatrix, VoidPlate]]);
+[DVoidPlate, RunicMatrix, DVoidPlate]]);
 
 
 
-// *======= Other Stuff (Renaming) =======*
+// *======= Other Stuff =======*
 

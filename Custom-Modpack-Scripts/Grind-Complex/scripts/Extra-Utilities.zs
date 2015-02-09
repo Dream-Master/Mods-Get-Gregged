@@ -1,5 +1,5 @@
-// ******* Created by Arch-Nihil for the *******
-// ******* Grind-Complex Supreme modpack *******
+// ******* Created by Arch-Nihil for *******
+// ******* the Grind-Complex modpack *******
 
 
 
@@ -103,6 +103,9 @@ val IronChest = <IronChest:BlockIronChest>;
 val WoodGear = <ore:gearWood>;
 val Stone = <ore:stone>;
 val RedAlloyGear = <ore:ringRedAlloy>;
+
+val CompressedCobble = <ExtraUtilities:cobblestone_compressed>;
+val CompressedDirt = <ExtraUtilities:cobblestone_compressed:8>;
 
 val MagnumTorch = <ExtraUtilities:magnumTorch>;
 val Chandelier = <ExtraUtilities:chandelier>;
@@ -227,8 +230,11 @@ recipes.remove(RainMuffler);
 // ||||| Compressed Blocks |||||
 
 
+// --- Cobblestone
+recipes.removeShaped(<minecraft:cobblestone> * 9);
+
 // --- Compressed Cobblestone
-recipes.remove(<ExtraUtilities:cobblestone_compressed>);
+recipes.remove(CompressedCobble);
 
 // --- Double Compressed Cobblestone
 recipes.remove(<ExtraUtilities:cobblestone_compressed:1>);
@@ -251,8 +257,11 @@ recipes.remove(SeptupleCobble);
 // --- Octuple Compressed Cobblestone
 recipes.remove(OctupleCobble);
 
+// --- Dirt
+recipes.remove(<minecraft:dirt> * 9);
+
 // --- Compressed Dirt
-recipes.remove(<ExtraUtilities:cobblestone_compressed:8>);
+recipes.remove(CompressedDirt);
 
 // --- Double Compressed Dirt
 recipes.remove(<ExtraUtilities:cobblestone_compressed:9>);
@@ -263,11 +272,17 @@ recipes.remove(<ExtraUtilities:cobblestone_compressed:10>);
 // --- Quadruple Compressed Dirt
 recipes.remove(QuadDirt);
 
+// --- Gravel
+recipes.remove(<minecraft:gravel> * 9);
+
 // --- Compressed Gravel
 recipes.remove(<ExtraUtilities:cobblestone_compressed:12>);
 
 // --- Double Compressed Gravel
 recipes.remove(<ExtraUtilities:cobblestone_compressed:13>);
+
+// --- Sand
+recipes.remove(<minecraft:sand> * 9);
 
 // --- Compressed Sand
 recipes.remove(<ExtraUtilities:cobblestone_compressed:14>);

@@ -1,13 +1,17 @@
-// ******* Created by Arch-Nihil for the *******
-// ******* Grind-Complex Supreme modpack *******
+// ******* Created by Arch-Nihil for *******
+// ******* the Grind-Complex modpack *******
 
 
 
 // *======= Importing Stuff =======*
 
 
-import mods.gregtech.ImplosionCompressor;
 import mods.gregtech.Assembler;
+import mods.gregtech.ImplosionCompressor;
+import mods.gregtech.Extruder;
+import mods.gregtech.ForgeHammer;
+import mods.gregtech.AlloySmelter;
+import mods.gregtech.PlateBender;
 
 
 
@@ -32,8 +36,24 @@ val NeutronNqxPlate = <grindcore:item.NeutroniumNaquadriaPlate>;
 val EngravedOsmiumNqChip = <grindcore:item.EngravedOsmiumNaquadahChip>;
 val EngravedNeutronNqxChip = <grindcore:item.EngravedNeutroniumNaquadriaChip>;
 
+val OcculusEye = <grindcore:item.OcculusEye>;
+val VoidPlate = <grindcore:item.VoidPlate>;
+
+
+// ||||| Vanilla |||||
+
+
 val Sandstone = <ore:sandstone>;
 val Cobblestone = <ore:cobblestone>;
+
+
+// ||||| Thaumcraft |||||
+
+
+val Pearl = <Thaumcraft:ItemEldritchObject:3>;
+val VoidIngot = <Thaumcraft:ItemResource:16>;
+val PrimalCharm = <Thaumcraft:ItemResource:15>;
+val EldritchEye = <Thaumcraft:ItemEldritchObject>;
 
 
 // ||||| GregTech |||||
@@ -49,8 +69,11 @@ val NaquadahPlate = <ore:plateNaquadah>;
 val NeutroniumPlate = <ore:plateNeutronium>;
 val NaquadriaPlate = <ore:plateNaquadria>;
 
-val File = <ore:craftingToolFile>;
+val PlateShape = <gregtech:gt.metaitem.01:32350>;
+val PlateMold = <gregtech:gt.metaitem.01:32301>;
 
+val File = <ore:craftingToolFile>;
+val HHammer = <ore:craftingToolHardHammer>;
 
 
 // *======= Adding Recipes =======*
@@ -96,6 +119,26 @@ ImplosionCompressor.addRecipe(OsmiumNqPlate, OsmiumNqAlloy, 12);
 // --- Neutronium-Naquadria Plate
 ImplosionCompressor.addRecipe(NeutronNqxPlate, NeutronNqxAlloy, 16);
 
+// --- Eye Of The Occulus
+recipes.addShaped(OcculusEye, [
+[VoidPlate, PrimalCharm, VoidPlate],
+[EldritchEye, Pearl, EldritchEye],
+[VoidPlate, PrimalCharm, VoidPlate]]);
+
+// --- Void Plate
+recipes.addShapedMirrored(VoidPlate, [
+[null, HHammer, null],
+[null, VoidIngot, null],
+[null, VoidIngot, null]]);
+// - Alternate Recipes
+ForgeHammer.addRecipe(VoidPlate, VoidIngot * 2, 600, 24);
+// - 
+Extruder.addRecipe(VoidPlate, VoidIngot, PlateShape * 0, 600, 128);
+// -
+PlateBender.addRecipe(VoidPlate, VoidIngot, 1000, 32);
+// -
+AlloySmelter.addRecipe(VoidPlate, VoidIngot * 2, PlateMold * 0, 2000, 32);
+
 
 
 // #======= Ore Dictionary Stuff =======#
@@ -120,3 +163,6 @@ oreDict.plateAlloyOsmiumNaquadah.add(OsmiumNqPlate);
 
 // --- Neutronium-Naquadria Plate
 oreDict.plateAlloyNeutroniumNaquadria.add(NeutronNqxPlate);
+
+// --- Void Plate
+oreDict.plateVoid.add(VoidPlate);

@@ -1,29 +1,162 @@
-// ******* Created by Arch-Nihil for the *******
-// ******* Grind-Complex Supreme modpack *******
+// ******* Created by Arch-Nihil for *******
+// ******* the Grind-Complex modpack *******
+
+
+
+// *======= Importing Stuff =======*
+
+
+
+// *======= Variables =======*
+
+
+val SturdyCasing = <Forestry:sturdyMachine>;
+val Analyzer = <Forestry:core>;
+val Bottler = <Forestry:factory>;
+val Carpenter = <Forestry:factory:1>;
+val Centrifuge = <Forestry:factory:2>;
+val Fermenter = <Forestry:factory:3>;
+val Moistener = <Forestry:factory:4>;
+val Squeezer = <Forestry:factory:5>;
+val Still = <Forestry:factory:6>;
+val RainMaker = <Forestry:factory:7>;
+
+val AllFBlocks = <Forestry:ffarm>;
+val AllFGearboxes = <Forestry:ffarm:2>;
+val AllFHatches = <Forestry:ffarm:3>;
+val AllFValves = <Forestry:ffarm:4>;
+val AllFControls = <Forestry:ffarm:5>;
+
+val BeeAnalyzer = <Forestry:beealyzer>;
+
+val FBronzeGear = <Forestry:gearBronze>;
+val FCopperGear = <Forestry:gearCopper>;
+val FTinGear = <Forestry:gearTin>;
+
+val GtBronzeGear = <gregtech:gt.metaitem.02:31300>;
+val GtCopperGear = <gregtech:gt.metaitem.02:31035>;
+val GtTinGear = <gregtech:gt.metaitem.02:31057>;
+
+val BronzePlate = <ore:plateBronze>;
+val BronzeGear = <ore:gearBronze>;
+val BronzeRod = <ore:stickBronze>;
+
+val GoodCircuit = <ore:circuitGood>;
+val Circuit = <ore:circuitBasic>;
+
+val BasicCasing = <IC2:blockMachine>;
+
+
+
+// *======= Removing Recipes =======*
+
+
+// ||||||| Blocks |||||||
+
+
+// --- Sturdy Casing
+recipes.remove(SturdyCasing);
+
+// --- Analyzer
+recipes.remove(Analyzer);
+
+// --- Bottler
+recipes.remove(Bottler);
+
+// --- Carpenter
+recipes.remove(Carpenter);
+
+// --- Centrifuge
+recipes.remove(Centrifuge);
+
+// --- Fermenter
+recipes.remove(Fermenter);
+
+// --- Moistener
+recipes.remove(Moistener);
+
+// --- Squeezer
+recipes.remove(Squeezer);
+
+// --- Still
+recipes.remove(Still);
+
+// --- Rain Maker
+recipes.remove(RainMaker);
+
+
+// ||||||| Multi-Farm |||||||
+
+
+// --- Farm Blocks
+recipes.remove(AllFBlocks);
+
+// --- Farm Gearboxes
+recipes.remove(AllFGearboxes);
+
+// --- Farm Hatches
+recipes.remove(AllFHatches);
+
+// --- Farm Valves
+recipes.remove(AllFValves);
+
+// --- Farm Controls
+recipes.remove(AllFControls);
+
+
+// ||||||| Items |||||||
+
+
+// --- Bronze Gear
+recipes.remove(FBronzeGear);
+
+// --- Copper Gear
+recipes.remove(FCopperGear);
+
+// --- Tin Gear
+recipes.remove(FTinGear);
+
+
+
+// *======= Adding Back Recipes =======*
+
+
+// ||||||| Blocks |||||||
+
+
+// --- Sturdy Casing
+recipes.addShaped(SturdyCasing, [
+[BronzeRod, BronzePlate, BronzeRod],
+[BronzePlate, BasicCasing, BronzePlate],
+[BronzeRod, BronzePlate, BronzeRod]]);
+
+// --- Analyzer
+recipes.addShaped(Analyzer, [
+[BronzePlate, BeeAnalyzer, BronzePlate],
+[GoodCircuit, SturdyCasing, Circuit],
+[BronzePlate, BronzeGear, BronzePlate]]);
+
+
+// ||||||| Items |||||||
+
+
+// --- Bronze Gear
+recipes.addShapeless(FBronzeGear, [GtBronzeGear]);
+
+// --- Copper Gear
+recipes.addShapeless(FCopperGear, [GtCopperGear]);
+
+// --- Tin Gear
+recipes.addShapeless(FTinGear, [GtTinGear]);
+
+
+
+// *======= Other Stuff (Renaming) =======*
+
 
 
 //remove Recipes
 
-//Analyzer
-recipes.remove(<Forestry:core>);
-//Sturdy Machine Casing
-recipes.remove(<Forestry:sturdyMachine>);
-//Bottler
-recipes.remove(<Forestry:factory>);
-//Carpenter
-recipes.remove(<Forestry:factory:1>);
-//Centrifuge
-recipes.remove(<Forestry:factory:2>);
-//Fermenter
-recipes.remove(<Forestry:factory:3>);
-//Moistener
-recipes.remove(<Forestry:factory:4>);
-//Squeezer
-recipes.remove(<Forestry:factory:5>);
-//Still
-recipes.remove(<Forestry:factory:6>);
-//Rain Maker
-recipes.remove(<Forestry:factory:7>);
 //Thermionic Fabricator
 recipes.remove(<Forestry:factory2>);
 //Rain Tank
@@ -40,16 +173,6 @@ recipes.remove(<Forestry:engine:2>);
 recipes.remove(<Forestry:engine:3>);
 //Clockwork Engine
 recipes.remove(<Forestry:engine:4>);
-//Farm Block
-recipes.remove(<Forestry:ffarm>);
-//Farm Gearbox
-recipes.remove(<Forestry:ffarm:2>);
-//Farm Hatch
-recipes.remove(<Forestry:ffarm:3>);
-//Farm Valve
-recipes.remove(<Forestry:ffarm:4>);
-//Farm Control
-recipes.remove(<Forestry:ffarm:5>);
 //Survivalist´s Pickaxe
 recipes.remove(<Forestry:bronzePickaxe>);
 //Pickaxe Kit
@@ -66,12 +189,6 @@ recipes.remove(<Forestry:canEmpty>);
 recipes.remove(<Forestry:waxCapsule>);
 //Refractory Capsule
 recipes.remove(<Forestry:refractoryEmpty>);
-//Bronze Gear
-recipes.remove(<Forestry:gearBronze>);
-//Copper Gear
-recipes.remove(<Forestry:gearCopper>);
-//Tin Gear
-recipes.remove(<Forestry:gearTin>);
 //Stamp 1n
 recipes.remove(<Forestry:stamps>);
 //Stamp 2n
@@ -80,32 +197,12 @@ recipes.remove(<Forestry:stamps:1>);
 recipes.remove(<Forestry:stamps:2>);
 //Stamp 10n
 recipes.remove(<Forestry:stamps:3>);
-//Wrenche
+//Wrench
 recipes.remove(<Forestry:wrench>);
 //Pipette
 recipes.remove(<Forestry:pipette>);
 //Spectacles
 recipes.remove(<Forestry:naturalistHelmet>);
-
-//add Recipes
-
-//Analyzer
-recipes.addShaped(<Forestry:core>, [
-[<ore:plateBronze>, <Forestry:beealyzer>, <ore:plateBronze>],
-[<minecraft:glass>, <Forestry:sturdyMachine>, <minecraft:glass>],
-[<ore:plateBronze>, <minecraft:piston>, <ore:plateBronze>]]);
-
-//Analyzer
-recipes.addShaped(<Forestry:core>, [
-[<ore:plateBronze>, <Forestry:treealyzer>, <ore:plateBronze>],
-[<minecraft:glass>, <Forestry:sturdyMachine>, <minecraft:glass>],
-[<ore:plateBronze>, <minecraft:piston>, <ore:plateBronze>]]);
-
-//Sturdy Casing
-recipes.addShaped(<Forestry:sturdyMachine>, [
-[<ore:plateBronze>, <ore:plateIron>, <ore:plateBronze>],
-[<ore:plateIron>, <IC2:blockMachine>, <ore:plateIron>],
-[<ore:plateBronze>, <ore:plateIron>, <ore:plateBronze>]]);
 
 //Bottler
 recipes.addShaped(<Forestry:factory>, [
