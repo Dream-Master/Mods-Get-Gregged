@@ -85,6 +85,60 @@ val RedFSWire = <RedLogic:redlogic.wire:16399>;
 val BlackFSWire = <RedLogic:redlogic.wire:16400>;
 val FSBundledCable = <RedLogic:redlogic.wire:16401>;
 
+val AnyLamp = <RedLogic:redlogic.lampCubeOff:*>;
+val Lamp = <RedLogic:redlogic.lampCubeOff>;
+val OrangeLamp = <RedLogic:redlogic.lampCubeOff:1>;
+val MagentaLamp = <RedLogic:redlogic.lampCubeOff:2>;
+val LightBlueLamp = <RedLogic:redlogic.lampCubeOff:3>;
+val YellowLamp = <RedLogic:redlogic.lampCubeOff:4>;
+val LimeLamp = <RedLogic:redlogic.lampCubeOff:5>;
+val PinkLamp = <RedLogic:redlogic.lampCubeOff:6>;
+val GrayLamp = <RedLogic:redlogic.lampCubeOff:7>;
+val LightGrayLamp = <RedLogic:redlogic.lampCubeOff:8>;
+val CyanLamp = <RedLogic:redlogic.lampCubeOff:9>;
+val PurpleLamp = <RedLogic:redlogic.lampCubeOff:10>;
+val BlueLamp = <RedLogic:redlogic.lampCubeOff:11>;
+val BrownLamp = <RedLogic:redlogic.lampCubeOff:12>;
+val GreenLamp = <RedLogic:redlogic.lampCubeOff:13>;
+val RedLamp = <RedLogic:redlogic.lampCubeOff:14>;
+val BlackLamp = <RedLogic:redlogic.lampCubeOff:15>;
+
+val AnyDecoLamp = <RedLogic:redlogic.lampCubeDecorative:*>;
+val DecoLamp = <RedLogic:redlogic.lampCubeDecorative>;
+val OrangeDecoLamp = <RedLogic:redlogic.lampCubeDecorative:1>;
+val MagentaDecoLamp = <RedLogic:redlogic.lampCubeDecorative:2>;
+val LightBlueDecoLamp = <RedLogic:redlogic.lampCubeDecorative:3>;
+val YellowDecoLamp = <RedLogic:redlogic.lampCubeDecorative:4>;
+val LimeDecoLamp = <RedLogic:redlogic.lampCubeDecorative:5>;
+val PinkDecoLamp = <RedLogic:redlogic.lampCubeDecorative:6>;
+val GrayDecoLamp = <RedLogic:redlogic.lampCubeDecorative:7>;
+val LightGrayDecoLamp = <RedLogic:redlogic.lampCubeDecorative:8>;
+val CyanDecoLamp = <RedLogic:redlogic.lampCubeDecorative:9>;
+val PurpleDecoLamp = <RedLogic:redlogic.lampCubeDecorative:10>;
+val BlueDecoLamp = <RedLogic:redlogic.lampCubeDecorative:11>;
+val BrownDecoLamp = <RedLogic:redlogic.lampCubeDecorative:12>;
+val GreenDecoLamp = <RedLogic:redlogic.lampCubeDecorative:13>;
+val RedDecoLamp = <RedLogic:redlogic.lampCubeDecorative:14>;
+val BlackDecoLamp = <RedLogic:redlogic.lampCubeDecorative:15>;
+
+val AnyIndicatorLamp = <RedLogic:redlogic.lampCubeIndicatorOff:*>;
+val IndicatorLamp = <RedLogic:redlogic.lampCubeIndicatorOff>;
+val OrangeIndicatorLamp = <RedLogic:redlogic.lampCubeIndicatorOff:1>;
+val MagentaIndicatorLamp = <RedLogic:redlogic.lampCubeIndicatorOff:2>;
+val LightBlueIndicatorLamp = <RedLogic:redlogic.lampCubeIndicatorOff:3>;
+val YellowIndicatorLamp = <RedLogic:redlogic.lampCubeIndicatorOff:4>;
+val LimeIndicatorLamp = <RedLogic:redlogic.lampCubeIndicatorOff:5>;
+val PinkIndicatorLamp = <RedLogic:redlogic.lampCubeIndicatorOff:6>;
+val GrayIndicatorLamp = <RedLogic:redlogic.lampCubeIndicatorOff:7>;
+val LightGrayIndicatorLamp = <RedLogic:redlogic.lampCubeIndicatorOff:8>;
+val CyanIndicatorLamp = <RedLogic:redlogic.lampCubeIndicatorOff:9>;
+val PurpleIndicatorLamp = <RedLogic:redlogic.lampCubeIndicatorOff:10>;
+val BlueIndicatorLamp = <RedLogic:redlogic.lampCubeIndicatorOff:11>;
+val BrownIndicatorLamp = <RedLogic:redlogic.lampCubeIndicatorOff:12>;
+val GreenIndicatorLamp = <RedLogic:redlogic.lampCubeIndicatorOff:13>;
+val RedIndicatorLamp = <RedLogic:redlogic.lampCubeIndicatorOff:14>;
+val BlackIndicatorLamp = <RedLogic:redlogic.lampCubeIndicatorOff:15>;
+
 val RedAlloyDust = <ore:dustRedAlloy>;
 val RedAlloyRod = <ore:stickRedAlloy>;
 val IronPlate = <ore:plateIron>;
@@ -119,11 +173,33 @@ val GreenCarpet = <minecraft:carpet:13>;
 val RedCarpet = <minecraft:carpet:14>;
 val BlackCarpet = <minecraft:carpet:15>;
 
+val WhiteDye = <minecraft:dye>;
+val OrangeDye = <minecraft:dye:1>;
+val MagentaDye = <minecraft:dye:2>;
+val LightBlueDye = <minecraft:dye:3>;
+val YellowDye = <minecraft:dye:4>;
+val LimeDye = <minecraft:dye:5>;
+val PinkDye = <minecraft:dye:6>;
+val GrayDye = <minecraft:dye:7>;
+val LightGrayDye = <minecraft:dye:8>;
+val CyanDye = <minecraft:dye:9>;
+val PurpleDye = <minecraft:dye:10>;
+val BlueDye = <minecraft:dye:11>;
+val BrownDye = <minecraft:dye:12>;
+val GreenDye = <minecraft:dye:13>;
+val RedDye = <minecraft:dye:14>;
+val BlackDye = <minecraft:dye:15>;
+
+val GlowstonePlate = <ore:plateGlowstone>;
+val GlassRod = <ore:stickGlass>;
+val RSLamp = <minecraft:redstone_lamp>;
+val Paintbrush = <ExtraUtilities:paintbrush>;
+
 
 // *======= Removing Recipes =======*
 
 
-// ||||| Gates |||||
+// ||||||| Gates |||||||
 
 
 // --- Red Alloy Wire
@@ -226,7 +302,7 @@ recipes.remove(InvertCell);
 recipes.remove(NInvertCell);
 
 
-// ||||| Wires |||||
+// ||||||| Wires |||||||
 
 
 // --- Insulated Wires
@@ -271,10 +347,68 @@ recipes.remove(BundledCable);
 recipes.remove(FSBundledCable);
 
 
+// ||||||| Lamps |||||||
+
+
+// --- Lamps
+recipes.remove(Lamp);
+recipes.remove(OrangeLamp);
+recipes.remove(MagentaLamp);
+recipes.remove(LightBlueLamp);
+recipes.remove(YellowLamp);
+recipes.remove(LimeLamp);
+recipes.remove(PinkLamp);
+recipes.remove(GrayLamp);
+recipes.remove(LightGrayLamp);
+recipes.remove(CyanLamp);
+recipes.remove(PurpleLamp);
+recipes.remove(BlueLamp);
+recipes.remove(BrownLamp);
+recipes.remove(GreenLamp);
+recipes.remove(RedLamp);
+recipes.remove(BlackLamp);
+
+// --- Decorative Lamps
+recipes.remove(DecoLamp);
+recipes.remove(OrangeDecoLamp);
+recipes.remove(MagentaDecoLamp);
+recipes.remove(LightBlueDecoLamp);
+recipes.remove(YellowDecoLamp);
+recipes.remove(LimeDecoLamp);
+recipes.remove(PinkDecoLamp);
+recipes.remove(GrayDecoLamp);
+recipes.remove(LightGrayDecoLamp);
+recipes.remove(CyanDecoLamp);
+recipes.remove(PurpleDecoLamp);
+recipes.remove(BlueDecoLamp);
+recipes.remove(BrownDecoLamp);
+recipes.remove(GreenDecoLamp);
+recipes.remove(RedDecoLamp);
+recipes.remove(BlackDecoLamp);
+
+// --- Indicator Lamps
+recipes.remove(IndicatorLamp);
+recipes.remove(OrangeIndicatorLamp);
+recipes.remove(MagentaIndicatorLamp);
+recipes.remove(LightBlueIndicatorLamp);
+recipes.remove(YellowIndicatorLamp);
+recipes.remove(LimeIndicatorLamp);
+recipes.remove(PinkIndicatorLamp);
+recipes.remove(GrayIndicatorLamp);
+recipes.remove(LightGrayIndicatorLamp);
+recipes.remove(CyanIndicatorLamp);
+recipes.remove(PurpleIndicatorLamp);
+recipes.remove(BlueIndicatorLamp);
+recipes.remove(BrownIndicatorLamp);
+recipes.remove(GreenIndicatorLamp);
+recipes.remove(RedIndicatorLamp);
+recipes.remove(BlackIndicatorLamp);
+
+
 // *======= Adding Back Recipes =======*
 
 
-// ||||| Gates |||||
+// ||||||| Gates |||||||
 
 
 // --- Red Alloy Wire
@@ -476,7 +610,7 @@ recipes.addShaped(NInvertCell, [
 [StonePanel, RedAlloyWire, StonePanel]]);
 
 
-// ||||| Wires |||||
+// ||||||| Wires |||||||
 
 
 // --- White Insulated Wire
@@ -820,6 +954,417 @@ recipes.addShaped(FSBundledCable, [
 [null, String, null]]);
 // -
 Assembler.addRecipe(FSBundledCable, BundledCable, StoneStrip * 2, 20, 8);
+
+
+// ||||||| Lamps |||||||
+
+
+// --- Lamp
+recipes.addShaped(Lamp, [
+[GlassRod, GlowstonePlate, GlassRod],
+[GlowstonePlate, RSLamp, GlowstonePlate],
+[GlassRod, RedAlloyWire, GlassRod]]);
+// - Alternate Recipe
+recipes.addShaped(Lamp, [
+[AnyLamp, AnyLamp, AnyLamp],
+[AnyLamp, WhiteDye, AnyLamp],
+[AnyLamp, Paintbrush, AnyLamp]]);
+// -
+recipes.addShapeless(Lamp, [AnyLamp, WhiteDye]);
+
+// --- Orange Lamp
+recipes.addShaped(OrangeLamp, [
+[AnyLamp, AnyLamp, AnyLamp],
+[AnyLamp, OrangeDye, AnyLamp],
+[AnyLamp, Paintbrush, AnyLamp]]);
+// - Alternate Recipe
+recipes.addShapeless(OrangeLamp, [AnyLamp, OrangeDye]);
+
+// --- Magenta Lamp
+recipes.addShaped(MagentaLamp, [
+[AnyLamp, AnyLamp, AnyLamp],
+[AnyLamp, MagentaDye, AnyLamp],
+[AnyLamp, Paintbrush, AnyLamp]]);
+// - Alternate Recipe
+recipes.addShapeless(MagentaLamp, [AnyLamp, MagentaDye]);
+
+// --- Light Blue Lamp
+recipes.addShaped(LightBlueLamp, [
+[AnyLamp, AnyLamp, AnyLamp],
+[AnyLamp, LightBlueDye, AnyLamp],
+[AnyLamp, Paintbrush, AnyLamp]]);
+// - Alternate Recipe
+recipes.addShapeless(LightBlueLamp, [AnyLamp, LightBlueDye]);
+
+// --- Yellow Lamp
+recipes.addShaped(YellowLamp, [
+[AnyLamp, AnyLamp, AnyLamp],
+[AnyLamp, YellowDye, AnyLamp],
+[AnyLamp, Paintbrush, AnyLamp]]);
+// - Alternate Recipe
+recipes.addShapeless(YellowLamp, [AnyLamp, YellowDye]);
+
+// --- Lime Lamp
+recipes.addShaped(LimeLamp, [
+[AnyLamp, AnyLamp, AnyLamp],
+[AnyLamp, LimeDye, AnyLamp],
+[AnyLamp, Paintbrush, AnyLamp]]);
+// - Alternate Recipe
+recipes.addShapeless(LimeLamp, [AnyLamp, LimeDye]);
+
+// --- Pink Lamp
+recipes.addShaped(PinkLamp, [
+[AnyLamp, AnyLamp, AnyLamp],
+[AnyLamp, PinkDye, AnyLamp],
+[AnyLamp, Paintbrush, AnyLamp]]);
+// - Alternate Recipe
+recipes.addShapeless(PinkLamp, [AnyLamp, PinkDye]);
+
+// --- Gray Lamp
+recipes.addShaped(GrayLamp, [
+[AnyLamp, AnyLamp, AnyLamp],
+[AnyLamp, GrayDye, AnyLamp],
+[AnyLamp, Paintbrush, AnyLamp]]);
+// - Alternate Recipe
+recipes.addShapeless(GrayLamp, [AnyLamp, GrayDye]);
+
+// --- Light Gray Lamp
+recipes.addShaped(LightGrayLamp, [
+[AnyLamp, AnyLamp, AnyLamp],
+[AnyLamp, LightGrayDye, AnyLamp],
+[AnyLamp, Paintbrush, AnyLamp]]);
+// - Alternate Recipe
+recipes.addShapeless(LightGrayLamp, [AnyLamp, LightGrayDye]);
+
+// --- Cyan Lamp
+recipes.addShaped(CyanLamp, [
+[AnyLamp, AnyLamp, AnyLamp],
+[AnyLamp, CyanDye, AnyLamp],
+[AnyLamp, Paintbrush, AnyLamp]]);
+// - Alternate Recipe
+recipes.addShapeless(CyanLamp, [AnyLamp, CyanDye]);
+
+// --- Purple Lamp
+recipes.addShaped(PurpleLamp, [
+[AnyLamp, AnyLamp, AnyLamp],
+[AnyLamp, PurpleDye, AnyLamp],
+[AnyLamp, Paintbrush, AnyLamp]]);
+// - Alternate Recipe
+recipes.addShapeless(PurpleLamp, [AnyLamp, PurpleDye]);
+
+// --- Blue Lamp
+recipes.addShaped(BlueLamp, [
+[AnyLamp, AnyLamp, AnyLamp],
+[AnyLamp, BlueDye, AnyLamp],
+[AnyLamp, Paintbrush, AnyLamp]]);
+// - Alternate Recipe
+recipes.addShapeless(BlueLamp, [AnyLamp, BlueDye]);
+
+// --- Brown Lamp
+recipes.addShaped(BrownLamp, [
+[AnyLamp, AnyLamp, AnyLamp],
+[AnyLamp, BrownDye, AnyLamp],
+[AnyLamp, Paintbrush, AnyLamp]]);
+// - Alternate Recipe
+recipes.addShapeless(BrownLamp, [AnyLamp, BrownDye]);
+
+// --- Green Lamp
+recipes.addShaped(GreenLamp, [
+[AnyLamp, AnyLamp, AnyLamp],
+[AnyLamp, GreenDye, AnyLamp],
+[AnyLamp, Paintbrush, AnyLamp]]);
+// - Alternate Recipe
+recipes.addShapeless(GreenLamp, [AnyLamp, GreenDye]);
+
+// --- Red Lamp
+recipes.addShaped(RedLamp, [
+[AnyLamp, AnyLamp, AnyLamp],
+[AnyLamp, RedDye, AnyLamp],
+[AnyLamp, Paintbrush, AnyLamp]]);
+// - Alternate Recipe
+recipes.addShapeless(RedLamp, [AnyLamp, RedDye]);
+
+// --- Black Lamp
+recipes.addShaped(BlackLamp, [
+[AnyLamp, AnyLamp, AnyLamp],
+[AnyLamp, BlackDye, AnyLamp],
+[AnyLamp, Paintbrush, AnyLamp]]);
+// - Alternate Recipe
+recipes.addShapeless(BlackLamp, [AnyLamp, BlackDye]);
+
+
+// ||||||| Decorative Lamp |||||||
+
+
+// --- Decorative Lamp
+recipes.addShaped(Lamp, [
+[GlassRod, GlowstonePlate, GlassRod],
+[GlowstonePlate, RSLamp, GlowstonePlate],
+[GlassRod, GlowstonePlate, GlassRod]]);
+// - Alternate Recipe
+recipes.addShaped(Lamp, [
+[AnyDecoLamp, AnyDecoLamp, AnyDecoLamp],
+[AnyDecoLamp, WhiteDye, AnyDecoLamp],
+[AnyDecoLamp, Paintbrush, AnyDecoLamp]]);
+// -
+recipes.addShapeless(Lamp, [AnyDecoLamp, WhiteDye]);
+
+// --- Orange Decorative Lamp
+recipes.addShaped(OrangeLamp, [
+[AnyDecoLamp, AnyDecoLamp, AnyDecoLamp],
+[AnyDecoLamp, OrangeDye, AnyDecoLamp],
+[AnyDecoLamp, Paintbrush, AnyDecoLamp]]);
+// - Alternate Recipe
+recipes.addShapeless(OrangeLamp, [AnyDecoLamp, OrangeDye]);
+
+// --- Magenta Decorative Lamp
+recipes.addShaped(MagentaLamp, [
+[AnyDecoLamp, AnyDecoLamp, AnyDecoLamp],
+[AnyDecoLamp, MagentaDye, AnyDecoLamp],
+[AnyDecoLamp, Paintbrush, AnyDecoLamp]]);
+// - Alternate Recipe
+recipes.addShapeless(MagentaLamp, [AnyDecoLamp, MagentaDye]);
+
+// --- Light Blue Decorative Lamp
+recipes.addShaped(LightBlueLamp, [
+[AnyDecoLamp, AnyDecoLamp, AnyDecoLamp],
+[AnyDecoLamp, LightBlueDye, AnyDecoLamp],
+[AnyDecoLamp, Paintbrush, AnyDecoLamp]]);
+// - Alternate Recipe
+recipes.addShapeless(LightBlueLamp, [AnyDecoLamp, LightBlueDye]);
+
+// --- Yellow Decorative Lamp
+recipes.addShaped(YellowLamp, [
+[AnyDecoLamp, AnyDecoLamp, AnyDecoLamp],
+[AnyDecoLamp, YellowDye, AnyDecoLamp],
+[AnyDecoLamp, Paintbrush, AnyDecoLamp]]);
+// - Alternate Recipe
+recipes.addShapeless(YellowLamp, [AnyDecoLamp, YellowDye]);
+
+// --- Lime Decorative Lamp
+recipes.addShaped(LimeLamp, [
+[AnyDecoLamp, AnyDecoLamp, AnyDecoLamp],
+[AnyDecoLamp, LimeDye, AnyDecoLamp],
+[AnyDecoLamp, Paintbrush, AnyDecoLamp]]);
+// - Alternate Recipe
+recipes.addShapeless(LimeLamp, [AnyDecoLamp, LimeDye]);
+
+// --- Pink Decorative Lamp
+recipes.addShaped(PinkLamp, [
+[AnyDecoLamp, AnyDecoLamp, AnyDecoLamp],
+[AnyDecoLamp, PinkDye, AnyDecoLamp],
+[AnyDecoLamp, Paintbrush, AnyDecoLamp]]);
+// - Alternate Recipe
+recipes.addShapeless(PinkLamp, [AnyDecoLamp, PinkDye]);
+
+// --- Gray Decorative Lamp
+recipes.addShaped(GrayLamp, [
+[AnyDecoLamp, AnyDecoLamp, AnyDecoLamp],
+[AnyDecoLamp, GrayDye, AnyDecoLamp],
+[AnyDecoLamp, Paintbrush, AnyDecoLamp]]);
+// - Alternate Recipe
+recipes.addShapeless(GrayLamp, [AnyDecoLamp, GrayDye]);
+
+// --- Light Gray Decorative Lamp
+recipes.addShaped(LightGrayLamp, [
+[AnyDecoLamp, AnyDecoLamp, AnyDecoLamp],
+[AnyDecoLamp, LightGrayDye, AnyDecoLamp],
+[AnyDecoLamp, Paintbrush, AnyDecoLamp]]);
+// - Alternate Recipe
+recipes.addShapeless(LightGrayLamp, [AnyDecoLamp, LightGrayDye]);
+
+// --- Cyan Decorative Lamp
+recipes.addShaped(CyanLamp, [
+[AnyDecoLamp, AnyDecoLamp, AnyDecoLamp],
+[AnyDecoLamp, CyanDye, AnyDecoLamp],
+[AnyDecoLamp, Paintbrush, AnyDecoLamp]]);
+// - Alternate Recipe
+recipes.addShapeless(CyanLamp, [AnyDecoLamp, CyanDye]);
+
+// --- Purple Decorative Lamp
+recipes.addShaped(PurpleLamp, [
+[AnyDecoLamp, AnyDecoLamp, AnyDecoLamp],
+[AnyDecoLamp, PurpleDye, AnyDecoLamp],
+[AnyDecoLamp, Paintbrush, AnyDecoLamp]]);
+// - Alternate Recipe
+recipes.addShapeless(PurpleLamp, [AnyDecoLamp, PurpleDye]);
+
+// --- Blue Decorative Lamp
+recipes.addShaped(BlueLamp, [
+[AnyDecoLamp, AnyDecoLamp, AnyDecoLamp],
+[AnyDecoLamp, BlueDye, AnyDecoLamp],
+[AnyDecoLamp, Paintbrush, AnyDecoLamp]]);
+// - Alternate Recipe
+recipes.addShapeless(BlueLamp, [AnyDecoLamp, BlueDye]);
+
+// --- Brown Decorative Lamp
+recipes.addShaped(BrownLamp, [
+[AnyDecoLamp, AnyDecoLamp, AnyDecoLamp],
+[AnyDecoLamp, BrownDye, AnyDecoLamp],
+[AnyDecoLamp, Paintbrush, AnyDecoLamp]]);
+// - Alternate Recipe
+recipes.addShapeless(BrownLamp, [AnyDecoLamp, BrownDye]);
+
+// --- Green Decorative Lamp
+recipes.addShaped(GreenLamp, [
+[AnyDecoLamp, AnyDecoLamp, AnyDecoLamp],
+[AnyDecoLamp, GreenDye, AnyDecoLamp],
+[AnyDecoLamp, Paintbrush, AnyDecoLamp]]);
+// - Alternate Recipe
+recipes.addShapeless(GreenLamp, [AnyDecoLamp, GreenDye]);
+
+// --- Red Decorative Lamp
+recipes.addShaped(RedLamp, [
+[AnyDecoLamp, AnyDecoLamp, AnyDecoLamp],
+[AnyDecoLamp, RedDye, AnyDecoLamp],
+[AnyDecoLamp, Paintbrush, AnyDecoLamp]]);
+// - Alternate Recipe
+recipes.addShapeless(RedLamp, [AnyDecoLamp, RedDye]);
+
+// --- Black Decorative Lamp
+recipes.addShaped(BlackLamp, [
+[AnyDecoLamp, AnyDecoLamp, AnyDecoLamp],
+[AnyDecoLamp, BlackDye, AnyDecoLamp],
+[AnyDecoLamp, Paintbrush, AnyDecoLamp]]);
+// - Alternate Recipe
+recipes.addShapeless(BlackLamp, [AnyDecoLamp, BlackDye]);
+
+
+// ||||||| Indicator Lamp |||||||
+
+
+// --- Indicator Lamp
+recipes.addShaped(Lamp, [
+[GlassRod, GlowstonePlate, GlassRod],
+[RedAlloyWire, RSLamp, RedAlloyWire],
+[GlassRod, GlowstonePlate, GlassRod]]);
+// - Alternate Recipe
+recipes.addShaped(Lamp, [
+[AnyIndicatorLamp, AnyIndicatorLamp, AnyIndicatorLamp],
+[AnyIndicatorLamp, WhiteDye, AnyIndicatorLamp],
+[AnyIndicatorLamp, Paintbrush, AnyIndicatorLamp]]);
+// -
+recipes.addShapeless(Lamp, [AnyIndicatorLamp, WhiteDye]);
+
+// --- Orange Indicator Lamp
+recipes.addShaped(OrangeLamp, [
+[AnyIndicatorLamp, AnyIndicatorLamp, AnyIndicatorLamp],
+[AnyIndicatorLamp, OrangeDye, AnyIndicatorLamp],
+[AnyIndicatorLamp, Paintbrush, AnyIndicatorLamp]]);
+// - Alternate Recipe
+recipes.addShapeless(OrangeLamp, [AnyIndicatorLamp, OrangeDye]);
+
+// --- Magenta Indicator Lamp
+recipes.addShaped(MagentaLamp, [
+[AnyIndicatorLamp, AnyIndicatorLamp, AnyIndicatorLamp],
+[AnyIndicatorLamp, MagentaDye, AnyIndicatorLamp],
+[AnyIndicatorLamp, Paintbrush, AnyIndicatorLamp]]);
+// - Alternate Recipe
+recipes.addShapeless(MagentaLamp, [AnyIndicatorLamp, MagentaDye]);
+
+// --- Light Blue Indicator Lamp
+recipes.addShaped(LightBlueLamp, [
+[AnyIndicatorLamp, AnyIndicatorLamp, AnyIndicatorLamp],
+[AnyIndicatorLamp, LightBlueDye, AnyIndicatorLamp],
+[AnyIndicatorLamp, Paintbrush, AnyIndicatorLamp]]);
+// - Alternate Recipe
+recipes.addShapeless(LightBlueLamp, [AnyIndicatorLamp, LightBlueDye]);
+
+// --- Yellow Indicator Lamp
+recipes.addShaped(YellowLamp, [
+[AnyIndicatorLamp, AnyIndicatorLamp, AnyIndicatorLamp],
+[AnyIndicatorLamp, YellowDye, AnyIndicatorLamp],
+[AnyIndicatorLamp, Paintbrush, AnyIndicatorLamp]]);
+// - Alternate Recipe
+recipes.addShapeless(YellowLamp, [AnyIndicatorLamp, YellowDye]);
+
+// --- Lime Indicator Lamp
+recipes.addShaped(LimeLamp, [
+[AnyIndicatorLamp, AnyIndicatorLamp, AnyIndicatorLamp],
+[AnyIndicatorLamp, LimeDye, AnyIndicatorLamp],
+[AnyIndicatorLamp, Paintbrush, AnyIndicatorLamp]]);
+// - Alternate Recipe
+recipes.addShapeless(LimeLamp, [AnyIndicatorLamp, LimeDye]);
+
+// --- Pink Indicator Lamp
+recipes.addShaped(PinkLamp, [
+[AnyIndicatorLamp, AnyIndicatorLamp, AnyIndicatorLamp],
+[AnyIndicatorLamp, PinkDye, AnyIndicatorLamp],
+[AnyIndicatorLamp, Paintbrush, AnyIndicatorLamp]]);
+// - Alternate Recipe
+recipes.addShapeless(PinkLamp, [AnyIndicatorLamp, PinkDye]);
+
+// --- Gray Indicator Lamp
+recipes.addShaped(GrayLamp, [
+[AnyIndicatorLamp, AnyIndicatorLamp, AnyIndicatorLamp],
+[AnyIndicatorLamp, GrayDye, AnyIndicatorLamp],
+[AnyIndicatorLamp, Paintbrush, AnyIndicatorLamp]]);
+// - Alternate Recipe
+recipes.addShapeless(GrayLamp, [AnyIndicatorLamp, GrayDye]);
+
+// --- Light Gray Indicator Lamp
+recipes.addShaped(LightGrayLamp, [
+[AnyIndicatorLamp, AnyIndicatorLamp, AnyIndicatorLamp],
+[AnyIndicatorLamp, LightGrayDye, AnyIndicatorLamp],
+[AnyIndicatorLamp, Paintbrush, AnyIndicatorLamp]]);
+// - Alternate Recipe
+recipes.addShapeless(LightGrayLamp, [AnyIndicatorLamp, LightGrayDye]);
+
+// --- Cyan Indicator Lamp
+recipes.addShaped(CyanLamp, [
+[AnyIndicatorLamp, AnyIndicatorLamp, AnyIndicatorLamp],
+[AnyIndicatorLamp, CyanDye, AnyIndicatorLamp],
+[AnyIndicatorLamp, Paintbrush, AnyIndicatorLamp]]);
+// - Alternate Recipe
+recipes.addShapeless(CyanLamp, [AnyIndicatorLamp, CyanDye]);
+
+// --- Purple Indicator Lamp
+recipes.addShaped(PurpleLamp, [
+[AnyIndicatorLamp, AnyIndicatorLamp, AnyIndicatorLamp],
+[AnyIndicatorLamp, PurpleDye, AnyIndicatorLamp],
+[AnyIndicatorLamp, Paintbrush, AnyIndicatorLamp]]);
+// - Alternate Recipe
+recipes.addShapeless(PurpleLamp, [AnyIndicatorLamp, PurpleDye]);
+
+// --- Blue Indicator Lamp
+recipes.addShaped(BlueLamp, [
+[AnyIndicatorLamp, AnyIndicatorLamp, AnyIndicatorLamp],
+[AnyIndicatorLamp, BlueDye, AnyIndicatorLamp],
+[AnyIndicatorLamp, Paintbrush, AnyIndicatorLamp]]);
+// - Alternate Recipe
+recipes.addShapeless(BlueLamp, [AnyIndicatorLamp, BlueDye]);
+
+// --- Brown Indicator Lamp
+recipes.addShaped(BrownLamp, [
+[AnyIndicatorLamp, AnyIndicatorLamp, AnyIndicatorLamp],
+[AnyIndicatorLamp, BrownDye, AnyIndicatorLamp],
+[AnyIndicatorLamp, Paintbrush, AnyIndicatorLamp]]);
+// - Alternate Recipe
+recipes.addShapeless(BrownLamp, [AnyIndicatorLamp, BrownDye]);
+
+// --- Green Indicator Lamp
+recipes.addShaped(GreenLamp, [
+[AnyIndicatorLamp, AnyIndicatorLamp, AnyIndicatorLamp],
+[AnyIndicatorLamp, GreenDye, AnyIndicatorLamp],
+[AnyIndicatorLamp, Paintbrush, AnyIndicatorLamp]]);
+// - Alternate Recipe
+recipes.addShapeless(GreenLamp, [AnyIndicatorLamp, GreenDye]);
+
+// --- Red Indicator Lamp
+recipes.addShaped(RedLamp, [
+[AnyIndicatorLamp, AnyIndicatorLamp, AnyIndicatorLamp],
+[AnyIndicatorLamp, RedDye, AnyIndicatorLamp],
+[AnyIndicatorLamp, Paintbrush, AnyIndicatorLamp]]);
+// - Alternate Recipe
+recipes.addShapeless(RedLamp, [AnyIndicatorLamp, RedDye]);
+
+// --- Black Indicator Lamp
+recipes.addShaped(BlackLamp, [
+[AnyIndicatorLamp, AnyIndicatorLamp, AnyIndicatorLamp],
+[AnyIndicatorLamp, BlackDye, AnyIndicatorLamp],
+[AnyIndicatorLamp, Paintbrush, AnyIndicatorLamp]]);
+// - Alternate Recipe
+recipes.addShapeless(BlackLamp, [AnyIndicatorLamp, BlackDye]);
 
 
 
