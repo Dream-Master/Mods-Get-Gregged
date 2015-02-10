@@ -1013,14 +1013,14 @@ recipes.addShaped(ActivatorRail * 2, [
 // --- Redstone Repeater
 recipes.addShaped(Repeater, [
 [StoneCover, StoneCover, StoneCover],
-[RSTorch, RedAlloyWire RSTorch],
-[StoneCover, StoneCover, StoneCover]])
+[RSTorch, RedAlloyWire, RSTorch],
+[StoneCover, StoneCover, StoneCover]]);
 
 // --- Redstone Comparator
 recipes.addShaped(Comparator, [
 [StoneCover, RSTorch, StoneCover],
 [RSTorch, AnyQuartz, RSTorch],
-[StoneCover, StoneCover, StoneCover]])
+[StoneCover, StoneCover, StoneCover]]);
 
 // --- Noteblock
 recipes.addShaped(Noteblock, [
@@ -1186,8 +1186,8 @@ recipes.addShaped(EnchantingTable, [
 
 // --- Redstone Lamp
 recipes.addShaped(RSLamp, [
-[RedAlloyRod, GlowstonePlate, RedAlloyRod],
-[GlowstonePlate, GSBlock, GlowstonePlate],
+[RedAlloyRod, ClearPane, RedAlloyRod],
+[ClearPane, GSBlock, ClearPane],
 [RedAlloyRod, RedAlloyWire, RedAlloyRod]]);
 
 // --- Ender Chest
@@ -2691,4 +2691,3 @@ recipes.addShapeless(Sugar,
 
 
 // #======= Other Stuff =======#
-
