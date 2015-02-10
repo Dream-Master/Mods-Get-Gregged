@@ -10,6 +10,7 @@ import mods.ic2.Compressor;
 import mods.gregtech.ImplosionCompressor;
 import mods.gregtech.Assembler;
 import mods.gregtech.AlloySmelter;
+import mods.ic2.Macerator;
 
 
 
@@ -148,6 +149,7 @@ val CopperScrew = <ore:screwCopper>;
 val Sign = <minecraft:sign>;
 val Boat = <minecraft:boat>;
 val Paper = <minecraft:paper>;
+val FishRod = <minecraft:fishing_rod>;
 
 
 // ||||||| Colored Vanilla Blocks |||||||
@@ -270,6 +272,7 @@ val ClearPane = <TConstruct:GlassPane>;
 val ObsidianChest = <IronChest:BlockIronChest:6>;
 val Detector = <Railcraft:tile.railcraft.detector:1>;
 val Timer = <RedLogic:redlogic.gates:12>;
+val CongealedSlime = <TConstruct:slime.gel:1>;
 
 
 // ||||||| Other Items |||||||
@@ -338,6 +341,7 @@ val File = <ore:craftingToolFile>;
 val Knife = <ore:craftingToolKnife>;
 val Saw = <ore:craftingToolSaw>;
 val Wrench = <ore:craftingToolWrench>;
+val WireCutter = <ore:craftingToolWireCutter>;
 
 
 
@@ -564,6 +568,9 @@ recipes.removeShaped(Gunpowder, [
 [NaturaSulfur, NaturaSulfur],
 [NaturaSulfur, NaturaSulfur]]);
 
+// --- Slimeball
+recipes.removeShaped(Slimeball * 4);
+
 // --- Eye Of Ender
 recipes.remove(EnderEye);
 
@@ -608,6 +615,9 @@ recipes.remove(Boat);
 
 // --- Paper
 recipes.remove(Paper);
+
+// --- Fishing Rod
+recipes.remove(FishRod);
 
 
 // ||||| Colored Wool |||||
@@ -1583,6 +1593,10 @@ Compressor.addRecipe(<minecraft:coal>, Lignite * 9);
 // --- Charcoal
 Compressor.addRecipe(<minecraft:coal:1>, AshCloud * 9);
 
+// --- Slimeball
+Macerator.addRecipe(Slimeball * 4, CongealedSlime);
+
+
 // --- Saddle
 recipes.addShaped(Saddle, [
 [Leather, TannedLeather, Leather],
@@ -1665,6 +1679,16 @@ recipes.addShapedMirrored(Paper * 2, [
 [null, WaterBucket, SHammer],
 [null, null, null]]);
 
+// --- Fishing Rod
+recipes.addShaped(FishRod, [
+[null, null, Stick],
+[null, Stick, String],
+[IronRod, WireCutter, IronRing]]);
+// - Alternate Recipe
+recipes.addShaped(FishRod, [
+[null, null, Stick],
+[null, Stick, String],
+[IronRod, WireCutter, CopperRing]]);
 
 // ||||| Wool |||||
 
