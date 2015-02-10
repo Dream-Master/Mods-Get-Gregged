@@ -7,6 +7,7 @@
 
 
 import mods.ic2.Compressor;
+import mods.gregtech.Assembler;
 import mods.nei.NEI;
 
 
@@ -14,10 +15,18 @@ import mods.nei.NEI;
 // #======= Variables =======#
 
 
+val ToolStation = <TConstruct:ToolStationBlock>;
+val PartBuilder = <TConstruct:ToolStationBlock:1>;
+val SpruceBuilder = <TConstruct:ToolStationBlock:2>;
+val BirchBuilder = <TConstruct:ToolStationBlock:3>;
+val JungleBuilder = <TConstruct:ToolStationBlock:4>;
+val PatternChest = <TConstruct:ToolStationBlock:5>;
+val StencilTable = <TConstruct:ToolStationBlock:10>;
+val SpruceStencil = <TConstruct:ToolStationBlock:11>;
+val BirchStencil = <TConstruct:ToolStationBlock:12>;
+val JungleStencil = <TConstruct:ToolStationBlock:13>;
+
 val CastingBasin = <TConstruct:SearedBlock:2>;
-val String = <minecraft:string>;
-val Plank = <ore:plankWood>;
-val Stick = <ore:stickWood>;
 val SilkyCloth = <TConstruct:materials:25>;
 val SilkyJewel = <TConstruct:materials:26>;
 val BallOfMoss = <TConstruct:materials:6>;
@@ -28,13 +37,29 @@ val AlPlate = <ore:plateAluminium>;
 val AlRod = <ore:stickAluminium>;
 val ClearPane = <TConstruct:GlassPane>;
 val Grout = <TConstruct:CraftedSoil:1>;
+val Gelatinous = <TConstruct:strangeFood>;
+val Pattern = <TConstruct:blankPattern>;
+
 val Gravel = <minecraft:gravel>;
 val Sand = <minecraft:sand>;
 val Clay = <minecraft:clay_ball>;
 val Slimeball = <minecraft:slime_ball>;
-val Gelatinous = <TConstruct:strangeFood>;
+val String = <minecraft:string>;
+val Plank = <ore:plankWood>;
+val SprucePlanks = <minecraft:planks:1>;
+val BirchPlanks = <minecraft:planks:2>;
+val JunglePlanks = <minecraft:planks:3>;
+val AnyLog = <ore:logWood>;
+val SpruceLog = <minecraft:log:1>;
+val BirchLog = <minecraft:log:2>;
+val JungleLog = <minecraft:log:3>;
+val Chest = <minecraft:chest>;
+val CraftingTable = <minecraft:crafting_table>;
+val Flint = <minecraft:flint>;
+val Stick = <ore:stickWood>;
+
 val MossBall = <chisel:ballomoss>;
-val Pattern = <TConstruct:blankPattern>;
+val CarpentersBlock = <CarpentersBlocks:blockCarpentersBlock>;
 
 val Knapsack = <TConstruct:knapsack>;
 val TBelt = <TConstruct:travelBelt>;
@@ -43,6 +68,8 @@ val TGlove = <TConstruct:travelGlove>;
 val TGoggles = <TConstruct:travelGoggles>;
 val TVest = <TConstruct:travelVest>;
 val TWings = <TConstruct:travelWings>;
+
+val Saw = <ore:craftingToolSaw>;
 
 
 
@@ -144,24 +171,27 @@ mods.tconstruct.Casting.removeBasinRecipe(<TConstruct:MetalBlock:2>);
 // --- Solid Ender Block Casting
 mods.tconstruct.Casting.removeBasinRecipe(EnderBlock);
 
-// --- Iron Nuggets
-mods.tconstruct.Smeltery.removeMelting(<TConstruct:oreBerries>);
-
-// --- Gold Nuggets
-mods.tconstruct.Smeltery.removeMelting(<TConstruct:oreBerries:1>);
-
-// --- Copper Nuggets
-mods.tconstruct.Smeltery.removeMelting(<TConstruct:oreBerries:2>);
-
-// --- Tin Nuggets
-mods.tconstruct.Smeltery.removeMelting(<TConstruct:oreBerries:3>);
-
-// --- Aluminium Nuggets
-mods.tconstruct.Smeltery.removeMelting(<TConstruct:oreBerries:4>);
-
 
 // ||||| Blocks & Items |||||
 
+
+// --- Tool Station
+recipes.remove(ToolStation);
+
+// --- Part Builders
+recipes.remove(PartBuilder);
+recipes.remove(SpruceBuilder);
+recipes.remove(BirchBuilder);
+recipes.remove(JungleBuilder);
+
+// --- Pattern Chest
+recipes.remove(PatternChest);
+
+// --- Stencil Tables
+recipes.remove(StencilTable);
+recipes.remove(SpruceStencil);
+recipes.remove(BirchStencil);
+recipes.remove(JungleStencil);
 
 // --- Empty Canister
 recipes.remove(EmptyCanister);
@@ -229,18 +259,132 @@ mods.tconstruct.Smeltery.addMelting(<gregtech:gt.metaitem.01:19>, <liquid:alumin
 mods.tconstruct.Smeltery.addMelting(<gregtech:gt.metaitem.01:1019>, <liquid:aluminum.molten> * 36, 500, <gregtech:gt.blockmachines:1585>);
 
 // --- Chalcopyrite Smelting
-mods.tconstruct.Smeltery.addMelting(<gregtech:gt.blockores:855>, <liquid:molten.copper> * 144, 500, <gregtech:gt.blockores:855>);
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.blockores:855>, <liquid:copper.molten> * 144, 500, <gregtech:gt.blockores:855>);
 // -
-mods.tconstruct.Smeltery.addMelting(<gregtech:gt.blockores:1855>, <liquid:molten.copper> * 144, 500, <gregtech:gt.blockores:1855>);
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.blockores:1855>, <liquid:copper.molten> * 144, 500, <gregtech:gt.blockores:1855>);
 // -
-mods.tconstruct.Smeltery.addMelting(<gregtech:gt.blockores:2855>, <liquid:molten.copper> * 144, 500, <gregtech:gt.blockores:2855>);
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.blockores:2855>, <liquid:copper.molten> * 144, 500, <gregtech:gt.blockores:2855>);
 // -
-mods.tconstruct.Smeltery.addMelting(<gregtech:gt.blockores:3855>, <liquid:molten.copper> * 144, 600, <gregtech:gt.blockores:3855>);
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.blockores:3855>, <liquid:copper.molten> * 144, 600, <gregtech:gt.blockores:3855>);
 // -
-mods.tconstruct.Smeltery.addMelting(<gregtech:gt.blockores:4855>, <liquid:molten.copper> * 144, 600, <gregtech:gt.blockores:4855>);
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.blockores:4855>, <liquid:copper.molten> * 144, 600, <gregtech:gt.blockores:4855>);
 
 
-// ||||| Items |||||
+// ||||||| Blocks |||||||
+
+
+// --- Tool Station
+recipes.addShaped(ToolStation, [
+[Pattern, CraftingTable, Pattern],
+[CarpentersBlock, Flint, CarpentersBlock],
+[CarpentersBlock, null, CarpentersBlock]]);
+// - Alternate Recipe
+recipes.addShaped(ToolStation, [
+[Pattern, CraftingTable, Pattern],
+[CarpentersBlock, Saw, CarpentersBlock],
+[CarpentersBlock, null, CarpentersBlock]]);
+
+// --- Part Builder
+recipes.addShaped(PartBuilder, [
+[Pattern, AnyLog, Pattern],
+[CarpentersBlock, Flint, CarpentersBlock],
+[CarpentersBlock, null, CarpentersBlock]]);
+// - Alternate Recipe
+recipes.addShaped(PartBuilder, [
+[Pattern, AnyLog, Pattern],
+[CarpentersBlock, Saw, CarpentersBlock],
+[CarpentersBlock, null, CarpentersBlock]]);
+
+// --- Part Builder (Spruce)
+recipes.addShaped(SpruceBuilder, [
+[Pattern, SpruceLog, Pattern],
+[CarpentersBlock, Flint, CarpentersBlock],
+[CarpentersBlock, null, CarpentersBlock]]);
+// - Alternate Recipe
+recipes.addShaped(SpruceBuilder, [
+[Pattern, SpruceLog, Pattern],
+[CarpentersBlock, Saw, CarpentersBlock],
+[CarpentersBlock, null, CarpentersBlock]]);
+
+// --- Part Builder (Birch)
+recipes.addShaped(BirchBuilder, [
+[Pattern, BirchLog, Pattern],
+[CarpentersBlock, Flint, CarpentersBlock],
+[CarpentersBlock, null, CarpentersBlock]]);
+// - Alternate Recipe
+recipes.addShaped(BirchBuilder, [
+[Pattern, BirchLog, Pattern],
+[CarpentersBlock, Saw, CarpentersBlock],
+[CarpentersBlock, null, CarpentersBlock]]);
+
+// --- Part Builder (Jungle)
+recipes.addShaped(JungleBuilder, [
+[Pattern, JungleLog, Pattern],
+[CarpentersBlock, Flint, CarpentersBlock],
+[CarpentersBlock, null, CarpentersBlock]]);
+// - Alternate Recipe
+recipes.addShaped(JungleBuilder, [
+[Pattern, JungleLog, Pattern],
+[CarpentersBlock, Saw, CarpentersBlock],
+[CarpentersBlock, null, CarpentersBlock]]);
+
+// --- Pattern Chest
+recipes.addShaped(PatternChest, [
+[Pattern, Chest, Pattern],
+[CarpentersBlock, Flint, CarpentersBlock],
+[CarpentersBlock, null, CarpentersBlock]]);
+// - Alternate Recipe
+recipes.addShaped(PatternChest, [
+[Pattern, Chest, Pattern],
+[CarpentersBlock, Saw, CarpentersBlock],
+[CarpentersBlock, null, CarpentersBlock]]);
+
+// --- Stencil Table
+recipes.addShaped(StencilTable, [
+[Pattern, Plank, Pattern],
+[CarpentersBlock, Flint, CarpentersBlock],
+[CarpentersBlock, null, CarpentersBlock]]);
+// - Alternate Recipe
+recipes.addShaped(StencilTable, [
+[Pattern, Plank, Pattern],
+[CarpentersBlock, Saw, CarpentersBlock],
+[CarpentersBlock, null, CarpentersBlock]]);
+
+// --- Stencil Table (Spruce)
+recipes.addShaped(SpruceStencil, [
+[Pattern, SprucePlanks, Pattern],
+[CarpentersBlock, Flint, CarpentersBlock],
+[CarpentersBlock, null, CarpentersBlock]]);
+// - Alternate Recipe
+recipes.addShaped(SpruceStencil, [
+[Pattern, SprucePlanks, Pattern],
+[CarpentersBlock, Saw, CarpentersBlock],
+[CarpentersBlock, null, CarpentersBlock]]);
+
+// --- Stencil Table (Birch)
+recipes.addShaped(BirchStencil, [
+[Pattern, BirchPlanks, Pattern],
+[CarpentersBlock, Flint, CarpentersBlock],
+[CarpentersBlock, null, CarpentersBlock]]);
+// - Alternate Recipe
+recipes.addShaped(BirchStencil, [
+[Pattern, BirchPlanks, Pattern],
+[CarpentersBlock, Saw, CarpentersBlock],
+[CarpentersBlock, null, CarpentersBlock]]);
+
+// --- Stencil Table (Jungle)
+recipes.addShaped(JungleStencil, [
+[Pattern, JunglePlanks, Pattern],
+[CarpentersBlock, Flint, CarpentersBlock],
+[CarpentersBlock, null, CarpentersBlock]]);
+// - Alternate Recipe
+recipes.addShaped(JungleStencil, [
+[Pattern, JunglePlanks, Pattern],
+[CarpentersBlock, Saw, CarpentersBlock],
+[CarpentersBlock, null, CarpentersBlock]]);
+
+
+// ||||||| Items |||||||
 
 
 // --- Empty Canister
