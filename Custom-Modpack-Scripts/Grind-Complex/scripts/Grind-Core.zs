@@ -18,7 +18,7 @@ import mods.gregtech.PlateBender;
 // *======= Variables =======*
 
 
-// ||||| Arch-Core |||||
+// ||||| Grind-Core |||||
 
 
 val SandstoneRod = <grindcore:item.SandstoneRod>;
