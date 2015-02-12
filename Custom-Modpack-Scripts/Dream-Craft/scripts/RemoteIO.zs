@@ -1,12 +1,12 @@
-// ******** Created by Arch-Nihil ********
+// ******** Created by DreamMasterXXL ********
 
 
 
-// *======= Importing Stuff =======*
+// --- Importing Stuff ---
 
 
 
-// *======= Variables =======*
+// --- Variables ---
 
 
 val Reservoir = <RIO:tile.machine>;
@@ -54,10 +54,10 @@ val IronPlate = <ore:plateIron>;
 
 
 
-// *======= Removing Recipes =======*
+// --- Removing Recipes ---
 
 
-// ||||| Blocks |||||
+// --- Blocks ---
 
 
 // --- Remote Interface
@@ -75,7 +75,7 @@ recipes.remove(Heater);
 // --- Skylight
 recipes.remove(Skylight);
 
-// ||||| Items |||||
+// --- Items ---
 
 
 // --- Wireless Transmitter
@@ -92,10 +92,10 @@ recipes.remove(BlankPlate);
 
 
 
-// *======= Adding Back Recipes =======*
+// --- Adding Back Recipes ---
 
 
-// ||||| Blocks |||||
+// --- Blocks ---
 
 
 // --- Remote Interface
@@ -129,7 +129,7 @@ recipes.addShaped(Skylight, [
 [ObsidianPlate, RedAlloyRod, ObsidianPlate]]);
 
 
-// ||||| Items |||||
+// --- Items ---
 
 
 // --- Wireless Transmitter
@@ -168,5 +168,5 @@ recipes.addShaped(BlankPlate, [
 
 
 
-// #======= Hiding Stuff =======#
+// --- Hiding Stuff ---
 
