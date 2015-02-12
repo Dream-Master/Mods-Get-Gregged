@@ -48,6 +48,7 @@ val SteelWheels = <gregtech:gt.metaitem.01:32101>;
 val GTHammer = <gregtech:gt.metatool.01:12>;
 val GTScrewdriver = <gregtech:gt.metatool.01:22>;
 val RedAlloyPlate = <ore:plateRedAlloy>;
+val TrashCan = <ExtraUtilities:trashcan>;
 
 val BSpace = <JABBA:upgradeCore:1>;
 val RSUp = <JABBA:upgradeCore:2>;
@@ -275,7 +276,7 @@ recipes.addShaped(HopperUp, [
 // --- Void Upgrade
 recipes.addShaped(VoidUp, [
 [IronPlate, Piston, IronPlate],
-[Piston, <Railcraft:tile.railcraft.machine.beta:11>, Piston],
+[Piston, TrashCan, Piston],
 [IronPlate, Piston, IronPlate]]);
 
 
