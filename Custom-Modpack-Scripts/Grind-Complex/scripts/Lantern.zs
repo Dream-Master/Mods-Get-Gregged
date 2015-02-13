@@ -49,4 +49,4 @@ recipes.addShaped(Lantern, [
 
 
 
-// #======= Other Stuff =======#
+// #======= Renaming/Hiding Stuff =======#

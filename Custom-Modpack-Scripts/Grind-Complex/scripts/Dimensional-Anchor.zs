@@ -3,11 +3,11 @@
 
 
 
-// *======= Importing Stuff =======*
+// *======== Importing Stuff ========*
 
 
 
-// *======= Variables =======*
+// *======== Variables ========*
 
 
 val Anchor = <DimensionalAnchors:chunkloader>;
@@ -18,7 +18,7 @@ val LapotronEOrb = <ore:batteryUltimate>;
 val PrototypeXK = <ore:circuitPrototype>;
 
 
-// *======= Removing Recipes =======*
+// *======== Removing Recipes ========*
 
 
 // --- Dimensional Anchor
@@ -26,7 +26,7 @@ recipes.remove(Anchor);
 
 
 
-// *======= Adding Back Recipes =======*
+// *======== Adding Back Recipes ========*
 
 
 // --- Dimensional Anchor
@@ -42,5 +42,5 @@ recipes.addShaped(Anchor, [
 
 
 
-// #======= Hiding Stuff =======#
+// #======== Hiding/Renaming Stuff ========#
 
