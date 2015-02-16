@@ -1,4 +1,4 @@
-// ******** Created by DreamMasterXXL ********
+// --- Created by DreamMasterXXL ---
 
 
 
@@ -19,8 +19,6 @@ val Skylight = <RIO:skylight>;
 val IWorkbench = <RIO:intelligentWorkbench>;
 val Location = <RIO:item.chip.location>;
 
-val BedrockGear = <RotaryCraft:rotarycraft_item_enginecraft:12>;
-val FerromagBase = <ReactorCraft:reactorcraft_item_crafting:5>;
 val Ichorium = <ThaumicTinkerer:kamiResource:2>;
 
 val HSLAPlate = <ore:plateHSLA>;
@@ -32,7 +30,6 @@ val IVFieldGen = <gregtech:gt.metaitem.01:32674>;
 val NeutroniumScrew = <ore:screwNeutronium>;
 val EFlow = <ore:circuitMaster>;
 val DataOrb = <ore:circuitUltimate>;
-val HSLAShaft = <RotaryCraft:rotarycraft_item_shaftcraft:2>;
 val NeutroniumGear = <ore:gearNeutronium>;
 val KanthalPlate = <ore:plateKanthal>;
 val Coil = <IC2:itemRecipePart>;
@@ -102,13 +99,13 @@ recipes.remove(BlankPlate);
 recipes.addShaped(RemoteInterface, [
 [MAXRegulator, IVSensor, MAXRegulator],
 [IVEmitter, QCore, IVEmitter],
-[MAXRegulator, FerromagBase, MAXRegulator]]);
+[MAXRegulator, NeutroniumPlate, MAXRegulator]]);
 
 // --- Remote Inventory
 recipes.addShaped(RemoteInventory, [
 [NeutroniumPlate, Remote, NeutroniumPlate],
-[BedrockGear, RemoteInterface, BedrockGear],
-[FerromagBase, Ichorium, FerromagBase]]);
+[NeutroniumGear, RemoteInterface, NeutroniumGear],
+[NeutroniumPlate, Ichorium, NeutroniumPlate]]);
 
 // --- Water Reservoir
 recipes.addShaped(Reservoir, [
@@ -135,24 +132,24 @@ recipes.addShaped(Skylight, [
 // --- Wireless Transmitter
 recipes.addShaped(Remote, [
 [Wrench, IVFieldGen, Screwdriver],
-[HSLAShaft, NeutroniumScrew, HHammer],
-[FerromagBase, DataOrb, FerromagBase]]);
+[<ore:stickNeutronium>, NeutroniumScrew, HHammer],
+[NeutroniumPlate, DataOrb, NeutroniumPlate]]);
 // - Alternate Recipe
 recipes.addShaped(Remote, [
 [Wrench, IVFieldGen, HHammer],
-[HSLAShaft, NeutroniumScrew, Screwdriver],
-[FerromagBase, DataOrb, FerromagBase]]);
+[<ore:stickNeutronium>, NeutroniumScrew, Screwdriver],
+[NeutroniumPlate, DataOrb, NeutroniumPlate]]);
 
 // --- IO Tool
 recipes.addShaped(IOTool, [
 [HHammer, HSLAPlate, NeutroniumScrew],
-[EFlow, HSLAShaft, HSLAPlate],
-[BedrockGear, EFlow, Screwdriver]]);
+[EFlow, <ore:stickNeutronium>, HSLAPlate],
+[NeutroniumGear, EFlow, Screwdriver]]);
 // - Alternate Recipe
 recipes.addShaped(IOTool, [
 [Screwdriver, HSLAPlate, NeutroniumScrew],
-[EFlow, HSLAShaft, HSLAPlate],
-[BedrockGear, EFlow, HHammer]]);
+[EFlow, <ore:stickNeutronium>, HSLAPlate],
+[NeutroniumGear, EFlow, HHammer]]);
 
 // --- Location Chip
 recipes.addShaped(Location, [
@@ -169,4 +166,3 @@ recipes.addShaped(BlankPlate, [
 
 
 // --- Hiding Stuff ---
-

@@ -109,6 +109,8 @@ recipes.removeShaped(<gregtech:gt.metaitem.01:11304>, [
 [<gregtech:gt.metaitem.01:9304>, <gregtech:gt.metaitem.01:9304>, <gregtech:gt.metaitem.01:9304>]]); 
 //Steel Ingot
 furnace.remove(<gregtech:gt.metaitem.01:11305>, <minecraft:chainmail_boots>);
+//Flour
+recipes.removeShapeless(<gregtech:gt.metaitem.01:2881>);
 
 //add Recipes
 
@@ -179,26 +181,34 @@ recipes.addShaped(<gregtech:gt.metaitem.02:4500>, [
 [null, null, null]]);
 
 //Damascus Steel Dust
-recipes.addShapeless(<gregtech:gt.metaitem.01:2335> *3,
+recipes.addShapeless(<gregtech:gt.metaitem.01:2335> * 3,
 [<ore:dustSteel>, <ore:dustCoal>, <ore:dustSilicon>, <ore:dustManganese>, <ore:dustChrome>, <ore:dustMolybdenum>, <ore:dustNickel>, <ore:dustNickel>, <ore:dustNickel>]);
 
-recipes.addShapeless(<gregtech:gt.metaitem.01:2335> *3,
+recipes.addShapeless(<gregtech:gt.metaitem.01:2335> * 3,
 [<ore:dustSteel>, <ore:dustCoal>, <ore:dustManganese>, <ore:dustManganese>, <ore:dustSilicon>, <ore:dustChrome>, <ore:dustChrome>, <ore:dustVanadium>]);
 
 //HSLA Steel Dust removed because it breaks RotaryCraft.
 
 //Shadow Iron Dust
-recipes.addShapeless(<gregtech:gt.metaitem.01:2336> *3, 
+recipes.addShapeless(<gregtech:gt.metaitem.01:2336> * 3, 
 [<ore:dustIron>, <ore:dustThaumium>, <ore:dustThaumium>, <ore:dustThaumium>]);
 
 //Osmiridium Dust
-recipes.addShapeless(<gregtech:gt.metaitem.01:2317> *3, 
+recipes.addShapeless(<gregtech:gt.metaitem.01:2317> * 3, 
 [<ore:dustOsmium>, <ore:dustIridium>, <ore:dustIridium>, <ore:dustIridium>]);
+
+//Enderium Dust
+recipes.addShapeless(<gregtech:gt.metaitem.01:2321> * 9, 
+[<ore:dustEnderEye>, <ore:dustEnderEye>, <ore:dustEnderEye>, <ore:dustEnderEye>, <ore:dustBeryllium>, <ore:dustBeryllium>, <ore:dustEnderEye>, <ore:dustBeryllium>, <ore:dustThaumium>]);
 
 //Wood Ring
 recipes.addShaped(<gregtech:gt.metaitem.01:28809>, [
 [<gregtech:gt.metatool.01:34>, null, null],
 [<gregtech:gt.metaitem.01:17809>, null, null]]);
+
+//Glass Dust
+recipes.addShapeless(<gregtech:gt.metaitem.01:2890>, [<gregtech:gt.metatool.01:24>, <TConstruct:GlassBlock>]);
+recipes.addShapeless(<gregtech:gt.metaitem.01:1890>, [<gregtech:gt.metatool.01:24>, <TConstruct:GlassPane>]);
 
 //Assembler Recipes
 
@@ -235,13 +245,27 @@ recipes.remove(<gregtech:gt.metatool.01:2>);
 
 //Flour
 
-recipes.addShapeless(<gregtech:gt.metaitem.01:2881>, [<ore:craftingToolMortar>, <ore:cropBarley>]);
+recipes.addShaped(<gregtech:gt.metaitem.01:2881>, [
+[<ore:cropBarley>, null, null],
+[<ore:craftingToolMortar>, null, null]]);
+
+recipes.addShaped(<gregtech:gt.metaitem.01:2881>, [
+[<ore:cropWheat>, null, null],
+[<ore:craftingToolMortar>, null, null]]);
+
+//Macerator Recipes
+
+//Flour
 Macerator.addRecipe(<gregtech:gt.metaitem.01:2881>, <Natura:barleyFood>);
 Macerator.addRecipe(<gregtech:gt.metaitem.01:2881>, <BiomesOPlenty:plants:6>);
 Macerator.addRecipe(<gregtech:gt.metaitem.01:2881>, <harvestcraft:barleyItem>);
 
 //Minced Meat
 Macerator.addRecipe(<gregtech:gt.metaitem.01:2892> * 9, <Thaumcraft:blockTaint:2>);
+
+//Glass Dust
+Macerator.addRecipe(<gregtech:gt.metaitem.01:2890>, <TConstruct:GlassBlock>);
+Macerator.addRecipe(<gregtech:gt.metaitem.01:1890>, <TConstruct:GlassPane>);
 
 //Shards Dust Blast Furnace
 BlastFurnace.addRecipe(<Thaumcraft:ItemShard>, <gregtech:gt.metaitem.01:2540>, <gregtech:gt.metaitem.01:2540>, 320, 100, 1200);

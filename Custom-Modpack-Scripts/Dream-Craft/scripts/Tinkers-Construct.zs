@@ -88,7 +88,14 @@ recipes.remove(<TConstruct:slime.gel>);
 // --- Congealed Green Slime
 recipes.remove(<TConstruct:slime.gel:1>);
 
+// --- Seared Tank
+recipes.remove(<TConstruct:LavaTank>);
 
+// --- Smeltery Control 
+recipes.remove(<TConstruct:Smeltery>);
+
+// --- Clear Glass Pane
+recipes.remove(<TConstruct:GlassPane>);
 
 // --- Casting Recipes ---
 
@@ -214,6 +221,14 @@ recipes.remove(<TConstruct:decoration.stoneladder>);
 // --- Punji Sticks ---
 recipes.remove(<TConstruct:trap.punji>);
 
+//Aluminium Ingot
+furnace.remove(<TConstruct:materials:11>);
+
+//Alluminium Nuggets
+recipes.remove(<TConstruct:materials:22>);
+
+mods.tconstruct.Casting.removeTableRecipe(<TConstruct:materials:22>);
+
 
 // --- Gear ---
 
@@ -257,7 +272,21 @@ mods.tconstruct.Smeltery.addMelting(<gregtech:gt.metaitem.01:2019>, <liquid:alum
 mods.tconstruct.Smeltery.addMelting(<gregtech:gt.metaitem.01:19>, <liquid:aluminum.molten> * 16, 500, <gregtech:gt.blockmachines:1585>);
 // --- Small Pile
 mods.tconstruct.Smeltery.addMelting(<gregtech:gt.metaitem.01:1019>, <liquid:aluminum.molten> * 36, 500, <gregtech:gt.blockmachines:1585>);
+// --- Red Sand
+mods.tconstruct.Smeltery.addMelting(<minecraft:sand:1>, <liquid:glass.molten> * 1000, 800, <minecraft:sand:1>);
 
+
+// --- Seared Tank
+recipes.addShaped(<TConstruct:LavaTank>, [
+[<TConstruct:Smeltery:2>, <TConstruct:materials:2>, <TConstruct:Smeltery:2>],
+[<TConstruct:materials:2>, null, <TConstruct:materials:2>],
+[<TConstruct:Smeltery:2>, <TConstruct:materials:2>, <TConstruct:Smeltery:2>]]);
+
+// --- Smeltery Control
+recipes.addShaped(<TConstruct:Smeltery>, [
+[<TConstruct:Smeltery:2>, <TConstruct:materials:2>, <TConstruct:Smeltery:2>],
+[<TConstruct:materials:2>, <minecraft:furnace>, <TConstruct:materials:2>],
+[<TConstruct:Smeltery:2>, <TConstruct:materials:2>, <TConstruct:Smeltery:2>]]);
 
 // --- Items ---
 
