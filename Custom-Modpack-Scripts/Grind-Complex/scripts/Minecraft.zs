@@ -1102,7 +1102,7 @@ recipes.addShaped(Ladder * 4, [
 
 // --- Fence
 recipes.addShaped(Fence, [
-[null, null, null],
+[null, Flint.transformReplace(Flint), null],
 [Stick, Plank, Stick],
 [Stick, Plank, Stick]]);
 // -
