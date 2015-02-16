@@ -76,6 +76,42 @@ val PlumDoor = <ExtraTrees:door:149>;
 val MapleDoor = <ExtraTrees:door:150>;
 val CitrusDoor = <ExtraTrees:door:151>;
 
+val FirFence = <ExtraTrees:fence:32>;
+val CedarFence = <ExtraTrees:fence:33>;
+val HemlockFence = <ExtraTrees:fence:34>;
+val CypressFence = <ExtraTrees:fence:35>;
+val FigFence = <ExtraTrees:fence:36>;
+val BeechFence = <ExtraTrees:fence:37>;
+val AlderFence = <ExtraTrees:fence:38>;
+val HazelFence = <ExtraTrees:fence:39>;
+val HornbeamFence = <ExtraTrees:fence:40>;
+val BoxFence = <ExtraTrees:fence:41>;
+val ButternutFence = <ExtraTrees:fence:42>;
+val HickoryFence = <ExtraTrees:fence:43>;
+val WhitebeamFence = <ExtraTrees:fence:44>;
+val ElmFence = <ExtraTrees:fence:45>;
+val AppleFence = <ExtraTrees:fence:46>;
+val YewFence = <ExtraTrees:fence:47>;
+val PearFence = <ExtraTrees:fence:48>;
+val HawthornFence = <ExtraTrees:fence:49>;
+val RowanFence = <ExtraTrees:fence:50>;
+val ElderFence = <ExtraTrees:fence:51>;
+val MacluraFence = <ExtraTrees:fence:52>;
+val SyzgiumFence = <ExtraTrees:fence:53>;
+val BrazilwoodFence = <ExtraTrees:fence:54>;
+val LogwoodFence = <ExtraTrees:fence:55>;
+val IrokoFence = <ExtraTrees:fence:56>;
+val LocustFence = <ExtraTrees:fence:57>;
+val EucalyptusFence = <ExtraTrees:fence:58>;
+val PurpleheartFence = <ExtraTrees:fence:59>;
+val AshFence = <ExtraTrees:fence:60>;
+val HollyFence = <ExtraTrees:fence:61>;
+val OliveFence = <ExtraTrees:fence:62>;
+val SweetgumFence = <ExtraTrees:fence:63>;
+val RosewoodFence = <ExtraTrees:fence:64>;
+val GingkoFence = <ExtraTrees:fence:65>;
+val PinkIvoryFence = <ExtraTrees:fence:66>;
+
 val OakPlanks = <minecraft:planks>;
 val SprucePlanks = <minecraft:planks:1>;
 val BirchPlanks = <minecraft:planks:2>;
@@ -142,10 +178,14 @@ val PlumPlanks = <Forestry:planks2:5>;
 val MaplePlanks = <Forestry:planks2:6>;
 val CitrusPlanks = <Forestry:planks2:7>;
 
-val IronRing = <ore:ringIron>;
-val CopperRing = <ore:ringCopper>;
-val IronScrew = <ore:screwIron>;
-val CopperScrew = <ore:screwCopper>;
+val Stick = <ore:stickWood>;
+val Flint = <minecraft:flint>;
+
+val IronRing = <ore:ringAnyIron>;
+val CopperRing = <ore:ringAnyCopper>;
+val IronScrew = <ore:screwAnyIron>;
+val CopperScrew = <ore:screwAnyCopper>;
+val SteelScrew = <ore:screwSteel>;
 
 val Saw = <ore:craftingToolSaw>;
 val Screwdriver = <ore:craftingToolScrewdriver>;
@@ -224,6 +264,47 @@ recipes.remove(PineDoor);
 recipes.remove(PlumDoor);
 recipes.remove(MapleDoor);
 recipes.remove(CitrusDoor);
+
+
+// ||||||| Fences |||||||
+
+
+// --- All Fences
+recipes.remove(FirFence);
+recipes.remove(CedarFence);
+recipes.remove(HemlockFence);
+recipes.remove(CypressFence);
+recipes.remove(FigFence);
+recipes.remove(BeechFence);
+recipes.remove(AlderFence);
+recipes.remove(HazelFence);
+recipes.remove(HornbeamFence);
+recipes.remove(BoxFence);
+recipes.remove(ButternutFence);
+recipes.remove(HickoryFence);
+recipes.remove(WhitebeamFence);
+recipes.remove(ElmFence);
+recipes.remove(AppleFence);
+recipes.remove(YewFence);
+recipes.remove(PearFence);
+recipes.remove(HawthornFence);
+recipes.remove(RowanFence);
+recipes.remove(ElderFence);
+recipes.remove(MacluraFence);
+recipes.remove(SyzgiumFence);
+recipes.remove(BrazilwoodFence);
+recipes.remove(LogwoodFence);
+recipes.remove(IrokoFence);
+recipes.remove(LocustFence);
+recipes.remove(EucalyptusFence);
+recipes.remove(PurpleheartFence);
+recipes.remove(AshFence);
+recipes.remove(HollyFence);
+recipes.remove(OliveFence);
+recipes.remove(SweetgumFence);
+recipes.remove(RosewoodFence);
+recipes.remove(GingkoFence);
+recipes.remove(PinkIvoryFence);
 
 
 
@@ -1597,6 +1678,570 @@ recipes.addShaped(CitrusDoor, [
 [Screwdriver, CitrusPlanks, CitrusPlanks],
 [CopperScrew, CopperRing, CitrusPlanks],
 [Saw, CitrusPlanks, CitrusPlanks]]);
+
+
+// ||||||| Fences |||||||
+
+
+// --- Fir Fence
+recipes.addShaped(FirFence, [
+[Stick, FirPlanks, Stick],
+[Stick, FirPlanks, Stick],
+[null, Flint.transformReplace(Flint), null]]);
+// - Alternate Recipe
+recipes.addShaped(FirFence * 2, [
+[Stick, FirPlanks, Stick],
+[Stick, FirPlanks, Stick],
+[IronScrew, Screwdriver, IronScrew]]);
+// -
+recipes.addShaped(FirFence * 4, [
+[Stick, FirPlanks, Stick],
+[Stick, FirPlanks, Stick],
+[SteelScrew, Screwdriver, SteelScrew]]);
+
+// --- Cedar Fence
+recipes.addShaped(CedarFence, [
+[Stick, CedarPlanks, Stick],
+[Stick, CedarPlanks, Stick],
+[null, Flint.transformReplace(Flint), null]]);
+// - Alternate Recipe
+recipes.addShaped(CedarFence * 2, [
+[Stick, CedarPlanks, Stick],
+[Stick, CedarPlanks, Stick],
+[IronScrew, Screwdriver, IronScrew]]);
+// -
+recipes.addShaped(CedarFence * 4, [
+[Stick, CedarPlanks, Stick],
+[Stick, CedarPlanks, Stick],
+[SteelScrew, Screwdriver, SteelScrew]]);
+
+// --- Hemlock Fence
+recipes.addShaped(HemlockFence, [
+[Stick, HemlockPlanks, Stick],
+[Stick, HemlockPlanks, Stick],
+[null, Flint.transformReplace(Flint), null]]);
+// - Alternate Recipe
+recipes.addShaped(HemlockFence * 2, [
+[Stick, HemlockPlanks, Stick],
+[Stick, HemlockPlanks, Stick],
+[IronScrew, Screwdriver, IronScrew]]);
+// -
+recipes.addShaped(HemlockFence * 4, [
+[Stick, HemlockPlanks, Stick],
+[Stick, HemlockPlanks, Stick],
+[SteelScrew, Screwdriver, SteelScrew]]);
+
+// --- Cypress Fence
+recipes.addShaped(CypressFence, [
+[Stick, CypressPlanks, Stick],
+[Stick, CypressPlanks, Stick],
+[null, Flint.transformReplace(Flint), null]]);
+// - Alternate Recipe
+recipes.addShaped(CypressFence * 2, [
+[Stick, CypressPlanks, Stick],
+[Stick, CypressPlanks, Stick],
+[IronScrew, Screwdriver, IronScrew]]);
+// -
+recipes.addShaped(CypressFence * 4, [
+[Stick, CypressPlanks, Stick],
+[Stick, CypressPlanks, Stick],
+[SteelScrew, Screwdriver, SteelScrew]]);
+
+// --- Fig Fence
+recipes.addShaped(FigFence, [
+[Stick, FigPlanks, Stick],
+[Stick, FigPlanks, Stick],
+[null, Flint.transformReplace(Flint), null]]);
+// - Alternate Recipe
+recipes.addShaped(FigFence * 2, [
+[Stick, FigPlanks, Stick],
+[Stick, FigPlanks, Stick],
+[IronScrew, Screwdriver, IronScrew]]);
+// -
+recipes.addShaped(FigFence * 4, [
+[Stick, FigPlanks, Stick],
+[Stick, FigPlanks, Stick],
+[SteelScrew, Screwdriver, SteelScrew]]);
+
+// --- Beech Fence
+recipes.addShaped(BeechFence, [
+[Stick, BeechPlanks, Stick],
+[Stick, BeechPlanks, Stick],
+[null, Flint.transformReplace(Flint), null]]);
+// - Alternate Recipe
+recipes.addShaped(BeechFence * 2, [
+[Stick, BeechPlanks, Stick],
+[Stick, BeechPlanks, Stick],
+[IronScrew, Screwdriver, IronScrew]]);
+// -
+recipes.addShaped(BeechFence * 4, [
+[Stick, BeechPlanks, Stick],
+[Stick, BeechPlanks, Stick],
+[SteelScrew, Screwdriver, SteelScrew]]);
+
+// --- Alder Fence
+recipes.addShaped(AlderFence, [
+[Stick, AlderPlanks, Stick],
+[Stick, AlderPlanks, Stick],
+[null, Flint.transformReplace(Flint), null]]);
+// - Alternate Recipe
+recipes.addShaped(AlderFence * 2, [
+[Stick, AlderPlanks, Stick],
+[Stick, AlderPlanks, Stick],
+[IronScrew, Screwdriver, IronScrew]]);
+// -
+recipes.addShaped(AlderFence * 4, [
+[Stick, AlderPlanks, Stick],
+[Stick, AlderPlanks, Stick],
+[SteelScrew, Screwdriver, SteelScrew]]);
+
+// --- Hazel Fence
+recipes.addShaped(HazelFence, [
+[Stick, HazelPlanks, Stick],
+[Stick, HazelPlanks, Stick],
+[null, Flint.transformReplace(Flint), null]]);
+// - Alternate Recipe
+recipes.addShaped(HazelFence * 2, [
+[Stick, HazelPlanks, Stick],
+[Stick, HazelPlanks, Stick],
+[IronScrew, Screwdriver, IronScrew]]);
+// -
+recipes.addShaped(HazelFence * 4, [
+[Stick, HazelPlanks, Stick],
+[Stick, HazelPlanks, Stick],
+[SteelScrew, Screwdriver, SteelScrew]]);
+
+// --- Hornbeam Fence
+recipes.addShaped(HornbeamFence, [
+[Stick, HornbeamPlanks, Stick],
+[Stick, HornbeamPlanks, Stick],
+[null, Flint.transformReplace(Flint), null]]);
+// - Alternate Recipe
+recipes.addShaped(HornbeamFence * 2, [
+[Stick, HornbeamPlanks, Stick],
+[Stick, HornbeamPlanks, Stick],
+[IronScrew, Screwdriver, IronScrew]]);
+// -
+recipes.addShaped(HornbeamFence * 4, [
+[Stick, HornbeamPlanks, Stick],
+[Stick, HornbeamPlanks, Stick],
+[SteelScrew, Screwdriver, SteelScrew]]);
+
+// --- Box Fence
+recipes.addShaped(BoxFence, [
+[Stick, BoxPlanks, Stick],
+[Stick, BoxPlanks, Stick],
+[null, Flint.transformReplace(Flint), null]]);
+// - Alternate Recipe
+recipes.addShaped(BoxFence * 2, [
+[Stick, BoxPlanks, Stick],
+[Stick, BoxPlanks, Stick],
+[IronScrew, Screwdriver, IronScrew]]);
+// -
+recipes.addShaped(BoxFence * 4, [
+[Stick, BoxPlanks, Stick],
+[Stick, BoxPlanks, Stick],
+[SteelScrew, Screwdriver, SteelScrew]]);
+
+// --- Butternut Fence
+recipes.addShaped(ButternutFence, [
+[Stick, ButternutPlanks, Stick],
+[Stick, ButternutPlanks, Stick],
+[null, Flint.transformReplace(Flint), null]]);
+// - Alternate Recipe
+recipes.addShaped(ButternutFence * 2, [
+[Stick, ButternutPlanks, Stick],
+[Stick, ButternutPlanks, Stick],
+[IronScrew, Screwdriver, IronScrew]]);
+// -
+recipes.addShaped(ButternutFence * 4, [
+[Stick, ButternutPlanks, Stick],
+[Stick, ButternutPlanks, Stick],
+[SteelScrew, Screwdriver, SteelScrew]]);
+
+// --- Hickory Fence
+recipes.addShaped(HickoryFence, [
+[Stick, HickoryPlanks, Stick],
+[Stick, HickoryPlanks, Stick],
+[null, Flint.transformReplace(Flint), null]]);
+// - Alternate Recipe
+recipes.addShaped(HickoryFence * 2, [
+[Stick, HickoryPlanks, Stick],
+[Stick, HickoryPlanks, Stick],
+[IronScrew, Screwdriver, IronScrew]]);
+// -
+recipes.addShaped(HickoryFence * 4, [
+[Stick, HickoryPlanks, Stick],
+[Stick, HickoryPlanks, Stick],
+[SteelScrew, Screwdriver, SteelScrew]]);
+
+// --- Whitebeam Fence
+recipes.addShaped(WhitebeamFence, [
+[Stick, WhitebeamPlanks, Stick],
+[Stick, WhitebeamPlanks, Stick],
+[null, Flint.transformReplace(Flint), null]]);
+// - Alternate Recipe
+recipes.addShaped(WhitebeamFence * 2, [
+[Stick, WhitebeamPlanks, Stick],
+[Stick, WhitebeamPlanks, Stick],
+[IronScrew, Screwdriver, IronScrew]]);
+// -
+recipes.addShaped(WhitebeamFence * 4, [
+[Stick, WhitebeamPlanks, Stick],
+[Stick, WhitebeamPlanks, Stick],
+[SteelScrew, Screwdriver, SteelScrew]]);
+
+// --- Elm Fence
+recipes.addShaped(ElmFence, [
+[Stick, ElmPlanks, Stick],
+[Stick, ElmPlanks, Stick],
+[null, Flint.transformReplace(Flint), null]]);
+// - Alternate Recipe
+recipes.addShaped(ElmFence * 2, [
+[Stick, ElmPlanks, Stick],
+[Stick, ElmPlanks, Stick],
+[IronScrew, Screwdriver, IronScrew]]);
+// -
+recipes.addShaped(ElmFence * 4, [
+[Stick, ElmPlanks, Stick],
+[Stick, ElmPlanks, Stick],
+[SteelScrew, Screwdriver, SteelScrew]]);
+
+// --- Apple Fence
+recipes.addShaped(AppleFence, [
+[Stick, ApplePlanks, Stick],
+[Stick, ApplePlanks, Stick],
+[null, Flint.transformReplace(Flint), null]]);
+// - Alternate Recipe
+recipes.addShaped(AppleFence * 2, [
+[Stick, ApplePlanks, Stick],
+[Stick, ApplePlanks, Stick],
+[IronScrew, Screwdriver, IronScrew]]);
+// -
+recipes.addShaped(AppleFence * 4, [
+[Stick, ApplePlanks, Stick],
+[Stick, ApplePlanks, Stick],
+[SteelScrew, Screwdriver, SteelScrew]]);
+
+// --- Yew Fence
+recipes.addShaped(YewFence, [
+[Stick, YewPlanks, Stick],
+[Stick, YewPlanks, Stick],
+[null, Flint.transformReplace(Flint), null]]);
+// - Alternate Recipe
+recipes.addShaped(YewFence * 2, [
+[Stick, YewPlanks, Stick],
+[Stick, YewPlanks, Stick],
+[IronScrew, Screwdriver, IronScrew]]);
+// -
+recipes.addShaped(YewFence * 4, [
+[Stick, YewPlanks, Stick],
+[Stick, YewPlanks, Stick],
+[SteelScrew, Screwdriver, SteelScrew]]);
+
+// --- Pear Fence
+recipes.addShaped(PearFence, [
+[Stick, PearPlanks, Stick],
+[Stick, PearPlanks, Stick],
+[null, Flint.transformReplace(Flint), null]]);
+// - Alternate Recipe
+recipes.addShaped(PearFence * 2, [
+[Stick, PearPlanks, Stick],
+[Stick, PearPlanks, Stick],
+[IronScrew, Screwdriver, IronScrew]]);
+// -
+recipes.addShaped(PearFence * 4, [
+[Stick, PearPlanks, Stick],
+[Stick, PearPlanks, Stick],
+[SteelScrew, Screwdriver, SteelScrew]]);
+
+// --- Hawthorn Fence
+recipes.addShaped(HawthornFence, [
+[Stick, HawthornPlanks, Stick],
+[Stick, HawthornPlanks, Stick],
+[null, Flint.transformReplace(Flint), null]]);
+// - Alternate Recipe
+recipes.addShaped(HawthornFence * 2, [
+[Stick, HawthornPlanks, Stick],
+[Stick, HawthornPlanks, Stick],
+[IronScrew, Screwdriver, IronScrew]]);
+// -
+recipes.addShaped(HawthornFence * 4, [
+[Stick, HawthornPlanks, Stick],
+[Stick, HawthornPlanks, Stick],
+[SteelScrew, Screwdriver, SteelScrew]]);
+
+// --- Rowan Fence
+recipes.addShaped(RowanFence, [
+[Stick, RowanPlanks, Stick],
+[Stick, RowanPlanks, Stick],
+[null, Flint.transformReplace(Flint), null]]);
+// - Alternate Recipe
+recipes.addShaped(RowanFence * 2, [
+[Stick, RowanPlanks, Stick],
+[Stick, RowanPlanks, Stick],
+[IronScrew, Screwdriver, IronScrew]]);
+// -
+recipes.addShaped(RowanFence * 4, [
+[Stick, RowanPlanks, Stick],
+[Stick, RowanPlanks, Stick],
+[SteelScrew, Screwdriver, SteelScrew]]);
+
+// --- Elder Fence
+recipes.addShaped(ElderFence, [
+[Stick, ElderPlanks, Stick],
+[Stick, ElderPlanks, Stick],
+[null, Flint.transformReplace(Flint), null]]);
+// - Alternate Recipe
+recipes.addShaped(ElderFence * 2, [
+[Stick, ElderPlanks, Stick],
+[Stick, ElderPlanks, Stick],
+[IronScrew, Screwdriver, IronScrew]]);
+// -
+recipes.addShaped(ElderFence * 4, [
+[Stick, ElderPlanks, Stick],
+[Stick, ElderPlanks, Stick],
+[SteelScrew, Screwdriver, SteelScrew]]);
+
+// --- Maclura Fence
+recipes.addShaped(MacluraFence, [
+[Stick, MacluraPlanks, Stick],
+[Stick, MacluraPlanks, Stick],
+[null, Flint.transformReplace(Flint), null]]);
+// - Alternate Recipe
+recipes.addShaped(MacluraFence * 2, [
+[Stick, MacluraPlanks, Stick],
+[Stick, MacluraPlanks, Stick],
+[IronScrew, Screwdriver, IronScrew]]);
+// -
+recipes.addShaped(MacluraFence * 4, [
+[Stick, MacluraPlanks, Stick],
+[Stick, MacluraPlanks, Stick],
+[SteelScrew, Screwdriver, SteelScrew]]);
+
+// --- Syzgium Fence
+recipes.addShaped(SyzgiumFence, [
+[Stick, SyzgiumPlanks, Stick],
+[Stick, SyzgiumPlanks, Stick],
+[null, Flint.transformReplace(Flint), null]]);
+// - Alternate Recipe
+recipes.addShaped(SyzgiumFence * 2, [
+[Stick, SyzgiumPlanks, Stick],
+[Stick, SyzgiumPlanks, Stick],
+[IronScrew, Screwdriver, IronScrew]]);
+// -
+recipes.addShaped(SyzgiumFence * 4, [
+[Stick, SyzgiumPlanks, Stick],
+[Stick, SyzgiumPlanks, Stick],
+[SteelScrew, Screwdriver, SteelScrew]]);
+
+// --- Brazilwood Fence
+recipes.addShaped(BrazilwoodFence, [
+[Stick, BrazilwoodPlanks, Stick],
+[Stick, BrazilwoodPlanks, Stick],
+[null, Flint.transformReplace(Flint), null]]);
+// - Alternate Recipe
+recipes.addShaped(BrazilwoodFence * 2, [
+[Stick, BrazilwoodPlanks, Stick],
+[Stick, BrazilwoodPlanks, Stick],
+[IronScrew, Screwdriver, IronScrew]]);
+// -
+recipes.addShaped(BrazilwoodFence * 4, [
+[Stick, BrazilwoodPlanks, Stick],
+[Stick, BrazilwoodPlanks, Stick],
+[SteelScrew, Screwdriver, SteelScrew]]);
+
+// --- Logwood Fence
+recipes.addShaped(LogwoodFence, [
+[Stick, LogwoodPlanks, Stick],
+[Stick, LogwoodPlanks, Stick],
+[null, Flint.transformReplace(Flint), null]]);
+// - Alternate Recipe
+recipes.addShaped(LogwoodFence * 2, [
+[Stick, LogwoodPlanks, Stick],
+[Stick, LogwoodPlanks, Stick],
+[IronScrew, Screwdriver, IronScrew]]);
+// -
+recipes.addShaped(LogwoodFence * 4, [
+[Stick, LogwoodPlanks, Stick],
+[Stick, LogwoodPlanks, Stick],
+[SteelScrew, Screwdriver, SteelScrew]]);
+
+// --- Iroko Fence
+recipes.addShaped(IrokoFence, [
+[Stick, IrokoPlanks, Stick],
+[Stick, IrokoPlanks, Stick],
+[null, Flint.transformReplace(Flint), null]]);
+// - Alternate Recipe
+recipes.addShaped(IrokoFence * 2, [
+[Stick, IrokoPlanks, Stick],
+[Stick, IrokoPlanks, Stick],
+[IronScrew, Screwdriver, IronScrew]]);
+// -
+recipes.addShaped(IrokoFence * 4, [
+[Stick, IrokoPlanks, Stick],
+[Stick, IrokoPlanks, Stick],
+[SteelScrew, Screwdriver, SteelScrew]]);
+
+// --- Locust Fence
+recipes.addShaped(LocustFence, [
+[Stick, LocustPlanks, Stick],
+[Stick, LocustPlanks, Stick],
+[null, Flint.transformReplace(Flint), null]]);
+// - Alternate Recipe
+recipes.addShaped(LocustFence * 2, [
+[Stick, LocustPlanks, Stick],
+[Stick, LocustPlanks, Stick],
+[IronScrew, Screwdriver, IronScrew]]);
+// -
+recipes.addShaped(LocustFence * 4, [
+[Stick, LocustPlanks, Stick],
+[Stick, LocustPlanks, Stick],
+[SteelScrew, Screwdriver, SteelScrew]]);
+
+// --- Eucalyptus Fence
+recipes.addShaped(EucalyptusFence, [
+[Stick, EucalyptusPlanks, Stick],
+[Stick, EucalyptusPlanks, Stick],
+[null, Flint.transformReplace(Flint), null]]);
+// - Alternate Recipe
+recipes.addShaped(EucalyptusFence * 2, [
+[Stick, EucalyptusPlanks, Stick],
+[Stick, EucalyptusPlanks, Stick],
+[IronScrew, Screwdriver, IronScrew]]);
+// -
+recipes.addShaped(EucalyptusFence * 4, [
+[Stick, EucalyptusPlanks, Stick],
+[Stick, EucalyptusPlanks, Stick],
+[SteelScrew, Screwdriver, SteelScrew]]);
+
+// --- Purpleheart Fence
+recipes.addShaped(PurpleheartFence, [
+[Stick, PurpleheartPlanks, Stick],
+[Stick, PurpleheartPlanks, Stick],
+[null, Flint.transformReplace(Flint), null]]);
+// - Alternate Recipe
+recipes.addShaped(PurpleheartFence * 2, [
+[Stick, PurpleheartPlanks, Stick],
+[Stick, PurpleheartPlanks, Stick],
+[IronScrew, Screwdriver, IronScrew]]);
+// -
+recipes.addShaped(PurpleheartFence * 4, [
+[Stick, PurpleheartPlanks, Stick],
+[Stick, PurpleheartPlanks, Stick],
+[SteelScrew, Screwdriver, SteelScrew]]);
+
+// --- Ash Fence
+recipes.addShaped(AshFence, [
+[Stick, AshPlanks, Stick],
+[Stick, AshPlanks, Stick],
+[null, Flint.transformReplace(Flint), null]]);
+// - Alternate Recipe
+recipes.addShaped(AshFence * 2, [
+[Stick, AshPlanks, Stick],
+[Stick, AshPlanks, Stick],
+[IronScrew, Screwdriver, IronScrew]]);
+// -
+recipes.addShaped(AshFence * 4, [
+[Stick, AshPlanks, Stick],
+[Stick, AshPlanks, Stick],
+[SteelScrew, Screwdriver, SteelScrew]]);
+
+// --- Holly Fence
+recipes.addShaped(HollyFence, [
+[Stick, HollyPlanks, Stick],
+[Stick, HollyPlanks, Stick],
+[null, Flint.transformReplace(Flint), null]]);
+// - Alternate Recipe
+recipes.addShaped(HollyFence * 2, [
+[Stick, HollyPlanks, Stick],
+[Stick, HollyPlanks, Stick],
+[IronScrew, Screwdriver, IronScrew]]);
+// -
+recipes.addShaped(HollyFence * 4, [
+[Stick, HollyPlanks, Stick],
+[Stick, HollyPlanks, Stick],
+[SteelScrew, Screwdriver, SteelScrew]]);
+
+// --- Olive Fence
+recipes.addShaped(OliveFence, [
+[Stick, OlivePlanks, Stick],
+[Stick, OlivePlanks, Stick],
+[null, Flint.transformReplace(Flint), null]]);
+// - Alternate Recipe
+recipes.addShaped(OliveFence * 2, [
+[Stick, OlivePlanks, Stick],
+[Stick, OlivePlanks, Stick],
+[IronScrew, Screwdriver, IronScrew]]);
+// -
+recipes.addShaped(OliveFence * 4, [
+[Stick, OlivePlanks, Stick],
+[Stick, OlivePlanks, Stick],
+[SteelScrew, Screwdriver, SteelScrew]]);
+
+// --- Sweetgum Fence
+recipes.addShaped(SweetgumFence, [
+[Stick, SweetgumPlanks, Stick],
+[Stick, SweetgumPlanks, Stick],
+[null, Flint.transformReplace(Flint), null]]);
+// - Alternate Recipe
+recipes.addShaped(SweetgumFence * 2, [
+[Stick, SweetgumPlanks, Stick],
+[Stick, SweetgumPlanks, Stick],
+[IronScrew, Screwdriver, IronScrew]]);
+// -
+recipes.addShaped(SweetgumFence * 4, [
+[Stick, SweetgumPlanks, Stick],
+[Stick, SweetgumPlanks, Stick],
+[SteelScrew, Screwdriver, SteelScrew]]);
+
+// --- Rosewood Fence
+recipes.addShaped(RosewoodFence, [
+[Stick, RosewoodPlanks, Stick],
+[Stick, RosewoodPlanks, Stick],
+[null, Flint.transformReplace(Flint), null]]);
+// - Alternate Recipe
+recipes.addShaped(RosewoodFence * 2, [
+[Stick, RosewoodPlanks, Stick],
+[Stick, RosewoodPlanks, Stick],
+[IronScrew, Screwdriver, IronScrew]]);
+// -
+recipes.addShaped(RosewoodFence * 4, [
+[Stick, RosewoodPlanks, Stick],
+[Stick, RosewoodPlanks, Stick],
+[SteelScrew, Screwdriver, SteelScrew]]);
+
+// --- Gingko Fence
+recipes.addShaped(GingkoFence, [
+[Stick, GingkoPlanks, Stick],
+[Stick, GingkoPlanks, Stick],
+[null, Flint.transformReplace(Flint), null]]);
+// - Alternate Recipe
+recipes.addShaped(GingkoFence * 2, [
+[Stick, GingkoPlanks, Stick],
+[Stick, GingkoPlanks, Stick],
+[IronScrew, Screwdriver, IronScrew]]);
+// -
+recipes.addShaped(GingkoFence * 4, [
+[Stick, GingkoPlanks, Stick],
+[Stick, GingkoPlanks, Stick],
+[SteelScrew, Screwdriver, SteelScrew]]);
+
+// --- Pink Ivory Fence
+recipes.addShaped(PinkIvoryFence, [
+[Stick, PinkIvoryPlanks, Stick],
+[Stick, PinkIvoryPlanks, Stick],
+[null, Flint.transformReplace(Flint), null]]);
+// - Alternate Recipe
+recipes.addShaped(PinkIvoryFence * 2, [
+[Stick, PinkIvoryPlanks, Stick],
+[Stick, PinkIvoryPlanks, Stick],
+[IronScrew, Screwdriver, IronScrew]]);
+// -
+recipes.addShaped(PinkIvoryFence * 4, [
+[Stick, PinkIvoryPlanks, Stick],
+[Stick, PinkIvoryPlanks, Stick],
+[SteelScrew, Screwdriver, SteelScrew]]);
 
 
 
