@@ -76,18 +76,18 @@ val TinLantern = <Railcraft:lantern.metal:3>;
 val LeadLantern = <Railcraft:lantern.metal:4>;
 val SteelLantern = <Railcraft:lantern.metal:5>;
 
-val AbyssalBSlab = <Railcraft:slab:27>;
-val BleachedBSlab = <Railcraft:slab:25>;
-val BloodBSlab = <Railcraft:slab:26>;
-val FrostBSlab = <Railcraft:slab:23>;
-val InfernalBSlab = <Railcraft:slab:22>;
-val NetherBSlab = <Railcraft:slab:28>;
-val QuarriedBSlab = <Railcraft:slab:24>;
-val SandyBSlab = <Railcraft:slab:21>;
+val AbyssalBSlab = <Railcraft:slab:28>;
+val BleachedBSlab = <Railcraft:slab:26>;
+val BloodBSlab = <Railcraft:slab:27>;
+val FrostBSlab = <Railcraft:slab:24>;
+val InfernalBSlab = <Railcraft:slab:23>;
+val NetherBSlab = <Railcraft:slab:29>;
+val QuarriedBSlab = <Railcraft:slab:25>;
+val SandyBSlab = <Railcraft:slab:22>;
 val SandstoneBSlab = <minecraft:stone_slab:1>;
 val StoneBSlab = <minecraft:stone_slab>;
 val PressurePlate = <minecraft:stone_pressure_plate>;
-val WoodLogs = <ore:logWood>;
+val Log = <ore:logWood>;
 val StoneBrick = <ore:stoneBricks>;
 val MossyStoneBricks = <ore:stoneMossy>;
 val Minecart = <minecraft:minecart>;
@@ -1149,9 +1149,9 @@ PlateBender.addRecipe(<Railcraft:part.rail> * 10, <gregtech:gt.metaitem.01:23316
 
 // --- Item Dtector ---
 recipes.addShaped(<Railcraft:detector>, [
-[WoodLogs, Track, WoodLogs],
+[Log, Track, Log],
 [RedAlloyPlate, IronPressurePlate, RedAlloyPlate],
-[WoodLogs, RedAlloyPlate, WoodLogs]]);
+[Log, RedAlloyPlate, Log]]);
 
 // --- Any Detector --- 
 recipes.addShaped(<Railcraft:detector:1>, [
@@ -1191,9 +1191,9 @@ recipes.addShaped(<Railcraft:detector:6>, [
 
 // --- Animal Detector ---
 recipes.addShaped(<Railcraft:detector:7>, [
-[WoodLogs, Leather, WoodLogs],
+[Log, Leather, Log],
 [RedAlloyPlate, IronPressurePlate, RedAlloyPlate],
-[WoodLogs, RedAlloyPlate, WoodLogs]]);
+[Log, RedAlloyPlate, Log]]);
 
 // --- Tank Detector ---
 recipes.addShaped(<Railcraft:detector:8>, [
@@ -1215,9 +1215,9 @@ recipes.addShaped(<Railcraft:detector:10>, [
 
 // --- Age Detector ---
 recipes.addShaped(<Railcraft:detector:11>, [
-[WoodLogs, <ore:cropWheat>, WoodLogs],
+[Log, <ore:cropWheat>, Log],
 [RedAlloyPlate, IronPressurePlate, RedAlloyPlate],
-[WoodLogs, RedAlloyPlate, WoodLogs]]);
+[Log, RedAlloyPlate, Log]]);
 
 // --- Train Detector ---
 recipes.addShaped(<Railcraft:detector:12>, [
