@@ -1,7 +1,7 @@
 ===== DreamCraft =====
 =====================================================
 
-Version 1.7.4.0 BETA is out (27.01.2015)
+Version 1.8.4.0 BETA is out (16.02.2015)(DC Coremod 0.1.3)
 
 A GregTech-based modpack with magical Mods like Thaumcraft and its addons, Witchery and Frobidden magic.
 
