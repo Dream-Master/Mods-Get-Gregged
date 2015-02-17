@@ -32,8 +32,21 @@ val RawMeteorIron = <GalacticraftCore:item.meteoricIronRaw>;
 val DeshBlock = <GalacticraftMars:tile.mars:8>;
 val CopperBlock = <GalacticraftCore:tile.gcBlockCore:9>;
 val TinBlock = <GalacticraftCore:tile.gcBlockCore:10>;
+val TinDecoBlock = <GalacticraftCore:tile.gcBlockCore:3>;
+val TinDecoBlockTwo = <GalacticraftCore:tile.gcBlockCore:4>;
 val AlBlock = <GalacticraftCore:tile.gcBlockCore:11>;
 val SolidMeteorIron = <GalacticraftCore:tile.gcBlockCore:12>;
+
+val LaunchPad = <GalacticraftCore:tile.landingPad>;
+val BuggyPad = <GalacticraftCore:tile.landingPad:1>;
+
+val OxygenCollector = <GalacticraftCore:tile.oxygenCollector>;
+val OxygenCompressor = <GalacticraftCore:tile.oxygenCompressor>;
+val OxygenDecompressor = <GalacticraftCore:tile.oxygenCompressor:4>;
+val OxygenStorage = <GalacticraftCore:tile.machine2:8>;
+val OxygenBDistributor = <GalacticraftCore:tile.distributor>;
+val OxygenSealer = <GalacticraftCore:tile.sealer>;
+val OxygenDetector = <GalacticraftCore:tile.oxygenDetector>;
 
 val GtDeshDust = <gregtech:gt.metaitem.01:2884>;
 val GtDeshRod = <gregtech:gt.metaitem.01:23884>;
@@ -41,6 +54,8 @@ val GtDeshIngot = <gregtech:gt.metaitem.01:11884>;
 
 val DeshStick = <GalacticraftMars:item.null:1>;
 val GSTorch = <GalacticraftCore:tile.glowstoneTorch>;
+val OxygenFan = <GalacticraftCore:item.airFan>;
+val OxygenConcentrator = <GalacticraftCore:item.oxygenConcentrator>;
 
 val CannedFoodOne = <GalacticraftCore:item.basicItem:15>;
 val CannedFoodTwo = <GalacticraftCore:item.basicItem:16>;
@@ -86,6 +101,7 @@ val GCCompressedTi = <GalacticraftMars:item.itemBasicAsteroids:6>;
 val TinCanister = <GalacticraftCore:item.canister>;
 val CopperCanister = <GalacticraftCore:item.canister:1>;
 val EmptyCanister = <GalacticraftCore:item.fuelCanisterPartial:1001>;
+val HeavyOxygenTank = <GalacticraftCore:item.oxygenTankHeavyFull:2700>;
 val BasicWafer = <GalacticraftCore:item.basicItem:13>;
 val AdvWafer = <GalacticraftCore:item.basicItem:14>;
 val GCAlWire = <GalacticraftCore:tile.aluminumWire>;
@@ -96,7 +112,6 @@ val AirVent = <GalacticraftCore:item.airVent>;
 val HeavyDutyPlateTOne = <GalacticraftCore:item.heavyPlating>;
 val HeavyDutyPlateTTwo = <GalacticraftMars:item.null:3>;
 val HeavyDutyPlateTThree = <GalacticraftMars:item.itemBasicAsteroids>;
-val TinDecoBlock = <GalacticraftCore:tile.gcBlockCore:4>;
 val SensorLens = <GalacticraftCore:item.sensorLens>;
 val SteelPole = <GalacticraftCore:item.steelPole>;
 
@@ -104,12 +119,14 @@ val AdvAlloy = <ore:plateAlloyAdvanced>;
 val MeteorPlate = <ore:plateMeteoricIron>;
 val MeteorScrew = <ore:screwMeteoricSteel>;
 val SteelScrew = <ore:screwSteel>;
+val SteelBolt = <ore:boltSteel>;
 val SSteelBolt = <ore:boltStainlessSteel>;
 val TSteelBolt = <ore:boltTungstenSteel>;
 val DeshIngot = <ore:ingotDesh>;
 val DeshPlate = <ore:plateDesh>;
 val DeshRing = <ore:ringDesh>;
 val DeshRod = <ore:stickDesh>;
+val TinFoil = <ore:foilTin>;
 val AlFoil = <ore:foilAluminium>;
 val AlRing = <ore:ringAluminium>;
 val DarkAshes = <gregtech:gt.metaitem.01:2816>;
@@ -140,15 +157,22 @@ val LiquidNitrogenCell = <IC2:itemFluidCell>.withTag({Fluid: {Amount: 1000, Flui
 val BasicBoard = <gregtech:gt.metaitem.01:32710>;
 val ProcessorBoard = <gregtech:gt.metaitem.01:32712>;
 val MVConveyor = <gregtech:gt.metaitem.01:32631>;
+val MVPiston = <gregtech:gt.metaitem.01:32641>;
+val MVPump = <gregtech:gt.metaitem.01:32611>;
+val MVMotor = <gregtech:gt.metaitem.01:32601>;
+val MVHull = <gregtech:gt.blockmachines:12>;
+val FluidDetector = <gregtech:gt.metaitem.01:32732>;
+val SteelRotor = <ore:rotorSteel>;
+val AlRotor = <ore:rotorAluminium>;
+val MVSensor = <gregtech:gt.metaitem.01:32691>;
 val SolarPanel = <gregtech:gt.metaitem.01:32750>;
-val LVPump = <gregtech:gt.metaitem.01:32610>;
-val SteelRotor = <gregtech:gt.metaitem.01:32622>;
 
 val RubberBlock = <IC2:blockRubber>;
 val IC2RGlass = <IC2:blockAlloyGlass>;
 val ReinforcedGlass = <ore:glassReinforced>;
 val RCIronPlate = <Railcraft:part.plate>;
 val RCSteelPlate = <Railcraft:part.plate:1>;
+val SteelSlab = <Railcraft:slab:43>;
 
 val RSTorch = <minecraft:redstone_torch>;
 val GSDust = <minecraft:glowstone_dust>;
@@ -160,6 +184,7 @@ val Apple = <minecraft:apple>;
 val Carrot = <minecraft:carrot>;
 val Melon = <minecraft:melon>;
 val Potato = <minecraft:potato>;
+val Stone = <ore:stone>;
 
 val TOneAlloy = <minecraft:stick>;
 val TTwoAlloy = <minecraft:stick>;
@@ -172,6 +197,7 @@ val HHammer = <ore:craftingToolHardHammer>;
 val Wrench = <ore:craftingToolWrench>;
 val File = <ore:craftingToolFile>;
 val WireCutter = <ore:craftingToolWireCutter>;
+val Screwdriver = <ore:craftingToolScrewdriver>;
 
 
 
@@ -190,11 +216,46 @@ recipes.remove(CopperBlock);
 // --- Tin Block
 recipes.remove(TinBlock);
 
+// --- Tin Decoration Block
+recipes.remove(TinDecoBlock);
+recipes.remove(TinDecoBlockTwo);
+
 // --- Aluminum Block
 recipes.remove(AlBlock);
 
 // --- Solid Meteoric Iron
 recipes.remove(SolidMeteorIron);
+
+// --- Rocket Launch Pad
+recipes.remove(LaunchPad);
+
+// --- Buggy Fueling Pad
+recipes.remove(BuggyPad);
+
+
+// ||||||| Machines |||||||
+
+
+// --- Oxygen Collector
+recipes.remove(OxygenCollector);
+
+// --- Oxygen Compressor
+recipes.remove(OxygenCompressor);
+
+// --- Oxygen Decompressor
+recipes.remove(OxygenDecompressor);
+
+// --- Oxygen Storage Module
+recipes.remove(OxygenStorage);
+
+// --- Oxygen Bubble Distributor
+recipes.remove(OxygenBDistributor);
+
+// --- Oxygen Sealer
+recipes.remove(OxygenSealer);
+
+// --- Oxygen Detector
+recipes.remove(OxygenDetector);
 
 
 // ||||||| Items |||||||
@@ -220,8 +281,18 @@ recipes.remove(CannedFoodFour);
 
 // --- Tin Canister
 recipes.remove(TinCanister);
+
 // --- Copper Canister
 recipes.remove(CopperCanister);
+
+// --- Oxygen Vent
+recipes.remove(AirVent);
+
+// --- Oxygen Fan
+recipes.remove(OxygenFan);
+
+// --- Oxygen Concentrator
+recipes.remove(OxygenConcentrator);
 
 
 
@@ -296,6 +367,85 @@ Compressor.addRecipe(DeshBlock, GtDeshIngot * 9);
 // --- Solid Meteoric Iron
 Compressor.addRecipe(SolidMeteorIron, GtMeteorIngot * 9);
 
+// --- Tin Decoration Blocks
+recipes.addShaped(TinDecoBlock, [
+[TinFoil, CompressedTin, HHammer],
+[CompressedTin, <ore:stone>, CompressedTin],
+[Wrench, CompressedTin, TinFoil]]);
+// - Alternate Recipe
+recipes.addShaped(TinDecoBlock, [
+[HHammer, CompressedTin, TinFoil],
+[CompressedTin, <ore:stone>, CompressedTin],
+[TinFoil, CompressedTin, Wrench]]);
+// =-=-=-=
+recipes.addShaped(TinDecoBlockTwo, [
+[TinFoil, CompressedTin, Wrench],
+[CompressedTin, Stone, CompressedTin],
+[HHammer, CompressedTin, TinFoil]]);
+// - Alternate Recipe
+recipes.addShaped(TinDecoBlockTwo, [
+[Wrench, CompressedTin, TinFoil],
+[CompressedTin, Stone, CompressedTin],
+[TinFoil, CompressedTin, HHammer]]);
+
+// --- Rocket Launch Pad
+recipes.addShaped(LaunchPad, [
+[CompressedIron, CompressedSteel, CompressedIron],
+[AdvAlloy, CompressedBronze, AdvAlloy],
+[SteelSlab, SteelSlab, SteelSlab]]);
+
+// --- Buggy Fueling Pad
+recipes.addShaped(BuggyPad, [
+[CompressedSteel, CompressedSteel, CompressedSteel],
+[AdvAlloy, CompressedBronze, AdvAlloy],
+[SteelSlab, SteelSlab, SteelSlab]]);
+
+
+// ||||||| Machines |||||||
+
+
+// --- Oxygen Collector
+recipes.addShaped(OxygenCollector, [
+[CompressedAl, OxygenConcentrator, CompressedAl],
+[OxygenFan, MVHull, OxygenFan],
+[CompressedAl, MVMotor, CompressedAl]]);
+
+// --- Oxygen Compressor
+recipes.addShaped(OxygenCompressor, [
+[CompressedAl, OxygenConcentrator, CompressedAl],
+[MVPiston, MVHull, MVPiston],
+[CompressedAl, MVMotor, CompressedAl]]);
+
+// --- Oxygen Decompressor
+recipes.addShaped(OxygenDecompressor, [
+[CompressedAl, AirVent, CompressedAl],
+[OxygenFan, MVHull, OxygenFan],
+[CompressedAl, MVMotor, CompressedAl]]);
+
+// --- Oxygen Storage Module
+recipes.addShaped(OxygenStorage, [
+[CompressedSteel, HeavyOxygenTank, CompressedSteel],
+[HeavyOxygenTank, MVHull, HeavyOxygenTank],
+[CompressedSteel, HeavyOxygenTank, CompressedSteel]]);
+
+// --- Oxygen Bubble Distributor
+recipes.addShaped(OxygenBDistributor, [
+[CompressedSteel, OxygenFan, CompressedSteel],
+[AirVent, MVHull, AirVent],
+[CompressedAl, MVMotor, CompressedAl]]);
+
+// --- Oxygen Sealer
+recipes.addShaped(OxygenSealer, [
+[CompressedAl, AirVent, CompressedAl],
+[AirVent, OxygenBDistributor, AirVent],
+[CompressedAl, OxygenDetector, CompressedAl]]);
+
+// --- Oxygen Detector
+recipes.addShaped(OxygenDetector, [
+[CompressedAl, MVSensor, CompressedAl],
+[OxygenConcentrator, MVHull, OxygenConcentrator],
+[CompressedAl, FluidDetector, CompressedAl]]);
+
 
 // ||||||| Items |||||||
 
@@ -360,6 +510,7 @@ recipes.addShaped(HydrogenPipe, [
 [OxygenPipe, OxygenPipe, OxygenPipe],
 [AlRing, WireCutter, AlRing],
 [OxygenPipe, OxygenPipe, OxygenPipe]]);
+// - Alternate Recipe
 Assembler.addRecipe(HydrogenPipe, OxygenPipe * 3, GtAlRing, 240, 32);
 
 // --- Oxygen Pipe
@@ -367,6 +518,39 @@ Extruder.addRecipe(OxygenPipe, IC2RGlass, PipeShape * 0, 160, 120);
 
 // --- Empty Canister
 Assembler.addRecipe(EmptyCanister, GCCompressedTin * 7, GtAlRing, 160, 96);
+
+// --- Oxygen Vent
+recipes.addShaped(AirVent, [
+[CompressedTin, IronBars, CompressedTin],
+[IronBars, CompressedAl, IronBars],
+[CompressedTin, IronBars, CompressedTin]]);
+
+// --- Oxygen Fan
+recipes.addShaped(OxygenFan, [
+[AlRotor, SteelScrew, Screwdriver],
+[SteelBolt, BasicWafer, SteelScrew],
+[Wrench, SteelBolt, AlRotor]]);
+// - Alternate Recipe
+recipes.addShaped(OxygenFan, [
+[AlRotor, SteelScrew, Wrench],
+[SteelBolt, BasicWafer, SteelScrew],
+[Screwdriver, SteelBolt, AlRotor]]);
+// -
+recipes.addShaped(OxygenFan, [
+[Screwdriver, SteelScrew, AlRotor],
+[SteelBolt, BasicWafer, SteelScrew],
+[AlRotor, SteelBolt, Wrench]]);
+// -
+recipes.addShaped(OxygenFan, [
+[Wrench, SteelScrew, AlRotor],
+[SteelBolt, BasicWafer, SteelScrew],
+[AlRotor, SteelBolt, Screwdriver]]);
+
+// --- Oxygen Concentrator
+recipes.addShaped(OxygenConcentrator, [
+[CompressedSteel, AirVent, CompressedSteel],
+[CompressedSteel, OxygenFan, CompressedSteel],
+[EmptyCanister, MVPump, EmptyCanister]]);
 
 
 
@@ -543,25 +727,7 @@ oreDict.oreDesh.add(DeshOre);
 
 
 
-//Rocket Launch Pad
-recipes.remove(<GalacticraftCore:tile.landingPad>);
-//Buggy Fueling Pad
-recipes.remove(<GalacticraftCore:tile.landingPad:1>);
-//Oxygen Collector
-recipes.remove(<GalacticraftCore:tile.oxygenCollector>);
-//Oxygen Compressor
-recipes.remove(<GalacticraftCore:tile.oxygenCompressor>);
-//Oxygen Decompressor
-recipes.remove(<GalacticraftCore:tile.oxygenCompressor:4>);
-//Oxygen Storage Module
-recipes.remove(<GalacticraftCore:tile.machine2:8>);
-//Oxygen Bubble Distributor
-recipes.remove(<GalacticraftCore:tile.distributor>);
-//Oxygen Sealer
-recipes.remove(<GalacticraftCore:tile.sealer>);
 // --- Steel Pole
-//Oxygen Detector
-recipes.remove(<GalacticraftCore:tile.oxygenDetector>);
 //Oxygen Pipe
 recipes.remove(OxygenPipe);
 //Refinery
@@ -578,9 +744,6 @@ recipes.remove(<GalacticraftCore:tile.cargo>);
 recipes.remove(<GalacticraftCore:tile.cargo:4>);
 //Nasa Workbench
 recipes.remove(<GalacticraftCore:tile.rocketWorkbench>);
-//Tin Decoration Block
-recipes.remove(<GalacticraftCore:tile.gcBlockCore:3>);
-recipes.remove(TinDecoBlock);
 //Meteoric Iron Ingot
 recipes.remove(<gregtech:gt.metaitem.01:11340>);
 //Air Lock Frame
@@ -647,12 +810,6 @@ recipes.remove(<GalacticraftCore:item.oxygenTankHeavyFull:2700>);
 recipes.remove(SensorLens);
 //Sensor Glasses
 recipes.remove(<GalacticraftCore:item.sensorGlasses>);
-//Oxygen Vent
-recipes.remove(AirVent);
-//Oxygen Fan
-recipes.remove(<GalacticraftCore:item.airFan>);
-//Oxygen Concentrator
-recipes.remove(<GalacticraftCore:item.oxygenConcentrator>);
 //Tier 1 Rocket Engine
 recipes.remove(<GalacticraftCore:item.engine>);
 //Tier 1 Booster
@@ -662,7 +819,7 @@ recipes.remove(<GalacticraftCore:item.noseCone>);
 //Steel Pole
 recipes.remove(SteelPole);
 //Canister
-recipes.remove(<GalacticraftCore:item.fuelCanisterPartial:1001>);
+recipes.remove(EmptyCanister);
 //Oil Extractor
 recipes.remove(<GalacticraftCore:item.oilExtractor>);
 //Buggy Wheel
@@ -679,7 +836,7 @@ recipes.remove(<GalacticraftCore:item.basicItem:19>);
 recipes.remove(<GalacticraftCore:item.battery:*>);
 //Gas Liquifier
 recipes.remove(<GalacticraftMars:tile.marsMachineT2>);
-//Methan Synthesizer
+//Methane Synthesizer
 recipes.remove(<GalacticraftMars:tile.marsMachineT2:4>);
 //Water Electrolyzer
 recipes.remove(<GalacticraftMars:tile.marsMachineT2:8>);
@@ -725,61 +882,7 @@ recipes.remove(<GalacticraftMars:tile.hydrogenPipe>);
 //Carbon Fragments
 recipes.remove(<GalacticraftMars:item.carbonFragments>);
 
-//add Recipes
-
-//Rocket Launch Pad
-recipes.addShaped(<GalacticraftCore:tile.landingPad> * 3, [
-[CompressedIron, CompressedIron, CompressedIron],
-[AdvAlloy, AdvAlloy, AdvAlloy],
-[<ore:blockIron>, <ore:blockIron>, <ore:blockIron>]]);
-
-//Buggy Fueling Pad
-recipes.addShaped(<GalacticraftCore:tile.landingPad:1> * 3, [
-[CompressedSteel, CompressedSteel, CompressedSteel],
-[AdvAlloy, AdvAlloy, AdvAlloy],
-[<ore:blockSteel>, <ore:blockSteel>, <ore:blockSteel>]]);
-
-//Oxygen Collector
-recipes.addShaped(<GalacticraftCore:tile.oxygenCollector>, [
-[CompressedAl, <GalacticraftCore:item.oxygenConcentrator>, CompressedAl],
-[AirVent, <GalacticraftCore:item.airFan>, <gregtech:gt.metaitem.01:32600>],
-[CompressedSteel, <ore:cableGt02Aluminium>, CompressedSteel]]);
-
-//Oxygen Compressor
-recipes.addShaped(<GalacticraftCore:tile.oxygenCompressor>, [
-[CompressedAl, <GalacticraftCore:item.oxygenConcentrator>, CompressedAl],
-[<gregtech:gt.metaitem.01:32641>, <GalacticraftCore:item.fuelCanisterPartial:1001>, <gregtech:gt.metaitem.01:32601>],
-[CompressedSteel, CompressedBronze, CompressedSteel]]);
-
-//Oxygen Decompressor
-recipes.addShaped(<GalacticraftCore:tile.oxygenCompressor:4>, [
-[CompressedAl, <GalacticraftCore:item.oxygenConcentrator>, CompressedAl],
-[<gregtech:gt.metaitem.01:32600>, <GalacticraftCore:item.fuelCanisterPartial:1001>, <GalacticraftCore:item.airFan>],
-[CompressedSteel, CompressedBronze, CompressedSteel]]);
-
-//Oxygen Storage Module
-recipes.addShaped(<GalacticraftCore:tile.machine2:8>, [
-[CompressedSteel, <GalacticraftCore:item.oxygenTankHeavyFull:2700>, CompressedSteel],
-[<GalacticraftCore:item.oxygenTankHeavyFull:2700>, <gregtech:gt.blockcasings2>, <GalacticraftCore:item.oxygenTankHeavyFull:2700>],
-[CompressedSteel, <GalacticraftCore:item.oxygenTankHeavyFull:2700>, CompressedSteel]]);
-
-//Oxygen Bubble Distributor
-recipes.addShaped(<GalacticraftCore:tile.distributor>, [
-[CompressedAl, <GalacticraftCore:item.airFan>, CompressedAl],
-[AirVent, <gregtech:gt.metaitem.01:32600>, AirVent],
-[CompressedSteel, <GalacticraftCore:item.airFan>, CompressedSteel]]);
-
-//Oxygen Sealer
-recipes.addShaped(<GalacticraftCore:tile.sealer>, [
-[CompressedAl, AirVent, CompressedAl],
-[AirVent, <GalacticraftCore:tile.distributor>, AirVent],
-[CompressedSteel, <GalacticraftCore:tile.oxygenDetector>, CompressedSteel]]);
-
-//Oxygen Detector
-recipes.addShaped(<GalacticraftCore:tile.oxygenDetector>, [
-[CompressedSteel, CompressedSteel, CompressedSteel],
-[AirVent, <gregtech:gt.metaitem.01:32690>, AirVent],
-[CompressedAl, <gregtech:gt.blockmachines:2000>, CompressedAl]]);
+// ----------------------------------------------------------------------------- add Recipes
 
 //Fuel Loader
 recipes.addShaped(<GalacticraftCore:tile.fuelLoader>, [
@@ -804,17 +907,6 @@ recipes.addShaped(<GalacticraftCore:tile.rocketWorkbench>, [
 [CompressedTi, <gregtech:gt.metaitem.01:32491>, CompressedTi],
 [<gregtech:gt.metaitem.01:32652>, AdvWafer, <gregtech:gt.metaitem.01:32652>],
 [<ore:circuitMaster>, <ore:cableGt04Aluminium>, <ore:circuitElite>]]);
-
-//Tin Decoration Block
-recipes.addShaped(TinDecoBlock, [
-[HHammer, CompressedTin, null],
-[CompressedTin, <ore:stone>, CompressedTin],
-[null, CompressedTin, Wrench]]);
-
-recipes.addShaped(<GalacticraftCore:tile.gcBlockCore:3>, [
-[null, CompressedTin, HHammer],
-[CompressedTin, <ore:stone>, CompressedTin],
-[Wrench, CompressedTin, null]]);
 
 //Air Lock Frame
 recipes.addShaped(<GalacticraftCore:tile.airLockFrame>, [
@@ -918,7 +1010,7 @@ recipes.addShaped(<GalacticraftCore:item.oxygenMask>, [
 //Oxygen Gear
 recipes.addShaped(<GalacticraftCore:item.oxygenGear>, [
 [OxygenPipe,OxygenPipe,OxygenPipe],
-[LVPump, <GalacticraftCore:item.oxygenConcentrator>, LVPump],
+[MVPump, <GalacticraftCore:item.oxygenConcentrator>, MVPump],
 [OxygenPipe, null, OxygenPipe]]);
 
 //Light Oxygen Tak
@@ -967,24 +1059,6 @@ recipes.addShaped(<GalacticraftCore:item.sensorGlasses>, [
 [DeshRing, <ore:boltDesh>, DeshRing],
 [SensorLens, null, SensorLens]]);
 
-//Oxygen Vent
-recipes.addShaped(AirVent, [
-[IronBars, CompressedTin, IronBars],
-[CompressedTin, CompressedSteel, CompressedTin],
-[IronBars, CompressedTin, IronBars]]);
-
-//Oxygen Fan
-recipes.addShaped(<GalacticraftCore:item.airFan>, [
-[SteelScrew, null, SteelScrew],
-[SteelRotor, BasicWafer, SteelRotor],
-[SteelScrew, null, SteelScrew]]);
-
-//Oxygen Concentrator
-recipes.addShaped(<GalacticraftCore:item.oxygenConcentrator>, [
-[CompressedSteel, AirVent, CompressedSteel],
-[CompressedSteel, <GalacticraftCore:item.airFan>, CompressedSteel],
-[<GalacticraftCore:item.canister>, LVPump, <GalacticraftCore:item.canister>]]);
-
 //Tier 1 Rocket Engine
 recipes.addShaped(<GalacticraftCore:item.engine>, [
 [<gregtech:gt.metaitem.01:32731>, <gregtech:gt.metaitem.01:32476>, <minecraft:stone_button>],
@@ -1006,7 +1080,7 @@ recipes.addShaped(<GalacticraftCore:item.noseCone>, [
 //Oil Extractor
 recipes.addShaped(<GalacticraftCore:item.oilExtractor>, [
 [<ore:pipeTinySteel>, null, null],
-[null, <GalacticraftCore:item.fuelCanisterPartial:1001>, CompressedBronze],
+[null, EmptyCanister, CompressedBronze],
 [<minecraft:stone_button>, CompressedBronze, CompressedBronze]]);
 
 //Buggy Wheel
@@ -1035,13 +1109,13 @@ recipes.addShaped(<gregtech:gt.blockcasings4:13>, [
 	
 //Heavy Dust Plate Tier 2
 recipes.addShaped(<gregtech:gt.blockcasings4:14>, [
-[<ore:craftingToolScrewdriver>, <ore:boltTungsten>, <ore:boltTungsten>],
+[Screwdriver, <ore:boltTungsten>, <ore:boltTungsten>],
 [HHammer, HeavyDutyPlateTOne, MeteorPlate],
 [Wrench, <ore:boltTungsten>, <ore:boltTungsten>]]);
 	
 //Heavy Dust Plate Tier 3
 recipes.addShaped(<gregtech:gt.blockcasings4:15>, [
-[<ore:craftingToolScrewdriver>, TSteelBolt, TSteelBolt],
+[Screwdriver, TSteelBolt, TSteelBolt],
 [HHammer, HeavyDutyPlateTTwo, DeshPlate],
 [Wrench, TSteelBolt, TSteelBolt]]);
 
