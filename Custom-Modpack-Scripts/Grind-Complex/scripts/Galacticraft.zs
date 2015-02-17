@@ -23,6 +23,7 @@ import mods.gregtech.VacuumFreezer;
 
 val DeshBlock = <GalacticraftMars:tile.mars:8>;
 
+val GtDeshRod = <gregtech:gt.metaitem.01:23884>;
 val GtDeshIngot = <gregtech:gt.metaitem.01:11884>;
 val DeshStick = <GalacticraftMars:item.null:1>;
 
@@ -41,15 +42,15 @@ val HDLegs = <GalacticraftCore:item.steel_leggings>;
 val HDHelm = <GalacticraftCore:item.steel_helmet>;
 val HDBoots = <GalacticraftCore:item.steel_boots>;
 
-val TiPick = <GalacticraftCore:item.titanium_pickaxe>;
-val TiSword = <GalacticraftCore:item.titanium_sword>;
-val TiAxe = <GalacticraftCore:item.titanium_axe>;
-val TiShovel = <GalacticraftCore:item.titanium_shovel>;
-val TiHoe = <GalacticraftCore:item.titanium_hoe>;
-val TiChestplate = <GalacticraftCore:item.titanium_chestplate>;
-val TiLegs = <GalacticraftCore:item.titanium_leggings>;
-val TiHelm = <GalacticraftCore:item.titanium_helmet>;
-val TiBoots = <GalacticraftCore:item.titanium_boots>;
+val TiPick = <GalacticraftMars:item.titanium_pickaxe>;
+val TiSword = <GalacticraftMars:item.titanium_sword>;
+val TiAxe = <GalacticraftMars:item.titanium_axe>;
+val TiShovel = <GalacticraftMars:item.titanium_shovel>;
+val TiHoe = <GalacticraftMars:item.titanium_hoe>;
+val TiChestplate = <GalacticraftMars:item.titanium_chestplate>;
+val TiLegs = <GalacticraftMars:item.titanium_leggings>;
+val TiHelm = <GalacticraftMars:item.titanium_helmet>;
+val TiBoots = <GalacticraftMars:item.titanium_boots>;
 
 val CompressedAl = <ore:compressedAluminium>;
 val CompressedIron = <ore:compressedIron>;
@@ -78,6 +79,7 @@ val MeteorScrew = <ore:screwMeteoricSteel>;
 val SteelScrew = <ore:screwSteel>;
 val SSteelBolt = <ore:boltStainlessSteel>;
 val TSteelBolt = <ore:boltTungstenSteel>;
+val DeshIngot = <ore:ingotDesh>;
 val DeshPlate = <ore:plateDesh>;
 val DeshRing = <ore:ringDesh>;
 val DeshRod = <ore:stickDesh>;
@@ -206,7 +208,7 @@ Compressor.addRecipe(DeshBlock, GtDeshIngot * 9);
 
 // --- Desh Stick
 recipes.addShapeless(DeshStick, [DeshRod]);
-recipes.addShapeless(DeshRod, [DeshStick]);
+recipes.addShapeless(GtDeshRod, [DeshStick]);
 
 // --- Canned Food
 Canner.addRecipe(CannedFoodOne, Apple * 8, GCCanister, 600, 1);
