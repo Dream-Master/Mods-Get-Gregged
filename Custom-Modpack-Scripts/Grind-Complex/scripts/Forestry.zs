@@ -26,6 +26,8 @@ val RainMaker = <Forestry:factory:7>;
 val Thermionic = <Forestry:factory2>;
 val RainTank = <Forestry:factory2:1>;
 val Worktable = <Forestry:factory2:2>;
+val ApiaristChest = <Forestry:apiculture:1>;
+val LepidoChest = <Forestry:lepidopterology>;
 
 val ElectricalEng = <Forestry:engine>;
 val PeatEng = <Forestry:engine:1>;
@@ -117,6 +119,15 @@ val Pipette = <Forestry:pipette>;
 val Spectacles = <Forestry:naturalistHelmet>;
 val ApatineTube = <Forestry:thermionicTubes:10>;
 
+val ApiaristBackpack = <Forestry:apiaristBag>;
+val LepidopteristBackpack = <Forestry:lepidopteristBag>;
+val MinerBackpack = <Forestry:minerBag>;
+val DiggerBackpack = <Forestry:diggerBag>;
+val ForesterBackpack = <Forestry:foresterBag>;
+val HunterBackpack = <Forestry:hunterBag>;
+val AdventurerBackpack = <Forestry:adventurerBag>;
+val BuilderBackpack = <Forestry:builderBag>;
+
 val FBronzeGear = <Forestry:gearBronze>;
 val FCopperGear = <Forestry:gearCopper>;
 val FTinGear = <Forestry:gearTin>;
@@ -130,9 +141,12 @@ val LargeBronzePipe = <ore:pipeLargeBronze>;
 val LVConveyor = <gregtech:gt.metaitem.01:32630>;
 val LVPump = <gregtech:gt.metaitem.01:32610>;
 
+val IronRod = <ore:stickAnyIron>;
+val CopperRod = <ore:stickAnyCopper>;
 val BronzePlate = <ore:plateAnyBronze>;
 val BronzeGear = <ore:gearAnyBronze>;
 val BronzeRod = <ore:stickAnyBronze>;
+val BronzeRing = <ore:ringAnyBronze>;
 val SmallSteelGear = <ore:gearGtSmallSteel>;
 
 val GoodCircuit = <ore:circuitGood>;
@@ -141,6 +155,7 @@ val Circuit = <ore:circuitBasic>;
 val BasicCasing = <IC2:blockMachine>;
 val OBTank = <OpenBlocks:tank>;
 val RedAlloyWire = <RedLogic:redlogic.wire>;
+val TannedLeather = <Backpack:tannedLeather>;
 
 val StoneBricks = <minecraft:stonebrick>;
 val MossyStoneBricks = <minecraft:stonebrick:1>;
@@ -154,7 +169,15 @@ val QuartzBlock = <minecraft:quartz_block>;
 val ChiseledQuartzBlock = <minecraft:quartz_block:1>;
 val PillarQuartzBlock = <minecraft:quartz_block:2>;
 
+val WoodSlab = <ore:slabWood>;
+val CobbleSlab = <minecraft:stone_slab:3>;
+val Chest = <minecraft:chest>;
+
 val Hopper = <minecraft:hopper>;
+val String = <minecraft:string>;
+val Feather = <minecraft:feather>; 
+val ClayBall = <minecraft:clay_ball>;
+val Bone = <minecraft:bone>;
 
 val Wrench = <ore:craftingToolWrench>;
 val HHammer = <ore:craftingToolHardHammer>;
@@ -306,6 +329,34 @@ recipes.remove(Pipette);
 
 // --- Spectacles
 recipes.remove(Spectacles);
+
+
+// ||||||| Backpacks |||||||
+
+
+// --- Apiarist's Backpack
+recipes.remove(ApiaristBackpack);
+
+// --- Lepidopterist's Backpack
+recipes.remove(LepidopteristBackpack);
+
+// --- Adventurer's Backpack
+recipes.remove(AdventurerBackpack);
+
+// --- Builder's Backpack
+recipes.remove(BuilderBackpack);
+
+// --- Digger's Backpack
+recipes.remove(DiggerBackpack);
+
+// --- Forester's Backpack
+recipes.remove(ForesterBackpack);
+
+// --- Hunter's Backpack
+recipes.remove(HunterBackpack);
+
+// --- Miner's Backpack
+recipes.remove(MinerBackpack);
 
 
 
@@ -950,8 +1001,65 @@ recipes.addShapeless(FCopperGear, [GtCopperGear]);
 recipes.addShapeless(FTinGear, [GtTinGear]);
 
 
+// ||||||| Backpacks |||||||
 
-// *======= Other Stuff (Renaming) =======*
+
+// --- Apiarist's Backpack
+recipes.addShaped(ApiaristBackpack, [
+[String, BronzeRing, String],
+[TannedLeather, ApiaristChest, TannedLeather],
+[TannedLeather, TannedLeather, TannedLeather]]);
+
+// --- Lepidopterist's Backpack
+recipes.addShaped(LepidopteristBackpack, [
+[String, BronzeRing, String],
+[TannedLeather, LepidoChest, TannedLeather],
+[TannedLeather, TannedLeather, TannedLeather]]);
+
+// --- Adventurer's Backpack
+recipes.addShaped(AdventurerBackpack, [
+[String, BronzeRing, String],
+[TannedLeather, Chest, TannedLeather],
+[Bone, TannedLeather, Bone]]);
+
+// --- Builder's Backpack
+recipes.addShaped(BuilderBackpack, [
+[String, BronzeRing, String],
+[TannedLeather, Chest, TannedLeather],
+[ClayBall, TannedLeather, ClayBall]]);
+
+// --- Digger's Backpack
+recipes.addShaped(DiggerBackpack, [
+[String, BronzeRing, String],
+[TannedLeather, Chest, TannedLeather],
+[CobbleSlab, TannedLeather, CobbleSlab]]);
+
+// --- Forester's Backpack
+recipes.addShaped(ForesterBackpack, [
+[String, BronzeRing, String],
+[TannedLeather, Chest, TannedLeather],
+[WoodSlab, TannedLeather, WoodSlab]]);
+
+// --- Hunter's Backpack
+recipes.addShaped(HunterBackpack, [
+[String, BronzeRing, String],
+[TannedLeather, Chest, TannedLeather],
+[Feather, TannedLeather, Feather]]);
+
+// --- Miner's Backpack
+recipes.addShaped(MinerBackpack, [
+[String, BronzeRing, String],
+[TannedLeather, Chest, TannedLeather],
+[IronRod, TannedLeather, IronRod]]);
+// - Alternate Recipe
+recipes.addShaped(MinerBackpack, [
+[String, BronzeRing, String],
+[TannedLeather, Chest, TannedLeather],
+[CopperRod, TannedLeather, CopperRod]]);
+
+
+
+// *======= Other Stuff (Renaming/Hiding) =======*
 
 
 // --- Hiding Peat Engine

@@ -15,7 +15,7 @@ val NeutronPlate = <ore:plateNeutronium>;
 val EnrichedNaquadahPlate = <ore:plateNaquadahEnriched>;
 val AFB = <AFSU:ALC>;
 val LapotronEOrb = <ore:batteryUltimate>;
-val PrototypeXK = <ore:circuitPrototype>;
+val GrandmasterCircuit = <ore:circuitGrandmaster>;
 
 
 // *======== Removing Recipes ========*
@@ -32,12 +32,12 @@ recipes.remove(Anchor);
 // --- Dimensional Anchor
 recipes.addShaped(Anchor, [
 [NeutronPlate, LapotronEOrb, EnrichedNaquadahPlate],
-[AFB, PrototypeXK, AFB],
+[AFB, GrandmasterCircuit, AFB],
 [EnrichedNaquadahPlate, LapotronEOrb, NeutronPlate]]);
 // --- Alternate Recipe
 recipes.addShaped(Anchor, [
 [EnrichedNaquadahPlate, LapotronEOrb, NeutronPlate],
-[AFB, PrototypeXK, AFB],
+[AFB, GrandmasterCircuit, AFB],
 [NeutronPlate, LapotronEOrb, EnrichedNaquadahPlate]]);
 
 

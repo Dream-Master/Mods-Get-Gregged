@@ -2,18 +2,215 @@
 // ******* the Grind-Complex modpack *******
 
 
-//Import
+
+// *======= Importing Stuff =======*
+
 
 import mods.gregtech.Assembler;
 import mods.ic2.Compressor;
 import mods.gregtech.PlateBender;
 import mods.gregtech.Wiremill;
 
-//variables
+
+
+// *======= Variables =======*
+
 
 val IronFurnace = <IC2:blockMachine:1>;
+val RubberLog = <minecraft:log:3>;
+
+val CESU = <IC2:blockElectric:7>;
+val MFE = <IC2:blockElectric:1>;
+val MFSU = <IC2:blockElectric:2>;
+
+val LVTransformer = <IC2:blockElectric:3>;
+val MVTransformer = <IC2:blockElectric:4>;
+val HVTransformer = <IC2:blockElectric:5>;
+val EVTransformer = <IC2:blockElectric:6>;
+
+val AdvREBattery = <IC2:itemAdvBat:*>;
+val EliteBattery = <ore:batteryElite>;
+val MasterBattery = <ore:batteryMaster>;
+
+val MiningDrill = <IC2:itemToolDrill:*>;
+val DiamondDrill = <IC2:itemToolDDrill:*>;
+val IridiumDrill = <IC2:itemToolIridiumDrill:*>;
+
 val IronPlate = <ore:plateAnyIron>;
+val BronzePlate = <ore:plateAnyBronze>;
+val SteelPlate = <ore:plateSteel>;
+val AlPlate = <ore:plateAluminium>;
+val SSteelPlate = <ore:plateStainlessSteel>;
+val TiPlate = <ore:plateTitanium>;
+
+val TinWire = <ore:wireGt01Tin>;
+val CopperWire = <ore:wireGt01AnyCopper>;
+val GoldWire = <ore:wireGt01Gold>;
+val AlWire = <ore:wireGt01Aluminium>;
+val CopperWire2x = <ore:wireGt02AnyCopper>;
+val GoldWire2x = <ore:wireGt02Gold>;
+val AlWire2x = <ore:wireGt02Aluminium>;
+
+val LVHull = <gregtech:gt.blockmachines:11>;
+val MVHull = <gregtech:gt.blockmachines:12>;
+val HVHull = <gregtech:gt.blockmachines:13>;
+val EVHull = <gregtech:gt.blockmachines:14>;
+
+val NANDChip = <ore:circuitPrimitive>;
+val BasicCircuit = <ore:circuitBasic>;
+val GoodCircuit = <ore:circuitGood>;
+val AdvCircuit = <ore:circuitAdvanced>;
+val EFlowCircuit = <ore:circuitMaster>;
+
 val Furnace = <minecraft:furnace>;
+val JunglePlanks = <minecraft:planks:3>;
+
+val HHammer = <ore:craftingToolHardHammer>;
+val Saw = <ore:craftingToolSaw>;
+val Screwdriver = <ore:craftingToolScrewdriver>;
+val WireCutter = <ore:craftingToolWireCutter>;
+val Wrench = <ore:craftingToolWrench>;
+
+
+
+// *======= Removing Recipes =======*
+
+
+// ||||||| Blocks |||||||
+
+
+// --- Iron Furnace
+recipes.remove(IronFurnace);
+
+// --- CESU
+recipes.remove(CESU);
+
+// --- MFE
+recipes.remove(MFE);
+
+// --- MFSU
+recipes.remove(MFSU);
+
+// --- LV Transformer
+recipes.remove(LVTransformer);
+
+// --- MV Transformer
+recipes.remove(MVTransformer);
+
+// --- HV Transformer
+recipes.remove(HVTransformer);
+
+// --- EV Transformer
+recipes.remove(EVTransformer);
+
+
+// ||||||| Items |||||||
+
+
+// --- Sticky Resin
+furnace.remove(RubberLog);
+
+
+// ||||||| Tools |||||||
+
+
+// --- Mining Drill
+recipes.remove(MiningDrill);
+
+// --- Diamond Drill
+recipes.remove(DiamondDrill);
+
+// --- Iridium Drill
+recipes.remove(IridiumDrill);
+
+
+
+// *======= Adding Back Recipes =======*
+
+
+// ||||||| Blocks |||||||
+
+
+// --- Iron Furnace
+recipes.addShaped(IronFurnace, [
+[IronPlate, IronPlate, IronPlate],
+[IronPlate, HHammer, IronPlate],
+[IronPlate, Furnace, IronPlate]]);
+
+// --- Jungle Wood Planks
+recipes.addShapeless(JunglePlanks, [RubberLog]);
+// - Alternate Recipe
+recipes.addShapedMirrored(JunglePlanks * 3, [
+[Saw, null],
+[RubberLog, null]]);
+
+// --- CESU
+recipes.addShaped(CESU, [
+[CopperWire2x, AlPlate, CopperWire2x],
+[AdvREBattery, MVHull, AdvREBattery],
+[BronzePlate, AdvREBattery, BronzePlate]]);
+
+// --- MFE
+recipes.addShaped(MFE, [
+[GoldWire2x, EliteBattery, GoldWire2x],
+[EliteBattery, HVHull, EliteBattery],
+[SSteelPlate, EliteBattery, SSteelPlate]]);
+
+// --- MFSU
+recipes.addShaped(MFSU, [
+[AlWire2x, MasterBattery, AlWire2x],
+[MasterBattery, EVHull, MasterBattery],
+[TiPlate, MasterBattery, TiPlate]]);
+
+// --- LV Transformer
+recipes.addShaped(LVTransformer, [
+[SteelPlate, TinWire, SteelPlate],
+[NANDChip, LVHull, BasicCircuit],
+[SteelPlate, TinWire, SteelPlate]]);
+// - Alternate Recipe
+recipes.addShaped(LVTransformer, [
+[SteelPlate, TinWire, SteelPlate],
+[BasicCircuit, LVHull, NANDChip],
+[SteelPlate, TinWire, SteelPlate]]);
+
+// --- MV Transformer
+recipes.addShaped(MVTransformer, [
+[AlPlate, CopperWire, AlPlate],
+[BasicCircuit, MVHull, GoodCircuit],
+[AlPlate, CopperWire, AlPlate]]);
+// - Alternate Recipe
+recipes.addShaped(MVTransformer, [
+[AlPlate, CopperWire, AlPlate],
+[GoodCircuit, MVHull, BasicCircuit],
+[AlPlate, CopperWire, AlPlate]]);
+
+// --- HV Transformer
+recipes.addShaped(HVTransformer, [
+[SSteelPlate, GoldWire, SSteelPlate],
+[GoodCircuit, HVHull, AdvCircuit],
+[SSteelPlate, GoldWire, SSteelPlate]]);
+// - Alternate Recipe
+recipes.addShaped(HVTransformer, [
+[SSteelPlate, GoldWire, SSteelPlate],
+[AdvCircuit, HVHull, GoodCircuit],
+[SSteelPlate, GoldWire, SSteelPlate]]);
+
+// --- EV Transformer
+recipes.addShaped(EVTransformer, [
+[TiPlate, AlWire, TiPlate],
+[AdvCircuit, EVHull, EFlowCircuit],
+[TiPlate, AlWire, TiPlate]]);
+// - Alternate Recipe
+recipes.addShaped(EVTransformer, [
+[TiPlate, AlWire, TiPlate],
+[EFlowCircuit, EVHull, AdvCircuit],
+[TiPlate, AlWire, TiPlate]]);
+
+
+
+// #======= Hiding Stuff =======#
+
+
 
 //remove Recipes
 
@@ -39,16 +236,8 @@ recipes.remove(<IC2:blockGenerator:6>);
 recipes.remove(<IC2:blockMachine:6>);
 //Solid Canning Machine
 recipes.remove(<IC2:blockMachine2:9>);
-//Fermernter
+//Fermenter
 recipes.remove(<IC2:blockMachine2:13>);
-//LV Transformer
-recipes.remove(<IC2:blockElectric:3>);
-//MV Transformer
-recipes.remove(<IC2:blockElectric:4>);
-//HV Transformer
-recipes.remove(<IC2:blockElectric:5>);
-//EV Transformer
-recipes.remove(<IC2:blockElectric:6>);
 //Heat Conductor
 recipes.remove(<IC2:itemRecipePart:5>);
 //Coil
@@ -57,12 +246,6 @@ recipes.remove(<IC2:itemRecipePart>);
 recipes.remove(<IC2:itemAdvBat>);
 //Bat Box
 recipes.remove(<IC2:blockElectric>);
-//CESU
-recipes.remove(<IC2:blockElectric:7>);
-//MFE
-recipes.remove(<IC2:blockElectric:1>);
-//MFSU
-recipes.remove(<IC2:blockElectric:2>);
 //Wood Scaffold
 recipes.remove(<IC2:blockScaffold>);
 //Iron Scaffold
@@ -105,12 +288,6 @@ recipes.remove(<IC2:itemPartCoalChunk>);
 recipes.remove(<IC2:itemPartCarbonMesh>);
 //Reinforced Glass
 recipes.remove(<IC2:blockAlloyGlass>);
-//Mining Drill
-recipes.remove(<IC2:itemToolDrill:*>);
-//Diamond Drill
-recipes.remove(<IC2:itemToolDDrill:*>);
-//Iridium Drill
-recipes.remove(<IC2:itemToolIridiumDrill:*>);
 //Chainsaw
 recipes.remove(<IC2:itemToolChainsaw:*>);
 //Electric Wrenche
@@ -141,12 +318,6 @@ recipes.remove(<IC2:itemToolWrench>);
 recipes.remove(<IC2:itemupgradekit>);
 //Empty Fluid Cell
 recipes.remove(<IC2:itemFluidCell>);
-//Iron Furnace
-recipes.remove(IronFurnace);
-
-
-//remove Rubber Wood
-furnace.remove(<minecraft:log:3>);
 
 // --- Steam Turbine Blade ---
 recipes.remove(<IC2:itemSteamTurbineBlade>);
@@ -156,19 +327,19 @@ recipes.remove(<IC2:itemSteamTurbineBlade>);
 //Generator
 recipes.addShaped(<IC2:blockGenerator>, [
 [<ore:cableGt01Tin>, <ore:batteryBasic>, <ore:cableGt01Tin>],
-[<ore:plateSteel>, <gregtech:gt.blockmachines:1120>, <ore:plateSteel>],
+[SteelPlate, <gregtech:gt.blockmachines:1120>, SteelPlate],
 [<gregtech:gt.metaitem.01:32600>, <gregtech:gt.blockmachines:100>, <IC2:itemRecipePart>]]);
 
 //Geothermal Generator
 recipes.addShaped(<IC2:blockGenerator:1>, [
 [<ore:cableGt01Tin>, <gregtech:gt.metaitem.01:32405>, <ore:cableGt01Tin>],
-[<ore:plateAluminium>, <gregtech:gt.blockcasings2>, <ore:plateAluminium>],
+[AlPlate, <gregtech:gt.blockcasings2>, AlPlate],
 [<gregtech:gt.metaitem.01:32600>, <IC2:blockGenerator>, <IC2:itemRecipePart>]]);
 
 //Electric Heat Generator
 recipes.addShaped(<IC2:blockHeatGenerator:3>, [
 [<IC2:itemCable>, <gregtech:gt.metaitem.01:32501>, <IC2:itemCable>],
-[<ore:circuitBasic>, <gregtech:gt.blockcasings:2>, <ore:circuitBasic>],
+[BasicCircuit, <gregtech:gt.blockcasings:2>, BasicCircuit],
 [<IC2:itemCasing:4>, <IC2:itemRecipePart:5>, <IC2:itemCasing:4>]]);
 
 //Sterling Heat Generator
@@ -179,7 +350,7 @@ recipes.addShaped(<IC2:blockGenerator:8>, [
 
 //Kinetic Wind Generator
 recipes.addShaped(<IC2:blockKineticGenerator>, [
-[<ore:plateTungstenSteel>, <ore:circuitAdvanced>, <ore:plateTungstenSteel>],
+[<ore:plateTungstenSteel>, AdvCircuit, <ore:plateTungstenSteel>],
 [<ore:cableGt02Gold>, <ore:craftingGenerator>, <ore:cableGt02Gold>],
 [<gregtech:gt.metaitem.01:32602>, <IC2:itemRecipePart>, <gregtech:gt.metaitem.01:32602>]]);
 
@@ -203,69 +374,51 @@ recipes.addShaped(<IC2:itemAdvBat>, [
 
 //Bat Box
 recipes.addShaped(<IC2:blockElectric>, [
-[<IC2:itemCable:13>, <ore:plateSteel>, <IC2:itemCable:13>],
+[<IC2:itemCable:13>, SteelPlate, <IC2:itemCable:13>],
 [<IC2:itemBatREDischarged>, <gregtech:gt.blockmachines:11>, <IC2:itemBatREDischarged>],
-[<ore:plateSteel>, <IC2:itemBatREDischarged>, <ore:plateSteel>]]);
-
-//CESU
-recipes.addShaped(<IC2:blockElectric:7>, [
-[<IC2:itemCable>, <ore:plateBronze>, <IC2:itemCable>],
-[<IC2:itemAdvBat:*>, <gregtech:gt.blockmachines:12>, <IC2:itemAdvBat:*>],
-[<ore:plateBronze>, <IC2:itemAdvBat:*>, <ore:plateBronze>]]);
-
-//MFE
-recipes.addShaped(<IC2:blockElectric:1>, [
-[<IC2:itemCable:3>, <ore:batteryElite>, <IC2:itemCable:3>],
-[<ore:batteryElite>, <gregtech:gt.blockmachines:13>, <ore:batteryElite>],
-[<ore:plateStainlessSteel>, <ore:batteryElite>, <ore:plateStainlessSteel>]]);
-
-//MFSU
-recipes.addShaped(<IC2:blockElectric:2>, [
-[<ore:cableGt01TungstenSteel>, <ore:batteryMaster>, <ore:cableGt01TungstenSteel>],
-[<ore:batteryMaster>, <gregtech:gt.blockmachines:14>, <ore:batteryMaster>],
-[<ore:circuitMaster>, <ore:batteryMaster>, <ore:circuitMaster>]]);
+[SteelPlate, <IC2:itemBatREDischarged>, SteelPlate]]);
 
 //Wood Scaffold
 recipes.addShapeless(<IC2:blockScaffold>, [<ore:frameGtWood>, <gregtech:gt.metaitem.01:17809>]);
 
 //Iron Scaffold
-recipes.addShapeless(<IC2:blockIronScaffold>, [<ore:frameGtIron>, <ore:plateIron>]);
+recipes.addShapeless(<IC2:blockIronScaffold>, [<ore:frameGtIron>, IronPlate]);
 
 //Mining laser
 recipes.addShaped(<IC2:itemToolMiningLaser>, [
-[<ore:lensRuby>, <IC2:reactorCoolantSix>, <ore:batteryElite>],
-[<ore:plateTitanium>, <ore:plateTitanium>, <ore:circuitAdvanced>],
+[<ore:lensRuby>, <IC2:reactorCoolantSix>, EliteBattery],
+[TiPlate, TiPlate, AdvCircuit],
 [null, <ore:plateAlloyAdvanced>, <IC2:itemRecipePart:2>]]);
 
 //Bat Pack
 recipes.addShaped(<IC2:itemArmorBatpack>, [
-[<IC2:itemBatREDischarged>, <ore:circuitBasic>, <IC2:itemBatREDischarged>],
-[<IC2:itemBatREDischarged>, <ore:plateAluminium>, <IC2:itemBatREDischarged>],
+[<IC2:itemBatREDischarged>, BasicCircuit, <IC2:itemBatREDischarged>],
+[<IC2:itemBatREDischarged>, AlPlate, <IC2:itemBatREDischarged>],
 [<IC2:itemBatREDischarged>, <ore:wireGt02Tin>, <IC2:itemBatREDischarged>]]);
 
 //Advanced Batpack
 recipes.addShaped(<IC2:itemArmorAdvBatpack>, [
-[<IC2:itemAdvBat:*>, <ore:circuitGood>, <IC2:itemAdvBat:*>],
-[<IC2:itemAdvBat:*>, <IC2:itemArmorBatpack:*>, <IC2:itemAdvBat:*>],
-[<IC2:itemAdvBat:*>, <ore:wireGt04Copper>, <IC2:itemAdvBat:*>]]);
+[AdvREBattery, GoodCircuit, AdvREBattery],
+[AdvREBattery, <IC2:itemArmorBatpack:*>, AdvREBattery],
+[AdvREBattery, <ore:wireGt04Copper>, AdvREBattery]]);
 
 //Energy Pack
 recipes.addShaped(<IC2:itemArmorEnergypack>, [
-[<ore:circuitAdvanced>, <IC2:itemCasing:5>, <ore:circuitAdvanced>],
-[<ore:batteryElite>, <IC2:itemArmorAdvBatpack:*>, <ore:batteryElite>],
+[AdvCircuit, <IC2:itemCasing:5>, AdvCircuit],
+[EliteBattery, <IC2:itemArmorAdvBatpack:*>, EliteBattery],
 [<IC2:itemCasing:5>, <ore:wireGt08Gold>, <IC2:itemCasing:5>]]);
 
 //Electric Jetpack
 recipes.addShaped(<IC2:itemArmorJetpackElectric>, [
-[<ore:plateAluminium>, <IC2:itemArmorBatpack:*>, <ore:plateAluminium>],
+[AlPlate, <IC2:itemArmorBatpack:*>, AlPlate],
 [<GraviSuite:itemSimpleItem:6>, <gregtech:gt.metaitem.01:32603>, <GraviSuite:itemSimpleItem:6>],
-[<ore:wireGt04Kanthal>, <ore:circuitAdvanced>, <ore:wireGt04Kanthal>]]);
+[<ore:wireGt04Kanthal>, AdvCircuit, <ore:wireGt04Kanthal>]]);
 
 //Biogas Jetpack
 recipes.addShaped(<IC2:itemArmorJetpack>, [
 [<ore:plateTungstenSteel>, <IC2:reactorCoolantSix>, <ore:plateTungstenSteel>],
 [<gregtech:gt.metaitem.01:32405>, <IC2:itemRecipePart:6>, <gregtech:gt.metaitem.01:32405>],
-[<GraviSuite:itemSimpleItem:6>, <ore:circuitAdvanced>, <GraviSuite:itemSimpleItem:6>]]);
+[<GraviSuite:itemSimpleItem:6>, AdvCircuit, <GraviSuite:itemSimpleItem:6>]]);
 
 //Reactor Plating
 recipes.addShaped(<IC2:reactorPlating>, [
@@ -287,25 +440,25 @@ recipes.addShaped(<IC2:reactorPlatingExplosive>, [
 
 //Copper Cable
 recipes.addShaped(<IC2:itemCable:1>, [
-[<ore:craftingToolWireCutter>, <ore:plateCopper>, null],
+[WireCutter, <ore:plateCopper>, null],
 [null, null, null],
 [null, null, null]]);
 
 //Gold Cable
 recipes.addShaped(<IC2:itemCable:2>, [
-[<ore:craftingToolWireCutter>, <ore:plateGold>, null],
+[WireCutter, <ore:plateGold>, null],
 [null, null, null],
 [null, null, null]]);
 
 //HV Cable
 recipes.addShaped(<IC2:itemCable:5>, [
-[<ore:craftingToolWireCutter>, <ore:plateIron>, null],
+[WireCutter, IronPlate, null],
 [null, null, null],
 [null, null, null]]);
 
 //Tin Cable
 recipes.addShaped(<IC2:itemCable:10>, [
-[<ore:craftingToolWireCutter>, <ore:plateTin>, null],
+[WireCutter, <ore:plateTin>, null],
 [null, null, null],
 [null, null, null]]);
 
@@ -317,36 +470,36 @@ recipes.addShaped(<IC2:itemRecipePart:7>, [
 
 //Kinetic Wind Generator Rotor Blade (Wood)
 recipes.addShaped(<IC2:itemwoodrotor>, [
-[<ore:stickIron>, <IC2:itemRecipePart:7>, <ore:craftingToolHardHammer>],
+[<ore:stickIron>, <IC2:itemRecipePart:7>, HHammer],
 [<IC2:itemRecipePart:7>, <ore:ringIron>, <IC2:itemRecipePart:7>],
-[<ore:craftingToolScrewdriver>, <IC2:itemRecipePart:7>, <ore:screwIron>]]);
+[Screwdriver, <IC2:itemRecipePart:7>, <ore:screwIron>]]);
 
 //Iron Rotor Blade
 recipes.addShaped(<IC2:itemRecipePart:8>, [
-[<ore:plateIron>, <ore:plateIron>, <ore:plateIron>],
-[<ore:plateIron>, <ore:ringSteel>, <ore:plateIron>],
-[<ore:plateIron>, <ore:plateIron>, <ore:plateIron>]]);
+[IronPlate, IronPlate, IronPlate],
+[IronPlate, <ore:ringSteel>, IronPlate],
+[IronPlate, IronPlate, IronPlate]]);
 
 //Kinetic Wind Generator Rotor Blade (Iron)
 recipes.addShaped(<IC2:itemironrotor>, [
-[<IC2:itemRecipePart:11>, <IC2:itemRecipePart:8>, <ore:craftingToolHardHammer>],
+[<IC2:itemRecipePart:11>, <IC2:itemRecipePart:8>, HHammer],
 [<IC2:itemRecipePart:8>, <ore:ringSteel>, <IC2:itemRecipePart:8>],
-[<ore:craftingToolWrench>, <IC2:itemRecipePart:8>, <IC2:itemRecipePart:11>]]);
+[Wrench, <IC2:itemRecipePart:8>, <IC2:itemRecipePart:11>]]);
 
 //Steel Rotor Blade
 recipes.addShaped(<IC2:itemRecipePart:10>, [
-[<ore:plateSteel>, <ore:plateSteel>, <ore:plateSteel>],
-[<ore:plateSteel>, <ore:ringTungstenSteel>, <ore:plateSteel>],
-[<ore:plateSteel>, <ore:plateSteel>, <ore:plateSteel>]]);
+[SteelPlate, SteelPlate, SteelPlate],
+[SteelPlate, <ore:ringTungstenSteel>, SteelPlate],
+[SteelPlate, SteelPlate, SteelPlate]]);
 
 //Steel Rotor Blade
 recipes.addShapeless(<IC2:itemRecipePart:10>, [<Railcraft:part.turbine.blade>]);
 
 //Kinetic Wind Generator Rotor Blade (Steel)
 recipes.addShaped(<IC2:itemsteelrotor>, [
-[<IC2:itemRecipePart:12>, <IC2:itemRecipePart:10>, <ore:craftingToolHardHammer>],
+[<IC2:itemRecipePart:12>, <IC2:itemRecipePart:10>, HHammer],
 [<IC2:itemRecipePart:10>, <ore:ringTungstenSteel>, <IC2:itemRecipePart:10>],
-[<ore:craftingToolWrench>, <IC2:itemRecipePart:10>, <IC2:itemRecipePart:12>]]);
+[Wrench, <IC2:itemRecipePart:10>, <IC2:itemRecipePart:12>]]);
 
 //Carbon Rotor Blade
 recipes.addShaped(<IC2:itemRecipePart:9>, [
@@ -356,18 +509,12 @@ recipes.addShaped(<IC2:itemRecipePart:9>, [
 
 //Kinetic Wind Generator Rotor Blade (Carbon)
 recipes.addShaped(<IC2:itemwcarbonrotor>, [
-[<ore:screwIridium>, <IC2:itemRecipePart:9>, <ore:craftingToolHardHammer>],
+[<ore:screwIridium>, <IC2:itemRecipePart:9>, HHammer],
 [<IC2:itemRecipePart:9>, <IC2:itemsteelrotor>, <IC2:itemRecipePart:9>],
-[<ore:craftingToolWrench>, <IC2:itemRecipePart:9>, <ore:screwIridium>]]);
+[Wrench, <IC2:itemRecipePart:9>, <ore:screwIridium>]]);
 
 // --- Steam Turbine Blade ---
 recipes.addShapeless(<IC2:itemSteamTurbineBlade>, [<Railcraft:part.turbine.disk>]);
-
-// --- Iron Furnace
-recipes.addShaped(IronFurnace, [
-[IronPlate, IronPlate, IronPlate],
-[IronPlate, null, IronPlate],
-[IronPlate, Furnace, IronPlate]]);
 
 //Assembler Recipes
 
@@ -385,18 +532,6 @@ Assembler.addRecipe(<IC2:blockHeatGenerator:2>, <IC2:blockReactorChamber>, <IC2:
 
 //Radioisotope Thermoelectric Generator
 Assembler.addRecipe(<IC2:blockGenerator:6>, <IC2:blockReactorChamber>, <IC2:blockGenerator:8>, 400, 32);
-
-//LV Transformer
-Assembler.addRecipe(<IC2:blockElectric:3>, <gregtech:gt.blockmachines:21>, <IC2:itemCable:13> * 2, 300, 32);
-
-//MV Transformer
-Assembler.addRecipe(<IC2:blockElectric:4>, <gregtech:gt.blockmachines:22>, <IC2:itemCable> * 2, 250, 128);
-
-//HV Transformer
-Assembler.addRecipe(<IC2:blockElectric:5>, <gregtech:gt.blockmachines:23>, <IC2:itemCable:3> * 2, 200, 512);
-
-//EV Transformer
-Assembler.addRecipe(<IC2:blockElectric:6>, <gregtech:gt.blockmachines:24>, <IC2:itemCable:6> * 2, 100, 2048);
 
 //Coil
 Assembler.addRecipe(<IC2:itemRecipePart>, <gregtech:gt.metaitem.01:23355>, <gregtech:gt.blockmachines:1360> * 16, 200, 32);
@@ -433,5 +568,3 @@ Wiremill.addRecipe(<gregtech:gt.blockmachines:1300>, <IC2:itemCable:5>, 600, 4);
 
 //Tin Cable
 Wiremill.addRecipe(<gregtech:gt.blockmachines:1240>, <IC2:itemCable:10>, 400, 4);
-
-

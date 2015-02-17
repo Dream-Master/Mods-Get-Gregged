@@ -2,7 +2,9 @@
 // ******* the Grind-Complex modpack *******
 
 
-//Mod Import
+
+// *======= Importing Stuff =======*
+
 
 import mods.gregtech.Assembler;
 import mods.gregtech.BlastFurnace;
@@ -14,7 +16,41 @@ import mods.ic2.Macerator;
 import mods.gregtech.PlateBender;
 import mods.gregtech.VacuumFreezer;
 
-// #******* Variables ******* #
+
+
+// *======= Variables =======*
+
+
+val DeshBlock = <GalacticraftMars:tile.mars:8>;
+
+val GtDeshRod = <gregtech:gt.metaitem.01:23884>;
+val GtDeshIngot = <gregtech:gt.metaitem.01:11884>;
+val DeshStick = <GalacticraftMars:item.null:1>;
+
+val CannedFoodOne = <GalacticraftCore:item.basicItem:15>;
+val CannedFoodTwo = <GalacticraftCore:item.basicItem:16>;
+val CannedFoodThree = <GalacticraftCore:item.basicItem:17>;
+val CannedFoodFour = <GalacticraftCore:item.basicItem:18>;
+
+val HDPick = <GalacticraftCore:item.steel_pickaxe>;
+val HDSword = <GalacticraftCore:item.steel_sword>;
+val HDAxe = <GalacticraftCore:item.steel_axe>;
+val HDShovel = <GalacticraftCore:item.steel_shovel>;
+val HDHoe = <GalacticraftCore:item.steel_hoe>;
+val HDChestplate = <GalacticraftCore:item.steel_chestplate>;
+val HDLegs = <GalacticraftCore:item.steel_leggings>;
+val HDHelm = <GalacticraftCore:item.steel_helmet>;
+val HDBoots = <GalacticraftCore:item.steel_boots>;
+
+val TiPick = <GalacticraftMars:item.titanium_pickaxe>;
+val TiSword = <GalacticraftMars:item.titanium_sword>;
+val TiAxe = <GalacticraftMars:item.titanium_axe>;
+val TiShovel = <GalacticraftMars:item.titanium_shovel>;
+val TiHoe = <GalacticraftMars:item.titanium_hoe>;
+val TiChestplate = <GalacticraftMars:item.titanium_chestplate>;
+val TiLegs = <GalacticraftMars:item.titanium_leggings>;
+val TiHelm = <GalacticraftMars:item.titanium_helmet>;
+val TiBoots = <GalacticraftMars:item.titanium_boots>;
 
 val CompressedAl = <ore:compressedAluminium>;
 val CompressedIron = <ore:compressedIron>;
@@ -24,6 +60,7 @@ val CompressedTin = <ore:compressedTin>;
 val CompressedCopper = <ore:compressedCopper>;
 val CompressedTi = <ore:compressedTitanium>;
 
+val GCCanister = <GalacticraftCore:item.canister>;
 val BWafer = <ore:waferBasic>;
 val AdvWafer = <ore:waferAdvanced>;
 val GCAlWire = <GalacticraftCore:tile.aluminumWire>;
@@ -31,7 +68,7 @@ val GCHeavyAlWire = <GalacticraftCore:tile.aluminumWire:1>;
 val OxygenPipe = <GalacticraftCore:tile.oxygenPipe>;
 val AirVent = <GalacticraftCore:item.airVent>;
 val HeavyPlating = <GalacticraftCore:item.heavyPlating>;
-val HeavyDutyPlate = <GalacticraftMars:item.itemBasicAsteroids>;
+val HDPlate = <GalacticraftMars:item.itemBasicAsteroids>;
 val TinDecoBlock = <GalacticraftCore:tile.gcBlockCore:4>;
 val SensorLens = <GalacticraftCore:item.sensorLens>;
 val SteelPole = <GalacticraftCore:item.steelPole>;
@@ -42,8 +79,10 @@ val MeteorScrew = <ore:screwMeteoricSteel>;
 val SteelScrew = <ore:screwSteel>;
 val SSteelBolt = <ore:boltStainlessSteel>;
 val TSteelBolt = <ore:boltTungstenSteel>;
+val DeshIngot = <ore:ingotDesh>;
 val DeshPlate = <ore:plateDesh>;
 val DeshRing = <ore:ringDesh>;
+val DeshRod = <ore:stickDesh>;
 val AlFoil = <ore:foilAluminium>;
 
 val MVConveyor = <gregtech:gt.metaitem.01:32631>;
@@ -62,6 +101,238 @@ val IronBars = <minecraft:iron_bars>;
 val Stick = <ore:stickWood>;
 val Wool = <ore:blockWool>;
 val String = <minecraft:string>;
+val Apple = <minecraft:apple>;
+val Carrot = <minecraft:carrot>;
+val Melon = <minecraft:melon>;
+val Potato = <minecraft:potato>;
+
+
+
+// *======= Removing Recipes =======*
+
+
+// ||||||| Blocks |||||||
+
+
+// --- Desh Block
+recipes.remove(DeshBlock);
+
+
+// ||||||| Items |||||||
+
+
+// --- Desh Ingot
+recipes.remove(DeshIngot);
+
+// --- Desh Stick
+recipes.remove(DeshStick);
+
+// --- Canned Food
+recipes.remove(CannedFoodOne);
+recipes.remove(CannedFoodTwo);
+recipes.remove(CannedFoodThree);
+recipes.remove(CannedFoodFour);
+
+
+// ||||||| Equipment |||||||
+
+
+// --- Heavy Duty Pickaxe
+recipes.remove(HDPick);
+
+// --- Heavy Duty Axe
+recipes.remove(HDAxe);
+
+// --- Heavy Duty Hoe
+recipes.remove(HDHoe);
+
+// --- Heavy Duty Shovel
+recipes.remove(HDShovel);
+
+// --- Heavy Duty Sword
+recipes.remove(HDSword);
+
+// --- Heavy Duty Helmet
+recipes.remove(HDHelm);
+
+// --- Heavy Duty Chest Plate
+recipes.remove(HDChestplate);
+
+// --- Heavy Duty Leggings
+recipes.remove(HDLegs);
+
+// --- Heavy Duty Boots
+recipes.remove(HDBoots);
+
+// --- Titanium Pickaxe
+recipes.remove(TiPick);
+
+// --- Titanium Axe
+recipes.remove(TiAxe);
+
+// --- Titanium Hoe
+recipes.remove(TiHoe);
+
+// --- Titanium Shovel
+recipes.remove(TiShovel);
+
+// --- Titanium Sword
+recipes.remove(TiSword);
+
+// --- Titanium Helmet
+recipes.remove(TiHelm);
+
+// --- Titanium Chest Plate
+recipes.remove(TiChestplate);
+
+// --- Titanium Leggings
+recipes.remove(TiLegs);
+
+// --- Titanium Boots
+recipes.remove(TiBoots);
+
+
+
+// *======= Adding Back Recipes =======*
+
+
+// ||||||| Blocks |||||||
+
+
+// --- Desh Block
+Compressor.addRecipe(DeshBlock, GtDeshIngot * 9);
+
+
+// ||||||| Items |||||||
+
+
+// --- Desh Stick
+recipes.addShapeless(DeshStick, [DeshRod]);
+recipes.addShapeless(GtDeshRod, [DeshStick]);
+
+// --- Canned Food
+Canner.addRecipe(CannedFoodOne, Apple * 8, GCCanister, 600, 1);
+Canner.addRecipe(CannedFoodTwo, Carrot * 8, GCCanister, 600, 1);
+Canner.addRecipe(CannedFoodThree, Melon * 8, GCCanister, 600, 1);
+Canner.addRecipe(CannedFoodFour, Potato * 16, GCCanister, 800, 1);
+
+
+// ||||||| Equipment |||||||
+
+
+// --- Heavy Duty Pickaxe
+recipes.addShaped(HDPick, [
+[CompressedSteel, CompressedSteel,CompressedSteel],
+[File, Stick, HHammer],
+[null, Stick, null]]);
+
+// --- Heavy Duty Axe
+recipes.addShaped(HDAxe, [
+[CompressedSteel, CompressedSteel, HHammer],
+[CompressedSteel, Stick, null],
+[File, Stick, null]]);
+
+// --- Heavy Duty Hoe
+recipes.addShaped(HDHoe, [
+[CompressedSteel, CompressedSteel, HHammer],
+[File, Stick, null],
+[null, Stick, null]]);
+
+// --- Heavy Duty Shovel
+recipes.addShaped(HDShovel, [
+[File, CompressedSteel, HHammer],
+[null, Stick, null],
+[null, Stick, null]]);
+
+// --- Heavy Duty Sword
+recipes.addShaped(HDSword, [
+[null, CompressedSteel, null],
+[File, CompressedSteel, HHammer],
+[null, Stick, null]]);
+
+// --- Heavy Duty Helmet
+recipes.addShapedMirrored(HDHelm, [
+[CompressedSteel, CompressedSteel, CompressedSteel],
+[CompressedSteel, HHammer, CompressedSteel],
+[null, null, null]]);
+
+// --- Heavy Duty Chestplate
+recipes.addShaped(HDChestplate, [
+[CompressedSteel, HHammer, CompressedSteel],
+[CompressedSteel, CompressedSteel, CompressedSteel],
+[CompressedSteel, CompressedSteel, CompressedSteel]]);
+
+// --- Heavy Duty Leggings
+recipes.addShaped(HDLegs, [
+[CompressedSteel, CompressedSteel, CompressedSteel],
+[CompressedSteel, HHammer, CompressedSteel],
+[CompressedSteel, null, CompressedSteel]]);
+
+// --- Heavy Duty Boots
+recipes.addShapedMirrored(HDBoots, [
+[CompressedSteel, null, CompressedSteel],
+[CompressedSteel, HHammer, CompressedSteel],
+[null, null, null]]);
+
+// --- Titanium Pickaxe
+recipes.addShaped(TiPick, [
+[CompressedTi, CompressedTi,CompressedTi],
+[File, Stick, HHammer],
+[null, Stick, null]]);
+
+// --- Titanium Axe
+recipes.addShaped(TiAxe, [
+[CompressedTi, CompressedTi, HHammer],
+[CompressedTi, Stick, null],
+[File, Stick, null]]);
+
+// --- Titanium Hoe
+recipes.addShaped(TiHoe, [
+[CompressedTi, CompressedTi, HHammer],
+[File, Stick, null],
+[null, Stick, null]]);
+
+// --- Titanium Shovel
+recipes.addShaped(TiShovel, [
+[File, CompressedTi, HHammer],
+[null, Stick, null],
+[null, Stick, null]]);
+
+// --- Titanium Sword
+recipes.addShaped(TiSword, [
+[null, CompressedTi, null],
+[File, CompressedTi, HHammer],
+[null, Stick, null]]);
+
+// --- Titanium Helmet
+recipes.addShapedMirrored(TiHelm, [
+[CompressedTi, CompressedTi, CompressedTi],
+[CompressedTi, HHammer, CompressedTi],
+[null, null, null]]);
+
+// --- Titanium Chestplate
+recipes.addShaped(TiChestplate, [
+[CompressedTi, HHammer, CompressedTi],
+[CompressedTi, CompressedTi, CompressedTi],
+[CompressedTi, CompressedTi, CompressedTi]]);
+
+// --- Titanium Leggings
+recipes.addShaped(TiLegs, [
+[CompressedTi, CompressedTi, CompressedTi],
+[CompressedTi, HHammer, CompressedTi],
+[CompressedTi, null, CompressedTi]]);
+
+// --- Titanium Boots
+recipes.addShapedMirrored(TiBoots, [
+[CompressedTi, null, CompressedTi],
+[CompressedTi, HHammer, CompressedTi],
+[null, null, null]]);
+
+
+
+// #======= Hiding Stuff =======#
+
+
 
 //remove Recipes
 
@@ -176,24 +447,6 @@ recipes.remove(<GalacticraftCore:item.oxygenTankHeavyFull:2700>);
 recipes.remove(SensorLens);
 //Sensor Glasses
 recipes.remove(<GalacticraftCore:item.sensorGlasses>);
-//Heavy Duty Pickaxe
-recipes.remove(<GalacticraftCore:item.steel_pickaxe>);
-//Heavy Duty Axe
-recipes.remove(<GalacticraftCore:item.steel_axe>);
-//Heavy Duty Hoe
-recipes.remove(<GalacticraftCore:item.steel_hoe>);
-//Heavy Duty Shovel
-recipes.remove(<GalacticraftCore:item.steel_shovel>);
-//Heavy Duty Sword
-recipes.remove(<GalacticraftCore:item.steel_sword>);
-//Heavy Duty Helm
-recipes.remove(<GalacticraftCore:item.steel_helmet>);
-//Heavy Duty Chest Plate
-recipes.remove(<GalacticraftCore:item.steel_chestplate>);
-//Heavy Duty Leggings
-recipes.remove(<GalacticraftCore:item.steel_leggings>);
-//Heavy Duty Boots
-recipes.remove(<GalacticraftCore:item.steel_boots>);
 //Tin Canister
 recipes.remove(<GalacticraftCore:item.canister>);
 //Copper Canister
@@ -222,41 +475,12 @@ recipes.remove(<GalacticraftCore:item.buggymat>);
 recipes.remove(<GalacticraftCore:item.buggymat:1>);
 //Buggy Storage Box
 recipes.remove(<GalacticraftCore:item.buggymat:2>);
-//Standard Wrenche
+//Standard Wrench
 recipes.remove(<GalacticraftCore:item.standardWrench>);
-//Can of Food
-recipes.remove(<GalacticraftCore:item.basicItem:15>);
-recipes.remove(<GalacticraftCore:item.basicItem:16>);
-recipes.remove(<GalacticraftCore:item.basicItem:17>);
-recipes.remove(<GalacticraftCore:item.basicItem:18>);
 //Frequencey Module
 recipes.remove(<GalacticraftCore:item.basicItem:19>);
 //Battery
 recipes.remove(<GalacticraftCore:item.battery:*>);
-//Titanium Pickaxe
-recipes.remove(<GalacticraftMars:item.titanium_pickaxe>);
-//Titanium Axe
-recipes.remove(<GalacticraftMars:item.titanium_axe>);
-//Titanium Hoe
-recipes.remove(<GalacticraftMars:item.titanium_hoe>);
-//Titanium Shovel
-recipes.remove(<GalacticraftMars:item.titanium_shovel>);
-//Titanium Sword
-recipes.remove(<GalacticraftMars:item.titanium_sword>);
-//Titanium Helm
-recipes.remove(<GalacticraftMars:item.titanium_helmet>);
-//Titanium Chest Plate
-recipes.remove(<GalacticraftMars:item.titanium_chestplate>);
-//Titanium Leggings
-recipes.remove(<GalacticraftMars:item.titanium_leggings>);
-//Titanium Boots
-recipes.remove(<GalacticraftMars:item.titanium_boots>);
-//Desh Block
-recipes.remove(<GalacticraftMars:tile.mars:8>);
-//Desh Ingot
-recipes.remove(<gregtech:gt.metaitem.01:11884>);
-//Desh Stick
-recipes.remove(<GalacticraftMars:item.null:1>);
 //Gas Liquifier
 recipes.remove(<GalacticraftMars:tile.marsMachineT2>);
 //Methan Synthezizerezizer
@@ -276,8 +500,8 @@ recipes.remove(<GalacticraftMars:item.atmosphericValve>);
 //Heavy Rocket Fines
 recipes.removeShaped(<GalacticraftMars:item.itemBasicAsteroids:2>, [
 [null, <GalacticraftMars:item.itemBasicAsteroids:6>, null],
-[HeavyDutyPlate, <GalacticraftMars:item.itemBasicAsteroids:6>, HeavyDutyPlate],
-[HeavyDutyPlate, null, HeavyDutyPlate]]);
+[HDPlate, <GalacticraftMars:item.itemBasicAsteroids:6>, HDPlate],
+[HDPlate, null, HDPlate]]);
 //Heavy Rocket Engine
 recipes.remove(<GalacticraftMars:item.itemBasicAsteroids:1>);
 //Heavy Nose Cone
@@ -547,114 +771,6 @@ recipes.addShaped(<GalacticraftCore:item.sensorGlasses>, [
 [DeshRing, <ore:boltDesh>, DeshRing],
 [SensorLens, null, SensorLens]]);
 
-//Heavy Duty Pickaxe
-recipes.addShaped(<GalacticraftCore:item.steel_pickaxe>, [
-[CompressedSteel, CompressedSteel,CompressedSteel],
-[File, Stick, HHammer],
-[null, Stick, null]]);
-
-//Heavy Duty Axe
-recipes.addShaped(<GalacticraftCore:item.steel_axe>, [
-[CompressedSteel, CompressedSteel, HHammer],
-[CompressedSteel, Stick, null],
-[File, Stick, null]]);
-
-//Heavy Duty Hoe
-recipes.addShaped(<GalacticraftCore:item.steel_hoe>, [
-[CompressedSteel, CompressedSteel, HHammer],
-[File, Stick, null],
-[null, Stick, null]]);
-
-//Heavy Duty Shovel
-recipes.addShaped(<GalacticraftCore:item.steel_shovel>, [
-[File, CompressedSteel, HHammer],
-[null, Stick, null],
-[null, Stick, null]]);
-
-//Heavy Duty Sword
-recipes.addShaped(<GalacticraftCore:item.steel_sword>, [
-[null, CompressedSteel, null],
-[File, CompressedSteel, HHammer],
-[null, Stick, null]]);
-
-//Heavy Duty Helm
-recipes.addShaped(<GalacticraftCore:item.steel_helmet>, [
-[CompressedSteel, CompressedSteel, CompressedSteel],
-[CompressedSteel, HHammer, CompressedSteel],
-[null, null, null]]);
-
-//Heavy Duty Chest Plate#
-recipes.addShaped(<GalacticraftCore:item.steel_chestplate>, [
-[CompressedSteel, HHammer, CompressedSteel],
-[CompressedSteel, CompressedSteel, CompressedSteel],
-[CompressedSteel, CompressedSteel, CompressedSteel]]);
-
-//Heavy Duty Leggings
-recipes.addShaped(<GalacticraftCore:item.steel_leggings>, [
-[CompressedSteel, CompressedSteel, CompressedSteel],
-[CompressedSteel, HHammer, CompressedSteel],
-[CompressedSteel, null, CompressedSteel]]);
-
-//Heavy Duty Boots
-recipes.addShaped(<GalacticraftCore:item.steel_boots>, [
-[CompressedSteel, null, CompressedSteel],
-[CompressedSteel, HHammer, CompressedSteel],
-[null, null, null]]);
-
-//Titanium Pickaxe
-recipes.addShaped(<GalacticraftMars:item.titanium_pickaxe>, [
-[CompressedTi, CompressedTi,CompressedTi],
-[File, Stick, HHammer],
-[null, Stick, null]]);
-
-//Titanium Axe
-recipes.addShaped(<GalacticraftMars:item.titanium_axe>, [
-[CompressedTi, CompressedTi, HHammer],
-[CompressedTi, Stick, null],
-[File, Stick, null]]);
-
-//Titanium Hoe
-recipes.addShaped(<GalacticraftMars:item.titanium_hoe>, [
-[CompressedTi, CompressedTi, HHammer],
-[File, Stick, null],
-[null, Stick, null]]);
-
-//Titanium Shovel
-recipes.addShaped(<GalacticraftMars:item.titanium_shovel>, [
-[File, CompressedTi, HHammer],
-[null, Stick, null],
-[null, Stick, null]]);
-
-//Titanium Sword
-recipes.addShaped(<GalacticraftMars:item.titanium_sword>, [
-[null, CompressedTi, null],
-[File, CompressedTi, HHammer],
-[null, Stick, null]]);
-
-//Titanium Helm
-recipes.addShaped(<GalacticraftMars:item.titanium_helmet>, [
-[CompressedTi, CompressedTi, CompressedTi],
-[CompressedTi, HHammer, CompressedTi],
-[null, null, null]]);
-
-//Titanium Chest Plate
-recipes.addShaped(<GalacticraftMars:item.titanium_chestplate>, [
-[CompressedTi, HHammer, CompressedTi],
-[CompressedTi, CompressedTi, CompressedTi],
-[CompressedTi, CompressedTi, CompressedTi]]);
-
-//Titanium Leggings
-recipes.addShaped(<GalacticraftMars:item.titanium_leggings>, [
-[CompressedTi, CompressedTi, CompressedTi],
-[CompressedTi, HHammer, CompressedTi],
-[CompressedTi, null, CompressedTi]]);
-
-//Titanium Boots
-recipes.addShaped(<GalacticraftMars:item.titanium_boots>, [
-[CompressedTi, null, CompressedTi],
-[CompressedTi, HHammer, CompressedTi],
-[null, null, null]]);
-
 //Oxygen Vent
 recipes.addShaped(AirVent, [
 [IronBars, CompressedTin, IronBars],
@@ -751,12 +867,6 @@ recipes.addShaped(<GalacticraftMars:item.itemBasicAsteroids:7> , [
 [Wool, <Thaumcraft:ItemResource:7>, Wool],
 [AlFoil, Wool, AlFoil]]);
 
-//Desh Sticks
-recipes.addShapeless(<GalacticraftMars:item.null:1>, [<gregtech:gt.metaitem.01:23884>]);
-
-//Desh Rod
-recipes.addShapeless(<gregtech:gt.metaitem.01:23884>, [<GalacticraftMars:item.null:1>]);
-
 //Battery
 recipes.addShapeless(<GalacticraftCore:item.battery:*>, [<gregtech:gt.metaitem.01:32500>]);
 
@@ -765,15 +875,15 @@ recipes.addShapeless(<GalacticraftCore:item.standardWrench>, [<gregtech:gt.metat
 
 //Heavy Rocket Engine
 recipes.addShaped(<GalacticraftMars:item.itemBasicAsteroids:1> , [
-[<GalacticraftCore:item.engine:1>, HeavyDutyPlate, <GalacticraftCore:item.engine:1>],
-[HeavyDutyPlate, HeavyDutyPlate, HeavyDutyPlate],
-[<GalacticraftCore:item.engine>, HeavyDutyPlate, <GalacticraftCore:item.engine>]]);
+[<GalacticraftCore:item.engine:1>, HDPlate, <GalacticraftCore:item.engine:1>],
+[HDPlate, HDPlate, HDPlate],
+[<GalacticraftCore:item.engine>, HDPlate, <GalacticraftCore:item.engine>]]);
 
 //Heavy Nose Cone
 recipes.addShaped(<GalacticraftMars:item.heavyNoseCone>, [
 [null, <GalacticraftCore:item.noseCone>, null],
-[null, HeavyDutyPlate, null],
-[HeavyDutyPlate, HeavyDutyPlate, HeavyDutyPlate]]);
+[null, HDPlate, null],
+[HDPlate, HDPlate, HDPlate]]);
 
 //Red Core
 recipes.addShaped(<GalacticraftMars:item.itemBasicAsteroids:8>, [
@@ -801,9 +911,9 @@ recipes.addShaped(<GalacticraftMars:tile.telepadShort>, [
 
 //Cryogenic Chamber
 recipes.addShaped(<GalacticraftMars:tile.marsMachine:4>, [
-[HeavyDutyPlate, <GraviSuite:itemSimpleItem:2>, HeavyDutyPlate],
+[HDPlate, <GraviSuite:itemSimpleItem:2>, HDPlate],
 [<GalacticraftMars:item.null:3>, <CarpentersBlocks:itemCarpentersBed>, <GalacticraftMars:item.null:3>],
-[HeavyDutyPlate, <minecraft:clock>, HeavyDutyPlate]]);
+[HDPlate, <minecraft:clock>, HDPlate]]);
 
 //Terraformer
 recipes.addShaped(<GalacticraftMars:tile.marsMachine>, [
@@ -845,21 +955,10 @@ Assembler.addRecipe(<GalacticraftMars:tile.hydrogenPipe>, OxygenPipe, <gregtech:
 //Titan Ingot
 BlastFurnace.addRecipe(<gregtech:gt.metaitem.01:11028>, <GalacticraftMars:item.itemBasicAsteroids:4> * 2, null, 1500, 120, 1500);
 
-//Canner Recipes
-
-//Food Cans
-Canner.addRecipe(<GalacticraftCore:item.basicItem:15>, <minecraft:apple> * 6, <GalacticraftCore:item.canister>, 800, 1);
-Canner.addRecipe(<GalacticraftCore:item.basicItem:16>, <minecraft:carrot> * 8, <GalacticraftCore:item.canister>, 800, 1);
-Canner.addRecipe(<GalacticraftCore:item.basicItem:17>,<minecraft:melon> * 8, <GalacticraftCore:item.canister>, 800, 1);
-Canner.addRecipe(<GalacticraftCore:item.basicItem:18>, <minecraft:potato> * 16, <GalacticraftCore:item.canister>, 800, 1);
-
 //Compressor Recipes
 
 //Solid Meteoric Iron
 Compressor.addRecipe(<GalacticraftCore:tile.gcBlockCore:12>, <gregtech:gt.metaitem.01:11340> * 9);
-
-//Desh Block
-Compressor.addRecipe(<GalacticraftMars:tile.mars:8>, <gregtech:gt.metaitem.01:11884> * 9);
 
 //Extruder Recipes
 
@@ -916,7 +1015,7 @@ ImplosionCompressor.addRecipe([HeavyPlating, <gregtech:gt.metaitem.01:306> * 2],
 ImplosionCompressor.addRecipe([<GalacticraftMars:item.null:3>, <gregtech:gt.metaitem.01:81> * 2], <gregtech:gt.blockcasings4:14>, 16);
 
 //Heavy Duty Plats Tier 3
-ImplosionCompressor.addRecipe([HeavyDutyPlate, <gregtech:gt.metaitem.01:316> * 2],<gregtech:gt.blockcasings4:15>, 32);
+ImplosionCompressor.addRecipe([HDPlate, <gregtech:gt.metaitem.01:316> * 2],<gregtech:gt.blockcasings4:15>, 32);
 
 //Macerator Recipes
 

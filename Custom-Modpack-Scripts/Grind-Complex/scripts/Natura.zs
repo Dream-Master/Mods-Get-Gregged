@@ -132,8 +132,9 @@ recipes.remove(FusePlanks);
 // ||||||| Sticks |||||||
 
 
-// --- Sticks
-recipes.removeShapeless(AllSticks * 4);
+// --- All Sticks
+recipes.remove(AllSticks * 4);
+recipes.remove(EucalyptusStick * 4);
 
 
 // ||||||| Doors |||||||
