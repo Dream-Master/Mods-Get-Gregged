@@ -1532,7 +1532,7 @@ recipes.addShaped(LumarButton, [
 [null, RSTorch, null]]);
 // -
 for i, Button in AnyButton {
-	recipes.addShaped(LumarButton, [
+	recipes.addShaped(LumarButton * 7, [
 	[Button, Button, Button],
 	[Button, WhiteDye, Button],
 	[Button, Paintbrush, Button]]);
@@ -1542,7 +1542,7 @@ for i, Button in AnyButton {
 
 // --- Orange Lumar Button
 for i, Button in AnyButton {
-	recipes.addShaped(OrangeButton, [
+	recipes.addShaped(OrangeButton * 7, [
 	[Button, Button, Button],
 	[Button, OrangeDye, Button],
 	[Button, Paintbrush, Button]]);
@@ -1552,9 +1552,9 @@ for i, Button in AnyButton {
 
 // --- Magenta Lumar Button
 for i, Button in AnyButton {
-	recipes.addShaped(OrangeButton, [
+	recipes.addShaped(MagentaButton * 7, [
 	[Button, Button, Button],
-	[Button, OrangeDye, Button],
+	[Button, MagentaDye, Button],
 	[Button, Paintbrush, Button]]);
 	// - Alternate Recipe
 	recipes.addShapeless(MagentaButton, [Button, MagentaDye]);
@@ -1562,7 +1562,7 @@ for i, Button in AnyButton {
 
 // --- Light Blue Lumar Button
 for i, Button in AnyButton {
-	recipes.addShaped(LightBlueButton, [
+	recipes.addShaped(LightBlueButton * 7, [
 	[Button, Button, Button],
 	[Button, LightBlueDye, Button],
 	[Button, Paintbrush, Button]]);
@@ -1572,7 +1572,7 @@ for i, Button in AnyButton {
 
 // --- Yellow Lumar Button
 for i, Button in AnyButton {
-	recipes.addShaped(YellowButton, [
+	recipes.addShaped(YellowButton * 7, [
 	[Button, Button, Button],
 	[Button, YellowDye, Button],
 	[Button, Paintbrush, Button]]);
@@ -1582,7 +1582,7 @@ for i, Button in AnyButton {
 
 // --- Lime Lumar Button
 for i, Button in AnyButton {
-	recipes.addShaped(LimeButton, [
+	recipes.addShaped(LimeButton * 7, [
 	[Button, Button, Button],
 	[Button, LimeDye, Button],
 	[Button, Paintbrush, Button]]);
@@ -1592,7 +1592,7 @@ for i, Button in AnyButton {
 
 // --- Pink Lumar Button
 for i, Button in AnyButton {
-	recipes.addShaped(PinkButton, [
+	recipes.addShaped(PinkButton * 7, [
 	[Button, Button, Button],
 	[Button, PinkDye, Button],
 	[Button, Paintbrush, Button]]);
@@ -1602,7 +1602,7 @@ for i, Button in AnyButton {
 
 // --- Gray Lumar Button
 for i, Button in AnyButton {
-	recipes.addShaped(GrayButton, [
+	recipes.addShaped(GrayButton * 7, [
 	[Button, Button, Button],
 	[Button, GrayDye, Button],
 	[Button, Paintbrush, Button]]);
@@ -1612,7 +1612,7 @@ for i, Button in AnyButton {
 
 // --- Light Gray Lumar Button
 for i, Button in AnyButton {
-	recipes.addShaped(LightGrayButton, [
+	recipes.addShaped(LightGrayButton * 7, [
 	[Button, Button, Button],
 	[Button, LightGrayDye, Button],
 	[Button, Paintbrush, Button]]);
@@ -1622,7 +1622,7 @@ for i, Button in AnyButton {
 
 // --- Cyan Lumar Button
 for i, Button in AnyButton {
-	recipes.addShaped(CyanButton, [
+	recipes.addShaped(CyanButton * 7, [
 	[Button, Button, Button],
 	[Button, CyanDye, Button],
 	[Button, Paintbrush, Button]]);
@@ -1632,7 +1632,7 @@ for i, Button in AnyButton {
 
 // --- Purple Lumar Button
 for i, Button in AnyButton {
-	recipes.addShaped(PurpleButton, [
+	recipes.addShaped(PurpleButton * 7, [
 	[Button, Button, Button],
 	[Button, PurpleDye, Button],
 	[Button, Paintbrush, Button]]);
@@ -1642,7 +1642,7 @@ for i, Button in AnyButton {
 
 // --- Blue Lumar Button
 for i, Button in AnyButton {
-	recipes.addShaped(BlueButton, [
+	recipes.addShaped(BlueButton * 7, [
 	[Button, Button, Button],
 	[Button, BlueDye, Button],
 	[Button, Paintbrush, Button]]);
@@ -1652,7 +1652,7 @@ for i, Button in AnyButton {
 
 // --- Brown Lumar Button
 for i, Button in AnyButton {
-	recipes.addShaped(BrownButton, [
+	recipes.addShaped(BrownButton * 7, [
 	[Button, Button, Button],
 	[Button, BrownDye, Button],
 	[Button, Paintbrush, Button]]);
@@ -1662,7 +1662,7 @@ for i, Button in AnyButton {
 
 // --- Green Lumar Button
 for i, Button in AnyButton {
-	recipes.addShaped(GreenButton, [
+	recipes.addShaped(GreenButton * 7, [
 	[Button, Button, Button],
 	[Button, GreenDye, Button],
 	[Button, Paintbrush, Button]]);
@@ -1672,7 +1672,7 @@ for i, Button in AnyButton {
 
 // --- Red Lumar Button
 for i, Button in AnyButton {
-	recipes.addShaped(RedButton, [
+	recipes.addShaped(RedButton * 7, [
 	[Button, Button, Button],
 	[Button, RedDye, Button],
 	[Button, Paintbrush, Button]]);
@@ -1682,7 +1682,7 @@ for i, Button in AnyButton {
 
 // --- Black Lumar Button
 for i, Button in AnyButton {
-	recipes.addShaped(BlackButton, [
+	recipes.addShaped(BlackButton * 7, [
 	[Button, Button, Button],
 	[Button, BlackDye, Button],
 	[Button, Paintbrush, Button]]);
@@ -1706,7 +1706,7 @@ recipes.addShaped(LatchButton, [
 [null, RSTorch, null]]);
 // -
 for i, XLatchButton in AnyLatchButton {
-	recipes.addShaped(LatchButton, [
+	recipes.addShaped(LatchButton * 7, [
 	[XLatchButton, XLatchButton, XLatchButton],
 	[XLatchButton, WhiteDye, XLatchButton],
 	[XLatchButton, Paintbrush, XLatchButton]]);
@@ -1716,7 +1716,7 @@ for i, XLatchButton in AnyLatchButton {
 
 // --- Orange Lumar Latchable Button
 for i, LatchButton in AnyLatchButton {
-	recipes.addShaped(OrangeLatchButton, [
+	recipes.addShaped(OrangeLatchButton * 7, [
 	[LatchButton, LatchButton, LatchButton],
 	[LatchButton, OrangeDye, LatchButton],
 	[LatchButton, Paintbrush, LatchButton]]);
@@ -1726,9 +1726,9 @@ for i, LatchButton in AnyLatchButton {
 
 // --- Magenta Lumar Latchable Button
 for i, LatchButton in AnyLatchButton {
-	recipes.addShaped(OrangeLatchButton, [
+	recipes.addShaped(MagentaLatchButton * 7, [
 	[LatchButton, LatchButton, LatchButton],
-	[LatchButton, OrangeDye, LatchButton],
+	[LatchButton, MagentaDye, LatchButton],
 	[LatchButton, Paintbrush, LatchButton]]);
 	// - Alternate Recipe
 	recipes.addShapeless(MagentaLatchButton, [LatchButton, MagentaDye]);
@@ -1736,7 +1736,7 @@ for i, LatchButton in AnyLatchButton {
 
 // --- Light Blue Lumar Latchable Button
 for i, LatchButton in AnyLatchButton {
-	recipes.addShaped(LightBlueLatchButton, [
+	recipes.addShaped(LightBlueLatchButton * 7, [
 	[LatchButton, LatchButton, LatchButton],
 	[LatchButton, LightBlueDye, LatchButton],
 	[LatchButton, Paintbrush, LatchButton]]);
@@ -1746,7 +1746,7 @@ for i, LatchButton in AnyLatchButton {
 
 // --- Yellow Lumar Latchable Button
 for i, LatchButton in AnyLatchButton {
-	recipes.addShaped(YellowLatchButton, [
+	recipes.addShaped(YellowLatchButton * 7, [
 	[LatchButton, LatchButton, LatchButton],
 	[LatchButton, YellowDye, LatchButton],
 	[LatchButton, Paintbrush, LatchButton]]);
@@ -1756,7 +1756,7 @@ for i, LatchButton in AnyLatchButton {
 
 // --- Lime Lumar Latchable Button
 for i, LatchButton in AnyLatchButton {
-	recipes.addShaped(LimeLatchButton, [
+	recipes.addShaped(LimeLatchButton * 7, [
 	[LatchButton, LatchButton, LatchButton],
 	[LatchButton, LimeDye, LatchButton],
 	[LatchButton, Paintbrush, LatchButton]]);
@@ -1766,7 +1766,7 @@ for i, LatchButton in AnyLatchButton {
 
 // --- Pink Lumar Latchable Button
 for i, LatchButton in AnyLatchButton {
-	recipes.addShaped(PinkLatchButton, [
+	recipes.addShaped(PinkLatchButton * 7, [
 	[LatchButton, LatchButton, LatchButton],
 	[LatchButton, PinkDye, LatchButton],
 	[LatchButton, Paintbrush, LatchButton]]);
@@ -1776,7 +1776,7 @@ for i, LatchButton in AnyLatchButton {
 
 // --- Gray Lumar Latchable Button
 for i, LatchButton in AnyLatchButton {
-	recipes.addShaped(GrayLatchButton, [
+	recipes.addShaped(GrayLatchButton * 7, [
 	[LatchButton, LatchButton, LatchButton],
 	[LatchButton, GrayDye, LatchButton],
 	[LatchButton, Paintbrush, LatchButton]]);
@@ -1786,7 +1786,7 @@ for i, LatchButton in AnyLatchButton {
 
 // --- Light Gray Lumar Latchable Button
 for i, LatchButton in AnyLatchButton {
-	recipes.addShaped(LightGrayLatchButton, [
+	recipes.addShaped(LightGrayLatchButton * 7, [
 	[LatchButton, LatchButton, LatchButton],
 	[LatchButton, LightGrayDye, LatchButton],
 	[LatchButton, Paintbrush, LatchButton]]);
@@ -1796,7 +1796,7 @@ for i, LatchButton in AnyLatchButton {
 
 // --- Cyan Lumar Latchable Button
 for i, LatchButton in AnyLatchButton {
-	recipes.addShaped(CyanLatchButton, [
+	recipes.addShaped(CyanLatchButton * 7, [
 	[LatchButton, LatchButton, LatchButton],
 	[LatchButton, CyanDye, LatchButton],
 	[LatchButton, Paintbrush, LatchButton]]);
@@ -1806,7 +1806,7 @@ for i, LatchButton in AnyLatchButton {
 
 // --- Purple Lumar Latchable Button
 for i, LatchButton in AnyLatchButton {
-	recipes.addShaped(PurpleLatchButton, [
+	recipes.addShaped(PurpleLatchButton * 7, [
 	[LatchButton, LatchButton, LatchButton],
 	[LatchButton, PurpleDye, LatchButton],
 	[LatchButton, Paintbrush, LatchButton]]);
@@ -1816,7 +1816,7 @@ for i, LatchButton in AnyLatchButton {
 
 // --- Blue Lumar Latchable Button
 for i, LatchButton in AnyLatchButton {
-	recipes.addShaped(BlueLatchButton, [
+	recipes.addShaped(BlueLatchButton * 7, [
 	[LatchButton, LatchButton, LatchButton],
 	[LatchButton, BlueDye, LatchButton],
 	[LatchButton, Paintbrush, LatchButton]]);
@@ -1826,7 +1826,7 @@ for i, LatchButton in AnyLatchButton {
 
 // --- Brown Lumar Latchable Button
 for i, LatchButton in AnyLatchButton {
-	recipes.addShaped(BrownLatchButton, [
+	recipes.addShaped(BrownLatchButton * 7, [
 	[LatchButton, LatchButton, LatchButton],
 	[LatchButton, BrownDye, LatchButton],
 	[LatchButton, Paintbrush, LatchButton]]);
@@ -1836,7 +1836,7 @@ for i, LatchButton in AnyLatchButton {
 
 // --- Green Lumar Latchable Button
 for i, LatchButton in AnyLatchButton {
-	recipes.addShaped(GreenLatchButton, [
+	recipes.addShaped(GreenLatchButton * 7, [
 	[LatchButton, LatchButton, LatchButton],
 	[LatchButton, GreenDye, LatchButton],
 	[LatchButton, Paintbrush, LatchButton]]);
@@ -1846,7 +1846,7 @@ for i, LatchButton in AnyLatchButton {
 
 // --- Red Lumar Latchable Button
 for i, LatchButton in AnyLatchButton {
-	recipes.addShaped(RedLatchButton, [
+	recipes.addShaped(RedLatchButton * 7, [
 	[LatchButton, LatchButton, LatchButton],
 	[LatchButton, RedDye, LatchButton],
 	[LatchButton, Paintbrush, LatchButton]]);
@@ -1856,7 +1856,7 @@ for i, LatchButton in AnyLatchButton {
 
 // --- Black Lumar Latchable Button
 for i, LatchButton in AnyLatchButton {
-	recipes.addShaped(BlackLatchButton, [
+	recipes.addShaped(BlackLatchButton * 7, [
 	[LatchButton, LatchButton, LatchButton],
 	[LatchButton, BlackDye, LatchButton],
 	[LatchButton, Paintbrush, LatchButton]]);
@@ -1880,7 +1880,7 @@ recipes.addShaped(SelfLatchButton, [
 [null, RSTorch, null]]);
 // -
 for i, XSelfLatchButton in AnySelfLatchButton {
-	recipes.addShaped(SelfLatchButton, [
+	recipes.addShaped(SelfLatchButton * 7, [
 	[XSelfLatchButton, XSelfLatchButton, XSelfLatchButton],
 	[XSelfLatchButton, WhiteDye, XSelfLatchButton],
 	[XSelfLatchButton, Paintbrush, XSelfLatchButton]]);
@@ -1890,7 +1890,7 @@ for i, XSelfLatchButton in AnySelfLatchButton {
 
 // --- Orange Lumar Self-Latchable Button
 for i, SelfLatchButton in AnySelfLatchButton {
-	recipes.addShaped(OrangeSelfLatchButton, [
+	recipes.addShaped(OrangeSelfLatchButton * 7, [
 	[SelfLatchButton, SelfLatchButton, SelfLatchButton],
 	[SelfLatchButton, OrangeDye, SelfLatchButton],
 	[SelfLatchButton, Paintbrush, SelfLatchButton]]);
@@ -1900,9 +1900,9 @@ for i, SelfLatchButton in AnySelfLatchButton {
 
 // --- Magenta Lumar Self-Latchable Button
 for i, SelfLatchButton in AnySelfLatchButton {
-	recipes.addShaped(OrangeSelfLatchButton, [
+	recipes.addShaped(MagentaSelfLatchButton * 7, [
 	[SelfLatchButton, SelfLatchButton, SelfLatchButton],
-	[SelfLatchButton, OrangeDye, SelfLatchButton],
+	[SelfLatchButton, MagentaDye, SelfLatchButton],
 	[SelfLatchButton, Paintbrush, SelfLatchButton]]);
 	// - Alternate Recipe
 	recipes.addShapeless(MagentaSelfLatchButton, [SelfLatchButton, MagentaDye]);
@@ -1910,7 +1910,7 @@ for i, SelfLatchButton in AnySelfLatchButton {
 
 // --- Light Blue Lumar Self-Latchable Button
 for i, SelfLatchButton in AnySelfLatchButton {
-	recipes.addShaped(LightBlueSelfLatchButton, [
+	recipes.addShaped(LightBlueSelfLatchButton * 7, [
 	[SelfLatchButton, SelfLatchButton, SelfLatchButton],
 	[SelfLatchButton, LightBlueDye, SelfLatchButton],
 	[SelfLatchButton, Paintbrush, SelfLatchButton]]);
@@ -1920,7 +1920,7 @@ for i, SelfLatchButton in AnySelfLatchButton {
 
 // --- Yellow Lumar Self-Latchable Button
 for i, SelfLatchButton in AnySelfLatchButton {
-	recipes.addShaped(YellowSelfLatchButton, [
+	recipes.addShaped(YellowSelfLatchButton * 7, [
 	[SelfLatchButton, SelfLatchButton, SelfLatchButton],
 	[SelfLatchButton, YellowDye, SelfLatchButton],
 	[SelfLatchButton, Paintbrush, SelfLatchButton]]);
@@ -1930,7 +1930,7 @@ for i, SelfLatchButton in AnySelfLatchButton {
 
 // --- Lime Lumar Self-Latchable Button
 for i, SelfLatchButton in AnySelfLatchButton {
-	recipes.addShaped(LimeSelfLatchButton, [
+	recipes.addShaped(LimeSelfLatchButton * 7, [
 	[SelfLatchButton, SelfLatchButton, SelfLatchButton],
 	[SelfLatchButton, LimeDye, SelfLatchButton],
 	[SelfLatchButton, Paintbrush, SelfLatchButton]]);
@@ -1940,7 +1940,7 @@ for i, SelfLatchButton in AnySelfLatchButton {
 
 // --- Pink Lumar Self-Latchable Button
 for i, SelfLatchButton in AnySelfLatchButton {
-	recipes.addShaped(PinkSelfLatchButton, [
+	recipes.addShaped(PinkSelfLatchButton * 7, [
 	[SelfLatchButton, SelfLatchButton, SelfLatchButton],
 	[SelfLatchButton, PinkDye, SelfLatchButton],
 	[SelfLatchButton, Paintbrush, SelfLatchButton]]);
@@ -1950,7 +1950,7 @@ for i, SelfLatchButton in AnySelfLatchButton {
 
 // --- Gray Lumar Self-Latchable Button
 for i, SelfLatchButton in AnySelfLatchButton {
-	recipes.addShaped(GraySelfLatchButton, [
+	recipes.addShaped(GraySelfLatchButton * 7, [
 	[SelfLatchButton, SelfLatchButton, SelfLatchButton],
 	[SelfLatchButton, GrayDye, SelfLatchButton],
 	[SelfLatchButton, Paintbrush, SelfLatchButton]]);
@@ -1960,7 +1960,7 @@ for i, SelfLatchButton in AnySelfLatchButton {
 
 // --- Light Gray Lumar Self-Latchable Button
 for i, SelfLatchButton in AnySelfLatchButton {
-	recipes.addShaped(LightGraySelfLatchButton, [
+	recipes.addShaped(LightGraySelfLatchButton * 7, [
 	[SelfLatchButton, SelfLatchButton, SelfLatchButton],
 	[SelfLatchButton, LightGrayDye, SelfLatchButton],
 	[SelfLatchButton, Paintbrush, SelfLatchButton]]);
@@ -1970,7 +1970,7 @@ for i, SelfLatchButton in AnySelfLatchButton {
 
 // --- Cyan Lumar Self-Latchable Button
 for i, SelfLatchButton in AnySelfLatchButton {
-	recipes.addShaped(CyanSelfLatchButton, [
+	recipes.addShaped(CyanSelfLatchButton * 7, [
 	[SelfLatchButton, SelfLatchButton, SelfLatchButton],
 	[SelfLatchButton, CyanDye, SelfLatchButton],
 	[SelfLatchButton, Paintbrush, SelfLatchButton]]);
@@ -1980,7 +1980,7 @@ for i, SelfLatchButton in AnySelfLatchButton {
 
 // --- Purple Lumar Self-Latchable Button
 for i, SelfLatchButton in AnySelfLatchButton {
-	recipes.addShaped(PurpleSelfLatchButton, [
+	recipes.addShaped(PurpleSelfLatchButton * 7, [
 	[SelfLatchButton, SelfLatchButton, SelfLatchButton],
 	[SelfLatchButton, PurpleDye, SelfLatchButton],
 	[SelfLatchButton, Paintbrush, SelfLatchButton]]);
@@ -1990,7 +1990,7 @@ for i, SelfLatchButton in AnySelfLatchButton {
 
 // --- Blue Lumar Self-Latchable Button
 for i, SelfLatchButton in AnySelfLatchButton {
-	recipes.addShaped(BlueSelfLatchButton, [
+	recipes.addShaped(BlueSelfLatchButton * 7, [
 	[SelfLatchButton, SelfLatchButton, SelfLatchButton],
 	[SelfLatchButton, BlueDye, SelfLatchButton],
 	[SelfLatchButton, Paintbrush, SelfLatchButton]]);
@@ -2000,7 +2000,7 @@ for i, SelfLatchButton in AnySelfLatchButton {
 
 // --- Brown Lumar Self-Latchable Button
 for i, SelfLatchButton in AnySelfLatchButton {
-	recipes.addShaped(BrownSelfLatchButton, [
+	recipes.addShaped(BrownSelfLatchButton * 7, [
 	[SelfLatchButton, SelfLatchButton, SelfLatchButton],
 	[SelfLatchButton, BrownDye, SelfLatchButton],
 	[SelfLatchButton, Paintbrush, SelfLatchButton]]);
@@ -2010,7 +2010,7 @@ for i, SelfLatchButton in AnySelfLatchButton {
 
 // --- Green Lumar Self-Latchable Button
 for i, SelfLatchButton in AnySelfLatchButton {
-	recipes.addShaped(GreenSelfLatchButton, [
+	recipes.addShaped(GreenSelfLatchButton * 7, [
 	[SelfLatchButton, SelfLatchButton, SelfLatchButton],
 	[SelfLatchButton, GreenDye, SelfLatchButton],
 	[SelfLatchButton, Paintbrush, SelfLatchButton]]);
@@ -2020,7 +2020,7 @@ for i, SelfLatchButton in AnySelfLatchButton {
 
 // --- Red Lumar Self-Latchable Button
 for i, SelfLatchButton in AnySelfLatchButton {
-	recipes.addShaped(RedSelfLatchButton, [
+	recipes.addShaped(RedSelfLatchButton * 7, [
 	[SelfLatchButton, SelfLatchButton, SelfLatchButton],
 	[SelfLatchButton, RedDye, SelfLatchButton],
 	[SelfLatchButton, Paintbrush, SelfLatchButton]]);
@@ -2030,7 +2030,7 @@ for i, SelfLatchButton in AnySelfLatchButton {
 
 // --- Black Lumar Self-Latchable Button
 for i, SelfLatchButton in AnySelfLatchButton {
-	recipes.addShaped(BlackSelfLatchButton, [
+	recipes.addShaped(BlackSelfLatchButton * 7, [
 	[SelfLatchButton, SelfLatchButton, SelfLatchButton],
 	[SelfLatchButton, BlackDye, SelfLatchButton],
 	[SelfLatchButton, Paintbrush, SelfLatchButton]]);
@@ -2054,7 +2054,7 @@ recipes.addShaped(ToggleButton, [
 [null, RSTorch, null]]);
 // -
 for i, XToggleButton in AnyToggleButton {
-	recipes.addShaped(ToggleButton, [
+	recipes.addShaped(ToggleButton * 7, [
 	[XToggleButton, XToggleButton, XToggleButton],
 	[XToggleButton, WhiteDye, XToggleButton],
 	[XToggleButton, Paintbrush, XToggleButton]]);
@@ -2064,7 +2064,7 @@ for i, XToggleButton in AnyToggleButton {
 
 // --- Orange Lumar Toggleable Button
 for i, ToggleButton in AnyToggleButton {
-	recipes.addShaped(OrangeToggleButton, [
+	recipes.addShaped(OrangeToggleButton * 7, [
 	[ToggleButton, ToggleButton, ToggleButton],
 	[ToggleButton, OrangeDye, ToggleButton],
 	[ToggleButton, Paintbrush, ToggleButton]]);
@@ -2074,9 +2074,9 @@ for i, ToggleButton in AnyToggleButton {
 
 // --- Magenta Lumar Toggleable Button
 for i, ToggleButton in AnyToggleButton {
-	recipes.addShaped(OrangeToggleButton, [
+	recipes.addShaped(MagentaToggleButton * 7, [
 	[ToggleButton, ToggleButton, ToggleButton],
-	[ToggleButton, OrangeDye, ToggleButton],
+	[ToggleButton, MagentaDye, ToggleButton],
 	[ToggleButton, Paintbrush, ToggleButton]]);
 	// - Alternate Recipe
 	recipes.addShapeless(MagentaToggleButton, [ToggleButton, MagentaDye]);
@@ -2084,7 +2084,7 @@ for i, ToggleButton in AnyToggleButton {
 
 // --- Light Blue Lumar Toggleable Button
 for i, ToggleButton in AnyToggleButton {
-	recipes.addShaped(LightBlueToggleButton, [
+	recipes.addShaped(LightBlueToggleButton * 7, [
 	[ToggleButton, ToggleButton, ToggleButton],
 	[ToggleButton, LightBlueDye, ToggleButton],
 	[ToggleButton, Paintbrush, ToggleButton]]);
@@ -2094,7 +2094,7 @@ for i, ToggleButton in AnyToggleButton {
 
 // --- Yellow Lumar Toggleable Button
 for i, ToggleButton in AnyToggleButton {
-	recipes.addShaped(YellowToggleButton, [
+	recipes.addShaped(YellowToggleButton * 7, [
 	[ToggleButton, ToggleButton, ToggleButton],
 	[ToggleButton, YellowDye, ToggleButton],
 	[ToggleButton, Paintbrush, ToggleButton]]);
@@ -2104,7 +2104,7 @@ for i, ToggleButton in AnyToggleButton {
 
 // --- Lime Lumar Toggleable Button
 for i, ToggleButton in AnyToggleButton {
-	recipes.addShaped(LimeToggleButton, [
+	recipes.addShaped(LimeToggleButton * 7, [
 	[ToggleButton, ToggleButton, ToggleButton],
 	[ToggleButton, LimeDye, ToggleButton],
 	[ToggleButton, Paintbrush, ToggleButton]]);
@@ -2114,7 +2114,7 @@ for i, ToggleButton in AnyToggleButton {
 
 // --- Pink Lumar Toggleable Button
 for i, ToggleButton in AnyToggleButton {
-	recipes.addShaped(PinkToggleButton, [
+	recipes.addShaped(PinkToggleButton * 7, [
 	[ToggleButton, ToggleButton, ToggleButton],
 	[ToggleButton, PinkDye, ToggleButton],
 	[ToggleButton, Paintbrush, ToggleButton]]);
@@ -2124,7 +2124,7 @@ for i, ToggleButton in AnyToggleButton {
 
 // --- Gray Lumar Toggleable Button
 for i, ToggleButton in AnyToggleButton {
-	recipes.addShaped(GrayToggleButton, [
+	recipes.addShaped(GrayToggleButton * 7, [
 	[ToggleButton, ToggleButton, ToggleButton],
 	[ToggleButton, GrayDye, ToggleButton],
 	[ToggleButton, Paintbrush, ToggleButton]]);
@@ -2134,7 +2134,7 @@ for i, ToggleButton in AnyToggleButton {
 
 // --- Light Gray Lumar Toggleable Button
 for i, ToggleButton in AnyToggleButton {
-	recipes.addShaped(LightGrayToggleButton, [
+	recipes.addShaped(LightGrayToggleButton * 7, [
 	[ToggleButton, ToggleButton, ToggleButton],
 	[ToggleButton, LightGrayDye, ToggleButton],
 	[ToggleButton, Paintbrush, ToggleButton]]);
@@ -2144,7 +2144,7 @@ for i, ToggleButton in AnyToggleButton {
 
 // --- Cyan Lumar Toggleable Button
 for i, ToggleButton in AnyToggleButton {
-	recipes.addShaped(CyanToggleButton, [
+	recipes.addShaped(CyanToggleButton * 7, [
 	[ToggleButton, ToggleButton, ToggleButton],
 	[ToggleButton, CyanDye, ToggleButton],
 	[ToggleButton, Paintbrush, ToggleButton]]);
@@ -2154,7 +2154,7 @@ for i, ToggleButton in AnyToggleButton {
 
 // --- Purple Lumar Toggleable Button
 for i, ToggleButton in AnyToggleButton {
-	recipes.addShaped(PurpleToggleButton, [
+	recipes.addShaped(PurpleToggleButton * 7, [
 	[ToggleButton, ToggleButton, ToggleButton],
 	[ToggleButton, PurpleDye, ToggleButton],
 	[ToggleButton, Paintbrush, ToggleButton]]);
@@ -2164,7 +2164,7 @@ for i, ToggleButton in AnyToggleButton {
 
 // --- Blue Lumar Toggleable Button
 for i, ToggleButton in AnyToggleButton {
-	recipes.addShaped(BlueToggleButton, [
+	recipes.addShaped(BlueToggleButton * 7, [
 	[ToggleButton, ToggleButton, ToggleButton],
 	[ToggleButton, BlueDye, ToggleButton],
 	[ToggleButton, Paintbrush, ToggleButton]]);
@@ -2174,7 +2174,7 @@ for i, ToggleButton in AnyToggleButton {
 
 // --- Brown Lumar Toggleable Button
 for i, ToggleButton in AnyToggleButton {
-	recipes.addShaped(BrownToggleButton, [
+	recipes.addShaped(BrownToggleButton * 7, [
 	[ToggleButton, ToggleButton, ToggleButton],
 	[ToggleButton, BrownDye, ToggleButton],
 	[ToggleButton, Paintbrush, ToggleButton]]);
@@ -2184,7 +2184,7 @@ for i, ToggleButton in AnyToggleButton {
 
 // --- Green Lumar Toggleable Button
 for i, ToggleButton in AnyToggleButton {
-	recipes.addShaped(GreenToggleButton, [
+	recipes.addShaped(GreenToggleButton * 7, [
 	[ToggleButton, ToggleButton, ToggleButton],
 	[ToggleButton, GreenDye, ToggleButton],
 	[ToggleButton, Paintbrush, ToggleButton]]);
@@ -2194,7 +2194,7 @@ for i, ToggleButton in AnyToggleButton {
 
 // --- Red Lumar Toggleable Button
 for i, ToggleButton in AnyToggleButton {
-	recipes.addShaped(RedToggleButton, [
+	recipes.addShaped(RedToggleButton * 7, [
 	[ToggleButton, ToggleButton, ToggleButton],
 	[ToggleButton, RedDye, ToggleButton],
 	[ToggleButton, Paintbrush, ToggleButton]]);
@@ -2204,7 +2204,7 @@ for i, ToggleButton in AnyToggleButton {
 
 // --- Black Lumar Toggleable Button
 for i, ToggleButton in AnyToggleButton {
-	recipes.addShaped(BlackToggleButton, [
+	recipes.addShaped(BlackToggleButton * 7, [
 	[ToggleButton, ToggleButton, ToggleButton],
 	[ToggleButton, BlackDye, ToggleButton],
 	[ToggleButton, Paintbrush, ToggleButton]]);
