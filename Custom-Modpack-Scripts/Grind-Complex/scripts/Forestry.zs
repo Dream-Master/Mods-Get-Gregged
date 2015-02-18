@@ -14,6 +14,7 @@ import mods.nei.NEI;
 
 
 val SturdyCasing = <Forestry:sturdyMachine>;
+val HardCasing = <Forestry:hardenedMachine>;
 val Analyzer = <Forestry:core>;
 val Bottler = <Forestry:factory>;
 val Carpenter = <Forestry:factory:1>;
@@ -118,6 +119,7 @@ val ForestWrench = <Forestry:wrench>;
 val Pipette = <Forestry:pipette>;
 val Spectacles = <Forestry:naturalistHelmet>;
 val ApatineTube = <Forestry:thermionicTubes:10>;
+val EmptyCan = <Forestry:canEmpty>;
 
 val ApiaristBackpack = <Forestry:apiaristBag>;
 val LepidopteristBackpack = <Forestry:lepidopteristBag>;
@@ -136,26 +138,61 @@ val GtBronzeGear = <gregtech:gt.metaitem.02:31300>;
 val GtCopperGear = <gregtech:gt.metaitem.02:31035>;
 val GtTinGear = <gregtech:gt.metaitem.02:31057>;
 
+val TinRotor = <ore:rotorTin>;
+val BronzeRotor = <ore:rotorBronze>;
+val SmallBronzePipe = <ore:pipeSmallBronze>;
 val LargeBrassPipe = <ore:pipeLargeBrass>;
 val LargeBronzePipe = <ore:pipeLargeBronze>;
-val LVConveyor = <gregtech:gt.metaitem.01:32630>;
-val LVPump = <gregtech:gt.metaitem.01:32610>;
 
 val IronRod = <ore:stickAnyIron>;
+val IronScrew = <ore:screwIron>;
+val IronBolt = <ore:boltIron>;
+val IronRing = <ore:ringIron>;
 val CopperRod = <ore:stickAnyCopper>;
-val BronzePlate = <ore:plateAnyBronze>;
-val BronzeGear = <ore:gearAnyBronze>;
+val TinScrew = <ore:screwTin>;
 val BronzeRod = <ore:stickAnyBronze>;
 val BronzeRing = <ore:ringAnyBronze>;
+val BronzeScrew = <ore:screwAnyBronze>;
+val BronzeBolt = <ore:boltAnyBronze>;
+val GlassLens = <ore:lensGlass>;
+val GlassBolt = <ore:boltGlass>;
+
+val RubberPlate = <ore:plateRubber>;
+val IronPlate = <ore:plateAnyIron>;
+val GoldPlate = <ore:plateGold>;
+val TinPlate = <ore:plateTin>;
+val DTinPlate = <ore:plateDenseTin>;
+val BronzePlate = <ore:plateAnyBronze>;
+val SteelPlate = <ore:plateSteel>;
+
+val CopperGear = <ore:gearCopper>;
+val TinGear = <ore:gearTin>;
+val SteelGear = <ore:gearSteel>;
+val AlGear = <ore:gearAluminium>;
+val SmallTinGear = <ore:gearGtSmallTin>;
+val SmallBronzeGear = <ore:gearGtSmallBronze>;
+val RedAlloyPlate = <ore:plateRedAlloy>;
 val SmallSteelGear = <ore:gearGtSmallSteel>;
+val BronzeGear = <ore:gearAnyBronze>;
 
 val GoodCircuit = <ore:circuitGood>;
 val Circuit = <ore:circuitBasic>;
+val LVMotor = <gregtech:gt.metaitem.01:32600>;
+val MVMotor = <gregtech:gt.metaitem.01:32601>;
+val LVConveyor = <gregtech:gt.metaitem.01:32630>;
+val LVPiston = <gregtech:gt.metaitem.01:32640>;
+val LVPump = <gregtech:gt.metaitem.01:32610>;
+val MVEmitter = <gregtech:gt.metaitem.01:32681>;
+val MVSensor = <gregtech:gt.metaitem.01:32691>;
 
 val BasicCasing = <IC2:blockMachine>;
 val OBTank = <OpenBlocks:tank>;
 val RedAlloyWire = <RedLogic:redlogic.wire>;
 val TannedLeather = <Backpack:tannedLeather>;
+val ItemCannon = <OpenBlocks:cannon>;
+val Coil = <IC2:itemRecipePart>;
+val ClearPane = <TConstruct:GlassPane>;
+val EmptyCell = <ore:cellEmpty>;
 
 val StoneBricks = <minecraft:stonebrick>;
 val MossyStoneBricks = <minecraft:stonebrick:1>;
@@ -171,14 +208,21 @@ val PillarQuartzBlock = <minecraft:quartz_block:2>;
 
 val WoodSlab = <ore:slabWood>;
 val CobbleSlab = <minecraft:stone_slab:3>;
-val Chest = <minecraft:chest>;
 
+val Chest = <minecraft:chest>;
+val Piston = <minecraft:piston>;
 val Hopper = <minecraft:hopper>;
 val String = <minecraft:string>;
 val Feather = <minecraft:feather>; 
 val ClayBall = <minecraft:clay_ball>;
 val Bone = <minecraft:bone>;
+val CraftTable = <minecraft:crafting_table>;
+val Bookshelf = <minecraft:bookshelf>;
+val GreenCarpet = <minecraft:carpet:13>;
+val IronBars = <minecraft:iron_bars>;
 
+val Screwdriver = <ore:craftingToolScrewdriver>;
+val File = <ore:craftingToolFile>;
 val Wrench = <ore:craftingToolWrench>;
 val HHammer = <ore:craftingToolHardHammer>;
 val WireCutter = <ore:craftingToolWireCutter>;
@@ -372,11 +416,95 @@ recipes.addShaped(SturdyCasing, [
 [BronzePlate, BasicCasing, BronzePlate],
 [BronzeRod, BronzePlate, BronzeRod]]);
 
+// --- Rain Tank
+recipes.addShaped(<Forestry:factory2:1>, [
+[IronPlate, OBTank, IronPlate],
+[IronPlate, SturdyCasing, IronPlate],
+[SteelPlate, IronPlate, SteelPlate]]);
+
+// --- Work Table
+recipes.addShaped(Worktable, [
+[TinPlate, GreenCarpet, TinPlate],
+[TinPlate, Bookshelf, TinPlate],
+[Chest, CraftTable, Chest]]);
+
+
+// ||||||| Machines |||||||
+
 // --- Analyzer
 recipes.addShaped(Analyzer, [
 [BronzePlate, BeeAnalyzer, BronzePlate],
 [GoodCircuit, SturdyCasing, Circuit],
 [BronzePlate, BronzeGear, BronzePlate]]);
+// - Alternate Recipe
+recipes.addShaped(Analyzer, [
+[BronzePlate, BeeAnalyzer, BronzePlate],
+[Circuit, SturdyCasing, GoodCircuit],
+[BronzePlate, BronzeGear, BronzePlate]]);
+
+// --- Bottler
+recipes.addShaped(Bottler, [
+[BronzePlate, LVPump, BronzePlate],
+[EmptyCan, SturdyCasing, EmptyCan],
+[SmallBronzeGear, LVMotor, SmallBronzeGear]]);
+
+// --- Carpenter
+recipes.addShaped(Carpenter, [
+[BronzePlate, TinScrew, BronzePlate],
+[SmallTinGear, SturdyCasing, SmallTinGear],
+[BronzeGear, LVMotor, BronzeGear]]);
+
+// --- Centrifuge
+recipes.addShaped(Centrifuge, [
+[BronzeRod, SmallTinGear, BronzeRod],
+[TinRotor, SturdyCasing, TinRotor],
+[BronzeGear, MVMotor, BronzeGear]]);
+
+// --- Fermenter
+recipes.addShaped(Fermenter, [
+[GoldPlate, LVPump, GoldPlate],
+[TinGear, SturdyCasing, TinGear],
+[GoldPlate, LVMotor, GoldPlate]]);
+
+// --- Moistener
+recipes.addShaped(Moistener, [
+[CopperGear, ClearPane, CopperGear],
+[SmallBronzePipe, SturdyCasing, SmallBronzePipe],
+[CopperGear, BronzePlate, CopperGear]]);
+
+// --- Squeezer
+recipes.addShaped(Squeezer, [
+[BronzePlate, TinGear, BronzePlate],
+[LVPiston, SturdyCasing, LVPiston],
+[BronzePlate, LVMotor, BronzePlate]]);
+
+// --- Still
+recipes.addShaped(Still, [
+[SteelPlate, RedAlloyPlate, SteelPlate],
+[BronzeRotor, SturdyCasing, BronzeRotor],
+[SteelGear, MVMotor, SteelGear]]);
+
+// --- Rain Maker
+recipes.addShaped(RainMaker, [
+[MVEmitter, ItemCannon, MVSensor],
+[LVPiston, HardCasing, LVPiston],
+[AlGear, DTinPlate, AlGear]]);
+
+// --- Thermionic Fabricator
+recipes.addShaped(Thermionic, [
+[SmallTinGear, Worktable, SmallTinGear],
+[Coil, SturdyCasing, Coil],
+[DTinPlate, LVMotor, DTinPlate]]);
+
+
+// ||||||| Engines |||||||
+
+
+// --- Electrical Engine
+recipes.addShaped(ElectricalEng, [
+[TinPlate, DTinPlate, TinPlate],
+[BronzeBolt, SturdyCasing, BronzeScrew],
+[TinGear, Piston, TinGear]]);
 
 
 // ||||||| Multi-Farm |||||||
@@ -1000,6 +1128,35 @@ recipes.addShapeless(FCopperGear, [GtCopperGear]);
 // --- Tin Gear
 recipes.addShapeless(FTinGear, [GtTinGear]);
 
+// --- Infuser
+recipes.addShaped(Infuser, [
+[null, BronzeRing, null],
+[null, BronzeRod, null],
+[File, IronBars, HHammer]]);
+// - Alternate Recipe
+recipes.addShaped(Infuser, [
+[null, BronzeRing, null],
+[null, BronzeRod, null],
+[HHammer, IronBars, File]]);
+
+// --- Can
+recipes.addShaped(EmptyCan * 2, [
+[null, TinPlate, null],
+[TinPlate, HHammer, TinPlate],
+[null, TinPlate, null]]);
+
+// --- Pipette
+recipes.addShaped(Pipette, [
+[null, RubberPlate, RubberPlate],
+[null, EmptyCell, RubberPlate],
+[GlassBolt, null, null]]);
+
+// --- Spectacles
+recipes.addShaped(Spectacles, [
+[IronScrew, Screwdriver, IronScrew],
+[IronRing, IronRod, IronRing],
+[GlassLens, IronBolt, GlassLens]]);
+
 
 // ||||||| Backpacks |||||||
 
@@ -1070,101 +1227,3 @@ NEI.hide(BiogasEng);
 
 // --- Clockwork Engine
 NEI.hide(ClockEng);
-
-
-
-//Bottler
-recipes.addShaped(<Forestry:factory>, [
-[<Forestry:canEmpty>, <minecraft:planks>, <Forestry:canEmpty>],
-[<ore:plateIron>, <ore:plateIron>, <ore:plateIron>],
-[<Forestry:canEmpty>, <minecraft:planks>, <Forestry:canEmpty>]]);
-
-//Carpenter
-recipes.addShaped(<Forestry:factory:1>, [
-[BronzePlate, <gregtech:gt.metaitem.01:32620>, BronzePlate],
-[<ore:gearTin>, <Forestry:sturdyMachine>, <ore:gearTin>],
-[BronzePlate, <ore:screwBronze>, BronzePlate]]);
-
-//Centrifuge
-recipes.addShaped(<Forestry:factory:2>, [
-[BronzeRod, <gregtech:gt.metaitem.01:32620>, BronzeRod],
-[<ore:gearTin>, <Forestry:sturdyMachine>, <ore:gearTin>],
-[BronzeRod, <gregtech:gt.metaitem.01:32620>, BronzeRod]]);
-
-//Fermenter
-recipes.addShaped(<Forestry:factory:3>, [
-[<ore:plateGold>, <gregtech:gt.metaitem.01:32620>, <ore:plateGold>],
-[<ore:gearTin>, <Forestry:sturdyMachine>, <ore:gearTin>],
-[<ore:plateGold>, <ore:plateGold>, <ore:plateGold>]]);
-
-//Moistener
-recipes.addShaped(<Forestry:factory:4>, [
-[<gregtech:gt.metaitem.02:31035>, <ore:plateGlass>, <gregtech:gt.metaitem.02:31035>],
-[<gregtech:gt.blockmachines:5122>, <Forestry:sturdyMachine>, <gregtech:gt.blockmachines:5122>],
-[<gregtech:gt.metaitem.02:31035>, <ore:plateGlass>, <gregtech:gt.metaitem.02:31035>]]);
-
-//Squeezer
-recipes.addShaped(<Forestry:factory:5>, [
-[<ore:plateTin>, <gregtech:gt.metaitem.01:32620>, <ore:plateTin>],
-[<ore:gearGold>, <Forestry:sturdyMachine>, <ore:gearGold>],
-[<ore:plateTin>, <ore:screwTin>, <ore:plateTin>]]);
-
-//Still
-recipes.addShaped(<Forestry:factory:6>, [
-[<minecraft:redstone_block>, <ore:plateGlass>, <minecraft:redstone_block>],
-[<gregtech:gt.metaitem.01:32621>, <Forestry:sturdyMachine>, <gregtech:gt.metaitem.01:32621>],
-[<extracells:certustank>, <ore:plateGlass>, <extracells:certustank>]]);
-
-//Rain Maker
-recipes.addShaped(<Forestry:factory:7>, [
-[<ore:gearTin>, <gregtech:gt.metaitem.01:32690>, <ore:gearTin>],
-[<gregtech:gt.metaitem.01:32640>, <Forestry:hardenedMachine>, <gregtech:gt.metaitem.01:32640>],
-[<ore:gearTin>, <gregtech:gt.metaitem.01:32680>, <ore:gearTin>]]);
-
-//Thermionic Fabricator
-recipes.addShaped(<Forestry:factory2>, [
-[<ore:gearGold>, <appliedenergistics2:tile.BlockQuartzGlass>, <ore:gearGold>],
-[<appliedenergistics2:tile.BlockQuartzGlass>, <Forestry:sturdyMachine>, <appliedenergistics2:tile.BlockQuartzGlass>],
-[<ore:gearGold>, <Forestry:factory2:2>, <ore:gearGold>]]);
-
-//Rain Tank
-recipes.addShaped(<Forestry:factory2:1>, [
-[<ore:plateIron>, <minecraft:planks>, <ore:plateIron>],
-[<ore:plateIron>, <Forestry:sturdyMachine>, <ore:plateIron>],
-[<ore:plateIron>, <minecraft:planks>, <ore:plateIron>]]);
-
-//Work Table
-recipes.addShaped(<Forestry:factory2:2>, [
-[<minecraft:bookshelf>, null, null],
-[<minecraft:crafting_table>, null, null],
-[<minecraft:chest>, null, null]]);
-
-//Electrical Engine
-recipes.addShaped(<Forestry:engine>, [
-[<ore:plateTin>, <ore:plateTin>, <ore:plateTin>],
-[<minecraft:glass>, <Forestry:sturdyMachine>, <minecraft:glass>],
-[<ore:gearTin>, <minecraft:piston>, <ore:gearTin>]]);
-
-//Infuser
-recipes.addShaped(<Forestry:infuser>, [
-[null, <ore:stickBronze>, null],
-[null, <ore:stickIron>, null],
-[<gregtech:gt.metatool.01:12>, <minecraft:iron_bars>, <gregtech:gt.metatool.01:18>]]);
-
-//Can
-recipes.addShaped(<Forestry:canEmpty> * 3, [
-[null, <ore:plateTin>, null],
-[<ore:plateTin>, <gregtech:gt.metatool.01:12>, <ore:plateTin>],
-[null, null, null]]);
-
-//Pipette
-recipes.addShaped(<Forestry:pipette>, [
-[null, <ore:ingotRubber>, <ore:ingotRubber>],
-[null, <ore:cellEmpty>, <ore:ingotRubber>],
-[<ore:boltGlass>, null, null]]);
-
-//Spectacles
-recipes.addShaped(<Forestry:naturalistHelmet>, [
-[<ore:screwIron>, <ore:ringIron>, <ore:screwIron>],
-[<ore:lensGlass>, null, <ore:lensGlass>],
-[null, null, null]]);
