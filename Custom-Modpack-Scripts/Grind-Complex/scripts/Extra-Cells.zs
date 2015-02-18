@@ -22,9 +22,10 @@ val FImportBus = <extracells:part.base:1>;
 val FStorageBus = <extracells:part.base:2>;
 val FTerminal = <extracells:part.base:3>;
 val FLevelEmitter = <extracells:part.base:4>;
-val FAnnihilation = <extracells:part.base:5>;
-val FFormation = <extracells:part.base:6>;
+val FAnnihilationP = <extracells:part.base:5>;
+val FFormationP = <extracells:part.base:6>;
 val DriveFixture = <extracells:part.base:7>;
+val ECellFixture = <extracells:part.base:8>;
 
 val StorageComponent1K = <appliedenergistics2:item.ItemMultiMaterial:35>;
 val StorageComponent4K = <appliedenergistics2:item.ItemMultiMaterial:36>;
@@ -60,9 +61,22 @@ val UStorageHousing = <appliedenergistics2:item.ItemMultiMaterial:39>;
 val UAdvStorageHousing = <extracells:storage.casing>;
 val UFluidStorageHousing = <extracells:storage.casing:1>;
 
+val EnergyCell = <appliedenergistics2:tile.BlockEnergyCell>;
+val MEDrive = <appliedenergistics2:tile.BlockDrive>;
+val MEInterface = <appliedenergistics2:item.ItemMultiPart:440>;
+val QuartzGlass = <appliedenergistics2:tile.BlockQuartzGlass>;
+val IlluminatedPanel = <ore:itemIlluminatedPanel>;
+
+val FluixGlassCable = <appliedenergistics2:item.ItemMultiPart:16>;
+val Terminal = <appliedenergistics2:item.ItemMultiPart:380>;
+val WirelessTerminal = <appliedenergistics2:item.ToolWirelessTerminal>;
+
+val FluixDust = <appliedenergistics2:item.ItemMultiMaterial:8>;
+val FormationCore = <appliedenergistics2:item.ItemMultiMaterial:43>;
+val AnnihilationCore = <appliedenergistics2:item.ItemMultiMaterial:44>;
+
 val CertusCircuit = <appliedenergistics2:item.ItemMultiMaterial:23>;
 val DiamondCircuit = <appliedenergistics2:item.ItemMultiMaterial:24>;
-val BasicCircuit = <ore:circuitBasic>;
 val GoodCircuit = <ore:circuitGood>;
 val AdvCircuit = <ore:circuitAdvanced>;
 val DataCircuit = <ore:circuitData>;
@@ -71,12 +85,20 @@ val EFlowCircuit = <ore:circuitMaster>;
 val DataOrb = <ore:circuitUltimate>;
 val GrandmasterCircuit = <ore:circuitGrandmaster>;
 
+val AnyQuartz = <ore:craftingQuartz>;
+val SteelScrew = <ore:screwSteel>;
+val SteelBolt = <ore:boltSteel>;
 val NQuartzScrew = <ore:screwNetherQuartz>;
 val NQuartzBolt = <ore:boltNetherQuartz>;
 val QuartziteScrew = <ore:screwQuartzite>;
 val QuartziteBolt = <ore:boltQuartzite>;
 val CertusScrew = <ore:screwCertusQuartz>;
 val CertusBolt = <ore:boltCertusQuartz>;
+val CCertusScrew = <ore:screwChargedCertusQuartz>;
+val CCertusBolt = <ore:boltChargedCertusQuartz>;
+
+val RedAlloyPlate = <ore:plateRedAlloy>;
+val GlowstonePlate = <ore:plateGlowstone>;
 val CertusPlate = <ore:plateCertusQuartz>;
 val AlPlate = <ore:plateAluminium>;
 val SSteelPlate = <ore:plateStainlessSteel>;
@@ -88,12 +110,27 @@ val OsmiumPlate = <ore:plateOsmium>;
 val NeutronPlate = <ore:plateNeutronium>;
 val OsmiumNqPlate = <ore:plateAlloyOsmiumNaquadah>;
 
+val GtNQuartzScrew = <gregtech:gt.metaitem.01:27522>;
+val GtNQuartzBolt = <gregtech:gt.metaitem.01:27622>;
+val GtQuartziteScrew = <gregtech:gt.metaitem.01:27523>;
+val GtQuartziteBolt = <gregtech:gt.metaitem.01:27623>;
+val GtCertusScrew = <gregtech:gt.metaitem.01:27516>;
+val GtCertusBolt = <gregtech:gt.metaitem.01:27616>;
+val GtCCertusScrew = <gregtech:gt.metaitem.01:27517>;
+val GtCCertusBolt = <gregtech:gt.metaitem.01:27617>;
+
+val HVPump = <gregtech:gt.metaitem.01:32612>;
+val EVPump = <gregtech:gt.metaitem.01:32613>;
+
 val OBTank = <OpenBlocks:tank>;
 val ClearPane = <TConstruct:GlassPane>;
+
+val BlockMold = <gregtech:gt.metaitem.01:32308>;
 
 val Screwdriver = <ore:craftingToolScrewdriver>;
 val SHammer = <ore:craftingToolSoftHammer>;
 val HHammer = <ore:craftingToolHardHammer>;
+val Wrench = <ore:craftingToolWrench>;
 
 
 
@@ -122,13 +159,16 @@ recipes.remove(FTerminal);
 recipes.remove(FLevelEmitter);
 
 // --- ME Fluid Annihilation Plane
-recipes.remove(FAnnihilation);
+recipes.remove(FAnnihilationP);
 
 // --- ME Fluid Formation Plane
-recipes.remove(FFormation);
+recipes.remove(FFormationP);
 
 // --- ME Drive Fixture
 recipes.remove(DriveFixture);
+
+// --- ME Energy Cell Fixture
+recipes.remove(ECellFixture);
 
 
 // ||||||| Items |||||||
@@ -226,44 +266,165 @@ recipes.remove(UFluidStorageHousing);
 
 
 // --- Quartz Tank
-AlloySmelter.addRecipe(CertusTank, <appliedenergistics2:tile.BlockQuartzGlass> * 8, <gregtech:gt.metaitem.01:32308> * 0, 800, 32);
+AlloySmelter.addRecipe(CertusTank, QuartzGlass * 8, BlockMold * 0, 420, 80);
 
 // --- ME Fluid Export Bus
-recipes.addShaped(FExportBus, [<appliedenergistics2:item.ItemMultiPart:260>, <ore:plateLapis>, <ore:plateLapis>, <ore:plateLapis>]);
+recipes.addShaped(FExportBus, [
+[TiPlate, FluixGlassCable, TiPlate],
+[HVPump, FormationCore, HVPump],
+[TiPlate, FluixGlassCable, TiPlate]]);
+// - Alternate Recipe
+recipes.addShaped(FExportBus, [
+[TiPlate, HVPump, TiPlate],
+[FluixGlassCable, FormationCore, FluixGlassCable],
+[TiPlate, HVPump, TiPlate]]);
 
 // --- ME Fluid Import Bus
-recipes.addShaped(FImportBus, [<appliedenergistics2:item.ItemMultiPart:240>, <ore:plateLapis>, <ore:plateLapis>, <ore:plateLapis>]);
+recipes.addShaped(FImportBus, [
+[TiPlate, FluixGlassCable, TiPlate],
+[HVPump, AnnihilationCore, HVPump],
+[TiPlate, FluixGlassCable, TiPlate]]);
+// - Alternate Recipe
+recipes.addShaped(FExportBus, [
+[TiPlate, HVPump, TiPlate],
+[FluixGlassCable, AnnihilationCore, FluixGlassCable],
+[TiPlate, HVPump, TiPlate]]);
 
 // --- ME Fluid Storage Bus
 recipes.addShaped(FStorageBus, [
-[<appliedenergistics2:item.ItemMultiPart:440>, <minecraft:piston>, <minecraft:sticky_piston>],
-[<appliedenergistics2:item.ItemMultiMaterial:22>, <ore:plateLapis>, <ore:plateLapis>],
-[null, null, null]]);
+[Wrench, CertusTank, QuartziteScrew],
+[HVPump, MEInterface, HVPump],
+[QuartziteBolt, CertusTank, Screwdriver]]);
+// - Alternate Recipe
+recipes.addShaped(FStorageBus, [
+[Screwdriver, CertusTank, QuartziteScrew],
+[HVPump, MEInterface, HVPump],
+[QuartziteBolt, CertusTank, Wrench]]);
+// -
+recipes.addShaped(FStorageBus, [
+[Wrench, CertusTank, CertusScrew],
+[HVPump, MEInterface, HVPump],
+[CertusBolt, CertusTank, Screwdriver]]);
+// -
+recipes.addShaped(FStorageBus, [
+[Screwdriver, CertusTank, CertusScrew],
+[HVPump, MEInterface, HVPump],
+[CertusBolt, CertusTank, Wrench]]);
 
 // --- ME Fluid Terminal
 recipes.addShaped(FTerminal, [
-[<ore:itemIlluminatedPanel>, <appliedenergistics2:item.ItemMultiMaterial:43>, <appliedenergistics2:item.ItemMultiMaterial:44>],
-[<ore:plateLapis>, <ore:plateLapis>, <ore:plateLapis>],
-[null, null, null]]);
+[Screwdriver, CertusTank, CertusScrew],
+[AdvCircuit, Terminal, AdvCircuit],
+[CertusBolt, CertusTank, Wrench]]);
+// - Alternate Recipe
+recipes.addShaped(FTerminal, [
+[Wrench, CertusTank, CertusScrew],
+[AdvCircuit, Terminal, AdvCircuit],
+[CertusBolt, CertusTank, Screwdriver]]);
+// -
+recipes.addShaped(FTerminal, [
+[Screwdriver, AdvCircuit, CertusScrew],
+[CertusTank, Terminal, CertusTank],
+[CertusBolt, AdvCircuit, Wrench]]);
+// - Alternate Recipe
+recipes.addShaped(FTerminal, [
+[Wrench, AdvCircuit, CertusScrew],
+[CertusTank, Terminal, CertusTank],
+[CertusBolt, AdvCircuit, Screwdriver]]);
 
 // --- ME Fluid Level Emitter
-recipes.addShaped(FLevelEmitter, [<appliedenergistics2:item.ItemMultiPart:280>, <ore:plateLapis>]);
+recipes.addShaped(FLevelEmitter, [
+[Screwdriver, CertusTank, CertusScrew],
+[DiamondCircuit, RedAlloyPlate, DiamondCircuit],
+[CertusBolt, CertusTank, Wrench]]);
+// - Alternate Recipe
+recipes.addShaped(FLevelEmitter, [
+[Wrench, CertusTank, CertusScrew],
+[DiamondCircuit, RedAlloyPlate, DiamondCircuit],
+[CertusBolt, CertusTank, Screwdriver]]);
+// -
+recipes.addShaped(FLevelEmitter, [
+[Screwdriver, DiamondCircuit, CertusScrew],
+[CertusTank, RedAlloyPlate, CertusTank],
+[CertusBolt, DiamondCircuit, Wrench]]);
+// -
+recipes.addShaped(FLevelEmitter, [
+[Wrench, DiamondCircuit, CertusScrew],
+[CertusTank, RedAlloyPlate, CertusTank],
+[CertusBolt, DiamondCircuit, Screwdriver]]);
 
 // --- ME Fluid Annihilation Plane
-recipes.addShaped(FAnnihilation, [<appliedenergistics2:item.ItemMultiPart:300>, <ore:plateLapis>, <ore:plateLapis>, <ore:plateLapis>]);
+recipes.addShaped(FAnnihilationP, [
+[TiPlate, CertusTank, FluixDust],
+[EVPump, AnnihilationCore, FluixDust],
+[TiPlate, CertusTank, FluixDust]]);
+// - Alternate Recipe
+recipes.addShaped(FAnnihilationP, [
+[FluixDust, CertusTank, TiPlate],
+[FluixDust, AnnihilationCore, EVPump],
+[FluixDust, CertusTank, TiPlate]]);
 
 // --- ME Fluid Formation Plane
-recipes.addShaped(FFormation, [<appliedenergistics2:item.ItemMultiPart:320>, <ore:plateLapis>, <ore:plateLapis>, <ore:plateLapis>]);
+recipes.addShaped(FFormationP, [
+[TiPlate, CertusTank, FluixDust],
+[EVPump, FormationCore, FluixDust],
+[TiPlate, CertusTank, FluixDust]]);
+// - Alternate Recipe
+recipes.addShaped(FFormationP, [
+[FluixDust, CertusTank, TiPlate],
+[FluixDust, FormationCore, EVPump],
+[FluixDust, CertusTank, TiPlate]]);
 
 // --- ME Drive Fixture
-recipes.addShaped(DriveFixture, [<appliedenergistics2:tile.BlockDrive>, <ore:plateIron>, <ore:plateIron>, <ore:plateLapis>]);
+recipes.addShaped(DriveFixture, [
+[Screwdriver, SteelScrew, null],
+[SteelBolt, MEDrive, SteelScrew],
+[null, SteelBolt, null]]);
+// - Alternate Recipe
+recipes.addShaped(DriveFixture, [
+[null, SteelScrew, Screwdriver],
+[SteelBolt, MEDrive, SteelScrew],
+[null, SteelBolt, null]]);
+// -
+recipes.addShaped(DriveFixture, [
+[null, SteelScrew, null],
+[SteelBolt, MEDrive, SteelScrew],
+[Screwdriver, SteelBolt, null]]);
+// -
+recipes.addShaped(DriveFixture, [
+[null, SteelScrew, null],
+[SteelBolt, MEDrive, SteelScrew],
+[null, SteelBolt, Screwdriver]]);
 
+// --- ME Energy Cell Fixture
+recipes.addShaped(ECellFixture, [
+[Screwdriver, SteelScrew, null],
+[SteelBolt, EnergyCell, SteelScrew],
+[null, SteelBolt, null]]);
+// - Alternate Recipe
+recipes.addShaped(ECellFixture, [
+[null, SteelScrew, Screwdriver],
+[SteelBolt, EnergyCell, SteelScrew],
+[null, SteelBolt, null]]);
+// -
+recipes.addShaped(ECellFixture, [
+[null, SteelScrew, null],
+[SteelBolt, EnergyCell, SteelScrew],
+[Screwdriver, SteelBolt, null]]);
+// -
+recipes.addShaped(ECellFixture, [
+[null, SteelScrew, null],
+[SteelBolt, EnergyCell, SteelScrew],
+[null, SteelBolt, Screwdriver]]);
 
 // ||||||| Items |||||||
 
 
 // --- ME Fluid Pattern
-recipes.addShaped(FluidPattern, [UFluidStorageHousing, <ore:bucketEmpty>]);
+recipes.addShaped(FluidPattern, [
+[CertusTank, SSteelPlate, CertusTank],
+[SSteelPlate, AnyQuartz, SSteelPlate],
+[GlowstonePlate, SSteelPlate, GlowstonePlate]]);
 
 
 // ||||||| Cells |||||||
@@ -271,87 +432,87 @@ recipes.addShaped(FluidPattern, [UFluidStorageHousing, <ore:bucketEmpty>]);
 
 // --- Storage Cell - 256K
 recipes.addShaped(Storage256K, [
-[HHammer, CertusPlate, QuartziteScrew],
+[HHammer, CertusPlate, CertusScrew],
 [RIridiumPlate, StorageComponent256K, RIridiumPlate],
-[QuartziteBolt, RIridiumPlate, Screwdriver]]);
+[CertusBolt, RIridiumPlate, Screwdriver]]);
 // - Alternate Recipe
 recipes.addShaped(Storage256K, [
-[Screwdriver, CertusPlate, QuartziteScrew],
+[Screwdriver, CertusPlate, CertusScrew],
 [RIridiumPlate, StorageComponent256K, RIridiumPlate],
-[QuartziteBolt, RIridiumPlate, HHammer]]);
+[CertusBolt, RIridiumPlate, HHammer]]);
 // -
 recipes.addShaped(Storage256K, [
-[HHammer, StorageComponent256K, QuartziteScrew.transformReplace(QuartziteScrew)],
+[HHammer, StorageComponent256K, CertusScrew.transformReplace(GtQuartziteScrew)],
 [null, UAdvStorageHousing, null],
-[QuartziteBolt.transformReplace(QuartziteBolt), null, Screwdriver]]);
+[CertusBolt.transformReplace(GtQuartziteBolt), null, Screwdriver]]);
 // -
 recipes.addShaped(Storage256K, [
-[Screwdriver, StorageComponent256K, QuartziteScrew.transformReplace(QuartziteScrew)],
+[Screwdriver, StorageComponent256K, CertusScrew.transformReplace(GtQuartziteScrew)],
 [null, UAdvStorageHousing, null],
-[QuartziteBolt.transformReplace(QuartziteBolt), null, HHammer]]);
+[CertusBolt.transformReplace(GtQuartziteBolt), null, HHammer]]);
 
 // --- Storage Cell - 1024K
 recipes.addShaped(Storage1024K, [
-[HHammer, CertusPlate, QuartziteScrew],
+[HHammer, CertusPlate, CertusScrew],
 [OsmiumPlate, StorageComponent1024K, OsmiumPlate],
-[QuartziteBolt, OsmiumPlate, Screwdriver]]);
+[CertusBolt, OsmiumPlate, Screwdriver]]);
 // - Alternate Recipe
 recipes.addShaped(Storage1024K, [
-[Screwdriver, CertusPlate, QuartziteScrew],
+[Screwdriver, CertusPlate, CertusScrew],
 [OsmiumPlate, StorageComponent1024K, OsmiumPlate],
-[QuartziteBolt, OsmiumPlate, HHammer]]);
+[CertusBolt, OsmiumPlate, HHammer]]);
 // -
 recipes.addShaped(Storage1024K, [
-[HHammer, StorageComponent1024K, QuartziteScrew.transformReplace(QuartziteScrew)],
+[HHammer, StorageComponent1024K, CertusScrew.transformReplace(GtCertusScrew)],
 [null, UAdvStorageHousing, null],
-[QuartziteBolt.transformReplace(QuartziteBolt), null, Screwdriver]]);
+[CertusBolt.transformReplace(GtQuartziteBolt), null, Screwdriver]]);
 // -
 recipes.addShaped(Storage1024K, [
-[Screwdriver, StorageComponent1024K, QuartziteScrew.transformReplace(QuartziteScrew)],
+[Screwdriver, StorageComponent1024K, CertusScrew.transformReplace(GtCertusScrew)],
 [null, UAdvStorageHousing, null],
-[QuartziteBolt.transformReplace(QuartziteBolt), null, HHammer]]);
+[CertusBolt.transformReplace(GtQuartziteBolt), null, HHammer]]);
 
 // --- Storage Cell - 4096K
 recipes.addShaped(Storage4096K, [
-[HHammer, CertusPlate, CertusScrew],
+[HHammer, CertusPlate, CCertusScrew],
 [NeutronPlate, StorageComponent4096K, NeutronPlate],
-[CertusBolt, NeutronPlate, Screwdriver]]);
+[CCertusBolt, NeutronPlate, Screwdriver]]);
 // - Alternate Recipe
 recipes.addShaped(Storage4096K, [
-[Screwdriver, CertusPlate, CertusScrew],
+[Screwdriver, CertusPlate, CCertusScrew],
 [NeutronPlate, StorageComponent4096K, NeutronPlate],
-[CertusBolt, NeutronPlate, HHammer]]);
+[CCertusBolt, NeutronPlate, HHammer]]);
 // -
 recipes.addShaped(Storage4096K, [
-[HHammer, StorageComponent4096K, CertusScrew.transformReplace(CertusScrew)],
+[HHammer, StorageComponent4096K, CCertusScrew.transformReplace(GtCertusScrew)],
 [null, UAdvStorageHousing, null],
-[CertusBolt.transformReplace(CertusBolt), null, Screwdriver]]);
+[CCertusBolt.transformReplace(GtCertusBolt), null, Screwdriver]]);
 // -
 recipes.addShaped(Storage4096K, [
-[Screwdriver, StorageComponent4096K, CertusScrew.transformReplace(CertusScrew)],
+[Screwdriver, StorageComponent4096K, CCertusScrew.transformReplace(GtCertusScrew)],
 [null, UAdvStorageHousing, null],
-[CertusBolt.transformReplace(CertusBolt), null, HHammer]]);
+[CCertusBolt.transformReplace(GtCertusBolt), null, HHammer]]);
 
 // --- Storage Cell - 16384K
 recipes.addShaped(Storage16384K, [
-[HHammer, CertusPlate, CertusScrew],
+[HHammer, CertusPlate, CCertusScrew],
 [OsmiumNqPlate, StorageComponent16384K, OsmiumNqPlate],
-[CertusBolt, OsmiumNqPlate, Screwdriver]]);
+[CCertusBolt, OsmiumNqPlate, Screwdriver]]);
 // - Alternate Recipe
 recipes.addShaped(Storage16384K, [
-[Screwdriver, CertusPlate, CertusScrew],
+[Screwdriver, CertusPlate, CCertusScrew],
 [OsmiumNqPlate, StorageComponent16384K, OsmiumNqPlate],
-[CertusBolt, OsmiumNqPlate, HHammer]]);
+[CCertusBolt, OsmiumNqPlate, HHammer]]);
 // -
 recipes.addShaped(Storage16384K, [
-[HHammer, StorageComponent16384K, CertusScrew.transformReplace(CertusScrew)],
+[HHammer, StorageComponent16384K, CertusScrew.transformReplace(GtCCertusScrew)],
 [null, UAdvStorageHousing, null],
-[CertusBolt.transformReplace(CertusBolt), null, Screwdriver]]);
+[CCertusBolt.transformReplace(GtCertusBolt), null, Screwdriver]]);
 // -
 recipes.addShaped(Storage16384K, [
-[Screwdriver, StorageComponent16384K, CertusScrew.transformReplace(CertusScrew)],
+[Screwdriver, StorageComponent16384K, CertusScrew.transformReplace(GtCCertusScrew)],
 [null, UAdvStorageHousing, null],
-[CertusBolt.transformReplace(CertusBolt), null, HHammer]]);
+[CCertusBolt.transformReplace(GtCertusBolt), null, HHammer]]);
 
 // --- Storage Cell Component - 256K
 recipes.addShaped(StorageComponent256K, [
@@ -379,14 +540,14 @@ recipes.addShaped(StorageComponent16384K, [
 
 // --- Universal Advanced Storage Housing
 recipes.addShaped(UAdvStorageHousing, [
-[HHammer, ClearPane, CertusScrew],
+[HHammer, ClearPane, CCertusScrew],
 [NeutronPlate, UStorageHousing, NeutronPlate],
-[CertusBolt, OsmiumNqPlate, Screwdriver]]);
+[CCertusBolt, OsmiumNqPlate, Screwdriver]]);
 // - Alternative Recipe
 recipes.addShaped(UAdvStorageHousing, [
-[Screwdriver, ClearPane, CertusScrew],
+[Screwdriver, ClearPane, CCertusScrew],
 [NeutronPlate, UStorageHousing, NeutronPlate],
-[CertusBolt, OsmiumNqPlate, HHammer]]);
+[CCertusBolt, OsmiumNqPlate, HHammer]]);
 
 
 // ||||||| Fluid Cells |||||||
@@ -404,35 +565,35 @@ recipes.addShaped(FluidStorage1K, [
 [NQuartzBolt, TiPlate, HHammer]]);
 // -
 recipes.addShaped(FluidStorage1K, [
-[HHammer, FluidSComponent1K, NQuartzScrew.transformReplace(NQuartzScrew)],
+[HHammer, FluidSComponent1K, NQuartzScrew.transformReplace(GtNQuartzScrew)],
 [null, UFluidStorageHousing, null],
-[NQuartzBolt.transformReplace(NQuartzBolt), null, Screwdriver]]);
+[NQuartzBolt.transformReplace(GtNQuartzBolt), null, Screwdriver]]);
 // -
 recipes.addShaped(FluidStorage1K, [
-[Screwdriver, FluidSComponent1K, NQuartzScrew.transformReplace(NQuartzScrew)],
+[Screwdriver, FluidSComponent1K, NQuartzScrew.transformReplace(GtNQuartzScrew)],
 [null, UFluidStorageHousing, null],
-[NQuartzBolt.transformReplace(NQuartzBolt), null, HHammer]]);
+[NQuartzBolt.transformReplace(GtNQuartzBolt), null, HHammer]]);
 
 // --- Fluid Storage Cell - 4K
 recipes.addShaped(FluidStorage4K, [
-[HHammer, CertusPlate, NQuartzScrew],
+[HHammer, CertusPlate, QuartziteScrew],
 [TSteelPlate, FluidSComponent4K, TSteelPlate],
-[NQuartzBolt, TSteelPlate, Screwdriver]]);
+[QuartziteBolt, TSteelPlate, Screwdriver]]);
 // - Alternative Recipe
 recipes.addShaped(FluidStorage4K, [
-[Screwdriver, CertusPlate, NQuartzScrew],
+[Screwdriver, CertusPlate, QuartziteScrew],
 [TSteelPlate, FluidSComponent4K, TSteelPlate],
-[NQuartzBolt, TSteelPlate, HHammer]]);
+[QuartziteBolt, TSteelPlate, HHammer]]);
 // -
 recipes.addShaped(FluidStorage4K, [
-[HHammer, FluidSComponent4K, NQuartzScrew.transformReplace(NQuartzScrew)],
+[HHammer, FluidSComponent4K, QuartziteScrew.transformReplace(GtQuartziteScrew)],
 [null, UFluidStorageHousing, null],
-[NQuartzBolt.transformReplace(NQuartzBolt), null, Screwdriver]]);
+[QuartziteBolt.transformReplace(GtQuartziteBolt), null, Screwdriver]]);
 // -
 recipes.addShaped(FluidStorage4K, [
-[Screwdriver, FluidSComponent4K, NQuartzScrew.transformReplace(NQuartzScrew)],
+[Screwdriver, FluidSComponent4K, QuartziteScrew.transformReplace(GtQuartziteScrew)],
 [null, UFluidStorageHousing, null],
-[NQuartzBolt.transformReplace(NQuartzBolt), null, HHammer]]);
+[QuartziteBolt.transformReplace(GtQuartziteBolt), null, HHammer]]);
 
 // --- Fluid Storage Cell - 16K
 recipes.addShaped(FluidStorage16K, [
@@ -446,98 +607,98 @@ recipes.addShaped(FluidStorage16K, [
 [QuartziteBolt, ChromePlate, HHammer]]);
 // -
 recipes.addShaped(FluidStorage16K, [
-[HHammer, FluidSComponent16K, QuartziteScrew.transformReplace(QuartziteScrew)],
+[HHammer, FluidSComponent16K, QuartziteScrew.transformReplace(GtQuartziteScrew)],
 [null, UFluidStorageHousing, null],
-[QuartziteBolt.transformReplace(QuartziteBolt), null, Screwdriver]]);
+[QuartziteBolt.transformReplace(GtQuartziteBolt), null, Screwdriver]]);
 // -
 recipes.addShaped(FluidStorage16K, [
-[Screwdriver, FluidSComponent16K, QuartziteScrew.transformReplace(QuartziteScrew)],
+[Screwdriver, FluidSComponent16K, QuartziteScrew.transformReplace(GtQuartziteScrew)],
 [null, UFluidStorageHousing, null],
-[QuartziteBolt.transformReplace(QuartziteBolt), null, HHammer]]);
+[QuartziteBolt.transformReplace(GtQuartziteBolt), null, HHammer]]);
 
 // --- Fluid Storage Cell - 64K
 recipes.addShaped(FluidStorage64K, [
-[HHammer, CertusPlate, QuartziteScrew],
+[HHammer, CertusPlate, CertusScrew],
 [RIridiumPlate, FluidSComponent64K, RIridiumPlate],
-[QuartziteBolt, RIridiumPlate, Screwdriver]]);
+[CertusBolt, RIridiumPlate, Screwdriver]]);
 // - Alternate Recipe
 recipes.addShaped(FluidStorage64K, [
-[Screwdriver, CertusPlate, QuartziteScrew],
+[Screwdriver, CertusPlate, CertusScrew],
 [RIridiumPlate, FluidSComponent64K, RIridiumPlate],
-[QuartziteBolt, RIridiumPlate, HHammer]]);
+[CertusBolt, RIridiumPlate, HHammer]]);
 // -
 recipes.addShaped(FluidStorage64K, [
-[HHammer, FluidSComponent64K, QuartziteScrew.transformReplace(QuartziteScrew)],
+[HHammer, FluidSComponent64K, CertusScrew.transformReplace(GtCertusScrew)],
 [null, UFluidStorageHousing, null],
-[QuartziteBolt.transformReplace(QuartziteBolt), null, Screwdriver]]);
+[CertusBolt.transformReplace(GtCertusBolt), null, Screwdriver]]);
 // -
 recipes.addShaped(FluidStorage64K, [
-[Screwdriver, FluidSComponent64K, QuartziteScrew.transformReplace(QuartziteScrew)],
+[Screwdriver, FluidSComponent64K, CertusScrew.transformReplace(GtCertusScrew)],
 [null, UFluidStorageHousing, null],
-[QuartziteBolt.transformReplace(QuartziteBolt), null, HHammer]]);
+[CertusBolt.transformReplace(GtCertusBolt), null, HHammer]]);
 
 // --- Fluid Storage Cell - 256K
 recipes.addShaped(FluidStorage256K, [
-[HHammer, CertusPlate, QuartziteScrew],
+[HHammer, CertusPlate, CertusScrew],
 [OsmiumPlate, FluidSComponent256K, OsmiumPlate],
-[QuartziteBolt, OsmiumPlate, Screwdriver]]);
+[CertusBolt, OsmiumPlate, Screwdriver]]);
 // - Alternate Recipe
 recipes.addShaped(FluidStorage256K, [
-[Screwdriver, CertusPlate, QuartziteScrew],
+[Screwdriver, CertusPlate, CertusScrew],
 [OsmiumPlate, FluidSComponent256K, OsmiumPlate],
-[QuartziteBolt, OsmiumPlate, HHammer]]);
+[CertusBolt, OsmiumPlate, HHammer]]);
 // -
 recipes.addShaped(FluidStorage256K, [
-[HHammer, FluidSComponent256K, QuartziteScrew.transformReplace(QuartziteScrew)],
+[HHammer, FluidSComponent256K, CertusScrew.transformReplace(GtCertusScrew)],
 [null, UFluidStorageHousing, null],
-[QuartziteBolt.transformReplace(QuartziteBolt), null, Screwdriver]]);
+[CertusBolt.transformReplace(GtCertusBolt), null, Screwdriver]]);
 // -
 recipes.addShaped(FluidStorage256K, [
-[Screwdriver, FluidSComponent256K, QuartziteScrew.transformReplace(QuartziteScrew)],
+[Screwdriver, FluidSComponent256K, CertusScrew.transformReplace(GtCertusScrew)],
 [null, UFluidStorageHousing, null],
-[QuartziteBolt.transformReplace(QuartziteBolt), null, HHammer]]);
+[CertusBolt.transformReplace(GtCertusBolt), null, HHammer]]);
 
 // --- Fluid Storage Cell - 1024K
 recipes.addShaped(FluidStorage1024K, [
-[HHammer, CertusPlate, CertusScrew],
+[HHammer, CertusPlate, CCertusScrew],
 [NeutronPlate, FluidSComponent1024K, NeutronPlate],
-[CertusBolt, NeutronPlate, Screwdriver]]);
+[CCertusBolt, NeutronPlate, Screwdriver]]);
 // - Alternate Recipe
 recipes.addShaped(FluidStorage1024K, [
-[Screwdriver, CertusPlate, CertusScrew],
+[Screwdriver, CertusPlate, CCertusScrew],
 [NeutronPlate, FluidSComponent1024K, NeutronPlate],
-[CertusBolt, NeutronPlate, HHammer]]);
+[CCertusBolt, NeutronPlate, HHammer]]);
 // -
 recipes.addShaped(FluidStorage1024K, [
-[HHammer, FluidSComponent1024K, CertusScrew.transformReplace(CertusScrew)],
+[HHammer, FluidSComponent1024K, CCertusScrew.transformReplace(GtCCertusScrew)],
 [null, UFluidStorageHousing, null],
-[CertusBolt.transformReplace(CertusBolt), null, Screwdriver]]);
+[CCertusBolt.transformReplace(GtCCertusBolt), null, Screwdriver]]);
 // -
 recipes.addShaped(FluidStorage1024K, [
-[Screwdriver, FluidSComponent1024K, CertusScrew.transformReplace(CertusScrew)],
+[Screwdriver, FluidSComponent1024K, CCertusScrew.transformReplace(GtCCertusScrew)],
 [null, UFluidStorageHousing, null],
-[CertusBolt.transformReplace(CertusBolt), null, HHammer]]);
+[CCertusBolt.transformReplace(GtCCertusBolt), null, HHammer]]);
 
 // --- Fluid Storage Cell - 4096K
 recipes.addShaped(FluidStorage4096K, [
-[HHammer, CertusPlate, CertusScrew],
+[HHammer, CertusPlate, CCertusScrew],
 [OsmiumNqPlate, FluidSComponent4096K, OsmiumNqPlate],
-[CertusBolt, OsmiumNqPlate, Screwdriver]]);
+[CCertusBolt, OsmiumNqPlate, Screwdriver]]);
 // - Alternate Recipe
 recipes.addShaped(FluidStorage4096K, [
-[Screwdriver, CertusPlate, CertusScrew],
+[Screwdriver, CertusPlate, CCertusScrew],
 [OsmiumNqPlate, FluidSComponent4096K, OsmiumNqPlate],
-[CertusBolt, OsmiumNqPlate, HHammer]]);
+[CCertusBolt, OsmiumNqPlate, HHammer]]);
 // -
 recipes.addShaped(FluidStorage4096K, [
-[HHammer, FluidSComponent4096K, CertusScrew.transformReplace(CertusScrew)],
+[HHammer, FluidSComponent4096K, CCertusScrew.transformReplace(GtCCertusScrew)],
 [null, UFluidStorageHousing, null],
-[CertusBolt.transformReplace(CertusBolt), null, Screwdriver]]);
+[CCertusBolt.transformReplace(GtCCertusBolt), null, Screwdriver]]);
 // -
 recipes.addShaped(FluidStorage4096K, [
-[Screwdriver, FluidSComponent4096K, CertusScrew.transformReplace(CertusScrew)],
+[Screwdriver, FluidSComponent4096K, CCertusScrew.transformReplace(GtCCertusScrew)],
 [null, UFluidStorageHousing, null],
-[CertusBolt.transformReplace(CertusBolt), null, HHammer]]);
+[CCertusBolt.transformReplace(GtCCertusBolt), null, HHammer]]);
 
 // --- Fluid Storage Cell Component - 1K
 recipes.addShaped(FluidSComponent1K, [
@@ -613,14 +774,14 @@ recipes.addShaped(FluidSComponent4096K, [
 
 // --- Universal Fluid Storage Housing
 recipes.addShaped(UFluidStorageHousing, [
-[HHammer, CertusPlate, CertusScrew],
+[HHammer, CertusPlate, CCertusScrew],
 [NeutronPlate, ClearPane, NeutronPlate],
-[CertusBolt, OsmiumNqPlate, Screwdriver]]);
+[CCertusBolt, OsmiumNqPlate, Screwdriver]]);
 // - Alternative Recipe
 recipes.addShaped(UFluidStorageHousing, [
-[Screwdriver, CertusPlate, CertusScrew],
+[Screwdriver, CertusPlate, CCertusScrew],
 [NeutronPlate, ClearPane, NeutronPlate],
-[CertusBolt, OsmiumNqPlate, HHammer]]);
+[CCertusBolt, OsmiumNqPlate, HHammer]]);
 
 
 
