@@ -16,17 +16,22 @@ val HPAlloySmelter = <gregtech:gt.blockmachines:119>;
 val HPBoiler = <gregtech:gt.blockmachines:101>;
 val MultiSmelter = <gregtech:gt.blockmachines:1003>;
 
-val Bricks = <minecraft:brick_block>;
 val SteelPipe = <gregtech:gt.blockmachines:5131>;
 val SteelPlate = <ore:plateSteel>;
+val TSteelPlate = <ore:plateTungstenSteel>;
 val BrickSteelHull = <gregtech:gt.blockmachines:4>;
-val IronFurnace = <IC2:blockMachine:1>;
 val ElectricBFurnace = <gregtech:gt.blockmachines:1000>;
 val BasicCircuit = <ore:circuitBasic>;
 val AdvCircuit = <ore:circuitAdvanced>;
+val DataOrb = <ore:circuitUltimate>;
 val TinCable = <gregtech:gt.blockmachines:1246>;
 val AnnealedCable = <gregtech:gt.blockmachines:1386>;
 val HeatProofCase = <gregtech:gt.blockcasings:11>;
+val CPUMachineCasing = <gregtech:gt.blockcasings2:6>;
+
+val Bricks = <minecraft:brick_block>;
+val IronFurnace = <IC2:blockMachine:1>;
+val CPUTierThree = <OpenComputers:item:43>;
 
 
 //remove Recipes
@@ -134,6 +139,13 @@ recipes.addShaped(MultiSmelter, [
 [IronFurnace, IronFurnace, IronFurnace],
 [AdvCircuit, HeatProofCase, AdvCircuit],
 [AnnealedCable, AdvCircuit, AnnealedCable]]);
+
+// --- Processor Machine Casing
+recipes.addShaped(CPUMachineCasing, [
+[TSteelPlate, DataOrb, TSteelPlate],
+[DataOrb, CPUTierThree, DataOrb],
+[TSteelPlate, DataOrb, TSteelPlate]]);
+
 
 //UV Machine Casing
 recipes.addShaped(<gregtech:gt.blockcasings:8>, [

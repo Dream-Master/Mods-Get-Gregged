@@ -16,6 +16,13 @@ import mods.gregtech.AlloySmelter;
 
 val CertusTank = <extracells:certustank>;
 val FluidPattern = <extracells:pattern.fluid>;
+val BlockStorage = <extracells:storage.physical:4>;
+val FPortableCell = <extracells:storage.fluid.portable>;
+val FWirelessTerminal = <extracells:terminal.fluid.wireless>;
+
+val FAssembler = <extracells:fluidcrafter>;
+val FInterface = <extracells:ecbaseblock>;
+val FAutoFiller = <extracells:ecbaseblock:1>;
 
 val FExportBus = <extracells:part.base>;
 val FImportBus = <extracells:part.base:1>;
@@ -26,6 +33,13 @@ val FAnnihilationP = <extracells:part.base:5>;
 val FFormationP = <extracells:part.base:6>;
 val DriveFixture = <extracells:part.base:7>;
 val ECellFixture = <extracells:part.base:8>;
+val FStorageMonitor = <extracells:part.base:10>;
+val FConversionM = <extracells:part.base:11>;
+val OreDictExportBus = <extracells:part.base:12>;
+
+val AccelerationCard = <appliedenergistics2:item.ItemMultiMaterial:30>;
+val FuzzyCard = <appliedenergistics2:item.ItemMultiMaterial:29>;
+val ExportBus = <appliedenergistics2:item.ItemMultiPart:260>;
 
 val StorageComponent1K = <appliedenergistics2:item.ItemMultiMaterial:35>;
 val StorageComponent4K = <appliedenergistics2:item.ItemMultiMaterial:36>;
@@ -43,6 +57,8 @@ val FluidSComponent64K = <extracells:storage.component:7>;
 val FluidSComponent256K = <extracells:storage.component:8>;
 val FluidSComponent1024K = <extracells:storage.component:9>;
 val FluidSComponent4096K = <extracells:storage.component:10>;
+
+val Storage1K = <appliedenergistics2:item.ItemMultiMaterial:35>;
 
 val Storage256K = <extracells:storage.physical>;
 val Storage1024K = <extracells:storage.physical:1>;
@@ -62,6 +78,8 @@ val UAdvStorageHousing = <extracells:storage.casing>;
 val UFluidStorageHousing = <extracells:storage.casing:1>;
 
 val EnergyCell = <appliedenergistics2:tile.BlockEnergyCell>;
+val DEnergyCell = <appliedenergistics2:tile.BlockDenseEnergyCell>;
+val MEChest = <appliedenergistics2:tile.BlockChest>;
 val MEDrive = <appliedenergistics2:tile.BlockDrive>;
 val MEInterface = <appliedenergistics2:item.ItemMultiPart:440>;
 val QuartzGlass = <appliedenergistics2:tile.BlockQuartzGlass>;
@@ -69,11 +87,11 @@ val IlluminatedPanel = <ore:itemIlluminatedPanel>;
 
 val FluixGlassCable = <appliedenergistics2:item.ItemMultiPart:16>;
 val Terminal = <appliedenergistics2:item.ItemMultiPart:380>;
-val WirelessTerminal = <appliedenergistics2:item.ToolWirelessTerminal>;
 
 val FluixDust = <appliedenergistics2:item.ItemMultiMaterial:8>;
 val FormationCore = <appliedenergistics2:item.ItemMultiMaterial:43>;
 val AnnihilationCore = <appliedenergistics2:item.ItemMultiMaterial:44>;
+val WirelessReceiver = <appliedenergistics2:item.ItemMultiMaterial:41>;
 
 val CertusCircuit = <appliedenergistics2:item.ItemMultiMaterial:23>;
 val DiamondCircuit = <appliedenergistics2:item.ItemMultiMaterial:24>;
@@ -121,9 +139,13 @@ val GtCCertusBolt = <gregtech:gt.metaitem.01:27617>;
 
 val HVPump = <gregtech:gt.metaitem.01:32612>;
 val EVPump = <gregtech:gt.metaitem.01:32613>;
+val EVRobotArm = <gregtech:gt.metaitem.01:32653>;
+val Monitor = <gregtech:gt.metaitem.01:32740>;
 
+val CPUMachineCasing = <gregtech:gt.blockcasings2:6>;
 val OBTank = <OpenBlocks:tank>;
 val ClearPane = <TConstruct:GlassPane>;
+val ObsidianChest = <IronChest:BlockIronChest:6>;
 
 val BlockMold = <gregtech:gt.metaitem.01:32308>;
 
@@ -142,6 +164,15 @@ val Wrench = <ore:craftingToolWrench>;
 
 // --- Certus Quartz Tank
 recipes.remove(CertusTank);
+
+// --- ME Fluid Interface
+recipes.removeShaped(FInterface);
+
+// --- ME Fluid Auto-Filler
+recipes.remove(FAutoFiller);
+
+// --- ME Fluid Assembler
+recipes.remove(FAssembler);
 
 // --- ME Fluid Export Bus
 recipes.remove(FExportBus);
@@ -170,12 +201,30 @@ recipes.remove(DriveFixture);
 // --- ME Energy Cell Fixture
 recipes.remove(ECellFixture);
 
+// --- Fluid Storage Monitor
+recipes.remove(FStorageMonitor);
+
+// --- Fluid Conversion Monitor
+recipes.remove(FConversionM);
+
+// --- ME Ore Dictionary Export Bus
+recipes.remove(OreDictExportBus);
+
 
 // ||||||| Items |||||||
 
 
 // --- ME Fluid Pattern
 recipes.remove(FluidPattern);
+
+// --- ME Block Container
+recipes.remove(BlockStorage);
+
+// --- ME Wireless Fluid Terminal
+recipes.remove(FWirelessTerminal);
+
+// --- Portable Fluid Cell
+recipes.remove(FPortableCell);
 
 
 // ||||||| Cells |||||||
@@ -267,6 +316,59 @@ recipes.remove(UFluidStorageHousing);
 
 // --- Quartz Tank
 AlloySmelter.addRecipe(CertusTank, QuartzGlass * 8, BlockMold * 0, 420, 80);
+
+// --- ME Fluid Assembler
+recipes.addShaped(FAssembler, [
+[FormationCore, EVPump, AnnihilationCore],
+[EVRobotArm, CPUMachineCasing, EVRobotArm],
+[AnnihilationCore, EVPump, FormationCore]]);
+// - Alternate Recipe
+recipes.addShaped(FAssembler, [
+[AnnihilationCore, EVPump, FormationCore],
+[EVRobotArm, CPUMachineCasing, EVRobotArm],
+[FormationCore, EVPump, AnnihilationCore]]);
+// -
+recipes.addShaped(FAssembler, [
+[FormationCore, EVRobotArm, AnnihilationCore],
+[EVPump, CPUMachineCasing, EVPump],
+[AnnihilationCore, EVRobotArm, FormationCore]]);
+// -
+recipes.addShaped(FAssembler, [
+[AnnihilationCore, EVRobotArm, FormationCore],
+[EVPump, CPUMachineCasing, EVPump],
+[FormationCore, EVRobotArm, AnnihilationCore]]);
+
+// --- ME Fluid Auto-Filler
+recipes.addShaped(FAutoFiller, [
+[TiPlate, FormationCore, TiPlate],
+[EVPump, CPUMachineCasing, EVPump],
+[TiPlate, AnnihilationCore, TiPlate]]);
+// - Alternate Recipe
+recipes.addShaped(FAutoFiller, [
+[TiPlate, EVPump, TiPlate],
+[FormationCore, CPUMachineCasing, AnnihilationCore],
+[TiPlate, EVPump, TiPlate]]);
+// -
+recipes.addShaped(FAutoFiller, [
+[TiPlate, AnnihilationCore, TiPlate],
+[EVPump, CPUMachineCasing, EVPump],
+[TiPlate, FormationCore, TiPlate]]);
+// -
+recipes.addShaped(FAutoFiller, [
+[TiPlate, EVPump, TiPlate],
+[AnnihilationCore, CPUMachineCasing, FormationCore],
+[TiPlate, EVPump, TiPlate]]);
+
+// --- ME Fluid Interface
+recipes.addShaped(FInterface, [
+[TSteelPlate, FormationCore, TSteelPlate],
+[AnnihilationCore, FAssembler, AnnihilationCore],
+[TSteelPlate, FormationCore, TSteelPlate]]);
+// - Alternate Recipe
+recipes.addShaped(FInterface, [
+[TSteelPlate, AnnihilationCore, TSteelPlate],
+[FormationCore, FAssembler, FormationCore],
+[TSteelPlate, AnnihilationCore, TSteelPlate]]);
 
 // --- ME Fluid Export Bus
 recipes.addShaped(FExportBus, [
@@ -417,6 +519,75 @@ recipes.addShaped(ECellFixture, [
 [SteelBolt, EnergyCell, SteelScrew],
 [null, SteelBolt, Screwdriver]]);
 
+// --- Fluid Storage Monitor
+recipes.addShaped(FStorageMonitor, [
+[Screwdriver, CertusTank, CertusScrew],
+[FLevelEmitter, IlluminatedPanel, FLevelEmitter],
+[CertusBolt, CertusTank, Wrench]]);
+// - Alternate Recipe
+recipes.addShaped(FStorageMonitor, [
+[Wrench, CertusTank, CertusScrew],
+[FLevelEmitter, IlluminatedPanel, FLevelEmitter],
+[CertusBolt, CertusTank, Screwdriver]]);
+// -
+recipes.addShaped(FStorageMonitor, [
+[CertusScrew, CertusTank, Screwdriver],
+[FLevelEmitter, IlluminatedPanel, FLevelEmitter],
+[Wrench, CertusTank, CertusBolt]]);
+// -
+recipes.addShaped(FStorageMonitor, [
+[CertusScrew, CertusTank, Wrench],
+[FLevelEmitter, IlluminatedPanel, FLevelEmitter],
+[Screwdriver, CertusTank, CertusBolt]]);
+
+// --- Fluid Conversion Monitor
+recipes.addShaped(FConversionM, [
+[Screwdriver, TiPlate, CertusScrew],
+[AnnihilationCore, FStorageMonitor, FormationCore],
+[CertusBolt, TiPlate, Wrench]]);
+// - Alternate Recipe
+recipes.addShaped(FConversionM, [
+[Wrench, TiPlate, CertusScrew],
+[AnnihilationCore, FStorageMonitor, FormationCore],
+[CertusBolt, TiPlate, Screwdriver]]);
+// -
+recipes.addShaped(FConversionM, [
+[CertusScrew, TiPlate, Screwdriver],
+[AnnihilationCore, FStorageMonitor, FormationCore],
+[Wrench, TiPlate, CertusBolt]]);
+// -
+recipes.addShaped(FConversionM, [
+[CertusScrew, TiPlate, Wrench],
+[AnnihilationCore, FStorageMonitor, FormationCore],
+[Screwdriver, TiPlate, CertusBolt]]);
+// -
+recipes.addShaped(FConversionM, [
+[Screwdriver, TiPlate, CertusScrew],
+[FormationCore, FStorageMonitor, AnnihilationCore],
+[CertusBolt, TiPlate, Wrench]]);
+// -
+recipes.addShaped(FConversionM, [
+[Wrench, TiPlate, CertusScrew],
+[FormationCore, FStorageMonitor, AnnihilationCore],
+[CertusBolt, TiPlate, Screwdriver]]);
+// -
+recipes.addShaped(FConversionM, [
+[CertusScrew, TiPlate, Screwdriver],
+[FormationCore, FStorageMonitor, AnnihilationCore],
+[Wrench, TiPlate, CertusBolt]]);
+// -
+recipes.addShaped(FConversionM, [
+[CertusScrew, TiPlate, Wrench],
+[FormationCore, FStorageMonitor, AnnihilationCore],
+[Screwdriver, TiPlate, CertusBolt]]);
+
+// --- ME Ore Dictionary Export Bus
+recipes.addShaped(OreDictExportBus, [
+[FuzzyCard, AccelerationCard, FuzzyCard],
+[AccelerationCard, ExportBus, AccelerationCard],
+[FuzzyCard, AccelerationCard, FuzzyCard]]);
+
+
 // ||||||| Items |||||||
 
 
@@ -425,6 +596,59 @@ recipes.addShaped(FluidPattern, [
 [CertusTank, SSteelPlate, CertusTank],
 [SSteelPlate, AnyQuartz, SSteelPlate],
 [GlowstonePlate, SSteelPlate, GlowstonePlate]]);
+
+// --- ME Block Container
+recipes.addShaped(BlockStorage, [
+[Screwdriver, Storage1K, QuartziteScrew],
+[ObsidianChest, UStorageHousing, ObsidianChest],
+[QuartziteBolt, Wrench, null]]);
+// - Alternate Recipe
+recipes.addShaped(BlockStorage, [
+[null, Storage1K, QuartziteScrew],
+[ObsidianChest, UStorageHousing, ObsidianChest],
+[QuartziteBolt, Wrench, Screwdriver]]);
+
+// --- ME Wireless Fluid Terminal
+recipes.addShaped(FWirelessTerminal, [
+[RIridiumPlate, WirelessReceiver, Screwdriver],
+[Monitor, FTerminal, CCertusScrew],
+[DEnergyCell, RIridiumPlate, Wrench]]);
+// - Alternate Recipe
+recipes.addShaped(FWirelessTerminal, [
+[RIridiumPlate, WirelessReceiver, Screwdriver],
+[FTerminal, Monitor, CCertusScrew],
+[DEnergyCell, RIridiumPlate, Wrench]]);
+// -
+recipes.addShaped(FWirelessTerminal, [
+[RIridiumPlate, WirelessReceiver, Wrench],
+[Monitor, FTerminal, CCertusScrew],
+[DEnergyCell, RIridiumPlate, Screwdriver]]);
+// -
+recipes.addShaped(FWirelessTerminal, [
+[RIridiumPlate, WirelessReceiver, Wrench],
+[FTerminal, Monitor, CCertusScrew],
+[DEnergyCell, RIridiumPlate, Screwdriver]]);
+
+// --- Portable Fluid Cell
+recipes.addShaped(FPortableCell, [
+[Screwdriver, MEChest, CertusScrew],
+[FluidSComponent1K, UStorageHousing, FluidSComponent1K],
+[CertusBolt, EnergyCell, Wrench]]);
+// - Alternate Recipe
+recipes.addShaped(FPortableCell, [
+[Screwdriver, EnergyCell, CertusScrew],
+[FluidSComponent1K, UStorageHousing, FluidSComponent1K],
+[CertusBolt, MEChest, Wrench]]);
+// -
+recipes.addShaped(FPortableCell, [
+[Wrench, MEChest, CertusScrew],
+[FluidSComponent1K, UStorageHousing, FluidSComponent1K],
+[CertusBolt, EnergyCell, Screwdriver]]);
+// -
+recipes.addShaped(FPortableCell, [
+[Wrench, EnergyCell, CertusScrew],
+[FluidSComponent1K, UStorageHousing, FluidSComponent1K],
+[CertusBolt, MEChest, Screwdriver]]);
 
 
 // ||||||| Cells |||||||
