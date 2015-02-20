@@ -4,7 +4,10 @@
 
 // --- Importing Stuff ---
 
+
+import mods.gregtech.Assembler;
 import mods.ic2.Extractor;
+import mods.ic2.Compressor;
 import mods.gregtech.ImplosionCompressor;
 
 
@@ -180,6 +183,7 @@ val RedDye = <ore:dyeRed>;
 val BlackDye = <ore:dyeBlack>;
 val Bowstring = <TConstruct:bowstring>;
 val IronBars = <minecraft:iron_bars>;
+val SteelBars = <dreamcraft:item.SteelBars>;
 val IronPlate = <ore:plateAnyIron>;
 val IronRod = <ore:stickAnyIron>;
 val DiamondRod = <ore:stickDiamond>;
@@ -236,6 +240,8 @@ val Wrench = <ore:craftingToolWrench>;
 val Detector = <Railcraft:detector:1>;
 val Map = <minecraft:map>;
 val Paper = <ore:paperEmpty>;
+val WoodDoor = <minecraft:wooden_door>;
+val IronDoor = <minecraft:iron_door>;
 
 
 // --- Removing Recipes ---
@@ -313,7 +319,7 @@ recipes.remove(Torch);
 // --- Lever
 recipes.remove(Lever);
 
-// --- Button
+// --- Stone Button
 recipes.remove(<minecraft:stone_button>);
 
 //Glass Pane
@@ -380,6 +386,9 @@ recipes.removeShaped(<minecraft:stone_slab:1>);
 
 // --- Cobblestone Slab
 recipes.removeShaped(<minecraft:stone_slab:3>);
+
+// --- Bricks
+recipes.remove(<minecraft:brick_block>);
 
 // --- Bricks Slab
 recipes.removeShaped(<minecraft:stone_slab:4>);
@@ -780,9 +789,71 @@ recipes.removeShaped(<minecraft:leather_boots>, [
 [<harvestcraft:wovencottonItem>, null, <harvestcraft:wovencottonItem>],
 [<harvestcraft:wovencottonItem>, null, <harvestcraft:wovencottonItem>]]);
 
+//Name Tag
+recipes.remove(<minecraft:name_tag>);
+//Lead
+recipes.remove(<minecraft:lead>);
+//Pumpkin Pie
+recipes.remove(<minecraft:pumpkin_pie>);
+//Comparator
+recipes.remove(<minecraft:comparator>);
+//Redstone Repeater
+recipes.remove(<minecraft:repeater>);
+//NetherStar
+recipes.removeShapeless(<minecraft:nether_star>);
+//Skeleton Head
+recipes.remove(<minecraft:skull>);
+//Zombi Head
+recipes.remove(<minecraft:skull:2>);
+//Creeper Head
+recipes.remove(<minecraft:skull:4>);
+//Flower Pot
+recipes.remove(<minecraft:flower_pot>);
+//Emerald
+recipes.removeShaped(<minecraft:emerald>, [
+[<ForbiddenMagic:FMResource>, <ForbiddenMagic:FMResource>, <ForbiddenMagic:FMResource>],
+[<ForbiddenMagic:FMResource>, <ForbiddenMagic:FMResource>, <ForbiddenMagic:FMResource>],
+[<ForbiddenMagic:FMResource>, <ForbiddenMagic:FMResource>, <ForbiddenMagic:FMResource>]]);
+//Hay Block
+recipes.remove(<minecraft:hay_block>);
+//Wheat
+recipes.remove(<minecraft:wheat>);
+//Diamond
+recipes.removeShaped(<minecraft:diamond>, [
+[<MagicBees:beeNugget:5>, <MagicBees:beeNugget:5>, <MagicBees:beeNugget:5>],
+[<MagicBees:beeNugget:5>, <MagicBees:beeNugget:5>, <MagicBees:beeNugget:5>],
+[<MagicBees:beeNugget:5>, <MagicBees:beeNugget:5>, <MagicBees:beeNugget:5>]]);
+//Slime Ball
+recipes.remove(<minecraft:slime_ball>);
+//Item Frame
+recipes.remove(<minecraft:item_frame>);
+//Bed
+recipes.remove(<minecraft:bed>);
+//Fishing Rod
+recipes.remove(<minecraft:fishing_rod>);
+//Paper
+recipes.removeShaped(<minecraft:paper> * 2, [[<minecraft:reeds>, <minecraft:reeds>, <minecraft:reeds>]]);
+//Poisonous Potato
+recipes.remove(<minecraft:poisonous_potato>);
+//Sign
+recipes.remove(<minecraft:sign>);
+//Boat
+recipes.remove(<minecraft:boat>);
+//Painting
+recipes.remove(<minecraft:painting>);
+//Bread
+furnace.remove(<minecraft:bread>);
+//Flient and SteelBars
+recipes.remove(<minecraft:flint_and_steel>);
 
 // --- Empty Map
 recipes.remove(Map);
+
+// --- Wooden Door
+recipes.remove(WoodDoor);
+
+// --- Iron Door
+recipes.remove(IronDoor);
 
 // --- Adding Back Recipes ---
 
@@ -813,13 +884,13 @@ recipes.addShaped(<minecraft:furnace>, [
 recipes.addShaped(Dispenser, [
 [Cobble, IronRing, Cobble],
 [<ore:springIron>, Bowstring, <ore:springIron>],
-[ <ore:gearGtSmallAnyIron>, RedAlloyWire,  <ore:gearGtSmallAnyIron>]]);
+[<ore:gearGtSmallAnyIron>, RedAlloyWire,  <ore:gearGtSmallAnyIron>]]);
 
 // --- Dropper
 recipes.addShaped(Dropper, [
-[StoneRod, IronPlate, StoneRod],
-[IronBars, String, IronPlate],
-[Cobble, Piston, Cobble]]);
+[Cobble, IronRing, Cobble],
+[<ore:springSmallIron>, Bowstring, <ore:springSmallIron>],
+[<ore:gearGtSmallAnyIron>, RedAlloyWire, <ore:gearGtSmallAnyIron>]]);
 
 // --- Piston
 recipes.addShaped(Piston, [
@@ -1088,8 +1159,11 @@ recipes.addShaped(Torch * 7, [
 // --- Lever
 recipes.addShapeless(Lever, [Stick, <minecraft:stone_button>]);
 
-// --- Button
-recipes.addShapeless(<minecraft:stone_button> * 4, [Saw, <minecraft:stone_pressure_plate>]);
+// --- Button Stone
+recipes.addShapeless(<minecraft:stone_button>, [Saw, <minecraft:stone_pressure_plate>]);
+
+// --- Button Wood
+recipes.addShapeless(<minecraft:wooden_button>, [Saw, <minecraft:wooden_pressure_plate>]);
 
 // --- Redstone Torch
 recipes.addShapedMirrored(RSTorch , [
@@ -1180,40 +1254,17 @@ recipes.addShaped(IronBars * 3, [
 [IronRod, IronRod, IronRod],
 [IronRod, IronRod, IronRod]]);
 
-// --- Enchantment Table
-recipes.addShaped(EnchantingTable, [
-[Nitor, Diamond, Alumentum],
-[DiamondRod, DenseObsidianPlate, DiamondRod],
-[ObsidianPlate, Bookshelf, ObsidianPlate]]);
-
 // --- Redstone Lamp
 recipes.addShaped(RSLamp, [
 [<minecraft:glass_pane>, <minecraft:glass_pane>, <minecraft:glass_pane>],
 [<minecraft:glass_pane>, GSBlock, <minecraft:glass_pane>],
 [<minecraft:glass_pane>, RedAlloyWire, <minecraft:glass_pane>]]);
 
-// --- Ender Chest
-recipes.addShaped(EnderChest, [
-[<gregtech:gt.metaitem.01:17506>, <gregtech:gt.metaitem.01:22321>, <gregtech:gt.metaitem.01:17506>],
-[<gregtech:gt.metaitem.01:22321>, ObsidianChest, <gregtech:gt.metaitem.01:22321>],
-[<gregtech:gt.metaitem.01:17506>, <gregtech:gt.metaitem.01:22321>, <gregtech:gt.metaitem.01:17506>]]);
-
 // --- Tripwire Hook
 recipes.addShaped(Tripwire, [
-[null, IronRing, null],
-[null, IronRod, null],
-[null, Plank, null]]);
-// - Alternate Recipe
-recipes.addShaped(Tripwire * 2, [
-[IronRing, null, IronRing],
-[IronRod, null, IronRod],
-[Plank, null, Plank]]);
-
-// --- Beacon
-recipes.addShaped(Beacon, [
-[GlowstoneGlass, <ore:lensDiamond>, GlowstoneGlass],
-[GlowstoneGlass, NetherStar, GlowstoneGlass],
-[DenseObsidianPlate, DenseObsidianPlate, DenseObsidianPlate]]);
+[IronRing, Stick, IronRing],
+[<minecraft:string>, Stick, <minecraft:string>],
+[null, <minecraft:string>, null]]);
 
 // --- Anvil
 recipes.addShaped(Anvil, [
@@ -1231,7 +1282,7 @@ recipes.addShaped(DaylightSensor, [
 recipes.addShaped(Hopper, [
 [IronPlate, Chest, IronPlate],
 [IronPlate, IronGear, IronPlate],
-[null, IronPlate, null]]);
+[HHammer, IronPlate, <ore:craftingToolFile>]]);
 
 
 
@@ -2124,12 +2175,6 @@ recipes.addShapeless(BlackHardClay,
 recipes.addShapeless(Sugar,
 [Mortar, SugarCane]);
 
-//Brewing Stand
-recipes.addShaped(<minecraft:brewing_stand>, [
-[<gregtech:gt.metaitem.01:28032>, <gregtech:gt.metaitem.01:23032>, <gregtech:gt.metaitem.01:28032>],
-[null, <minecraft:blaze_rod>, null],
-[<minecraft:glass_bottle>, <minecraft:cauldron>, <minecraft:glass_bottle>]]);
-
 //Diamond Sword
 recipes.addShaped(<minecraft:diamond_sword>, [
 [null, <gregtech:gt.metaitem.01:17500>, null],
@@ -2186,27 +2231,27 @@ recipes.addShaped(<minecraft:diamond_boots>, [
 
 //Iron Horse Armor
 recipes.addShaped(<minecraft:iron_horse_armor>, [
-[null, null, <minecraft:iron_helmet>],
+[HHammer, Screwdriver, <minecraft:iron_helmet>],
 [<ore:plateIron>, <minecraft:iron_chestplate>, <ore:plateIron>],
-[<minecraft:iron_leggings>, <ore:plateIron>, <minecraft:iron_leggings>]]);
+[<minecraft:iron_leggings>, <ore:screwIron>, <minecraft:iron_leggings>]]);
 
 //Gold Horse Armor
 recipes.addShaped(<minecraft:golden_horse_armor>, [
-[null, null, <minecraft:golden_helmet>],
+[HHammer, Screwdriver, <minecraft:golden_helmet>],
 [<ore:plateGold>, <minecraft:golden_chestplate>, <ore:plateGold>],
-[<minecraft:golden_leggings>, <ore:plateGold>, <minecraft:golden_leggings>]]);
+[<minecraft:golden_leggings>, <ore:screwGold>, <minecraft:golden_leggings>]]);
 
 //Diamond horse Armor
 recipes.addShaped(<minecraft:diamond_horse_armor>, [
-[null, null, <minecraft:diamond_helmet>],
+[HHammer, Screwdriver, <minecraft:diamond_helmet>],
 [<ore:plateDiamond>, <minecraft:diamond_chestplate>, <ore:plateDiamond>],
-[<minecraft:diamond_leggings>, <ore:plateDiamond>, <minecraft:diamond_leggings>]]);
+[<minecraft:diamond_leggings>, <ore:screwDiamond>, <minecraft:diamond_leggings>]]);
 
 //Saddle
 recipes.addShaped(<minecraft:saddle>, [
-[<minecraft:leather>, <minecraft:leather>, <minecraft:leather>],
-[<minecraft:carpet:*>, <minecraft:carpet:*>, <minecraft:carpet:*>],
-[<gregtech:gt.metaitem.01:28032>, <minecraft:string>, <gregtech:gt.metaitem.01:28032>]]);
+[<minecraft:leather>, <Backpack:tannedLeather>, <minecraft:leather>],
+[<minecraft:leather>, <minecraft:carpet:*>, <minecraft:leather>],
+[<ore:ringAnyIron>, <minecraft:string>, <ore:ringAnyIron>]]);
 
 //Clock
 recipes.addShaped(<minecraft:clock>, [
@@ -2228,7 +2273,6 @@ recipes.addShapeless(<minecraft:melon_seeds>, [<ore:craftingToolHardHammer>, <mi
 
 //Gunpowder
 recipes.addShapeless(<minecraft:gunpowder>, [<ore:dustSmallGunpowder>, <ore:dustSmallGunpowder>, <ore:dustSmallGunpowder>, <ore:dustSmallGunpowder>]);
-
 
 //remove Charcoal in Furnace
 furnace.remove(<minecraft:coal:1>);
@@ -2285,34 +2329,237 @@ recipes.addShaped(<minecraft:fire_charge>, [
 [<minecraft:blaze_powder>, Coal, <minecraft:blaze_powder>],
 [<minecraft:gunpowder>, <minecraft:blaze_powder>, <minecraft:gunpowder>]]);
 
+//Lead
+recipes.addShaped(<minecraft:lead>, [
+[<minecraft:string>, <minecraft:string>, <minecraft:string>],
+[<minecraft:string>, <ore:slimeball>, <minecraft:string>],
+[<minecraft:string>, <minecraft:string>, <minecraft:string>]]);
+
+//Pumpkin Pie
+recipes.addShaped(<minecraft:pumpkin_pie>, [
+[<ore:craftingToolRollingPin>, <minecraft:pumpkin>, <ore:dustSugar>],
+[<minecraft:pumpkin>, <ore:dustSugar>, null],
+[<ore:dustSugar>, null, null]]);
+
+//Comparator
+recipes.addShaped(<minecraft:comparator>, [
+[<ore:screwIron>, <ore:craftingRedstoneTorch>, <ore:screwIron>],
+[<ore:craftingRedstoneTorch>, <ore:plateNetherQuartz>, <ore:craftingRedstoneTorch>],
+[<minecraft:stone_pressure_plate>, <ore:craftingToolScrewdriver>, <minecraft:stone_pressure_plate>]]);
+// -
+recipes.addShaped(<minecraft:comparator>, [
+[<ore:screwIron>, <ore:craftingRedstoneTorch>, <ore:screwIron>],
+[<ore:craftingRedstoneTorch>, <ore:plateCertusQuartz>, <ore:craftingRedstoneTorch>],
+[<minecraft:stone_pressure_plate>, <ore:craftingToolScrewdriver>, <minecraft:stone_pressure_plate>]]);
+// -
+recipes.addShaped(<minecraft:comparator>, [
+[<ore:screwIron>, <ore:craftingRedstoneTorch>, <ore:screwIron>],
+[<ore:craftingRedstoneTorch>, <ore:plateChargedCertusQuartz>, <ore:craftingRedstoneTorch>],
+[<minecraft:stone_pressure_plate>, <ore:craftingToolScrewdriver>, <minecraft:stone_pressure_plate>]]);
+// -
+recipes.addShaped(<minecraft:comparator>, [
+[<ore:screwIron>, <ore:craftingRedstoneTorch>, <ore:screwIron>],
+[<ore:craftingRedstoneTorch>, <ore:plateQuartzite>, <ore:craftingRedstoneTorch>],
+[<minecraft:stone_pressure_plate>, <ore:craftingToolScrewdriver>, <minecraft:stone_pressure_plate>]]);
+
+//Redstone Repeater
+recipes.addShaped(<minecraft:repeater>, [
+[<ore:screwIron>, null, <ore:screwIron>],
+[<ore:craftingRedstoneTorch>, <ore:craftingToolScrewdriver>, <ore:craftingRedstoneTorch>],
+[<minecraft:stone_pressure_plate>, <ore:stickRedAlloy>, <minecraft:stone_pressure_plate>]]);
+
+//Item Frame
+recipes.addShaped(<minecraft:item_frame>, [
+[String, IronRing, String],
+[<ore:stickWood>, <minecraft:leather>, <ore:stickWood>],
+[<ore:stickWood>, <ore:stickWood>, <ore:stickWood>]]);
+
+//Bed
+recipes.addShaped(<minecraft:bed>, [
+[<minecraft:carpet:*>, <minecraft:carpet:*>, <minecraft:carpet:*>],
+[<ore:slabWood>, <ore:slabWood>, <ore:slabWood>],
+[Fence, null, Fence]]);
+
+//Fishing Rod
+recipes.addShaped(<minecraft:fishing_rod>, [
+[null, null, <ore:stickLongWood>],
+[null, <ore:stickLongWood>, <minecraft:string>],
+[<ore:stickLongWood>, <ore:craftingToolWireCutter>, <ore:ringAnyIron>]]);
+
+//Paper
+recipes.addShaped(<minecraft:paper> * 2, [
+[<ore:dustWood>, <ore:dustWood>, <ore:dustWood>],
+[<ore:dustWood>, <minecraft:water_bucket>.transformReplace(<minecraft:bucket>), <ore:dustWood>],
+[<ore:dustWood>, <ore:dustWood>, <ore:dustWood>]]);
+
+// --- Wooden Door
+recipes.remove(WoodDoor);
+
+// --- Iron Door
+recipes.remove(IronDoor);
+
+//Flower Pot
+recipes.addShapeless(<minecraft:flower_pot>, [<ore:craftingToolFile>, <IguanaTweaksTConstruct:clayBucketFired>]);
+
 // --- Stone Slab
-recipes.addShapeless(<minecraft:stone_slab> * 2, [Saw, Stone]);
+recipes.addShapeless(<minecraft:stone_slab>, [Saw, Stone]);
 
 // --- Sandstone Slab
-recipes.addShapeless(<minecraft:stone_slab:1> * 2, [Saw, Sandstone]);
+recipes.addShapeless(<minecraft:stone_slab:1>, [Saw, Sandstone]);
 
 // --- Cobblestone Slab
-recipes.addShapeless(<minecraft:stone_slab:3> * 2, [Saw, Cobble]);
+recipes.addShapeless(<minecraft:stone_slab:3>, [Saw, Cobble]);
 
 // --- Bricks Slab
-recipes.addShapeless(<minecraft:stone_slab:4> * 2, [Saw, Bricks]);
+recipes.addShapeless(<minecraft:stone_slab:4>, [Saw, Bricks]);
 
 // --- Stone Brick Slabs
-recipes.addShapeless(<minecraft:stone_slab:5> * 2, [Saw, StoneBricks]);
+recipes.addShapeless(<minecraft:stone_slab:5>, [Saw, StoneBricks]);
 
 // --- Nether Bricks Slabs
-recipes.addShapeless(<minecraft:stone_slab:6> * 2, [Saw, NetherBricks]);
+recipes.addShapeless(<minecraft:stone_slab:6>, [Saw, NetherBricks]);
 
 // --- Quartz  Slabs
-recipes.addShapeless(<minecraft:stone_slab:7> * 2, [Saw, QuartzBlock]);
+recipes.addShapeless(<minecraft:stone_slab:7>, [Saw, QuartzBlock]);
 
-// --- Book Shelf
-recipes.removeShaped(<minecraft:bookshelf>);
+// --- Bricks
+recipes.addShaped(<minecraft:brick_block> * 2, [
+[<ore:ingotBrick>, <ore:ingotBrick>, <ore:ingotBrick>],
+[<ore:ingotBrick>, <minecraft:water_bucket>.transformReplace(<minecraft:bucket>), <ore:ingotBrick>],
+[<ore:ingotBrick>, <ore:ingotBrick>, <ore:ingotBrick>]]);
+// -
+recipes.addShaped(<minecraft:brick_block> * 2, [
+[<ore:ingotBrick>, <ore:ingotBrick>, <ore:ingotBrick>],
+[<ore:ingotBrick>, <IguanaTweaksTConstruct:clayBucketWater>.transformReplace(<IguanaTweaksTConstruct:clayBucketFired>), <ore:ingotBrick>],
+[<ore:ingotBrick>, <ore:ingotBrick>, <ore:ingotBrick>]]);
+
+// --- Wooden Door
+recipes.addShapedMirrored(WoodDoor, [
+[Plank, <minecraft:trapdoor>, Screwdriver],
+[Plank, <ore:ringAnyIron>, <ore:screwAnyIron>],
+[Plank, Plank, Saw]]);
+// - Alternate Recipe
+recipes.addShapedMirrored(WoodDoor, [
+[Plank, <minecraft:trapdoor>, Screwdriver],
+[Plank, <ore:ringCopper>, <ore:screwCopper>],
+[Plank, Plank, Saw]]);
+// -
+recipes.addShapedMirrored(WoodDoor, [
+[Plank, <minecraft:trapdoor>, Saw],
+[Plank, <ore:ringAnyIron>, <ore:screwAnyIron>],
+[Plank, Plank, Screwdriver]]);
+// -
+recipes.addShapedMirrored(WoodDoor, [
+[Plank, <minecraft:trapdoor>, Saw],
+[Plank, <ore:ringCopper>, <ore:screwCopper>],
+[Plank, Plank, Screwdriver]]);
+
+// --- Iron Door
+recipes.addShaped(IronDoor, [
+[IronPlate, SteelBars, HHammer],
+[IronPlate, <ore:ringSteel>, <ore:screwSteel>],
+[IronPlate, IronPlate, Screwdriver]]);
+// - Alternate Recipe
+recipes.addShaped(IronDoor, [
+[IronPlate, SteelBars, Screwdriver],
+[IronPlate, <ore:ringSteel>, <ore:screwSteel>],
+[IronPlate, IronPlate, HHammer]]);
+
+//Sign
+recipes.addShaped(<minecraft:sign>, [
+[<gregtech:gt.metaitem.02:32470>, <gregtech:gt.metaitem.02:32470>, <gregtech:gt.metaitem.02:32470>],
+[<gregtech:gt.metaitem.02:32470>, <gregtech:gt.metaitem.02:32470>, <gregtech:gt.metaitem.02:32470>],
+[null, Stick, null]]);
+
+//Boat
+recipes.addShaped(<minecraft:boat>, [
+[<ore:screwAnyIron>, Screwdriver, <ore:screwAnyIron>],
+[Plank, Saw, Plank],
+[WoodSlab, WoodSlab, WoodSlab]]);
+
+//Painting
+recipes.addShaped(<minecraft:painting>, [
+[String, IronRing, String],
+[<ore:stickWood>, <minecraft:carpet:*>, <ore:stickWood>],
+[<ore:stickWood>, <ore:stickWood>, <ore:stickWood>]]);
+
+//Bread
+furnace.addRecipe(<minecraft:bread>, <gregtech:gt.metaitem.02:32561>);
+
+//Flient and SteelBars
+recipes.addShaped(<minecraft:flint_and_steel>, [
+[null, <ore:gearGtSmallSteel>, null],
+[null, <minecraft:flint>, null],
+[null, <ore:springSmallSteel>, null]]);
+
 
 //Extractor Recipes
 
 //Blazepowder
 Extractor.addRecipe(<minecraft:blaze_powder>, <Thaumcraft:blockCustomPlant:3>);
 
+//Wheat
+Extractor.addRecipe(<minecraft:wheat> * 9, <minecraft:hay_block>);
+
+//Compressor Recipes
+
+//Hay Block
+Assembler.addRecipe(<minecraft:hay_block>, <minecraft:wheat> * 9, <minecraft:string> * 2, 200, 32);
+
+
+//Enchanting Table Infusion
+mods.thaumcraft.Research.addResearch("ENCHANTINGTABLE", "ARTIFICE", "praecantatio 200, fabrico 200, cognitio 100, potentia 200", 10, 10, 12, <minecraft:enchanting_table>);
+game.setLocalization("en_US", "tc.research_name.ENCHANTINGTABLE", "Enchanting Table");
+game.setLocalization("en_US", "tc.research_text.ENCHANTINGTABLE", "[MC] Oh, it's more magical than a Table!");
+mods.thaumcraft.Research.addPrereq("ENCHANTINGTABLE", "INFUSION", false);
+mods.thaumcraft.Research.setConcealed("ENCHANTINGTABLE", true);
+mods.thaumcraft.Research.addPage("ENCHANTINGTABLE", "enchantingtable.research_page.ENCHANTINGTABLE");
+game.setLocalization("en_US", "enchantingtable.research_page.ENCHANTINGTABLE", "An enchantment table is a block that allows players to spend their experience point levels to enchant tools, books and armor. The enchanting table's main purpose is to enchant items. Bookshelves surrounding the table, with a block of air in between, will increase the maximum enchantment level. The table will enchant all tools and armor except the hoe, shears, flint and steel, lead and horse armor. The hoe and shears cannot be enchanted by the enchantment table and require an anvil and an appropriate enchanted book.");
+mods.thaumcraft.Infusion.addRecipe("ENCHANTINGTABLE", <minecraft:obsidian>, [<minecraft:bookshelf>, <Thaumcraft:ItemResource:1>, <minecraft:diamond_block>, <Thaumcraft:ItemResource>, <IC2:itemDensePlates:7>, <minecraft:bookshelf>, <Thaumcraft:ItemResource:1>, <minecraft:diamond_block>, <Thaumcraft:ItemResource>, <IC2:itemDensePlates:7>], "praecantatio 120, fabrico 100, cognitio 120, potentia 80", <minecraft:enchanting_table>, 15);
+mods.thaumcraft.Research.addInfusionPage("ENCHANTINGTABLE", <minecraft:enchanting_table>);
+mods.thaumcraft.Warp.addToResearch("ENCHANTINGTABLE", 2);
+
+//Ender Chest Arcane
+mods.thaumcraft.Research.addResearch("ENDERCHEST", "ARTIFICE", "praecantatio 200, iter 200, vacuos 100, tenebrae 100, terra 80, ignis 80, ", 11, 10, 12, <minecraft:ender_chest>);
+game.setLocalization("en_US", "tc.research_name.ENDERCHEST", "Ender Chest");
+game.setLocalization("en_US", "tc.research_text.ENDERCHEST", "[MC] Oh, it's more magical than a Chest!");
+mods.thaumcraft.Research.addPrereq("ENDERCHEST", "ENCHANTINGTABLE", false);
+mods.thaumcraft.Research.setConcealed("ENDERCHEST", true);
+mods.thaumcraft.Research.addPage("ENDERCHEST", "enderchest.research_page.ENDERCHEST");
+game.setLocalization("en_US", "enderchest.research_page.ENDERCHEST", "The Ender Chest is a block that allows the player to store 27 items much like a wooden chest however, if two Ender Chests are placed down in different places, the items inside chest A will be in chest B. If the items are taken from either chest, both of the chest will not have that item. While on SMP, players will not share the same storage. This can be used to prevent players form stealing more valuable items, as they cannot access the same a items. This also means two players can store items in the same ender chest.");
+mods.thaumcraft.Arcane.addShaped("ENDERCHEST", <minecraft:ender_chest>, "aer 100, aqua 100, ignis 100, terra 100", [
+[<gregtech:gt.metaitem.01:17506>, <gregtech:gt.metaitem.01:22321>, <gregtech:gt.metaitem.01:17506>],
+[<gregtech:gt.metaitem.01:22321>, ObsidianChest, <gregtech:gt.metaitem.01:22321>],
+[<gregtech:gt.metaitem.01:17506>, <gregtech:gt.metaitem.01:22321>, <gregtech:gt.metaitem.01:17506>]]);
+mods.thaumcraft.Research.addArcanePage("ENDERCHEST", <minecraft:ender_chest>);
+mods.thaumcraft.Warp.addToResearch("ENDERCHEST", 3);
+
+//Brewing Stand Infusion
+mods.thaumcraft.Research.addResearch("BREWINGSTAND", "ARTIFICE", "praecantatio 200, fabrico 100, cognitio 100, perditio 100, ignis 100, terra 100, aqua 100", 10, 11, 12, <minecraft:brewing_stand>);
+game.setLocalization("en_US", "tc.research_name.BREWINGSTAND", "Brewing Stand");
+game.setLocalization("en_US", "tc.research_text.BREWINGSTAND", "[MC] Oh, it's more magical than a Cauldron!");
+mods.thaumcraft.Research.addPrereq("BREWINGSTAND", "ENCHANTINGTABLE", false);
+mods.thaumcraft.Research.setConcealed("BREWINGSTAND", true);
+mods.thaumcraft.Research.addPage("BREWINGSTAND", "brewingstand.research_page.BREWINGSTAND.1");
+game.setLocalization("en_US", "brewingstand.research_page.BREWINGSTAND.1", "Brewing (or Alchemy) is the process of creating potions and splash potions by adding various ingredients to water bottles in a brewing stand. By placing bottles in the lower three slots of the brewing interface and an ingredient in the upper slot, you can distill the ingredient into the bottles and brew potions which may be consumed to grant an effect to the player. Every potion starts with a water bottle, made by filling a glass bottle at a water source or filled cauldron. The next step is to add a primary ingredient to create a base potion, which is usually Nether Wart, which creates an awkward potion and has no effects.");
+mods.thaumcraft.Research.addPage("BREWINGSTAND", "brewingstand.research_page.BREWINGSTAND.2");
+game.setLocalization("en_US", "brewingstand.research_page.BREWINGSTAND.2", "By brewing a second ingredient into a base potion in the same manner, you can create a potion with a working effect. A third ingredient may be added to make the effect more intense or last longer, or turn the effect harmful. Finally, gunpowder can be added to a potion at any stage to convert it to a splash potion, which can be thrown (or fired using a dispenser) to disperse its effect in a radius. Each brewing step takes 20 seconds. Brewing can create very useful and lifesaving items. A good number of them are useful in combat by aiding the player or weakening enemies while others can save the player's life if used quickly, like Fire Resistance or Healing.");
+mods.thaumcraft.Research.addPage("BREWINGSTAND", "brewingstand.research_page.BREWINGSTAND.3");
+game.setLocalization("en_US", "brewingstand.research_page.BREWINGSTAND.3", "Gathering the Blaze Rods and Nether Wart necessary for brewing can prove challenging, but once they are set up, most potion ingredients are fairly plentiful and brewing will be a rewarding task.");
+mods.thaumcraft.Infusion.addRecipe("BREWINGSTAND", <minecraft:cauldron>, [<gregtech:gt.metaitem.02:22801>, <minecraft:glass_bottle>, <gregtech:gt.metaitem.01:23311>, <minecraft:glass_bottle>, <gregtech:gt.metaitem.01:23311>, <minecraft:glass_bottle>, <gregtech:gt.metaitem.02:22801>, <gregtech:gt.metaitem.01:28311>, <gregtech:gt.metaitem.01:27047>, <gregtech:gt.metaitem.01:28311>, <gregtech:gt.metaitem.01:27047>, <gregtech:gt.metaitem.01:28311>], "praecantatio 120, fabrico 80, cognitio 80, perditio 80, ignis 80, terra 80, aqua 80", <minecraft:brewing_stand>, 15);
+mods.thaumcraft.Research.addInfusionPage("BREWINGSTAND", <minecraft:brewing_stand>);
+mods.thaumcraft.Warp.addToResearch("BREWINGSTAND", 3);
+
+//Beacon Infusion
+mods.thaumcraft.Research.addResearch("BEACON", "ARTIFICE", "alienis 200, praecantatio 200, auram 100, fames 400", 11, 11, 12, <minecraft:beacon>);
+game.setLocalization("en_US", "tc.research_name.BEACON", "Beacon");
+game.setLocalization("en_US", "tc.research_text.BEACON", "[MC] Oh, it's more magical than a Diamond Block!");
+mods.thaumcraft.Research.addPrereq("BEACON", "ENCHANTINGTABLE", false);
+mods.thaumcraft.Research.setConcealed("BEACON", true);
+mods.thaumcraft.Research.addPage("BEACON", "beacon.research_page.BEACON");
+game.setLocalization("en_US", "beacon.research_page.BEACON", "A beacon is a unique block that projects a light beam skyward and can provide status effects to players in the vicinity. Beacon blocks can function as light sources, emitting a light level 15. Like other light sources, they will melt snow and ice. When activated, beacon blocks provide two unique functions: An aesthetic landmark beam reaching into the sky, which can be visible from far away. Powers, which give players status effects within a certain range.");
+mods.thaumcraft.Infusion.addRecipe("BEACON", <ForbiddenMagic:StarBlock>, [<minecraft:glass>, <gregtech:gt.metaitem.01:17804>, <gregtech:gt.metaitem.01:24500>, <minecraft:glass>, <gregtech:gt.metaitem.01:17804>, <gregtech:gt.metaitem.01:24500>, <minecraft:glass>, <gregtech:gt.metaitem.01:17804>, <gregtech:gt.metaitem.01:24500>, <minecraft:glass>, <gregtech:gt.metaitem.01:17804>, <gregtech:gt.metaitem.01:24500>], "praecantatio 120, alienis 100, lux 120, ordo 80, ignis 80, terra 80", <minecraft:beacon>, 15);
+mods.thaumcraft.Research.addInfusionPage("BEACON", <minecraft:beacon>);
+mods.thaumcraft.Warp.addToResearch("BEACON", 4);
 
 // --- Hiding Stuff ---
