@@ -2,7 +2,6 @@
 
 //import Mods
 
-import mods.thaumcraft.Arcane;
 import mods.gregtech.Assembler;
 import mods.ic2.Compressor;
 import mods.ic2.Extractor;
@@ -15,6 +14,8 @@ import mods.ic2.Macerator;
 recipes.remove(<Thaumcraft:ItemThaumometer>);
 //Iron Wand Cap
 recipes.remove(<Thaumcraft:WandCap>);
+//Thaumium Ingot
+recipes.remove(<ore:ingotThaumium>);
 //Gold Wand Cap
 mods.thaumcraft.Arcane.removeRecipe(<Thaumcraft:WandCap:1>);
 //Copper Wand Cap
@@ -25,8 +26,6 @@ mods.thaumcraft.Arcane.removeRecipe(<Thaumcraft:WandCap:5>);
 mods.thaumcraft.Arcane.removeRecipe(<Thaumcraft:WandCap:6>);
 //Void Inert Cap
 mods.thaumcraft.Arcane.removeRecipe(<Thaumcraft:WandCap:8>);
-//Thaumium Ingot
-recipes.remove(<ore:ingotThaumium>);
 //Wooden Wand
 recipes.remove(<Thaumcraft:WandCasting:*>);
 //Thauimum Block
@@ -145,6 +144,7 @@ recipes.remove(<Thaumcraft:blockTaint:2>);
 mods.thaumcraft.Arcane.removeRecipe(<Thaumcraft:blockCosmeticSolid:2>);
 //Paving Stone of Warding
 mods.thaumcraft.Arcane.removeRecipe(<Thaumcraft:blockCosmeticSolid:3>);
+
 
 //Remove Furnace Recipes
 
