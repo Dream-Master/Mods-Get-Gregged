@@ -354,7 +354,7 @@ recipes.remove(<Railcraft:machine.beta:3>);
 // --- High Pressure Boiler Tank ---
 recipes.remove(HPBoilerTank);
 
-// --- HobbyistÂ´s Steam Engine ---
+// --- Hobbyist´s Steam Engine ---
 recipes.remove(<Railcraft:machine.beta:7>);
 
 // --- Commercial Steam Engine ---
@@ -806,7 +806,7 @@ recipes.addShaped(HPBoilerTank, [
 [SteelScrew, HHammer, SteelScrew],
 [SteelPlate, SteelPlate, SteelPlate]]);
 
-// --- HobbyistÂ´s Steam Engine ---
+// --- Hobbyist´s Steam Engine ---
 recipes.addShaped(<Railcraft:machine.beta:7>, [
 [BronzePlate, LapisPlate, BronzePlate],
 [BronzeScrew, <gregtech:gt.blockcasings2:12>, BronzeScrew],
