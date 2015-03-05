@@ -1,9 +1,23 @@
-//Created by DreamMasterXXL
+// --- Created by DreamMasterXXL ---
+
+
+// --- Imports ---
+
 
 import mods.gregtech.Centrifuge;
 
-//remove Recipes Shaped
+
+
+// --- remove Recipes ---
+
+
+// --- Emerald Nugget
 recipes.removeShaped(<ForbiddenMagic:FMResource> * 9, [[<minecraft:emerald>]]);
 
-//Emerald Nugget
+
+
+// --- add Recipes ---
+
+
+// --- Emerald
 Centrifuge.addRecipe([<ForbiddenMagic:FMResource> * 9], <minecraft:emerald>, 0, 1200);
