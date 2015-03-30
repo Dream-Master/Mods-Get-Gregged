@@ -10,16 +10,16 @@ import mods.gregtech.Extruder;
 import mods.gregtech.ForgeHammer;
 import mods.gregtech.FormingPress;
 import mods.gregtech.Lathe;
+import mods.ic2.Macerator;
 import mods.nei.NEI;
 import mods.gregtech.PlateBender;
 import mods.gregtech.PrecisionLaser;
+import mods.gregtech.SawLiq;
 
 
 
 // --- Variables ---
 
-
-val HSLAIngot = <ore:ingotHSLA>;
 
 val SandstoneRod = <dreamcraft:item.SandStoneRod>;
 val CobblestoneRod = <dreamcraft:item.CobbleStoneRod>;
@@ -127,6 +127,18 @@ null, null, null],
 <Forestry:sturdyMachine>, <dreamcraft:item.EngineCore>);
 
 
+// --- Cutting Saw Recipes ---
+
+
+// --- Stone Plate
+SawLiq.addRecipe(<dreamcraft:item.StonePlate> * 2, null, <minecraft:stone_pressure_plate>, <liquid:water> * 20, 400, 32);
+// -
+SawLiq.addRecipe(<dreamcraft:item.StonePlate> * 2, null, <minecraft:stone_pressure_plate>, <liquid:ic2distilledwater> * 10, 400, 32);
+// -
+SawLiq.addRecipe(<dreamcraft:item.StonePlate> * 2, null, <minecraft:stone_pressure_plate>, <liquid:lubricant> * 2, 200, 32);
+
+
+
 // --- Engraving laser Recipes ---
 
 // --- Etched IV Wiring
@@ -203,7 +215,6 @@ FormingPress.addRecipe(<dreamcraft:item.QuantumProcessorBoard>, <gregtech:gt.met
 
 
 
-
 // --- Lathe Recipes
 
 
@@ -218,6 +229,24 @@ Lathe.addRecipe([<dreamcraft:item.LongObsidianRod> * 4, null], <minecraft:obsidi
 Lathe.addRecipe([<dreamcraft:item.LongStoneRod> * 4, null], <minecraft:stone>, 320, 16);
 
 
+
+// --- Macerator recipes ---
+
+
+// --- Moon Dust
+Macerator.addRecipe(<dreamcraft:item.MoonStoneDust>, <GalacticraftCore:tile.moonBlock:4>);
+
+// --- Mars Dust
+Macerator.addRecipe(<dreamcraft:item.MarsStoneDust>, <GalacticraftMars:tile.mars:9>);
+// -
+Macerator.addRecipe(<dreamcraft:item.MarsStoneDust>, <GalacticraftMars:tile.mars:4>);
+
+// --- Asteroids Dust
+Macerator.addRecipe(<dreamcraft:item.AsteroidsStoneDust>, <GalacticraftMars:tile.asteroidsBlock>);
+// -
+Macerator.addRecipe(<dreamcraft:item.AsteroidsStoneDust>, <GalacticraftMars:tile.asteroidsBlock:1>);
+// -
+Macerator.addRecipe(<dreamcraft:item.AsteroidsStoneDust>, <GalacticraftMars:tile.asteroidsBlock:2>);
 
 
 // --- Plate Bender Recipes
