@@ -1,4 +1,5 @@
-===== [DreamCraft] =====================================================
+===== [DreamCraft] =====
+
 [Gregified modpack via Modtweaker. GT, Thaumcraft, Buildcraft, Witchery, Galacticraft, BloodMagic, Forestry...]
 
 
