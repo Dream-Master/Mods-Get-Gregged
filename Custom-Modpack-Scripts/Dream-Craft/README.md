@@ -157,4 +157,6 @@ Warp Theory 1.0e dev<BR>
 Witchery 0.24.1<BR>
 Zombie Awareness 1.9.6<BR>
 
+---
+
 Maintained by Dream-Master, Drobac, Warlord Wossman and Methes.
