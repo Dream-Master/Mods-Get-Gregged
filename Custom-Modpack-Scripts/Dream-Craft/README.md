@@ -1,8 +1,8 @@
 [DreamCraft]
-============
+=
 
 [Gregified modpack via Modtweaker. GT, Thaumcraft, Buildcraft, Witchery, Galacticraft, BloodMagic, Forestry...]
----
+-
 
 
 Version 2.6.5.3 BETA is out (17.04.2015)(DC Coremod 0.3.2) (GTTweaker 0.5.1)
