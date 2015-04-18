@@ -62,99 +62,99 @@ Github link
 Modlist - DC 2.6.5.3
 Spoiler Spoiler
 
-Advanced Solar Panels 3.5.1
-AppleCore 1.1.0
-Applied Energistics rv2 beta18
-Automagy 0.21.2
-DreamCraftCoreMod 0.3.2
-ASFU 1.2.1.a
-AsieLib 0.3.13
-BackPack 2.0.1
-BdLib 1.7.0.70
-Bibliocraft 1.10.3
-Bibliowoods 1.9/1.7/1.5
-Binnie Mods 2.0-pre8
-Biomes o Plenty 2.1.0.1237
-BloodMagic 1.3.2.1
-Buildcraft 6.4.11
-Buildcraft Compat 6.4.2
-Carpenter's Blocks 3.3.6
-CodeChickenCore 1.04.37
-CofhLib 1.0.151
-Computronics 1.4.6
-CoroUtil 1.1.1
-Extra Cells 2.2.68b
-Extra Utilities 1.2.3
-FastCraft 1.21
-Forbidden Magic 0.562
-Forestry 3.5.0.528
-Forge Microblocks 1.1.1.331
-Galacticraft 3.0.10.319
-GalactiGreg 0.5
-Galaxy Space 1.7 Alpha
-GemBlocksForGreg 1.3
-Gendustry 1.4.9.22
-Gravitation Suite 2.0.3
-GregsLighting 1.11.2
-Gregtech 5.07.07
-GTTweaker 0.5.1
-Hardcore Ender Expan. 1.8.0
-Hunger Overhaul beta 5
-Chisel 2.3.10
-IC2 Nuclear Control 2.2.1a
-IguanaTinkerTweaks 2.1.4
-Immibis Core 59.0.8
-Industrial Craft 2 2.2.2.712
-Infernal Mobs 1.6
-Iron Chest Minecarts 1.0.2
-Iron Chests 6.0.62.742
-Jabba 1.2.1a
-JourneyMap 5.0.1
-Magic Bees 2.2.2
-Mantle 0.3.2
-Minecraft Forge 10.13.2.1291
-Mine Tweaker 3 3.0.9c
-Mobius Core 1.2.5
-Mod Tweaker 0.7.5b
-Natura 2.2.0.1
-NEI 1.0.4.95
-Nei Addons 1.12.5.17
-Nei Integration 1.0.8
-Not Enough Codecs 10.03.13
-Not Enouht Keys 1.0.0b29
-Open Blocks 10.1.4.601
-Open Mods Lib 10.0.6.335
-Open Computers 1.5.7.14
-Open Eye 0.6.145
-Pam's Harvestcraft 1.7.10h
-Railcraft 9.5.0.0
-Random Things 2.2.4
-Realistic World Gen 1.3.2
-RedLogic 59.1.9
-RemoteIO 2.2.3
-Rogue-like Dungeons 1.3.6.3
-Special AI 1.1.1
-Special Mobs 3.1.1
-Spice of Life 1.2.3
-Steve's Carts BETA 18
-Steve's Factory Manager ALPHA 93
-Steve's Factory M.Addon 0.10.4
-Thaumcraft 4.2.3.5
-Thaumcraft Mob Aspects 2B-snapsh17
-Thaumcraft NEIPlugins 1.7
-Thaumic Energistics 0.8.9.3a
-Thaumic Exploration 1.1.37
-Thaumic Horizons 1.1.1
-Thaumic Tinkerer 2.5.164
-TiCTooltips 1.2.3
-Tinker's Construct 1.8.3b
-TMechworks 02.14.100
-Twillight Forest 2.3.5
-Vanilla minecraft 1.7.10
-Waila 1.5.10
-Waila Harvestability 1.1.2
-Warp Theory 1.0e dev
-Witchery 0.24.1
-Zombie Awareness 1.9.6
+Advanced Solar Panels 3.5.1<BR>
+AppleCore 1.1.0<BR>
+Applied Energistics rv2 beta18<BR>
+Automagy 0.21.2<BR>
+DreamCraftCoreMod 0.3.2<BR>
+ASFU 1.2.1.a<BR>
+AsieLib 0.3.13<BR>
+BackPack 2.0.1<BR>
+BdLib 1.7.0.70<BR>
+Bibliocraft 1.10.3<BR>
+Bibliowoods 1.9/1.7/1.5<BR>
+Binnie Mods 2.0-pre8<BR>
+Biomes o Plenty 2.1.0.1237<BR>
+BloodMagic 1.3.2.1<BR>
+Buildcraft 6.4.11<BR>
+Buildcraft Compat 6.4.2<BR>
+Carpenter's Blocks 3.3.6<BR>
+CodeChickenCore 1.04.37<BR>
+CofhLib 1.0.151<BR>
+Computronics 1.4.6<BR>
+CoroUtil 1.1.1<BR>
+Extra Cells 2.2.68b<BR>
+Extra Utilities 1.2.3<BR>
+FastCraft 1.21<BR>
+Forbidden Magic 0.562<BR>
+Forestry 3.5.0.528<BR>
+Forge Microblocks 1.1.1.331<BR>
+Galacticraft 3.0.10.319<BR>
+GalactiGreg 0.5<BR>
+Galaxy Space 1.7 Alpha<BR>
+GemBlocksForGreg 1.3<BR>
+Gendustry 1.4.9.22<BR>
+Gravitation Suite 2.0.3<BR>
+GregsLighting 1.11.2<BR>
+Gregtech 5.07.07<BR>
+GTTweaker 0.5.1<BR>
+Hardcore Ender Expan. 1.8.0<BR>
+Hunger Overhaul beta 5<BR>
+Chisel 2.3.10<BR>
+IC2 Nuclear Control 2.2.1a<BR>
+IguanaTinkerTweaks 2.1.4<BR>
+Immibis Core 59.0.8<BR>
+Industrial Craft 2 2.2.2.712<BR>
+Infernal Mobs 1.6<BR>
+Iron Chest Minecarts 1.0.2<BR>
+Iron Chests 6.0.62.742<BR>
+Jabba 1.2.1a<BR>
+JourneyMap 5.0.1<BR>
+Magic Bees 2.2.2<BR>
+Mantle 0.3.2<BR>
+Minecraft Forge 10.13.2.1291<BR>
+Mine Tweaker 3 3.0.9c<BR>
+Mobius Core 1.2.5<BR>
+Mod Tweaker 0.7.5b<BR>
+Natura 2.2.0.1<BR>
+NEI 1.0.4.95<BR>
+Nei Addons 1.12.5.17<BR>
+Nei Integration 1.0.8<BR>
+Not Enough Codecs 10.03.13<BR>
+Not Enouht Keys 1.0.0b29<BR>
+Open Blocks 10.1.4.601<BR>
+Open Mods Lib 10.0.6.335<BR>
+Open Computers 1.5.7.14<BR>
+Open Eye 0.6.145<BR>
+Pam's Harvestcraft 1.7.10h<BR>
+Railcraft 9.5.0.0<BR>
+Random Things 2.2.4<BR>
+Realistic World Gen 1.3.2<BR>
+RedLogic 59.1.9<BR>
+RemoteIO 2.2.3<BR>
+Rogue-like Dungeons 1.3.6.3<BR>
+Special AI 1.1.1<BR>
+Special Mobs 3.1.1<BR>
+Spice of Life 1.2.3<BR>
+Steve's Carts BETA 18<BR>
+Steve's Factory Manager ALPHA 93<BR>
+Steve's Factory M.Addon 0.10.4<BR>
+Thaumcraft 4.2.3.5<BR>
+Thaumcraft Mob Aspects 2B-snapsh17<BR>
+Thaumcraft NEIPlugins 1.7<BR>
+Thaumic Energistics 0.8.9.3a<BR>
+Thaumic Exploration 1.1.37<BR>
+Thaumic Horizons 1.1.1<BR>
+Thaumic Tinkerer 2.5.164<BR>
+TiCTooltips 1.2.3<BR>
+Tinker's Construct 1.8.3b<BR>
+TMechworks 02.14.100<BR>
+Twillight Forest 2.3.5<BR>
+Vanilla minecraft 1.7.10<BR>
+Waila 1.5.10<BR>
+Waila Harvestability 1.1.2<BR>
+Warp Theory 1.0e dev<BR>
+Witchery 0.24.1<BR>
+Zombie Awareness 1.9.6<BR>
 
 Maintained by Dream-Master, Drobac, Warlord Wossman and Methes.
