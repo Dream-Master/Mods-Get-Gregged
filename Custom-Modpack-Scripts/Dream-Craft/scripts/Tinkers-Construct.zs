@@ -10,6 +10,7 @@ import mods.gregtech.ChemicalReactor;
 import mods.ic2.Compressor;
 import mods.ic2.Extractor;
 import mods.ic2.Macerator;
+import mods.gregtech.Mixer;
 import mods.nei.NEI;
 
 
@@ -219,6 +220,18 @@ mods.tconstruct.Casting.removeTableRecipe(<gregtech:gt.metaitem.02:31089>);
 
 // --- Steel Gear
 mods.tconstruct.Casting.removeTableRecipe(<gregtech:gt.metaitem.02:31305>);
+
+// --- Copper Ingot
+mods.tconstruct.Casting.removeTableRecipe(<IC2:itemIngot>);
+
+// --- Tin Ingot
+mods.tconstruct.Casting.removeTableRecipe(<IC2:itemIngot:1>);
+
+// --- Bronze Ingot
+mods.tconstruct.Casting.removeTableRecipe(<IC2:itemIngot:2>);
+
+// --- Refined Iron Ingot
+mods.tconstruct.Casting.removeTableRecipe(<IC2:itemIngot:3>);
 
 // --- Chain Helmet
 mods.tconstruct.Smeltery.removeMelting(<minecraft:chainmail_helmet>);
@@ -711,6 +724,15 @@ mods.tconstruct.Casting.addTableRecipe(<TConstruct:materials:31>, <liquid:bronze
 // --- Cobalt Nugget
 mods.tconstruct.Casting.addTableRecipe(<TConstruct:materials:28>, <liquid:cobalt.molten> * 16, <TConstruct:metalPattern:27>, false, 20);
 
+// --- Copper Ingot
+mods.tconstruct.Casting.addTableRecipe(<gregtech:gt.metaitem.01:11035>, <liquid:copper.molten> * 144, <TConstruct:metalPattern>, false, 100);
+
+// --- Tin Ingot
+mods.tconstruct.Casting.addTableRecipe(<gregtech:gt.metaitem.01:11057>, <liquid:tin.molten> * 144, <TConstruct:metalPattern>, false, 100);
+
+// --- Bronze Ingot
+mods.tconstruct.Casting.addTableRecipe(<gregtech:gt.metaitem.01:11300>, <liquid:bronze.molten> * 144, <TConstruct:metalPattern>, false, 100);
+
 // --- Ingot Cast
 mods.tconstruct.Smeltery.addMelting(<TConstruct:metalPattern>, <liquid:aluminiumbrass.molten> * 72, 500, <TConstruct:MetalBlock:7>);
 
@@ -803,6 +825,162 @@ mods.tconstruct.Smeltery.addMelting(<TConstruct:Cast:3>, <liquid:aluminiumbrass.
 
 // --- Gear Cast
 mods.tconstruct.Smeltery.addMelting(<TConstruct:gearCast>, <liquid:aluminiumbrass.molten> * 72, 500, <TConstruct:MetalBlock:7>);
+
+// --- Gt Iron
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.blockores:32>, <liquid:iron.molten> * 144, 700, <minecraft:iron_ore>);
+// -
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.blockores:1032>, <liquid:iron.molten> * 144, 700, <minecraft:iron_ore>);
+// -
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.blockores:2032>, <liquid:iron.molten> * 144, 700, <minecraft:iron_ore>);
+// -
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.blockores:3032>, <liquid:iron.molten> * 144, 700, <minecraft:iron_ore>);
+// -
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.blockores:4032>, <liquid:iron.molten> * 144, 700, <minecraft:iron_ore>);
+
+// --- Gt Pyrite
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.blockores:834>, <liquid:iron.molten> * 144, 700, <minecraft:iron_ore>);
+// -
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.blockores:1834>, <liquid:iron.molten> * 144, 700, <minecraft:iron_ore>);
+// -
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.blockores:2834>, <liquid:iron.molten> * 144, 700, <minecraft:iron_ore>);
+// -
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.blockores:3834>, <liquid:iron.molten> * 144, 700, <minecraft:iron_ore>);
+// -
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.blockores:4834>, <liquid:iron.molten> * 144, 700, <minecraft:iron_ore>);
+
+// --- Gt Copper
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.blockores:35>, <liquid:copper.molten> * 144, 600, <TConstruct:SearedBrick:3>);
+// -
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.blockores:1035>, <liquid:copper.molten> * 144, 600, <TConstruct:SearedBrick:3>);
+// -
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.blockores:2035>, <liquid:copper.molten> * 144, 600, <TConstruct:SearedBrick:3>);
+// -
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.blockores:3035>, <liquid:copper.molten> * 144, 600, <TConstruct:SearedBrick:3>);
+// -
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.blockores:4035>, <liquid:copper.molten> * 144, 600, <TConstruct:SearedBrick:3>);
+
+// --- Gt Chalcopyrite
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.blockores:855>, <liquid:copper.molten> * 144, 600, <TConstruct:SearedBrick:3>);
+// -
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.blockores:1855>, <liquid:copper.molten> * 144, 600, <TConstruct:SearedBrick:3>);
+// -
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.blockores:2855>, <liquid:copper.molten> * 144, 600, <TConstruct:SearedBrick:3>);
+// -
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.blockores:3855>, <liquid:copper.molten> * 144, 600, <TConstruct:SearedBrick:3>);
+// -
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.blockores:4855>, <liquid:copper.molten> * 144, 600, <TConstruct:SearedBrick:3>);
+
+// --- Gt Tin
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.blockores:57>, <liquid:tin.molten> * 144, 400, <TConstruct:SearedBrick:4>);
+// -
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.blockores:1057>, <liquid:tin.molten> * 144, 400, <TConstruct:SearedBrick:4>);
+// -
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.blockores:2057>, <liquid:tin.molten> * 144, 400, <TConstruct:SearedBrick:4>);
+// -
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.blockores:3057>, <liquid:tin.molten> * 144, 400, <TConstruct:SearedBrick:4>);
+// -
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.blockores:4057>, <liquid:tin.molten> * 144, 400, <TConstruct:SearedBrick:4>);
+
+// --- Gt Cassetrite
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.blockores:824>, <liquid:tin.molten> * 288, 400, <TConstruct:SearedBrick:4>);
+// -
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.blockores:1824>, <liquid:tin.molten> * 288, 400, <TConstruct:SearedBrick:4>);
+// -
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.blockores:2824>, <liquid:tin.molten> * 288, 400, <TConstruct:SearedBrick:4>);
+// -
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.blockores:3824>, <liquid:tin.molten> * 288, 400, <TConstruct:SearedBrick:4>);
+// -
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.blockores:4824>, <liquid:tin.molten> * 144, 400, <TConstruct:SearedBrick:4>);
+
+
+
+// --- Gt Gold
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.blockores:86>, <liquid:gold.molten> * 144, 600, <minecraft:gold_ore>);
+// -
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.blockores:1086>, <liquid:gold.molten> * 144, 600, <minecraft:gold_ore>);
+// -
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.blockores:2086>, <liquid:gold.molten> * 144, 600, <minecraft:gold_ore>);
+// -
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.blockores:3086>, <liquid:gold.molten> * 144, 600, <minecraft:gold_ore>);
+// -
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.blockores:4086>, <liquid:gold.molten> * 144, 600, <minecraft:gold_ore>);
+
+// --- Gt Aluminium
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.blockores:19>, <liquid:aluminum.molten> * 144, 400, <TConstruct:SearedBrick:5>);
+// -
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.blockores:1019>, <liquid:aluminum.molten> * 144, 400, <TConstruct:SearedBrick:5>);
+// -
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.blockores:2019>, <liquid:aluminum.molten> * 144, 400, <TConstruct:SearedBrick:5>);
+// -
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.blockores:3019>, <liquid:aluminum.molten> * 144, 400, <TConstruct:SearedBrick:5>);
+// -
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.blockores:4019>, <liquid:aluminum.molten> * 144, 400, <TConstruct:SearedBrick:5>);
+
+// --- Gt Cobalt
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.blockores:33>, <liquid:cobalt.molten> * 144, 650, <TConstruct:GravelOre:5>);
+// -
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.blockores:1033>, <liquid:cobalt.molten> * 144, 650, <TConstruct:GravelOre:5>);
+// -
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.blockores:2033>, <liquid:cobalt.molten> * 144, 650, <TConstruct:GravelOre:5>);
+// -
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.blockores:3033>, <liquid:cobalt.molten> * 144, 650, <TConstruct:GravelOre:5>);
+// -
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.blockores:4033>, <liquid:cobalt.molten> * 144, 650, <TConstruct:GravelOre:5>);
+
+// --- Gt Nickel
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.blockores:34>, <liquid:nickel.molten> * 144, 400, <gregtech:gt.blockores:34>);
+// -
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.blockores:1034>, <liquid:nickel.molten> * 144, 400, <gregtech:gt.blockores:34>);
+// -
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.blockores:2034>, <liquid:nickel.molten> * 144, 400, <gregtech:gt.blockores:34>);
+// -
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.blockores:3034>, <liquid:nickel.molten> * 144, 400, <gregtech:gt.blockores:34>);
+// -
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.blockores:4034>, <liquid:nickel.molten> * 144, 400, <gregtech:gt.blockores:34>);
+
+// --- Gt Lead
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.blockores:89>, <liquid:lead.molten> * 144, 400, <gregtech:gt.blockores:89>);
+// -
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.blockores:1089>, <liquid:lead.molten> * 144, 400, <gregtech:gt.blockores:89>);
+// -
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.blockores:2089>, <liquid:lead.molten> * 144, 400, <gregtech:gt.blockores:89>);
+// -
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.blockores:3089>, <liquid:lead.molten> * 144, 400, <gregtech:gt.blockores:89>);
+// -
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.blockores:4089>, <liquid:lead.molten> * 144, 400, <gregtech:gt.blockores:89>);
+
+// --- Gt Silver
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.blockores:54>, <liquid:silver.molten> * 144, 500, <gregtech:gt.blockores:54>);
+// -
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.blockores:1054>, <liquid:silver.molten> * 144, 500, <gregtech:gt.blockores:54>);
+// -
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.blockores:2054>, <liquid:silver.molten> * 144, 500, <gregtech:gt.blockores:54>);
+// -
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.blockores:3054>, <liquid:silver.molten> * 144, 500, <gregtech:gt.blockores:54>);
+// -
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.blockores:4054>, <liquid:silver.molten> * 144, 500, <gregtech:gt.blockores:54>);
+
+// --- Gt Platinum
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.blockores:85>, <liquid:platinum.molten> * 144, 800, <gregtech:gt.blockores:85>);
+// -
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.blockores:1085>, <liquid:platinum.molten> * 144, 800, <gregtech:gt.blockores:85>);
+// -
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.blockores:2085>, <liquid:platinum.molten> * 144, 800, <gregtech:gt.blockores:85>);
+// -
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.blockores:3085>, <liquid:platinum.molten> * 144, 800, <gregtech:gt.blockores:85>);
+// -
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.blockores:4085>, <liquid:platinum.molten> * 144, 800, <gregtech:gt.blockores:85>);
+
+// --- Gt Emerald
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.blockores:501>, <liquid:emerald.liquid> * 640, 800, <minecraft:emerald_ore>);
+// -
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.blockores:1501>, <liquid:emerald.liquid> * 640, 800, <minecraft:emerald_ore>);
+// -
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.blockores:2501>, <liquid:emerald.liquid> * 640, 800, <minecraft:emerald_ore>);
+// -
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.blockores:3501>, <liquid:emerald.liquid> * 640, 800, <minecraft:emerald_ore>);
+// -
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.blockores:4501>, <liquid:emerald.liquid> * 640, 800, <minecraft:emerald_ore>);
 
 // --- Seared Tank
 recipes.addShaped(<TConstruct:LavaTank>, [
@@ -956,11 +1134,41 @@ recipes.addShaped(Grout * 4, [
 [Sand, Sand, Sand],
 [Claydust, <minecraft:water_bucket>.transformReplace(<minecraft:bucket>), Claydust],
 [Gravel, Gravel, Gravel]]);
+// -
+recipes.addShaped(Grout * 4, [
+[Gravel, Gravel, Gravel],
+[Claydust, <minecraft:water_bucket>.transformReplace(<minecraft:bucket>), Claydust],
+[Sand, Sand, Sand]]);
+// -
+recipes.addShaped(Grout * 4, [
+[Sand, Claydust, Gravel],
+[Sand, <minecraft:water_bucket>.transformReplace(<minecraft:bucket>), Gravel],
+[Sand, Claydust, Gravel]]);
+// -
+recipes.addShaped(Grout * 4, [
+[Gravel, Claydust, Sand],
+[Gravel, <minecraft:water_bucket>.transformReplace(<minecraft:bucket>), Sand],
+[Gravel, Claydust, Sand]]);
 
 recipes.addShaped(Grout * 4, [
 [Sand, Sand, Sand],
 [Claydust, <IguanaTweaksTConstruct:clayBucketWater>.transformReplace(<IguanaTweaksTConstruct:clayBucketFired>), Claydust],
 [Gravel, Gravel, Gravel]]);
+// -
+recipes.addShaped(Grout * 4, [
+[Gravel, Gravel, Gravel],
+[Claydust, <IguanaTweaksTConstruct:clayBucketWater>.transformReplace(<IguanaTweaksTConstruct:clayBucketFired>), Claydust],
+[Sand, Sand, Sand]]);
+// -
+recipes.addShaped(Grout * 4, [
+[Sand, Claydust, Gravel],
+[Sand, <IguanaTweaksTConstruct:clayBucketWater>.transformReplace(<IguanaTweaksTConstruct:clayBucketFired>), Gravel],
+[Sand, Claydust, Gravel]]);
+// -
+recipes.addShaped(Grout * 4, [
+[Gravel, Claydust, Sand],
+[Gravel, <IguanaTweaksTConstruct:clayBucketWater>.transformReplace(<IguanaTweaksTConstruct:clayBucketFired>), Sand],
+[Gravel, Claydust, Sand]]);
 
 // --- Slime Soil
 recipes.addShapeless(<TConstruct:CraftedSoil:6>, [<minecraft:nether_wart>, <minecraft:soul_sand>, Gravel, <minecraft:water_bucket>.transformReplace(<minecraft:bucket>)]);
@@ -1777,6 +1985,15 @@ recipes.addShaped(<TConstruct:Redstone.Landmine:3>, [
 [<minecraft:repeater>, <minecraft:light_weighted_pressure_plate>, <minecraft:repeater>],
 [<minecraft:stone>, <Railcraft:detector:4>, <minecraft:stone>]]);
 
+// --- Obsidian Sticks
+oreDict.obsidianRod.remove(<TConstruct:toolRod:6>);
+oreDict.stickObsidian.remove(<TConstruct:toolRod:6>);
+oreDict.obsidianStick.remove(<TConstruct:toolRod:6>);
+oreDict.toolRodObsidian.remove(<TConstruct:toolRod:6>);
+recipes.addShapeless(<TConstruct:toolRod:6>, [<RandomThings:ingredient:1>]);
+
+
+
 // --- Alloy Smelter Recipes ---
 
 // --- Green Slime Crystal
@@ -1891,6 +2108,12 @@ Macerator.addRecipe(<TConstruct:materials:42> * 9, <TConstruct:MetalBlock:7>);
 // -
 Macerator.addRecipe(<TConstruct:materials:42>, <TConstruct:materials:14>);
 
+
+
+// --- Mixer Recipes
+
+// --- Grout
+Mixer.addRecipe(<TConstruct:CraftedSoil:1> * 8, null, <minecraft:sand:*> * 3, <minecraft:gravel> * 3, <minecraft:clay> * 2, null, <liquid:water> * 2000, 120, 16);
 
 
 

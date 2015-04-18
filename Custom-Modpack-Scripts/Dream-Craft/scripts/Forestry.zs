@@ -9,7 +9,7 @@ import mods.gregtech.Assembler;
 
 
 
-// --- remove Recipes ---
+// --- Remove Recipes ---
 
 
 // --- Machines ---
@@ -455,7 +455,7 @@ recipes.remove(<Forestry:fences2:*>);
 
 
 
-// --- add Recipes ---
+// --- Add Recipes ---
 
 
 // --- Machines ---
@@ -609,6 +609,8 @@ mods.forestry.Carpenter.addRecipe(800, <liquid:seedoil> * 1000,
 <Forestry:frameImpregnated>, <Forestry:beeCombs:*>, <Forestry:frameImpregnated>, 
 <minecraft:fence>, <minecraft:wooden_slab:*>, <minecraft:fence>], 
 <Forestry:apiculture:2>, <Forestry:apiculture>);
+// -
+recipes.addShapeless(<Forestry:apiculture:2>, [<harvestcraft:apiary>]);
 
 // --- Apiarys Chest
 mods.forestry.Carpenter.addRecipe(600, <liquid:honey> * 1000, 
@@ -685,9 +687,9 @@ mods.forestry.Carpenter.addRecipe(1200, <liquid:honey> * 5000,
 
 // --- Alveary Stabiliser
 mods.forestry.Carpenter.addRecipe(1200, <liquid:honey> * 5000, 
-[<Forestry:thermionicTubes:8>, <gregtech:gt.metaitem.01:17517>, <Forestry:thermionicTubes:8>, 
+[<Forestry:thermionicTubes:4>, <gregtech:gt.metaitem.01:17517>, <Forestry:thermionicTubes:4>, 
 <gregtech:gt.metaitem.01:32729>, <Forestry:beealyzer>, <gregtech:gt.metaitem.01:32729>, 
-<Forestry:thermionicTubes:8>, <gregtech:gt.metaitem.01:17517>, <Forestry:thermionicTubes:8>], 
+<Forestry:thermionicTubes:4>, <gregtech:gt.metaitem.01:17517>, <Forestry:thermionicTubes:4>], 
 <Forestry:alveary:*>, <Forestry:alveary:6>);
 
 // --- Alveary Sieve
