@@ -2318,6 +2318,9 @@ recipes.addShaped(<minecraft:melon_seeds> * 2, [[<minecraft:melon>, <ore:craftin
 // -
 recipes.addShaped(<minecraft:melon_seeds>, [[<minecraft:melon>, <ore:craftingToolSoftHammer>, <minecraft:melon>]]);
 
+//Melon Slices
+recipes.addShapeless(<minecraft:melon> * 6, [<ore:craftingToolKnife>, <minecraft:melon_block>]);
+
 //Gunpowder
 recipes.addShapeless(<minecraft:gunpowder>, [<ore:dustSmallGunpowder>, <ore:dustSmallGunpowder>, <ore:dustSmallGunpowder>, <ore:dustSmallGunpowder>]);
 
@@ -2623,7 +2626,7 @@ mods.thaumcraft.Research.addPrereq("BEACON", "ENCHANTINGTABLE", false);
 mods.thaumcraft.Research.setConcealed("BEACON", true);
 mods.thaumcraft.Research.addPage("BEACON", "Minecraft.research_page.BEACON");
 game.setLocalization("en_US", "Minecraft.research_page.BEACON", "A beacon is a unique block that projects a light beam skyward and can provide status effects to players in the vicinity. Beacon blocks can function as light sources, emitting a light level 15. Like other light sources, they will melt snow and ice. When activated, beacon blocks provide two unique functions: An aesthetic landmark beam reaching into the sky, which can be visible from far away. Powers, which give players status effects within a certain range.");
-mods.thaumcraft.Infusion.addRecipe("BEACON", <ForbiddenMagic:StarBlock>, [<minecraft:glass>, <gregtech:gt.metaitem.01:17804>, <gregtech:gt.metaitem.01:24500>, <minecraft:glass>, <gregtech:gt.metaitem.01:17804>, <gregtech:gt.metaitem.01:24500>, <minecraft:glass>, <gregtech:gt.metaitem.01:17804>, <gregtech:gt.metaitem.01:24500>, <minecraft:glass>, <gregtech:gt.metaitem.01:17804>, <gregtech:gt.metaitem.01:24500>], "praecantatio 120, alienis 100, lux 120, ordo 80, ignis 80, terra 80", <minecraft:beacon>, 6);
+mods.thaumcraft.Infusion.addRecipe("BEACON", <minecraft:diamond_block>, [<minecraft:glass>, <gregtech:gt.metaitem.01:17804>, <gregtech:gt.metaitem.01:24506>, <minecraft:glass>, <gregtech:gt.metaitem.01:17804>, <gregtech:gt.metaitem.01:24506>, <minecraft:glass>, <gregtech:gt.metaitem.01:17804>, <gregtech:gt.metaitem.01:24506>, <minecraft:glass>, <gregtech:gt.metaitem.01:17804>, <gregtech:gt.metaitem.01:24506>], "praecantatio 120, alienis 100, lux 120, ordo 80, ignis 80, terra 80", <minecraft:beacon>, 6);
 mods.thaumcraft.Research.addInfusionPage("BEACON", <minecraft:beacon>);
 mods.thaumcraft.Warp.addToResearch("BEACON", 2);
 
