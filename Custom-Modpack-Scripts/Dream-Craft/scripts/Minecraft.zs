@@ -11,6 +11,7 @@ import mods.ic2.Compressor;
 import mods.ic2.Extractor;
 import mods.gregtech.FluidExtractor;
 import mods.gregtech.ImplosionCompressor;
+import mods.gregtech.Slicer;
 
 
 
@@ -2585,6 +2586,13 @@ Extractor.addRecipe(<minecraft:wheat> * 9, <minecraft:hay_block>);
 FluidExtractor.addRecipe(null, <minecraft:sand:*>, <liquid:molten.glass> * 144, 10000, 200, 48);
 
 
+// --- Implusion Compressor Recipes ---
+
+
+// --- Nether Star
+ImplosionCompressor.addRecipe([<minecraft:nether_star> * 3, <gregtech:gt.metaitem.01:807> * 4], <gregtech:gt.metaitem.01:2506> * 4, 48);
+
+
 
 //Shears
 oreDict.craftingToolShears.add(<minecraft:shears>);
@@ -2629,5 +2637,10 @@ game.setLocalization("en_US", "Minecraft.research_page.BEACON", "A beacon is a u
 mods.thaumcraft.Infusion.addRecipe("BEACON", <minecraft:diamond_block>, [<minecraft:glass>, <gregtech:gt.metaitem.01:17804>, <gregtech:gt.metaitem.01:24506>, <minecraft:glass>, <gregtech:gt.metaitem.01:17804>, <gregtech:gt.metaitem.01:24506>, <minecraft:glass>, <gregtech:gt.metaitem.01:17804>, <gregtech:gt.metaitem.01:24506>, <minecraft:glass>, <gregtech:gt.metaitem.01:17804>, <gregtech:gt.metaitem.01:24506>], "praecantatio 120, alienis 100, lux 120, ordo 80, ignis 80, terra 80", <minecraft:beacon>, 6);
 mods.thaumcraft.Research.addInfusionPage("BEACON", <minecraft:beacon>);
 mods.thaumcraft.Warp.addToResearch("BEACON", 2);
+
+
+// --- Add Slicer Recipes ---
+
+Slicer.addRecipe(<minecraft:melon> * 8, <minecraft:melon_block>, <gregtech:gt.metaitem.01:32398> * 0, 100, 8);
 
 // --- Hiding Stuff ---
