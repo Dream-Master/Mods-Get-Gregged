@@ -813,13 +813,13 @@ recipes.addShaped(<Railcraft:machine.beta:15>, [
 // --- Solid Fueled Boiler Firebox ---
 recipes.addShaped(<Railcraft:machine.beta:5>, [
 [SteelPlate, Cauldron, SteelPlate],
-[BrickBlock, <minecraft:fire_charge>, BrickBlock],
+[BrickBlock, <gregtech:gt.blockcasings3:13>, BrickBlock],
 [SteelPlate, IronFurnace, SteelPlate]]);
 
 // --- Liquid Fueled Boiler Firebox ---
 recipes.addShaped(<Railcraft:machine.beta:6>, [
 [SteelPlate, Cauldron, SteelPlate],
-[<dreamcraft:item.SteelBars>, <minecraft:fire_charge>, <dreamcraft:item.SteelBars>],
+[<dreamcraft:item.SteelBars>, <gregtech:gt.blockcasings3:13>, <dreamcraft:item.SteelBars>],
 [SteelPlate, IronFurnace, SteelPlate]]);
 
 // --- Low Pressure Boiler Tank ---
@@ -1630,10 +1630,13 @@ recipes.addShaped(<Railcraft:part.signal.lamp>, [
 [GlassPane, <RedLogic:redlogic.lampNonCube:158>, IronPlate]]);
 
 // --- Turbine Blade ---
-recipes.addShapeless(<Railcraft:part.turbine.blade>, [<IC2:itemRecipePart:10>]);
+recipes.addShapeless(<Railcraft:part.turbine.blade>, [<IC2:itemRecipePart:12>]);
 
 // --- Steam Turbine Disk ---
 recipes.addShapeless(<Railcraft:part.turbine.disk>, [<IC2:itemSteamTurbineBlade>]);
+
+// --- Turbine Rotor---
+recipes.addShapeless(<Railcraft:part.turbine.rotor>, [<IC2:itemSteamTurbine>]);
 
 // --- Trackmans Goggle ---
 recipes.addShaped(<Railcraft:armor.goggles>, [

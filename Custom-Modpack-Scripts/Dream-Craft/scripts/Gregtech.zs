@@ -5,9 +5,12 @@
 // --- Imports --- 
 
 import mods.gregtech.Assembler;
+import mods.gregtech.AssemblerLiq;
 import mods.gregtech.Autoclave;
+import mods.gregtech.AlloySmelter;
 import mods.gregtech.BlastFurnace;
 import mods.gregtech.ForgeHammer;
+import mods.ic2.Canner;
 import mods.ic2.Compressor;
 import mods.ic2.Extractor;
 import mods.ic2.Macerator;
@@ -863,6 +866,50 @@ recipes.remove(<gregtech:gt.metaitem.02:20884>);
 // --- Small Sealed Wood Gear
 recipes.remove(<gregtech:gt.metaitem.02:20889>);
 
+// --- Eridium Neutron Reflector
+recipes.remove(<gregtech:gt.neutronreflector>);
+
+// --- Thorium Fuel Rod
+recipes.remove(<gregtech:gt.Thoriumcell>);
+
+// --- Double Thorium Fuel Rod
+recipes.remove(<gregtech:gt.Double_Thoriumcell>);
+
+// --- Quad Thorium Fuel Rod
+recipes.remove(<gregtech:gt.Quad_Thoriumcell>);
+
+// --- Heavy Duty Allow Ingots
+recipes.remove(<gregtech:gt.metaitem.01:32462>);
+
+// --- Heavy Duty Allow Ingots T2
+recipes.remove(<gregtech:gt.metaitem.01:32463>);
+
+// --- Heavy Duty Allow Ingots T3
+recipes.remove(<gregtech:gt.metaitem.01:32464>);
+
+// --- Certus Quartz Dust
+recipes.remove(<gregtech:gt.metaitem.01:2517>);
+
+// --- 60k Helium Cooling Cell
+recipes.remove(<gregtech:gt.60k_Helium_Coolantcell>);
+
+// --- 180k Helium Cooling Cell
+recipes.remove(<gregtech:gt.180k_Helium_Coolantcell>); 
+
+// --- 360k Helium Cooling Cell
+recipes.remove(<gregtech:gt.360k_Helium_Coolantcell>);
+
+// --- 60k NaK Cooling Cell
+recipes.remove(<gregtech:gt.60k_NaK_Coolantcell>);
+
+// --- 180k NaK Cooling Cell
+recipes.remove(<gregtech:gt.180k_NaK_Coolantcell>); 
+
+// --- 360k NaK Cooling Cell
+recipes.remove(<gregtech:gt.360k_NaK_Coolantcell>);
+
+// --- Large Bronze Boiler
+recipes.remove(<gregtech:gt.blockmachines:1020>);
 
 
 
@@ -969,7 +1016,7 @@ recipes.addShapeless(<gregtech:gt.metaitem.01:2321> * 9,
 // --- Wood Ring
 recipes.addShaped(<gregtech:gt.metaitem.01:28809>, [
 [<gregtech:gt.metatool.01:34>, null, null],
-[<gregtech:gt.metaitem.01:17809>, null, null]]);
+[null, <gregtech:gt.metaitem.01:17809>, null]]);
 
 // --- Glass Dust
 recipes.addShapeless(<gregtech:gt.metaitem.01:2890>, [<gregtech:gt.metatool.01:24>, <TConstruct:GlassBlock>]);
@@ -1020,6 +1067,27 @@ recipes.addShaped(<gregtech:gt.metaitem.01:2881>, [
 // -
 recipes.addShaped(<gregtech:gt.metaitem.01:2881>, [
 [<ore:cropWheat>, null, null],
+[<ore:craftingToolMortar>, null, null]]);
+
+// --- Salt Dust
+recipes.addShaped(<gregtech:gt.metaitem.01:2817>, [
+[<gregtech:gt.blockores:817>, null, null],
+[<ore:craftingToolMortar>, null, null]]);
+// -
+recipes.addShaped(<gregtech:gt.metaitem.01:2817>, [
+[<gregtech:gt.blockores:1817>, null, null],
+[<ore:craftingToolMortar>, null, null]]);
+// -
+recipes.addShaped(<gregtech:gt.metaitem.01:2817>, [
+[<gregtech:gt.blockores:2817>, null, null],
+[<ore:craftingToolMortar>, null, null]]);
+// -
+recipes.addShaped(<gregtech:gt.metaitem.01:2817>, [
+[<gregtech:gt.blockores:3817>, null, null],
+[<ore:craftingToolMortar>, null, null]]);
+// -
+recipes.addShaped(<gregtech:gt.metaitem.01:2817>, [
+[<gregtech:gt.blockores:4817>, null, null],
 [<ore:craftingToolMortar>, null, null]]);
 
 // --- Small Clay Dust
@@ -2153,6 +2221,17 @@ recipes.addShaped(<gregtech:gt.metaitem.02:20889>, [
 [<ore:craftingToolSaw>, <ore:plateWoodSealed>, <ore:craftingToolWireCutter>],
 [null, <ore:stickWoodSealed>, null]]);
 
+// --- Heavy Duty Allow Ingots
+recipes.addShaped(<gregtech:gt.metaitem.01:32462>, [
+[<ore:boltStainlessSteel>, <ore:craftingToolHardHammer>, <ore:boltStainlessSteel>],
+[<ore:compressedBronze>, <ore:compressedAluminium>, <ore:compressedSteel>],
+[<ore:boltStainlessSteel>, <ore:craftingToolWrench>, <ore:boltStainlessSteel>]]);
+
+// --- Large Bronze Boiler
+recipes.addShaped(<gregtech:gt.blockmachines:1020>, [
+[<ore:cableGt01Tin>, <ore:circuitGood>, <ore:cableGt01Tin>],
+[<ore:circuitGood>, <gregtech:gt.blockcasings3:13>, <ore:circuitGood>],
+[<ore:cableGt01Tin>, <ore:circuitGood>, <ore:cableGt01Tin>]]);
 
 
 
@@ -2170,6 +2249,50 @@ Assembler.addRecipe(<gregtech:gt.blockmachines:23>, <IC2:blockElectric:5>, <greg
 
 // --- Extreme Transformer
 Assembler.addRecipe(<gregtech:gt.blockmachines:24>, <IC2:blockElectric:6>, <gregtech:gt.blockmachines:1587> * 2, 100, 2048);
+
+// --- Eridium Neutron Reflector
+Assembler.addRecipe(<gregtech:gt.neutronreflector>, <IC2:reactorReflectorThick> * 8, <IC2:itemPartIridium>, 1200, 256);
+
+// --- Double Thorium Fuel Rod
+Assembler.addRecipe(<gregtech:gt.Double_Thoriumcell>, <gregtech:gt.Thoriumcell> * 2, <gregtech:gt.metaitem.01:23305> * 4, 200, 32);
+
+// --- Quad Thorium Fuel Rod
+Assembler.addRecipe(<gregtech:gt.Quad_Thoriumcell>, <gregtech:gt.Double_Thoriumcell> * 2, <gregtech:gt.metaitem.01:23305> * 4, 200, 32);
+
+// --- 60k Helium Cooling Cell
+AssemblerLiq.addRecipe(<gregtech:gt.60k_Helium_Coolantcell>, <IC2:itemCellEmpty>, <gregtech:gt.metaitem.01:17057> * 4, <liquid:helium> * 1000, 400, 128);
+
+// --- 180k Helium Cooling Cell
+AssemblerLiq.addRecipe(<gregtech:gt.180k_Helium_Coolantcell>, <gregtech:gt.60k_Helium_Coolantcell> * 3, <gregtech:gt.metaitem.01:17057> * 6, <liquid:molten.copper> * 576, 500, 256);
+
+// --- 360k Helium Cooling Cell
+AssemblerLiq.addRecipe(<gregtech:gt.360k_Helium_Coolantcell>, <gregtech:gt.180k_Helium_Coolantcell> * 2, <gregtech:gt.metaitem.01:17057> * 8, <liquid:molten.copper> * 1440, 600, 512);
+
+// --- 60k NaK Cooling Cell
+AssemblerLiq.addRecipe(<gregtech:gt.60k_NaK_Coolantcell>, <IC2:itemCellEmpty>, <gregtech:gt.metaitem.01:17057> * 4, <liquid:natriumkalium> * 1000, 400, 128);
+
+// --- 180k NaK Cooling Cell
+AssemblerLiq.addRecipe(<gregtech:gt.180k_NaK_Coolantcell>, <gregtech:gt.60k_NaK_Coolantcell> * 3, <gregtech:gt.metaitem.01:17057> * 6, <liquid:molten.copper> * 576, 500, 256);
+
+// --- 360k NaK Cooling Cell
+AssemblerLiq.addRecipe(<gregtech:gt.360k_NaK_Coolantcell>, <gregtech:gt.180k_NaK_Coolantcell> * 2, <gregtech:gt.metaitem.01:17057> * 8, <liquid:molten.copper> * 1440, 600, 512);
+
+
+
+// --- Alloy Smelter Recipes ---
+
+// --- Broze Ingots
+AlloySmelter.addRecipe(<gregtech:gt.metaitem.01:11300> * 4, <gregtech:gt.metaitem.01:9057> * 9, <gregtech:gt.metaitem.01:9035> * 27, 200, 16);
+// -
+AlloySmelter.addRecipe(<gregtech:gt.metaitem.01:11300> * 4, <gregtech:gt.metaitem.01:9057> * 9, <gregtech:gt.metaitem.01:2035>, 200, 16);
+// -
+AlloySmelter.addRecipe(<gregtech:gt.metaitem.01:11300> * 4, <gregtech:gt.metaitem.01:9057> * 9, <gregtech:gt.metaitem.01:11035>, 200, 16);
+// -
+AlloySmelter.addRecipe(<gregtech:gt.metaitem.01:11300> * 4, <gregtech:gt.metaitem.01:9035> * 27, <gregtech:gt.metaitem.01:2057>, 200, 16);
+// -
+AlloySmelter.addRecipe(<gregtech:gt.metaitem.01:11300> * 4, <gregtech:gt.metaitem.01:9035> * 27, <gregtech:gt.metaitem.01:11057>, 200, 16);
+// -
+AlloySmelter.addRecipe(<gregtech:gt.metaitem.01:11300> * 4, <gregtech:gt.metaitem.01:9035> * 27, <gregtech:gt.metaitem.01:9057> * 9, 200, 16);
 
 
 
@@ -2200,6 +2323,14 @@ Autoclave.addRecipe(<Thaumcraft:ItemShard:4>, <gregtech:gt.metaitem.01:2545>, <l
 Autoclave.addRecipe(<Thaumcraft:ItemShard:5>, <gregtech:gt.metaitem.01:2544>, <liquid:water> * 200, 8000, 2000, 32);
 // -
 Autoclave.addRecipe(<Thaumcraft:ItemShard:5>, <gregtech:gt.metaitem.01:2544>, <liquid:ic2distilledwater> * 200, 9000, 1500, 32);
+
+
+
+// --- Canner Recipes ---
+
+
+// --- Thorium Fuel Rod
+Canner.addBottleRecipe(<gregtech:gt.Thoriumcell>, <IC2:itemFuelRod>, <gregtech:gt.metaitem.01:2096>);
 
 
 

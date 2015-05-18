@@ -7,10 +7,12 @@
 
 import mods.gregtech.AlloySmelter;
 import mods.gregtech.Assembler;
+import mods.gregtech.AssemblerLiq;
 import mods.ic2.Compressor;
 import mods.ic2.Extractor;
 import mods.gregtech.FluidExtractor;
 import mods.gregtech.ImplosionCompressor;
+import mods.gregtech.Mixer;
 import mods.gregtech.Slicer;
 
 
@@ -191,6 +193,7 @@ val IronPlate = <ore:plateAnyIron>;
 val IronRod = <ore:stickAnyIron>;
 val DiamondRod = <ore:stickDiamond>;
 val StoneRod = <ore:rodStone>;
+val WoodScrew = <ore:screwWood>;
 val IronScrew = <ore:screwAnyIron>;
 val SteelScrew = <ore:screwSteel>;
 val WoodGear = <ore:gearWood>;
@@ -212,7 +215,6 @@ val ClearPane = <TConstruct:GlassPane>;
 val Coal = <ore:gemCoal>;
 val Charcoal = <ore:gemCharcoal>;
 val CoalCoke = <ore:fuelCoke>;
-val SugarCoke = <ore:itemCharcoalSugar>;
 val Phosphorous = <ore:dustPhosphorite>;
 val Beeswax = <ore:itemBeeswax>;
 val WovenCloth = <harvestcraft:wovencottonItem>;
@@ -674,185 +676,264 @@ recipes.remove(RedHardClay);
 // --- Black Stained Clay Block
 recipes.remove(BlackHardClay);
 
-
-//Sandstone
+// --- Sandstone
 recipes.remove(<minecraft:sandstone>);
-//Chiseld Sandstone
+
+// --- Chiseld Sandstone
 recipes.remove(<minecraft:sandstone:1>);
-//Smooth Sandstone
+
+// --- Smooth Sandstone
 recipes.remove(<minecraft:sandstone:2>);
-//Gunpowder
+
+// --- Gunpowder
 recipes.removeShapeless(<minecraft:gunpowder>, [<minecraft:coal:1>, <minecraft:coal:1>, <minecraft:coal:1>, <minecraft:glowstone_dust>]);
 recipes.removeShaped(<minecraft:gunpowder>, [
 [<Natura:barleyFood:4>, <Natura:barleyFood:4>, null],
 [<Natura:barleyFood:4>, <Natura:barleyFood:4>, null]]);
-//TNT
+
+// --- TNT
 recipes.remove(<minecraft:tnt>);
-//Snow
+
+// --- Snow
 recipes.remove(<minecraft:snow>);
-//Clay
+
+// --- Clay
 recipes.remove(<minecraft:clay>);
-//nether Brick
+
+// --- nether Brick
 recipes.remove(<minecraft:nether_brick>);
-//Quartz Block
+
+// --- Quartz Block
 recipes.remove(<minecraft:quartz_block>);
-//Chiseld Quartz
+
+// --- Chiseld Quartz
 recipes.remove(<minecraft:quartz_block:1>);
-//Bookshelf
+
+// --- Bookshelf
 recipes.remove(<minecraft:bookshelf>);
-//Brewing Stand
+
+// --- Brewing Stand
 recipes.remove(<minecraft:brewing_stand>);
-//Clock
+
+// --- Clock
 recipes.remove(<minecraft:clock>);
-//Compass
+
+// --- Compass
 recipes.remove(<minecraft:compass>);
-//Diamond Sword
+
+// --- Diamond Sword
 recipes.remove(<minecraft:diamond_sword>);
-//Diamond Shovel
+
+// --- Diamond Shovel
 recipes.remove(<minecraft:diamond_shovel>);
-//Diamond Pickaxe
+
+// --- Diamond Pickaxe
 recipes.remove(<minecraft:diamond_pickaxe>);
-//Diamond Axe
+
+// --- Diamond Axe
 recipes.remove(<minecraft:diamond_axe>);
-//Diamond Hoe
+
+// --- Diamond Hoe
 recipes.remove(<minecraft:diamond_hoe>);
-//Diamond Helm
+
+// --- Diamond Helm
 recipes.remove(<minecraft:diamond_helmet>);
-//Diamond Chestplate
+
+// --- Diamond Chestplate
 recipes.remove(<minecraft:diamond_chestplate>);
-//Diamond Leggins
+
+// --- Diamond Leggins
 recipes.remove(<minecraft:diamond_leggings>);
-//Diamond Boots
+
+// --- Diamond Boots
 recipes.remove(<minecraft:diamond_boots>);
-//Ender Eye
+
+// --- Ender Eye
 recipes.remove(<minecraft:ender_eye>);
-//Minecart with Chest
+
+// --- Minecart with Chest
 recipes.removeShaped(<minecraft:chest_minecart>);
-//Minecart with Furnace
+
+// --- Minecart with Furnace
 recipes.removeShaped(<minecraft:furnace_minecart>);
-//Minecart with Hopper
+
+// --- Minecart with Hopper
 recipes.removeShaped(<minecraft:hopper_minecart>);
-//Minecart with TNT
+
+// --- Minecart with TNT
 recipes.removeShaped(<minecraft:tnt_minecart>);
-//Iron Ingot
+
+// --- Iron Ingot
 recipes.remove(<minecraft:iron_ingot>);
-//Iron Nuggets
+
+// --- Iron Nuggets
 recipes.remove(<ore:nuggetIron>);
-//Gold Ingot
+
+// --- Gold Ingot
 recipes.remove(<minecraft:gold_ingot>);
-//Gold Nuggets
+
+// --- Gold Nuggets
 recipes.remove(<ore:nuggetGold>);
-//Golden Apple small
+
+// --- Golden Apple small
 recipes.remove(<minecraft:golden_apple>);
-//Golden Apple big
+
+// --- Golden Apple big
 recipes.remove(<minecraft:golden_apple:1>);
-//Golden Carrot
+
+// --- Golden Carrot
 recipes.remove(<minecraft:golden_carrot>);
-//Sugar
+
+// --- Sugar
 recipes.removeShaped(<minecraft:sugar>);
-//Cake
+// -
+recipes.removeShapeless(<minecraft:sugar>, [<harvestcraft:potItem>, <harvestcraft:honeyItem>]);
+// -
+recipes.removeShapeless(<minecraft:sugar>, [<harvestcraft:potItem>, <ore:dropHoney>]);
+
+// --- Cake
 recipes.remove(<minecraft:cake>);
-//Pumpkin Seeds
+
+// --- Pumpkin Seeds
 recipes.remove(<minecraft:pumpkin_seeds>);
-//Melon Seeds
+
+// --- Melon Seeds
 recipes.remove(<minecraft:melon_seeds>);
-//Fermented Spider Eye
+
+// --- Fermented Spider Eye
 recipes.remove(<minecraft:fermented_spider_eye>);
-//Magma Creme
+
+// --- Magma Creme
 recipes.remove(<minecraft:magma_cream>);
-//remove Oak Slaps
+
+// --- Oak Slaps
 recipes.removeShaped(<minecraft:wooden_slab> * 6, [
 [<minecraft:planks>, <minecraft:planks>, <minecraft:planks>]]);
-//Blazepowder
+
+// --- Blazepowder
 recipes.removeShaped(<minecraft:blaze_powder>, [
 [<Thaumcraft:blockCustomPlant:3>]]);
-//Bone Meal
+
+// --- Bone Meal
 recipes.removeShapeless(<minecraft:dye:15> * 3, [<minecraft:bone>]);
-//Fire Charge
+
+// --- Fire Charge
 recipes.remove(<minecraft:fire_charge>);
-//Melon
+
+// --- Melon
 recipes.remove(<minecraft:melon_block>);
 
+// --- Soul Sand
+recipes.remove(<minecraft:soul_sand>);
 
-//Nether fences
+// --- Nether fences
 recipes.remove(<minecraft:nether_brick_fence>);
-//Leather Cap
+
+// --- Leather Cap
 recipes.removeShaped(<minecraft:leather_helmet>, [
 [<harvestcraft:wovencottonItem>, <harvestcraft:wovencottonItem>, <harvestcraft:wovencottonItem>],
 [<harvestcraft:wovencottonItem>, null, <harvestcraft:wovencottonItem>]]);
-//Leather Tunic
+
+// --- Leather Tunic
 recipes.removeShaped(<minecraft:leather_chestplate>, [
 [<harvestcraft:wovencottonItem>, null, <harvestcraft:wovencottonItem>],
 [<harvestcraft:wovencottonItem>, <harvestcraft:wovencottonItem>, <harvestcraft:wovencottonItem>],
 [<harvestcraft:wovencottonItem>, <harvestcraft:wovencottonItem>, <harvestcraft:wovencottonItem>]]);
 
-//Leather Pants
+// --- Leather Pants
 recipes.removeShaped(<minecraft:leather_leggings>, [
 [<harvestcraft:wovencottonItem>, <harvestcraft:wovencottonItem>, <harvestcraft:wovencottonItem>],
 [<harvestcraft:wovencottonItem>, null, <harvestcraft:wovencottonItem>],
 [<harvestcraft:wovencottonItem>, null, <harvestcraft:wovencottonItem>]]);
 
-//Leather Boots
+// --- Leather Boots
 recipes.removeShaped(<minecraft:leather_boots>, [
 [<harvestcraft:wovencottonItem>, null, <harvestcraft:wovencottonItem>],
 [<harvestcraft:wovencottonItem>, null, <harvestcraft:wovencottonItem>]]);
 
-//Name Tag
+// --- Name Tag
 recipes.remove(<minecraft:name_tag>);
-//Lead
+
+// --- Lead
 recipes.remove(<minecraft:lead>);
-//Pumpkin Pie
+
+// --- Pumpkin Pie
 recipes.remove(<minecraft:pumpkin_pie>);
-//Comparator
+
+// --- Comparator
 recipes.remove(<minecraft:comparator>);
-//Redstone Repeater
+
+// --- Redstone Repeater
 recipes.remove(<minecraft:repeater>);
-//NetherStar
+
+// --- NetherStar
 recipes.removeShapeless(<minecraft:nether_star>);
-//Skeleton Head
+
+// --- Skeleton Head
 recipes.remove(<minecraft:skull>);
-//Zombi Head
+
+// --- Zombi Head
 recipes.remove(<minecraft:skull:2>);
-//Creeper Head
+
+// --- Creeper Head
 recipes.remove(<minecraft:skull:4>);
-//Flower Pot
+
+// --- Flower Pot
 recipes.remove(<minecraft:flower_pot>);
-//Emerald
+
+// --- Emerald
 recipes.removeShaped(<minecraft:emerald>, [
 [<ForbiddenMagic:FMResource>, <ForbiddenMagic:FMResource>, <ForbiddenMagic:FMResource>],
 [<ForbiddenMagic:FMResource>, <ForbiddenMagic:FMResource>, <ForbiddenMagic:FMResource>],
 [<ForbiddenMagic:FMResource>, <ForbiddenMagic:FMResource>, <ForbiddenMagic:FMResource>]]);
-//Hay Block
+
+// --- Hay Block
 recipes.remove(<minecraft:hay_block>);
-//Wheat
+
+// --- Wheat
 recipes.remove(<minecraft:wheat>);
-//Diamond
+
+// --- Diamond
 recipes.removeShaped(<minecraft:diamond>, [
 [<MagicBees:beeNugget:5>, <MagicBees:beeNugget:5>, <MagicBees:beeNugget:5>],
 [<MagicBees:beeNugget:5>, <MagicBees:beeNugget:5>, <MagicBees:beeNugget:5>],
 [<MagicBees:beeNugget:5>, <MagicBees:beeNugget:5>, <MagicBees:beeNugget:5>]]);
-//Slime Ball
+
+// --- Slime Ball
 recipes.remove(<minecraft:slime_ball>);
-//Item Frame
+
+// --- Item Frame
 recipes.remove(<minecraft:item_frame>);
-//Bed
+
+// --- Bed
 recipes.remove(<minecraft:bed>);
-//Fishing Rod
+
+// --- Fishing Rod
 recipes.remove(<minecraft:fishing_rod>);
-//Paper
+
+// --- Paper
 recipes.removeShaped(<minecraft:paper> * 2, [[<minecraft:reeds>, <minecraft:reeds>, <minecraft:reeds>]]);
-//Poisonous Potato
+
+// --- Poisonous Potato
 recipes.remove(<minecraft:poisonous_potato>);
-//Sign
+
+// --- Sign
 recipes.remove(<minecraft:sign>);
-//Boat
+
+// --- Boat
 recipes.remove(<minecraft:boat>);
-//Painting
+
+// --- Painting
 recipes.remove(<minecraft:painting>);
-//Bread
+
+// --- Bread
 furnace.remove(<minecraft:bread>);
-//Flient and SteelBars
+
+// --- Flient and SteelBars
 recipes.remove(<minecraft:flint_and_steel>);
+
+// --- Dragon Egg
+recipes.remove(<minecraft:dragon_egg>);
 
 // --- Empty Map
 recipes.remove(Map);
@@ -862,6 +943,10 @@ recipes.remove(WoodDoor);
 
 // --- Iron Door
 recipes.remove(IronDoor);
+
+// --- Wither Skull
+recipes.remove(<minecraft:skull:1>);
+
 
 // --- Adding Back Recipes ---
 
@@ -972,229 +1057,37 @@ recipes.addShapeless(<minecraft:wooden_pressure_plate> * 2, [Saw, <ore:slabWood>
 recipes.addShapeless(<minecraft:glass_pane> * 2, [Saw, Glass]);
 
 // --- Torch
-recipes.addShapedMirrored(Torch * 3, [
+recipes.addShaped(Torch * 3, [
 [Coal, null],
 [Stick, null]]);
 // - Alternate Recipe
-recipes.addShapedMirrored(Torch * 2, [
+recipes.addShaped(Torch * 2, [
 [Charcoal, null],
 [Stick, null]]);
 // -
-recipes.addShapedMirrored(Torch, [
-[Beeswax, null],
-[Stick, null]]);
-// -
-recipes.addShapedMirrored(Torch, [
+recipes.addShaped(Torch, [
 [<ore:gemLignite>, null],
 [Stick, null]]);
 //-
-recipes.addShapedMirrored(Torch * 2, [
-[<ore:gemLignite>, String],
-[Stick, null]]);
-// -
-recipes.addShapedMirrored(Torch * 1, [
-[<ore:gemLignite>, null],
-[ImpregnatedStick, null]]);
-// -
-recipes.addShaped(Torch * 3, [
-[<ore:gemLignite>, String],
-[ImpregnatedStick, null]]);
-// -
 recipes.addShaped(Torch * 5, [
 [CoalCoke, null],
 [Stick, null]]);
 // -
-recipes.addShaped(Torch * 3, [
-[Rubber, null],
-[Stick, null]]);
-// -
-recipes.addShaped(Torch * 2, [
-[Sulfur, null],
+recipes.addShaped(Torch * 5, [
+[AnyWool, <Railcraft:fluid.creosote.bucket>.giveBack(<minecraft:bucket>)],
 [Stick, null]]);
 // -
 recipes.addShaped(Torch * 4, [
-[Phosphorous, null],
-[Stick, null]]);
-// -
-recipes.addShaped(Torch * 2, [
-[AnyWool, null],
-[Stick, null]]);
-// -
-recipes.addShaped(Torch * 4, [
-[AnyWool, <Railcraft:fluid.creosote.bucket>.transformReplace(<minecraft:bucket>)],
-[Stick, null]]);
-// -
-recipes.addShapedMirrored(Torch * 3, [
-[WovenCloth, null],
-[Stick, null]]);
-// -
-recipes.addShaped(Torch * 6, [
-[WovenCloth, <Railcraft:fluid.creosote.bucket>.transformReplace(<minecraft:bucket>)],
-[Stick, null]]);
-// -
-recipes.addShapedMirrored(Torch * 2, [
-[SugarCoke, null],
-[Stick, null]]);
-// -
-recipes.addShapedMirrored(Torch * 5, [
 [Torchberries, null],
 [Stick, null]]);
 // -
-recipes.addShaped(Torch * 4, [
-[Coal, String],
-[Stick, null]]);
-// -
 recipes.addShaped(Torch * 3, [
-[Charcoal, String],
+[Beeswax, String],
 [Stick, null]]);
 // -
 recipes.addShaped(Torch * 2, [
-[Beeswax, String],
-[Stick, null]]);
-// -
-recipes.addShaped(Torch * 6, [
-[CoalCoke, String],
-[Stick, null]]);
-// -
-recipes.addShaped(Torch * 4, [
 [Rubber, String],
 [Stick, null]]);
-// -
-recipes.addShaped(Torch * 3, [
-[Sulfur, String],
-[Stick, null]]);
-// -
-recipes.addShaped(Torch * 5, [
-[Phosphorous, String],
-[Stick, null]]);
-// -
-recipes.addShaped(Torch * 3, [
-[AnyWool, String],
-[Stick, null]]);
-// -
-recipes.addShaped(Torch * 5, [
-[AnyWool, String, <Railcraft:fluid.creosote.bucket>.transformReplace(<minecraft:bucket>)],
-[Stick, null]]);
-// -
-recipes.addShaped(Torch * 4, [
-[WovenCloth, String],
-[Stick, null]]);
-// -
-recipes.addShaped(Torch * 7, [
-[WovenCloth, String, <Railcraft:fluid.creosote.bucket>.transformReplace(<minecraft:bucket>)],
-[Stick, null]]);
-// -
-recipes.addShaped(Torch * 3, [
-[SugarCoke, String],
-[Stick, null]]);
-// -
-recipes.addShaped(Torch * 6, [
-[Torchberries, String],
-[Stick, null]]);
-// -
-recipes.addShaped(Torch * 4, [
-[Coal, null],
-[ImpregnatedStick, null]]);
-// -
-recipes.addShaped(Torch * 3, [
-[Charcoal, null],
-[ImpregnatedStick, null]]);
-// -
-recipes.addShaped(Torch * 2, [
-[Beeswax, null],
-[ImpregnatedStick, null]]);
-// -
-recipes.addShaped(Torch * 6, [
-[CoalCoke, null],
-[ImpregnatedStick, null]]);
-// -
-recipes.addShaped(Torch * 4, [
-[Rubber, null],
-[ImpregnatedStick, null]]);
-// -
-recipes.addShaped(Torch * 3, [
-[Sulfur, null],
-[ImpregnatedStick, null]]);
-// -
-recipes.addShaped(Torch * 5, [
-[Phosphorous, null],
-[ImpregnatedStick, null]]);
-// -
-recipes.addShaped(Torch * 3, [
-[AnyWool, null],
-[ImpregnatedStick, null]]);
-// -
-recipes.addShaped(Torch * 6, [
-[AnyWool, <Railcraft:fluid.creosote.bucket>.transformReplace(<minecraft:bucket>)],
-[ImpregnatedStick, null]]);
-// -
-recipes.addShaped(Torch * 4, [
-[WovenCloth, null],
-[ImpregnatedStick, null]]);
-// -
-recipes.addShaped(Torch * 8, [
-[WovenCloth, <Railcraft:fluid.creosote.bucket>.transformReplace(<minecraft:bucket>)],
-[ImpregnatedStick, null]]);
-// -
-recipes.addShaped(Torch * 3, [
-[SugarCoke, null],
-[ImpregnatedStick, null]]);
-// -
-recipes.addShaped(Torch * 6, [
-[Torchberries, null],
-[ImpregnatedStick, null]]);
-// -
-recipes.addShaped(Torch * 5, [
-[Coal, String],
-[ImpregnatedStick, null]]);
-// -
-recipes.addShaped(Torch * 4, [
-[Charcoal, String],
-[ImpregnatedStick, null]]);
-// -
-recipes.addShaped(Torch * 3, [
-[Beeswax, String],
-[ImpregnatedStick, null]]);
-// -
-recipes.addShaped(Torch * 7, [
-[CoalCoke, String],
-[ImpregnatedStick, null]]);
-// -
-recipes.addShaped(Torch * 5, [
-[Rubber, String],
-[ImpregnatedStick, null]]);
-// -
-recipes.addShaped(Torch * 4, [
-[Sulfur, String],
-[ImpregnatedStick, null]]);
-// -
-recipes.addShaped(Torch * 6, [
-[Phosphorous, String],
-[ImpregnatedStick, null]]);
-// -
-recipes.addShaped(Torch * 4, [
-[AnyWool, String],
-[ImpregnatedStick, null]]);
-// -
-recipes.addShaped(Torch * 7, [
-[AnyWool, String, <Railcraft:fluid.creosote.bucket>.transformReplace(<minecraft:bucket>)],
-[ImpregnatedStick, null]]);
-// -
-recipes.addShaped(Torch * 5, [
-[WovenCloth, String],
-[ImpregnatedStick, null]]);
-// -
-recipes.addShaped(Torch * 9, [
-[WovenCloth, String, <Railcraft:fluid.creosote.bucket>.transformReplace(<minecraft:bucket>)],
-[ImpregnatedStick, null]]);
-// -
-recipes.addShaped(Torch * 4, [
-[SugarCoke, String],
-[ImpregnatedStick, null]]);
-// -
-recipes.addShaped(Torch * 7, [
-[Torchberries, String],
-[ImpregnatedStick, null]]);
 
 // --- Lever
 recipes.addShapeless(Lever, [Stick, <minecraft:stone_button>]);
@@ -1212,19 +1105,19 @@ recipes.addShapedMirrored(RSTorch , [
 
 // --- Ladder
 recipes.addShaped(Ladder, [
-[Stick, HHammer, Stick],
-[Stick, Stick, Stick],
-[Stick, Saw, Stick]]);
+[Stick, Screwdriver, Stick],
+[String, WoodScrew, String],
+[Stick, SHammer, Stick]]);
 // - Alternate Recipe
 recipes.addShaped(Ladder * 2, [
 [Stick, Screwdriver, Stick],
-[Stick, IronScrew, Stick],
-[Stick, Saw, Stick]]);
+[String, IronScrew, String],
+[Stick, SHammer, Stick]]);
 // - Alternate Recipe
 recipes.addShaped(Ladder * 4, [
 [Stick, Screwdriver, Stick],
-[Stick, SteelScrew, Stick],
-[Stick, Saw, Stick]]);
+[String, SteelScrew, String],
+[Stick, SHammer, Stick]]);
 
 // --- Fence
 recipes.addShaped(Fence, [
@@ -2374,12 +2267,6 @@ recipes.addShaped(Map, [
 //Bone Meal
 recipes.addShapeless(<minecraft:dye:15> * 3, [<minecraft:bone>, <ore:craftingToolMortar>]);
 
-//Fire Charge
-recipes.addShaped(<minecraft:fire_charge>, [
-[<minecraft:gunpowder>, <minecraft:blaze_powder>, <minecraft:gunpowder>],
-[<minecraft:blaze_powder>, Coal, <minecraft:blaze_powder>],
-[<minecraft:gunpowder>, <minecraft:blaze_powder>, <minecraft:gunpowder>]]);
-
 //Lead
 recipes.addShaped(<minecraft:lead>, [
 [<minecraft:string>, <minecraft:string>, <minecraft:string>],
@@ -2440,12 +2327,12 @@ recipes.addShaped(<minecraft:fishing_rod>, [
 //Paper
 recipes.addShaped(<minecraft:paper> * 2, [
 [<ore:dustWood>, <ore:dustWood>, <ore:dustWood>],
-[<ore:dustWood>, <minecraft:water_bucket>.transformReplace(<minecraft:bucket>), <ore:dustWood>],
+[<ore:dustWood>, <minecraft:water_bucket>.giveBack(<minecraft:bucket>), <ore:dustWood>],
 [<ore:dustWood>, <ore:dustWood>, <ore:dustWood>]]);
 // -
 recipes.addShaped(<minecraft:paper> * 2, [
 [<ore:dustWood>, <ore:dustWood>, <ore:dustWood>],
-[<ore:dustWood>, <IguanaTweaksTConstruct:clayBucketWater>.transformReplace(<IguanaTweaksTConstruct:clayBucketFired>), <ore:dustWood>],
+[<ore:dustWood>, <IguanaTweaksTConstruct:clayBucketWater>.giveBack(<IguanaTweaksTConstruct:clayBucketFired>), <ore:dustWood>],
 [<ore:dustWood>, <ore:dustWood>, <ore:dustWood>]]);
 
 // --- Wooden Door
@@ -2481,18 +2368,18 @@ recipes.addShapeless(<minecraft:stone_slab:7>, [Saw, QuartzBlock]);
 // --- Bricks
 recipes.addShaped(<minecraft:brick_block> * 2, [
 [<ore:ingotBrick>, <ore:ingotBrick>, <ore:ingotBrick>],
-[<ore:ingotBrick>, <minecraft:water_bucket>.transformReplace(<minecraft:bucket>), <ore:ingotBrick>],
+[<ore:ingotBrick>, <minecraft:water_bucket>.giveBack(<minecraft:bucket>), <ore:ingotBrick>],
 [<ore:ingotBrick>, <ore:ingotBrick>, <ore:ingotBrick>]]);
 // -
 recipes.addShaped(<minecraft:brick_block> * 2, [
 [<ore:ingotBrick>, <ore:ingotBrick>, <ore:ingotBrick>],
-[<ore:ingotBrick>, <IguanaTweaksTConstruct:clayBucketWater>.transformReplace(<IguanaTweaksTConstruct:clayBucketFired>), <ore:ingotBrick>],
+[<ore:ingotBrick>, <IguanaTweaksTConstruct:clayBucketWater>.giveBack(<IguanaTweaksTConstruct:clayBucketFired>), <ore:ingotBrick>],
 [<ore:ingotBrick>, <ore:ingotBrick>, <ore:ingotBrick>]]);
 
 // --- Nether Bricks
 recipes.addShaped(<minecraft:nether_brick> * 2, [
 [NetherBricks, NetherBricks, NetherBricks],
-[NetherBricks, <minecraft:lava_bucket>.transformReplace(<minecraft:bucket>), NetherBricks],
+[NetherBricks, <minecraft:lava_bucket>.giveBack(<minecraft:bucket>), NetherBricks],
 [NetherBricks, NetherBricks, NetherBricks]]);
 // -
 recipes.addShaped(<minecraft:nether_brick> * 2, [
@@ -2564,6 +2451,36 @@ recipes.addShaped(<minecraft:flint_and_steel>, [
 //Hay Block
 Assembler.addRecipe(<minecraft:hay_block>, <minecraft:wheat> * 9, <minecraft:string> * 2, 200, 32);
 
+// --- Soul Sand
+AssemblerLiq.addRecipe(<minecraft:soul_sand>, <Natura:heatsand>, <Natura:soil.tainted> * 4, <liquid:water> * 1000, 100, 16);
+
+// --- Wither Skull
+AssemblerLiq.addRecipe(<minecraft:skull:1>, <MagicBees:miscResources:4> * 6, <gregtech:gt.integrated_circuit:6> * 0, <liquid:molten.thaumium> * 216, 200, 96);
+
+// --- Torch
+AssemblerLiq.addRecipe(<minecraft:torch> * 5, <minecraft:stick>, <minecraft:wool:*>, <liquid:creosote> * 500, 100, 4);
+// -
+Assembler.addRecipe(<minecraft:torch> * 4, <minecraft:stick>, <gregtech:gt.metaitem.01:2536>, 100, 4);
+// -
+Assembler.addRecipe(<minecraft:torch> * 6, <minecraft:stick>, <gregtech:gt.metaitem.01:2535>, 100, 4);
+// -
+Assembler.addRecipe(<minecraft:torch> * 4, <minecraft:stick>, <gregtech:gt.metaitem.01:2022>, 100, 4);
+// -
+Assembler.addRecipe(<minecraft:torch> * 6, <minecraft:stick>, <gregtech:gt.metaitem.01:2022>, 100, 4);
+
+// --- Wooden Door
+AssemblerLiq.addRecipe(<minecraft:wooden_door>, <gregtech:gt.metaitem.01:17809> * 4, <minecraft:trapdoor>, <liquid:molten.iron> * 16, 400, 4);
+
+// --- Iron Door
+AssemblerLiq.addRecipe(<minecraft:iron_door>, <Railcraft:part.plate> * 4, <dreamcraft:item.SteelBars>, <liquid:molten.steel> * 16, 400, 8);
+
+// --- Trapped Door
+AssemblerLiq.addRecipe(<minecraft:trapdoor> * 4, <minecraft:wooden_slab:*> * 4, <minecraft:stick> * 4, <liquid:molten.iron> * 16, 600, 4);
+// -
+AssemblerLiq.addRecipe(<minecraft:trapdoor> * 6, <minecraft:wooden_slab:*> * 4, <minecraft:stick> * 4, <liquid:molten.steel> * 16, 600, 4);
+
+
+
 
 // --- Alloy Smelter Recipes ---
 
@@ -2594,8 +2511,21 @@ ImplosionCompressor.addRecipe([<minecraft:nether_star> * 3, <gregtech:gt.metaite
 
 
 
-//Shears
+// --- Shears
 oreDict.craftingToolShears.add(<minecraft:shears>);
+
+
+
+// --- Mixer Recipes ---
+
+
+// --- Soul Sand
+Mixer.addRecipe(<minecraft:soul_sand> * 4, null, <minecraft:sand:*> * 4, <minecraft:dirt:*>, <MagicBees:wax:1> * 4, null, <liquid:water> * 1000, 100, 16);
+
+// --- Fire Charge
+Mixer.addRecipe(<minecraft:fire_charge>, null, <minecraft:blaze_powder> * 3, <minecraft:gunpowder> * 3, <gregtech:gt.metaitem.01:2535> * 3, null, null, 400, 32);
+
+
 
 
 //Enchanting Table Infusion
@@ -2637,6 +2567,19 @@ game.setLocalization("en_US", "Minecraft.research_page.BEACON", "A beacon is a u
 mods.thaumcraft.Infusion.addRecipe("BEACON", <minecraft:diamond_block>, [<minecraft:glass>, <gregtech:gt.metaitem.01:17804>, <gregtech:gt.metaitem.01:24506>, <minecraft:glass>, <gregtech:gt.metaitem.01:17804>, <gregtech:gt.metaitem.01:24506>, <minecraft:glass>, <gregtech:gt.metaitem.01:17804>, <gregtech:gt.metaitem.01:24506>, <minecraft:glass>, <gregtech:gt.metaitem.01:17804>, <gregtech:gt.metaitem.01:24506>], "praecantatio 120, alienis 100, lux 120, ordo 80, ignis 80, terra 80", <minecraft:beacon>, 6);
 mods.thaumcraft.Research.addInfusionPage("BEACON", <minecraft:beacon>);
 mods.thaumcraft.Warp.addToResearch("BEACON", 2);
+
+// --- Dragon Egg
+mods.thaumcraft.Research.addResearch("DRAGONEGG", "MAGICBEES", "alienis 200, praecantatio 200, victus 100, bestia 200", 4, 4, 12, <minecraft:dragon_egg>);
+game.setLocalization("en_US", "tc.research_name.DRAGONEGG", "Dragon Egg");
+game.setLocalization("en_US", "tc.research_text.DRAGONEGG", "[MC] Dragon Egg duplication");
+mods.thaumcraft.Research.addPrereq("DRAGONEGG", "MB_DimensionalSingularity", false);
+mods.thaumcraft.Research.addSibling("DRAGONEGG", "INFUSION");
+mods.thaumcraft.Research.setConcealed("DRAGONEGG", true);
+mods.thaumcraft.Research.addPage("DRAGONEGG", "Minecraft.research_page.DRAGONEGG");
+game.setLocalization("en_US", "Minecraft.research_page.DRAGONEGG", "Dragon Eggs are dropped by Enderdragons when they are killed. When Right Clicked they teleport a short distance. Now you find a magical way to duplicate this Powerful Item using Draconis Bee Products and The Essence of false Life inside the Infusion Table");
+mods.thaumcraft.Infusion.addRecipe("DRAGONEGG", <MagicBees:miscResources:7>, [<MagicBees:miscResources:6>, <MagicBees:miscResources:6>, <MagicBees:miscResources:6>, <MagicBees:miscResources:6>, <MagicBees:miscResources:6>, <MagicBees:miscResources:6>, <MagicBees:miscResources:6> ,<MagicBees:miscResources:6>], "alienis 150, bestia 120, praecantatio 100, victus 80",  <minecraft:dragon_egg>, 6);
+mods.thaumcraft.Research.addInfusionPage("DRAGONEGG", <minecraft:dragon_egg>);
+mods.thaumcraft.Warp.addToResearch("DRAGONEGG", 5);
 
 
 // --- Add Slicer Recipes ---
