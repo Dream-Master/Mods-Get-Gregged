@@ -1,15 +1,18 @@
 // --- Created DreamMasterXXL
 
+
 // --- Imports ---
 
-import mods.nei.NEI;
+
 import mods.gregtech.AlloySmelter;
 import mods.gregtech.Assembler;
 import mods.gregtech.AssemblerLiq;
 import mods.gregtech.Centrifuge;
 import mods.ic2.Compressor;
 import mods.gregtech.FluidSolidifier;
+import mods.gregtech.Fuels;
 import mods.ic2.Macerator;
+import mods.nei.NEI;
 import mods.gregtech.PlateBender;
 import mods.gregtech.Wiremill;
 
@@ -1086,7 +1089,7 @@ recipes.addShaped(<Railcraft:signal:9>, [
 // --- Analog Signal Controll Box ---
 recipes.addShaped(<Railcraft:signal:10>, [
 [SteelPlate, ControllerCircuit, SteelPlate],
-[SteelPlate, <RedLogic:redlogic.gates:29>, SteelPlate]]);
+[SteelPlate, <ProjRed|Integration:projectred.integration.gate:26>, SteelPlate]]);
 
 // --- Signal Receiver Box
 recipes.addShaped(<Railcraft:signal:8>, [
@@ -1095,12 +1098,12 @@ recipes.addShaped(<Railcraft:signal:8>, [
 
 // --- Signal Capacitor Box ---
 recipes.addShaped(<Railcraft:signal:7>, [
-[SteelPlate, <RedLogic:redlogic.gates:11>, SteelPlate],
+[SteelPlate, <ProjRed|Integration:projectred.integration.gate:10>, SteelPlate],
 [SteelPlate, RedAlloyPlate, SteelPlate]]);
 
 // --- Signal Sequencer Box
 recipes.addShaped(<Railcraft:signal:6>, [
-[SteelPlate, <RedLogic:redlogic.gates:29>, SteelPlate],
+[SteelPlate, <ProjRed|Integration:projectred.integration.gate:26>, SteelPlate],
 [SteelPlate, RedAlloyPlate, SteelPlate]]);
 
 // --- Signal Interloack Box
@@ -1145,7 +1148,7 @@ recipes.addShaped(<Railcraft:detector:3>, [
 
 // --- Powered Detector --- 
 recipes.addShaped(<Railcraft:detector:4>, [
-[CobbleStone, <RedLogic:redlogic.gates:29>, CobbleStone],
+[CobbleStone, <ProjRed|Integration:projectred.integration.gate:26>, CobbleStone],
 [RedAlloyPlate, IronPressurePlate, RedAlloyPlate],
 [CobbleStone, RedAlloyPlate, CobbleStone]]);
 
@@ -1625,9 +1628,9 @@ recipes.addShaped(SteelLantern, [
 
 // --- Signal Lamp ---
 recipes.addShaped(<Railcraft:part.signal.lamp>, [
-[GlassPane, <RedLogic:redlogic.lampNonCube:173>, IronPlate],
-[GlassPane, <RedLogic:redlogic.lampNonCube:164>, IronPlate],
-[GlassPane, <RedLogic:redlogic.lampNonCube:158>, IronPlate]]);
+[GlassPane, <ProjRed|Illumination:projectred.illumination.lamp:29>, IronPlate],
+[GlassPane, <ProjRed|Illumination:projectred.illumination.lamp:20>, IronPlate],
+[GlassPane, <ProjRed|Illumination:projectred.illumination.lamp:30>, IronPlate]]);
 
 // --- Turbine Blade ---
 recipes.addShapeless(<Railcraft:part.turbine.blade>, [<IC2:itemRecipePart:12>]);
@@ -1718,6 +1721,15 @@ mods.forestry.Carpenter.addRecipe(2400, <liquid:seedoil> * 5000,
 <Forestry:craftingMaterial:3>, <Forestry:craftingMaterial:3>, <Forestry:craftingMaterial:3>,
 <Forestry:craftingMaterial:3>, <Forestry:craftingMaterial:3>, <Forestry:craftingMaterial:3>],
 <Railcraft:backpack.apothecary.t1>, <Railcraft:backpack.apothecary.t2>);
+
+
+// --- Add Fuels ---
+
+// --- Creosote
+Fuels.addDieselFuel(<IC2:itemFluidCell>, <IC2:itemFluidCell>.withTag({Fluid: {FluidName: "creosote", Amount: 1000}}), 8);
+// -
+Fuels.addDieselFuel(<IC2:itemFluidCell>, <gregtech:gt.metaitem.01:30712>, 8);
+
 
 
 
