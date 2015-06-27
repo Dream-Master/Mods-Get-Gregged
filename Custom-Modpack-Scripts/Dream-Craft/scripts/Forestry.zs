@@ -343,7 +343,7 @@ recipes.remove(<Forestry:catalogue>);
 mods.forestry.Carpenter.removeRecipe(<Forestry:crate>);
 
 // --- Apiarist Pipe
-recipes.remove(<Forestry:item.PipeItemsPropolis>);
+//recipes.remove(<Forestry:item.PipeItemsPropolis>);
 
 // --- Torch
 mods.forestry.Carpenter.removeRecipe(<minecraft:torch>);
@@ -465,9 +465,9 @@ recipes.remove(<Forestry:fences2:*>);
 
 // --- Sturdy Casing
 recipes.addShaped(<Forestry:sturdyMachine>, [
-[<ore:plateBronze>, <ore:screwSteel>, <ore:plateBronze>],
+[<IC2:itemCasing:2>, <ore:screwSteel>, <IC2:itemCasing:2>],
 [<ore:screwSteel>, <gregtech:gt.blockcasings:1>, <ore:screwSteel>],
-[<ore:plateBronze>, <ore:screwSteel>, <ore:plateBronze>]]);
+[<IC2:itemCasing:2>, <ore:screwSteel>, <IC2:itemCasing:2>]]);
 
 // --- Analyzer
 recipes.addShaped(<Forestry:core>, [
@@ -706,21 +706,21 @@ mods.forestry.Carpenter.addRecipe(1200, <liquid:molten.redstone> * 576,
 [<gregtech:gt.metaitem.01:27500>, <IC2:itemCasing:1>, <gregtech:gt.metaitem.01:27500>, 
 <IC2:itemCasing:1>, <IC2:itemPartCircuit>, <IC2:itemCasing:1>, 
 <gregtech:gt.metaitem.01:27500>, <IC2:itemCasing:1>, <gregtech:gt.metaitem.01:27500>], 
-<gregtech:gt.metaitem.01:32740>, <Forestry:beealyzer>);
+<dreamcraft:item.Display>, <Forestry:beealyzer>);
 
 // --- Treealyzer
 mods.forestry.Carpenter.addRecipe(1200, <liquid:molten.redstone> * 576, 
 [<gregtech:gt.metaitem.01:27500>, <IC2:itemCasing>, <gregtech:gt.metaitem.01:27500>, 
 <IC2:itemCasing>, <IC2:itemPartCircuit>, <IC2:itemCasing> , 
 <gregtech:gt.metaitem.01:27500>, <IC2:itemCasing>, <gregtech:gt.metaitem.01:27500>], 
-<gregtech:gt.metaitem.01:32740>, <Forestry:treealyzer>);
+<dreamcraft:item.Display>, <Forestry:treealyzer>);
 
 // --- Flutterlyzer
 mods.forestry.Carpenter.addRecipe(1200, <liquid:molten.redstone> * 576, 
 [<gregtech:gt.metaitem.01:27500>, <IC2:itemCasing:2>, <gregtech:gt.metaitem.01:27500>, 
 <IC2:itemCasing:2>, <IC2:itemPartCircuit>, <IC2:itemCasing:2>, 
 <gregtech:gt.metaitem.01:27500>, <IC2:itemCasing:2>, <gregtech:gt.metaitem.01:27500>], 
-<gregtech:gt.metaitem.01:32740>, <Forestry:flutterlyzer>);
+<dreamcraft:item.Display>, <Forestry:flutterlyzer>);
 
 
 
@@ -2296,7 +2296,7 @@ AlloySmelter.addRecipe(<Forestry:waxCast>, <MagicBees:wax:2> * 9, <gregtech:gt.m
 Assembler.addRecipe(<Forestry:alveary>, <Forestry:impregnatedCasing>, <Forestry:craftingMaterial:6> * 8, 1200, 64);
 
 // --- Sturdy Casing
-Assembler.addRecipe(<Forestry:sturdyMachine>, <gregtech:gt.blockcasings:1>, <gregtech:gt.metaitem.01:17300> * 4, 800, 32);
+Assembler.addRecipe(<Forestry:sturdyMachine>, <gregtech:gt.blockcasings:1>, <IC2:itemCasing:2> * 4, 800, 32);
 
 // --- Hardened  Casing
 Assembler.addRecipe(<Forestry:hardenedMachine>, <Forestry:sturdyMachine>, <gregtech:gt.metaitem.01:17500> * 8, 1200, 128);

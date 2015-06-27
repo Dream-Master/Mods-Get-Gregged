@@ -9,6 +9,8 @@ import mods.gregtech.AssemblerLiq;
 import mods.gregtech.Autoclave;
 import mods.gregtech.AlloySmelter;
 import mods.gregtech.BlastFurnace;
+import mods.gregtech.ChemicalReactorLiq;
+import mods.gregtech.Fermenter;
 import mods.gregtech.ForgeHammer;
 import mods.ic2.Canner;
 import mods.ic2.Compressor;
@@ -41,6 +43,11 @@ val AnnealedCable = <gregtech:gt.blockmachines:1386>;
 val HeatProofCase = <gregtech:gt.blockcasings:11>;
 val Stick = <ore:stickWood>;
 val Flint = <minecraft:flint>;
+
+var plateIron = <Railcraft:part.plate>;
+var plateWroughtIron = <gregtech:gt.metaitem.01:17304>;
+var plateAluminium = <gregtech:gt.metaitem.01:17019>;
+var shutterModule = <gregtech:gt.metaitem.01:32749>;
 
 
 
@@ -917,19 +924,42 @@ recipes.remove(<gregtech:gt.blockmachines:491>);
 // --- Brewery 128 EU
 recipes.remove(<gregtech:gt.blockmachines:492>);
 
+// --- Brewery 512 EU
+recipes.remove(<gregtech:gt.blockmachines:493>);
+
+// --- Brewery 2048 EU
+recipes.remove(<gregtech:gt.blockmachines:494>);
+
+// --- Brewery 8192 EU
+recipes.remove(<gregtech:gt.blockmachines:495>);
+
 // --- Implosion Compressor
 recipes.remove(<gregtech:gt.blockmachines:1001>);
+
+// --- Iridium Dust
+recipes.remove(<gregtech:gt.metaitem.01:2084>);
+
+// --- Iridium Ingot
+recipes.remove(<gregtech:gt.metaitem.01:11084>);
+
+// --- RTG Pellets
+recipes.remove(<IC2:itemRTGPellet>);
+
+// --- Saltpeter
+recipes.remove(<gregtech:gt.metaitem.01:2836>);
+
 
 
 
 // --- Add Recipes ---
+
+
 
 // --- Small Coal Boiler
 recipes.addShaped(<gregtech:gt.blockmachines:100>, [
 [<ore:plateBronze>, <ore:plateBronze>, <ore:plateBronze>],
 [<ore:plateBronze>, <ore:craftingToolWrench>, <ore:plateBronze>],
 [<minecraft:brick_block>, <minecraft:furnace>, <minecraft:brick_block>]]);
-
 
 // --- High Pressure Steam Furnace
 recipes.addShaped(HPFurnace, [
@@ -2251,6 +2281,71 @@ recipes.addShaped(<gregtech:gt.blockmachines:1001>, [
 [<ore:circuitAdvanced>, <gregtech:gt.blockcasings2>, <ore:circuitAdvanced>],
 [<ore:cableGt01Aluminium>, <ore:circuitAdvanced>, <ore:cableGt01Aluminium>]]);
 
+// --- Brewery 32 EU
+recipes.addShaped(<gregtech:gt.blockmachines:491>, [
+[<minecraft:glass>, <gregtech:gt.metaitem.01:32610>, <minecraft:glass>],
+[<ore:cableGt01Tin>, <gregtech:gt.blockmachines:11>, <ore:cableGt01Tin>],
+[<ore:circuitBasic>, <minecraft:brewing_stand>, <ore:circuitBasic>]]);
+
+// --- Brewery 128 EU
+recipes.addShaped(<gregtech:gt.blockmachines:492>, [
+[<minecraft:glass>, <gregtech:gt.metaitem.01:32611>, <minecraft:glass>],
+[<ore:cableGt01Copper>, <gregtech:gt.blockmachines:12>, <ore:cableGt01Copper>],
+[<ore:circuitGood>, <minecraft:brewing_stand>, <ore:circuitGood>]]);
+
+// --- Brewery 512 EU
+recipes.addShaped(<gregtech:gt.blockmachines:493>, [
+[<minecraft:glass>, <gregtech:gt.metaitem.01:32612>, <minecraft:glass>],
+[<ore:cableGt01Gold>, <gregtech:gt.blockmachines:13>, <ore:cableGt01Gold>],
+[<ore:circuitAdvanced>, <minecraft:brewing_stand>, <ore:circuitAdvanced>]]);
+
+// --- Brewery 2048 EU
+recipes.addShaped(<gregtech:gt.blockmachines:494>, [
+[<minecraft:glass>, <gregtech:gt.metaitem.01:32613>, <minecraft:glass>],
+[<ore:cableGt01Aluminium>, <gregtech:gt.blockmachines:14>, <ore:cableGt01Aluminium>],
+[<ore:circuitElite>, <minecraft:brewing_stand>, <ore:circuitElite>]]);
+
+// --- Brewery 8192 EU
+recipes.addShaped(<gregtech:gt.blockmachines:495>, [
+[<minecraft:glass>, <gregtech:gt.metaitem.01:32614>, <minecraft:glass>],
+[<ore:cableGt01Tungsten>, <gregtech:gt.blockmachines:15>, <ore:cableGt01Tungsten>],
+[<ore:circuitMaster>, <minecraft:brewing_stand>, <ore:circuitMaster>]]);
+
+// --- Motor Machine Casing
+recipes.addShaped(<gregtech:gt.blockcasings2:11>, [
+[<dreamcraft:item.StainlessSteelItemCasing>, <ore:circuitAdvanced>, <dreamcraft:item.StainlessSteelItemCasing>],
+[<gregtech:gt.metaitem.01:32602>, <gregtech:gt.blockcasings2>, <gregtech:gt.metaitem.01:32602>],
+[<dreamcraft:item.StainlessSteelItemCasing>, <ore:circuitAdvanced>, <dreamcraft:item.StainlessSteelItemCasing>]]);
+
+// --- Solar Panel
+recipes.addShapeless(<gregtech:gt.metaitem.01:32750>, [<ProjRed|Expansion:projectred.expansion.solar_panel>]);
+
+// --- Red Alloy Wire
+recipes.addShapeless(<gregtech:gt.blockmachines:2000>, [<ProjRed|Transmission:projectred.transmission.wire>]);
+
+// --- Long Rubber Rod
+recipes.addShaped(<gregtech:gt.metaitem.02:22880>, [[<ore:stickRubber>, <ore:craftingToolHardHammer>, <ore:stickRubber>]]);
+
+// --- Long Apatite Rod
+recipes.addShaped(<gregtech:gt.metaitem.02:22530>, [[<ore:stickApatite>, <ore:craftingToolHardHammer>, <ore:stickApatite>]]);
+
+// --- Long Lapis Rod
+recipes.addShaped(<gregtech:gt.metaitem.02:22526>, [[<ore:stickLapis>, <ore:craftingToolHardHammer>, <ore:stickLapis>]]);
+
+// --- Long Lazurite Rod
+recipes.addShaped(<gregtech:gt.metaitem.02:22524>, [[<ore:stickLazurite>, <ore:craftingToolHardHammer>, <ore:stickLazurite>]]);
+
+// --- Long Sodalite Rod
+recipes.addShaped(<gregtech:gt.metaitem.02:22525>, [[<ore:stickSodalite>, <ore:craftingToolHardHammer>, <ore:stickSodalite>]]);
+
+// --- Long Enderpearl Rod
+recipes.addShaped(<gregtech:gt.metaitem.02:22532>, [[<ore:stickEnderPearl>, <ore:craftingToolHardHammer>, <ore:stickEnderPearl>]]);
+
+// --- Long Endereye Rod
+recipes.addShaped(<gregtech:gt.metaitem.02:22533>, [[<ore:stickEnderEye>, <ore:craftingToolHardHammer>, <ore:stickEnderEye>]]);
+
+
+
 
 
 // --- Assembler Recipes ---
@@ -2287,13 +2382,23 @@ AssemblerLiq.addRecipe(<gregtech:gt.180k_Helium_Coolantcell>, <gregtech:gt.60k_H
 AssemblerLiq.addRecipe(<gregtech:gt.360k_Helium_Coolantcell>, <gregtech:gt.180k_Helium_Coolantcell> * 2, <gregtech:gt.metaitem.01:17057> * 8, <liquid:molten.copper> * 1440, 600, 512);
 
 // --- 60k NaK Cooling Cell
-AssemblerLiq.addRecipe(<gregtech:gt.60k_NaK_Coolantcell>, <IC2:itemCellEmpty>, <gregtech:gt.metaitem.01:17057> * 4, <liquid:natriumkalium> * 1000, 400, 128);
+AssemblerLiq.addRecipe(<gregtech:gt.60k_NaK_Coolantcell>, <IC2:itemCellEmpty>, <gregtech:gt.metaitem.01:17057> * 4, <liquid:sodiumpotassium> * 1000, 400, 128);
 
 // --- 180k NaK Cooling Cell
 AssemblerLiq.addRecipe(<gregtech:gt.180k_NaK_Coolantcell>, <gregtech:gt.60k_NaK_Coolantcell> * 3, <gregtech:gt.metaitem.01:17057> * 6, <liquid:molten.copper> * 576, 500, 256);
 
 // --- 360k NaK Cooling Cell
 AssemblerLiq.addRecipe(<gregtech:gt.360k_NaK_Coolantcell>, <gregtech:gt.180k_NaK_Coolantcell> * 2, <gregtech:gt.metaitem.01:17057> * 8, <liquid:molten.copper> * 1440, 600, 512);
+
+// --- RTG Pellets
+AssemblerLiq.addRecipe(<IC2:itemRTGPellet>, <gregtech:gt.metaitem.01:22032> * 6, <IC2:itemPlutonium> * 3, <liquid:ic2coolant> * 1000, 1200, 128);
+
+// --- Shutter Module
+Assembler.addRecipe(shutterModule * 2, plateIron * 2, <minecraft:iron_door> * 1, 1000, 16);
+// -
+Assembler.addRecipe(shutterModule * 2, plateAluminium * 2, <minecraft:iron_door> * 1, 1000, 16);
+// -
+Assembler.addRecipe(shutterModule * 2, plateWroughtIron * 2, <minecraft:iron_door> * 1, 1000, 16);
 
 
 
@@ -2349,6 +2454,18 @@ Autoclave.addRecipe(<Thaumcraft:ItemShard:5>, <gregtech:gt.metaitem.01:2544>, <l
 
 // --- Thorium Fuel Rod
 Canner.addBottleRecipe(<gregtech:gt.Thoriumcell>, <IC2:itemFuelRod>, <gregtech:gt.metaitem.01:2096>);
+
+
+
+// --- Chemical Reactor Recipes ---
+
+
+
+// --- Nitrogen Dioxide
+ChemicalReactorLiq.addRecipe(<IC2:itemCellEmpty>, <liquid:nitrogendioxide> * 3000, <gregtech:gt.metaitem.01:30012>, null, <liquid:oxygen> * 2000, 1200);
+
+// --- Saltpeter
+ChemicalReactorLiq.addRecipe(<gregtech:gt.metaitem.01:2836> * 5, <liquid:steam> * 16000, <dreamcraft:item.PotassiumHydroxideDust> * 3, null, <liquid:nitricacid> * 5000, 10);
 
 
 
@@ -2488,8 +2605,42 @@ PrecisionLaser.addRecipe(<gregtech:gt.metaitem.02:30890>, <gregtech:gt.metaitem.
 Extractor.addRecipe(<gregtech:gt.metaitem.01:2880> * 2, <TConstruct:strangeFood>);
 
 
+// --- Honey Forestry and BOP
+Fermenter.addRecipe(<liquid:honey> * 1000, <liquid:for.honey> * 1000, 20, false);
+// -
+Fermenter.addRecipe(<liquid:for.honey> * 1000, <liquid:honey> * 1000, 20, false);
+
+
+
+
+
 // --- Forge Hammer Recipes ---
+
+
+
+// --- Long Plastic Rod
 ForgeHammer.addRecipe(<gregtech:gt.metaitem.02:22874>, <gregtech:gt.metaitem.01:23874> * 2, 20, 16);
+
+// --- Long Rubber Rod
+ForgeHammer.addRecipe(<gregtech:gt.metaitem.02:22880>, <gregtech:gt.metaitem.01:23880> * 2, 20, 16);
+
+// --- Long Apatite Rod
+ForgeHammer.addRecipe(<gregtech:gt.metaitem.02:22530>, <gregtech:gt.metaitem.01:23530> * 2, 20, 16);
+
+// --- Long Lapis Rod
+ForgeHammer.addRecipe(<gregtech:gt.metaitem.02:22526>, <gregtech:gt.metaitem.01:23526> * 2, 20, 16);
+
+// --- Long Lazurite Rod
+ForgeHammer.addRecipe(<gregtech:gt.metaitem.02:22524>, <gregtech:gt.metaitem.01:23524> * 2, 20, 16);
+
+// --- Long Sodalite Rod
+ForgeHammer.addRecipe(<gregtech:gt.metaitem.02:22525>, <gregtech:gt.metaitem.01:23525> * 2, 20, 16);
+
+// --- Long Enderpearl Rod
+ForgeHammer.addRecipe(<gregtech:gt.metaitem.02:22532>, <gregtech:gt.metaitem.01:23532> * 2, 20, 16);
+
+// --- Long Endereye Rod
+ForgeHammer.addRecipe(<gregtech:gt.metaitem.02:22533>, <gregtech:gt.metaitem.01:23533> * 2, 20, 16);
 
 
 
@@ -2512,19 +2663,6 @@ Macerator.addRecipe(<gregtech:gt.metaitem.01:2890>, <TConstruct:GlassBlock>);
 // -
 Macerator.addRecipe(<gregtech:gt.metaitem.01:1890>, <TConstruct:GlassPane>);
 
-// --- Shards Dust Blast Furnace
-BlastFurnace.addRecipe(<Thaumcraft:ItemShard>, <gregtech:gt.metaitem.01:2540>, <gregtech:gt.metaitem.01:2540>, 320, 100, 1200);
-// -
-BlastFurnace.addRecipe(<Thaumcraft:ItemShard:1>, <gregtech:gt.metaitem.01:2541>, <gregtech:gt.metaitem.01:2541>, 320, 100, 1200);
-// -
-BlastFurnace.addRecipe(<Thaumcraft:ItemShard:2>, <gregtech:gt.metaitem.01:2543>, <gregtech:gt.metaitem.01:2543>, 320, 100, 1200);
-// -
-BlastFurnace.addRecipe(<Thaumcraft:ItemShard:3>, <gregtech:gt.metaitem.01:2542>, <gregtech:gt.metaitem.01:2542>, 320, 100, 1200);
-// -
-BlastFurnace.addRecipe(<Thaumcraft:ItemShard:4>, <gregtech:gt.metaitem.01:2545>, <gregtech:gt.metaitem.01:2545>, 320, 100, 1200);
-// -
-BlastFurnace.addRecipe(<Thaumcraft:ItemShard:5>, <gregtech:gt.metaitem.01:2544>, <gregtech:gt.metaitem.01:2544>, 320, 100, 1200);
-
 // --- Furnace
 furnace.addRecipe(<minecraft:iron_ingot>, <gregtech:gt.blockores:870>);
 // -
@@ -2546,19 +2684,6 @@ PlateBender.addRecipe(<gregtech:gt.metaitem.02:24874>, <gregtech:gt.metaitem.02:
 
 
 // --- Wiremill Recipes ---
-
-// --- Copper Wire
-Wiremill.addRecipe(<IC2:itemCable:1>, <gregtech:gt.blockmachines:1360>, 400, 4);
-
-// --- Gold Wire
-Wiremill.addRecipe(<IC2:itemCable:2>, <gregtech:gt.blockmachines:1420>, 600, 4);
-
-// --- Iron Wire
-Wiremill.addRecipe(<IC2:itemCable:5>, <gregtech:gt.blockmachines:1300>, 600, 4);
-
-// --- Tin Wire
-Wiremill.addRecipe(<IC2:itemCable:10>, <gregtech:gt.blockmachines:1240>, 400, 4);
-
 
 
 // --- Tinker Construct Smeltery Recipes
@@ -2629,10 +2754,10 @@ mods.tconstruct.Casting.addTableRecipe(<gregtech:gt.metaitem.01:32351>, <liquid:
 mods.tconstruct.Casting.addTableRecipe(<gregtech:gt.metaitem.01:32352>, <liquid:steel.molten> * 576, <dreamcraft:item.ShapeBolt>, true, 100);
 
 // --- Extruder Shape Cell
-mods.tconstruct.Casting.addTableRecipe(<gregtech:gt.metaitem.01:32353>, <liquid:steel.molten> * 576, <dreamcraft:item.ShapeCell>, true, 100);
+mods.tconstruct.Casting.addTableRecipe(<gregtech:gt.metaitem.01:32354>, <liquid:steel.molten> * 576, <dreamcraft:item.ShapeCell>, true, 100);
 
 // --- Extruder Shape Ring
-mods.tconstruct.Casting.addTableRecipe(<gregtech:gt.metaitem.01:32354>, <liquid:steel.molten> * 576, <dreamcraft:item.ShapeRing>, true, 100);
+mods.tconstruct.Casting.addTableRecipe(<gregtech:gt.metaitem.01:32353>, <liquid:steel.molten> * 576, <dreamcraft:item.ShapeRing>, true, 100);
 
 // --- Extruder Shape Ingot
 mods.tconstruct.Casting.addTableRecipe(<gregtech:gt.metaitem.01:32355>, <liquid:steel.molten> * 576, <dreamcraft:item.ShapeIngot>, true, 100);

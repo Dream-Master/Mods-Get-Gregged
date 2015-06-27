@@ -24,21 +24,39 @@ val MKIV = <JABBA:upgradeStructural:3>;
 val MKV = <JABBA:upgradeStructural:4>;
 val MKVI = <JABBA:upgradeStructural:5>;
 val MKVII = <JABBA:upgradeStructural:6>;
+val MKVIII = <JABBA:upgradeStructural:7>;
+val MKIX = <JABBA:upgradeStructural:8>;
+val MKX = <JABBA:upgradeStructural:9>;
+val MKXI = <JABBA:upgradeStructural:10>;
+val MKXII = <JABBA:upgradeStructural:11>;
+val MKXIII = <JABBA:upgradeStructural:12>;
 
 val Piston = <minecraft:piston>;
 val CarpentersBlock = <CarpentersBlocks:blockCarpentersBlock>;
+val CopperPlate = <ore:plateCopper>;
 val IronPlate = <ore:plateIron>;
 val BronzePlate = <ore:plateBronze>;
 val SteelPlate = <ore:plateSteel>;
+val AluminiumPlate = <ore:plateAluminium>;
 val StainlessPlate = <ore:plateStainlessSteel>;
+val TungstenSteelPlate = <ore:plateTungstenSteel>;
 val TitaniumPlate = <ore:plateTitanium>;
-val HSLAPlate = <ore:plateHSLA>;
+val ChromePlate = <ore:plateChrome>;
+val IridiumPlate = <ore:plateIridium>;
+val OsmiumPlate = <ore:plateOsmium>;
+val NeutroniumPlate = <ore:plateNeutronium>;
+val CopperRod = <ore:stickCopper>;
 val IronRod = <ore:stickIron>;
 val BronzeRod = <ore:stickBronze>;
 val SteelRod = <ore:stickSteel>;
+val AlumiuniumRod = <ore:stickAluminium>;
 val StainlessRod = <ore:stickStainlessSteel>;
+val TungstenSteelRod = <ore:stickTungstenSteel>;
 val TitaniumRod = <ore:stickTitanium>;
-val HSLARod = <ore:stickHSLA>;
+val ChromeRod = <ore:stickChrome>;
+val IridiumStick = <ore:stickIridium>;
+val OsmiumStick = <ore:stickOsmium>;
+val NeutroniumStick = <ore:stickNeutronium>;
 val IronScrew = <gregtech:gt.metaitem.01:27032>;
 val EnderEyePlate = <ore:plateEnderEye>;
 val EnderChest = <minecraft:ender_chest>;
@@ -104,6 +122,24 @@ recipes.remove(MKVI);
 // --- Structural Upgrade MK VII
 recipes.remove(MKVII);
 
+// --- Structural Upgrade MK VIII
+recipes.remove(MKVIII);
+
+// --- Structural Upgrade MK IX
+recipes.remove(MKIX);
+
+// --- Structural Upgrade MK X
+recipes.remove(MKX);
+
+// --- Structural Upgrade MK XI
+recipes.remove(MKXI);
+
+// --- Structural Upgrade MK XII
+recipes.remove(MKXII);
+
+// --- Structural Upgrade MK XIII
+recipes.remove(MKXIII);
+
 // --- Storage Upgrade
 recipes.remove(StorageUp);
 
@@ -136,7 +172,7 @@ recipes.remove(VoidUp);
 
 
 
-// --- Adding Back Recipes ---
+// --- Adding Recipes ---
 
 
 // --- Better Barrel
@@ -170,93 +206,91 @@ recipes.addShaped(TuningFork, [
 [<ore:stickAnyIron>, <ore:screwAnyIron>, GTHammer]]);
 
 
-// ||||| Upgrades |||||
+// --- Upgrades ---
 
 
 // --- Structural Upgrade MK I
 recipes.addShaped(MKI, [
-[<ore:stickWood>, CarpentersBlock, <ore:stickWood>],
-[CarpentersBlock, Barrel, CarpentersBlock],
-[<ore:stickWood>, CarpentersBlock, <ore:stickWood>]]);
+[<ore:stickWood>, <gregtech:gt.metaitem.01:17809>, <ore:stickWood>],
+[<gregtech:gt.metaitem.01:17809>, Barrel, <gregtech:gt.metaitem.01:17809>],
+[<ore:stickWood>, <gregtech:gt.metaitem.01:17809>, <ore:stickWood>]]);
 
 // --- Structural Upgrade MK II
 recipes.addShaped(MKII, [
-[IronRod, IronPlate, IronRod],
-[IronPlate, MKI, IronPlate],
-[IronRod, IronPlate, IronRod]]);
+[CopperRod, CopperPlate, CopperRod],
+[CopperPlate, Barrel, CopperPlate],
+[CopperRod, CopperPlate, CopperRod]]);
 
 // --- Structural Upgrade MK III
 recipes.addShaped(MKIII, [
-[BronzeRod, BronzePlate, BronzeRod],
-[BronzePlate, MKII, BronzePlate],
-[BronzeRod, BronzePlate, BronzeRod]]);
+[IronRod, IronPlate, IronRod],
+[IronPlate, Barrel, IronPlate],
+[IronRod, IronPlate, IronRod]]);
 
-// --- Structural Upgrade MK IV
+// --- Structural Upgrade MK IX
 recipes.addShaped(MKIV, [
-[SteelRod, SteelPlate, SteelRod],
-[SteelPlate, MKIII, SteelPlate],
-[SteelRod, SteelPlate, SteelRod]]);
+[BronzeRod, BronzePlate, BronzeRod],
+[BronzePlate, Barrel, BronzePlate],
+[BronzeRod, BronzePlate, BronzeRod]]);
 
 // --- Structural Upgrade MK V
 recipes.addShaped(MKV, [
-[StainlessRod, StainlessPlate, StainlessRod],
-[StainlessPlate, MKIV, StainlessPlate],
-[StainlessRod, StainlessPlate, StainlessRod]]);
+[SteelRod, SteelPlate, SteelRod],
+[SteelPlate, Barrel, SteelPlate],
+[SteelRod, SteelPlate, SteelRod]]);
 
 // --- Structural Upgrade MK VI
 recipes.addShaped(MKVI, [
-[TitaniumRod, TitaniumPlate, TitaniumRod],
-[TitaniumPlate, MKV, TitaniumPlate],
-[TitaniumRod, TitaniumPlate, TitaniumRod]]);
+[AlumiuniumRod, AluminiumPlate, AlumiuniumRod],
+[AluminiumPlate, Barrel, AluminiumPlate],
+[AlumiuniumRod, AluminiumPlate, AlumiuniumRod]]);
 
 // --- Structural Upgrade MK VII
-recipes.addShaped(MKVI, [
-[HSLARod, HSLAPlate, HSLARod],
-[HSLAPlate, MKVII, HSLAPlate],
-[HSLARod, HSLAPlate, HSLARod]]);
+recipes.addShaped(MKVII, [
+[StainlessRod, StainlessPlate, StainlessRod],
+[StainlessPlate, Barrel, StainlessPlate],
+[StainlessRod, StainlessPlate, StainlessRod]]);
 
-// --- Storage Upgrade
-Assembler.addRecipe(StorageUp, Barrel, Piston * 3, 100, 2);
-// - Alternate Recipes
-recipes.addShaped(StorageUp, [
-[IronScrew, Piston, IronScrew],
-[Piston, Barrel, Piston],
-[IronScrew, Piston, IronScrew]]);
+// --- Structural Upgrade MK VIII
+recipes.addShaped(MKVIII, [
+[TitaniumRod, TitaniumPlate, TitaniumRod],
+[TitaniumPlate, Barrel, TitaniumPlate],
+[TitaniumRod, TitaniumPlate, TitaniumRod]]);
 
-// --- Storage Upgrade 3x
-Assembler.addRecipe(Storage3Up, StorageUp * 3, IronScrew, 100, 4);
-// - Alternate Recipes
-recipes.addShaped(Storage3Up, [
-[null, Piston, null],
-[StorageUp, StorageUp, StorageUp],
-[null, Piston, null]]);
+// --- Structural Upgrade MK IX
+recipes.addShaped(MKIX, [
+[TungstenSteelRod, TungstenSteelPlate, TungstenSteelRod],
+[TungstenSteelPlate, Barrel, TungstenSteelPlate],
+[TungstenSteelRod, TungstenSteelPlate, TungstenSteelRod]]);
 
-// --- Storage Upgrade 9x
-Assembler.addRecipe(Storage9Up, Storage3Up * 3, Piston * 2, 100, 8);
-// - Alternate Recipes
-recipes.addShaped(Storage9Up, [
-[Piston, null, Piston],
-[Storage3Up, Storage3Up, Storage3Up],
-[Piston, null, Piston]]);
+// --- Structural Upgrade MK X
+recipes.addShaped(MKX, [
+[ChromeRod, ChromePlate, ChromeRod],
+[ChromePlate, Barrel, ChromePlate],
+[ChromeRod, ChromePlate, ChromeRod]]);
 
-// --- Storage Upgrade 27x
-Assembler.addRecipe(Storage27Up, Storage9Up * 3, Piston * 4, 100, 16);
-// - Alternate Recipes
-recipes.addShaped(Storage27Up, [
-[Piston, Piston, Piston],
-[Storage9Up, Storage9Up, Storage9Up],
-[Piston, Piston, Piston]]);
+// --- Structural Upgrade MK XI
+recipes.addShaped(MKXI, [
+[IridiumStick, IridiumPlate, IridiumStick],
+[IridiumPlate, Barrel, IridiumPlate],
+[IridiumStick, IridiumPlate, IridiumStick]]);
 
-// --- Storage Upgrade 81x
-Assembler.addRecipe(Storage81Up, Storage27Up * 3, Piston * 6, 100, 32);
+// --- Structural Upgrade MK XII
+recipes.addShaped(MKXII, [
+[OsmiumStick, OsmiumPlate, OsmiumStick],
+[OsmiumPlate, Barrel, OsmiumPlate],
+[OsmiumStick, OsmiumPlate, OsmiumStick]]);
 
-// --- Storage Upgrade 243x
-Assembler.addRecipe(Storage243Up, Storage81Up * 3, Piston * 8, 100, 64);
+// --- Structural Upgrade MK XIII
+recipes.addShaped(MKXIII, [
+[NeutroniumStick, NeutroniumPlate, NeutroniumStick],
+[NeutroniumPlate, Barrel, NeutroniumPlate],
+[NeutroniumStick, NeutroniumPlate, NeutroniumStick]]);
 
 // --- BSpace Barrel Upgrade
 recipes.addShaped(BSpace, [
 [EnderEyePlate, Piston, EnderEyePlate],
-[Piston, EnderChest, Piston],
+[Piston, <EnderStorage:enderChest>, Piston],
 [EnderEyePlate, Piston, EnderEyePlate]]);
 
 // --- Redstone Upgrade
@@ -279,26 +313,28 @@ recipes.addShaped(VoidUp, [
 
 
 
+// --- Assembler Recipes ---
+
+
+
+// --- Storage Upgrade
+Assembler.addRecipe(StorageUp, Barrel, Piston, 1200, 16);
+
+// --- Storage Upgrade 3x
+Assembler.addRecipe(Storage3Up, StorageUp * 3, <gregtech:gt.integrated_circuit:1> * 0, 900, 32);
+
+// --- Storage Upgrade 9x
+Assembler.addRecipe(Storage9Up, Storage3Up * 3, <gregtech:gt.integrated_circuit:2> * 0, 600, 64);
+
+// --- Storage Upgrade 27x
+Assembler.addRecipe(Storage27Up, Storage9Up * 3, <gregtech:gt.integrated_circuit:3> * 0, 400, 128);
+
+// --- Storage Upgrade 81x
+Assembler.addRecipe(Storage81Up, Storage27Up * 3, <gregtech:gt.integrated_circuit:4> * 0, 200, 256);
+
+// --- Storage Upgrade 243x
+Assembler.addRecipe(Storage243Up, Storage81Up * 3, <gregtech:gt.integrated_circuit:5> * 0, 150, 512);
+
+
+
 // --- Renaming Stuff ---
-
-
-// --- Structural Upgrade MK I
-NEI.overrideName(MKI, "Structural Upgrade MK I (Wood)");
-
-// --- Structural Upgrade MK II
-NEI.overrideName(MKII, "Structural Upgrade MK II (Iron)");
-
-// --- Structural Upgrade MK III
-NEI.overrideName(MKIII, "Structural Upgrade MK III (Bronze)");
-
-// --- Structural Upgrade MK IV
-NEI.overrideName(MKIV, "Structural Upgrade MK IV (Steel)");
-
-// --- Structural Upgrade MK V
-NEI.overrideName(MKV, "Structural Upgrade MK V (Stainless Steel)");
-
-// --- Structural Upgrade MK VI
-NEI.overrideName(MKVI, "Structural Upgrade MK VI (Titanium)");
-
-// --- Structural Upgrade MK VII
-NEI.overrideName(MKVII, "Structural Upgrade MK VII (HSLA Steel)");

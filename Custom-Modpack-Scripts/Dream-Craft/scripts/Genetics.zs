@@ -79,7 +79,7 @@ mods.forestry.Carpenter.addRecipe(3600, <liquid:molten.redstone> * 2880,
 [<gregtech:gt.metaitem.01:27533>, <gregtech:gt.metaitem.01:17500>, <gregtech:gt.metaitem.01:27533>, 
 <gregtech:gt.metaitem.01:17500>, <gregtech:gt.metaitem.01:32705>, <gregtech:gt.metaitem.01:17500>, 
 <gregtech:gt.metaitem.01:27533>, <gregtech:gt.metaitem.01:17500>, <gregtech:gt.metaitem.01:27533>], 
-<gregtech:gt.metaitem.01:32740>, <Genetics:database>);
+<dreamcraft:item.Display>, <Genetics:database>);
 
 // --- Intergrated Circuit
 recipes.addShaped(<Genetics:misc:9>, [
@@ -147,7 +147,7 @@ recipes.addShaped(<Genetics:labMachine>, [
 
 
 // --- Reinforced  Casing
-Assembler.addRecipe(<Genetics:misc>, <Forestry:sturdyMachine>, <gregtech:gt.metaitem.01:17019> * 8, 1200, 128);
+Assembler.addRecipe(<Genetics:misc>, <Forestry:sturdyMachine>, <dreamcraft:item.AluminiumItemCasing> * 8, 1200, 128);
 
 // --- Glass Cylinder
 Assembler.addRecipe(<Genetics:misc:8>, <minecraft:glass_pane> * 6, <gregtech:gt.integrated_circuit:6> * 0, 200, 16);
