@@ -1,4 +1,4 @@
-//created by MyEternity;
+//created by MyEternity and willis936
 
 import mods.nei.NEI;
 import minetweaker.item.IItemStack;
@@ -10,21 +10,21 @@ val GTWrench = <ore:craftingToolWrench>;
 
 //by Oredict.
 val TEItems = [
-  <ThermalExpansion:Frame>,
-  <ThermalExpansion:Frame:4>,
-  <ThermalExpansion:Frame:6>,
-  <ThermalExpansion:Frame:10>,
-  <ThermalExpansion:material:1>,
-  <ThermalExpansion:material:2>,
-  <ThermalExpansion:material:3>,
-  <ThermalExpansion:material>
+  <ThermalExpansion:Frame>,      // basic machine frame
+  <ThermalExpansion:Frame:4>,    // leadstone energy cell frame
+  <ThermalExpansion:Frame:6>,    // redstone energy cell frame
+  <ThermalExpansion:Frame:10>,   // tesseract frame (empty)
+  <ThermalExpansion:material:1>, // redstone reception coil
+  <ThermalExpansion:material:2>, // redstone transmission coil
+  <ThermalExpansion:material:3>, // redstone conductance coil
+  <ThermalExpansion:material>    // pneumatic servo
 ] as IItemStack[];
 
 val TEMiddle = [
-  <ore:gearGtAnySteel>,
+  <ore:gearSteel>,
   <ore:blockRedstone>,
   <ore:gemDiamond>,
-  <ore:plateGemDiamond>,
+  <ore:plateDiamond>,
   <ore:craftingPiston>,
   <ore:craftingPiston>,
   <ore:craftingPiston>,
