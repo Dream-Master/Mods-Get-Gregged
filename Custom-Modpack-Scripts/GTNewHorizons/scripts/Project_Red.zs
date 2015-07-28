@@ -328,8 +328,47 @@ recipes.remove(<ProjRed|Transportation:projectred.transportation.routingchip:6>)
 // --- Item Crafting Chip
 recipes.remove(<ProjRed|Transportation:projectred.transportation.routingchip:7>);
 
+// --- Item Crafting Extension Chip
+recipes.remove(<ProjRed|Transportation:projectred.transportation.routingchip:8>);
+
 // --- Router Utility
 recipes.remove(<ProjRed|Transportation:projectred.transportation.routerutil>);
+
+// --- Charging Bench
+recipes.remove(<ProjRed|Expansion:projectred.expansion.machine2:6>);
+
+// --- Teleposer
+recipes.remove(<ProjRed|Expansion:projectred.expansion.machine2:7>);
+
+// --- Frame Motor
+recipes.remove(<ProjRed|Expansion:projectred.expansion.machine2:8>);
+
+// --- Frame Linear Actuator
+recipes.remove(<ProjRed|Expansion:projectred.expansion.machine2:9>);
+
+// --- IC Workbench
+recipes.remove(<ProjRed|Fabrication:projectred.integration.icblock>);
+
+// --- IC Printer
+recipes.remove(<ProjRed|Fabrication:projectred.integration.icblock:1>);
+
+// --- IC Blue Print
+recipes.remove(<ProjRed|Fabrication:projectred.fabrication.icblueprint>); 
+
+// --- IC Chip
+recipes.remove(<ProjRed|Fabrication:projectred.fabrication.icchip>);
+
+// --- Frames
+recipes.remove(<MCFrames:mcframes.frame>);
+
+// --- Project Bench
+recipes.remove(<ProjRed|Expansion:projectred.expansion.machine2:10>);
+
+// --- Auto Crafting Bench
+recipes.remove(<ProjRed|Expansion:projectred.expansion.machine2:11>);
+
+// --- Recipe Plan
+recipes.remove(<ProjRed|Expansion:projectred.expansion.plan>);
 
 
 
@@ -346,6 +385,11 @@ recipes.addShaped(<ProjRed|Expansion:projectred.expansion.machine1:1>, [
 [<ore:circuitBasic>, <ProjRed|Expansion:projectred.expansion.emptybattery>, <ore:circuitBasic>]]);
 
 // --- Block Breaker
+recipes.addShaped(<ProjRed|Expansion:projectred.expansion.machine2>, [
+[<IC2:itemCasing:5>, <gregtech:gt.metaitem.01:32600>, <IC2:itemCasing:5>],
+[<dreamcraft:item.DiamondDrillTip>, <IC2:blockMiningPipe>, <ore:circuitBasic>],
+[<IC2:itemCasing:5>, <ore:gearSteel>, <IC2:itemCasing:5>]]);
+// -
 recipes.addShapeless(<ProjRed|Expansion:projectred.expansion.machine2>, [<OpenBlocks:blockbreaker>]);
 
 // --- Item Importer
@@ -359,6 +403,8 @@ recipes.addShaped(<ProjRed|Expansion:projectred.expansion.machine2:2>, [
 [<IC2:itemCasing:5>, <gregtech:gt.metaitem.01:32600>, <IC2:itemCasing:5>],
 [<gregtech:gt.metaitem.01:32630>, <ore:pipeMediumTin>, <ore:circuitBasic>],
 [<IC2:itemCasing:5>, <ore:craftingPiston>, <IC2:itemCasing:5>]]);
+// -
+recipes.addShapeless(<ProjRed|Expansion:projectred.expansion.machine2:2>, [<OpenBlocks:blockPlacer>]);
 
 // --- Filtered Importer
 recipes.addShaped(<ProjRed|Expansion:projectred.expansion.machine2:3>, [
@@ -742,6 +788,12 @@ recipes.addShaped(<ProjRed|Transportation:projectred.transportation.routingchip:
 [<ore:plateGlowstone>, <ProjRed|Core:projectred.core.part:44>, <ore:circuitGood>],
 [<ProjRed|Core:projectred.core.part:24>, <ore:wireGt02RedAlloy>, <ProjRed|Core:projectred.core.part:24>]]);
 
+// --- Item Crafting Extension Chip
+recipes.addShaped(<ProjRed|Transportation:projectred.transportation.routingchip:8>, [
+[<ProjRed|Core:projectred.core.part:33>, <ore:wireGt02RedAlloy>, <ProjRed|Core:projectred.core.part:33>],
+[<ore:plateRedAlloy>, <ProjRed|Core:projectred.core.part:44>, <ore:circuitGood>],
+[<ProjRed|Core:projectred.core.part:33>, <ore:wireGt02RedAlloy>, <ProjRed|Core:projectred.core.part:33>]]);
+
 // --- Router Utility
 recipes.addShaped(<ProjRed|Transportation:projectred.transportation.routerutil>, [
 [<ore:wireGt01RedAlloy>, <IC2:itemCasing:5>, <ore:wireGt01RedAlloy>],
@@ -753,6 +805,49 @@ recipes.addShaped(<ProjRed|Expansion:projectred.expansion.jetpack:3200>, [
 [<ore:circuitBasic>, <ore:wireGt04Gold>, <ore:circuitBasic>],
 [<ProjRed|Expansion:projectred.expansion.emptybattery>, <minecraft:diamond_chestplate>, <ProjRed|Expansion:projectred.expansion.emptybattery>],
 [<ProjRed|Expansion:projectred.expansion.emptybattery>, <ore:plateGlowstone>, <ProjRed|Expansion:projectred.expansion.emptybattery>]]);
+
+// --- Charging Bench
+recipes.addShaped(<ProjRed|Expansion:projectred.expansion.machine2:6>, [
+[<ore:wireGt04Copper>, <ore:plateSteel>, <ore:wireGt04Copper>],
+[<ProjRed|Expansion:projectred.expansion.emptybattery>, <gregtech:gt.blockmachines:11>, <ProjRed|Expansion:projectred.expansion.emptybattery>],
+[<ore:circuitBasic>, <ProjRed|Core:projectred.core.part:16>, <ore:circuitBasic>]]);
+
+// --- Frame Motor
+recipes.addShaped(<ProjRed|Expansion:projectred.expansion.machine2:8>, [
+[<ore:circuitBasic>, <ore:plateSteel>, <ore:circuitBasic>],
+[<ProjRed|Core:projectred.core.part:16>, <gregtech:gt.blockmachines:11>, <ProjRed|Core:projectred.core.part:16>],
+[<ore:wireGt04Copper>, <gregtech:gt.metaitem.01:32600>, <ore:wireGt04Copper>]]);
+
+// --- Frame Linear Actuator
+recipes.addShaped(<ProjRed|Expansion:projectred.expansion.machine2:9>, [
+[<ore:plateSteel>, <ProjRed|Core:projectred.core.part:59>, <ore:plateSteel>],
+[<ProjRed|Core:projectred.core.part:16>, <gregtech:gt.blockmachines:4401>, <ProjRed|Core:projectred.core.part:16>],
+[<ProjRed|Core:projectred.core.part:18>, <ProjRed|Core:projectred.core.part:59>, <ProjRed|Core:projectred.core.part:18>]]);
+
+// --- IC Workbench
+recipes.addShaped(<ProjRed|Fabrication:projectred.integration.icblock>, [
+[<ore:plateSteel>, <ore:plateSteel>, <ore:plateSteel>],
+[<gregtech:gt.metaitem.01:17809>, <BuildCraft|Factory:autoWorkbenchBlock>, <gregtech:gt.metaitem.01:17809>],
+[<gregtech:gt.metaitem.01:17809>, <gregtech:gt.metaitem.01:17809>, <gregtech:gt.metaitem.01:17809>]]);
+
+// --- IC Printer
+recipes.addShaped(<ProjRed|Fabrication:projectred.integration.icblock:1>, [
+[<ore:blockGlass>, <ore:blockGlass>, <ore:blockGlass>],
+[<ore:plateObsidian>, <ore:stickSteel>, <ore:plateObsidian>],
+[<ore:stickSteel>, <gregtech:gt.blockmachines:321>, <ore:stickSteel>]]);
+
+// --- Frames
+recipes.addShapeless(<MCFrames:mcframes.frame>, [<gregtech:gt.blockmachines:4905>, <gregtech:gt.blockmachines:4905>]);
+
+// --- Project Bench
+recipes.addShapeless(<ProjRed|Expansion:projectred.expansion.machine2:10>, [<Forestry:factory2:2>]);
+
+// --- Auto Crafting Bench
+recipes.addShapeless(<ProjRed|Expansion:projectred.expansion.machine2:11>, [<BuildCraft|Factory:autoWorkbenchBlock>]);
+
+
+
+
 
 
 
@@ -813,13 +908,13 @@ Assembler.addRecipe(<ProjRed|Transportation:projectred.transportation.pipe>, <mi
 AssemblerLiq.addRecipe(<ProjRed|Transportation:projectred.transportation.pipe:2>, <ProjRed|Transportation:projectred.transportation.pipe:1>, <gregtech:gt.metaitem.01:17086> * 4, <liquid:molten.redstone> * 576, 400, 32);
 
 // --- Routed Crafting Pipe
-AssemblerLiq.addRecipe(<ProjRed|Transportation:projectred.transportation.pipe:3>, <ProjRed|Transportation:projectred.transportation.pipe:1>, <gregtech:gt.metaitem.01:17811> * 2, <liquid:molten.redstone> * 864, 400, 32);
+//AssemblerLiq.addRecipe(<ProjRed|Transportation:projectred.transportation.pipe:3>, <ProjRed|Transportation:projectred.transportation.pipe:1>, <gregtech:gt.metaitem.01:17811> * 2, <liquid:molten.redstone> * 864, 400, 32);
 
 // --- Routed Request Pipe
 AssemblerLiq.addRecipe(<ProjRed|Transportation:projectred.transportation.pipe:4>, <ProjRed|Transportation:projectred.transportation.pipe:1>, <gregtech:gt.metaitem.01:17500> * 2, <liquid:molten.redstone> * 864, 400, 32);
 
 // --- Routed Extension Pipe
-Assembler.addRecipe(<ProjRed|Transportation:projectred.transportation.pipe:5>, <ProjRed|Transportation:projectred.transportation.pipe:1>, <gregtech:gt.metaitem.01:17810> * 4, 400, 32);
+//Assembler.addRecipe(<ProjRed|Transportation:projectred.transportation.pipe:5>, <ProjRed|Transportation:projectred.transportation.pipe:1>, <gregtech:gt.metaitem.01:17810> * 4, 400, 32);
 
 // --- Routed Firewall Pipe
 AssemblerLiq.addRecipe(<ProjRed|Transportation:projectred.transportation.pipe:6>, <ProjRed|Transportation:projectred.transportation.pipe:1>, <minecraft:magma_cream> * 4, <liquid:lava> * 4000, 400, 32);
@@ -830,6 +925,14 @@ Assembler.addRecipe(<ProjRed|Transportation:projectred.transportation.pipe:7>, <
 // --- Pressure Resistance Tube
 Assembler.addRecipe(<ProjRed|Transportation:projectred.transportation.pipe:8>, <ProjRed|Transportation:projectred.transportation.pipe:7>, <Railcraft:part.plate:1>, 300, 32);
 
+// --- IC Chip
+AssemblerLiq.addRecipe(<ProjRed|Fabrication:projectred.fabrication.icchip>, <IC2:itemPartCircuit>, <gregtech:gt.metaitem.01:17526>, <liquid:molten.redstone> * 144, 300, 32); 
+
+// --- IC Blue Print
+AssemblerLiq.addRecipe(<ProjRed|Fabrication:projectred.fabrication.icblueprint>, <gregtech:gt.metaitem.01:32712>, <gregtech:gt.metaitem.01:17526> * 4, <liquid:molten.redstone> * 144, 600, 32);
+
+// --- Recipe Plan
+Assembler.addRecipe(<ProjRed|Expansion:projectred.expansion.plan>, <gregtech:gt.metaitem.01:18879>, <gregtech:gt.integrated_circuit:1> * 0, 100, 8);
 
 
 

@@ -6,6 +6,7 @@
 
 
 import mods.gregtech.Assembler;
+import mods.gregtech.AssemblerLiq;
 import mods.gregtech.FormingPress;
 import mods.nei.NEI;
 
@@ -512,6 +513,12 @@ recipes.addShaped(AutoWorkB, [
 [<ore:gearGtSmallAnyIron>, <Forestry:factory2:2>, <ore:gearGtSmallAnyIron>],
 [<IC2:itemCasing:4>, <gregtech:gt.metaitem.01:32600>, <IC2:itemCasing:4>]]);
 
+// --- Paint Brush
+recipes.addShapeless(<BuildCraft|Core:paintbrush>, [<OpenBlocks:paintBrush>]);
+
+// --- Auto Crafting Bench
+recipes.addShapeless(<BuildCraft|Factory:autoWorkbenchBlock>, [<ProjRed|Expansion:projectred.expansion.machine2:11>]);
+
 
 
 // --- Assembler Recipes --- 
@@ -520,6 +527,11 @@ recipes.addShaped(AutoWorkB, [
 
 // --- Combustion Engine
 Assembler.addRecipe(<BuildCraft|Core:engineBlock:2>, <dreamcraft:item.EngineCore>, <gregtech:gt.metaitem.01:17302> * 10, 800, 256);
+
+// --- Propolis Pipes
+AssemblerLiq.addRecipe(<BuildCraft|Compat:item.buildcraftPipe.pipeitemspropolis>, <ProjRed|Transportation:projectred.transportation.pipe:1>, <Forestry:propolis> * 2, <liquid:for.honey> * 400, 300, 48);
+// -
+AssemblerLiq.addRecipe(<BuildCraft|Compat:item.buildcraftPipe.pipeitemspropolis>, <ProjRed|Transportation:projectred.transportation.pipe:1>, <Forestry:propolis> * 2, <liquid:honey> * 400, 300, 48);
 
 
 

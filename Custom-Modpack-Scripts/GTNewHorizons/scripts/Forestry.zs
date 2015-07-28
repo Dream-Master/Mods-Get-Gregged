@@ -683,9 +683,9 @@ mods.forestry.Carpenter.addRecipe(1200, <liquid:honey> * 5000,
 
 // --- Alveary Stabiliser
 mods.forestry.Carpenter.addRecipe(1200, <liquid:honey> * 5000, 
-[<Forestry:thermionicTubes:4>, <gregtech:gt.metaitem.01:17517>, <Forestry:thermionicTubes:4>, 
+[<Forestry:thermionicTubes:4>, <dreamcraft:item.ChargedCertusQuartzPlate>, <Forestry:thermionicTubes:4>, 
 <gregtech:gt.metaitem.01:32729>, <Forestry:beealyzer>, <gregtech:gt.metaitem.01:32729>, 
-<Forestry:thermionicTubes:4>, <gregtech:gt.metaitem.01:17517>, <Forestry:thermionicTubes:4>], 
+<Forestry:thermionicTubes:4>, <dreamcraft:item.ChargedCertusQuartzPlate>, <Forestry:thermionicTubes:4>], 
 <Forestry:alveary>, <Forestry:alveary:6>);
 
 // --- Alveary Sieve
@@ -2244,6 +2244,11 @@ mods.forestry.Carpenter.addRecipe(100, <liquid:creosote> * 500,
 null, <minecraft:wool:*>, null,
 null, <minecraft:stick>, null],
 null, <minecraft:torch> * 5);
+
+// --- Project Bench
+recipes.addShapeless(<Forestry:factory2:2>, [<ProjRed|Expansion:projectred.expansion.machine2:10>]);
+
+
 
 
 // --- Add Fuels ---

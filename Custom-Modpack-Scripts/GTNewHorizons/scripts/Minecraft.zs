@@ -950,6 +950,11 @@ recipes.remove(<minecraft:skull:1>);
 // --- Shears
 recipes.remove(<minecraft:shears>);
 
+// --- Sand
+recipes.removeShapeless(<minecraft:sand>);
+// -
+recipes.removeShaped(<minecraft:sand>);
+
 
 
 
@@ -2388,14 +2393,14 @@ recipes.addShaped(<minecraft:brick_block> * 2, [
 
 // --- Nether Bricks
 recipes.addShaped(<minecraft:nether_brick> * 2, [
-[NetherBricks, NetherBricks, NetherBricks],
-[NetherBricks, <minecraft:lava_bucket>.giveBack(<minecraft:bucket>), NetherBricks],
-[NetherBricks, NetherBricks, NetherBricks]]);
+[<ore:ingotBrickNether>, <ore:ingotBrickNether>, <ore:ingotBrickNether>],
+[<ore:ingotBrickNether>, <minecraft:lava_bucket>.giveBack(<minecraft:bucket>), <ore:ingotBrickNether>],
+[<ore:ingotBrickNether>, <ore:ingotBrickNether>, <ore:ingotBrickNether>]]);
 // -
 recipes.addShaped(<minecraft:nether_brick> * 2, [
-[NetherBricks, NetherBricks, NetherBricks],
-[NetherBricks, <IguanaTweaksTConstruct:clayBucketLava>, NetherBricks],
-[NetherBricks, NetherBricks, NetherBricks]]);
+[<ore:ingotBrickNether>, <ore:ingotBrickNether>, <ore:ingotBrickNether>],
+[<ore:ingotBrickNether>, <IguanaTweaksTConstruct:clayBucketLava>, <ore:ingotBrickNether>],
+[<ore:ingotBrickNether>, <ore:ingotBrickNether>, <ore:ingotBrickNether>]]);
 
 // --- Wooden Door
 recipes.addShaped(WoodDoor, [
@@ -2606,6 +2611,57 @@ recipes.addShaped(<minecraft:shears>, [
 [<ore:plateIron>, <ore:screwIron>, <ore:plateIron>],
 [<ore:craftingToolHardHammer>, <ore:ringIron>, <ore:craftingToolFile>],
 [<ore:stickWood>, <ore:craftingToolScrewdriver>, <ore:stickWood>]]);
+
+// --- Charcoal
+mods.railcraft.BlastFurnace.addRecipe(<minecraft:log:*>, false, false, 20, <minecraft:coal:1>);
+// -
+mods.railcraft.BlastFurnace.addRecipe(<minecraft:log2:*>, false, false, 20, <minecraft:coal:1>);
+// -
+mods.railcraft.BlastFurnace.addRecipe(<BiomesOPlenty:logs1:*>, false, false, 20, <minecraft:coal:1>);
+// -
+mods.railcraft.BlastFurnace.addRecipe(<BiomesOPlenty:logs2:*>, false, false, 20, <minecraft:coal:1>);
+// -
+mods.railcraft.BlastFurnace.addRecipe(<BiomesOPlenty:logs3:*>, false, false, 20, <minecraft:coal:1>);
+// -
+mods.railcraft.BlastFurnace.addRecipe(<BiomesOPlenty:logs4:*>, false, false, 20, <minecraft:coal:1>);
+// -
+mods.railcraft.BlastFurnace.addRecipe(<ExtraTrees:log:*>, false, false, 20, <minecraft:coal:1>);
+// -
+mods.railcraft.BlastFurnace.addRecipe(<Forestry:log1:*>, false, false, 20, <minecraft:coal:1>);
+// -
+mods.railcraft.BlastFurnace.addRecipe(<Forestry:log2:*>, false, false, 20, <minecraft:coal:1>);
+// -
+mods.railcraft.BlastFurnace.addRecipe(<Forestry:log3:*>, false, false, 20, <minecraft:coal:1>);
+// -
+mods.railcraft.BlastFurnace.addRecipe(<Forestry:log4:*>, false, false, 20, <minecraft:coal:1>);
+// -
+mods.railcraft.BlastFurnace.addRecipe(<Forestry:log5:*>, false, false, 20, <minecraft:coal:1>);
+// -
+mods.railcraft.BlastFurnace.addRecipe(<Forestry:log6:*>, false, false, 20, <minecraft:coal:1>);
+// -
+mods.railcraft.BlastFurnace.addRecipe(<Forestry:log7:*>, false, false, 20, <minecraft:coal:1>);
+// -
+mods.railcraft.BlastFurnace.addRecipe(<Forestry:log8:*>, false, false, 20, <minecraft:coal:1>);
+// -
+mods.railcraft.BlastFurnace.addRecipe(<Natura:tree:*>, false, false, 20, <minecraft:coal:1>);
+// -
+mods.railcraft.BlastFurnace.addRecipe(<Natura:redwood:*>, false, false, 20, <minecraft:coal:1>);
+// -
+mods.railcraft.BlastFurnace.addRecipe(<Natura:willow:*>, false, false, 20, <minecraft:coal:1>);
+// -
+mods.railcraft.BlastFurnace.addRecipe(<Natura:Dark Tree:*>, false, false, 20, <minecraft:coal:1>);
+// -
+mods.railcraft.BlastFurnace.addRecipe(<Natura:Rare Tree:*>, false, false, 20, <minecraft:coal:1>);
+// -
+mods.railcraft.BlastFurnace.addRecipe(<Thaumcraft:blockMagicalLog:*>, false, false, 20, <minecraft:coal:1>);
+// -
+mods.railcraft.BlastFurnace.addRecipe(<TwilightForest:tile.TFLog:*>, false, false, 20, <minecraft:coal:1>);
+// -
+mods.railcraft.BlastFurnace.addRecipe(<TwilightForest:tile.TFMagicLog:*>, false, false, 20, <minecraft:coal:1>);
+// -
+mods.railcraft.BlastFurnace.addRecipe(<witchery:witchlog:*>, false, false, 20, <minecraft:coal:1>);
+// -
+mods.railcraft.BlastFurnace.addRecipe(<harvestthenether:netherLog:*>, false, false, 20, <minecraft:coal:1>);
 
 
 
