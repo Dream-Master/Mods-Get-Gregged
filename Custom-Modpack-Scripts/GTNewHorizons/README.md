@@ -108,7 +108,8 @@ GT New Horizons Core Mod 0.9.19
 GTTweaker 0.7.6
 Hardcore Ender Expan. 1.8.2
 Help Fixer 1.0.7
-HQM The Journey (4.2.4) Hunger Overhaul 1.0.0
+HQM The Journey (4.2.4) 
+Hunger Overhaul 1.0.0
 IC2 Nuclear Control 2.2.5a
 IguanaTinkerTweaks 2.1.5
 Industrial Craft 2 2.2.2.760
