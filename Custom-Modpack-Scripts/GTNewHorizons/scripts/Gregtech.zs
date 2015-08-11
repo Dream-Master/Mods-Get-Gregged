@@ -4,12 +4,13 @@
 
 // --- Imports --- 
 
+import mods.gregtech.AlloySmelter;
 import mods.gregtech.ArcFurnace;
 import mods.gregtech.Assembler;
 import mods.gregtech.AssemblerLiq;
 import mods.gregtech.Autoclave;
-import mods.gregtech.AlloySmelter;
 import mods.gregtech.BlastFurnace;
+import mods.gregtech.CentrifugeLiq;
 import mods.gregtech.ChemicalReactorLiq;
 import mods.gregtech.Fermenter;
 import mods.gregtech.FluidExtractor;
@@ -1033,6 +1034,7 @@ recipes.remove(<gregtech:gt.blockmachines:128>);
 
 // --- Quantum Chest V
 recipes.remove(<gregtech:gt.blockmachines:129>);
+
 
 
 
@@ -2498,33 +2500,33 @@ recipes.addShapeless(<gregtech:gt.blockmachines:4905>, [<OpenBlocks:scaffolding>
 
 // --- Field Generator LV
 recipes.addShaped(<gregtech:gt.metaitem.01:32670>, [
-[<ore:wireGt01Kanthal>, <ore:circuitBasic>, <ore:wireGt01Kanthal>],
+[<ore:wireGt01Osmium>, <ore:circuitBasic>, <ore:wireGt01Osmium>],
 [<ore:circuitBasic>, <ore:plateEnderPearl>, <ore:circuitBasic>],
-[<ore:wireGt01Kanthal>, <ore:circuitBasic>, <ore:wireGt01Kanthal>]]);
+[<ore:wireGt01Osmium>, <ore:circuitBasic>, <ore:wireGt01Osmium>]]);
 
 // --- Field Generator MV
 recipes.addShaped(<gregtech:gt.metaitem.01:32671>, [
-[<ore:wireGt02TungstenSteel>, <ore:circuitGood>, <ore:wireGt02TungstenSteel>],
+[<ore:wireGt02Osmium>, <ore:circuitGood>, <ore:wireGt02Osmium>],
 [<ore:circuitGood>, <ore:plateEnderEye>, <ore:circuitGood>],
-[<ore:wireGt02TungstenSteel>, <ore:circuitGood>, <ore:wireGt02TungstenSteel>]]);
+[<ore:wireGt02Osmium>, <ore:circuitGood>, <ore:wireGt02Osmium>]]);
 
 // --- Field Generator HV
 recipes.addShaped(<gregtech:gt.metaitem.01:32672>, [
-[<ore:wireGt04Platinum>, <ore:circuitAdvanced>, <ore:wireGt04Platinum>],
+[<ore:wireGt04Osmium>, <ore:circuitAdvanced>, <ore:wireGt04Osmium>],
 [<ore:circuitAdvanced>, <ore:gemNetherStar>, <ore:circuitAdvanced>],
-[<ore:wireGt04Platinum>, <ore:circuitAdvanced>, <ore:wireGt04Platinum>]]);
+[<ore:wireGt04Osmium>, <ore:circuitAdvanced>, <ore:wireGt04Osmium>]]);
 
 // --- Field Generator EV
 recipes.addShaped(<gregtech:gt.metaitem.01:32673>, [
 [<ore:wireGt08Osmium>, <ore:circuitElite>, <ore:wireGt08Osmium>],
-[<ore:circuitElite>, <ore:plateNetherStar>, <ore:circuitElite>],
+[<ore:circuitElite>, <ore:gemNetherStar>, <ore:circuitElite>],
 [<ore:wireGt08Osmium>, <ore:circuitElite>, <ore:wireGt08Osmium>]]);
 
 // --- Field Generator IV
 recipes.addShaped(<gregtech:gt.metaitem.01:32674>, [
-[<ore:wireGt16Superconductor>, <ore:circuitMaster>, <ore:wireGt16Superconductor>],
-[<ore:circuitMaster>, <ore:blockNetherStar>, <ore:circuitMaster>],
-[<ore:wireGt16Superconductor>, <ore:circuitMaster>, <ore:wireGt16Superconductor>]]);
+[<ore:wireGt16Osmium>, <ore:circuitMaster>, <ore:wireGt16Osmium>],
+[<ore:circuitMaster>, <ore:gemNetherStar>, <ore:circuitMaster>],
+[<ore:wireGt16Osmium>, <ore:circuitMaster>, <ore:wireGt16Osmium>]]);
 
 // --- Quantum Tank I
 recipes.addShaped(<gregtech:gt.blockmachines:120>, [
@@ -2536,104 +2538,71 @@ recipes.addShaped(<gregtech:gt.blockmachines:120>, [
 recipes.addShaped(<gregtech:gt.blockmachines:121>, [
 [<ore:circuitElite>, <gregtech:gt.metaitem.01:32671>, <ore:circuitElite>],
 [<ore:plateTitanium>, <gregtech:gt.blockmachines:12>, <ore:plateTitanium>],
-[<ore:circuitElite>, <ore:plateTungstenSteel>, <ore:circuitElite>]]);
+[<ore:circuitElite>, <ore:plateTitanium>, <ore:circuitElite>]]);
 
 // --- Quantum Tank III
 recipes.addShaped(<gregtech:gt.blockmachines:122>, [
 [<ore:circuitMaster>, <gregtech:gt.metaitem.01:32672>, <ore:circuitMaster>],
 [<ore:plateTungstenSteel>, <gregtech:gt.blockmachines:13>, <ore:plateTungstenSteel>],
-[<ore:circuitMaster>, <ore:platePlatinum>, <ore:circuitMaster>]]);
+[<ore:circuitMaster>, <ore:plateTungstenSteel>, <ore:circuitMaster>]]);
 
 // --- Quantum Tank IV
 recipes.addShaped(<gregtech:gt.blockmachines:123>, [
 [<dreamcraft:item.HighEnergyFlowCircuit>, <gregtech:gt.metaitem.01:32673>, <dreamcraft:item.HighEnergyFlowCircuit>],
 [<ore:plateEuropium>, <gregtech:gt.blockmachines:14>, <ore:plateEuropium>],
-[<dreamcraft:item.HighEnergyFlowCircuit>, <ore:plateNeodymium>, <dreamcraft:item.HighEnergyFlowCircuit>]]);
+[<dreamcraft:item.HighEnergyFlowCircuit>, <ore:plateEuropium>, <dreamcraft:item.HighEnergyFlowCircuit>]]);
 
 // --- Quantum Tank V
 recipes.addShaped(<gregtech:gt.blockmachines:124>, [
 [<dreamcraft:item.PikoCircuit>, <gregtech:gt.metaitem.01:32674>, <dreamcraft:item.PikoCircuit>],
 [<ore:plateAmericium>, <gregtech:gt.blockmachines:15>, <ore:plateAmericium>],
-[<dreamcraft:item.PikoCircuit>, <ore:plateChrome>, <dreamcraft:item.PikoCircuit>]]);
+[<dreamcraft:item.PikoCircuit>, <ore:plateAmericium>, <dreamcraft:item.PikoCircuit>]]);
 
 // --- Quantum Chest I
 recipes.addShaped(<gregtech:gt.blockmachines:125>, [
-[<ore:circuitData>, <ore:plateMeteoricIron>, <ore:circuitData>],
+[<ore:circuitData>, <ore:plateStainlessSteel>, <ore:circuitData>],
 [<ore:plateStainlessSteel>, <gregtech:gt.blockmachines:11>, <ore:plateStainlessSteel>],
 [<ore:circuitData>, <gregtech:gt.metaitem.01:32670>, <ore:circuitData>]]);
 
 // --- Quantum Chest II
 recipes.addShaped(<gregtech:gt.blockmachines:126>, [
-[<ore:circuitElite>, <ore:plateTungstenSteel>, <ore:circuitElite>],
+[<ore:circuitElite>, <ore:plateTitanium>, <ore:circuitElite>],
 [<ore:plateTitanium>, <gregtech:gt.blockmachines:12>, <ore:plateTitanium>],
 [<ore:circuitElite>, <gregtech:gt.metaitem.01:32671>, <ore:circuitElite>]]);
 
 // --- Quantum Chest III
 recipes.addShaped(<gregtech:gt.blockmachines:127>, [
-[<ore:circuitMaster>, <ore:platePlatinum>, <ore:circuitMaster>],
+[<ore:circuitMaster>, <ore:plateTungstenSteel>, <ore:circuitMaster>],
 [<ore:plateTungstenSteel>, <gregtech:gt.blockmachines:13>, <ore:plateTungstenSteel>],
 [<ore:circuitMaster>, <gregtech:gt.metaitem.01:32672>, <ore:circuitMaster>]]);
 
 // --- Quantum Chest IV
 recipes.addShaped(<gregtech:gt.blockmachines:128>, [
-[<dreamcraft:item.HighEnergyFlowCircuit>, <ore:plateNeodymium>, <dreamcraft:item.HighEnergyFlowCircuit>],
+[<dreamcraft:item.HighEnergyFlowCircuit>, <ore:plateEuropium>, <dreamcraft:item.HighEnergyFlowCircuit>],
 [<ore:plateEuropium>, <gregtech:gt.blockmachines:14>, <ore:plateEuropium>],
 [<dreamcraft:item.HighEnergyFlowCircuit>, <gregtech:gt.metaitem.01:32673>, <dreamcraft:item.HighEnergyFlowCircuit>]]);
 
 // --- Quantum Chest V
 recipes.addShaped(<gregtech:gt.blockmachines:129>, [
-[<dreamcraft:item.PikoCircuit>, <ore:plateChrome>, <dreamcraft:item.PikoCircuit>],
+[<dreamcraft:item.PikoCircuit>, <ore:plateAmericium>, <dreamcraft:item.PikoCircuit>],
 [<ore:plateAmericium>, <gregtech:gt.blockmachines:15>, <ore:plateAmericium>],
 [<dreamcraft:item.PikoCircuit>, <gregtech:gt.metaitem.01:32674>, <dreamcraft:item.PikoCircuit>]]);
 
+// --- Glass Dust
+recipes.addShapeless(<gregtech:gt.metaitem.01:1890>, [<ore:craftingToolMortar>, <BloodArsenal:glass_shard>]);
 
-
-
-
-// --- Arc Furnace Recipes ---
-
-
-// --- Field Genrator LV Recycle
-ArcFurnace.addRecipe([<gregtech:gt.metaitem.01:11312> * 2], <gregtech:gt.metaitem.01:32670>, <liquid:oxygen> * 400, [10000], 400, 96);
-
-// --- Field Genrator MV Recycle
-ArcFurnace.addRecipe([<gregtech:gt.metaitem.01:11316> * 4], <gregtech:gt.metaitem.01:32671>, <liquid:oxygen> * 800, [10000], 800, 96);
-
-// --- Field Genrator HV Recycle
-ArcFurnace.addRecipe([<gregtech:gt.metaitem.01:11085> * 8, <gregtech:gt.metaitem.01:2506>], <gregtech:gt.metaitem.01:32672>, <liquid:oxygen> * 1600, [10000, 10000], 1600, 96);
-
-// --- Field Genrator IV Recycle
-ArcFurnace.addRecipe([<gregtech:gt.metaitem.01:2316> * 32, <gregtech:gt.metaitem.01:2506> * 9, <gregtech:gt.metaitem.01:2360> * 24], <gregtech:gt.metaitem.01:32672>, <liquid:oxygen> * 6400, [10000, 10000, 10000], 6400, 96);
-
-// --- Quantum Tank I
-ArcFurnace.addRecipe([<gregtech:gt.metaitem.01:11305> * 8, <gregtech:gt.metaitem.01:11306> * 2, <gregtech:gt.metaitem.01:11312> * 2, <gregtech:gt.metaitem.01:11057>], <gregtech:gt.blockmachines:120>, <liquid:oxygen> * 1111, [10000, 10000, 10000, 10000], 1100, 96);
-
-// --- Quantum Tank II
-ArcFurnace.addRecipe([<gregtech:gt.metaitem.01:11019> * 8, <gregtech:gt.metaitem.01:11316> * 4, <gregtech:gt.metaitem.01:11028> * 3, <gregtech:gt.metaitem.01:11345>], <gregtech:gt.blockmachines:121>, <liquid:oxygen> * 1175, [10000, 10000, 10000, 10000], 1200, 96);
-
-// --- Quantum Tank III
-ArcFurnace.addRecipe([<gregtech:gt.metaitem.01:11085> * 8, <gregtech:gt.metaitem.01:11316> * 3, <gregtech:gt.metaitem.01:11306> * 3, <gregtech:gt.metaitem.01:2506>], <gregtech:gt.blockmachines:122>, <liquid:oxygen> * 2611, [10000, 10000, 10000, 10000], 2600, 96);
-
-// --- Quantum Tank IV
-ArcFurnace.addRecipe([<gregtech:gt.metaitem.01:11083> * 16, <gregtech:gt.metaitem.01:11028> * 8, <gregtech:gt.metaitem.01:11070> * 2, <gregtech:gt.metaitem.01:2506>], <gregtech:gt.blockmachines:123>, <liquid:oxygen> * 4001, [10000, 10000, 10000, 10000], 4200, 96);
-
-// --- Quantum Tank V
-ArcFurnace.addRecipe([<gregtech:gt.metaitem.01:11360> * 32, <gregtech:gt.metaitem.01:11316> * 32, <gregtech:gt.metaitem.01:11103> * 2, <gregtech:gt.metaitem.01:2506> * 9], <gregtech:gt.blockmachines:124>, <liquid:oxygen> * 8048, [10000, 10000, 10000, 10000], 8200, 96);
-
-// --- Quantum Chest I
-ArcFurnace.addRecipe([<gregtech:gt.metaitem.01:11305> * 8, <gregtech:gt.metaitem.01:11306> * 2, <gregtech:gt.metaitem.01:11312> * 2, <gregtech:gt.metaitem.01:11057>], <gregtech:gt.blockmachines:125>, <liquid:oxygen> * 1111, [10000, 10000, 10000, 10000], 1100, 96);
-
-// --- Quantum Chest II
-ArcFurnace.addRecipe([<gregtech:gt.metaitem.01:11019> * 8, <gregtech:gt.metaitem.01:11316> * 4, <gregtech:gt.metaitem.01:11028> * 3, <gregtech:gt.metaitem.01:11345>], <gregtech:gt.blockmachines:126>, <liquid:oxygen> * 1175, [10000, 10000, 10000, 10000], 1200, 96);
-
-// --- Quantum Chest III
-ArcFurnace.addRecipe([<gregtech:gt.metaitem.01:11085> * 8, <gregtech:gt.metaitem.01:11316> * 3, <gregtech:gt.metaitem.01:11306> * 3, <gregtech:gt.metaitem.01:2506>], <gregtech:gt.blockmachines:127>, <liquid:oxygen> * 2611, [10000, 10000, 10000, 10000], 2600, 96);
-
-// --- Quantum Chest IV
-ArcFurnace.addRecipe([<gregtech:gt.metaitem.01:11083> * 16, <gregtech:gt.metaitem.01:11028> * 8, <gregtech:gt.metaitem.01:11070> * 2, <gregtech:gt.metaitem.01:2506>], <gregtech:gt.blockmachines:128>, <liquid:oxygen> * 4001, [10000, 10000, 10000, 10000], 4200, 96);
-
-// --- Quantum Chest V
-ArcFurnace.addRecipe([<gregtech:gt.metaitem.01:11360> * 32, <gregtech:gt.metaitem.01:11316> * 32, <gregtech:gt.metaitem.01:11103> * 2, <gregtech:gt.metaitem.01:2506> * 9], <gregtech:gt.blockmachines:129>, <liquid:oxygen> * 8048, [10000, 10000, 10000, 10000], 8200, 96);
+// --- Saltpeter Dust
+recipes.addShaped(<gregtech:gt.metaitem.01:2836>, [
+[<gregtech:gt.metaitem.01:836>, <gregtech:gt.metaitem.01:836>, <gregtech:gt.metaitem.01:836>],
+[<gregtech:gt.metaitem.01:836>, <gregtech:gt.metaitem.01:836>, <gregtech:gt.metaitem.01:836>],
+[<gregtech:gt.metaitem.01:836>, <gregtech:gt.metaitem.01:836>, <gregtech:gt.metaitem.01:836>]]);
+// -
+recipes.addShaped(<gregtech:gt.metaitem.01:2836>, [
+[<gregtech:gt.metaitem.01:1836>, <gregtech:gt.metaitem.01:1836>, null],
+[<gregtech:gt.metaitem.01:1836>, <gregtech:gt.metaitem.01:1836>, null]]);
+// -
+recipes.addShaped(<gregtech:gt.metaitem.01:2836> * 16, [
+[<gregtech:gt.metaitem.03:836>, <ore:craftingToolCrowbar>, null]]);
 
 
 
@@ -2655,7 +2624,7 @@ Assembler.addRecipe(<gregtech:gt.blockmachines:23>, <IC2:blockElectric:5>, <greg
 Assembler.addRecipe(<gregtech:gt.blockmachines:24>, <IC2:blockElectric:6>, <gregtech:gt.blockmachines:1587> * 2, 100, 2048);
 
 // --- Iridium Neutron Reflector
-Assembler.addRecipe(<gregtech:gt.neutronreflector>, <IC2:reactorReflectorThick> * 8, <IC2:itemPartIridium>, 1200, 256);
+Assembler.addRecipe(<gregtech:gt.neutronreflector>, <dreamcraft:item.NeutronReflectorParts>, <IC2:itemPartIridium>, 1200, 256);
 
 // --- Double Thorium Fuel Rod
 Assembler.addRecipe(<gregtech:gt.Double_Thoriumcell>, <gregtech:gt.Thoriumcell> * 2, <gregtech:gt.metaitem.01:23305> * 4, 200, 32);
@@ -2710,6 +2679,7 @@ AlloySmelter.addRecipe(<gregtech:gt.metaitem.01:11300> * 4, <gregtech:gt.metaite
 
 
 
+
 // --- Autoclave Recipes
 
 
@@ -2745,6 +2715,16 @@ Autoclave.addRecipe(<Thaumcraft:ItemShard:5>, <gregtech:gt.metaitem.01:2544>, <l
 
 // --- Thorium Fuel Rod
 Canner.addBottleRecipe(<gregtech:gt.Thoriumcell>, <IC2:itemFuelRod>, <gregtech:gt.metaitem.01:2096>);
+
+
+
+
+// --- Centrifuge Recipes ---
+
+
+// --- Flint Dust
+CentrifugeLiq.addRecipe(<gregtech:gt.metaitem.01:2802> * 8, null, null, null, null, null, null,  <minecraft:gravel> * 16, null, null, 10000, 0, 0, 0, 0, 0, 50, 1920);
+
 
 
 
@@ -2895,60 +2875,10 @@ PrecisionLaser.addRecipe(<gregtech:gt.metaitem.02:30890>, <gregtech:gt.metaitem.
 // --- Rubber Pulp
 Extractor.addRecipe(<gregtech:gt.metaitem.01:2880> * 2, <TConstruct:strangeFood>);
 
-
 // --- Honey Forestry and BOP
 Fermenter.addRecipe(<liquid:honey> * 1000, <liquid:for.honey> * 1000, 20, false);
 // -
 Fermenter.addRecipe(<liquid:for.honey> * 1000, <liquid:honey> * 1000, 20, false);
-
-
-
-// --- Fluid Extractor Recipes ---
-
-
-
-// --- Field Generator LV Recycle
-FluidExtractor.addRecipe(null, <gregtech:gt.metaitem.01:32670>, <liquid:molten.kanthal> * 288, 0, 80, 50);
-
-// --- Field Generator MV Recycle
-FluidExtractor.addRecipe(null, <gregtech:gt.metaitem.01:32671>, <liquid:molten.tungstensteel> * 576, 0, 80, 100);
-
-// --- Field Generator HV Recycle
-FluidExtractor.addRecipe(<gregtech:gt.metaitem.01:2506>, <gregtech:gt.metaitem.01:32672>, <liquid:molten.platinum> * 1152, 10000, 80, 200);
-
-// --- Field Generator IV Recycle
-FluidExtractor.addRecipe(<gregtech:gt.metaitem.01:2506> * 9, <gregtech:gt.metaitem.01:32674>, <liquid:molten.niobiumtitanium> * 4608, 10000, 80, 800);
-
-// --- Quantum Tank I
-FluidExtractor.addRecipe(<gregtech:gt.metaitem.01:11312> * 2, <gregtech:gt.blockmachines:120>, <liquid:molten.steel> * 1152, 10000, 200, 45);
-
-// --- Quantum Tank II
-FluidExtractor.addRecipe(<gregtech:gt.metaitem.01:11316> * 4, <gregtech:gt.blockmachines:121>, <liquid:molten.aluminium> * 1152, 10000, 200, 60);
-
-// --- Quantum Tank III
-FluidExtractor.addRecipe(<gregtech:gt.metaitem.01:11085> * 8, <gregtech:gt.blockmachines:122>, <liquid:molten.stainlesssteel> * 1152, 10000, 200, 80);
-
-// --- Quantum Tank IV
-FluidExtractor.addRecipe(<gregtech:gt.metaitem.01:11083> * 16, <gregtech:gt.blockmachines:123>, <liquid:molten.titanium> * 1152, 10000, 400, 80);
-
-// --- Quantum Tank V
-FluidExtractor.addRecipe(<gregtech:gt.metaitem.01:11360> * 32, <gregtech:gt.blockmachines:124>, <liquid:molten.tungstensteel> * 1151, 10000, 800, 80);
-
-// --- Quantum Chest I
-FluidExtractor.addRecipe(<gregtech:gt.metaitem.01:11312> * 2, <gregtech:gt.blockmachines:125>, <liquid:molten.steel> * 1152, 10000, 200, 45);
-
-// --- Quantum Chest II
-FluidExtractor.addRecipe(<gregtech:gt.metaitem.01:11316> * 4, <gregtech:gt.blockmachines:126>, <liquid:molten.aluminium> * 1152, 10000, 200, 60);
-
-// --- Quantum Chest III
-FluidExtractor.addRecipe(<gregtech:gt.metaitem.01:11085> * 8, <gregtech:gt.blockmachines:127>, <liquid:molten.stainlesssteel> * 1152, 10000, 200, 80);
-
-// --- Quantum Chest IV
-FluidExtractor.addRecipe(<gregtech:gt.metaitem.01:11083> * 16, <gregtech:gt.blockmachines:128>, <liquid:molten.titanium> * 1152, 10000, 400, 80);
-
-// --- Quantum Chest V
-FluidExtractor.addRecipe(<gregtech:gt.metaitem.01:11360> * 32, <gregtech:gt.blockmachines:129>, <liquid:molten.tungstensteel> * 1151, 10000, 800, 80);
-
 
 
 
@@ -2981,6 +2911,9 @@ ForgeHammer.addRecipe(<gregtech:gt.metaitem.02:22532>, <gregtech:gt.metaitem.01:
 // --- Long Endereye Rod
 ForgeHammer.addRecipe(<gregtech:gt.metaitem.02:22533>, <gregtech:gt.metaitem.01:23533> * 2, 20, 16);
 
+// --- Flint Dust
+ForgeHammer.addRecipe(<gregtech:gt.metaitem.01:802> * 2, <minecraft:flint>, 32, 16);
+
 
 
 
@@ -3001,6 +2934,9 @@ Macerator.addRecipe(<gregtech:gt.metaitem.01:2892> * 9, <Thaumcraft:blockTaint:2
 Macerator.addRecipe(<gregtech:gt.metaitem.01:2890>, <TConstruct:GlassBlock>);
 // -
 Macerator.addRecipe(<gregtech:gt.metaitem.01:1890>, <TConstruct:GlassPane>);
+
+// --- Glass Dust
+Macerator.addRecipe(<gregtech:gt.metaitem.01:2890>, <BloodArsenal:glass_shard> * 2);
 
 
 
@@ -3023,84 +2959,6 @@ furnace.addRecipe(<minecraft:iron_ingot>, <gregtech:gt.blockores:4870>);
 
 
 
-// --- Plasma Arc Furnace Recipes ----
-
-
-
-
-// --- Field Genrator LV Recycle
-PlasmaArcFurnace.addRecipe([<gregtech:gt.metaitem.01:11312> * 2], <gregtech:gt.metaitem.01:32670>, <liquid:plasma.argon> * 1, [10000], 25, 32);
-// -
-PlasmaArcFurnace.addRecipe([<gregtech:gt.metaitem.01:11312> * 2], <gregtech:gt.metaitem.01:32670>, <liquid:plasma.nitrogen> * 1, [10000], 25, 32);
-
-// --- Field Genrator MV Recycle
-PlasmaArcFurnace.addRecipe([<gregtech:gt.metaitem.01:11316> * 4], <gregtech:gt.metaitem.01:32671>, <liquid:plasma.argon> * 1, [10000], 50, 32);
-// -
-PlasmaArcFurnace.addRecipe([<gregtech:gt.metaitem.01:11316> * 4], <gregtech:gt.metaitem.01:32671>, <liquid:plasma.nitrogen> * 3, [10000], 50, 32);
-
-// --- Field Genrator HV Recycle
-PlasmaArcFurnace.addRecipe([<gregtech:gt.metaitem.01:11085> * 8,<gregtech:gt.metaitem.01:2506>], <gregtech:gt.metaitem.01:32672>, <liquid:plasma.argon> * 2, [10000, 10000], 100, 32);
-// -
-PlasmaArcFurnace.addRecipe([<gregtech:gt.metaitem.01:11085> * 8, <gregtech:gt.metaitem.01:2506>], <gregtech:gt.metaitem.01:32672>, <liquid:plasma.nitrogen> * 7, [10000, 10000], 100, 32);
-
-// --- Field Genrator IV Recycle
-PlasmaArcFurnace.addRecipe([<gregtech:gt.metaitem.01:2316> * 32,<gregtech:gt.metaitem.01:2506> * 9, <gregtech:gt.metaitem.01:2360> * 24], <gregtech:gt.metaitem.01:32674>, <liquid:plasma.argon> * 9, [10000, 10000, 10000], 400, 32);
-// -
-PlasmaArcFurnace.addRecipe([<gregtech:gt.metaitem.01:2316> * 32, <gregtech:gt.metaitem.01:2506> * 9, <gregtech:gt.metaitem.01:2360> * 24], <gregtech:gt.metaitem.01:32674>, <liquid:plasma.nitrogen> * 27, [10000, 10000, 10000], 400, 32);
-
-// --- Quantum Tank I
-PlasmaArcFurnace.addRecipe([<gregtech:gt.metaitem.01:11305> * 8, <gregtech:gt.metaitem.01:11306> * 2, <gregtech:gt.metaitem.01:11312> * 2, <gregtech:gt.metaitem.01:11057>], <gregtech:gt.blockmachines:120>, <liquid:plasma.argon> * 1, [10000, 10000, 10000, 10000], 40, 32);
-// -
-PlasmaArcFurnace.addRecipe([<gregtech:gt.metaitem.01:11305> * 8, <gregtech:gt.metaitem.01:11306> * 2, <gregtech:gt.metaitem.01:11312> * 2, <gregtech:gt.metaitem.01:11057>], <gregtech:gt.blockmachines:120>, <liquid:plasma.nitrogen> * 4, [10000, 10000, 10000, 10000], 40, 32);
-
-// --- Quantum Tank II
-PlasmaArcFurnace.addRecipe([<gregtech:gt.metaitem.01:11019> * 8, <gregtech:gt.metaitem.01:11316> * 4, <gregtech:gt.metaitem.01:11028> * 3, <gregtech:gt.metaitem.01:11345>], <gregtech:gt.blockmachines:121>, <liquid:plasma.argon> * 1, [10000, 10000, 10000, 10000], 80, 32);
-// -
-PlasmaArcFurnace.addRecipe([<gregtech:gt.metaitem.01:11019> * 8, <gregtech:gt.metaitem.01:11316> * 4, <gregtech:gt.metaitem.01:11028> * 3, <gregtech:gt.metaitem.01:11345>], <gregtech:gt.blockmachines:121>, <liquid:plasma.nitrogen> * 5, [10000, 10000, 10000, 10000], 80, 32);
-
-// --- Quantum Tank III
-PlasmaArcFurnace.addRecipe([<gregtech:gt.metaitem.01:11085> * 8, <gregtech:gt.metaitem.01:11316> * 3, <gregtech:gt.metaitem.01:11306> * 3, <gregtech:gt.metaitem.01:2506>], <gregtech:gt.blockmachines:122>, <liquid:plasma.argon> * 4, [10000, 10000, 10000, 10000], 160, 32);
-// -
-PlasmaArcFurnace.addRecipe([<gregtech:gt.metaitem.01:11085> * 8, <gregtech:gt.metaitem.01:11316> * 3, <gregtech:gt.metaitem.01:11306> * 3, <gregtech:gt.metaitem.01:2506>], <gregtech:gt.blockmachines:122>, <liquid:plasma.nitrogen> * 11, [10000, 10000, 10000, 10000], 160, 32);
-
-// --- Quantum Tank IV
-PlasmaArcFurnace.addRecipe([<gregtech:gt.metaitem.01:11083> * 16, <gregtech:gt.metaitem.01:11028> * 8, <gregtech:gt.metaitem.01:11070> * 2, <gregtech:gt.metaitem.01:2506>], <gregtech:gt.blockmachines:123>, <liquid:plasma.argon> * 6, [10000, 10000, 10000, 10000], 320, 32);
-// -
-PlasmaArcFurnace.addRecipe([<gregtech:gt.metaitem.01:11083> * 16, <gregtech:gt.metaitem.01:11028> * 8, <gregtech:gt.metaitem.01:11070> * 2, <gregtech:gt.metaitem.01:2506>], <gregtech:gt.blockmachines:123>, <liquid:plasma.nitrogen> * 17, [10000, 10000, 10000, 10000], 320, 32);
-
-// --- Quantum Tank V
-PlasmaArcFurnace.addRecipe([<gregtech:gt.metaitem.01:11360> * 32, <gregtech:gt.metaitem.01:11316> * 32, <gregtech:gt.metaitem.01:11103> * 2, <gregtech:gt.metaitem.01:2506> * 9], <gregtech:gt.blockmachines:124>, <liquid:plasma.argon> * 6, [10000, 10000, 10000, 10000], 640, 32);
-// -
-PlasmaArcFurnace.addRecipe([<gregtech:gt.metaitem.01:11360> * 32, <gregtech:gt.metaitem.01:11316> * 32, <gregtech:gt.metaitem.01:11103> * 2, <gregtech:gt.metaitem.01:2506> * 9], <gregtech:gt.blockmachines:124>, <liquid:plasma.nitrogen> * 17, [10000, 10000, 10000, 10000], 640, 32);
-
-// --- Quantum Chest I
-PlasmaArcFurnace.addRecipe([<gregtech:gt.metaitem.01:11305> * 8, <gregtech:gt.metaitem.01:11306> * 2, <gregtech:gt.metaitem.01:11312> * 2, <gregtech:gt.metaitem.01:11057>], <gregtech:gt.blockmachines:125>, <liquid:plasma.argon> * 1, [10000, 10000, 10000, 10000], 40, 32);
-// -
-PlasmaArcFurnace.addRecipe([<gregtech:gt.metaitem.01:11305> * 8, <gregtech:gt.metaitem.01:11306> * 2, <gregtech:gt.metaitem.01:11312> * 2, <gregtech:gt.metaitem.01:11057>], <gregtech:gt.blockmachines:125>, <liquid:plasma.nitrogen> * 4, [10000, 10000, 10000, 10000], 40, 32);
-
-// --- Quantum Chest II
-PlasmaArcFurnace.addRecipe([<gregtech:gt.metaitem.01:11019> * 8, <gregtech:gt.metaitem.01:11316> * 4, <gregtech:gt.metaitem.01:11028> * 3, <gregtech:gt.metaitem.01:11345>], <gregtech:gt.blockmachines:126>, <liquid:plasma.argon> * 1, [10000, 10000, 10000, 10000], 80, 32);
-// -
-PlasmaArcFurnace.addRecipe([<gregtech:gt.metaitem.01:11019> * 8, <gregtech:gt.metaitem.01:11316> * 4, <gregtech:gt.metaitem.01:11028> * 3, <gregtech:gt.metaitem.01:11345>], <gregtech:gt.blockmachines:126>, <liquid:plasma.nitrogen> * 5, [10000, 10000, 10000, 10000], 80, 32);
-
-// --- Quantum Chest III
-PlasmaArcFurnace.addRecipe([<gregtech:gt.metaitem.01:11085> * 8, <gregtech:gt.metaitem.01:11316> * 3, <gregtech:gt.metaitem.01:11306> * 3, <gregtech:gt.metaitem.01:2506>], <gregtech:gt.blockmachines:127>, <liquid:plasma.argon> * 4, [10000, 10000, 10000, 10000], 160, 32);
-// -
-PlasmaArcFurnace.addRecipe([<gregtech:gt.metaitem.01:11085> * 8, <gregtech:gt.metaitem.01:11316> * 3, <gregtech:gt.metaitem.01:11306> * 3, <gregtech:gt.metaitem.01:2506>], <gregtech:gt.blockmachines:127>, <liquid:plasma.nitrogen> * 11, [10000, 10000, 10000, 10000], 160, 32);
-
-// --- Quantum Chest IV
-PlasmaArcFurnace.addRecipe([<gregtech:gt.metaitem.01:11083> * 16, <gregtech:gt.metaitem.01:11028> * 8, <gregtech:gt.metaitem.01:11070> * 2, <gregtech:gt.metaitem.01:2506>], <gregtech:gt.blockmachines:128>, <liquid:plasma.argon> * 6, [10000, 10000, 10000, 10000], 320, 32);
-// -
-PlasmaArcFurnace.addRecipe([<gregtech:gt.metaitem.01:11083> * 16, <gregtech:gt.metaitem.01:11028> * 8, <gregtech:gt.metaitem.01:11070> * 2, <gregtech:gt.metaitem.01:2506>], <gregtech:gt.blockmachines:128>, <liquid:plasma.nitrogen> * 17, [10000, 10000, 10000, 10000], 320, 32);
-
-// --- Quantum Chest V
-PlasmaArcFurnace.addRecipe([<gregtech:gt.metaitem.01:11360> * 32, <gregtech:gt.metaitem.01:11316> * 32, <gregtech:gt.metaitem.01:11103> * 2, <gregtech:gt.metaitem.01:2506> * 9], <gregtech:gt.blockmachines:129>, <liquid:plasma.argon> * 6, [10000, 10000, 10000, 10000], 640, 96);
-// -
-PlasmaArcFurnace.addRecipe([<gregtech:gt.metaitem.01:11360> * 32, <gregtech:gt.metaitem.01:11316> * 32, <gregtech:gt.metaitem.01:11103> * 2, <gregtech:gt.metaitem.01:2506> * 9], <gregtech:gt.blockmachines:129>, <liquid:plasma.nitrogen> * 17, [10000, 10000, 10000, 10000], 640, 32);
-
-
-
-
 
 // --- Plate Bender Recipes ---
 
@@ -3112,53 +2970,6 @@ PlateBender.addRecipe(<gregtech:gt.metaitem.02:24874>, <gregtech:gt.metaitem.02:
 PlateBender.addRecipe(<gregtech:gt.metaitem.02:23028>, <gregtech:gt.metaitem.01:23028>, 200, 8);
 
 
-
-// --- Pulverizer Recipes ---
-
-
-
-
-// --- Field Genrator LV Recycle
-Pulverizer.addRecipe([<gregtech:gt.metaitem.01:2312> * 2], <gregtech:gt.metaitem.01:32670>, [10000], 500, 2);
-
-// --- Field Genrator MV Recycle
-Pulverizer.addRecipe([<gregtech:gt.metaitem.01:2316> * 4], <gregtech:gt.metaitem.01:32671>, [10000], 500, 2);
-
-// --- Field Genrator HV Recycle
-Pulverizer.addRecipe([<gregtech:gt.metaitem.01:2085> * 8,<gregtech:gt.metaitem.01:2506>], <gregtech:gt.metaitem.01:32672>, [10000, 10000], 500, 2);
-
-// --- Field Genrator IV Recycle
-Pulverizer.addRecipe([<gregtech:gt.metaitem.01:2316> * 32,<gregtech:gt.metaitem.01:2506> * 9, <gregtech:gt.metaitem.01:2360> * 24], <gregtech:gt.metaitem.01:32674>, [10000, 10000, 10000], 500, 2);
-
-// --- Quantum Tank I
-Pulverizer.addRecipe([<gregtech:gt.metaitem.01:2305> * 8, <gregtech:gt.metaitem.01:2306> * 2, <gregtech:gt.metaitem.01:2312> * 2, <gregtech:gt.metaitem.01:2880> * 2], <gregtech:gt.blockmachines:120>, [10000, 10000, 10000, 10000], 1300, 4);
-
-// --- Quantum Tank II
-Pulverizer.addRecipe([<gregtech:gt.metaitem.01:2019> * 8, <gregtech:gt.metaitem.01:2316> * 5, <gregtech:gt.metaitem.01:2028> * 2, <gregtech:gt.metaitem.01:2880> * 2], <gregtech:gt.blockmachines:121>, [10000, 10000, 10000, 10000], 1400, 4);
-
-// --- Quantum Tank III
-Pulverizer.addRecipe([<gregtech:gt.metaitem.01:2085> * 9, <gregtech:gt.metaitem.01:2306> * 8, <gregtech:gt.metaitem.01:2316> * 2, <gregtech:gt.metaitem.01:2880> * 2], <gregtech:gt.blockmachines:122>, [10000, 10000, 10000, 10000], 2600, 4);
-
-// --- Quantum Tank IV
-Pulverizer.addRecipe([<gregtech:gt.metaitem.01:2083> * 16, <gregtech:gt.metaitem.01:2028> * 8, <gregtech:gt.metaitem.01:2070> * 2, <gregtech:gt.metaitem.01:2880> * 2], <gregtech:gt.blockmachines:123>, [10000, 10000, 10000, 10000], 4200, 4);
-
-// --- Quantum Tank V
-Pulverizer.addRecipe([<gregtech:gt.metaitem.01:2316> * 32, <gregtech:gt.metaitem.01:2360> * 32, <gregtech:gt.metaitem.01:2103> * 2, <gregtech:gt.metaitem.01:2880> * 2], <gregtech:gt.blockmachines:124>, [10000, 10000, 10000, 10000], 8200, 4);
-
-// --- Quantum Chest I
-Pulverizer.addRecipe([<gregtech:gt.metaitem.01:2305> * 8, <gregtech:gt.metaitem.01:2306> * 2, <gregtech:gt.metaitem.01:2312> * 2, <gregtech:gt.metaitem.01:2880> * 2], <gregtech:gt.blockmachines:125>, [10000, 10000, 10000, 10000], 1100, 4);
-
-// --- Quantum Chest II
-Pulverizer.addRecipe([<gregtech:gt.metaitem.01:2019> * 8, <gregtech:gt.metaitem.01:2316> * 5, <gregtech:gt.metaitem.01:2028> * 2, <gregtech:gt.metaitem.01:2880> * 2], <gregtech:gt.blockmachines:126>, [10000, 10000, 10000, 10000], 1200, 4);
-
-// --- Quantum Chest III
-Pulverizer.addRecipe([<gregtech:gt.metaitem.01:2085> * 9, <gregtech:gt.metaitem.01:2306> * 8, <gregtech:gt.metaitem.01:2316> * 2, <gregtech:gt.metaitem.01:2880> * 2], <gregtech:gt.blockmachines:127>, [10000, 10000, 10000, 10000], 2600, 4);
-
-// --- Quantum Chest IV
-Pulverizer.addRecipe([<gregtech:gt.metaitem.01:2083> * 16, <gregtech:gt.metaitem.01:2028> * 8, <gregtech:gt.metaitem.01:2070> * 2, <gregtech:gt.metaitem.01:2880> * 2], <gregtech:gt.blockmachines:128>, [10000, 10000, 10000, 10000], 4200, 4);
-
-// --- Quantum Chest V
-Pulverizer.addRecipe([<gregtech:gt.metaitem.01:2316> * 32, <gregtech:gt.metaitem.01:2360> * 32, <gregtech:gt.metaitem.01:2103> * 2, <gregtech:gt.metaitem.01:2880> * 2], <gregtech:gt.blockmachines:129>, [10000, 10000, 10000, 10000], 8200, 4);
 
 
 // --- Tinker Construct Smeltery Recipes
