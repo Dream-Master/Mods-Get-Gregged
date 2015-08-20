@@ -1,4 +1,5 @@
 //Created by DreamMasterXXL
+// --- Edited by *error user name found* ---
 
 //import Mods
 
@@ -8,8 +9,25 @@ import mods.ic2.Compressor;
 import mods.ic2.Extractor;
 import mods.ic2.Macerator;
 
+// --- Variables ---
+val EnchantedFabric = <Thaumcraft:ItemResource:7>;
+val Amber = <Thaumcraft:ItemResource:6>
+val Alumentum = <Thaumcraft:ItemResource>;
+val Nitor = <Thaumcraft:ItemResource:1>;
+
+val Bookshelf = <minecraft:bookshelf>;
+
+val ObsidianPlate = <ore:plateObsidian>;
+val DenseObsidianPlate = <ore:plateDenseObsidian>
+val DiamondRod = <ore:stickDiamond>;
+
 //remove Recipes
 
+// --- Enchantment Table
+recipes.remove(EnchantingTable);
+
+//Magic Crowbar
+mods.thaumcraft.Arcane.removeRecipe(<Railcraft:tool.crowbar.magic>);
 
 //Thaumometer
 recipes.remove(<Thaumcraft:ItemThaumometer>);
@@ -33,7 +51,7 @@ recipes.remove(<Thaumcraft:blockCosmeticSolid:4>);
 mods.thaumcraft.Arcane.removeRecipe(<Thaumcraft:blockCosmeticSolid:6>);
 //Arcane Pedstal
 mods.thaumcraft.Arcane.removeRecipe(<Thaumcraft:blockStoneDevice:1>);
-//Arcan Stone Bricks
+//Arcane Stone Bricks
 recipes.remove(<Thaumcraft:blockCosmeticSolid:7>);
 //Runic Matrix
 mods.thaumcraft.Arcane.removeRecipe(<Thaumcraft:blockStoneDevice:2>);
@@ -44,13 +62,11 @@ recipes.remove(<Thaumcraft:blockTable>);
 //Phials
 recipes.remove(<Thaumcraft:ItemEssence>);
 //Enchanted Fabric
-mods.thaumcraft.Arcane.removeRecipe(<Thaumcraft:ItemResource:7>);
-//Greatwood Rood
+mods.thaumcraft.Arcane.removeRecipe(EnchantedFabric);
+//Greatwood Rod
 mods.thaumcraft.Arcane.removeRecipe(<Thaumcraft:WandRod>);
-//Magic Crowbar
-mods.thaumcraft.Arcane.removeRecipe(<Railcraft:tool.crowbar.magic>);
 //Amber
-mods.thaumcraft.Crucible.removeRecipe(<Thaumcraft:ItemResource:6>);
+mods.thaumcraft.Crucible.removeRecipe(Amber);
 //Order Shards
 mods.thaumcraft.Crucible.removeRecipe(<Thaumcraft:ItemShard:4>);
 //Entropy Shards
@@ -78,10 +94,16 @@ mods.thaumcraft.Arcane.removeRecipe(<Thaumcraft:WandCasting:2>.withTag({cap: "co
 furnace.remove(<Thaumcraft:ItemShard:*>);
 
 //Amber
-furnace.remove(<Thaumcraft:ItemResource:6>);
+furnace.remove(Amber);
 
 
 //add Recipes
+
+// --- Enchantment Table
+recipes.addShaped(EnchantingTable, [
+[Nitor, Diamond, Alumentum],
+[DiamondRod, DenseObsidianPlate, DiamondRod],
+[ObsidianPlate, Bookshelf, ObsidianPlate]]);
 
 //Thaumometer
 recipes.addShaped(<Thaumcraft:ItemThaumometer>, [
@@ -177,7 +199,7 @@ recipes.addShaped(<Thaumcraft:blockTable>, [
 recipes.addShapeless(<Thaumcraft:ItemEssence>, [<minecraft:glass_bottle>, <ore:roundRubber>]);
 
 //Enchanted Fabric
-mods.thaumcraft.Arcane.addShaped("ENCHFABRIC", <Thaumcraft:ItemResource:7> , "aer 5, terra 5, ignis 5, aqua 5, ordo 5, perditio 5" ,[
+mods.thaumcraft.Arcane.addShaped("ENCHFABRIC", EnchantedFabric , "aer 5, terra 5, ignis 5, aqua 5, ordo 5, perditio 5" ,[
 [<minecraft:string>, <minecraft:string>, <minecraft:string>],
 [<minecraft:string>, <harvestcraft:wovencottonItem>, <minecraft:string>],
 [<minecraft:string>, <minecraft:string>, <minecraft:string>]]);
@@ -212,7 +234,7 @@ mods.thaumcraft.Crucible.addRecipe("GT_CRYSTALLISATION", <Thaumcraft:ItemShard:1
 
 //Assembler Recipes
 
-//Arcan Stone Bricks
+//Arcane Stone Bricks
 Assembler.addRecipe(<Thaumcraft:blockCosmeticSolid:7>, <Thaumcraft:blockCosmeticSolid:6> * 4, <gregtech:gt.integrated_circuit:4> * 0, 160, 40);
 
 //Extractor Recipes
@@ -220,7 +242,12 @@ Assembler.addRecipe(<Thaumcraft:blockCosmeticSolid:7>, <Thaumcraft:blockCosmetic
 //Quicksilver
 Extractor.addRecipe(<Thaumcraft:ItemResource:3>, <Thaumcraft:blockCustomPlant:2>);
 
-//refresh Recipese
+//Blazepowder
+recipes.removeShaped(<minecraft:blaze_powder>, [
+[<Thaumcraft:blockCustomPlant:3>]]);
+Extractor.addRecipe(<minecraft:blaze_powder>, <Thaumcraft:blockCustomPlant:3>);
+
+//refresh Recipes
 
 //Thaumometer
 mods.thaumcraft.Research.refreshResearchRecipe("THAUMOMETER");

@@ -22,6 +22,10 @@ val Chest = <minecraft:chest>;
 val NetherStar = <minecraft:nether_star>;
 val GApple = <minecraft:golden_apple>;
 
+// Dough and Clay water Bucket
+// Delete unless IguanaTweaksTConstruct is installed
+recipes.addShapeless(<gregtech:gt.metaitem.02:32559>, [<IguanaTweaksTConstruct:clayBucketWater>, <gregtech:gt.metaitem.01:2881>]);
+
 // --- Blocks via GregTech ---
 
 // Block of Cobalt
@@ -71,7 +75,7 @@ recipes.addShaped(<TConstruct:chestplateWood>, [
 [<ore:logWood>, <ore:logWood>, <ore:logWood>],
 [<ore:logWood>, <ore:logWood>, <ore:logWood>]]);
 
-// Wooden Leggins
+// Wooden Leggings
 recipes.remove(<TConstruct:leggingsWood>);
 recipes.addShaped(<TConstruct:leggingsWood>, [
 [<ore:logWood>, <ore:logWood>, <ore:logWood>],
@@ -159,35 +163,35 @@ mods.tconstruct.Casting.addTableRecipe(<gregtech:gt.metaitem.02:31032>, <liquid:
 mods.tconstruct.Casting.removeTableRecipe(<BuildCraft|Core:goldGearItem>);
 mods.tconstruct.Casting.addTableRecipe(<gregtech:gt.metaitem.02:31086>, <liquid:gold.molten> * 576, <TConstruct:gearCast>, false, 20);
 
-// Bronze 
+// Bronze
 mods.tconstruct.Casting.removeTableRecipe(<Forestry:gearBronze>);
 mods.tconstruct.Casting.addTableRecipe(<gregtech:gt.metaitem.02:31300>, <liquid:bronze.molten> * 576, <TConstruct:gearCast>, false, 20);
 
-// Copper 
+// Copper
 mods.tconstruct.Casting.removeTableRecipe(<Forestry:gearCopper>);
 mods.tconstruct.Casting.addTableRecipe(<gregtech:gt.metaitem.02:31035>, <liquid:copper.molten> * 576, <TConstruct:gearCast>, false, 20);
 
-// Tin 
+// Tin
 mods.tconstruct.Casting.removeTableRecipe(<Forestry:gearTin>);
 mods.tconstruct.Casting.addTableRecipe(<gregtech:gt.metaitem.02:31057>, <liquid:tin.molten> * 576, <TConstruct:gearCast>, false, 20);
 
-// Platinum 
+// Platinum
 mods.tconstruct.Casting.removeTableRecipe(<ThermalFoundation:material:133>);
 mods.tconstruct.Casting.addTableRecipe(<gregtech:gt.metaitem.02:31085>, <liquid:platinum.molten> * 576, <TConstruct:gearCast>, false, 20);
 
-// Nickel 
+// Nickel
 mods.tconstruct.Casting.removeTableRecipe(<ThermalFoundation:material:132>);
 mods.tconstruct.Casting.addTableRecipe(<gregtech:gt.metaitem.02:31034>, <liquid:nickel.molten> * 576, <TConstruct:gearCast>, false, 20);
 
-// Silver 
+// Silver
 mods.tconstruct.Casting.removeTableRecipe(<ThermalFoundation:material:130>);
 mods.tconstruct.Casting.addTableRecipe(<gregtech:gt.metaitem.02:31054>, <liquid:silver.molten> * 576, <TConstruct:gearCast>, false, 20);
 
-// Electrum 
+// Electrum
 mods.tconstruct.Casting.removeTableRecipe(<ThermalFoundation:material:135>);
 mods.tconstruct.Casting.addTableRecipe(<gregtech:gt.metaitem.02:31303>, <liquid:electrum.molten> * 576, <TConstruct:gearCast>, false, 20);
 
-// Invar 
+// Invar
 mods.tconstruct.Casting.removeTableRecipe(<ThermalFoundation:material:136>);
 mods.tconstruct.Casting.addTableRecipe(<gregtech:gt.metaitem.02:31302>, <liquid:invar.molten> * 576, <TConstruct:gearCast>, false, 20);
 
@@ -195,7 +199,7 @@ mods.tconstruct.Casting.addTableRecipe(<gregtech:gt.metaitem.02:31302>, <liquid:
 mods.tconstruct.Casting.removeTableRecipe(<ThermalFoundation:material:131>);
 mods.tconstruct.Casting.addTableRecipe(<gregtech:gt.metaitem.02:31089>, <liquid:lead.molten> * 576, <TConstruct:gearCast>, false, 20);
 
-// Steel 
+// Steel
 mods.tconstruct.Casting.addTableRecipe(<gregtech:gt.metaitem.02:31305>, <liquid:steel.molten> * 576, <TConstruct:gearCast>, false, 20);
 
 // --- Blocks and Items ---
@@ -514,9 +518,13 @@ mods.tconstruct.Casting.addTableRecipe(<gregtech:gt.metaitem.01:11321>, <liquid:
 mods.tconstruct.Casting.removeTableRecipe(<IC2:itemIngot:5>);
 mods.tconstruct.Casting.addTableRecipe(<gregtech:gt.metaitem.01:11089>, <liquid:lead.molten> * 144, <TConstruct:metalPattern>, false, 20);
 
+
 // Aluminium Nugget
 mods.tconstruct.Casting.removeTableRecipe(<TConstruct:oreBerries:4>);
 mods.tconstruct.Casting.addTableRecipe(<gregtech:gt.metaitem.01:9019>, <liquid:aluminum.molten> * 16, <TConstruct:metalPattern:27>, false, 20);
+
+// Aluminium Berries
+furnace.remove(<TConstruct:materials:22>, <TConstruct:oreBerries:4>);
 
 // Steel Nugget
 mods.tconstruct.Casting.removeTableRecipe(<Railcraft:nugget:1>);
@@ -529,6 +537,9 @@ mods.tconstruct.Casting.addTableRecipe(<gregtech:gt.metaitem.01:9054>, <liquid:s
 // Electrum Nugget
 mods.tconstruct.Casting.removeTableRecipe(<ThermalFoundation:material:103>);
 mods.tconstruct.Casting.addTableRecipe(<gregtech:gt.metaitem.01:9303>, <liquid:electrum.molten> * 16, <TConstruct:metalPattern:27>, false, 20);
+
+// Gold Berries
+furnace.remove(<minecraft:gold_nugget>, <TConstruct:oreBerries:1>);
 
 // Nickel Nugget
 mods.tconstruct.Casting.removeTableRecipe(<ThermalFoundation:material:100>);
@@ -549,25 +560,31 @@ mods.tconstruct.Casting.addTableRecipe(<gregtech:gt.metaitem.01:9089>, <liquid:l
 // Iron Nugget
 mods.tconstruct.Casting.removeTableRecipe(<Thaumcraft:ItemNugget>);
 mods.tconstruct.Casting.addTableRecipe(<gregtech:gt.metaitem.01:9032>, <liquid:iron.molten> * 16, <TConstruct:metalPattern:27>, false, 20);
+// Iron Berries
+furnace.remove(<TConstruct:materials:19>, <TConstruct:oreBerries>);
 
 // Copper Nugget
 mods.tconstruct.Casting.removeTableRecipe(<Thaumcraft:ItemNugget:1>);
 mods.tconstruct.Casting.removeTableRecipe(<TConstruct:materials:20>);
 mods.tconstruct.Casting.addTableRecipe(<gregtech:gt.metaitem.01:9035>, <liquid:copper.molten> * 16, <TConstruct:metalPattern:27>, false, 20);
+// Copper Berries
+furnace.remove(<TConstruct:materials:20>, <TConstruct:oreBerries:2>);
 
 // Tin Nugget
 mods.tconstruct.Casting.removeTableRecipe(<Thaumcraft:ItemNugget:2>);
 mods.tconstruct.Casting.removeTableRecipe(<TConstruct:materials:21>);
 mods.tconstruct.Casting.addTableRecipe(<gregtech:gt.metaitem.01:9057>, <liquid:tin.molten> * 16, <TConstruct:metalPattern:27>, false, 20);
+// Tin Berries
+furnace.remove(<TConstruct:materials:21>, <TConstruct:oreBerries:3>);
 
 // Bronze Nugget
 mods.tconstruct.Casting.removeTableRecipe(<ThermalFoundation:material:105>);
 mods.tconstruct.Casting.removeTableRecipe(<TConstruct:materials:31>);
-mods.tconstruct.Casting.addTableRecipe(<gregtech:gt.metaitem.01:9300>, <liquid:bronze.molten> *16, <TConstruct:metalPattern:27>, false, 20);
+mods.tconstruct.Casting.addTableRecipe(<gregtech:gt.metaitem.01:9300>, <liquid:bronze.molten> * 16, <TConstruct:metalPattern:27>, false, 20);
 
 // Enderium Nugget
 mods.tconstruct.Casting.removeTableRecipe(<ThermalFoundation:material:108>);
-mods.tconstruct.Casting.addTableRecipe(<gregtech:gt.metaitem.01:9321>, <liquid:enderium.molten> *16, <TConstruct:metalPattern:27>, false, 20);
+mods.tconstruct.Casting.addTableRecipe(<gregtech:gt.metaitem.01:9321>, <liquid:enderium.molten> * 16, <TConstruct:metalPattern:27>, false, 20);
 
 // Cobalt Nugget
 mods.tconstruct.Casting.removeTableRecipe(<TConstruct:materials:28>);

@@ -1,4 +1,4 @@
-// Harvestcraft by *error user name found*
+// Harvestcraft
 
 // VARS
 val mortar = <ore:toolMortarandpestle>;

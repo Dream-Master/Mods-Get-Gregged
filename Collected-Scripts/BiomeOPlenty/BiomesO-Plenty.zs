@@ -1,10 +1,14 @@
 //Created by DreamMasterXXL
+// --- Edited by *error user name found* ---
+
+// --- Variables ---
+val Cattail = <BiomesOPlenty:plants:7>;
 
 //remove Recipes
 
-//Block of Malachit
+//Block of Malachite
 recipes.remove(<BiomesOPlenty:gemOre:11>);
-//Gem Malachit
+//Gem Malachite
 recipes.remove(<BiomesOPlenty:gems:5>);
 //Emty Jar
 recipes.remove(<BiomesOPlenty:jar Empty>);
@@ -45,3 +49,9 @@ recipes.addShaped(<BiomesOPlenty:scytheDiamond>, [
 
 //Pile of Ash
 recipes.addShapeless(<gregtech:gt.metaitem.01:2816>, [<BiomesOPlenty:misc:1>, <BiomesOPlenty:misc:1>, <BiomesOPlenty:misc:1>, <BiomesOPlenty:misc:1>]);
+
+// Wool
+recipes.addShaped(Wool, [
+[Cattail, Cattail, Cattail],
+[Cattail, Cattail, Cattail],
+[Cattail, Cattail, Cattail]]);
