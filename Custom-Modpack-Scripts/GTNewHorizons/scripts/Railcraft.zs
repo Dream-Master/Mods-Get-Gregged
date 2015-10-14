@@ -6,7 +6,6 @@
 
 import mods.gregtech.AlloySmelter;
 import mods.gregtech.Assembler;
-import mods.gregtech.AssemblerLiq;
 import mods.gregtech.Centrifuge;
 import mods.ic2.Compressor;
 import mods.gregtech.FluidSolidifier;
@@ -14,6 +13,7 @@ import mods.gregtech.Fuels;
 import mods.ic2.Macerator;
 import mods.nei.NEI;
 import mods.gregtech.PlateBender;
+import mods.ic2.SemiFluidGenerator;
 import mods.gregtech.Wiremill;
 
 
@@ -656,22 +656,22 @@ recipes.remove(<Railcraft:machine.alpha:7>);
 // --- Sandy Block ---
 recipes.remove(<Railcraft:brick.sandy:2>);
 
-// --- Trackman's Backpach
+// --- Trackmans Backpach
 recipes.remove(<Railcraft:backpack.trackman.t1>);
 
-// --- Trackman's Backpach Woven
+// --- Trackmans Backpach Woven
 mods.forestry.Carpenter.removeRecipe(<Railcraft:backpack.trackman.t2>);
 
-// --- Iceman's Backpach
+// --- Icemans Backpach
 recipes.remove(<Railcraft:backpack.iceman.t1>);
 
-// --- Iceman's Backpach Woven
+// --- Icemans Backpach Woven
 mods.forestry.Carpenter.removeRecipe(<Railcraft:backpack.iceman.t2>);
 
-// --- Aphothecary's Backpach
+// --- Aphothecarys Backpach
 recipes.remove(<Railcraft:backpack.apothecary.t1>);
 
-// --- Aphothecary's Backpach Woven
+// --- Aphothecarys Backpach Woven
 mods.forestry.Carpenter.removeRecipe(<Railcraft:backpack.apothecary.t2>);
 
 // --- Wire Support Frame
@@ -1709,40 +1709,40 @@ recipes.addShaped(CreosoteWoodSlab * 2, [
 // --- Steel Shears
 oreDict.craftingToolShears.add(<Railcraft:tool.steel.shears>);
 
-// --- Trackman's Backpach
+// --- Trackmans Backpach
 recipes.addShaped(<Railcraft:backpack.trackman.t1>, [
 [<harvestcraft:wovencottonItem>, <minecraft:rail>, <harvestcraft:wovencottonItem>],
 [<Backpack:tannedLeather>, <minecraft:rail>, <Backpack:tannedLeather>],
 [<Backpack:tannedLeather>, <Backpack:tannedLeather>, <Backpack:tannedLeather>]]);
 
-// --- Trackman's Backpach Woven
-mods.forestry.Carpenter.addRecipe(2400, <liquid:seedoil> * 5000, 
+// --- Trackmans Backpach Woven
+mods.forestry.Carpenter.addRecipe(60, <liquid:seedoil> * 5000, 
 [<Forestry:craftingMaterial:3>, <Forestry:craftingMaterial:3>, <Forestry:craftingMaterial:3>,
 <Forestry:craftingMaterial:3>, <Forestry:craftingMaterial:3>, <Forestry:craftingMaterial:3>,
 <Forestry:craftingMaterial:3>, <Forestry:craftingMaterial:3>, <Forestry:craftingMaterial:3>],
 <Railcraft:backpack.trackman.t1>, <Railcraft:backpack.trackman.t2>);
 
-// --- Iceman's Backpach
+// --- Icemans Backpach
 recipes.addShaped(<Railcraft:backpack.iceman.t1>, [
 [<harvestcraft:wovencottonItem>, <BiomesOPlenty:hardIce>, <harvestcraft:wovencottonItem>],
 [<Backpack:tannedLeather>, <BiomesOPlenty:hardIce>, <Backpack:tannedLeather>],
 [<Backpack:tannedLeather>, <Backpack:tannedLeather>, <Backpack:tannedLeather>]]);
 
-// --- Iceman's Backpach Woven
-mods.forestry.Carpenter.addRecipe(2400, <liquid:seedoil> * 5000, 
+// --- Icemans Backpach Woven
+mods.forestry.Carpenter.addRecipe(60, <liquid:seedoil> * 5000, 
 [<Forestry:craftingMaterial:3>, <Forestry:craftingMaterial:3>, <Forestry:craftingMaterial:3>,
 <Forestry:craftingMaterial:3>, <Forestry:craftingMaterial:3>, <Forestry:craftingMaterial:3>,
 <Forestry:craftingMaterial:3>, <Forestry:craftingMaterial:3>, <Forestry:craftingMaterial:3>],
 <Railcraft:backpack.iceman.t1>, <Railcraft:backpack.iceman.t2>);
 
-// --- Aphothecary's Backpach
+// --- Aphothecarys Backpach
 recipes.addShaped(<Railcraft:backpack.apothecary.t1>, [
 [<harvestcraft:wovencottonItem>, <minecraft:potion:8229>, <harvestcraft:wovencottonItem>],
 [<Backpack:tannedLeather>, <minecraft:potion:8229>, <Backpack:tannedLeather>],
 [<Backpack:tannedLeather>, <Backpack:tannedLeather>, <Backpack:tannedLeather>]]);
 
-// --- Aphothecary's Backpach Woven
-mods.forestry.Carpenter.addRecipe(2400, <liquid:seedoil> * 5000, 
+// --- Aphothecarys Backpach Woven
+mods.forestry.Carpenter.addRecipe(60, <liquid:seedoil> * 5000, 
 [<Forestry:craftingMaterial:3>, <Forestry:craftingMaterial:3>, <Forestry:craftingMaterial:3>,
 <Forestry:craftingMaterial:3>, <Forestry:craftingMaterial:3>, <Forestry:craftingMaterial:3>,
 <Forestry:craftingMaterial:3>, <Forestry:craftingMaterial:3>, <Forestry:craftingMaterial:3>],
@@ -1759,9 +1759,7 @@ recipes.addShaped(<Railcraft:brick.infernal:2>, [
 // --- Add Fuels ---
 
 // --- Creosote
-Fuels.addDieselFuel(<IC2:itemFluidCell>, <IC2:itemFluidCell>.withTag({Fluid: {FluidName: "creosote", Amount: 1000}}), 8);
-// -
-Fuels.addDieselFuel(<IC2:itemFluidCell>, <gregtech:gt.metaitem.01:30712>, 8);
+SemiFluidGenerator.addFluid(<liquid:creosote> * 25, 8);
 
 
 
@@ -1787,11 +1785,11 @@ Assembler.addRecipe(<Railcraft:machine.beta:8>, <dreamcraft:item.EngineCore>, <R
 Assembler.addRecipe(<Railcraft:machine.beta:9>, <dreamcraft:item.EngineCore>, <gregtech:gt.metaitem.01:17019> * 10, 800, 256);
 
 // --- Electric Shunting Wire ---
-AssemblerLiq.addRecipe(<Railcraft:machine.delta>, <gregtech:gt.blockmachines:1360> * 2, <gregtech:gt.blockmachines:1220> * 2, <liquid:molten.tin>  * 16, 200, 128);
+Assembler.addRecipe(<Railcraft:machine.delta>, <gregtech:gt.blockmachines:1360> * 2, <gregtech:gt.blockmachines:1220> * 2, <liquid:molten.tin>  * 16, 200, 120);
 //-
-AssemblerLiq.addRecipe(<Railcraft:machine.delta>, <gregtech:gt.blockmachines:1360> * 4, <gregtech:gt.blockmachines:1220> * 4, <liquid:molten.lead>  * 32, 200, 128);
+Assembler.addRecipe(<Railcraft:machine.delta>, <gregtech:gt.blockmachines:1360> * 4, <gregtech:gt.blockmachines:1220> * 4, <liquid:molten.lead>  * 32, 200, 120);
 //-
-AssemblerLiq.addRecipe(<Railcraft:machine.delta>, <gregtech:gt.blockmachines:1360> * 4, <gregtech:gt.blockmachines:1220> * 4, <liquid:molten.solderingalloy>  * 8, 200, 128);
+Assembler.addRecipe(<Railcraft:machine.delta>, <gregtech:gt.blockmachines:1360> * 4, <gregtech:gt.blockmachines:1220> * 4, <liquid:molten.solderingalloy>  * 8, 200, 120);
 
 // --- Void Chest ---
 Assembler.addRecipe(<Railcraft:machine.beta:11>, <ExtraUtilities:trashcan>, ObsidianPlate * 4, 300, 16);
@@ -1830,13 +1828,13 @@ Assembler.addRecipe(<Railcraft:track:7916>.withTag({track: "railcraft:track.spee
 Assembler.addRecipe(<Railcraft:track>.withTag({track: "railcraft:track.speed.wye"}), HsTrack * 2, <gregtech:gt.metaitem.02:20028> * 2, 800, 64);
 
 // --- Electric Switch Track ---
-Assembler.addRecipe(<Railcraft:track:10488>.withTag({track: "railcraft:track.electric.switch"}), ElectricTrack * 2, <gregtech:gt.metaitem.02:23035> * 4, 800, 32);
+Assembler.addRecipe(<Railcraft:track:10488>.withTag({track: "railcraft:track.electric.switch"}), ElectricTrack * 2, <gregtech:gt.metaitem.02:23035> * 4, 800, 30);
 
 // --- Electric Wye Track ---
-Assembler.addRecipe(<Railcraft:track>.withTag({track: "railcraft:track.electric.wye"}), ElectricTrack * 2, <gregtech:gt.metaitem.02:20035> * 2, 800, 32);
+Assembler.addRecipe(<Railcraft:track>.withTag({track: "railcraft:track.electric.wye"}), ElectricTrack * 2, <gregtech:gt.metaitem.02:20035> * 2, 800, 30);
 
 // --- Electric Junction Tack ---
-Assembler.addRecipe(<Railcraft:track>.withTag({track: "railcraft:track.electric.junction"}), ElectricTrack * 2, <gregtech:gt.metaitem.01:27035> * 4, 800, 32);
+Assembler.addRecipe(<Railcraft:track>.withTag({track: "railcraft:track.electric.junction"}), ElectricTrack * 2, <gregtech:gt.metaitem.01:27035> * 4, 800, 30);
 
 
 

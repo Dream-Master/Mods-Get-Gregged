@@ -84,14 +84,14 @@ recipes.remove(<ExtraTrees:door>);
 
 
 // --- Arborist Database
-mods.forestry.Carpenter.addRecipe(2400, <liquid:molten.redstone> * 1440, 
+mods.forestry.Carpenter.addRecipe(60, <liquid:molten.redstone> * 1440, 
 [<gregtech:gt.metaitem.01:27500>, <IC2:itemCasing:3>, <gregtech:gt.metaitem.01:27500>, 
 <gregtech:gt.metaitem.01:17500>, <IC2:itemPartCircuitAdv>, <gregtech:gt.metaitem.01:17501>, 
 <gregtech:gt.metaitem.01:27500>, <IC2:itemCasing:3>, <gregtech:gt.metaitem.01:27500>], 
 <Forestry:treealyzer>, <ExtraTrees:database>);
 
 // --- Lepidopterist Database
-mods.forestry.Carpenter.addRecipe(2400, <liquid:molten.redstone> * 1440, 
+mods.forestry.Carpenter.addRecipe(60, <liquid:molten.redstone> * 1440, 
 [<gregtech:gt.metaitem.01:27500>, <IC2:itemCasing:3>, <gregtech:gt.metaitem.01:27500>, 
 <gregtech:gt.metaitem.01:17501>, <IC2:itemPartCircuitAdv>, <gregtech:gt.metaitem.01:17500>, 
 <gregtech:gt.metaitem.01:27500>, <IC2:itemCasing:3>, <gregtech:gt.metaitem.01:27500>], 
@@ -350,7 +350,7 @@ recipes.addShaped(<ExtraTrees:door:773>.withTag({meta: 773}), [
 
 
 // --- Yeast
-Mixer.addRecipe(<ExtraTrees:misc:6>, null, <dreamcraft:item.MushroomPowder> * 5, null, null, null, <liquid:potion.wheatyjuice> * 1000, 400, 16);
+Mixer.addRecipe(<ExtraTrees:misc:6>, null, [<dreamcraft:item.MushroomPowder> * 5], <liquid:potion.wheatyjuice> * 1000, 400, 16);
 
 // --- Lager Yeast
-Mixer.addRecipe(<ExtraTrees:misc:7>, null, <ExtraTrees:misc:6>, <ExtraTrees:misc:12> * 4, null, null, <liquid:water> * 1000, 600, 16);
+Mixer.addRecipe(<ExtraTrees:misc:7>, null, [<ExtraTrees:misc:6>, <ExtraTrees:misc:12> * 4], <liquid:water> * 1000, 600, 16);

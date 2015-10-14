@@ -6,7 +6,6 @@
 
 
 import mods.gregtech.Assembler;
-import mods.gregtech.AssemblerLiq;
 import mods.ic2.Compressor;
 import mods.ic2.Macerator;
 import mods.nei.NEI;
@@ -83,19 +82,17 @@ recipes.remove(<AdvancedSolarPanel:asp_crafting_items:13>);
 
 
 
-
-
 // --- Molecular Transformer
-recipes.addShaped(<AdvancedSolarPanel:BlockMolecularTransformer>, [
+mods.extraUtils.QED.addShapedRecipe(<AdvancedSolarPanel:BlockMolecularTransformer>, [
 [<IC2:blockMachine:12>, <IC2:blockElectric:5>, <IC2:blockMachine:12>],
-[<ore:circuitAdvanced>, <ore:craftingMTCore>, <ore:circuitAdvanced>],
+[<IC2:itemPartCircuitAdv>, <AdvancedSolarPanel:asp_crafting_items:12>, <IC2:itemPartCircuitAdv>],
 [<IC2:blockMachine:12>, <IC2:blockElectric:5>, <IC2:blockMachine:12>]]);
 
 // --- MT Core fore Molecular Transformer
 recipes.addShaped(<AdvancedSolarPanel:asp_crafting_items:12>, [
-[<AdvancedSolarPanel:asp_crafting_items:5>, <IC2:reactorReflectorThick>, <AdvancedSolarPanel:asp_crafting_items:5>],
+[<AdvancedSolarPanel:asp_crafting_items:5>, <IC2:reactorReflectorThick:1>, <AdvancedSolarPanel:asp_crafting_items:5>],
 [<AdvancedSolarPanel:asp_crafting_items:5>, <ore:craftingToolWrench>, <AdvancedSolarPanel:asp_crafting_items:5>],
-[<AdvancedSolarPanel:asp_crafting_items:5>, <IC2:reactorReflectorThick>, <AdvancedSolarPanel:asp_crafting_items:5>]]);
+[<AdvancedSolarPanel:asp_crafting_items:5>, <IC2:reactorReflectorThick:1>, <AdvancedSolarPanel:asp_crafting_items:5>]]);
 
 // --- Iridium Iron Plate
 recipes.addShaped(<AdvancedSolarPanel:asp_crafting_items:6>, [
@@ -160,32 +157,32 @@ Assembler.addRecipe(<AdvancedSolarPanel:asp_crafting_items:1>, <gregtech:gt.meta
 Assembler.addRecipe(<AdvancedSolarPanel:asp_crafting_items:4>, <AdvancedSolarPanel:asp_crafting_items:1>, <AdvancedSolarPanel:asp_crafting_items:3> *8,  1600, 1024);
 
 // --- Advanced Solar Panel
-AssemblerLiq.addRecipe(<AdvancedSolarPanel:BlockAdvSolarPanel>, <gregtech:gt.blockmachines:11>, <gregtech:gt.metaitem.01:32752>, <liquid:molten.tin> * 144, 800, 64);
+Assembler.addRecipe(<AdvancedSolarPanel:BlockAdvSolarPanel>, <gregtech:gt.blockmachines:11>, <gregtech:gt.metaitem.01:32752>, <liquid:molten.tin> * 144, 800, 64);
 // -
-AssemblerLiq.addRecipe(<AdvancedSolarPanel:BlockAdvSolarPanel>, <gregtech:gt.blockmachines:11>, <gregtech:gt.metaitem.01:32752>, <liquid:molten.solderingalloy> * 72, 800, 64);
+Assembler.addRecipe(<AdvancedSolarPanel:BlockAdvSolarPanel>, <gregtech:gt.blockmachines:11>, <gregtech:gt.metaitem.01:32752>, <liquid:molten.solderingalloy> * 72, 800, 64);
 // -
-AssemblerLiq.addRecipe(<AdvancedSolarPanel:BlockAdvSolarPanel>, <gregtech:gt.blockmachines:11>, <gregtech:gt.metaitem.01:32752>, <liquid:molten.lead> * 288, 800, 64);
+Assembler.addRecipe(<AdvancedSolarPanel:BlockAdvSolarPanel>, <gregtech:gt.blockmachines:11>, <gregtech:gt.metaitem.01:32752>, <liquid:molten.lead> * 288, 800, 64);
 
 // --- Hybrid Solar Panel
-AssemblerLiq.addRecipe(<AdvancedSolarPanel:BlockAdvSolarPanel:1>, <gregtech:gt.blockmachines:12>, <gregtech:gt.metaitem.01:32753>, <liquid:molten.tin> * 288, 1000, 256);
+Assembler.addRecipe(<AdvancedSolarPanel:BlockAdvSolarPanel:1>, <gregtech:gt.blockmachines:12>, <gregtech:gt.metaitem.01:32753>, <liquid:molten.tin> * 288, 1000, 256);
 // -
-AssemblerLiq.addRecipe(<AdvancedSolarPanel:BlockAdvSolarPanel:1>, <gregtech:gt.blockmachines:12>, <gregtech:gt.metaitem.01:32753>, <liquid:molten.solderingalloy> * 144, 1000, 256);
+Assembler.addRecipe(<AdvancedSolarPanel:BlockAdvSolarPanel:1>, <gregtech:gt.blockmachines:12>, <gregtech:gt.metaitem.01:32753>, <liquid:molten.solderingalloy> * 144, 1000, 256);
 // -
-AssemblerLiq.addRecipe(<AdvancedSolarPanel:BlockAdvSolarPanel:1>, <gregtech:gt.blockmachines:12>, <gregtech:gt.metaitem.01:32753>, <liquid:molten.lead> * 576, 1000, 256);
+Assembler.addRecipe(<AdvancedSolarPanel:BlockAdvSolarPanel:1>, <gregtech:gt.blockmachines:12>, <gregtech:gt.metaitem.01:32753>, <liquid:molten.lead> * 576, 1000, 256);
 
 // --- Ultimate Hybrid Solar Panel
-AssemblerLiq.addRecipe(<AdvancedSolarPanel:BlockAdvSolarPanel:2>, <gregtech:gt.blockmachines:13>, <gregtech:gt.metaitem.01:32754>, <liquid:molten.tin> * 432, 1200, 1024);
+Assembler.addRecipe(<AdvancedSolarPanel:BlockAdvSolarPanel:2>, <gregtech:gt.blockmachines:13>, <gregtech:gt.metaitem.01:32754>, <liquid:molten.tin> * 432, 1200, 1024);
 // -
-AssemblerLiq.addRecipe(<AdvancedSolarPanel:BlockAdvSolarPanel:2>, <gregtech:gt.blockmachines:13>, <gregtech:gt.metaitem.01:32754>, <liquid:molten.solderingalloy> * 216, 1200, 1024);
+Assembler.addRecipe(<AdvancedSolarPanel:BlockAdvSolarPanel:2>, <gregtech:gt.blockmachines:13>, <gregtech:gt.metaitem.01:32754>, <liquid:molten.solderingalloy> * 216, 1200, 1024);
 // -
-AssemblerLiq.addRecipe(<AdvancedSolarPanel:BlockAdvSolarPanel:2>, <gregtech:gt.blockmachines:13>, <gregtech:gt.metaitem.01:32754>, <liquid:molten.lead> * 864, 1200, 1024);
+Assembler.addRecipe(<AdvancedSolarPanel:BlockAdvSolarPanel:2>, <gregtech:gt.blockmachines:13>, <gregtech:gt.metaitem.01:32754>, <liquid:molten.lead> * 864, 1200, 1024);
 
 // --- Quantum Solar Panel
-AssemblerLiq.addRecipe(<AdvancedSolarPanel:BlockAdvSolarPanel:3>, <gregtech:gt.blockmachines:14>, <gregtech:gt.metaitem.01:32755>, <liquid:molten.tin> * 576, 1400, 4096);
+Assembler.addRecipe(<AdvancedSolarPanel:BlockAdvSolarPanel:3>, <gregtech:gt.blockmachines:14>, <gregtech:gt.metaitem.01:32755>, <liquid:molten.tin> * 576, 1400, 4096);
 // -
-AssemblerLiq.addRecipe(<AdvancedSolarPanel:BlockAdvSolarPanel:3>, <gregtech:gt.blockmachines:14>, <gregtech:gt.metaitem.01:32755>, <liquid:molten.solderingalloy> * 288, 1400, 4096);
+Assembler.addRecipe(<AdvancedSolarPanel:BlockAdvSolarPanel:3>, <gregtech:gt.blockmachines:14>, <gregtech:gt.metaitem.01:32755>, <liquid:molten.solderingalloy> * 288, 1400, 4096);
 // -
-AssemblerLiq.addRecipe(<AdvancedSolarPanel:BlockAdvSolarPanel:3>, <gregtech:gt.blockmachines:14>, <gregtech:gt.metaitem.01:32755>, <liquid:molten.lead> * 1152, 1400, 4096);
+Assembler.addRecipe(<AdvancedSolarPanel:BlockAdvSolarPanel:3>, <gregtech:gt.blockmachines:14>, <gregtech:gt.metaitem.01:32755>, <liquid:molten.lead> * 1152, 1400, 4096);
 
 
 
@@ -208,6 +205,11 @@ Compressor.addRecipe(<AdvancedSolarPanel:asp_crafting_items>, <AdvancedSolarPane
 
 // --- Sunnarium Dust
 Macerator.addRecipe(<gregtech:gt.metaitem.01:2318>, <AdvancedSolarPanel:asp_crafting_items>);
+
+
+
+
+// --- Nei override Names
 
 
 // --- Irradiant Reinforced Iridium Plate

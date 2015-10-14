@@ -8,14 +8,15 @@
 import mods.gregtech.AlloySmelter;
 import mods.gregtech.ArcFurnace;
 import mods.gregtech.Assembler;
-import mods.gregtech.AssemblerLiq;
 import mods.ic2.Compressor;
+import mods.gregtech.CuttingSaw;
 import mods.ic2.Extractor;
 import mods.gregtech.FluidExtractor;
 import mods.gregtech.ImplosionCompressor;
 import mods.gregtech.Mixer;
+import mods.nei.NEI;
 import mods.gregtech.Slicer;
-import mods.gregtech.SawLiq;
+
 
 
 
@@ -311,7 +312,7 @@ recipes.remove(MossyBricks);
 // --- Obsidian
 recipes.remove(Obsidian);
 
-// --- Jack O' Lantern
+// --- Jack O Lantern
 recipes.remove(JackOLantern);
 
 // --- Trapdoor
@@ -963,6 +964,8 @@ recipes.removeShaped(<minecraft:sand>);
 // --- Glowstone Dust
 recipes.removeShapeless(<minecraft:glowstone_dust>);
 
+// --- Nether Star
+recipes.remove(<minecraft:nether_star>);
 
 
 
@@ -1045,7 +1048,7 @@ recipes.addShaped(Jukebox, [
 [Noteblock, AnyRecord, Noteblock],
 [Log, IronGear, Log]]);
 
-// --- Jack O' Lantern
+// --- Jack O Lantern
 recipes.addShapeless(JackOLantern,
 [Pumpkin, Torch, Knife]);
 
@@ -2623,6 +2626,10 @@ recipes.addShaped(<minecraft:shears>, [
 [<ore:craftingToolHardHammer>, <ore:ringIron>, <ore:craftingToolFile>],
 [<ore:stickWood>, <ore:craftingToolScrewdriver>, <ore:stickWood>]]);
 
+// --- Nether Star
+recipes.addShaped(<minecraft:nether_star> * 16, [
+[<gregtech:gt.metaitem.03:2506>, <ore:craftingToolCrowbar>]]);
+
 // --- Charcoal
 mods.railcraft.BlastFurnace.addRecipe(<minecraft:log:*>, false, false, 20, <minecraft:coal:1>);
 // -
@@ -2711,16 +2718,16 @@ ArcFurnace.addRecipe([<minecraft:glass> * 2], <minecraft:sand>, <liquid:oxygen> 
 
 
 // --- Hay Block
-Assembler.addRecipe(<minecraft:hay_block>, <minecraft:wheat> * 9, <minecraft:string> * 2, 200, 32);
+Assembler.addRecipe(<minecraft:hay_block>, <minecraft:wheat> * 9, <minecraft:string> * 2, 200, 30);
 
 // --- Soul Sand
-AssemblerLiq.addRecipe(<minecraft:soul_sand>, <Natura:heatsand>, <Natura:soil.tainted> * 4, <liquid:water> * 1000, 100, 16);
+Assembler.addRecipe(<minecraft:soul_sand>, <Natura:heatsand>, <Natura:soil.tainted> * 4, <liquid:water> * 1000, 100, 16);
 
 // --- Wither Skull
-AssemblerLiq.addRecipe(<minecraft:skull:1>, <MagicBees:miscResources:4> * 6, <gregtech:gt.integrated_circuit:6> * 0, <liquid:molten.thaumium> * 216, 200, 96);
+Assembler.addRecipe(<minecraft:skull:1>, <MagicBees:miscResources:4> * 6, <gregtech:gt.integrated_circuit:6> * 0, <liquid:molten.thaumium> * 216, 200, 96);
 
 // --- Torch
-AssemblerLiq.addRecipe(<minecraft:torch> * 5, <minecraft:stick>, <minecraft:wool:*>, <liquid:creosote> * 500, 100, 4);
+Assembler.addRecipe(<minecraft:torch> * 5, <minecraft:stick>, <minecraft:wool:*>, <liquid:creosote> * 500, 100, 4);
 // -
 Assembler.addRecipe(<minecraft:torch> * 4, <minecraft:stick>, <gregtech:gt.metaitem.01:2536>, 100, 4);
 // -
@@ -2731,20 +2738,20 @@ Assembler.addRecipe(<minecraft:torch> * 4, <minecraft:stick>, <gregtech:gt.metai
 Assembler.addRecipe(<minecraft:torch> * 6, <minecraft:stick>, <gregtech:gt.metaitem.01:2022>, 100, 4);
 
 // --- Wooden Door
-AssemblerLiq.addRecipe(<minecraft:wooden_door>, <gregtech:gt.metaitem.01:17809> * 4, <minecraft:trapdoor>, <liquid:molten.iron> * 16, 400, 4);
+Assembler.addRecipe(<minecraft:wooden_door>, <gregtech:gt.metaitem.01:17809> * 4, <minecraft:trapdoor>, <liquid:molten.iron> * 16, 400, 4);
 // -
-AssemblerLiq.addRecipe(<minecraft:wooden_door>, <gregtech:gt.metaitem.01:17809> * 4, <minecraft:trapdoor>, <liquid:molten.copper> * 16, 400, 4);
+Assembler.addRecipe(<minecraft:wooden_door>, <gregtech:gt.metaitem.01:17809> * 4, <minecraft:trapdoor>, <liquid:molten.copper> * 16, 400, 4);
 
 // --- Iron Door
-AssemblerLiq.addRecipe(<minecraft:iron_door>, <Railcraft:part.plate> * 4, <dreamcraft:item.SteelBars>, <liquid:molten.steel> * 16, 400, 8);
+Assembler.addRecipe(<minecraft:iron_door>, <Railcraft:part.plate> * 4, <dreamcraft:item.SteelBars>, <liquid:molten.steel> * 16, 400, 8);
 
 // --- Trapped Door
-AssemblerLiq.addRecipe(<minecraft:trapdoor> * 4, <minecraft:wooden_slab:*> * 4, <minecraft:stick> * 4, <liquid:molten.iron> * 16, 600, 4);
+Assembler.addRecipe(<minecraft:trapdoor> * 4, <minecraft:wooden_slab:*> * 4, <minecraft:stick> * 4, <liquid:molten.iron> * 16, 600, 4);
 // -
-AssemblerLiq.addRecipe(<minecraft:trapdoor> * 6, <minecraft:wooden_slab:*> * 4, <minecraft:stick> * 4, <liquid:molten.steel> * 16, 600, 4);
+Assembler.addRecipe(<minecraft:trapdoor> * 6, <minecraft:wooden_slab:*> * 4, <minecraft:stick> * 4, <liquid:molten.steel> * 16, 600, 4);
 
 // --- Piston
-Assembler.addRecipe(<minecraft:piston>, <dreamcraft:tile.PistonBlock>, <dreamcraft:item.PistonPlate>, 200, 32);
+Assembler.addRecipe(<minecraft:piston>, <dreamcraft:tile.PistonBlock>, <dreamcraft:item.PistonPlate>, 100, 30);
 
 // --- Bookshelf
 Assembler.addRecipe(<minecraft:bookshelf>, <minecraft:planks:*> * 6, <minecraft:book> * 3, 300, 16);
@@ -2755,6 +2762,567 @@ Assembler.addRecipe(<minecraft:crafting_table>, <minecraft:log:*>, <minecraft:fl
 // --- Fence Gate
 Assembler.addRecipe(FenceGate, <minecraft:stick> * 2, <minecraft:planks:*> * 2, 300, 8);
 
+// --- Nether Star
+Assembler.addRecipe(<minecraft:nether_star>, <Thaumcraft:ItemResource:14> * 12, <minecraft:nether_star> * 0, 900, 256);
+
+// --- Chest
+Assembler.addRecipe(Chest, <minecraft:log:*> * 2, <minecraft:planks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <minecraft:log:*> * 2, <ExtraTrees:planks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <minecraft:log:*> * 2, <BiomesOPlenty:planks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <minecraft:log:*> * 2, <ExtraUtilities:colorWoodPlanks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <minecraft:log:*> * 2, <Forestry:planks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <minecraft:log:*> * 2, <Forestry:planks2:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <minecraft:log:*> * 2, <Forestry:fireproofPlanks1:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <minecraft:log:*> * 2, <Forestry:fireproofPlanks2:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <minecraft:log:*> * 2, <Natura:planks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <minecraft:log:*> * 2, <Thaumcraft:blockWoodenDevice:6> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <minecraft:log:*> * 2, <Thaumcraft:blockWoodenDevice:7> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <minecraft:log:*> * 2, <harvestthenether:netherPlanks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <minecraft:log:*> * 2, <witchery:witchwood:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <minecraft:log2:*> * 2, <minecraft:planks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <minecraft:log2:*> * 2, <BiomesOPlenty:planks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <minecraft:log2:*> * 2, <ExtraTrees:planks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <minecraft:log2:*> * 2, <ExtraUtilities:colorWoodPlanks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <minecraft:log2:*> * 2, <Forestry:planks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <minecraft:log2:*> * 2, <Forestry:planks2:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <minecraft:log2:*> * 2, <Forestry:fireproofPlanks1:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <minecraft:log2:*> * 2, <Forestry:fireproofPlanks2:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <minecraft:log2:*> * 2, <Natura:planks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <minecraft:log2:*> * 2, <Thaumcraft:blockWoodenDevice:6> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <minecraft:log2:*> * 2, <Thaumcraft:blockWoodenDevice:7> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <minecraft:log2:*> * 2, <harvestthenether:netherPlanks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <minecraft:log2:*> * 2, <witchery:witchwood:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <BiomesOPlenty:logs1:*> * 2, <minecraft:planks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <BiomesOPlenty:logs1:*> * 2, <BiomesOPlenty:planks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <BiomesOPlenty:logs1:*> * 2, <ExtraTrees:planks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <BiomesOPlenty:logs1:*> * 2, <ExtraUtilities:colorWoodPlanks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <BiomesOPlenty:logs1:*> * 2, <Forestry:planks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <BiomesOPlenty:logs1:*> * 2, <Forestry:planks2:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <BiomesOPlenty:logs1:*> * 2, <Forestry:fireproofPlanks1:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <BiomesOPlenty:logs1:*> * 2, <Forestry:fireproofPlanks2:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <BiomesOPlenty:logs1:*> * 2, <Natura:planks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <BiomesOPlenty:logs1:*> * 2, <Thaumcraft:blockWoodenDevice:6> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <BiomesOPlenty:logs1:*> * 2, <Thaumcraft:blockWoodenDevice:7> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <BiomesOPlenty:logs1:*> * 2, <harvestthenether:netherPlanks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <BiomesOPlenty:logs1:*> * 2, <witchery:witchwood:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <BiomesOPlenty:logs2:*> * 2, <minecraft:planks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <BiomesOPlenty:logs2:*> * 2, <BiomesOPlenty:planks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <BiomesOPlenty:logs2:*> * 2, <ExtraTrees:planks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <BiomesOPlenty:logs2:*> * 2, <ExtraUtilities:colorWoodPlanks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <BiomesOPlenty:logs2:*> * 2, <Forestry:planks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <BiomesOPlenty:logs2:*> * 2, <Forestry:planks2:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <BiomesOPlenty:logs2:*> * 2, <Forestry:fireproofPlanks1:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <BiomesOPlenty:logs2:*> * 2, <Forestry:fireproofPlanks2:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <BiomesOPlenty:logs2:*> * 2, <Natura:planks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <BiomesOPlenty:logs2:*> * 2, <Thaumcraft:blockWoodenDevice:6> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <BiomesOPlenty:logs2:*> * 2, <Thaumcraft:blockWoodenDevice:7> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <BiomesOPlenty:logs2:*> * 2, <harvestthenether:netherPlanks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <BiomesOPlenty:logs2:*> * 2, <witchery:witchwood:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <BiomesOPlenty:logs3:*> * 2, <minecraft:planks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <BiomesOPlenty:logs3:*> * 2, <BiomesOPlenty:planks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <BiomesOPlenty:logs3:*> * 2, <ExtraTrees:planks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <BiomesOPlenty:logs3:*> * 2, <ExtraUtilities:colorWoodPlanks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <BiomesOPlenty:logs3:*> * 2, <Forestry:planks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <BiomesOPlenty:logs3:*> * 2, <Forestry:planks2:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <BiomesOPlenty:logs3:*> * 2, <Forestry:fireproofPlanks1:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <BiomesOPlenty:logs3:*> * 2, <Forestry:fireproofPlanks2:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <BiomesOPlenty:logs3:*> * 2, <Natura:planks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <BiomesOPlenty:logs3:*> * 2, <Thaumcraft:blockWoodenDevice:6> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <BiomesOPlenty:logs3:*> * 2, <Thaumcraft:blockWoodenDevice:7> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <BiomesOPlenty:logs3:*> * 2, <harvestthenether:netherPlanks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <BiomesOPlenty:logs3:*> * 2, <witchery:witchwood:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <BiomesOPlenty:logs4:*> * 2, <minecraft:planks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <BiomesOPlenty:logs4:*> * 2, <BiomesOPlenty:planks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <BiomesOPlenty:logs4:*> * 2, <ExtraTrees:planks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <BiomesOPlenty:logs4:*> * 2, <ExtraUtilities:colorWoodPlanks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <BiomesOPlenty:logs4:*> * 2, <Forestry:planks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <BiomesOPlenty:logs4:*> * 2, <Forestry:planks2:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <BiomesOPlenty:logs4:*> * 2, <Forestry:fireproofPlanks1:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <BiomesOPlenty:logs4:*> * 2, <Forestry:fireproofPlanks2:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <BiomesOPlenty:logs4:*> * 2, <Natura:planks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <BiomesOPlenty:logs4:*> * 2, <Thaumcraft:blockWoodenDevice:6> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <BiomesOPlenty:logs4:*> * 2, <Thaumcraft:blockWoodenDevice:7> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <BiomesOPlenty:logs4:*> * 2, <harvestthenether:netherPlanks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <BiomesOPlenty:logs4:*> * 2, <witchery:witchwood:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <ExtraTrees:log:*> * 2, <minecraft:planks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <ExtraTrees:log:*> * 2, <BiomesOPlenty:planks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <ExtraTrees:log:*> * 2, <ExtraTrees:planks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <ExtraTrees:log:*> * 2, <ExtraUtilities:colorWoodPlanks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <ExtraTrees:log:*> * 2, <Forestry:planks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <ExtraTrees:log:*> * 2, <Forestry:planks2:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <ExtraTrees:log:*> * 2, <Forestry:fireproofPlanks1:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <ExtraTrees:log:*> * 2, <Forestry:fireproofPlanks2:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <ExtraTrees:log:*> * 2, <Natura:planks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <ExtraTrees:log:*> * 2, <Thaumcraft:blockWoodenDevice:6> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <ExtraTrees:log:*> * 2, <Thaumcraft:blockWoodenDevice:7> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <ExtraTrees:log:*> * 2, <harvestthenether:netherPlanks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <ExtraTrees:log:*> * 2, <witchery:witchwood:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:log2:*> * 2, <minecraft:planks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:log2:*> * 2, <BiomesOPlenty:planks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:log2:*> * 2, <ExtraTrees:planks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:log2:*> * 2, <ExtraUtilities:colorWoodPlanks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:log2:*> * 2, <Forestry:planks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:log2:*> * 2, <Forestry:planks2:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:log2:*> * 2, <Forestry:fireproofPlanks1:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:log2:*> * 2, <Forestry:fireproofPlanks2:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:log2:*> * 2, <Natura:planks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:log2:*> * 2, <Thaumcraft:blockWoodenDevice:6> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:log2:*> * 2, <Thaumcraft:blockWoodenDevice:7> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:log2:*> * 2, <harvestthenether:netherPlanks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:log2:*> * 2, <witchery:witchwood:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:log3:*> * 2, <minecraft:planks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:log3:*> * 2, <BiomesOPlenty:planks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:log3:*> * 2, <ExtraTrees:planks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:log3:*> * 2, <ExtraUtilities:colorWoodPlanks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:log3:*> * 2, <Forestry:planks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:log3:*> * 2, <Forestry:planks2:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:log3:*> * 2, <Forestry:fireproofPlanks1:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:log3:*> * 2, <Forestry:fireproofPlanks2:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:log3:*> * 2, <Natura:planks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:log3:*> * 2, <Thaumcraft:blockWoodenDevice:6> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:log3:*> * 2, <Thaumcraft:blockWoodenDevice:7> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:log3:*> * 2, <harvestthenether:netherPlanks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:log3:*> * 2, <witchery:witchwood:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:log4:*> * 2, <minecraft:planks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:log4:*> * 2, <BiomesOPlenty:planks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:log4:*> * 2, <ExtraTrees:planks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:log4:*> * 2, <ExtraUtilities:colorWoodPlanks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:log4:*> * 2, <Forestry:planks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:log4:*> * 2, <Forestry:planks2:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:log4:*> * 2, <Forestry:fireproofPlanks1:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:log4:*> * 2, <Forestry:fireproofPlanks2:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:log4:*> * 2, <Natura:planks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:log4:*> * 2, <Thaumcraft:blockWoodenDevice:6> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:log4:*> * 2, <Thaumcraft:blockWoodenDevice:7> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:log4:*> * 2, <harvestthenether:netherPlanks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:log4:*> * 2, <witchery:witchwood:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:log5:*> * 2, <minecraft:planks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:log5:*> * 2, <BiomesOPlenty:planks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:log5:*> * 2, <ExtraTrees:planks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:log5:*> * 2, <ExtraUtilities:colorWoodPlanks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:log5:*> * 2, <Forestry:planks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:log5:*> * 2, <Forestry:planks2:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:log5:*> * 2, <Forestry:fireproofPlanks1:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:log5:*> * 2, <Forestry:fireproofPlanks2:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:log5:*> * 2, <Natura:planks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:log5:*> * 2, <Thaumcraft:blockWoodenDevice:6> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:log5:*> * 2, <Thaumcraft:blockWoodenDevice:7> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:log5:*> * 2, <harvestthenether:netherPlanks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:log5:*> * 2, <witchery:witchwood:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:log6:*> * 2, <minecraft:planks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:log6:*> * 2, <BiomesOPlenty:planks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:log6:*> * 2, <ExtraTrees:planks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:log6:*> * 2, <ExtraUtilities:colorWoodPlanks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:log6:*> * 2, <Forestry:planks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:log6:*> * 2, <Forestry:planks2:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:log6:*> * 2, <Forestry:fireproofPlanks1:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:log6:*> * 2, <Forestry:fireproofPlanks2:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:log6:*> * 2, <Natura:planks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:log6:*> * 2, <Thaumcraft:blockWoodenDevice:6> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:log6:*> * 2, <Thaumcraft:blockWoodenDevice:7> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:log6:*> * 2, <harvestthenether:netherPlanks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:log6:*> * 2, <witchery:witchwood:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:log7:*> * 2, <minecraft:planks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:log7:*> * 2, <BiomesOPlenty:planks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:log7:*> * 2, <ExtraTrees:planks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:log7:*> * 2, <ExtraUtilities:colorWoodPlanks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:log7:*> * 2, <Forestry:planks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:log7:*> * 2, <Forestry:planks2:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:log7:*> * 2, <Forestry:fireproofPlanks1:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:log7:*> * 2, <Forestry:fireproofPlanks2:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:log7:*> * 2, <Natura:planks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:log7:*> * 2, <Thaumcraft:blockWoodenDevice:6> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:log7:*> * 2, <Thaumcraft:blockWoodenDevice:7> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:log7:*> * 2, <harvestthenether:netherPlanks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:log7:*> * 2, <witchery:witchwood:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:fireproofLog1:*> * 2, <minecraft:planks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:fireproofLog1:*> * 2, <BiomesOPlenty:planks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:fireproofLog1:*> * 2, <ExtraTrees:planks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:fireproofLog1:*> * 2, <ExtraUtilities:colorWoodPlanks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:fireproofLog1:*> * 2, <Forestry:planks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:fireproofLog1:*> * 2, <Forestry:planks2:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:fireproofLog1:*> * 2, <Forestry:fireproofPlanks1:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:fireproofLog1:*> * 2, <Forestry:fireproofPlanks2:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:fireproofLog1:*> * 2, <Natura:planks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:fireproofLog1:*> * 2, <Thaumcraft:blockWoodenDevice:6> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:fireproofLog1:*> * 2, <Thaumcraft:blockWoodenDevice:7> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:fireproofLog1:*> * 2, <harvestthenether:netherPlanks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:fireproofLog1:*> * 2, <witchery:witchwood:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:fireproofLog2:*> * 2, <minecraft:planks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:fireproofLog2:*> * 2, <BiomesOPlenty:planks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:fireproofLog2:*> * 2, <ExtraTrees:planks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:fireproofLog2:*> * 2, <ExtraUtilities:colorWoodPlanks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:fireproofLog2:*> * 2, <Forestry:planks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:fireproofLog2:*> * 2, <Forestry:planks2:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:fireproofLog2:*> * 2, <Forestry:fireproofPlanks1:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:fireproofLog2:*> * 2, <Forestry:fireproofPlanks2:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:fireproofLog2:*> * 2, <Natura:planks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:fireproofLog2:*> * 2, <Thaumcraft:blockWoodenDevice:6> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:fireproofLog2:*> * 2, <Thaumcraft:blockWoodenDevice:7> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:fireproofLog2:*> * 2, <harvestthenether:netherPlanks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:fireproofLog2:*> * 2, <witchery:witchwood:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:fireproofLog3:*> * 2, <minecraft:planks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:fireproofLog3:*> * 2, <BiomesOPlenty:planks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:fireproofLog3:*> * 2, <ExtraTrees:planks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:fireproofLog3:*> * 2, <ExtraUtilities:colorWoodPlanks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:fireproofLog3:*> * 2, <Forestry:planks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:fireproofLog3:*> * 2, <Forestry:planks2:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:fireproofLog3:*> * 2, <Forestry:fireproofPlanks1:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:fireproofLog3:*> * 2, <Forestry:fireproofPlanks2:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:fireproofLog3:*> * 2, <Natura:planks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:fireproofLog3:*> * 2, <Thaumcraft:blockWoodenDevice:6> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:fireproofLog3:*> * 2, <Thaumcraft:blockWoodenDevice:7> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:fireproofLog3:*> * 2, <harvestthenether:netherPlanks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:fireproofLog3:*> * 2, <witchery:witchwood:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:fireproofLog4:*> * 2, <minecraft:planks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:fireproofLog4:*> * 2, <BiomesOPlenty:planks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:fireproofLog4:*> * 2, <ExtraTrees:planks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:fireproofLog4:*> * 2, <ExtraUtilities:colorWoodPlanks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:fireproofLog4:*> * 2, <Forestry:planks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:fireproofLog4:*> * 2, <Forestry:planks2:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:fireproofLog4:*> * 2, <Forestry:fireproofPlanks1:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:fireproofLog4:*> * 2, <Forestry:fireproofPlanks2:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:fireproofLog4:*> * 2, <Natura:planks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:fireproofLog4:*> * 2, <Thaumcraft:blockWoodenDevice:6> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:fireproofLog4:*> * 2, <Thaumcraft:blockWoodenDevice:7> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:fireproofLog4:*> * 2, <harvestthenether:netherPlanks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:fireproofLog4:*> * 2, <witchery:witchwood:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:fireproofLog5:*> * 2, <minecraft:planks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:fireproofLog5:*> * 2, <BiomesOPlenty:planks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:fireproofLog5:*> * 2, <ExtraTrees:planks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:fireproofLog5:*> * 2, <ExtraUtilities:colorWoodPlanks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:fireproofLog5:*> * 2, <Forestry:planks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:fireproofLog5:*> * 2, <Forestry:planks2:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:fireproofLog5:*> * 2, <Forestry:fireproofPlanks1:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:fireproofLog5:*> * 2, <Forestry:fireproofPlanks2:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:fireproofLog5:*> * 2, <Natura:planks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:fireproofLog5:*> * 2, <Thaumcraft:blockWoodenDevice:6> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:fireproofLog5:*> * 2, <Thaumcraft:blockWoodenDevice:7> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:fireproofLog5:*> * 2, <harvestthenether:netherPlanks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:fireproofLog5:*> * 2, <witchery:witchwood:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:fireproofLog6:*> * 2, <minecraft:planks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:fireproofLog6:*> * 2, <BiomesOPlenty:planks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:fireproofLog6:*> * 2, <ExtraTrees:planks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:fireproofLog6:*> * 2, <ExtraUtilities:colorWoodPlanks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:fireproofLog6:*> * 2, <Forestry:planks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:fireproofLog6:*> * 2, <Forestry:planks2:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:fireproofLog6:*> * 2, <Forestry:fireproofPlanks1:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:fireproofLog6:*> * 2, <Forestry:fireproofPlanks2:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:fireproofLog6:*> * 2, <Natura:planks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:fireproofLog6:*> * 2, <Thaumcraft:blockWoodenDevice:6> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:fireproofLog6:*> * 2, <Thaumcraft:blockWoodenDevice:7> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:fireproofLog6:*> * 2, <harvestthenether:netherPlanks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:fireproofLog6:*> * 2, <witchery:witchwood:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:fireproofLog7:*> * 2, <minecraft:planks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:fireproofLog7:*> * 2, <BiomesOPlenty:planks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:fireproofLog7:*> * 2, <ExtraTrees:planks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:fireproofLog7:*> * 2, <ExtraUtilities:colorWoodPlanks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:fireproofLog7:*> * 2, <Forestry:planks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:fireproofLog7:*> * 2, <Forestry:planks2:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:fireproofLog7:*> * 2, <Forestry:fireproofPlanks1:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:fireproofLog7:*> * 2, <Forestry:fireproofPlanks2:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:fireproofLog7:*> * 2, <Natura:planks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:fireproofLog7:*> * 2, <Thaumcraft:blockWoodenDevice:6> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:fireproofLog7:*> * 2, <Thaumcraft:blockWoodenDevice:7> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:fireproofLog7:*> * 2, <harvestthenether:netherPlanks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:fireproofLog7:*> * 2, <witchery:witchwood:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:fireproofLog8:*> * 2, <minecraft:planks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:fireproofLog8:*> * 2, <BiomesOPlenty:planks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:fireproofLog8:*> * 2, <ExtraTrees:planks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:fireproofLog8:*> * 2, <ExtraUtilities:colorWoodPlanks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:fireproofLog8:*> * 2, <Forestry:planks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:fireproofLog8:*> * 2, <Forestry:planks2:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:fireproofLog8:*> * 2, <Forestry:fireproofPlanks1:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:fireproofLog8:*> * 2, <Forestry:fireproofPlanks2:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:fireproofLog8:*> * 2, <Natura:planks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:fireproofLog8:*> * 2, <Thaumcraft:blockWoodenDevice:6> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:fireproofLog8:*> * 2, <Thaumcraft:blockWoodenDevice:7> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:fireproofLog8:*> * 2, <harvestthenether:netherPlanks:*> * 2, 100, 30);
+// -
+Assembler.addRecipe(Chest, <Forestry:fireproofLog8:*> * 2, <witchery:witchwood:*> * 2, 100, 30);
+
+// --- Lever
+Assembler.addRecipe(Lever, <minecraft:stick>, <minecraft:stone_button>, 50, 16);
+// -
+Assembler.addRecipe(Lever, <Natura:natura.stick:*>, <minecraft:stone_button>, 50, 16);
+// -
+Assembler.addRecipe(Lever, <BiomesOPlenty:bamboo>, <minecraft:stone_button>, 50, 16);
+// -
+Assembler.addRecipe(Lever, <BiomesOPlenty:plants:8>, <minecraft:stone_button>, 50, 16);
+
+
+
 
 
 
@@ -2763,33 +3331,33 @@ Assembler.addRecipe(FenceGate, <minecraft:stick> * 2, <minecraft:planks:*> * 2, 
 
 
 // --- Wooden Pressure Plate
-SawLiq.addRecipe(<minecraft:wooden_pressure_plate> * 2, null, <minecraft:wooden_slab:*>, <liquid:water> * 4, 50, 4);
+CuttingSaw.addRecipe(<minecraft:wooden_pressure_plate> * 2, null, <minecraft:wooden_slab:*>, <liquid:water> * 4, 50, 4);
 // -
-SawLiq.addRecipe(<minecraft:wooden_pressure_plate> * 2, null, <minecraft:wooden_slab:*>, <liquid:ic2distilledwater> * 3, 50, 4);
+CuttingSaw.addRecipe(<minecraft:wooden_pressure_plate> * 2, null, <minecraft:wooden_slab:*>, <liquid:ic2distilledwater> * 3, 50, 4);
 // -
-SawLiq.addRecipe(<minecraft:wooden_pressure_plate> * 2, null, <minecraft:wooden_slab:*>, <liquid:lubricant> * 1, 25, 4);
+CuttingSaw.addRecipe(<minecraft:wooden_pressure_plate> * 2, null, <minecraft:wooden_slab:*>, <liquid:lubricant> * 1, 25, 4);
 
 // --- Stone Pressure Plate
-SawLiq.addRecipe(<minecraft:stone_pressure_plate> * 2, null, <minecraft:stone_slab>, <liquid:water> * 4, 50, 8);
+CuttingSaw.addRecipe(<minecraft:stone_pressure_plate> * 2, null, <minecraft:stone_slab>, <liquid:water> * 4, 50, 8);
 // -
-SawLiq.addRecipe(<minecraft:stone_pressure_plate> * 2, null, <minecraft:stone_slab>, <liquid:ic2distilledwater> * 3, 50, 8);
+CuttingSaw.addRecipe(<minecraft:stone_pressure_plate> * 2, null, <minecraft:stone_slab>, <liquid:ic2distilledwater> * 3, 50, 8);
 // -
-SawLiq.addRecipe(<minecraft:stone_pressure_plate> * 2, null, <minecraft:stone_slab>, <liquid:lubricant> * 1, 25, 8);
+CuttingSaw.addRecipe(<minecraft:stone_pressure_plate> * 2, null, <minecraft:stone_slab>, <liquid:lubricant> * 1, 25, 8);
 
 // --- Button Wood
-SawLiq.addRecipe(<minecraft:wooden_button> * 2, null, <minecraft:wooden_pressure_plate>, <liquid:water> * 4, 50, 4);
+CuttingSaw.addRecipe(<minecraft:wooden_button> * 2, null, <minecraft:wooden_pressure_plate>, <liquid:water> * 4, 50, 4);
 // -
-SawLiq.addRecipe(<minecraft:wooden_button> * 2, null, <minecraft:wooden_pressure_plate>, <liquid:ic2distilledwater> * 3, 50, 4);
+CuttingSaw.addRecipe(<minecraft:wooden_button> * 2, null, <minecraft:wooden_pressure_plate>, <liquid:ic2distilledwater> * 3, 50, 4);
 // -
-SawLiq.addRecipe(<minecraft:wooden_button> * 2, null, <minecraft:wooden_pressure_plate>, <liquid:lubricant> * 1, 25, 4);
+CuttingSaw.addRecipe(<minecraft:wooden_button> * 2, null, <minecraft:wooden_pressure_plate>, <liquid:lubricant> * 1, 25, 4);
 
 
 // --- Button Stone
-SawLiq.addRecipe(<minecraft:stone_button> * 2, null, <minecraft:stone_pressure_plate>, <liquid:water> * 4, 50, 8);
+CuttingSaw.addRecipe(<minecraft:stone_button> * 2, null, <minecraft:stone_pressure_plate>, <liquid:water> * 4, 50, 8);
 // -
-SawLiq.addRecipe(<minecraft:stone_button> * 2, null, <minecraft:stone_pressure_plate>, <liquid:ic2distilledwater> * 3, 50, 8);
+CuttingSaw.addRecipe(<minecraft:stone_button> * 2, null, <minecraft:stone_pressure_plate>, <liquid:ic2distilledwater> * 3, 50, 8);
 // -
-SawLiq.addRecipe(<minecraft:stone_button> * 2, null, <minecraft:stone_pressure_plate>, <liquid:lubricant> * 1, 25, 8);
+CuttingSaw.addRecipe(<minecraft:stone_button> * 2, null, <minecraft:stone_pressure_plate>, <liquid:lubricant> * 1, 25, 8);
 
 
 
@@ -2835,10 +3403,10 @@ oreDict.craftingToolShears.add(<minecraft:shears>);
 
 
 // --- Soul Sand
-Mixer.addRecipe(<minecraft:soul_sand> * 4, null, <minecraft:sand:*> * 4, <minecraft:dirt:*>, <MagicBees:wax:1> * 4, null, <liquid:water> * 1000, 100, 16);
+Mixer.addRecipe(<minecraft:soul_sand> * 4, null, [<minecraft:sand:*> * 4, <minecraft:dirt:*>, <MagicBees:wax:1> * 4], <liquid:water> * 1000, 100, 16);
 
 // --- Fire Charge
-Mixer.addRecipe(<minecraft:fire_charge>, null, <minecraft:blaze_powder> * 3, <minecraft:gunpowder> * 3, <gregtech:gt.metaitem.01:2535> * 3, null, null, 400, 32);
+Mixer.addRecipe(<minecraft:fire_charge>, [<minecraft:blaze_powder> * 3, <minecraft:gunpowder> * 3, <gregtech:gt.metaitem.01:2535> * 3], 400, 30);
 
 
 // --- Thaumcraft recipes ---
@@ -2849,11 +3417,11 @@ Mixer.addRecipe(<minecraft:fire_charge>, null, <minecraft:blaze_powder> * 3, <mi
 // --- Enchanting Table Infusion
 mods.thaumcraft.Research.addResearch("ENCHANTINGTABLE", "ARTIFICE", "praecantatio 200, fabrico 200, cognitio 100, potentia 200", 10, 10, 12, <minecraft:enchanting_table>);
 game.setLocalization("en_US", "tc.research_name.ENCHANTINGTABLE", "Enchanting Table");
-game.setLocalization("en_US", "tc.research_text.ENCHANTINGTABLE", "[MC] Oh, it's more magical than a Table!");
+game.setLocalization("en_US", "tc.research_text.ENCHANTINGTABLE", "[MC] Oh, its more magical than a Table!");
 mods.thaumcraft.Research.addPrereq("ENCHANTINGTABLE", "INFUSION", false);
 mods.thaumcraft.Research.setConcealed("ENCHANTINGTABLE", true);
 mods.thaumcraft.Research.addPage("ENCHANTINGTABLE", "Minecraft.research_page.ENCHANTINGTABLE");
-game.setLocalization("en_US", "Minecraft.research_page.ENCHANTINGTABLE", "An enchantment table is a block that allows players to spend their experience point levels to enchant tools, books and armor. The enchanting table's main purpose is to enchant items. Bookshelves surrounding the table, with a block of air in between, will increase the maximum enchantment level. The table will enchant all tools and armor except the hoe, shears, flint and steel, lead and horse armor. The hoe and shears cannot be enchanted by the enchantment table and require an anvil and an appropriate enchanted book.");
+game.setLocalization("en_US", "Minecraft.research_page.ENCHANTINGTABLE", "An enchantment table is a block that allows players to spend their experience point levels to enchant tools, books and armor. The enchanting tables main purpose is to enchant items. Bookshelves surrounding the table, with a block of air in between, will increase the maximum enchantment level. The table will enchant all tools and armor except the hoe, shears, flint and steel, lead and horse armor. The hoe and shears cannot be enchanted by the enchantment table and require an anvil and an appropriate enchanted book.");
 mods.thaumcraft.Infusion.addRecipe("ENCHANTINGTABLE", <minecraft:obsidian>, [<minecraft:bookshelf>, <Thaumcraft:ItemResource:1>, <minecraft:diamond_block>, <Thaumcraft:ItemResource>, <IC2:itemDensePlates:7>, <minecraft:bookshelf>, <Thaumcraft:ItemResource:1>, <minecraft:diamond_block>, <Thaumcraft:ItemResource>, <IC2:itemDensePlates:7>], "praecantatio 120, fabrico 100, cognitio 120, potentia 80", <minecraft:enchanting_table>, 5);
 mods.thaumcraft.Research.addInfusionPage("ENCHANTINGTABLE", <minecraft:enchanting_table>);
 mods.thaumcraft.Warp.addToResearch("ENCHANTINGTABLE", 2);
@@ -2861,13 +3429,13 @@ mods.thaumcraft.Warp.addToResearch("ENCHANTINGTABLE", 2);
 // --- Brewing Stand Infusion
 mods.thaumcraft.Research.addResearch("BREWINGSTAND", "ARTIFICE", "praecantatio 200, fabrico 100, cognitio 100, perditio 100, ignis 100, terra 100, aqua 100", 8, 12, 12, <minecraft:brewing_stand>);
 game.setLocalization("en_US", "tc.research_name.BREWINGSTAND", "Brewing Stand");
-game.setLocalization("en_US", "tc.research_text.BREWINGSTAND", "[MC] Oh, it's more magical than a Cauldron!");
+game.setLocalization("en_US", "tc.research_text.BREWINGSTAND", "[MC] Oh, its more magical than a Cauldron!");
 mods.thaumcraft.Research.addPrereq("BREWINGSTAND", "ENCHANTINGTABLE", false);
 mods.thaumcraft.Research.setConcealed("BREWINGSTAND", true);
 mods.thaumcraft.Research.addPage("BREWINGSTAND", "brewingstand.research_page.BREWINGSTAND.1");
 game.setLocalization("en_US", "brewingstand.research_page.BREWINGSTAND.1", "Brewing (or Alchemy) is the process of creating potions and splash potions by adding various ingredients to water bottles in a brewing stand. By placing bottles in the lower three slots of the brewing interface and an ingredient in the upper slot, you can distill the ingredient into the bottles and brew potions which may be consumed to grant an effect to the player. Every potion starts with a water bottle, made by filling a glass bottle at a water source or filled cauldron. The next step is to add a primary ingredient to create a base potion, which is usually Nether Wart, which creates an awkward potion and has no effects.");
 mods.thaumcraft.Research.addPage("BREWINGSTAND", "brewingstand.research_page.BREWINGSTAND.2");
-game.setLocalization("en_US", "brewingstand.research_page.BREWINGSTAND.2", "By brewing a second ingredient into a base potion in the same manner, you can create a potion with a working effect. A third ingredient may be added to make the effect more intense or last longer, or turn the effect harmful. Finally, gunpowder can be added to a potion at any stage to convert it to a splash potion, which can be thrown (or fired using a dispenser) to disperse its effect in a radius. Each brewing step takes 20 seconds. Brewing can create very useful and lifesaving items. A good number of them are useful in combat by aiding the player or weakening enemies while others can save the player's life if used quickly, like Fire Resistance or Healing.");
+game.setLocalization("en_US", "brewingstand.research_page.BREWINGSTAND.2", "By brewing a second ingredient into a base potion in the same manner, you can create a potion with a working effect. A third ingredient may be added to make the effect more intense or last longer, or turn the effect harmful. Finally, gunpowder can be added to a potion at any stage to convert it to a splash potion, which can be thrown (or fired using a dispenser) to disperse its effect in a radius. Each brewing step takes 20 seconds. Brewing can create very useful and lifesaving items. A good number of them are useful in combat by aiding the player or weakening enemies while others can save the players life if used quickly, like Fire Resistance or Healing.");
 mods.thaumcraft.Research.addPage("BREWINGSTAND", "Minecraft.research_page.BREWINGSTAND.3");
 game.setLocalization("en_US", "Minecraft.research_page.BREWINGSTAND.3", "Gathering the Blaze Rods and Nether Wart necessary for brewing can prove challenging, but once they are set up, most potion ingredients are fairly plentiful and brewing will be a rewarding task.");
 mods.thaumcraft.Infusion.addRecipe("BREWINGSTAND", <minecraft:cauldron>, [<gregtech:gt.metaitem.02:22801>, <minecraft:glass_bottle>, <gregtech:gt.metaitem.01:23311>, <minecraft:glass_bottle>, <gregtech:gt.metaitem.01:23311>, <minecraft:glass_bottle>, <gregtech:gt.metaitem.02:22801>, <gregtech:gt.metaitem.01:28311>, <gregtech:gt.metaitem.01:27047>, <gregtech:gt.metaitem.01:28311>, <gregtech:gt.metaitem.01:27047>, <gregtech:gt.metaitem.01:28311>], "praecantatio 120, fabrico 80, cognitio 80, perditio 80, ignis 80, terra 80, aqua 80", <minecraft:brewing_stand>, 5);
@@ -2877,7 +3445,7 @@ mods.thaumcraft.Warp.addToResearch("BREWINGSTAND", 2);
 // --- Beacon Infusion
 mods.thaumcraft.Research.addResearch("BEACON", "ARTIFICE", "alienis 200, praecantatio 200, auram 100, fames 400", 10, 12, 12, <minecraft:beacon>);
 game.setLocalization("en_US", "tc.research_name.BEACON", "Beacon");
-game.setLocalization("en_US", "tc.research_text.BEACON", "[MC] Oh, it's more magical than a Diamond Block!");
+game.setLocalization("en_US", "tc.research_text.BEACON", "[MC] Oh, its more magical than a Diamond Block!");
 mods.thaumcraft.Research.addPrereq("BEACON", "ENCHANTINGTABLE", false);
 mods.thaumcraft.Research.setConcealed("BEACON", true);
 mods.thaumcraft.Research.addPage("BEACON", "Minecraft.research_page.BEACON");
@@ -2908,4 +3476,32 @@ Slicer.addRecipe(<minecraft:melon> * 8, <minecraft:melon_block>, <gregtech:gt.me
 
 
 
-// --- Hiding Stuff ---
+// --- Nei overriding Stuff ---
+
+
+// --- Compressed Meteoric Steel Plates
+NEI.overrideName(<GalacticraftCore:item.meteoricIronIngot:1>, "Compressed Meteoric Steel Plate");
+
+// --- Compressed Copper Plate
+NEI.overrideName(<GalacticraftCore:item.basicItem:6>, "Compressed Copper Plate");
+
+// --- Compressed Tin Plate
+NEI.overrideName(<GalacticraftCore:item.basicItem:7>, "Compressed Tin Plate");
+
+// --- Compressed Aluminium Plate
+NEI.overrideName(<GalacticraftCore:item.basicItem:8>, "Compressed Aluminium Plate");
+
+// --- Compressed Steel Plate
+NEI.overrideName(<GalacticraftCore:item.basicItem:9>, "Compressed Steel Plate");
+
+// --- Compressed Bronze Plate
+NEI.overrideName(<GalacticraftCore:item.basicItem:10>, "Compressed Bronze Plate");
+
+// --- Compressed Iron Plate
+NEI.overrideName(<GalacticraftCore:item.basicItem:11>, "Compressed Iron Plate");
+
+// --- Compressed Titamium Plate
+NEI.overrideName(<GalacticraftMars:item.itemBasicAsteroids:6>, "Compressed Titanium Plate");
+
+// --- Compressed Desh Plate
+NEI.overrideName(<GalacticraftMars:item.null:5>, "Compressed Desh Plate");

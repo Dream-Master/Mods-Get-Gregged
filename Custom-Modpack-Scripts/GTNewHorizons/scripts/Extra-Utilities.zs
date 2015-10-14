@@ -6,7 +6,6 @@
 
 
 import mods.gregtech.Assembler;
-import mods.gregtech.AssemblerLiq;
 import mods.gregtech.BlastFurnace;
 import mods.ic2.Compressor;
 import mods.gregtech.ImplosionCompressor;
@@ -58,6 +57,7 @@ val RainMuffler = <ExtraUtilities:sound_muffler:1>;
 val AnyWool = <ore:blockWool>;
 val Noteblock = <minecraft:noteblock>;
 val BUD = <ExtraUtilities:budoff>;
+val WaterBucket = <minecraft:water_bucket>;
 
 val SpeedUp = <ExtraUtilities:nodeUpgrade>;
 val ItemFilterUp = <ExtraUtilities:nodeUpgrade:1>;
@@ -273,6 +273,8 @@ recipes.remove(WateringCan);
 
 // --- Magnum Torch
 recipes.remove(MagnumTorch);
+// -
+mods.extraUtils.QED.removeRecipe(MagnumTorch);
 
 // --- Muffler
 recipes.remove(Muffler);
@@ -417,6 +419,57 @@ recipes.remove(<ExtraUtilities:dark_portal:2>);
 // --- Portal to the Deep Dark
 recipes.remove(<ExtraUtilities:dark_portal>);
 
+// --- Slightly larger Chest
+recipes.remove(<ExtraUtilities:chestFull>);
+
+// --- Mini Chest
+recipes.remove(<ExtraUtilities:chestMini>);
+
+// --- Ender Collector
+recipes.remove(<ExtraUtilities:enderCollector>);
+
+// --- QED Table
+recipes.remove(<ExtraUtilities:endConstructor>);
+
+// --- Ender Flux Crystal
+recipes.remove(<ExtraUtilities:endConstructor:2>);
+
+// --- Ender Marker
+mods.extraUtils.QED.removeRecipe(<ExtraUtilities:endMarker>);
+ 
+// --- Block Update Detector
+recipes.remove(<ExtraUtilities:budoff>);
+ 
+// --- Block Update Detector (Advanced)
+recipes.remove(<ExtraUtilities:budoff:3>);
+ 
+// --- Chandelier
+recipes.remove(Chandelier);
+ 
+// --- Edged Stone Bricks
+recipes.remove(<ExtraUtilities:decorativeBlock1>);
+
+// --- Border Stone
+recipes.remove(<ExtraUtilities:decorativeBlock1:4>);
+
+// --- Border Stone (Alternate)
+recipes.remove(<ExtraUtilities:decorativeBlock1:7>);
+
+// --- Gravel Bricks
+recipes.remove(<ExtraUtilities:decorativeBlock1:6>);
+
+// --- Frosted Stone
+recipes.remove(<ExtraUtilities:decorativeBlock1:3>);
+
+// --- Ender-Sand Alloy
+recipes.remove(<ExtraUtilities:decorativeBlock1:13>);
+
+// --- Gravel Road
+recipes.remove(<ExtraUtilities:decorativeBlock1:10>);
+
+// --- Trading Post
+recipes.remove(<ExtraUtilities:trading_post>);
+
 
 
 
@@ -435,26 +488,14 @@ recipes.addShaped(EnderPump, [
 [<BuildCraft|Factory:tankBlock>, EnderCore, <BuildCraft|Factory:tankBlock>],
 [EnderObsidian, Miner, EnderObsidian]]);
 
-// --- Ender-Infused Obsidian
-recipes.addShaped(EnderObsidian, [
-[BurntQuartz, <ore:plateDenseObsidian>, BurntQuartz],
-[<ore:plateDenseObsidian>, <ore:gemEnderPearl>, <ore:plateDenseObsidian>],
-[BurntQuartz, <ore:plateDenseObsidian>, BurntQuartz]]);
-
-// --- Ender Core
-recipes.addShaped(EnderCore, [
-[EnderObsidian, MagicalWood, EnderObsidian],
-[MagicalWood, <ore:gemEnderEye>, MagicalWood],
-[EnderObsidian, MagicalWood, EnderObsidian]]);
-
 // --- Diamond-Etched Computational Matrix
 recipes.addShaped(DiamondMatrix, [
 [EnderCore, <ore:plateDiamond>, EnderCore],
-[<ore:plateDiamond>, <ore:circuitMaster>, <ore:plateDiamond>],
+[<ore:plateTitanium>, <ore:circuitMaster>, <ore:plateTitanium>],
 [EnderCore, <ore:plateDiamond>, EnderCore]]);
 
 // --- Blackout Curtains
-recipes.addShaped(<ExtraUtilities:curtains> * 2, [
+recipes.addShaped(<ExtraUtilities:curtains>, [
 [<minecraft:carpet:15>, <minecraft:carpet:15>, null],
 [<minecraft:carpet:15>, <minecraft:carpet:15>, null],
 [<minecraft:carpet:15>, <minecraft:carpet:15>, null]]);
@@ -592,9 +633,9 @@ recipes.addShaped(Paintbrush, [
 
 // --- Drum
 recipes.addShaped(Drum, [
-[SteelPlate, <ore:ringMeteoricIron>, SteelPlate],
+[SteelPlate, <ore:ringMeteoricSteel>, SteelPlate],
 [SteelPlate, <ore:pipeHugeSteel>, SteelPlate],
-[SteelPlate, <ore:ringMeteoricIron>, SteelPlate]]);
+[SteelPlate, <ore:ringMeteoricSteel>, SteelPlate]]);
 
 // --- Bedrock Drum
 recipes.addShaped(BedDrum, [
@@ -604,20 +645,20 @@ recipes.addShaped(BedDrum, [
 
 // --- Conveyor Belt
 recipes.addShaped(Conveyor, [
-[SSteelPlate, MVConveyor, SSteelPlate],
-[MVConveyor, SteelGear, MVConveyor],
-[SSteelPlate, MVMotor, SSteelPlate]]);
+[HHammer, <minecraft:rail>, Wrench],
+[<gregtech:gt.metaitem.01:32630>, <gregtech:gt.blockcasings2:11>, <gregtech:gt.metaitem.01:32630>],
+[<ore:gearGtSmallSteel>, <gregtech:gt.metaitem.01:32600>, <ore:gearGtSmallSteel>]]);
 
 // --- Filing Cabinet
 recipes.addShaped(Cabinet, [
-[SteelPlate, IronChest, SteelPlate],
-[IronChest, SteelScrew, IronChest],
-[SteelPlate, IronChest, SteelPlate]]);
+[SteelPlate, <ore:chestWood>, SteelPlate],
+[SteelScrew, IronChest, SteelScrew],
+[SteelPlate, <ore:chestWood>, SteelPlate]]);
 
 // --- Advanced Filing Cabinet
 recipes.addShaped(AdvCabinet, [
 [MagicalWood, Cabinet, MagicalWood],
-[Cabinet, SteelScrew, Cabinet],
+[SteelScrew, Cabinet, SteelScrew],
 [MagicalWood, Cabinet, MagicalWood]]);
 
 // --- Watering Can
@@ -632,10 +673,10 @@ recipes.addShaped(WateringCan, [
 [IronPlate, IronPlate, SteelScrew]]);
 
 // --- Magnum Torch
-recipes.addShaped(MagnumTorch, [
-[null, Nitor, null],
-[Chandelier, SSteelRod, Chandelier],
-[Chandelier, SSteelRod, Chandelier]]);
+mods.extraUtils.QED.addShapedRecipe(MagnumTorch, [
+[<minecraft:potion:8225>, Nitor, <minecraft:potion:8229>],
+[Chandelier, <gregtech:gt.metaitem.01:23306>, Chandelier],
+[Chandelier, <gregtech:gt.metaitem.01:23306>, Chandelier]]);
 
 // --- Muffler
 recipes.addShaped(Muffler, [
@@ -645,9 +686,9 @@ recipes.addShaped(Muffler, [
 
 // --- Rain Muffler
 recipes.addShaped(RainMuffler, [
-[AnyWool, Noteblock, AnyWool],
-[Noteblock, Muffler, Noteblock],
-[AnyWool, Noteblock, AnyWool]]);
+[AnyWool, Muffler, AnyWool],
+[Muffler, WaterBucket, Muffler],
+[Muffler, BUD, Muffler]]);
 
 // --- Transfer Pipe
 recipes.addShaped(TransferPipe, [
@@ -785,6 +826,37 @@ recipes.addShapeless(<ExtraUtilities:decorativeBlock2>, [<TConstruct:GlassBlock>
 // --- Unstable Ingot
 recipes.addShapeless(<ExtraUtilities:unstableingot>, [<ExtraUtilities:unstableingot:2>]);
 
+// --- Slightly larger Chest
+recipes.addShaped(<ExtraUtilities:chestFull>, [
+[<ore:craftingToolHardHammer>, <gregtech:gt.metaitem.01:17809>, <ore:craftingToolSaw>],
+[<gregtech:gt.metaitem.01:17809>, <ore:chestWood>, <gregtech:gt.metaitem.01:17809>],
+[null, <gregtech:gt.metaitem.01:17809>, null]]);
+
+// --- Mini Chest
+recipes.addShaped(<ExtraUtilities:chestMini>, [
+[<ore:craftingToolHardHammer>, <gregtech:gt.metaitem.01:17809>, <ore:craftingToolSaw>],
+[<gregtech:gt.metaitem.01:17809>, <ore:itemFlint>, <gregtech:gt.metaitem.01:17809>],
+[null, <gregtech:gt.metaitem.01:17809>, null]]);
+
+// --- Ender Collector
+recipes.addShaped(<ExtraUtilities:enderCollector>, [
+[<ore:lensEnderPearl>, <ore:blockEnderObsidian>, <ore:lensEnderPearl>],
+[<ore:craftingToolHardHammer>, <ore:blockEnderObsidian>, <ore:craftingToolWrench>],
+[<ore:stoneObsidian>, <ore:stoneObsidian>, <ore:stoneObsidian>]]);
+
+// --- Quiet Expencive Device QED
+recipes.addShaped(<ExtraUtilities:endConstructor>, [
+[<ore:plateEnderEye>, <gregtech:gt.metaitem.01:32744>, <ore:plateEnderEye>],
+[<ore:blockEnderObsidian>, <ExtraUtilities:decorativeBlock1:12>, <ore:blockEnderObsidian>],
+[<ore:plateTitanium>, <ExtraUtilities:decorativeBlock1:11>, <ore:plateTitanium>]]);
+
+// --- Ender Marker
+mods.extraUtils.QED.addShapedRecipe(<ExtraUtilities:endMarker>, [
+[null, <minecraft:ender_eye>, null],
+[null, <ExtraUtilities:decorativeBlock1:1>, null],
+[null, <ExtraUtilities:decorativeBlock1:1>, null]]);
+
+
 
 
 // --- Alloy Smelter Recipes ---
@@ -830,11 +902,63 @@ Assembler.addRecipe(<ExtraUtilities:decorativeBlock2:6>, <ExtraUtilities:decorat
 // --- Squared Glass
 Assembler.addRecipe(<ExtraUtilities:decorativeBlock2:9>, <ExtraUtilities:decorativeBlock2>, <gregtech:gt.integrated_circuit:2> * 0, 100, 8);
 
-// --- Dark Glass
+// --- Dark Glasst
 Assembler.addRecipe(<ExtraUtilities:decorativeBlock2:10>, <ExtraUtilities:decorativeBlock2>, <ExtraUtilities:curtains>, 200, 16);
 
 // --- Reinforced Dark Glass
-Assembler.addRecipe(<ExtraUtilities:decorativeBlock2:11>, <ExtraUtilities:decorativeBlock2:10>, <gregtech:gt.metaitem.01:2804> * 4, 400, 32);
+Assembler.addRecipe(<ExtraUtilities:decorativeBlock2:11>, <ExtraUtilities:decorativeBlock2:10>, <gregtech:gt.metaitem.01:2804> * 4, 400, 30);
+
+// --- Slightly larger Chest
+Assembler.addRecipe(<ExtraUtilities:chestFull>, <minecraft:chest>, <gregtech:gt.metaitem.01:17809> * 2, 100, 30);
+
+// --- Mini Chest
+Assembler.addRecipe(<ExtraUtilities:chestMini>, <minecraft:flint>, <gregtech:gt.metaitem.01:17809> * 2, 50, 30);
+
+// --- Ender-Infused Obsidian
+Assembler.addRecipe(EnderObsidian, BurntQuartz * 4, <IC2:itemDensePlates:7> * 4, <liquid:ender> * 500, 600, 120);
+
+// --- Ender Flux Crystal
+Assembler.addRecipe(<ExtraUtilities:endConstructor:2>, <ExtraUtilities:decorativeBlock1:1> * 4, <minecraft:ender_eye> * 3, <liquid:ender> * 1000, 400, 120);
+
+// --- Block Update Detector
+Assembler.addRecipe(<ExtraUtilities:budoff>, <Railcraft:detector:2>, <minecraft:sticky_piston>, 200, 30);
+ 
+// --- Block Update Detector (Advanced)
+Assembler.addRecipe(<ExtraUtilities:budoff:3>, <ExtraUtilities:budoff>, <minecraft:redstone_block> * 4, 200, 120);
+ 
+// --- Chandelier
+Assembler.addRecipe(Chandelier, <minecraft:torch> * 5, <gregtech:gt.metaitem.02:28500>, <liquid:molten.gold> * 576, 600, 30);
+
+// --- Edged Stone Bricks
+Assembler.addRecipe(<ExtraUtilities:decorativeBlock1> * 9, <minecraft:stone> * 4, <minecraft:stonebrick> * 5, 180, 4);
+
+// --- Border Stone
+Assembler.addRecipe(<ExtraUtilities:decorativeBlock1:4>, <ExtraUtilities:decorativeBlock1>, <gregtech:gt.integrated_circuit:4> * 0, 20, 4);
+
+// --- Border Stone (Alternate)
+Assembler.addRecipe(<ExtraUtilities:decorativeBlock1:7>, <ExtraUtilities:decorativeBlock1:4>, <gregtech:gt.integrated_circuit:4> * 0, 20, 4);
+
+// --- Gravel Bricks
+Assembler.addRecipe(<ExtraUtilities:decorativeBlock1:6>, <minecraft:gravel>, <gregtech:gt.integrated_circuit:1> * 0, 20, 4);
+
+// --- Frosted Stone
+Assembler.addRecipe(<ExtraUtilities:decorativeBlock1:3> * 4, <minecraft:stone>, <minecraft:ice> * 4, 80, 4);
+
+// --- Sandy Glass
+Assembler.addRecipe(<ExtraUtilities:decorativeBlock1:9> * 2, <minecraft:sand>, <minecraft:glass>, 40, 4);
+
+// --- Ender-Sand Alloy
+Assembler.addRecipe(<ExtraUtilities:decorativeBlock1:13> * 2, <minecraft:sandstone>, <minecraft:end_stone>, 40, 4);
+
+// --- Gravel Road
+Assembler.addRecipe(<ExtraUtilities:decorativeBlock1:10> * 5, <ExtraUtilities:decorativeBlock1:6> * 5, <minecraft:stone_slab:5> * 5, 100, 4);
+
+// --- Ender Core
+Assembler.addRecipe(EnderCore, <ExtraUtilities:decorativeBlock1:1> * 4, MagicalWood * 4, <liquid:ender> * 1000, 1200, 120);
+
+// --- Trading Post
+Assembler.addRecipe(<ExtraUtilities:trading_post>, <Railcraft:machine.alpha:6>, <gregtech:gt.metaitem.02:32470> * 4, 300, 30);
+
 
 
 
@@ -870,6 +994,30 @@ ImplosionCompressor.addRecipe(<ExtraUtilities:cobblestone_compressed:6>, <ExtraU
 // --- Octuple Compressed Cobblestone
 ImplosionCompressor.addRecipe(<ExtraUtilities:cobblestone_compressed:7>, <ExtraUtilities:cobblestone_compressed:6> * 9, 24);
 
+// --- Compressed Dirt
+ImplosionCompressor.addRecipe(<ExtraUtilities:cobblestone_compressed:8>, <minecraft:dirt> * 9, 1);
+
+// --- Double Compressed Dirt
+ImplosionCompressor.addRecipe(<ExtraUtilities:cobblestone_compressed:9>, <ExtraUtilities:cobblestone_compressed:8> * 9, 2);
+
+// --- Triple Compressed Dirt
+ImplosionCompressor.addRecipe(<ExtraUtilities:cobblestone_compressed:10>, <ExtraUtilities:cobblestone_compressed:9> * 9, 4);
+
+// --- Quadruple Compressed Dirt
+ImplosionCompressor.addRecipe(QuadDirt, <ExtraUtilities:cobblestone_compressed:10> * 9, 6);
+
+// --- Compressed Gravel
+ImplosionCompressor.addRecipe(<ExtraUtilities:cobblestone_compressed:12>, <minecraft:gravel> * 9, 1);
+
+// --- Double Compressed Gravel
+ImplosionCompressor.addRecipe(<ExtraUtilities:cobblestone_compressed:13>, <ExtraUtilities:cobblestone_compressed:12> * 9, 2);
+
+// --- Compressed Sand
+ImplosionCompressor.addRecipe(<ExtraUtilities:cobblestone_compressed:14>, <minecraft:sand> * 9, 1);
+
+// --- Double Compressed Sand
+ImplosionCompressor.addRecipe(<ExtraUtilities:cobblestone_compressed:15>, <ExtraUtilities:cobblestone_compressed:14> * 9, 2);
+
 
 
 // --- Precision Shears
@@ -903,7 +1051,7 @@ game.setLocalization("en_US", "tc.research_text.PORTALMILLENIUM", "[EU] Night an
 mods.thaumcraft.Research.addPrereq("PORTALMILLENIUM", "EMINENCESTONE", false);
 mods.thaumcraft.Research.setConcealed("PORTALMILLENIUM", true);
 mods.thaumcraft.Research.addPage("PORTALMILLENIUM", "ExtraUtilities.research_page.PORTALMILLENIUM");
-game.setLocalization("en_US", "ExtraUtilities.research_page.PORTALMILLENIUM", "This place is known as 'The Last Millenium'. All life, energy, knowledge, passion, struggle, philosophy and meaning is just a few short centuries from being rendered fully pointless. On the plus side, rent is very cheap now.");
+game.setLocalization("en_US", "ExtraUtilities.research_page.PORTALMILLENIUM", "This place is known as The Last Millenium. All life, energy, knowledge, passion, struggle, philosophy and meaning is just a few short centuries from being rendered fully pointless. On the plus side, rent is very cheap now.");
 mods.thaumcraft.Infusion.addRecipe("PORTALMILLENIUM", <minecraft:clock>, [<ExtraUtilities:decorativeBlock1:14>, <ExtraUtilities:decorativeBlock1:2>, <ExtraUtilities:decorativeBlock1:14>, <ExtraUtilities:decorativeBlock1:2>, <ExtraUtilities:decorativeBlock1:14>, <ExtraUtilities:decorativeBlock1:2>, <ExtraUtilities:decorativeBlock1:14>, <ExtraUtilities:decorativeBlock1:2>], "alienis 75, sensus 25, praecantatio 75, terra 25, vacuos 75",  <ExtraUtilities:dark_portal:2>, 4);
 mods.thaumcraft.Research.addInfusionPage("PORTALMILLENIUM", <ExtraUtilities:dark_portal:2>);
 mods.thaumcraft.Warp.addToResearch("PORTALMILLENIUM", 3);
@@ -916,9 +1064,9 @@ mods.thaumcraft.Research.addPrereq("PORTALDEEPDARK", "PORTALMILLENIUM", false);
 mods.thaumcraft.Research.setConcealed("PORTALDEEPDARK", true);
 mods.thaumcraft.Research.addPage("PORTALDEEPDARK", "ExtraUtilities.research_page.PORTALDEEPDARK");
 game.setLocalization("en_US", "ExtraUtilities.research_page.PORTALDEEPDARK", "As an experienced miner you naturally wish to mine deeper and further than ever before into areas of natural wealth. The deep dark is a realm far below the void, filled with natural resources and deadly enemies. Some say that the darkness within this realm is alive and will consume any unlucky adventurer who wanders too far into it. Remember to bring torches. Torches will not protect you completely, however since mobs will spawn at all light levels in the Deep Dark. Magnum torches and Chandeliers will still prevent mob spawning.");
-mods.thaumcraft.Infusion.addRecipe("PORTALDEEPDARK", <ExtraUtilities:dark_portal:2>, [<ExtraUtilities:cobblestone_compressed:4>, <ExtraUtilities:unstableingot:2>, <ExtraUtilities:cobblestone_compressed:3>, <ExtraUtilities:unstableingot:2>, <ExtraUtilities:cobblestone_compressed:3>, <ExtraUtilities:unstableingot:2>, <ExtraUtilities:cobblestone_compressed:3>, <ExtraUtilities:unstableingot:2>, <ExtraUtilities:cobblestone_compressed:3>, <ExtraUtilities:unstableingot:2>], "alienis 150, spiritus 75, metallum 100, fabrico 75 lucrum 50, potentia 100",  <ExtraUtilities:dark_portal>, 5);
+mods.thaumcraft.Infusion.addRecipe("PORTALDEEPDARK", <ExtraUtilities:dark_portal:2>, [<ExtraUtilities:cobblestone_compressed:4>, <dreamcraft:item.BlackPlutoniumDensePlate>, <ExtraUtilities:decorativeBlock1:5>, <ExtraUtilities:cobblestone_compressed:3>, <ExtraUtilities:decorativeBlock1:5>, <ExtraUtilities:cobblestone_compressed:3>, <ExtraUtilities:decorativeBlock1:5>, <ExtraUtilities:cobblestone_compressed:3>, <dreamcraft:item.BlackPlutoniumDensePlate>, <ExtraUtilities:decorativeBlock1:5>, <ExtraUtilities:cobblestone_compressed:3>, <ExtraUtilities:decorativeBlock1:5>], "alienis 300, spiritus 150, metallum 200, fabrico 150 lucrum 100, potentia 200",  <ExtraUtilities:dark_portal>, 12);
 mods.thaumcraft.Research.addInfusionPage("PORTALDEEPDARK", <ExtraUtilities:dark_portal>);
-mods.thaumcraft.Warp.addToResearch("PORTALDEEPDARK", 4);
+mods.thaumcraft.Warp.addToResearch("PORTALDEEPDARK", 8);
 
 // --- Magical Wood
 mods.thaumcraft.Research.addResearch("MAGICALWOOD", "ARTIFICE", "praecantatio 150, lucrum 150, arbor 100, cognitio 150, pannus 100", -8, 15, 12, MagicalWood);
@@ -942,7 +1090,7 @@ game.setLocalization("en_US", "tc.research_text.ANGELBLOCK", "[EU] A Block in th
 mods.thaumcraft.Research.addPrereq("ANGELBLOCK", "MAGICALWOOD", false);
 mods.thaumcraft.Research.setConcealed("ANGELBLOCK", true);
 mods.thaumcraft.Research.addPage("ANGELBLOCK", "ExtraUtilities.research_page.ANGELBLOCK");
-game.setLocalization("en_US", "ExtraUtilities.research_page.ANGELBLOCK", "The Angel Block is a block added by the Extra Utilities mod. This block is unique in that it does not need another block for it to be built against, so it can be placed in mid-air. When right-clicking the block will be placed in the direction you're looking. The block can't be placed diagonally in mid-air. No tool is required to break the block and it is broken instantly, even without any tools. After breaking the block does not drop, but rather instantly returns to the player's inventory.");
+game.setLocalization("en_US", "ExtraUtilities.research_page.ANGELBLOCK", "The Angel Block is a block added by the Extra Utilities mod. This block is unique in that it does not need another block for it to be built against, so it can be placed in mid-air. When right-clicking the block will be placed in the direction youre looking. The block cant be placed diagonally in mid-air. No tool is required to break the block and it is broken instantly, even without any tools. After breaking the block does not drop, but rather instantly returns to the players inventory.");
 mods.thaumcraft.Arcane.addShaped("ANGELBLOCK", <ExtraUtilities:angelBlock>, "aer 50", [
 [<gregtech:gt.metaitem.01:17540>, <gregtech:gt.metaitem.01:29351>, <gregtech:gt.metaitem.01:17540>],
 [<IC2:itemDensePlates:7>, <Automagy:blockRunedObsidian>, <IC2:itemDensePlates:7>],

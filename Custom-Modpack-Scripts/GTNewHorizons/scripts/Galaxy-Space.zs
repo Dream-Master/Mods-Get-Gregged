@@ -5,10 +5,11 @@
 
 
 import mods.gregtech.Assembler;
-import mods.gregtech.AssemblerLiq;
+
 import mods.ic2.Compressor;
 import mods.gregtech.ImplosionCompressor;
 import mods.ic2.Macerator;
+import mods.nei.NEI;
 
 
 
@@ -128,6 +129,12 @@ recipes.remove(<GalaxySpace:item.Laser_pick>);
 
 // --- Light Axe
 recipes.remove(<GalaxySpace:item.Laser_axe>);
+
+// --- Electrical Jetpack
+recipes.remove(<GalaxySpace:item.JetPack:*>);
+
+// --- Tier 3 Rocket Engine
+recipes.remove(<GalaxySpace:item.AcceleratorTier3>);
 
 
 
@@ -319,6 +326,30 @@ recipes.addShaped(<GalaxySpace:item.TestBow>, [
 [<dreamcraft:item.MysteriousCrystal>, null, <TConstruct:bowstring:2>],
 [<ore:stickLongLead>, <dreamcraft:item.MytrylCrystal>, <TConstruct:bowstring:2>]]);
 
+// --- Tier 3 Rocket Engine
+recipes.addShaped(<GalaxySpace:item.AcceleratorTier3>, [
+[<dreamcraft:item.MytrylCompressedPlate>, <dreamcraft:item.MytrylCompressedPlate>, <dreamcraft:item.MytrylCompressedPlate>],
+[<GalaxySpace:item.HeavyDutyPlateTier8>, <GalaxySpace:item.AcceleratorTier2>, <GalaxySpace:item.HeavyDutyPlateTier8>],
+[<GalaxySpace:item.HeavyDutyPlateTier8>, <GalacticraftCore:item.airVent>, <GalaxySpace:item.HeavyDutyPlateTier8>]]);
+
+// --- Heavy Duty Rocket Engine 2
+recipes.addShaped(<GalaxySpace:item.HeavyDutyRocketEngineT2>, [
+[<GalaxySpace:item.AcceleratorTier3>, <GalaxySpace:item.HeavyDutyPlateTier9>, <GalaxySpace:item.AcceleratorTier3>],
+[<GalaxySpace:item.HeavyDutyPlateTier9>, <GalaxySpace:item.HeavyDutyPlateTier9>, <GalaxySpace:item.HeavyDutyPlateTier9>],
+[<GalaxySpace:item.HeavyDutyRocketEngine>, <GalaxySpace:item.HeavyDutyPlateTier9>, <GalaxySpace:item.HeavyDutyRocketEngine>]]);
+
+// --- Heavy Duty Nose Cone Tier 2
+recipes.addShaped(<GalaxySpace:item.HeavyDutyNoseConeT2>, [
+[<ore:craftingToolScrewdriver>, <GalaxySpace:item.HeavyDutyNoseCone>, <ore:craftingToolHardHammer>],
+[<ore:screwNaquadria>, <GalaxySpace:item.HeavyDutyPlateTier9>, <ore:screwNaquadria>],
+[<GalaxySpace:item.HeavyDutyPlateTier9>, <GalaxySpace:item.HeavyDutyPlateTier9>, <GalaxySpace:item.HeavyDutyPlateTier9>]]);
+
+// --- Heavy Wings Duty Space Ship
+recipes.addShaped(<GalaxySpace:item.WingT9>, [
+[<GalaxySpace:item.HeavyDutyPlateTier9>, <GalacticraftCore:item.steelPole>, <ore:craftingToolHardHammer>],
+[<GalaxySpace:item.HeavyDutyPlateTier9>, <GalacticraftCore:item.steelPole>, <GalacticraftCore:item.steelPole>],
+[<GalaxySpace:item.HeavyDutyPlateTier9>, <GalaxySpace:item.HeavyDutyPlateTier9>, <GalaxySpace:item.HeavyDutyPlateTier9>]]);
+
 
 
 
@@ -348,16 +379,16 @@ oreDict.oreRedstone.add(<GalaxySpace:venusredstone>);
 
 
 // --- Sulfur Battery
-AssemblerLiq.addRecipe(<GalaxySpace:item.SulfurBattery:100>.withTag({electricity: 0.0 as float}), <GalacticraftCore:item.battery:*>, <gregtech:gt.integrated_circuit:1>, <liquid:sulfuricacid> * 1000, 100, 128);
+Assembler.addRecipe(<GalaxySpace:item.SulfurBattery:100>.withTag({electricity: 0.0 as float}), <GalacticraftCore:item.battery:*>, <gregtech:gt.integrated_circuit:1>, <liquid:sulfuricacid> * 1000, 100, 120);
 
 // --- Nickel Battery
-AssemblerLiq.addRecipe(<GalaxySpace:item.NickelBattery:100>.withTag({electricity: 0.0 as float}), <GalaxySpace:item.SulfurBattery:100>.withTag({electricity: 0.0 as float}), <GalaxySpace:item.NickelComIngot>, <liquid:molten.glowstone> * 288, 200, 128);
+Assembler.addRecipe(<GalaxySpace:item.NickelBattery:100>.withTag({electricity: 0.0 as float}), <GalaxySpace:item.SulfurBattery:100>.withTag({electricity: 0.0 as float}), <GalaxySpace:item.NickelComIngot>, <liquid:molten.glowstone> * 288, 200, 120);
 
 // --- Compressed Icy Ingot (Plate T 4)
-AssemblerLiq.addRecipe(<GalaxySpace:item.ComIceIgnot> * 2, <dreamcraft:item.LedoxCompressedPlate>, <dreamcraft:item.CallistoIceCompressedPlate>, <liquid:ic2coolant> * 1000, 600, 512);
+Assembler.addRecipe(<GalaxySpace:item.ComIceIgnot> * 2, <dreamcraft:item.LedoxCompressedPlate>, <dreamcraft:item.CallistoIceCompressedPlate>, <liquid:ic2coolant> * 1000, 600, 480);
 
 // --- Advanced Canister
-Assembler.addRecipe(<GalaxySpace:item.MethaneCanister:1001>, <GalacticraftMars:item.itemBasicAsteroids:6> * 4, <gregtech:gt.metaitem.01:28884> * 4, 200, 128);
+Assembler.addRecipe(<GalaxySpace:item.MethaneCanister:1001>, <GalacticraftMars:item.itemBasicAsteroids:6> * 4, <gregtech:gt.metaitem.01:28884> * 4, 200, 120);
 
 
 
@@ -381,28 +412,31 @@ Compressor.addRecipe(<GalaxySpace:item.BlackPlutonium>, <dreamcraft:item.BlackPl
 
 
 // --- Compressed Lead Plates
-ImplosionCompressor.addRecipe([<GalaxySpace:item.LeadCom>, <gregtech:gt.metaitem.01:816>], <gregtech:gt.metaitem.01:19089>, 4);
+ImplosionCompressor.addRecipe([<GalaxySpace:item.LeadCom>, <gregtech:gt.metaitem.01:816>], <gregtech:gt.metaitem.01:19089>, 1);
 
 // --- Compressed Nickel Plates
-ImplosionCompressor.addRecipe([<GalaxySpace:item.NickelComIngot>, <gregtech:gt.metaitem.01:816>], <gregtech:gt.metaitem.01:19034>, 4);
+ImplosionCompressor.addRecipe([<GalaxySpace:item.NickelComIngot>, <gregtech:gt.metaitem.01:816>], <gregtech:gt.metaitem.01:19034>, 1);
 
 // --- Compressed Black Plutonium Plates
-ImplosionCompressor.addRecipe([<GalaxySpace:item.ComBlackPlutonium>, <gregtech:gt.metaitem.01:816>], <dreamcraft:item.BlackPlutoniumPlate> * 3, 4);
+ImplosionCompressor.addRecipe([<GalaxySpace:item.ComBlackPlutonium>, <gregtech:gt.metaitem.01:816>], <dreamcraft:item.BlackPlutoniumPlate> * 3, 1);
 
 // --- Heavy Duty Plats Tier 4
 ImplosionCompressor.addRecipe([<GalaxySpace:item.HeavyDutyPlateTier4>, <gregtech:gt.metaitem.01:30> * 2], <dreamcraft:item.HeavyDutyAlloyIngotT4>, 32);
 
 // --- Heavy Duty Plats Tier 5
-ImplosionCompressor.addRecipe([<GalaxySpace:item.HeavyDutyPlateTier5>, <gregtech:gt.metaitem.01:84> * 4], <dreamcraft:item.HeavyDutyAlloyIngotT5>, 40);
+ImplosionCompressor.addRecipe([<GalaxySpace:item.HeavyDutyPlateTier5>, <gregtech:gt.metaitem.01:84> * 4], <dreamcraft:item.HeavyDutyAlloyIngotT5>, 36);
 
 // --- Heavy Duty Plats Tier 6
-ImplosionCompressor.addRecipe([<GalaxySpace:item.HeavyDutyPlateTier6>, <gregtech:gt.metaitem.01:89> * 6], <dreamcraft:item.HeavyDutyAlloyIngotT6>, 48);
+ImplosionCompressor.addRecipe([<GalaxySpace:item.HeavyDutyPlateTier6>, <gregtech:gt.metaitem.01:83> * 6], <dreamcraft:item.HeavyDutyAlloyIngotT6>, 40);
 
 // --- Heavy Duty Plats Tier 7
-ImplosionCompressor.addRecipe([<GalaxySpace:item.HeavyDutyPlateTier7>, <gregtech:gt.metaitem.01:327> * 9], <dreamcraft:item.HeavyDutyAlloyIngotT7>, 56);
+ImplosionCompressor.addRecipe([<GalaxySpace:item.HeavyDutyPlateTier7>, <gregtech:gt.metaitem.01:317> * 9], <dreamcraft:item.HeavyDutyAlloyIngotT7>, 44);
 
 // --- Heavy Duty Plats Tier 8
-ImplosionCompressor.addRecipe([<GalaxySpace:item.HeavyDutyPlateTier8>, <gregtech:gt.metaitem.01:129> * 12], <dreamcraft:item.HeavyDutyAlloyIngotT8>, 64);
+ImplosionCompressor.addRecipe([<GalaxySpace:item.HeavyDutyPlateTier8>, <gregtech:gt.metaitem.01:327> * 12], <dreamcraft:item.HeavyDutyAlloyIngotT8>, 48);
+
+// --- Heavy Duty Plats Tier 9
+ImplosionCompressor.addRecipe([<GalaxySpace:item.HeavyDutyPlateTier9>, <gregtech:gt.metaitem.01:129> * 15], <dreamcraft:item.HeavyDutyAlloyIngotT9>, 52);
 
 
 
@@ -411,3 +445,25 @@ ImplosionCompressor.addRecipe([<GalaxySpace:item.HeavyDutyPlateTier8>, <gregtech
 
 // --- Ice Crystal
 Macerator.addRecipe(<GalaxySpace:item.BlueCrystall> * 6, <GalaxySpace:europaglowstone>);
+
+
+
+
+// --- Nei overriding Stuff ---
+
+
+
+// --- Compressed Ice Plates
+NEI.overrideName(<GalaxySpace:item.ComIceIgnot>, "Compressed Ice Plate");
+
+// --- Compressed Quantinum Plate
+NEI.overrideName(<GalaxySpace:item.QuantiumIgnotCom>, "Compressed Quantinum Plate");
+
+// --- Compressed Lead Plate
+NEI.overrideName(<GalaxySpace:item.LeadCom>, "Compressed Lead Plate");
+
+// --- Compressed Nickel Plate
+NEI.overrideName(<GalaxySpace:item.NickelComIngot>, "Compressed Nickel Plate");
+
+// --- Compressed Black Plutonium Plate
+NEI.overrideName(<GalaxySpace:item.ComBlackPlutonium>, "Compressed Black Plutonium Plate");

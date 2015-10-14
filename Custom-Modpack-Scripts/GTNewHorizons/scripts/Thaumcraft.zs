@@ -7,7 +7,6 @@
 
 
 import mods.gregtech.Assembler;
-import mods.gregtech.AssemblerLiq;
 import mods.gregtech.Autoclave;
 import mods.ic2.Compressor;
 import mods.ic2.Extractor;
@@ -266,43 +265,8 @@ mods.thaumcraft.Research.addPage("RESEARCH", "tc.research_page.RESEARCH.10");
 mods.thaumcraft.Research.addPage("RESEARCH", "tc.research_page.RESEARCH.11");
 mods.thaumcraft.Research.addPage("RESEARCH", "tc.research_page.RESEARCH.12");
 
-
-
-
-// --- Compressor Recipes ---
-
-
-
-// --- Thaumium Block
-Compressor.addRecipe(<Thaumcraft:blockCosmeticSolid:4>, <Thaumcraft:ItemResource:2> * 9);
-
-// --- Block of Tallow
-Compressor.addRecipe(<Thaumcraft:blockCosmeticSolid:5>, <Thaumcraft:ItemResource:4> * 9);
-// -
-mods.thaumcraft.Aspects.add(<Thaumcraft:blockCosmeticSolid:5>, "praecantatio 20, corpus 18, mortuus 15");
-
-// --- Block of Flesh
-Compressor.addRecipe(<Thaumcraft:blockTaint:2>, <minecraft:rotten_flesh> * 9);
-// -
-mods.thaumcraft.Aspects.add(<Thaumcraft:blockTaint:2>, "corpus 12, humanus 9, mortuus 6");
-
-
-
-
-// --- Macerator Recipes ---
-
-
-// --- Thaumium Dust
-Macerator.addRecipe(<gregtech:gt.metaitem.01:2330> * 9, <Thaumcraft:blockCosmeticSolid:4>);
-
-// --- Magic Tallow
-Macerator.addRecipe(<Thaumcraft:ItemResource:4> * 9, <Thaumcraft:blockCosmeticSolid:5>);
-
-
-
-
 // --- Arcane Stone
-mods.thaumcraft.Arcane.addShaped("ARCANESTONE", <Thaumcraft:blockCosmeticSolid:6> * 9, "aer 9, terra 9, ignis 9, aqua 9, ordo 9, perditio 9",[
+mods.thaumcraft.Arcane.addShaped("ARCANESTONE", <Thaumcraft:blockCosmeticSolid:6> * 8, "aer 8, terra 8, ignis 8, aqua 8, ordo 8, perditio 8",[
 [<ore:stone>, <ore:stone>, <ore:stone>],
 [<ore:stone>, <Thaumcraft:blockCrystal:*>, <ore:stone>],
 [<ore:stone>, <ore:stone>, <ore:stone>]]);
@@ -998,10 +962,10 @@ mods.thaumcraft.Arcane.addShaped("ASPECTS", <Thaumcraft:blockCrystal:6>, "aer 20
 Assembler.addRecipe(<Thaumcraft:blockCosmeticSolid:7>, <Thaumcraft:blockCosmeticSolid:6> * 4, <gregtech:gt.integrated_circuit:4> * 0, 160, 40);
 
 // --- Knowledge Fragment
-AssemblerLiq.addRecipe(<Thaumcraft:ItemResource:9>, <MagicBees:miscResources> * 4, <gregtech:gt.integrated_circuit:4> * 0, <liquid:molten.thaumium> * 144, 200, 96);
+Assembler.addRecipe(<Thaumcraft:ItemResource:9>, <MagicBees:miscResources> * 4, <gregtech:gt.integrated_circuit:4> * 0, <liquid:molten.thaumium> * 144, 200, 96);
 
 // --- Research Note
-AssemblerLiq.addRecipe(<Thaumcraft:ItemResearchNotes:42>, <Thaumcraft:ItemResource:9> * 9, <gregtech:gt.integrated_circuit:9> * 0, <liquid:molten.thaumium> * 576, 200, 256);
+Assembler.addRecipe(<Thaumcraft:ItemResearchNotes:42>, <Thaumcraft:ItemResource:9> * 9, <gregtech:gt.integrated_circuit:9> * 0, <liquid:molten.thaumium> * 576, 200, 256);
 
 
 
@@ -1009,10 +973,32 @@ AssemblerLiq.addRecipe(<Thaumcraft:ItemResearchNotes:42>, <Thaumcraft:ItemResour
 
 
 
+
 // --- Amber
 Autoclave.addRecipe(<Thaumcraft:ItemResource:6>, <gregtech:gt.metaitem.01:2514>, <liquid:water> * 200, 8000, 2000, 32);
 // -
 Autoclave.addRecipe(<Thaumcraft:ItemResource:6>, <gregtech:gt.metaitem.01:2514>, <liquid:ic2distilledwater> * 200, 9000, 1500, 32);
+
+
+
+// --- Compressor Recipes ---
+
+
+
+// --- Thaumium Block
+Compressor.addRecipe(<Thaumcraft:blockCosmeticSolid:4>, <Thaumcraft:ItemResource:2> * 9);
+
+// --- Block of Tallow
+Compressor.addRecipe(<Thaumcraft:blockCosmeticSolid:5>, <Thaumcraft:ItemResource:4> * 9);
+// -
+mods.thaumcraft.Aspects.add(<Thaumcraft:blockCosmeticSolid:5>, "praecantatio 20, corpus 18, mortuus 15");
+
+// --- Block of Flesh
+Compressor.addRecipe(<Thaumcraft:blockTaint:2>, <minecraft:rotten_flesh> * 9);
+// -
+mods.thaumcraft.Aspects.add(<Thaumcraft:blockTaint:2>, "corpus 12, humanus 9, mortuus 6");
+
+
 
 
 
@@ -1028,11 +1014,19 @@ Extractor.addRecipe(<Thaumcraft:ItemResource:3>, <Thaumcraft:blockCustomPlant:2>
 // --- Macerator Recipes --- 
 
 
+
 // --- Salis Mundus
 Macerator.addRecipe(<Thaumcraft:ItemResource:14>, <Thaumcraft:ItemShard:6>);
 // -
 mods.thaumcraft.Research.addPage("CRUCIBLE", "tc.research_page.CRUCIBLE.6");
 game.setLocalization("en_US", "tc.research_page.CRUCIBLE.6", "Salis Mundus Macerator Recipe <BR><IMG>dreamcraft:textures/items/itemSalisMundusMacerator.png:0:0:255:255:0.40</IMG><BR><LINE>");
+
+// --- Thaumium Dust
+Macerator.addRecipe(<gregtech:gt.metaitem.01:2330> * 9, <Thaumcraft:blockCosmeticSolid:4>);
+
+// --- Magic Tallow
+Macerator.addRecipe(<Thaumcraft:ItemResource:4> * 9, <Thaumcraft:blockCosmeticSolid:5>);
+
 
 
 
