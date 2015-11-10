@@ -434,6 +434,12 @@ recipes.remove(<appliedenergistics2:item.ItemMultiPart:80>);
 // --- ME inverted Toggle Bus
 recipes.remove(<appliedenergistics2:item.ItemMultiPart:100>);
 
+// --- ME Dense Cable Fluix
+recipes.remove(<appliedenergistics2:item.ItemMultiPart:76>);
+
+// --- ME Smart Cable
+recipes.remove(<appliedenergistics2:item.ItemMultiPart:56>);
+
 
 // --- Cells ---
 
@@ -679,14 +685,14 @@ recipes.addShaped(FluixGlassCable * 2, [
 [CertusRod, FluixDust, CertusRod]]);
 
 // --- Fluix Covered Cable
-recipes.addShaped(FluixCoveredC * 2, [
+recipes.addShaped(FluixCoveredC * 3, [
 [RubberPlate, Saw, RubberPlate],
-[QuartzFiber, QuartzFiber, QuartzFiber],
+[FluixGlassCable, FluixGlassCable, FluixGlassCable],
 [RubberPlate, null, RubberPlate]]);
 // - 
-recipes.addShaped(FluixCoveredC * 2, [
+recipes.addShaped(FluixCoveredC * 3, [
 [RubberPlate, null, RubberPlate],
-[QuartzFiber, QuartzFiber, QuartzFiber],
+[FluixGlassCable, FluixGlassCable, FluixGlassCable],
 [RubberPlate, Saw, RubberPlate]]);
 
 // --- Annihilation Core
@@ -1155,16 +1161,16 @@ Assembler.addRecipe(<appliedenergistics2:tile.BlockSkyChest:1>, <appliedenergist
 Assembler.addRecipe(CoCraftingUnit, CraftingUnit, DiamondCircuit * 2, 400, 120);
 
 // --- 1 K Crafting  Storage
-Assembler.addRecipe(<appliedenergistics2:tile.BlockCraftingStorage>, <appliedenergistics2:tile.BlockCraftingUnit>, <appliedenergistics2:item.ItemMultiMaterial:35>, 400, 120);
+Assembler.addRecipe(<appliedenergistics2:tile.BlockCraftingStorage>, <appliedenergistics2:tile.BlockCraftingUnit>, <appliedenergistics2:item.ItemMultiMaterial:35>, 400, 480);
 
 // --- 4 K Crafting  Storage
-Assembler.addRecipe(<appliedenergistics2:tile.BlockCraftingStorage:1>, <appliedenergistics2:tile.BlockCraftingUnit>, <appliedenergistics2:item.ItemMultiMaterial:36>, 400, 120);
+Assembler.addRecipe(<appliedenergistics2:tile.BlockCraftingStorage:1>, <appliedenergistics2:tile.BlockCraftingUnit>, <appliedenergistics2:item.ItemMultiMaterial:36>, 400, 480);
 
 // --- 16 K Crafting  Storage
-Assembler.addRecipe(<appliedenergistics2:tile.BlockCraftingStorage:2>, <appliedenergistics2:tile.BlockCraftingUnit>, <appliedenergistics2:item.ItemMultiMaterial:37>, 400, 120);
+Assembler.addRecipe(<appliedenergistics2:tile.BlockCraftingStorage:2>, <appliedenergistics2:tile.BlockCraftingUnit>, <appliedenergistics2:item.ItemMultiMaterial:37>, 400, 480);
 
 // --- 64 K Crafting  Storage
-Assembler.addRecipe(<appliedenergistics2:tile.BlockCraftingStorage:3>, <appliedenergistics2:tile.BlockCraftingUnit>, <appliedenergistics2:item.ItemMultiMaterial:38>, 400, 120);
+Assembler.addRecipe(<appliedenergistics2:tile.BlockCraftingStorage:3>, <appliedenergistics2:tile.BlockCraftingUnit>, <appliedenergistics2:item.ItemMultiMaterial:38>, 400, 480);
 
 // --- Crafting Monitor
 Assembler.addRecipe(<appliedenergistics2:tile.BlockCraftingMonitor>, <appliedenergistics2:tile.BlockCraftingUnit>, <appliedenergistics2:item.ItemMultiPart:400>, 400, 120);
@@ -1196,6 +1202,20 @@ Assembler.addRecipe(<appliedenergistics2:item.ItemMultiPart:80>, <appliedenergis
 
 // --- ME inverted Toggle Bus
 Assembler.addRecipe(<appliedenergistics2:item.ItemMultiPart:100>, <appliedenergistics2:item.ItemMultiPart:80>, <gregtech:gt.integrated_circuit:2> * 0, 100, 4);
+
+// --- Fluix Glass Cable
+Assembler.addRecipe(FluixGlassCable * 3, QuartzFiber * 3, FluixDust * 2, 100, 120);
+
+// --- Fluix Covered Cable
+Assembler.addRecipe(FluixCoveredC, FluixGlassCable, <gregtech:gt.integrated_circuit:1> * 0, <liquid:molten.rubber> * 144, 150, 120);
+
+// --- ME Dense Cable Fluix
+Assembler.addRecipe(<appliedenergistics2:item.ItemMultiPart:76>, FluixCoveredC * 4, <gregtech:gt.metaitem.01:17811>, <liquid:molten.redstone> * 144, 200, 120);
+
+// --- ME Smart Cable
+Assembler.addRecipe(<appliedenergistics2:item.ItemMultiPart:56>, FluixCoveredC, <gregtech:gt.metaitem.01:17526>, <liquid:molten.redstone> * 144, 150, 120);
+
+
 
 
 
@@ -1253,13 +1273,13 @@ Macerator.addRecipe(FluixDust * 4, <appliedenergistics2:tile.BlockFluix>);
 // --- Wiremill Recipes ---
 
 //Quartz Fiber
-Wiremill.addRecipe(<appliedenergistics2:item.ItemMultiPart:140>, <gregtech:gt.metaitem.01:23516> * 2, 80, 128);
+Wiremill.addRecipe(<appliedenergistics2:item.ItemMultiPart:140>, <gregtech:gt.metaitem.01:23516> * 2, 80, 120);
 // -
-Wiremill.addRecipe(<appliedenergistics2:item.ItemMultiPart:140>, <dreamcraft:item.ChargedCertusQuartzRod>, 80, 128);
+Wiremill.addRecipe(<appliedenergistics2:item.ItemMultiPart:140>, <dreamcraft:item.ChargedCertusQuartzRod>, 80, 120);
 // -
-Wiremill.addRecipe(<appliedenergistics2:item.ItemMultiPart:140>, <gregtech:gt.metaitem.01:23522> * 8, 80, 128);
+Wiremill.addRecipe(<appliedenergistics2:item.ItemMultiPart:140>, <gregtech:gt.metaitem.01:23522> * 8, 80, 120);
 // -
-Wiremill.addRecipe(<appliedenergistics2:item.ItemMultiPart:140>, <gregtech:gt.metaitem.01:23523>  * 4, 80, 128);
+Wiremill.addRecipe(<appliedenergistics2:item.ItemMultiPart:140>, <gregtech:gt.metaitem.01:23523>  * 4, 80, 120);
 
 
 

@@ -2257,9 +2257,16 @@ recipes.addShapeless(<Forestry:factory2:2>, [<ProjRed|Expansion:projectred.expan
 
 // --- Short Mead
 SemiFluidGenerator.addFluid(<liquid:short.mead> * 20, 4);
+// -
+Fuels.addDieselFuel(<minecraft:bucket>, <Forestry:bucketShortMead>, 4);
 
 // --- Fish Oil
 SemiFluidGenerator.addFluid(<liquid:fishoil> * 20, 2);
+// -
+Fuels.addDieselFuel(<IC2:itemCellEmpty>, <gregtech:gt.metaitem.01:30711>, 2);
+
+// --- Biomass
+Fuels.addDieselFuel(<Forestry:canEmpty>, <Forestry:canBiomass>, 8);
 
 
 
@@ -2287,10 +2294,10 @@ AlloySmelter.addRecipe(<Forestry:waxCast>, <MagicBees:wax:2> * 9, <gregtech:gt.m
 Assembler.addRecipe(<Forestry:alveary>, <Forestry:impregnatedCasing>, <Forestry:craftingMaterial:6> * 8, 1200, 64);
 
 // --- Sturdy Casing
-Assembler.addRecipe(<Forestry:sturdyMachine>, <gregtech:gt.blockcasings:1>, <IC2:itemCasing:2> * 4, 800, 32);
+Assembler.addRecipe(<Forestry:sturdyMachine>, <gregtech:gt.blockcasings:1>, <IC2:itemCasing:2> * 4, 800, 30);
 
 // --- Hardened  Casing
-Assembler.addRecipe(<Forestry:hardenedMachine>, <Forestry:sturdyMachine>, <gregtech:gt.metaitem.01:17500> * 8, 1200, 128);
+Assembler.addRecipe(<Forestry:hardenedMachine>, <Forestry:sturdyMachine>, <gregtech:gt.metaitem.01:17500> * 8, 1200, 120);
 
 // --- Peat Fireed Engine
 Assembler.addRecipe(<Forestry:engine:1>, <dreamcraft:item.EngineCore>, <Railcraft:part.plate> * 10, 800, 256);

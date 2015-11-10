@@ -8,6 +8,7 @@
 import mods.gregtech.AlloySmelter;
 import mods.gregtech.ArcFurnace;
 import mods.gregtech.Assembler;
+import mods.gregtech.BlastFurnace;
 import mods.ic2.Compressor;
 import mods.gregtech.CuttingSaw;
 import mods.ic2.Extractor;
@@ -967,6 +968,9 @@ recipes.removeShapeless(<minecraft:glowstone_dust>);
 // --- Nether Star
 recipes.remove(<minecraft:nether_star>);
 
+// --- Glass
+recipes.removeShapeless(<minecraft:glass>);
+
 
 
 // --- Adding Back Recipes ---
@@ -974,7 +978,7 @@ recipes.remove(<minecraft:nether_star>);
 
 // --- Crafting Table
 recipes.addShapeless(CraftingTable,
-[Flint, Flint, <minecraft:log:*>, <minecraft:log:*>]);
+[Flint, Flint, Log, Log]);
 
 // --- Chest
 recipes.addShaped(Chest, [
@@ -997,13 +1001,13 @@ recipes.addShaped(<minecraft:furnace>, [
 // --- Dispenser
 recipes.addShaped(Dispenser, [
 [Cobble, IronRing, Cobble],
-[<ore:springIron>, Bowstring, <ore:springIron>],
+[<ore:springIron>, <minecraft:string>, <ore:springIron>],
 [<ore:gearGtSmallAnyIron>, RedAlloyWire,  <ore:gearGtSmallAnyIron>]]);
 
 // --- Dropper
 recipes.addShaped(Dropper, [
 [Cobble, IronRing, Cobble],
-[<ore:springSmallIron>, Bowstring, <ore:springSmallIron>],
+[<ore:springSmallIron>, <minecraft:string>, <ore:springSmallIron>],
 [<ore:gearGtSmallAnyIron>, RedAlloyWire, <ore:gearGtSmallAnyIron>]]);
 
 // --- Piston
@@ -1078,35 +1082,35 @@ recipes.addShapeless(<minecraft:wooden_pressure_plate> * 2, [Saw, <ore:slabWood>
 recipes.addShapeless(<minecraft:glass_pane> * 2, [Saw, Glass]);
 
 // --- Torch
-recipes.addShaped(Torch * 3, [
+recipes.addShapedMirrored(Torch * 3, [
 [Coal, null],
 [Stick, null]]);
 // -
-recipes.addShaped(Torch * 2, [
+recipes.addShapedMirrored(Torch * 2, [
 [Charcoal, null],
 [Stick, null]]);
 // -
-recipes.addShaped(Torch, [
+recipes.addShapedMirrored(Torch, [
 [<ore:gemLignite>, null],
 [Stick, null]]);
 //-
-recipes.addShaped(Torch * 5, [
+recipes.addShapedMirrored(Torch * 5, [
 [CoalCoke, null],
 [Stick, null]]);
 // -
-recipes.addShaped(Torch * 5, [
+recipes.addShapedMirrored(Torch * 5, [
 [AnyWool, <Railcraft:fluid.creosote.bucket>.giveBack(<minecraft:bucket>)],
 [Stick, null]]);
 // -
-recipes.addShaped(Torch * 4, [
+recipes.addShapedMirrored(Torch * 4, [
 [Torchberries, null],
 [Stick, null]]);
 // -
-recipes.addShaped(Torch * 3, [
+recipes.addShapedMirrored(Torch * 3, [
 [Beeswax, String],
 [Stick, null]]);
 // -
-recipes.addShaped(Torch * 2, [
+recipes.addShapedMirrored(Torch * 2, [
 [Rubber, String],
 [Stick, null]]);
 
@@ -3322,6 +3326,17 @@ Assembler.addRecipe(Lever, <BiomesOPlenty:bamboo>, <minecraft:stone_button>, 50,
 Assembler.addRecipe(Lever, <BiomesOPlenty:plants:8>, <minecraft:stone_button>, 50, 16);
 
 
+
+// --- Blast Furnace Recipes ---
+
+
+
+
+// --- Glass Block
+BlastFurnace.addRecipe([<minecraft:glass>], [<TConstruct:GlassBlock>], 100, 120, 1000);
+
+// --- Clear Pane
+BlastFurnace.addRecipe([<minecraft:glass_pane>], [<TConstruct:GlassPane>], 100, 120, 1000);
 
 
 

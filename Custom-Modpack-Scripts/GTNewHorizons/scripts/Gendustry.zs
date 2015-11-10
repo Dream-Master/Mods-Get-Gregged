@@ -92,6 +92,7 @@ val HHammer = <ore:craftingToolHardHammer>;
 val Scoop = <ore:craftingToolScoop>;
 val Screwdriver = <ore:craftingToolScrewdriver>;
 val Pipette = <Forestry:pipette>;
+val Wrench = <ore:craftingToolWrench>;
 
 val Hopper = <ore:blockHopper>;
 val Grass = <minecraft:grass>;
@@ -117,6 +118,7 @@ val Battery = <IC2:itemBatChargeRE:26>;
 val CrystalBattery = <IC2:itemBatChargeCrystal:26>;
 val Tank = <BuildCraft|Factory:tankBlock>;
 val Coil = <IC2:itemRecipePart>;
+
 
 
 
@@ -167,10 +169,10 @@ recipes.remove(UpFrame);
 recipes.remove(Labware);
 
 // --- Blank Gene Sample
-recipes.remove(BlankGene);
+recipes.removeShaped(BlankGene);
 
-// --- Genetic Tamplate
-recipes.remove(<gendustry:GeneTemplate>);
+// --- Genetic Template
+recipes.removeShaped(Template);
 
 // --- Mutagen Tank
 recipes.remove(MutagenTank);
@@ -243,58 +245,58 @@ recipes.remove(<gendustry:ErrorSensorCover>);
 
 
 // --- Industrial Apiary
-mods.forestry.Carpenter.addRecipe(IndustrialApiary, [
-[AlvearyFan, BeeReceptacle, AlvearyHeater],
-[AlvearyStabiliser, HardCasing, AlvearyHygro],
-[TitaniumGear, PowerModule, TitaniumGear]], <liquid:honey> * 10000, 120);
+recipes.addShaped(IndustrialApiary, [
+[TitaniumGear, BeeReceptacle, TitaniumGear],
+[AlvearyFan, HardCasing, AlvearyHeater],
+[TitaniumGear, PowerModule, TitaniumGear]]);
 
 // --- Mutatron
-mods.forestry.Carpenter.addRecipe(Mutatron, [
+recipes.addShaped(Mutatron, [
 [MutagenTank, GeneticsProcessor, MutagenTank],
 [BeeReceptacle, HardCasing, BeeReceptacle],
-[TitaniumGear, PowerModule, TitaniumGear]], <liquid:honey> * 5000, 60);
+[TitaniumGear, PowerModule, TitaniumGear]]);
 
 // --- Genetic Imprinter
-mods.forestry.Carpenter.addRecipe(GeneticImprinter, [
+recipes.addShaped(GeneticImprinter, [
 [GeneticsProcessor, TitaniumGear, GeneticsProcessor],
 [BeeReceptacle, HardCasing, BeeReceptacle],
-[TitaniumGear, PowerModule, TitaniumGear]], <liquid:honey> * 5000, 60);
+[TitaniumGear, PowerModule, TitaniumGear]]);
 
 // --- Genetic Sampler
-mods.forestry.Carpenter.addRecipe(GeneticSampler, [
+recipes.addShaped(GeneticSampler, [
 [GeneticsProcessor, BeeReceptacle, GeneticsProcessor],
 [CrystalChip, HardCasing, CrystalChip],
-[TitaniumGear, PowerModule, TitaniumGear]], <liquid:honey> * 5000, 60);
+[TitaniumGear, PowerModule, TitaniumGear]]);
 
 // --- Advanced Mutatron
-mods.forestry.Carpenter.addRecipe(AdvMutatron, [
+recipes.addShaped(AdvMutatron, [
 [IVRobotorArm, GeneticsProcessor, IVRobotorArm],
 [GeneticsProcessor, Mutatron, GeneticsProcessor],
-[PalladiumGear, PowerModule, PalladiumGear]], <liquid:honey> * 10000, 120);
+[PalladiumGear, PowerModule, PalladiumGear]]);
 
 // --- Protein Liquifier
-mods.forestry.Carpenter.addRecipe(Liquifier, [
+recipes.addShaped(Liquifier, [
 [TitaniumGear, Hopper, TitaniumGear],
 [EVPiston, HardCasing, EVPiston],
-[TitaniumGear, PowerModule, TitaniumGear]], <liquid:honey> * 5000, 60);
+[TitaniumGear, PowerModule, TitaniumGear]]);
 
 // --- DNA Extractor
-mods.forestry.Carpenter.addRecipe(DNAExtractor, [
+recipes.addShaped(DNAExtractor, [
 [EVPiston, BeeReceptacle, EVPiston],
 [GeneticsProcessor, HardCasing, GeneticsProcessor],
-[TitaniumGear, PowerModule, TitaniumGear]], <liquid:honey> * 5000, 60);
+[TitaniumGear, PowerModule, TitaniumGear]]);
 
 // --- Genetic Transposer
-mods.forestry.Carpenter.addRecipe(Transposer, [
+recipes.addShaped(Transposer, [
 [EVRobotorArm, TitaniumGear, EVRobotorArm],
 [GeneticsProcessor, HardCasing, GeneticsProcessor],
-[TitaniumGear, PowerModule, TitaniumGear]], <liquid:honey> * 5000, 60);
+[TitaniumGear, PowerModule, TitaniumGear]]);
 
 // --- Genetic Replicator
-mods.forestry.Carpenter.addRecipe(Replicator, [
+recipes.addShaped(Replicator, [
 [EVRobotorArm, GeneticsProcessor, EVRobotorArm],
 [PowerModule, HardCasing, PowerModule],
-[TitaniumGear, GeneticsProcessor, TitaniumGear]], <liquid:honey> * 5000, 60);
+[TitaniumGear, GeneticsProcessor, TitaniumGear]]);
 
 
 // --- Items ---
@@ -304,153 +306,153 @@ mods.forestry.Carpenter.addRecipe(Replicator, [
 
 // --- Bee Receptacle
 recipes.addShaped(BeeReceptacle, [
-[TitaniumScrew, Pipette, TitaniumScrew],
-[CopperCasing, Template, CopperCasing],
+[TitaniumScrew, Wrench, TitaniumScrew],
+[CopperCasing, SteelBars, CopperCasing],
 [TitaniumScrew, Screwdriver, TitaniumScrew]]);
 
 // --- Power Module
 recipes.addShaped(PowerModule, [
 [NichromeCable, CopperCasing, NichromeCable],
-[CopperCasing, CrystalBattery, CopperCasing],
+[CopperCasing, AdvCircuit, CopperCasing],
 [TitaniumSmallGear, EVMotor, TitaniumSmallGear]]);
 
 // --- Plains Emulation Upgrade
-mods.forestry.Carpenter.addRecipe(<gendustry:ApiaryUpgrade:17>, [
+recipes.addShaped(<gendustry:ApiaryUpgrade:17>, [
 [TitaniumSmallGear, ClimateCtrl, TitaniumSmallGear],
 [Grass, UpFrame, Grass],
-[TitaniumSmallGear, EnviroProcessor, TitaniumSmallGear]], <liquid:seedoil> * 1000, 60);
+[TitaniumSmallGear, EnviroProcessor, TitaniumSmallGear]]);
 
 // --- Light Upgrade
-mods.forestry.Carpenter.addRecipe(<gendustry:ApiaryUpgrade:11>, [
+recipes.addShaped(<gendustry:ApiaryUpgrade:11>, [
 [TitaniumSmallGear, GlowStoneGlass, TitaniumSmallGear],
 [GlowStoneGlass, UpFrame, GlowStoneGlass],
-[TitaniumSmallGear, GlowStoneGlass, TitaniumSmallGear]], <liquid:seedoil> * 1000, 60);
+[TitaniumSmallGear, GlowStoneGlass, TitaniumSmallGear]]);
 
 // --- Flowering Upgrade
-mods.forestry.Carpenter.addRecipe(<gendustry:ApiaryUpgrade:2>, [
+recipes.addShaped(<gendustry:ApiaryUpgrade:2>, [
 [TitaniumSmallGear, <minecraft:red_flower>, TitaniumSmallGear],
 [<Botany:pollen:*>, UpFrame, <Botany:pollen:*>],
-[TitaniumSmallGear, <minecraft:yellow_flower>, TitaniumSmallGear]], <liquid:seedoil> * 1000, 60);
+[TitaniumSmallGear, <minecraft:yellow_flower>, TitaniumSmallGear]]);
 
 // --- Winter Emulation Upgrade
-mods.forestry.Carpenter.addRecipe(<gendustry:ApiaryUpgrade:20>, [
+recipes.addShaped(<gendustry:ApiaryUpgrade:20>, [
 [TitaniumSmallGear, ClimateCtrl, TitaniumSmallGear],
 [Ice, UpFrame, Ice],
-[TitaniumSmallGear, EnviroProcessor, TitaniumSmallGear]], <liquid:seedoil> * 1000, 60);
+[TitaniumSmallGear, EnviroProcessor, TitaniumSmallGear]]);
 
 // --- Dryer Upgrade
-mods.forestry.Carpenter.addRecipe(<gendustry:ApiaryUpgrade:5>, [
+recipes.addShaped(<gendustry:ApiaryUpgrade:5>, [
 [TitaniumSmallGear, ClimateCtrl, TitaniumSmallGear],
 [Sand, UpFrame, Sand],
-[TitaniumSmallGear, LavaBucket, TitaniumSmallGear]], <liquid:seedoil> * 1000, 60);
+[TitaniumSmallGear, LavaBucket, TitaniumSmallGear]]);
 
 // --- Automation Upgrade
-mods.forestry.Carpenter.addRecipe(<gendustry:ApiaryUpgrade:14>, [
+recipes.addShaped(<gendustry:ApiaryUpgrade:14>, [
 [TitaniumSmallGear, TitaniumGear, TitaniumSmallGear],
 [<minecraft:redstone_torch>, UpFrame, <minecraft:redstone_torch>],
-[TitaniumSmallGear, EVPiston, TitaniumSmallGear]], <liquid:seedoil> * 1000, 60);
+[TitaniumSmallGear, EVPiston, TitaniumSmallGear]]);
 
 // --- Humidifier Upgrade
-mods.forestry.Carpenter.addRecipe(<gendustry:ApiaryUpgrade:4>, [
+recipes.addShaped(<gendustry:ApiaryUpgrade:4>, [
 [TitaniumSmallGear, ClimateCtrl, TitaniumSmallGear],
 [Cactus, UpFrame, Cactus],
-[TitaniumSmallGear, WaterBucket, TitaniumSmallGear]], <liquid:seedoil> * 1000, 60);
+[TitaniumSmallGear, WaterBucket, TitaniumSmallGear]]);
 
 // --- Hell Emulation Upgrade
-mods.forestry.Carpenter.addRecipe(<gendustry:ApiaryUpgrade:13>, [
+recipes.addShaped(<gendustry:ApiaryUpgrade:13>, [
 [TitaniumSmallGear, ClimateCtrl, TitaniumSmallGear],
 [BlazeRod, UpFrame, GhatsTear],
-[TitaniumSmallGear, EnviroProcessor, TitaniumSmallGear]], <liquid:seedoil> * 1000, 60);
+[TitaniumSmallGear, EnviroProcessor, TitaniumSmallGear]]);
 
 // --- Pollen Scrubber Upgrade
-mods.forestry.Carpenter.addRecipe(<gendustry:ApiaryUpgrade:22>, [
+recipes.addShaped(<gendustry:ApiaryUpgrade:22>, [
 [TitaniumSmallGear, SteelBars, TitaniumSmallGear],
 [TitaniumRotor, UpFrame, TitaniumRotor],
-[TitaniumSmallGear, SteelBars, TitaniumSmallGear]], <liquid:seedoil> * 1000, 60);
+[TitaniumSmallGear, SteelBars, TitaniumSmallGear]]);
 
 // --- Desert Emulation Upgrade
-mods.forestry.Carpenter.addRecipe(<gendustry:ApiaryUpgrade:16>, [
+recipes.addShaped(<gendustry:ApiaryUpgrade:16>, [
 [TitaniumSmallGear, ClimateCtrl, TitaniumSmallGear],
 [Sand, UpFrame, Sand],
-[TitaniumSmallGear, EnviroProcessor, TitaniumSmallGear]], <liquid:seedoil> * 1000, 60);
+[TitaniumSmallGear, EnviroProcessor, TitaniumSmallGear]]);
 
 // --- Cooler Upgrade
-mods.forestry.Carpenter.addRecipe(<gendustry:ApiaryUpgrade:7>, [
+recipes.addShaped(<gendustry:ApiaryUpgrade:7>, [
 [TitaniumSmallGear, ClimateCtrl, TitaniumSmallGear],
 [Snow, UpFrame, Snow],
-[TitaniumSmallGear, Ice, TitaniumSmallGear]], <liquid:seedoil> * 1000, 60);
+[TitaniumSmallGear, Ice, TitaniumSmallGear]]);
 
 // --- Live Spawn Upgrade
-mods.forestry.Carpenter.addRecipe(<gendustry:ApiaryUpgrade:1>, [
+recipes.addShaped(<gendustry:ApiaryUpgrade:1>, [
 [TitaniumSmallGear, <minecraft:fermented_spider_eye>, TitaniumSmallGear],
 [<BiomesOPlenty:jarFilled:1>, UpFrame, <BiomesOPlenty:jarFilled:1>],
-[TitaniumSmallGear, <minecraft:fermented_spider_eye>, TitaniumSmallGear]], <liquid:seedoil> * 1000, 60);
+[TitaniumSmallGear, <minecraft:fermented_spider_eye>, TitaniumSmallGear]]);
 
 // --- Seal Upgrade
-mods.forestry.Carpenter.addRecipe(<gendustry:ApiaryUpgrade:10>, [
+recipes.addShaped(<gendustry:ApiaryUpgrade:10>, [
 [TitaniumSmallGear, Rubber, TitaniumSmallGear],
 [Wax, UpFrame, Wax],
-[TitaniumSmallGear, Rubber, TitaniumSmallGear]], <liquid:seedoil> * 1000, 60);
+[TitaniumSmallGear, Rubber, TitaniumSmallGear]]);
 
 // --- Genteics Stabilizer Upgrade
-mods.forestry.Carpenter.addRecipe(<gendustry:ApiaryUpgrade:19>, [
+recipes.addShaped(<gendustry:ApiaryUpgrade:19>, [
 [TitaniumSmallGear, GeneticsProcessor, TitaniumSmallGear],
 [RedAlloyPlate, UpFrame, RedAlloyPlate],
-[TitaniumSmallGear, GeneticsProcessor, TitaniumSmallGear]], <liquid:seedoil> * 1000, 60);
+[TitaniumSmallGear, GeneticsProcessor, TitaniumSmallGear]]);
 
 // --- Jungel Emulation Upgrade
-mods.forestry.Carpenter.addRecipe(<gendustry:ApiaryUpgrade:18>, [
+recipes.addShaped(<gendustry:ApiaryUpgrade:18>, [
 [TitaniumSmallGear, ClimateCtrl, TitaniumSmallGear],
 [Vines, UpFrame, Vines],
-[TitaniumSmallGear, EnviroProcessor, TitaniumSmallGear]], <liquid:seedoil> * 1000, 60);
+[TitaniumSmallGear, EnviroProcessor, TitaniumSmallGear]]);
 
 // --- Territory Upgrade
-mods.forestry.Carpenter.addRecipe(<gendustry:ApiaryUpgrade:3>, [
+recipes.addShaped(<gendustry:ApiaryUpgrade:3>, [
 [TitaniumSmallGear, IronPlate, TitaniumSmallGear],
 [EnderPearlPlate, UpFrame, EnderPearlPlate],
-[TitaniumSmallGear, IronPlate, TitaniumSmallGear]], <liquid:seedoil> * 1000, 60);
+[TitaniumSmallGear, IronPlate, TitaniumSmallGear]]);
 
 // --- Ocean Emulation Upgrade
-mods.forestry.Carpenter.addRecipe(<gendustry:ApiaryUpgrade:21>, [
+recipes.addShaped(<gendustry:ApiaryUpgrade:21>, [
 [TitaniumSmallGear, ClimateCtrl, TitaniumSmallGear],
 [WaterBucket, UpFrame, WaterBucket],
-[TitaniumSmallGear, EnviroProcessor, TitaniumSmallGear]], <liquid:seedoil> * 1000, 60);
+[TitaniumSmallGear, EnviroProcessor, TitaniumSmallGear]]);
 
 // --- Open Sky Upgrade
-mods.forestry.Carpenter.addRecipe(<gendustry:ApiaryUpgrade:12>, [
+recipes.addShaped(<gendustry:ApiaryUpgrade:12>, [
 [TitaniumSmallGear, <ProjRed|Illumination:projectred.illumination.lamp:27>, TitaniumSmallGear],
 [ClearPane, UpFrame, ClearPane],
-[TitaniumSmallGear, ClearPane, TitaniumSmallGear]], <liquid:seedoil> * 1000, 60);
+[TitaniumSmallGear, ClearPane, TitaniumSmallGear]]);
 
 // --- Heater Upgrade
-mods.forestry.Carpenter.addRecipe(<gendustry:ApiaryUpgrade:6>, [
+recipes.addShaped(<gendustry:ApiaryUpgrade:6>, [
 [TitaniumSmallGear, ClimateCtrl, TitaniumSmallGear],
 [Netherrack, UpFrame, Netherrack],
-[TitaniumSmallGear, LavaBucket, TitaniumSmallGear]], <liquid:seedoil> * 1000, 60);
+[TitaniumSmallGear, LavaBucket, TitaniumSmallGear]]);
 
 // --- Sieve Upgrade
-mods.forestry.Carpenter.addRecipe(<gendustry:ApiaryUpgrade:15>, [
+recipes.addShaped(<gendustry:ApiaryUpgrade:15>, [
 [TitaniumSmallGear, WovenSilk, TitaniumSmallGear],
 [SteelBars, UpFrame, SteelBars],
-[TitaniumSmallGear, WovenSilk, TitaniumSmallGear]], <liquid:seedoil> * 1000, 60);
+[TitaniumSmallGear, WovenSilk, TitaniumSmallGear]]);
 
 // --- Production Upgrade
-mods.forestry.Carpenter.addRecipe(<gendustry:ApiaryUpgrade>, [
+recipes.addShaped(<gendustry:ApiaryUpgrade>, [
 [TitaniumSmallGear, Sugar, TitaniumSmallGear],
 [RoyalJelly, UpFrame, RoyalJelly],
-[TitaniumSmallGear, Sugar, TitaniumSmallGear]], <liquid:seedoil> * 1000, 60);
+[TitaniumSmallGear, Sugar, TitaniumSmallGear]]);
 
 // --- Industrial Grafter
 recipes.addShaped(<gendustry:IndustrialGrafter:100>, [
 [TitaniumScrew, Grafter, TitaniumScrew],
 [TitaniumSmallGear, PowerModule, TitaniumSmallGear],
-[TitaniumPlate, AdvBattery, TitaniumPlate]]);
+[TitaniumPlate, <ore:batteryBasic>, TitaniumPlate]]);
 
 // --- Industrial Scoop
 recipes.addShaped(<gendustry:IndustrialScoop:100>, [
 [TitaniumScrew, Scoop, TitaniumScrew],
 [TitaniumSmallGear, PowerModule, TitaniumSmallGear],
-[TitaniumPlate, Battery, TitaniumPlate]]);
+[TitaniumPlate, <ore:batteryBasic>, TitaniumPlate]]);
 
 // --- Climate Control Module
 recipes.addShaped(<gendustry:ClimateModule>, [
@@ -485,7 +487,7 @@ Assembler.addRecipe(GeneticsProcessor, <dreamcraft:item.GeneticCircuit>, <gregte
 Assembler.addRecipe(EnviroProcessor, <dreamcraft:item.EnvironmentalCircuit>, <gregtech:gt.metaitem.01:32705>, 400, 480);
 
 // --- Upgrade Frame
-Assembler.addRecipe(UpFrame, <Forestry:frameImpregnated>, <IC2:itemPartCircuitAdv> * 2, <liquid:molten.titanium> * 144, 100, 480);
+Assembler.addRecipe(UpFrame, <Forestry:frameUntreated>, <IC2:itemPartCircuitAdv>, 100, 480);
 
 // --- Item Ijector Cover
 Assembler.addRecipe(<gendustry:EjectCover>, <gregtech:gt.metaitem.01:17028>, <IC2:upgradeModule:3>, 100, 480);
@@ -501,5 +503,3 @@ Assembler.addRecipe(<gendustry:ErrorSensorCover>, <gregtech:gt.metaitem.01:17028
 
 
 // --- Hiding Stuff ---
-
-

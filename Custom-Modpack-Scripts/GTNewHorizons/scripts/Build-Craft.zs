@@ -8,6 +8,7 @@
 import mods.gregtech.Assembler;
 import mods.gregtech.FormingPress;
 import mods.nei.NEI;
+import mods.gregtech.PrecisionLaser;
 
 
 
@@ -70,7 +71,10 @@ val ClearPane = <TConstruct:GlassPane>;
 
 val SteelWire = <ore:wireGt01Steel>;
 val TinWire = <ore:wireGt01Tin>;
+val NickelWire = <ore:wireGt01Nickel>;
 val CopperWire = <ore:wireGt01Copper>;
+val CupronickelWire = <ore:wireGt01Cupronickel>;
+val SilverWire = <ore:wireGt01Silver>;
 val AlWire = <ore:wireGt01Aluminium>;
 val ElectrumWire = <ore:wireGt01Electrum>;
 val GoldWire = <ore:wireGt01Gold>;
@@ -93,7 +97,7 @@ val DockingStation = <BuildCraft|Robotics:robotStation>;
 val Filler = <BuildCraft|Builders:fillerBlock>;
 val Builder = <BuildCraft|Builders:builderBlock>;
 val ArchitectT = <BuildCraft|Builders:architectBlock>;
-val BlueprintLib = <BuildCraft|Builders:libraryBlock>;
+val ElecectronicLib = <BuildCraft|Builders:libraryBlock>;
 val AutoWorkB = <BuildCraft|Factory:autoWorkbenchBlock>;
 val FloodGate = <BuildCraft|Factory:floodGateBlock>;
 val ZonePlanner = <BuildCraft|Robotics:zonePlan>;
@@ -147,8 +151,8 @@ recipes.remove(Builder);
 // --- Architect Table
 recipes.remove(ArchitectT);
 
-// --- Blueprint Library
-recipes.remove(BlueprintLib);
+// --- Electronic Library
+recipes.remove(ElecectronicLib);
 
 // --- Auto Workbench
 recipes.remove(AutoWorkB);
@@ -438,49 +442,49 @@ recipes.addShaped(PipeCobbleKinesis, [
 // --- Stone-Covered Kinesis Pipe
 recipes.addShaped(PipeStoneKinesis, [
 [StoneRod, ClearPane, StoneRod],
-[ClearPane, CopperWire, ClearPane],
+[ClearPane, NickelWire, ClearPane],
 [StoneRod, ClearPane, StoneRod]]);
 
 // --- Wood-Covered Kinesis Pipe
 recipes.addShaped(PipeWoodKinesis, [
 [Stick, ClearPane, Stick],
-[ClearPane, ElectrumWire, ClearPane],
+[ClearPane, CopperWire, ClearPane],
 [Stick, ClearPane, Stick]]);
 
 // --- Sandstone-Covered Kinesis Pipe
 recipes.addShaped(PipeSandstoneKinesis, [
 [SStoneRod, ClearPane, SStoneRod],
-[ClearPane, GoldWire, ClearPane],
+[ClearPane, CupronickelWire, ClearPane],
 [SStoneRod, ClearPane, SStoneRod]]);
 
 // --- Quartz-Covered Kinesis Pipe
 recipes.addShaped(PipeQuartzKinesis, [
 [QuartzRod, ClearPane, QuartzRod],
-[ClearPane, SteelWire, ClearPane],
+[ClearPane, SilverWire, ClearPane],
 [QuartzRod, ClearPane, QuartzRod]]);
 
 // --- Iron-Covered Kinesis Pipe
 recipes.addShaped(PipeIronKinesis, [
 [IronRod, ClearPane, IronRod],
-[ClearPane, AlWire, ClearPane],
+[ClearPane, ElectrumWire, ClearPane],
 [IronRod, ClearPane, IronRod]]);
 
 // --- Gold-Covered Kinesis Pipe
 recipes.addShaped(PipeGoldKinesis, [
 [GoldRod, ClearPane, GoldRod],
-[ClearPane, NicromeWire, ClearPane],
+[ClearPane, AlWire, ClearPane],
 [GoldRod, ClearPane, GoldRod]]);
 
 // --- Emerald-Covered Kinesis Pipe
 recipes.addShaped(PipeEmeraldKinesis, [
 [EmeraldRod, ClearPane, EmeraldRod],
-[ClearPane, PlatinumWire, ClearPane],
+[ClearPane, NicromeWire, ClearPane],
 [EmeraldRod, ClearPane, EmeraldRod]]);
 
 // --- Diamond-Covered Kinesis Pipe
 recipes.addShaped(PipeDiamondKinesis, [
 [DiamondRod, ClearPane, DiamondRod],
-[ClearPane, NiobiumTiWire, ClearPane],
+[ClearPane, PlatinumWire, ClearPane],
 [DiamondRod, ClearPane, DiamondRod]]);
 
 
@@ -510,7 +514,7 @@ recipes.addShaped(<BuildCraft|Transport:item.buildcraftPipe.pipeitemsvoid>, [
 recipes.addShaped(<BuildCraft|Transport:item.buildcraftPipe.pipefluidsvoid>, [
 [<ore:stickRubber>, ClearPane, <ore:stickRubber>],
 [ClearPane, <ore:gemEnderPearl>, ClearPane],
-[<RandomThings:ingredient:1>, ClearPane, <RandomThings:ingredient:1>]]);
+[<ore:stickRubber>, ClearPane, <ore:stickRubber>]]);
 
 // --- Auto Workbench
 recipes.addShaped(AutoWorkB, [
@@ -523,6 +527,37 @@ recipes.addShapeless(<BuildCraft|Core:paintbrush>, [<OpenBlocks:paintBrush>]);
 
 // --- Auto Crafting Bench
 recipes.addShapeless(<BuildCraft|Factory:autoWorkbenchBlock>, [<ProjRed|Expansion:projectred.expansion.machine2:11>]);
+
+// --- Filler
+recipes.addShaped(Filler, [
+[<gregtech:gt.metaitem.01:32651>, <ore:crystalRedstone>, <gregtech:gt.metaitem.01:32651>],
+[<ore:circuitGood>, <gregtech:gt.blockmachines:12>, <ore:circuitGood>],
+[<ore:gearGtSmallAluminium>, <gregtech:gt.metaitem.01:32601>, <ore:gearGtSmallAluminium>]]);
+
+// --- Builder
+recipes.addShaped(Builder, [
+[<gregtech:gt.metaitem.01:32652>, <ore:crystalRedstone>, <gregtech:gt.metaitem.01:32652>],
+[<ore:circuitAdvanced>, <gregtech:gt.blockmachines:13>, <ore:circuitAdvanced>],
+[<ore:gearGtSmallStainlessSteel>, <gregtech:gt.metaitem.01:32602>, <ore:gearGtSmallStainlessSteel>]]);
+
+// --- Architect Table
+recipes.addShaped(ArchitectT, [
+[<gregtech:gt.metaitem.01:32652>, <ore:crystalRedstone>, <gregtech:gt.metaitem.01:32652>],
+[<ore:circuitElite>, <gregtech:gt.blockmachines:13>, <ore:circuitElite>],
+[<ore:gearGtSmallStainlessSteel>, <gregtech:gt.metaitem.01:32602>, <ore:gearGtSmallStainlessSteel>]]);
+
+// --- Electronic Library
+recipes.addShaped(ElecectronicLib, [
+[<dreamcraft:item.StainlessSteelItemCasing>, <ore:crystalRedstone>, <dreamcraft:item.StainlessSteelItemCasing>],
+[<ore:circuitData>, <dreamcraft:item.Display>, <ore:circuitData>],
+[<dreamcraft:item.StainlessSteelItemCasing>, <ore:plateSteel>, <dreamcraft:item.StainlessSteelItemCasing>]]);
+
+// --- Flood Gate
+recipes.addShaped(FloodGate, [
+[<IC2:itemCasing:5>, <dreamcraft:item.SteelBars>, <IC2:itemCasing:5>],
+[<dreamcraft:item.SteelBars>, <BuildCraft|Factory:tankBlock>, <dreamcraft:item.SteelBars>],
+[<IC2:itemCasing:5>, <gregtech:gt.metaitem.01:32610>, <IC2:itemCasing:5>]]);
+
 
 
 
@@ -538,6 +573,18 @@ Assembler.addRecipe(<BuildCraft|Compat:item.buildcraftPipe.pipeitemspropolis>, <
 // -
 Assembler.addRecipe(<BuildCraft|Compat:item.buildcraftPipe.pipeitemspropolis>, <ProjRed|Transportation:projectred.transportation.pipe:1>, <Forestry:propolis> * 2, <liquid:honey> * 400, 300, 48);
 
+// --- Land Mark
+Assembler.addRecipe(LandMark, <minecraft:redstone_torch>, <ProjRed|Core:projectred.core.part:30>, 100, 120);
+
+// --- Path Mark
+Assembler.addRecipe(PathMark, <minecraft:redstone_torch>, <ProjRed|Core:projectred.core.part:24>, 100, 120);
+
+// --- Template
+Assembler.addRecipe(<BuildCraft|Builders:templateItem>, <minecraft:paper>, <minecraft:redstone>, <liquid:squidink> * 144, 100, 30);
+
+// --- Blueprint
+Assembler.addRecipe(<BuildCraft|Builders:blueprintItem>, <minecraft:paper>, <minecraft:redstone>, <liquid:dye.watermixed.dyeblue> * 144, 100, 30);
+
 
 
 // --- Forming Press Recipes ---
@@ -545,6 +592,15 @@ Assembler.addRecipe(<BuildCraft|Compat:item.buildcraftPipe.pipeitemspropolis>, <
 
 // --- Emerald Chipset
 FormingPress.addRecipe(<BuildCraft|Silicon:redstoneChipset:7>, <gregtech:gt.metaitem.01:17501>, <BuildCraft|Silicon:redstoneChipset>, 200, 480);
+
+
+
+// --- Precision Laser Recipes ---
+
+
+
+// --- Redstone Crystal
+PrecisionLaser.addRecipe(<BuildCraft|Silicon:redstoneCrystal>, <gregtech:gt.metaitem.01:24347> * 0, <gregtech:gt.metaitem.01:17347> * 4, 600, 120);
 
 
 

@@ -15,6 +15,7 @@ import mods.gregtech.Fermenter;
 import mods.gregtech.FluidExtractor;
 import mods.gregtech.FluidCanner;
 import mods.gregtech.ForgeHammer;
+import mods.gregtech.FormingPress;
 import mods.ic2.Canner;
 import mods.ic2.Compressor;
 import mods.ic2.Extractor;
@@ -549,16 +550,19 @@ recipes.remove(<gregtech:gt.metaitem.01:28344>);
 // ---  Knight Metall Ring
 recipes.remove(<gregtech:gt.metaitem.01:28362>);
 
-// --- GT Shaped and Shapeless Picks removal
-
+// --- GT Swords
 recipes.remove(<gregtech:gt.metatool.01>);
-// -
+
+// --- GT Pickaxes
 recipes.remove(<gregtech:gt.metatool.01:2>);
-// -
+
+// --- GT Shovels
 recipes.remove(<gregtech:gt.metatool.01:4>);
-// -
+
+// --- GT Axes
 recipes.remove(<gregtech:gt.metatool.01:6>);
-// -
+
+// --- GT Hoes
 recipes.remove(<gregtech:gt.metatool.01:8>);
 
 // --- Empty Shape
@@ -943,7 +947,7 @@ recipes.remove(<gregtech:gt.blockmachines:495>);
 recipes.remove(<gregtech:gt.blockmachines:1001>);
 
 // --- Iridium Dust
-recipes.remove(<gregtech:gt.metaitem.01:2084>);
+recipes.removeShapeless(<gregtech:gt.metaitem.01:2084>);
 
 // --- Iridium Ingot
 recipes.remove(<gregtech:gt.metaitem.01:11084>);
@@ -1035,6 +1039,11 @@ recipes.remove(<gregtech:gt.blockmachines:128>);
 // --- Quantum Chest V
 recipes.remove(<gregtech:gt.blockmachines:129>);
 
+// --- Advanced Pump III
+recipes.remove(<gregtech:gt.blockmachines:1143>);
+
+// --- Advanced Pump III
+recipes.remove(<gregtech:gt.blockmachines:1144>);
 
 
 
@@ -1135,9 +1144,13 @@ recipes.addShapeless(<gregtech:gt.metaitem.01:2336> * 3,
 recipes.addShapeless(<gregtech:gt.metaitem.01:2317> * 3, 
 [<ore:dustOsmium>, <ore:dustIridium>, <ore:dustIridium>, <ore:dustIridium>]);
 
+// --- Enderium Base
+recipes.addShapeless(<gregtech:gt.metaitem.01:2380> * 4, 
+[<ore:dustTin>, <ore:dustTin>, <ore:dustSilver>, <ore:dustPlatinum>]);
+
 // --- Enderium Dust
-recipes.addShapeless(<gregtech:gt.metaitem.01:2321> * 9, 
-[<ore:dustEnderEye>, <ore:dustEnderEye>, <ore:dustEnderEye>, <ore:dustEnderEye>, <ore:dustBeryllium>, <ore:dustBeryllium>, <ore:dustEnderEye>, <ore:dustBeryllium>, <ore:dustThaumium>]);
+//recipes.addShapeless(<gregtech:gt.metaitem.01:2321> * 9, 
+//[<ore:dustEnderiumBase>, <ore:dustEnderiumBase>, <ore:dustEnderiumBase>, <ore:dustEnderEye>, <ore:dustEnderEye>, <ore:dustEnderEye>, <ore:dustBeryllium>, <ore:dustBeryllium>, <ore:dustThaumium>]);
 
 // --- Wood Ring
 recipes.addShaped(<gregtech:gt.metaitem.01:28809>, [
@@ -2618,6 +2631,27 @@ recipes.addShapeless(<gregtech:gt.metaitem.01:2322> * 2, [<gregtech:gt.metaitem.
 // --- TungstenSteel Wrench
 recipes.addShapeless(<gregtech:gt.metatool.01:16>.withTag({"GT.ToolStats": {PrimaryMaterial: "TungstenSteel", MaxDamage: 512000 as long, SecondaryMaterial: "TungstenSteel"}}), [<RIO:item.io_tool>]);
 
+// --- Advanced Pump III
+recipes.addShaped(<gregtech:gt.blockmachines:1143>, [
+[<gregtech:gt.metaitem.01:32705>, <gregtech:gt.metaitem.01:32613>, <gregtech:gt.metaitem.01:32705>],
+[<gregtech:gt.metaitem.01:32613>, <gregtech:gt.blockmachines:14>, <gregtech:gt.metaitem.01:32613>],
+[<gregtech:gt.blockmachines:5153>, <gregtech:gt.metaitem.01:32613>, <gregtech:gt.blockmachines:5153>]]);
+
+// --- Advanced Pump IV
+recipes.addShaped(<gregtech:gt.blockmachines:1144>, [
+[<gregtech:gt.metaitem.01:32707>, <gregtech:gt.metaitem.01:32614>, <gregtech:gt.metaitem.01:32707>],
+[<gregtech:gt.metaitem.01:32614>, <gregtech:gt.blockmachines:15>, <gregtech:gt.metaitem.01:32614>],
+[<gregtech:gt.blockmachines:5163>, <gregtech:gt.metaitem.01:32614>, <gregtech:gt.blockmachines:5163>]]);
+
+// --- Pump Machinen Casing
+recipes.addShaped(<gregtech:gt.blockcasings2:10>, [
+[<dreamcraft:item.StainlessSteelItemCasing>, <ore:circuitAdvanced>, <dreamcraft:item.StainlessSteelItemCasing>],
+[<gregtech:gt.metaitem.01:32612>, <gregtech:gt.blockcasings2>, <gregtech:gt.metaitem.01:32612>],
+[<dreamcraft:item.StainlessSteelItemCasing>, <ore:circuitAdvanced>, <dreamcraft:item.StainlessSteelItemCasing>]]);
+
+// --- Electrical Steel Dust
+recipes.addShapeless(<gregtech:gt.metaitem.01:2365>, [<gregtech:gt.metaitem.01:2305>, <gregtech:gt.metaitem.01:2020>, <gregtech:gt.metaitem.01:2535>]);
+
 
 
 
@@ -2625,25 +2659,25 @@ recipes.addShapeless(<gregtech:gt.metatool.01:16>.withTag({"GT.ToolStats": {Prim
 
 
 // --- Low Voltage Transformer
-Assembler.addRecipe(<gregtech:gt.blockmachines:21>, <IC2:blockElectric:3>, <gregtech:gt.blockmachines:1246> * 2, 300, 32);
+Assembler.addRecipe(<gregtech:gt.blockmachines:21>, <IC2:blockElectric:3>, <gregtech:gt.blockmachines:1246> * 2, 300, 30);
 
 // --- Medium Voltage Transformer
-Assembler.addRecipe(<gregtech:gt.blockmachines:22>, <IC2:blockElectric:4>, <gregtech:gt.blockmachines:1366> * 2, 250, 128);
+Assembler.addRecipe(<gregtech:gt.blockmachines:22>, <IC2:blockElectric:4>, <gregtech:gt.blockmachines:1366> * 2, 250, 120);
 
 // --- High Voltage Transformer
-Assembler.addRecipe(<gregtech:gt.blockmachines:23>, <IC2:blockElectric:5>, <gregtech:gt.blockmachines:1426> * 2, 200, 512);
+Assembler.addRecipe(<gregtech:gt.blockmachines:23>, <IC2:blockElectric:5>, <gregtech:gt.blockmachines:1426> * 2, 200, 480);
 
 // --- Extreme Transformer
-Assembler.addRecipe(<gregtech:gt.blockmachines:24>, <IC2:blockElectric:6>, <gregtech:gt.blockmachines:1587> * 2, 100, 2048);
+Assembler.addRecipe(<gregtech:gt.blockmachines:24>, <IC2:blockElectric:6>, <gregtech:gt.blockmachines:1587> * 2, 100, 1920);
 
 // --- Iridium Neutron Reflector
 Assembler.addRecipe(<gregtech:gt.neutronreflector>, <dreamcraft:item.NeutronReflectorParts>, <IC2:itemPartIridium>, 1200, 256);
 
 // --- Double Thorium Fuel Rod
-Assembler.addRecipe(<gregtech:gt.Double_Thoriumcell>, <gregtech:gt.Thoriumcell> * 2, <gregtech:gt.metaitem.01:23305> * 4, 200, 32);
+Assembler.addRecipe(<gregtech:gt.Double_Thoriumcell>, <gregtech:gt.Thoriumcell> * 2, <gregtech:gt.metaitem.01:23305> * 4, 200, 30);
 
 // --- Quad Thorium Fuel Rod
-Assembler.addRecipe(<gregtech:gt.Quad_Thoriumcell>, <gregtech:gt.Double_Thoriumcell> * 2, <gregtech:gt.metaitem.01:23305> * 4, 200, 32);
+Assembler.addRecipe(<gregtech:gt.Quad_Thoriumcell>, <gregtech:gt.Double_Thoriumcell> * 2, <gregtech:gt.metaitem.01:23305> * 4, 200, 30);
 
 // --- RTG Pellets
 Assembler.addRecipe(<IC2:itemRTGPellet>, <gregtech:gt.metaitem.01:22032> * 6, <IC2:itemPlutonium> * 3, <liquid:ic2coolant> * 1000, 1200, 120);
@@ -2769,106 +2803,106 @@ Compressor.addRecipe(<gregtech:gt.metaitem.01:17525>, <gregtech:gt.metaitem.01:2
 
 
 // --- Flawless Diamond
-PrecisionLaser.addRecipe(<gregtech:gt.metaitem.02:29500>, <gregtech:gt.metaitem.01:24500> * 0, <minecraft:diamond> * 4, 1200, 480);
+PrecisionLaser.addRecipe(<gregtech:gt.metaitem.02:29500>, <gregtech:gt.metaitem.01:24500> * 0, <minecraft:diamond> * 3, 1200, 480);
 
 // --- Exquisite Diamond
-PrecisionLaser.addRecipe(<gregtech:gt.metaitem.02:30500>, <gregtech:gt.metaitem.01:24500> * 0, <gregtech:gt.metaitem.02:29500> * 4, 2400, 1024);
+PrecisionLaser.addRecipe(<gregtech:gt.metaitem.02:30500>, <gregtech:gt.metaitem.01:24500> * 0, <gregtech:gt.metaitem.02:29500> * 3, 2400, 1024);
 
 // --- Flawless Emerald
-PrecisionLaser.addRecipe(<gregtech:gt.metaitem.02:29501>, <gregtech:gt.metaitem.01:24500> * 0, <minecraft:emerald> * 4, 1200, 480);
+PrecisionLaser.addRecipe(<gregtech:gt.metaitem.02:29501>, <gregtech:gt.metaitem.01:24500> * 0, <minecraft:emerald> * 3, 1200, 480);
 
 // --- Exquisite Emerald
-PrecisionLaser.addRecipe(<gregtech:gt.metaitem.02:30501>, <gregtech:gt.metaitem.01:24500> * 0, <gregtech:gt.metaitem.02:29501> * 4, 2400, 1024);
+PrecisionLaser.addRecipe(<gregtech:gt.metaitem.02:30501>, <gregtech:gt.metaitem.01:24500> * 0, <gregtech:gt.metaitem.02:29501> * 3, 2400, 1024);
 
 // --- Flawless Ruby
-PrecisionLaser.addRecipe(<gregtech:gt.metaitem.02:29502>, <gregtech:gt.metaitem.01:24500> * 0, <gregtech:gt.metaitem.01:8502> * 4, 1200, 480);
+PrecisionLaser.addRecipe(<gregtech:gt.metaitem.02:29502>, <gregtech:gt.metaitem.01:24500> * 0, <gregtech:gt.metaitem.01:8502> * 3, 1200, 480);
 
 // --- Exquisite Ruby
-PrecisionLaser.addRecipe(<gregtech:gt.metaitem.02:30502>, <gregtech:gt.metaitem.01:24500> * 0, <gregtech:gt.metaitem.02:29502> * 4, 2400, 1024);
+PrecisionLaser.addRecipe(<gregtech:gt.metaitem.02:30502>, <gregtech:gt.metaitem.01:24500> * 0, <gregtech:gt.metaitem.02:29502> * 3, 2400, 1024);
 
 // --- Flawless Sapphire
-PrecisionLaser.addRecipe(<gregtech:gt.metaitem.02:29503>, <gregtech:gt.metaitem.01:24500> * 0, <gregtech:gt.metaitem.01:8503> * 4, 1200, 480);
+PrecisionLaser.addRecipe(<gregtech:gt.metaitem.02:29503>, <gregtech:gt.metaitem.01:24500> * 0, <gregtech:gt.metaitem.01:8503> * 3, 1200, 480);
 
 // --- Exquisite Sapphire
-PrecisionLaser.addRecipe(<gregtech:gt.metaitem.02:30503>, <gregtech:gt.metaitem.01:24500> * 0, <gregtech:gt.metaitem.02:29503> * 4, 2400, 1024);
+PrecisionLaser.addRecipe(<gregtech:gt.metaitem.02:30503>, <gregtech:gt.metaitem.01:24500> * 0, <gregtech:gt.metaitem.02:29503> * 3, 2400, 1024);
 
 // --- Flawless Green Sapphire
-PrecisionLaser.addRecipe(<gregtech:gt.metaitem.02:29504>, <gregtech:gt.metaitem.01:24500> * 0, <gregtech:gt.metaitem.01:8504> * 4, 1200, 480);
+PrecisionLaser.addRecipe(<gregtech:gt.metaitem.02:29504>, <gregtech:gt.metaitem.01:24500> * 0, <gregtech:gt.metaitem.01:8504> * 3, 1200, 480);
 
 // --- Exquisite Green Sapphire
-PrecisionLaser.addRecipe(<gregtech:gt.metaitem.02:30504>, <gregtech:gt.metaitem.01:24500> * 0, <gregtech:gt.metaitem.02:29504> * 4, 2400, 1024);
+PrecisionLaser.addRecipe(<gregtech:gt.metaitem.02:30504>, <gregtech:gt.metaitem.01:24500> * 0, <gregtech:gt.metaitem.02:29504> * 3, 2400, 1024);
 
 // --- Flawless Olivine
-PrecisionLaser.addRecipe(<gregtech:gt.metaitem.02:29505>, <gregtech:gt.metaitem.01:24500> * 0, <gregtech:gt.metaitem.01:8505> * 4, 1200, 480);
+PrecisionLaser.addRecipe(<gregtech:gt.metaitem.02:29505>, <gregtech:gt.metaitem.01:24500> * 0, <gregtech:gt.metaitem.01:8505> * 3, 1200, 480);
 
 // --- Exquisite Olivine
-PrecisionLaser.addRecipe(<gregtech:gt.metaitem.02:30505>, <gregtech:gt.metaitem.01:24500> * 0, <gregtech:gt.metaitem.02:29505> * 4, 2400, 1024);
+PrecisionLaser.addRecipe(<gregtech:gt.metaitem.02:30505>, <gregtech:gt.metaitem.01:24500> * 0, <gregtech:gt.metaitem.02:29505> * 3, 2400, 1024);
 
 // --- Flawless Topaz
-PrecisionLaser.addRecipe(<gregtech:gt.metaitem.02:29507>, <gregtech:gt.metaitem.01:24500> * 0, <gregtech:gt.metaitem.01:8507> * 4, 1200, 480);
+PrecisionLaser.addRecipe(<gregtech:gt.metaitem.02:29507>, <gregtech:gt.metaitem.01:24500> * 0, <gregtech:gt.metaitem.01:8507> * 3, 1200, 480);
 
 // --- Exquisite Topaz
-PrecisionLaser.addRecipe(<gregtech:gt.metaitem.02:30507>, <gregtech:gt.metaitem.01:24500> * 0, <gregtech:gt.metaitem.02:29507> * 4, 2400, 1024);
+PrecisionLaser.addRecipe(<gregtech:gt.metaitem.02:30507>, <gregtech:gt.metaitem.01:24500> * 0, <gregtech:gt.metaitem.02:29507> * 3, 2400, 1024);
 
 // --- Flawless Tanzanite
-PrecisionLaser.addRecipe(<gregtech:gt.metaitem.02:29508>, <gregtech:gt.metaitem.01:24500> * 0, <gregtech:gt.metaitem.01:8508> * 4, 1200, 480);
+PrecisionLaser.addRecipe(<gregtech:gt.metaitem.02:29508>, <gregtech:gt.metaitem.01:24500> * 0, <gregtech:gt.metaitem.01:8508> * 3, 1200, 480);
 
 // --- Exquisite Tanzanite
-PrecisionLaser.addRecipe(<gregtech:gt.metaitem.02:30508>, <gregtech:gt.metaitem.01:24500> * 0, <gregtech:gt.metaitem.02:29508> * 4, 2400, 1024);
+PrecisionLaser.addRecipe(<gregtech:gt.metaitem.02:30508>, <gregtech:gt.metaitem.01:24500> * 0, <gregtech:gt.metaitem.02:29508> * 3, 2400, 1024);
 
 // --- Flawless Amethyst
-PrecisionLaser.addRecipe(<gregtech:gt.metaitem.02:29509>, <gregtech:gt.metaitem.01:24500> * 0, <gregtech:gt.metaitem.01:8509> * 4, 1200, 480);
+PrecisionLaser.addRecipe(<gregtech:gt.metaitem.02:29509>, <gregtech:gt.metaitem.01:24500> * 0, <gregtech:gt.metaitem.01:8509> * 3, 1200, 480);
 
 // --- Exquisite Amethyst
-PrecisionLaser.addRecipe(<gregtech:gt.metaitem.02:30509>, <gregtech:gt.metaitem.01:24500> * 0, <gregtech:gt.metaitem.02:29509> * 4, 2400, 1024);
+PrecisionLaser.addRecipe(<gregtech:gt.metaitem.02:30509>, <gregtech:gt.metaitem.01:24500> * 0, <gregtech:gt.metaitem.02:29509> * 3, 2400, 1024);
 
 // --- Flawless Opal
-PrecisionLaser.addRecipe(<gregtech:gt.metaitem.02:29510>, <gregtech:gt.metaitem.01:24500> * 0, <gregtech:gt.metaitem.01:8510> * 4, 1200, 480);
+PrecisionLaser.addRecipe(<gregtech:gt.metaitem.02:29510>, <gregtech:gt.metaitem.01:24500> * 0, <gregtech:gt.metaitem.01:8510> * 3, 1200, 480);
 
 // --- Exquisite Opal
-PrecisionLaser.addRecipe(<gregtech:gt.metaitem.02:30510>, <gregtech:gt.metaitem.01:24500> * 0, <gregtech:gt.metaitem.02:29510> * 4, 2400, 1024);
+PrecisionLaser.addRecipe(<gregtech:gt.metaitem.02:30510>, <gregtech:gt.metaitem.01:24500> * 0, <gregtech:gt.metaitem.02:29510> * 3, 2400, 1024);
 
 // --- Flawless Jasper
-PrecisionLaser.addRecipe(<gregtech:gt.metaitem.02:29511>, <gregtech:gt.metaitem.01:24500> * 0, <gregtech:gt.metaitem.01:8511> * 4, 1200, 480);
+PrecisionLaser.addRecipe(<gregtech:gt.metaitem.02:29511>, <gregtech:gt.metaitem.01:24500> * 0, <gregtech:gt.metaitem.01:8511> * 3, 1200, 480);
 
 // --- Exquisite Jasper
-PrecisionLaser.addRecipe(<gregtech:gt.metaitem.02:30511>, <gregtech:gt.metaitem.01:24500> * 0, <gregtech:gt.metaitem.02:29511> * 4, 2400, 1024);
+PrecisionLaser.addRecipe(<gregtech:gt.metaitem.02:30511>, <gregtech:gt.metaitem.01:24500> * 0, <gregtech:gt.metaitem.02:29511> * 3, 2400, 1024);
 
 // --- Flawless Fools Ruby
-PrecisionLaser.addRecipe(<gregtech:gt.metaitem.02:29512>, <gregtech:gt.metaitem.01:24500> * 0, <gregtech:gt.metaitem.01:8512> * 4, 1200, 480);
+PrecisionLaser.addRecipe(<gregtech:gt.metaitem.02:29512>, <gregtech:gt.metaitem.01:24500> * 0, <gregtech:gt.metaitem.01:8512> * 3, 1200, 480);
 
 // --- Exquisite Fools Ruby
-PrecisionLaser.addRecipe(<gregtech:gt.metaitem.02:30512>, <gregtech:gt.metaitem.01:24500> * 0, <gregtech:gt.metaitem.02:29512> * 4, 2400, 1024);
+PrecisionLaser.addRecipe(<gregtech:gt.metaitem.02:30512>, <gregtech:gt.metaitem.01:24500> * 0, <gregtech:gt.metaitem.02:29512> * 3, 2400, 1024);
 
 // --- Flawless Blue Topaz
-PrecisionLaser.addRecipe(<gregtech:gt.metaitem.02:29513>, <gregtech:gt.metaitem.01:24500> * 0, <gregtech:gt.metaitem.01:8513> * 4, 1200, 480);
+PrecisionLaser.addRecipe(<gregtech:gt.metaitem.02:29513>, <gregtech:gt.metaitem.01:24500> * 0, <gregtech:gt.metaitem.01:8513> * 3, 1200, 480);
 
 // --- Exquisite Blue Topaz
-PrecisionLaser.addRecipe(<gregtech:gt.metaitem.02:30513>, <gregtech:gt.metaitem.01:24500> * 0, <gregtech:gt.metaitem.02:29513> * 4, 2400, 1024);
+PrecisionLaser.addRecipe(<gregtech:gt.metaitem.02:30513>, <gregtech:gt.metaitem.01:24500> * 0, <gregtech:gt.metaitem.02:29513> * 3, 2400, 1024);
 
 // --- Flawless Amber
-PrecisionLaser.addRecipe(<gregtech:gt.metaitem.02:29514>, <gregtech:gt.metaitem.01:24500> * 0, <Thaumcraft:ItemResource:6> * 4, 1200, 480);
+PrecisionLaser.addRecipe(<gregtech:gt.metaitem.02:29514>, <gregtech:gt.metaitem.01:24500> * 0, <Thaumcraft:ItemResource:6> * 3, 1200, 480);
 
 // --- Exquisite Amber
-PrecisionLaser.addRecipe(<gregtech:gt.metaitem.02:30514>, <gregtech:gt.metaitem.01:24500> * 0, <gregtech:gt.metaitem.02:29514> * 4, 2400, 1024);
+PrecisionLaser.addRecipe(<gregtech:gt.metaitem.02:30514>, <gregtech:gt.metaitem.01:24500> * 0, <gregtech:gt.metaitem.02:29514> * 3, 2400, 1024);
 
 // --- Flawless Red Granet
-PrecisionLaser.addRecipe(<gregtech:gt.metaitem.02:29527>, <gregtech:gt.metaitem.01:24500> * 0, <gregtech:gt.metaitem.01:8527> * 4, 1200, 480);
+PrecisionLaser.addRecipe(<gregtech:gt.metaitem.02:29527>, <gregtech:gt.metaitem.01:24500> * 0, <gregtech:gt.metaitem.01:8527> * 3, 1200, 480);
 
 // --- Exquisite Red Granet
-PrecisionLaser.addRecipe(<gregtech:gt.metaitem.02:30527>, <gregtech:gt.metaitem.01:24500> * 0, <gregtech:gt.metaitem.02:29527> * 4, 2400, 1024);
+PrecisionLaser.addRecipe(<gregtech:gt.metaitem.02:30527>, <gregtech:gt.metaitem.01:24500> * 0, <gregtech:gt.metaitem.02:29527> * 3, 2400, 1024);
 
 // --- Flawless Yellow Granet
-PrecisionLaser.addRecipe(<gregtech:gt.metaitem.02:29528>, <gregtech:gt.metaitem.01:24500> * 0, <gregtech:gt.metaitem.01:8528> * 4, 1200, 480);
+PrecisionLaser.addRecipe(<gregtech:gt.metaitem.02:29528>, <gregtech:gt.metaitem.01:24500> * 0, <gregtech:gt.metaitem.01:8528> * 3, 1200, 480);
 
 // --- Exquisite Yellow Granet
-PrecisionLaser.addRecipe(<gregtech:gt.metaitem.02:30528>, <gregtech:gt.metaitem.01:24500> * 0, <gregtech:gt.metaitem.02:29528> * 4, 2400, 1024);
+PrecisionLaser.addRecipe(<gregtech:gt.metaitem.02:30528>, <gregtech:gt.metaitem.01:24500> * 0, <gregtech:gt.metaitem.02:29528> * 3, 2400, 1024);
 
 // --- Flawless Glass Crystal
-PrecisionLaser.addRecipe(<gregtech:gt.metaitem.02:29890>, <gregtech:gt.metaitem.01:24500> * 0, <gregtech:gt.metaitem.01:8890> * 4, 1200, 480);
+PrecisionLaser.addRecipe(<gregtech:gt.metaitem.02:29890>, <gregtech:gt.metaitem.01:24500> * 0, <gregtech:gt.metaitem.01:8890> * 3, 1200, 480);
 
 // --- Exquisite Glass Crystal
-PrecisionLaser.addRecipe(<gregtech:gt.metaitem.02:30890>, <gregtech:gt.metaitem.01:24500> * 0, <gregtech:gt.metaitem.02:29890> * 4, 2400, 1024);
+PrecisionLaser.addRecipe(<gregtech:gt.metaitem.02:30890>, <gregtech:gt.metaitem.01:24500> * 0, <gregtech:gt.metaitem.02:29890> * 3, 2400, 1024);
 
 
 
@@ -2946,6 +2980,151 @@ ForgeHammer.addRecipe(<gregtech:gt.metaitem.01:802> * 2, <minecraft:flint>, 32, 
 
 
 
+// --- Forming Press Recipes
+
+
+// --- Mold Plate
+FormingPress.addRecipe(<gregtech:gt.metaitem.01:32301>, <gregtech:gt.metaitem.01:32300>, <gregtech:gt.metaitem.01:32301> * 0, 200, 256);
+
+// --- Mold Casing
+FormingPress.addRecipe(<gregtech:gt.metaitem.01:32302>, <gregtech:gt.metaitem.01:32300>, <gregtech:gt.metaitem.01:32302> * 0, 200, 256);
+
+// --- Gear Casing
+FormingPress.addRecipe(<gregtech:gt.metaitem.01:32303>, <gregtech:gt.metaitem.01:32300>, <gregtech:gt.metaitem.01:32303> * 0, 200, 256);
+
+// --- Coinage Casing
+FormingPress.addRecipe(<gregtech:gt.metaitem.01:32304>, <gregtech:gt.metaitem.01:32300>, <gregtech:gt.metaitem.01:32304> * 0, 200, 256);
+
+// --- Bottle Casing
+FormingPress.addRecipe(<gregtech:gt.metaitem.01:32305>, <gregtech:gt.metaitem.01:32300>, <gregtech:gt.metaitem.01:32305> * 0, 200, 256);
+
+// --- Ingot Casing
+FormingPress.addRecipe(<gregtech:gt.metaitem.01:32306>, <gregtech:gt.metaitem.01:32300>, <gregtech:gt.metaitem.01:32306> * 0, 200, 256);
+
+// --- Ball Casing
+FormingPress.addRecipe(<gregtech:gt.metaitem.01:32307>, <gregtech:gt.metaitem.01:32300>, <gregtech:gt.metaitem.01:32307> * 0, 200, 256);
+
+// --- Block Casing
+FormingPress.addRecipe(<gregtech:gt.metaitem.01:32308>, <gregtech:gt.metaitem.01:32300>, <gregtech:gt.metaitem.01:32308> * 0, 200, 256);
+
+// --- Nuggets Casing
+FormingPress.addRecipe(<gregtech:gt.metaitem.01:32309>, <gregtech:gt.metaitem.01:32300>, <gregtech:gt.metaitem.01:32309> * 0, 200, 256);
+
+// --- Buns Casing
+FormingPress.addRecipe(<gregtech:gt.metaitem.01:32310>, <gregtech:gt.metaitem.01:32300>, <gregtech:gt.metaitem.01:32310> * 0, 200, 256);
+
+// --- Bread Casing
+FormingPress.addRecipe(<gregtech:gt.metaitem.01:32311>, <gregtech:gt.metaitem.01:32300>, <gregtech:gt.metaitem.01:32311> * 0, 200, 256);
+
+// --- Baguette Casing
+FormingPress.addRecipe(<gregtech:gt.metaitem.01:32312>, <gregtech:gt.metaitem.01:32300>, <gregtech:gt.metaitem.01:32312> * 0, 200, 256);
+
+// --- Cylinder Casing
+FormingPress.addRecipe(<gregtech:gt.metaitem.01:32313>, <gregtech:gt.metaitem.01:32300>, <gregtech:gt.metaitem.01:32313> * 0, 200, 256);
+
+// --- Anvil Casing
+FormingPress.addRecipe(<gregtech:gt.metaitem.01:32314>, <gregtech:gt.metaitem.01:32300>, <gregtech:gt.metaitem.01:32314> * 0, 200, 256);
+
+// --- Name Casing
+FormingPress.addRecipe(<gregtech:gt.metaitem.01:32315>, <gregtech:gt.metaitem.01:32300>, <gregtech:gt.metaitem.01:32315> * 0, 200, 256);
+
+// --- Arrow Head Casing
+FormingPress.addRecipe(<gregtech:gt.metaitem.01:32316>, <gregtech:gt.metaitem.01:32300>, <gregtech:gt.metaitem.01:32316> * 0, 200, 256);
+
+// --- Small Gear Casing
+FormingPress.addRecipe(<gregtech:gt.metaitem.01:32317>, <gregtech:gt.metaitem.01:32300>, <gregtech:gt.metaitem.01:32317> * 0, 200, 256);
+
+// --- Helm Mold
+FormingPress.addRecipe(<dreamcraft:item.MoldHelmet>, <gregtech:gt.metaitem.01:32300>, <dreamcraft:item.MoldHelmet> * 0, 200, 256);
+
+// --- Chestplate Mold
+FormingPress.addRecipe(<dreamcraft:item.MoldChestplate>, <gregtech:gt.metaitem.01:32300>, <dreamcraft:item.MoldChestplate> * 0, 200, 256);
+
+// --- Leggings Mold
+FormingPress.addRecipe(<dreamcraft:item.MoldLeggings>, <gregtech:gt.metaitem.01:32300>, <dreamcraft:item.MoldLeggings> * 0, 200, 256);
+
+// --- Boots Mold
+FormingPress.addRecipe(<dreamcraft:item.MoldBoots>, <gregtech:gt.metaitem.01:32300>, <dreamcraft:item.MoldBoots> * 0, 200, 256);
+
+// --- Extruder Shape Plate
+FormingPress.addRecipe(<gregtech:gt.metaitem.01:32350>, <gregtech:gt.metaitem.01:32300>, <gregtech:gt.metaitem.01:32350> * 0, 200, 256);
+
+// --- Extruder Shape Rod
+FormingPress.addRecipe(<gregtech:gt.metaitem.01:32351>, <gregtech:gt.metaitem.01:32300>, <gregtech:gt.metaitem.01:32351> * 0, 200, 256);
+
+// --- Extruder Shape Bolt
+FormingPress.addRecipe(<gregtech:gt.metaitem.01:32352>, <gregtech:gt.metaitem.01:32300>, <gregtech:gt.metaitem.01:32352> * 0, 200, 256);
+
+// --- Extruder Shape Ring
+FormingPress.addRecipe(<gregtech:gt.metaitem.01:32353>, <gregtech:gt.metaitem.01:32300>, <gregtech:gt.metaitem.01:32353> * 0, 200, 256);
+
+// --- Extruder Shape Cell
+FormingPress.addRecipe(<gregtech:gt.metaitem.01:32354>, <gregtech:gt.metaitem.01:32300>, <gregtech:gt.metaitem.01:32354> * 0, 200, 256);
+
+// --- Extruder Shape Ingot
+FormingPress.addRecipe(<gregtech:gt.metaitem.01:32355>, <gregtech:gt.metaitem.01:32300>, <gregtech:gt.metaitem.01:32355> * 0, 200, 256);
+
+// --- Extruder Shape Wire
+FormingPress.addRecipe(<gregtech:gt.metaitem.01:32356>, <gregtech:gt.metaitem.01:32300>, <gregtech:gt.metaitem.01:32356> * 0, 200, 256);
+
+// --- Extruder Shape Casing
+FormingPress.addRecipe(<gregtech:gt.metaitem.01:32357>, <gregtech:gt.metaitem.01:32300>, <gregtech:gt.metaitem.01:32357> * 0, 200, 256);
+
+// --- Extruder Shape Tiny Pipe
+FormingPress.addRecipe(<gregtech:gt.metaitem.01:32358>, <gregtech:gt.metaitem.01:32300>, <gregtech:gt.metaitem.01:32358> * 0, 200, 256);
+
+// --- Extruder Shape Small Pipe
+FormingPress.addRecipe(<gregtech:gt.metaitem.01:32359>, <gregtech:gt.metaitem.01:32300>, <gregtech:gt.metaitem.01:32359> * 0, 200, 256);
+
+// --- Extruder Shape Normal Pipe
+FormingPress.addRecipe(<gregtech:gt.metaitem.01:32360>, <gregtech:gt.metaitem.01:32300>, <gregtech:gt.metaitem.01:32360> * 0, 200, 256);
+
+// --- Extruder Shape Lage Pipe
+FormingPress.addRecipe(<gregtech:gt.metaitem.01:32361>, <gregtech:gt.metaitem.01:32300>, <gregtech:gt.metaitem.01:32361> * 0, 200, 256);
+
+// --- Extruder Shape Huge Pipe
+FormingPress.addRecipe(<gregtech:gt.metaitem.01:32362>, <gregtech:gt.metaitem.01:32300>, <gregtech:gt.metaitem.01:32362> * 0, 200, 256);
+
+// --- Extruder Shape Block
+FormingPress.addRecipe(<gregtech:gt.metaitem.01:32363>, <gregtech:gt.metaitem.01:32300>, <gregtech:gt.metaitem.01:32363> * 0, 200, 256);
+
+// --- Extruder Shape Sword Blade
+FormingPress.addRecipe(<gregtech:gt.metaitem.01:32364>, <gregtech:gt.metaitem.01:32300>, <gregtech:gt.metaitem.01:32364> * 0, 200, 256);
+
+// --- Extruder Shape Pickaxe Head
+FormingPress.addRecipe(<gregtech:gt.metaitem.01:32365>, <gregtech:gt.metaitem.01:32300>, <gregtech:gt.metaitem.01:32365> * 0, 200, 256);
+
+// --- Extruder Shape Shovel Head
+FormingPress.addRecipe(<gregtech:gt.metaitem.01:32366>, <gregtech:gt.metaitem.01:32300>, <gregtech:gt.metaitem.01:32366> * 0, 200, 256);
+
+// --- Extruder Shape Axe Head
+FormingPress.addRecipe(<gregtech:gt.metaitem.01:32367>, <gregtech:gt.metaitem.01:32300>, <gregtech:gt.metaitem.01:32367> * 0, 200, 256);
+
+// --- Extruder Shape Hoe Head
+FormingPress.addRecipe(<gregtech:gt.metaitem.01:32368>, <gregtech:gt.metaitem.01:32300>, <gregtech:gt.metaitem.01:32368> * 0, 200, 256);
+
+// --- Extruder Shape Hammer Head
+FormingPress.addRecipe(<gregtech:gt.metaitem.01:32369>, <gregtech:gt.metaitem.01:32300>, <gregtech:gt.metaitem.01:32369> * 0, 200, 256);
+
+// --- Extruder Shape File Head
+FormingPress.addRecipe(<gregtech:gt.metaitem.01:32370>, <gregtech:gt.metaitem.01:32300>, <gregtech:gt.metaitem.01:32370> * 0, 200, 256);
+
+// --- Extruder Shape Saw Blade
+FormingPress.addRecipe(<gregtech:gt.metaitem.01:32371>, <gregtech:gt.metaitem.01:32300>, <gregtech:gt.metaitem.01:32371> * 0, 200, 256);
+
+// --- Extruder Shape Gear
+FormingPress.addRecipe(<gregtech:gt.metaitem.01:32372>, <gregtech:gt.metaitem.01:32300>, <gregtech:gt.metaitem.01:32372> * 0, 200, 256);
+
+// --- Extruder Shape Bottle
+FormingPress.addRecipe(<gregtech:gt.metaitem.01:32373>, <gregtech:gt.metaitem.01:32300>, <gregtech:gt.metaitem.01:32373> * 0, 200, 256);
+
+// --- Extruder Shape Boat
+FormingPress.addRecipe(<dreamcraft:item.ExtruderShapeBoat>, <gregtech:gt.metaitem.01:32300>, <dreamcraft:item.ExtruderShapeBoat> * 0, 200, 256);
+
+
+
+
+
 // --- Macerator Recipes --- 
 
 
@@ -2966,7 +3145,6 @@ Macerator.addRecipe(<gregtech:gt.metaitem.01:1890>, <TConstruct:GlassPane>);
 
 // --- Glass Dust
 Macerator.addRecipe(<gregtech:gt.metaitem.01:2890>, <BloodArsenal:glass_shard> * 2);
-
 
 
 
@@ -2997,6 +3175,9 @@ PlateBender.addRecipe(<gregtech:gt.metaitem.02:24874>, <gregtech:gt.metaitem.02:
 
 // --- Small Titanium Spring
 PlateBender.addRecipe(<gregtech:gt.metaitem.02:23028>, <gregtech:gt.metaitem.01:23028>, 200, 8);
+
+// --- Empty Shape Plate
+PlateBender.addRecipe(<gregtech:gt.metaitem.01:32300>, <gregtech:gt.metaitem.01:20305>, 200, 120);
 
 
 

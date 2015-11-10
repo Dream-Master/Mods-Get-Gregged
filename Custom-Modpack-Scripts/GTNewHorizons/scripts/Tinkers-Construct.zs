@@ -5,6 +5,7 @@
 
 import mods.gregtech.AlloySmelter;
 import mods.gregtech.Assembler;
+import mods.gregtech.BlastFurnace;
 import mods.gregtech.Centrifuge;
 import mods.gregtech.ChemicalReactor;
 import mods.gregtech.CuttingSaw;
@@ -1620,10 +1621,10 @@ mods.thaumcraft.Research.addPage("SILKYCRYSTAL", "TConstruct.research_page.SILKY
 game.setLocalization("en_US", "TConstruct.research_page.SILKYCRYSTAL", "Silky Cloth is a manufactured item and is a component of the Silky Jewel.<BR><BR>The Silky Jewel is a manufactured item, used to simulate the Silk Touch enchantment in TC tools.");
 mods.thaumcraft.Arcane.addShaped("SILKYCRYSTAL", <TConstruct:materials:25>, "aer 30, aqua 25, ignis 15, terra 15, ordo 10, perditio 10", [
 [String, <ore:foilGold>, String],
-[<ore:foilGold>, String, <ore:foilGold>],
+[<ore:foilGold>, <Forestry:craftingMaterial:3>, <ore:foilGold>],
 [String, <ore:foilGold>, String]]);
 mods.thaumcraft.Research.addArcanePage("SILKYCRYSTAL", <TConstruct:materials:25>);
-mods.thaumcraft.Infusion.addRecipe("SILKYCRYSTAL", <minecraft:diamond_block>, [<TConstruct:materials:25>, <TConstruct:materials:25>, <Thaumcraft:ItemShard>, <TConstruct:materials:25>, <TConstruct:materials:25>, <Thaumcraft:ItemShard:3>, <TConstruct:materials:25>, <TConstruct:materials:25>, <Thaumcraft:ItemShard:4>], "ignis 20, terra 20, ordo 35, praecantatio 35, vitreus 20", <TConstruct:materials:26>, 4);
+mods.thaumcraft.Infusion.addRecipe("SILKYCRYSTAL", <minecraft:diamond_block>, [<TConstruct:materials:25>, <Thaumcraft:ItemShard>, <TConstruct:materials:25>, <Thaumcraft:ItemShard:3>, <TConstruct:materials:25>, <Thaumcraft:ItemShard:4>], "ignis 20, terra 20, ordo 35, praecantatio 35, vitreus 20", <TConstruct:materials:26>, 4);
 mods.thaumcraft.Research.addInfusionPage("SILKYCRYSTAL", <TConstruct:materials:26>);
 mods.thaumcraft.Warp.addToResearch("SILKYCRYSTAL", 1);
 
@@ -2184,7 +2185,7 @@ AlloySmelter.addRecipe(<TConstruct:materials:5>, <gregtech:gt.metaitem.01:2033>,
 // -
 AlloySmelter.addRecipe(<TConstruct:materials:5>, <gregtech:gt.metaitem.01:2033>, <TConstruct:materials:38>, 400, 16);
 // -
-AlloySmelter.addRecipe(<TConstruct:materials:5>, <TConstruct:materials:30> * 9, <gregtech:gt.metaitem.01:32306> * 0, 200, 32);
+AlloySmelter.addRecipe(<TConstruct:materials:5>, <TConstruct:materials:30> * 9, <gregtech:gt.metaitem.01:32306> * 0, 200, 30);
 
 // --- Ardite Ingot
 AlloySmelter.addRecipe(<TConstruct:materials:4>, <TConstruct:materials:29> * 9, <gregtech:gt.metaitem.01:32306> * 0, 200, 16);
@@ -2220,7 +2221,21 @@ Assembler.addRecipe(<TConstruct:explosive.slime>, <TConstruct:slime.gel:1>, <IC2
 Assembler.addRecipe(<TConstruct:explosive.slime:2>, <TConstruct:slime.gel>, <TConstruct:explosive.slime>, 600, 64);
 
 // --- Empty Canister
-Assembler.addRecipe(<TConstruct:heartCanister>, <gregtech:gt.metaitem.01:22019>, <gregtech:gt.metaitem.01:27316> * 4, 2400, 512);
+Assembler.addRecipe(<TConstruct:heartCanister>, <gregtech:gt.metaitem.01:22019>, <gregtech:gt.metaitem.01:27316> * 4, 2400, 480);
+
+
+
+// --- Blast Furnace Recipes ---
+
+
+
+
+// --- Clear Glass
+BlastFurnace.addRecipe([<TConstruct:GlassBlock>], [<minecraft:glass>], 100, 120, 1000);
+
+// --- Clear Glass Pane
+BlastFurnace.addRecipe([<TConstruct:GlassPane>], [<minecraft:glass_pane>], 100, 120, 1000);
+
 
 
 
