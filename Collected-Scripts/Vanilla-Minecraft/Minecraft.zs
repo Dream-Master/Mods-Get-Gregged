@@ -29,6 +29,10 @@ val WovenCloth = <harvestcraft:wovencottonItem>;
 
 val Torchberries = <TwilightForest:item.torchberries>;
 
+val NaturaBarley4 = Natura:barleyFood:4>;
+
+val UBLigniteCoal = <UndergroundBiomes:ligniteCoal>;
+
 val ImpregnatedStick = <Forestry:oakStick>;
 
 val ObsidianChest = <IronChest:BlockIronChest:6>;
@@ -258,6 +262,7 @@ val SHammer = <ore:craftingToolSoftHammer>;
 val Knife = <ore:craftingToolKnife>;
 val Saw = <ore:craftingToolSaw>;
 val Wrench = <ore:craftingToolWrench>;
+val File = <ore:craftingToolFile>;
 
 val Map = <minecraft:map>;
 val Paper = <ore:paperEmpty>;
@@ -268,8 +273,8 @@ val Paper = <ore:paperEmpty>;
 //Gunpowder
 recipes.removeShapeless(<minecraft:gunpowder>, [<minecraft:coal:1>, <minecraft:coal:1>, <minecraft:coal:1>, <minecraft:glowstone_dust>]);
 recipes.removeShaped(<minecraft:gunpowder>, [
-[<Natura:barleyFood:4>, <Natura:barleyFood:4>, null],
-[<Natura:barleyFood:4>, <Natura:barleyFood:4>, null]]);
+[NaturaBarley4, NaturaBarley4, null],
+[NaturaBarley4, NaturaBarley4, null]]);
 
 // --- Enchantment Table
 // recipes.remove(EnchantingTable);
@@ -659,90 +664,90 @@ recipes.remove(BlackHardClay);
 
 // {
 
-//Sandstone
+// --- Sandstone
 recipes.remove(<minecraft:sandstone>);
-//Chiseld Sandstone
+// --- Chiseld Sandstone
 recipes.remove(<minecraft:sandstone:1>);
-//Smooth Sandstone
+// --- Smooth Sandstone
 recipes.remove(<minecraft:sandstone:2>);
-//TNT
+// --- TNT
 recipes.remove(<minecraft:tnt>);
-//Snow
+// --- Snow
 recipes.remove(<minecraft:snow>);
-//Clay
+// --- Clay
 recipes.remove(<minecraft:clay>);
-//nether Brick
+// --- nether Brick
 recipes.remove(<minecraft:nether_brick>);
-//Quartz Block
+// --- Quartz Block
 recipes.remove(<minecraft:quartz_block>);
-//Chiseld Quartz
+// --- Chiseld Quartz
 recipes.remove(<minecraft:quartz_block:1>);
-//Bookshelf
+// --- Bookshelf
 recipes.remove(Bookshelf);
-//Brewing Stand
+// --- Brewing Stand
 recipes.remove(<minecraft:brewing_stand>);
-//Clock
+// --- Clock
 recipes.remove(<minecraft:clock>);
-//Compass
+// --- Compass
 recipes.remove(<minecraft:compass>);
-//Diamond Sword
+// --- Diamond Sword
 recipes.remove(<minecraft:diamond_sword>);
-//Diamond Shovel
+// --- Diamond Shovel
 recipes.remove(<minecraft:diamond_shovel>);
-//Diamond Pickaxe
+// --- Diamond Pickaxe
 recipes.remove(<minecraft:diamond_pickaxe>);
-//Diamond Axe
+// --- Diamond Axe
 recipes.remove(<minecraft:diamond_axe>);
-//Diamond Hoe
+// --- Diamond Hoe
 recipes.remove(<minecraft:diamond_hoe>);
-//Diamond Helm
+// --- Diamond Helm
 recipes.remove(<minecraft:diamond_helmet>);
-//Diamond Chestplate
+// --- Diamond Chestplate
 recipes.remove(<minecraft:diamond_chestplate>);
-//Diamond Leggins
+// --- Diamond Leggins
 recipes.remove(<minecraft:diamond_leggings>);
-//Diamond Boots
+// --- Diamond Boots
 recipes.remove(<minecraft:diamond_boots>);
-//Ender Eye
+// --- Ender Eye
 recipes.remove(<minecraft:ender_eye>);
-//Minecart with Chest
+// --- Minecart with Chest
 recipes.removeShaped(<minecraft:chest_minecart>);
-//Minecart with Furnace
+// --- Minecart with Furnace
 recipes.removeShaped(<minecraft:furnace_minecart>);
-//Minecart with Hopper
+// --- Minecart with Hopper
 recipes.removeShaped(<minecraft:hopper_minecart>);
-//Minecart with TNT
+// --- Minecart with TNT
 recipes.removeShaped(<minecraft:tnt_minecart>);
-//Iron Ingot
+// --- Iron Ingot
 recipes.remove(<minecraft:iron_ingot>);
-//Iron Nuggets
+// --- Iron Nuggets
 recipes.remove(<ore:nuggetIron>);
-//Gold Ingot
+// --- Gold Ingot
 recipes.remove(<minecraft:gold_ingot>);
-//Gold Nuggets
+// --- Gold Nuggets
 recipes.remove(<ore:nuggetGold>);
-//Golden Apple small
+// --- Golden Apple small
 recipes.remove(<minecraft:golden_apple>);
-//Golden Apple big
+// --- Golden Apple big
 recipes.remove(<minecraft:golden_apple:1>);
-//Golden Carrot
+// --- Golden Carrot
 recipes.remove(<minecraft:golden_carrot>);
-//Sugar
+// --- Sugar
 recipes.removeShaped(<minecraft:sugar>);
-//Cake
+// --- Cake
 recipes.remove(<minecraft:cake>);
-//Pumpkin Seeds
+// --- Pumpkin Seeds
 recipes.remove(<minecraft:pumpkin_seeds>);
-//Melon Seeds
+// --- Melon Seeds
 recipes.remove(<minecraft:melon_seeds>);
-//Fermented Spider Eye
+// --- Fermented Spider Eye
 recipes.remove(<minecraft:fermented_spider_eye>);
-//Magma Cream
+// --- Magma Cream
 recipes.remove(<minecraft:magma_cream>);
 
 // }
 
-//remove Oak Slaps
+// --- remove Oak Slaps
 recipes.removeShaped(<minecraft:wooden_slab> * 6, [
 [<minecraft:planks>, <minecraft:planks>, <minecraft:planks>]]);
 
@@ -848,7 +853,7 @@ recipes.addShaped(Trapdoor, [
 [null, null, null],
 [IronScrew, Screwdriver, null],
 [WoodSlab, WoodSlab, WoodSlab]]);
-// - Alternate Recipe
+// -- Alternate Recipe
 recipes.addShaped(Trapdoor * 2, [
 [WoodSlab, WoodSlab, WoodSlab],
 [IronScrew, Screwdriver, IronScrew],
@@ -859,7 +864,7 @@ recipes.addShaped(Trapdoor * 2, [
 // [null, null, null],
 // [null, null, null],
 // [WoodSlab, WoodSlab, WoodSlab]]);
-// - Alternate Recipe
+// -- Alternate Recipe
 // recipes.addShaped(Trapdoor * 2, [
 // [WoodSlab, WoodSlab, WoodSlab],
 // [null, null, null],
@@ -877,7 +882,7 @@ recipes.addShaped(PressurePlate, [
 recipes.addShapedMirrored(Torch * 3, [
 [Coal, null],
 [Stick, null]]);
-// - Alternate Recipe
+// -- Alternate Recipe
 recipes.addShapedMirrored(Torch * 2, [
 [Charcoal, null],
 [Stick, null]]);
@@ -887,19 +892,19 @@ recipes.addShapedMirrored(Torch, [
 [Stick, null]]);
 // -
 recipes.addShapedMirrored(Torch, [
-[<UndergroundBiomes:ligniteCoal>, null],
+[UBLigniteCoal, null],
 [Stick, null]]);
 //-
 recipes.addShapedMirrored(Torch * 2, [
-[<UndergroundBiomes:ligniteCoal>, String],
+[UBLigniteCoal, String],
 [Stick, null]]);
 // -
 recipes.addShapedMirrored(Torch * 2, [
-[<UndergroundBiomes:ligniteCoal>, null],
+[UBLigniteCoal, null],
 [ImpregnatedStick, null]]);
 // -
 recipes.addShapedMirrored(Torch * 3, [
-[<UndergroundBiomes:ligniteCoal>, String],
+[UBLigniteCoal, String],
 [ImpregnatedStick, null]]);
 // -
 recipes.addShapedMirrored(Torch * 5, [
@@ -933,11 +938,11 @@ recipes.addShapedMirrored(Torch * 2, [
 recipes.addShapedMirrored(Torch * 5, [
 [Torchberries, null],
 [Stick, null]]);
-// - More Alternate Recipes
+// -- More Alternate Recipes
 recipes.addShaped(Torch * 4, [
 [Coal, String],
 [Stick, null]]);
-// - Alternate Recipe
+// -- Alternate Recipe
 recipes.addShaped(Torch * 3, [
 [Charcoal, String],
 [Stick, null]]);
@@ -1025,7 +1030,7 @@ recipes.addShaped(Torch * 6, [
 recipes.addShaped(Torch * 5, [
 [Coal, String],
 [ImpregnatedStick, null]]);
-// - Alternate Recipe
+// -- Alternate Recipe
 recipes.addShaped(Torch * 4, [
 [Charcoal, String],
 [ImpregnatedStick, null]]);
@@ -1214,7 +1219,7 @@ recipes.addShaped(MagentaWool * 7, [
 [AnyWool, AnyWool, AnyWool],
 [AnyWool, MagentaDye, AnyWool],
 [AnyWool, Paintbrush, AnyWool]]);
-// - Alternate Recipe
+// -- Alternate Recipe
 recipes.addShapeless(MagentaWool,
 [AnyWool, MagentaDye]);
 

@@ -11,7 +11,24 @@ val Wrench = <ore:craftingToolWrench>;
 val File = <ore:craftingToolFile>;
 
 val wireX4RedAlloy = <gregtech:gt.blockmachines:2002>;
-val Sealant = PleaseInsertAnItemHere;
+val Sealant = null;
+
+// Create anyMediumItemPipe oreDict entry for medium gt item pipes
+<ore:anyMediumItemPipe>.add(<gregtech:gt.blockmachines:5602>); // Brass
+<ore:anyMediumItemPipe>.add(<gregtech:gt.blockmachines:5607>); // Brass restrictive
+<ore:anyMediumItemPipe>.add(<gregtech:gt.blockmachines:5612>); // Electrum
+<ore:anyMediumItemPipe>.add(<gregtech:gt.blockmachines:5617>); // Electrum restrictive
+<ore:anyMediumItemPipe>.add(<gregtech:gt.blockmachines:5622>); // Platinum
+<ore:anyMediumItemPipe>.add(<gregtech:gt.blockmachines:5627>); // Platinum restrictive
+<ore:anyMediumItemPipe>.add(<gregtech:gt.blockmachines:5632>); // Osmium
+<ore:anyMediumItemPipe>.add(<gregtech:gt.blockmachines:5637>); // Osmium restrictive
+
+// Create anyMediumFluidPipe oreDict entry for medium gt fluid pipes
+<ore:anyMediumFluidPipe>.add(<gregtech:gt.blockmachines:5122>); // Bronze
+<ore:anyMediumFluidPipe>.add(<gregtech:gt.blockmachines:5132>); // Steel
+<ore:anyMediumFluidPipe>.add(<gregtech:gt.blockmachines:5142>); // Stainless steel
+<ore:anyMediumFluidPipe>.add(<gregtech:gt.blockmachines:5152>); // Titanium
+<ore:anyMediumFluidPipe>.add(<gregtech:gt.blockmachines:5162>); // Tungsten steel
 
 import minetweaker.item.IItemStack;
 import minetweaker.oredict.IOreDictEntry;
@@ -19,8 +36,8 @@ import minetweaker.oredict.IOreDictEntry;
 //result count output.
 val RCount = 4;
 //replace with... for global difficulty.
-val PipeCore = <ore:blockGlass>;
-val FluidCore = PipeCore;
+val PipeCore = <ore:anyMediumItemPipe>;
+val FluidCore = <ore:anyMediumFluidPipe>;
 val KinesisCore = wireX4RedAlloy;
 
 // Force removing Recipes

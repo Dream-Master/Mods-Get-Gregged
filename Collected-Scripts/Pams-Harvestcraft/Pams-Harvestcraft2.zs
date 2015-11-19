@@ -7,6 +7,7 @@ val cutboard = <ore:toolCuttingboard>;
 val bowl = <ore:toolMixingbowl>;
 val bake = <ore:toolBakeware>;
 val juicer = <ore:toolJuicer>;
+val pot = <ore:toolPot>;
 val cakeb = <gregtech:gt.metaitem.02:32570>;
 val doughsweet = <gregtech:gt.metaitem.02:32212>;
 val grapes = <gregtech:gt.metaitem.02:32554>;
@@ -45,12 +46,14 @@ recipes.remove(<harvestcraft:cuttingboardItem>);
 recipes.remove(<harvestcraft:mortarandpestleItem>);
 recipes.remove(<harvestcraft:bakewareItem>);
 recipes.remove(<harvestcraft:juicerItem>);
+recipes.remove(<harvestcraft:potItem>);
 
 mortar.add(<gregtech:gt.metatool.01:24>);
 cutboard.add(<gregtech:gt.metatool.01:34>);
 bowl.add(<minecraft:bowl>);
 bake.add(<gregtech:gt.metatool.01:46>);
 juicer.add(<gregtech:gt.metatool.01:14>);
+pot.add(<minecraft:bucket>);
 
 // cakes
 recipes.removeShaped(<minecraft:cake>,
