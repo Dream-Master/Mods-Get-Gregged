@@ -281,7 +281,7 @@ recipes.addShaped(<appliedenergistics2:item.ItemMultiPart:300>,
   [<ore:plateAluminium>, <appliedenergistics2:item.ItemMultiMaterial:44>, <ore:plateAluminium>],
   [null, null, null]]);
  
-//Annihilation Plane
+//ME Export Bus
 recipes.addShaped(<appliedenergistics2:item.ItemMultiPart:260>,
  [[<ore:plateAluminium>, <appliedenergistics2:item.ItemMultiMaterial:43>, <ore:plateAluminium>],
   [null, <minecraft:piston>, null],
