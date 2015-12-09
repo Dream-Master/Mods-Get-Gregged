@@ -1,7 +1,7 @@
 // Nerf buildcraft pipes to craft them through gregtech pipes.
 // Script created by Usernm.
 
-// Multiplayer for pipes amount from recipes. 
+// Multiplier for pipes amount from recipes. 
 val mul = 4;
 // Used for two-component pipes like dazuli and emzuli.
 val mul2 = 2;
