@@ -6,8 +6,7 @@
 
 
 
-
-// --- mods.chisel.Groups.addGroup("glasswork");
+mods.chisel.Groups.addGroup("basalt");
 
 
 
@@ -43,6 +42,8 @@ val EmptyBottle = <minecraft:glass_bottle>;
 
 
 // --- Removing Recipes ---
+
+furnace.remove(<chisel:concrete>);
 
 // --- Cloud In A Bottle
 recipes.remove(BottledCloud);
@@ -139,6 +140,8 @@ recipes.addShaped(BottledCloud, [
 
 
 // -- OD Chisel
+<ore:stoneConcrete>.addAll(<ore:concrete>);
+<ore:concrete>.mirror(<ore:stoneConcrete>);
 <ore:netherrack>.add(<chisel:netherrack:*>);
 <ore:stoneNetherrack>.add(<chisel:netherrack:*>);
 
@@ -156,10 +159,10 @@ recipes.addShaped(BottledCloud, [
 <ore:blockGold>.add(<chisel:silverblock:*>);
 <ore:blockIngotGold>.add(<chisel:silverblock:*>);
 
-<ore:blockSilver>.add(<chisel:gold_block:*>);
-<ore:blockIngotSilver>.add(<chisel:gold_block:*>);
-<ore:blockSilver>.add(<chisel:gold2:*>);
-<ore:blockIngotSilver>.add(<chisel:gold2:*>);
+<ore:blockGold>.add(<chisel:gold_block:*>);
+<ore:blockIngotGold>.add(<chisel:gold_block:*>);
+<ore:blockGold>.add(<chisel:gold2:*>);
+<ore:blockIngotGold>.add(<chisel:gold2:*>);
 
 <ore:blockLead>.add(<chisel:leadblock:*>);
 <ore:blockIngotLead>.add(<chisel:leadblock:*>);
@@ -181,25 +184,16 @@ recipes.addShaped(BottledCloud, [
 <ore:blockPackedIce>.add(<chisel:packedice:*>);
 <ore:craftingChest>.add(<chisel:present:*>);
 
-// --- Chisel Group Glass ---
+// --- Chisel Group basalt ---
 
-// -- mods.chisel.Groups.addVariation("glasswork", <minecraft:glass>);
-// -- mods.chisel.Groups.addVariation("glasswork", <chisel:glass:1>);
-// -- mods.chisel.Groups.addVariation("glasswork", <chisel:glass:2>);
-// -- mods.chisel.Groups.addVariation("glasswork", <chisel:glass:3>);
-// -- mods.chisel.Groups.addVariation("glasswork", <chisel:glass:4>);
-// -- mods.chisel.Groups.addVariation("glasswork", <chisel:glass:5>);
-// -- mods.chisel.Groups.addVariation("glasswork", <chisel:glass:6>);
-// -- mods.chisel.Groups.addVariation("glasswork", <chisel:glass:7>);
-// -- mods.chisel.Groups.addVariation("glasswork", <chisel:glass:8>);
-// -- mods.chisel.Groups.addVariation("glasswork", <chisel:glass:9>);
-// -- mods.chisel.Groups.addVariation("glasswork", <chisel:glass:10>);
-// -- mods.chisel.Groups.addVariation("glasswork", <chisel:glass:11>);
-// -- mods.chisel.Groups.addVariation("glasswork", <chisel:glass:12>);
-// -- mods.chisel.Groups.addVariation("glasswork", <chisel:glass:13>);
-// -- mods.chisel.Groups.addVariation("glasswork", <chisel:glass:14>);
-// -- mods.chisel.Groups.addVariation("glasswork", <chisel:glass:15>);
-// -- mods.chisel.Groups.addVariation("glasswork", <chisel:glass2>);
+for item in <ore:stoneBasalt>.items {
+mods.chisel.Groups.addVariation("basalt", item);
+}
+
+mods.chisel.Groups.removeVariation(<gregtech:gt.stone.granite.black:8>);
+mods.chisel.Groups.removeVariation(<gregtech:gt.stone.granite.red:8>);
+mods.chisel.Groups.removeVariation(<gregtech:gt.stone.basalt:8>);
+mods.chisel.Groups.removeVariation(<gregtech:gt.stone.marble:8>);
 
 
 

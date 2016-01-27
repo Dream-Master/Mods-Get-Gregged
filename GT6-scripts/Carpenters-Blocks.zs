@@ -19,12 +19,13 @@ val CBBarrier = <CarpentersBlocks:blockCarpentersBarrier>;
 val CBGate = <CarpentersBlocks:blockCarpentersGate>;
 val CBLadder = <CarpentersBlocks:blockCarpentersLadder>;
 val CBGarage = <CarpentersBlocks:blockCarpentersGarageDoor>;
+val CBPPlate = <CarpentersBlocks:blockCarpentersPressurePlate>;
 
 val Frame = <ore:frameGtWood>;
 val Plank = <ore:plankWood>;
 val Log = <ore:logWood>;
 
-val IronScrew = <ore:screwIron>;
+val IronScrew = <ore:screwAnyIron>;
 val SteelScrew = <ore:screwSteel>;
 
 val IC2Safe = <IC2:blockPersonal>;
@@ -40,10 +41,12 @@ val HHammer = <ore:craftingToolHardHammer>;//--12
 val SHammer = <ore:craftingToolSoftHammer>;//--14
 val Wrench = <ore:craftingToolWrench>;//--16
 val File = <ore:craftingToolFile>;//--18
+val Crowbar = <ore:craftingToolCrowbar>;//--20
 val Screwdriver = <ore:craftingToolScrewdriver>;//--22
 val Mortar = <ore:craftingToolMortar>;//--24
+val WireCutter = <ore:craftingToolWireCutter>;//--26
 val Knife = <ore:craftingToolKnife>;//--34
-val WireCutter = <ore:craftingToolWireCutter>;//--??
+val Chisel = <ore:craftingToolChisel>;//--48
 
 // -- remove Recipes
 
@@ -53,38 +56,56 @@ recipes.remove(CBBarrier);
 // --- Gate
 recipes.remove(CBGate);
 
-//Chisel
+// --- Carpenter's Block
+recipes.remove(CarpentersBlock);
+
+// Collapsible Block
+recipes.remove(CollapsibleBlock);
+// Chisel
 recipes.remove(CBChisel);
-//Hammer
+// Hammer
 recipes.remove(CBHammer);
-//Torch
-recipes.remove(<CarpentersBlocks:blockCarpentersTorch>);
-//Carpenters Tile
-recipes.remove(<CarpentersBlocks:itemCarpentersTile>);
-//Collapsible Block
-recipes.remove(<CarpentersBlocks:blockCarpentersCollapsibleBlock>);
-//Safe
-recipes.remove(<CarpentersBlocks:blockCarpentersSafe>);
-//Barrier
-recipes.remove(<CarpentersBlocks:blockCarpentersBarrier>);
-//Ladder
+// Torch
+recipes.remove(CBTorch);
+// Carpenters Tile
+recipes.remove(CBTile);
+// Safe
+recipes.remove(CBSafe);
+// Ladder
 recipes.remove(CBLadder);
-//Daylight Detector
-recipes.remove(<CarpentersBlocks:blockCarpentersDaylightSensor>);
-//Garage Door
+// Daylight Detector
+recipes.remove(CBLightSensor);
+// Garage Door
 recipes.remove(CBGarage);
 
-//add Recipes
+// --- add Recipes
 
-//Chisel
+// --- Carpenter's Block
+recipes.addShaped(CarpentersBlock * 5, [
+[Screwdriver, <ore:stickLongWood>, Saw],
+[<ore:stickLongWood>, <ore:plankWood>, <ore:stickLongWood>],
+[SHammer, <ore:stickLongWood>, <ore:screwAnyIron>]]);
+//-
+// recipes.addShaped(CarpentersBlock * 5, [
+// [Saw, IC2Scaffold],
+// [SHammer, File]]);
+
+// Collapsible Block
+recipes.addShaped(CollapsibleBlock * 4, [
+[<ore:stickLongWood>, CarpentersBlock, <ore:stickLongWood>],
+[CarpentersBlock, Saw, CarpentersBlock],
+[<ore:stickLongWood>, CarpentersBlock, <ore:stickLongWood>]]);
+
+// Chisel
 recipes.addShaped(CBChisel, [
-[null, null, <ore:toolHeadChiselIron>],
-[null, <ore:stickIron>, null],
-[CarpentersBlock,null, null]]);
-//Hammer
+[<ore:toolHeadChiselAnyIron>, null, null],
+[null, <ore:stickWood>, null],
+[null, null, CarpentersBlock]]);
+
+// Hammer
 recipes.addShaped(CBHammer, [
-[null, null, <ore:toolHeadHammerIron>],
-[null, <ore:stickIron>, null],
+[null, null, <ore:toolHeadHammerAnyIron>],
+[null, <ore:stickWood>, null],
 [CarpentersBlock, null, null]]);
 
 // Torch
@@ -105,12 +126,6 @@ recipes.addShaped(CBSafe, [
 [CarpentersBlock, <ore:craftingSafe>, CarpentersBlock],
 [CarpentersBlock, CarpentersBlock, CarpentersBlock]]);
 
-//Barrier
-recipes.addShaped(CBBarrier * 4, [
-[CarpentersBlock, <ore:stickWood>, CarpentersBlock],
-[CarpentersBlock, <ore:stickWood>, CarpentersBlock],
-[CarpentersBlock, null, CarpentersBlock]]);
-
 //Ladder
 recipes.addShaped(CBLadder * 2, [
 [CarpentersBlock, <ore:stickWood>, CarpentersBlock],
@@ -121,20 +136,16 @@ recipes.addShaped(CBLadder * 2, [
 recipes.addShaped(CBLightSensor, [
 [<ore:wireFineRedAlloy>, <minecraft:daylight_detector>, <ore:wireFineRedAlloy>],
 [<ore:wireFineRedAlloy>, <ore:plateLapis>, <ore:wireFineRedAlloy>],
-[CarpentersBlock, CarpentersBlock, CarpentersBlock]]);
+[CBPPlate, CBPPlate, CBPPlate]]);
 
 //Garage Door
 recipes.addShaped(CBGarage * 5, [
-[CarpentersBlock, <ore:ringIron>, CarpentersBlock],
-[<ore:ringIron>, CarpentersBlock, <ore:ringIron>],
-[CarpentersBlock, <ore:ringIron>, CarpentersBlock]]);
-
-// recipes.addShaped(CarpentersBlock * 5, [
-// [Saw, IC2Scaffold],
-// [SHammer, File]]);
+[CarpentersBlock, <ore:ringAnyIron>, CarpentersBlock],
+[<ore:ringAnyIron>, CarpentersBlock, <ore:ringAnyIron>],
+[CarpentersBlock, <ore:ringAnyIron>, CarpentersBlock]]);
 
 // --- Crafting Table
-recipes.addShaped(CraftingTable, [
+recipes.addShaped(CraftingTable * 3, [
 [CarpentersBlock, CarpentersBlock],
 [CarpentersBlock, CarpentersBlock]]);
 //-

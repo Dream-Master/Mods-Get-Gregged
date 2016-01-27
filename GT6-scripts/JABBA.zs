@@ -15,6 +15,7 @@ val HHammer = <ore:craftingToolHardHammer>;//--12
 val SHammer = <ore:craftingToolSoftHammer>;//--14
 val Wrench = <ore:craftingToolWrench>;//--16
 val File = <ore:craftingToolFile>;//--18
+val Crowbar = <ore:craftingToolCrowbar>;//--20
 val Screwdriver = <ore:craftingToolScrewdriver>;//--22
 val Mortar = <ore:craftingToolMortar>;//--24
 val WireCutter = <ore:craftingToolWireCutter>;//--26
@@ -32,6 +33,9 @@ val Barrel = <JABBA:barrel>;
 val JHammer = <JABBA:hammer>;
 
 val Log = <ore:logWood>;
+val Slab = <ore:slabWood>;
+var Chest = <ore:craftingChest>;
+Chest = <ore:chestWood>;
 
 // --- Renaming ---
 
@@ -57,6 +61,9 @@ NEI.overrideName(<JABBA:upgradeStructural:5>, "Structural Upgrade MK VI (Tungste
 NEI.overrideName(<JABBA:upgradeStructural:6>, "Structural Upgrade MK VII (Tungstensteel)");
 
 // --- Removing Recipes ---
+
+// --- Storage Upgrade
+recipes.remove(Barrel);
 
 // --- Storage Upgrade
 recipes.remove(<JABBA:upgradeCore>);
@@ -90,11 +97,22 @@ recipes.remove(DiamondDolly);
 
 // --- Adding Recipes ---
 
-// --- Storage Upgrade
-recipes.addShaped(<JABBA:upgradeCore>, [
-[Wrench, Saw, File],
-[Log, Barrel, Log],
+// --- Barrel
+recipes.addShaped(Barrel, [
+[Log, Slab, Log],
+[Log, Chest, Log],
+[Log, Log, Log]]);
+//-
+recipes.addShaped(Barrel * 2, [
+[File, Slab, Saw],
+[Log, Chest, Log],
 [Screwdriver, <ore:screwAnyMetal>, SHammer]]);
+
+// --- Storage Upgrade
+recipes.addShaped(<JABBA:upgradeCore> * 3, [
+[SHammer, <ore:screwAnyMetal>, Saw],
+[Log, Barrel, Log],
+[<ore:screwAnyMetal>, Screwdriver, <ore:screwAnyMetal>]]);
 //-
 recipes.addShapeless(<JABBA:upgradeCore> * 3, [<JABBA:upgradeCore:4>]);
 
