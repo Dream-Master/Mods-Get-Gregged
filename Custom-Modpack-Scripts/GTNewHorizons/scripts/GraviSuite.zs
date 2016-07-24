@@ -10,6 +10,61 @@ import mods.nei.NEI;
 
 
 // --- Remove Recipes ---
+
+
+// --- Super ConductorCover
+recipes.remove(<GraviSuite:itemSimpleItem>);
+
+// --- Super Conductor
+recipes.remove(<GraviSuite:itemSimpleItem:1>);
+
+// --- Cooling Core
+recipes.remove(<GraviSuite:itemSimpleItem:2>);
+
+// --- Gravitation Engine
+recipes.remove(<GraviSuite:itemSimpleItem:3>);
+
+// --- Magnetron
+recipes.remove(<GraviSuite:itemSimpleItem:4>);
+
+// --- Vajra Core
+recipes.remove(<GraviSuite:itemSimpleItem:5>);
+
+// --- Vajra
+recipes.remove(<GraviSuite:vajra:*>);
+
+// --- Engine Boost
+recipes.remove(<GraviSuite:itemSimpleItem:6>);
+
+// --- GraviChest
+recipes.remove(<GraviSuite:graviChestPlate>);
+
+// --- Advanced Chainsaw
+recipes.remove(<GraviSuite:advChainsaw>);
+
+// --- Advanced Nano Chest
+recipes.remove(<GraviSuite:advNanoChestPlate>);
+
+// --- Advanced Jetpack
+recipes.remove(<GraviSuite:advJetpack>);
+
+// --- Advanced Drill
+recipes.remove(<GraviSuite:advDDrill>);
+
+// --- Advanced Gravi Tool
+recipes.remove(<GraviSuite:graviTool>);
+
+// --- Advanced Jetpack
+recipes.remove(<GraviSuite:advLappack>);
+
+// --- Ultimate Lappack
+recipes.remove(<GraviSuite:ultimateLappack>);
+
+// --- Relocator
+recipes.remove(<GraviSuite:relocator:*>);
+
+// --- Epic Lappack
+recipes.remove(<GraviSuite:epicLappack:*>);
  
 // --- Add Recipes ---
 
@@ -76,7 +131,7 @@ recipes.addShaped(<GraviSuite:graviChestPlate:27>, [
 // --- Advanced Nano Chest
 recipes.addShaped(<GraviSuite:advNanoChestPlate:27>, [
 [<IC2:itemPartCarbonPlate>, <GraviSuite:advJetpack:*>, <IC2:itemPartCarbonPlate>],
-[<ore:plateIridium>, <IC2:itemArmorNanoChestplate:*>, <ore:plateIridium>],
+[<ore:plateChrome>, <IC2:itemArmorNanoChestplate:*>, <ore:plateChrome>],
 [<ore:wireGt12Platinum>, <ore:circuitAdvanced>, <ore:wireGt12Platinum>]]);
  
 // --- Advanced Jetpack
@@ -105,9 +160,9 @@ recipes.addShaped(<GraviSuite:epicLappack:27>, [
 
 // --- Relocator
 recipes.addShaped(<GraviSuite:relocator:27>, [
-[<ore:plateAlloyIridium>, <ore:gemNetherStar>, <ore:plateNeutronium>],
-[<ore:gemEnderEye>, <ore:craftingTeleporter>, <minecraft:dragon_egg>.reuse()],
-[<ore:plateNaquadah>, <Thaumcraft:FocusPortableHole>, <ore:plateOsmium>]]);
+[<dreamcraft:item.NeutroniumItemCasing>, <gregtech:gt.metaitem.01:32675>, <dreamcraft:item.NeutroniumItemCasing>],
+[<gregtech:gt.metaitem.01:32707>, <gregtech:gt.blockmachines:1145>, <gregtech:gt.metaitem.01:32707>],
+[<dreamcraft:item.NeutroniumItemCasing>, <IC2:itemBatLamaCrystal:*>, <dreamcraft:item.NeutroniumItemCasing>]]);
 
 // --- Advanced Chainsaw
 recipes.addShaped(<GraviSuite:advChainsaw:27>, [

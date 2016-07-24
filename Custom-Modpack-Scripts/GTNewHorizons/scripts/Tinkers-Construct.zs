@@ -100,7 +100,7 @@ mods.tconstruct.Casting.removeBasinRecipe(<minecraft:emerald_block>);
 // --- Block of Cobalt
 recipes.remove(<TConstruct:MetalBlock>);
 // -
-mods.tconstruct.Casting.removeBasinRecipe(<TConstruct:MetalBlock>);
+mods.tconstruct.Smeltery.removeMelting(<TConstruct:MetalBlock>);
 
 // --- Block of Ardite
 recipes.remove(<TConstruct:MetalBlock:1>);
@@ -154,7 +154,7 @@ mods.tconstruct.Casting.removeBasinRecipe(<IC2:blockMetal:5>);
 mods.tconstruct.Casting.removeBasinRecipe(<TConstruct:GlueBlock>);
 
 // --- Block of Pig Iron
-mods.tconstruct.Casting.removeBasinRecipe(<GemBlocksForGreg:tile.metalBlock3:13>);
+mods.tconstruct.Casting.removeBasinRecipe(<gregtech:gt.blockmetal5:11>);
 
 // --- Congealed Slime
 recipes.remove(<TConstruct:slime.gel>);
@@ -199,9 +199,16 @@ mods.tconstruct.Casting.removeBasinRecipe(<TConstruct:Smeltery:5>);
 
 // --- Casting Recipes ---
 
+// --- Cobalt Ore
+mods.tconstruct.Smeltery.removeMelting(<ore:oreCobalt>);
+
+// --- Cobalt Dust
+mods.tconstruct.Smeltery.removeMelting(<ore:dustCobalt>);
 
 // --- Alumium Ingot
 mods.tconstruct.Casting.removeTableRecipe(<GalacticraftCore:item.basicItem:5>);
+// -
+recipes.remove(<TConstruct:materials:11>);
 
 // --- Steel Ingot
 mods.tconstruct.Smeltery.removeMelting(<IC2:itemIngot:3>);
@@ -257,6 +264,24 @@ mods.tconstruct.Casting.removeTableRecipe(<IC2:itemIngot:2>);
 // --- Refined Iron Ingot
 mods.tconstruct.Casting.removeTableRecipe(<IC2:itemIngot:3>);
 
+// --- Cobalt Ingot
+mods.tconstruct.Casting.removeTableRecipe(<gregtech:gt.metaitem.01:11033>);
+
+// --- Cobalt Nugget
+//mods.tconstruct.Casting.removeTableRecipe(<gregtech:gt.metaitem.01:9382>);
+
+// --- Ardite Ingot
+mods.tconstruct.Casting.removeTableRecipe(<gregtech:gt.metaitem.01:11382>);
+
+// --- Ardite Nugget
+mods.tconstruct.Casting.removeTableRecipe(<gregtech:gt.metaitem.01:9382>);
+
+// --- Manyullyn Ingot
+mods.tconstruct.Casting.removeTableRecipe(<gregtech:gt.metaitem.01:11386>);
+
+// --- Manyullyn Nugget
+mods.tconstruct.Casting.removeTableRecipe(<gregtech:gt.metaitem.01:9386>);
+
 // --- Chain Helmet
 mods.tconstruct.Smeltery.removeMelting(<minecraft:chainmail_helmet>);
 
@@ -268,6 +293,24 @@ mods.tconstruct.Smeltery.removeMelting(<minecraft:chainmail_leggings>);
 
 // --- Chain Boots
 mods.tconstruct.Smeltery.removeMelting(<minecraft:chainmail_boots>);
+
+// --- Steel Ingot
+//mods.tconstruct.Smeltery.removeMelting(<IC2:itemIngot:3>);
+
+// --- Cobalt Nugget
+mods.tconstruct.Smeltery.removeMelting(<gregtech:gt.metaitem.01:9033>);
+
+// --- Cobalt Ingot
+mods.tconstruct.Smeltery.removeMelting(<ore:ingotCobalt>);
+
+// --- Cobalt Block
+mods.tconstruct.Smeltery.removeMelting(<gregtech:gt.blockmetal2:5>);
+// -
+mods.tconstruct.Casting.removeBasinRecipe(<ore:blockCobalt>);
+
+// --- Blood Infuse Iron Block
+mods.tconstruct.Casting.removeBasinRecipe(<BloodArsenal:blood_infused_iron_block>);
+
 
 
 // --- Oredict Obsidian Tool Rod
@@ -318,11 +361,8 @@ recipes.remove(<TConstruct:decoration.stoneladder>);
 // --- Punji Sticks ---
 recipes.remove(<TConstruct:trap.punji>);
 
-// --- Alluminium Nuggets
+// --- Aluminium Nuggets
 recipes.remove(<TConstruct:materials:22>);
-
-// --- Gold Blank Casting
-mods.tconstruct.Casting.removeTableRecipe(<TConstruct:blankPattern:2>);
 
 // --- Golden Apple
 mods.tconstruct.Casting.removeTableRecipe(<minecraft:golden_apple>);
@@ -751,6 +791,15 @@ furnace.remove(<TConstruct:materials:2>);
 // --- Seared Bricks Nether
 furnace.remove(<TConstruct:materials:37>);
 
+// --- Aluminium Ingot
+recipes.removeShaped(<gregtech:gt.metaitem.01:11019>, [
+[<TConstruct:materials:22>, <TConstruct:materials:22>, <TConstruct:materials:22>],
+[<TConstruct:materials:22>, <TConstruct:materials:22>, <TConstruct:materials:22>],
+[<TConstruct:materials:22>, <TConstruct:materials:22>,<TConstruct:materials:22>]]);
+
+// --- Raw Aluminium
+recipes.removeShaped(<gregtech:gt.metaitem.01:11019>, [
+[<TConstruct:materials:12>, null, null]]);
 
 
 
@@ -790,9 +839,6 @@ mods.tconstruct.Casting.addTableRecipe(<gregtech:gt.metaitem.01:9032>, <liquid:i
 // --- Bronze Nugget
 mods.tconstruct.Casting.addTableRecipe(<gregtech:gt.metaitem.01:9300>, <liquid:bronze.molten> *16, <TConstruct:metalPattern:27>, false, 20);
 
-// --- Cobalt Nugget
-mods.tconstruct.Casting.addTableRecipe(<gregtech:gt.metaitem.01:9033>, <liquid:cobalt.molten> * 16, <TConstruct:metalPattern:27>, false, 20);
-
 // --- Copper Ingot
 mods.tconstruct.Casting.addTableRecipe(<gregtech:gt.metaitem.01:11035>, <liquid:copper.molten> * 144, <TConstruct:metalPattern>, false, 100);
 
@@ -801,6 +847,9 @@ mods.tconstruct.Casting.addTableRecipe(<gregtech:gt.metaitem.01:11057>, <liquid:
 
 // --- Bronze Ingot
 mods.tconstruct.Casting.addTableRecipe(<gregtech:gt.metaitem.01:11300>, <liquid:bronze.molten> * 144, <TConstruct:metalPattern>, false, 100);
+
+// --- Aluminium Brass Ingot
+mods.tconstruct.Casting.addTableRecipe(<TConstruct:materials:14>, <liquid:aluminumbrass.molten> * 144, <TConstruct:metalPattern>, false, 100);
 
 // --- Ingot Cast
 mods.tconstruct.Smeltery.addMelting(<TConstruct:metalPattern>, <liquid:aluminumbrass.molten> * 72, 500, <TConstruct:MetalBlock:7>);
@@ -1060,17 +1109,6 @@ mods.tconstruct.Smeltery.addMelting(<gregtech:gt.blockores:3019>, <liquid:alumin
 // -
 mods.tconstruct.Smeltery.addMelting(<gregtech:gt.blockores:4019>, <liquid:aluminum.molten> * 144, 400, <TConstruct:SearedBrick:5>);
 
-// --- Gt Cobalt
-mods.tconstruct.Smeltery.addMelting(<gregtech:gt.blockores:33>, <liquid:cobalt.molten> * 144, 650, <TConstruct:GravelOre:5>);
-// -
-mods.tconstruct.Smeltery.addMelting(<gregtech:gt.blockores:1033>, <liquid:cobalt.molten> * 144, 650, <TConstruct:GravelOre:5>);
-// -
-mods.tconstruct.Smeltery.addMelting(<gregtech:gt.blockores:2033>, <liquid:cobalt.molten> * 144, 650, <TConstruct:GravelOre:5>);
-// -
-mods.tconstruct.Smeltery.addMelting(<gregtech:gt.blockores:3033>, <liquid:cobalt.molten> * 144, 650, <TConstruct:GravelOre:5>);
-// -
-mods.tconstruct.Smeltery.addMelting(<gregtech:gt.blockores:4033>, <liquid:cobalt.molten> * 144, 650, <TConstruct:GravelOre:5>);
-
 // --- Gt Nickel
 mods.tconstruct.Smeltery.addMelting(<gregtech:gt.blockores:34>, <liquid:nickel.molten> * 144, 400, <gregtech:gt.blockores:34>);
 // -
@@ -1126,11 +1164,142 @@ mods.tconstruct.Smeltery.addMelting(<gregtech:gt.blockores:3501>, <liquid:emeral
 // -
 mods.tconstruct.Smeltery.addMelting(<gregtech:gt.blockores:4501>, <liquid:emerald.liquid> * 640, 800, <minecraft:emerald_ore>);
 
+// --- Gt Steel
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.metaitem.01:32300>, <liquid:steel.molten> * 576, 800, <IC2:blockMetal:5>);
+// -
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.metaitem.01:32301>, <liquid:steel.molten> * 576, 800, <IC2:blockMetal:5>);
+// -
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.metaitem.01:32302>, <liquid:steel.molten> * 576, 800, <IC2:blockMetal:5>);
+// -
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.metaitem.01:32303>, <liquid:steel.molten> * 576, 800, <IC2:blockMetal:5>);
+// -
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.metaitem.01:32304>, <liquid:steel.molten> * 576, 800, <IC2:blockMetal:5>);
+// -
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.metaitem.01:32305>, <liquid:steel.molten> * 576, 800, <IC2:blockMetal:5>);
+// -
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.metaitem.01:32306>, <liquid:steel.molten> * 576, 800, <IC2:blockMetal:5>);
+// -
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.metaitem.01:32307>, <liquid:steel.molten> * 576, 800, <IC2:blockMetal:5>);
+// -
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.metaitem.01:32308>, <liquid:steel.molten> * 576, 800, <IC2:blockMetal:5>);
+// -
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.metaitem.01:32309>, <liquid:steel.molten> * 576, 800, <IC2:blockMetal:5>);
+// -
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.metaitem.01:32310>, <liquid:steel.molten> * 576, 800, <IC2:blockMetal:5>);
+// -
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.metaitem.01:32311>, <liquid:steel.molten> * 576, 800, <IC2:blockMetal:5>);
+// -
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.metaitem.01:32312>, <liquid:steel.molten> * 576, 800, <IC2:blockMetal:5>);
+// -
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.metaitem.01:32313>, <liquid:steel.molten> * 576, 800, <IC2:blockMetal:5>);
+// -
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.metaitem.01:32314>, <liquid:steel.molten> * 576, 800, <IC2:blockMetal:5>);
+// -
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.metaitem.01:32315>, <liquid:steel.molten> * 576, 800, <IC2:blockMetal:5>);
+// -
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.metaitem.01:32316>, <liquid:steel.molten> * 576, 800, <IC2:blockMetal:5>);
+// -
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.metaitem.01:32317>, <liquid:steel.molten> * 576, 800, <IC2:blockMetal:5>);
+// -
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.metaitem.01:32350>, <liquid:steel.molten> * 576, 800, <IC2:blockMetal:5>);
+// -
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.metaitem.01:32351>, <liquid:steel.molten> * 576, 800, <IC2:blockMetal:5>);
+// -
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.metaitem.01:32352>, <liquid:steel.molten> * 576, 800, <IC2:blockMetal:5>);
+// -
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.metaitem.01:32353>, <liquid:steel.molten> * 576, 800, <IC2:blockMetal:5>);
+// -
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.metaitem.01:32354>, <liquid:steel.molten> * 576, 800, <IC2:blockMetal:5>);
+// -
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.metaitem.01:32355>, <liquid:steel.molten> * 576, 800, <IC2:blockMetal:5>);
+// -
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.metaitem.01:32356>, <liquid:steel.molten> * 576, 800, <IC2:blockMetal:5>);
+// -
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.metaitem.01:32357>, <liquid:steel.molten> * 576, 800, <IC2:blockMetal:5>);
+// -
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.metaitem.01:32358>, <liquid:steel.molten> * 576, 800, <IC2:blockMetal:5>);
+// -
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.metaitem.01:32359>, <liquid:steel.molten> * 576, 800, <IC2:blockMetal:5>);
+// -
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.metaitem.01:32360>, <liquid:steel.molten> * 576, 800, <IC2:blockMetal:5>);
+// -
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.metaitem.01:32361>, <liquid:steel.molten> * 576, 800, <IC2:blockMetal:5>);
+// -
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.metaitem.01:32362>, <liquid:steel.molten> * 576, 800, <IC2:blockMetal:5>);
+// -
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.metaitem.01:32363>, <liquid:steel.molten> * 576, 800, <IC2:blockMetal:5>);
+// -
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.metaitem.01:32364>, <liquid:steel.molten> * 576, 800, <IC2:blockMetal:5>);
+// -
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.metaitem.01:32365>, <liquid:steel.molten> * 576, 800, <IC2:blockMetal:5>);
+// -
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.metaitem.01:32366>, <liquid:steel.molten> * 576, 800, <IC2:blockMetal:5>);
+// -
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.metaitem.01:32367>, <liquid:steel.molten> * 576, 800, <IC2:blockMetal:5>);
+// -
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.metaitem.01:32368>, <liquid:steel.molten> * 576, 800, <IC2:blockMetal:5>);
+// -
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.metaitem.01:32369>, <liquid:steel.molten> * 576, 800, <IC2:blockMetal:5>);
+// -
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.metaitem.01:32370>, <liquid:steel.molten> * 576, 800, <IC2:blockMetal:5>);
+// -
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.metaitem.01:32371>, <liquid:steel.molten> * 576, 800, <IC2:blockMetal:5>);
+// -
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.metaitem.01:32372>, <liquid:steel.molten> * 576, 800, <IC2:blockMetal:5>);
+// -
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.metaitem.01:32373>, <liquid:steel.molten> * 576, 800, <IC2:blockMetal:5>);
+// -
+mods.tconstruct.Smeltery.addMelting(<dreamcraft:item.ExtruderShapeBoat>, <liquid:steel.molten> * 576, 800, <IC2:blockMetal:5>);
+// -
+mods.tconstruct.Smeltery.addMelting(<dreamcraft:item.MoldChestplate>, <liquid:steel.molten> * 576, 800, <IC2:blockMetal:5>);
+// -
+mods.tconstruct.Smeltery.addMelting(<dreamcraft:item.MoldHelmet>, <liquid:steel.molten> * 576, 800, <IC2:blockMetal:5>);
+// -
+mods.tconstruct.Smeltery.addMelting(<dreamcraft:item.MoldLeggings>, <liquid:steel.molten> * 576, 800, <IC2:blockMetal:5>);
+// -
+mods.tconstruct.Smeltery.addMelting(<dreamcraft:item.MoldBoots>, <liquid:steel.molten> * 576, 800, <IC2:blockMetal:5>);
+
+// --- Tinkers Cobalt
+mods.tconstruct.Smeltery.addMelting(<TConstruct:SearedBrick:1>, <liquid:cobalt.molten> * 144, 800, <TConstruct:MetalBlock>);
+
+// --- Glue ---
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.metaitem.01:2880>, <liquid:glue> * 144, 250, <TConstruct:GlueBlock>);
+// -
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.metaitem.01:11880>, <liquid:glue> * 144, 300, <TConstruct:GlueBlock>);
+// -
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.metaitem.01:17880>, <liquid:glue> * 288, 350, <TConstruct:GlueBlock>);
+// -
+mods.tconstruct.Smeltery.addMelting(<EMT:EMTItems:10>, <liquid:glue> * 576, 400, <TConstruct:GlueBlock>);
+// -
+mods.tconstruct.Smeltery.addMelting(<EMT:EMTItems:8>, <liquid:glue> * 288, 200, <TConstruct:GlueBlock>);
+
+// --- Cobalt Ingot
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.metaitem.01:11033>, <liquid:cobalt.molten> * 144, 650, <TConstruct:GravelOre:5>);
+
 // --- Seared Stone
 mods.tconstruct.Casting.addBasinRecipe(<TConstruct:Smeltery:4>, <liquid:stone.seared> * 360, null, false, 245);
 
 // --- Seared Cobblestone
 mods.tconstruct.Casting.addBasinRecipe(<TConstruct:Smeltery:5>, <liquid:stone.seared> * 360, <minecraft:cobblestone>, false, 245);
+
+// --- Obsidian
+mods.tconstruct.Smeltery.addMelting(<Thaumcraft:blockCosmeticSolid>, <liquid:obsidian.molten> * 288, 850, <minecraft:obsidian>);
+// -
+mods.tconstruct.Smeltery.addMelting(<Thaumcraft:blockCosmeticSolid:1>, <liquid:obsidian.molten> * 288, 850, <minecraft:obsidian>);
+
+// --- Lead Items
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.metaitem.01:2089>, <liquid:lead.molten> * 144, 400, <IC2:blockMetal:4>);
+// -
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.metaitem.01:11089>, <liquid:lead.molten> * 144, 400, <IC2:blockMetal:4>);
+// -
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.metaitem.01:9089>, <liquid:lead.molten> * 16, 400, <IC2:blockMetal:4>);
+// -
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.metaitem.01:17089>, <liquid:lead.molten> * 144, 400, <IC2:blockMetal:4>);
+// -
+mods.tconstruct.Smeltery.addMelting(<gregtech:gt.metaitem.01:23089>, <liquid:lead.molten> * 72, 400, <IC2:blockMetal:4>);
+// -
+mods.tconstruct.Smeltery.addMelting(<IC2:blockMetal:4>, <liquid:lead.molten> * 1296, 400, <IC2:blockMetal:4>);
+
 
 // --- Seared Tank
 recipes.addShaped(<TConstruct:LavaTank>, [
@@ -1157,17 +1326,17 @@ recipes.addShaped(<TConstruct:SmelteryNether>, [
 // --- Seared Bricks
 recipes.addShaped(<TConstruct:Smeltery:2> * 2, [
 [<TConstruct:materials:2>, <TConstruct:materials:2>, <TConstruct:materials:2>],
-[<TConstruct:materials:2>, <minecraft:water_bucket>.giveBack(<minecraft:bucket>), <TConstruct:materials:2>],
+[<TConstruct:materials:2>, <minecraft:water_bucket>.transformReplace(<minecraft:bucket>), <TConstruct:materials:2>],
 [<TConstruct:materials:2>, <TConstruct:materials:2>, <TConstruct:materials:2>]]);
 // -
 recipes.addShaped(<TConstruct:Smeltery:2> * 2, [
 [<TConstruct:materials:2>, <TConstruct:materials:2>, <TConstruct:materials:2>],
-[<TConstruct:materials:2>, <IguanaTweaksTConstruct:clayBucketWater>.giveBack(<IguanaTweaksTConstruct:clayBucketFired>), <TConstruct:materials:2>],
+[<TConstruct:materials:2>, <IguanaTweaksTConstruct:clayBucketWater>.transformReplace(<IguanaTweaksTConstruct:clayBucketFired>), <TConstruct:materials:2>],
 [<TConstruct:materials:2>, <TConstruct:materials:2>, <TConstruct:materials:2>]]);
 // -
 recipes.addShaped(<TConstruct:SmelteryNether:2> * 2, [
 [<TConstruct:materials:37>, <TConstruct:materials:37>, <TConstruct:materials:37>],
-[<TConstruct:materials:37>, <minecraft:lava_bucket>.giveBack(<minecraft:bucket>), <TConstruct:materials:37>],
+[<TConstruct:materials:37>, <minecraft:lava_bucket>.transformReplace(<minecraft:bucket>), <TConstruct:materials:37>],
 [<TConstruct:materials:37>, <TConstruct:materials:37>, <TConstruct:materials:37>]]);
 // -
 recipes.addShaped(<TConstruct:SmelteryNether:2> * 2, [
@@ -1274,6 +1443,11 @@ recipes.addShaped(<TConstruct:bootsWood>, [
 [<ore:logWood>, null, <ore:logWood>],
 [null, null, null]]);
 
+// --- Clear Glass Pane
+recipes.addShaped(<TConstruct:GlassPane> * 2, [
+[<ore:craftingToolSaw>, null, null],
+[null, <TConstruct:GlassBlock>, null]]);
+
 
 
 // --- Items ---
@@ -1282,42 +1456,42 @@ recipes.addShaped(<TConstruct:bootsWood>, [
 // --- Grout
 recipes.addShaped(Grout * 4, [
 [Sand, Sand, Sand],
-[Claydust, <minecraft:water_bucket>.giveBack(<minecraft:bucket>), Claydust],
+[Claydust, <minecraft:water_bucket>.transformReplace(<minecraft:bucket>), Claydust],
 [Gravel, Gravel, Gravel]]);
 // -
 recipes.addShaped(Grout * 4, [
 [Gravel, Gravel, Gravel],
-[Claydust, <minecraft:water_bucket>.giveBack(<minecraft:bucket>), Claydust],
+[Claydust, <minecraft:water_bucket>.transformReplace(<minecraft:bucket>), Claydust],
 [Sand, Sand, Sand]]);
 // -
 recipes.addShaped(Grout * 4, [
 [Sand, Claydust, Gravel],
-[Sand, <minecraft:water_bucket>.giveBack(<minecraft:bucket>), Gravel],
+[Sand, <minecraft:water_bucket>.transformReplace(<minecraft:bucket>), Gravel],
 [Sand, Claydust, Gravel]]);
 // -
 recipes.addShaped(Grout * 4, [
 [Gravel, Claydust, Sand],
-[Gravel, <minecraft:water_bucket>.giveBack(<minecraft:bucket>), Sand],
+[Gravel, <minecraft:water_bucket>.transformReplace(<minecraft:bucket>), Sand],
 [Gravel, Claydust, Sand]]);
 
 recipes.addShaped(Grout * 4, [
 [Sand, Sand, Sand],
-[Claydust, <IguanaTweaksTConstruct:clayBucketWater>.giveBack(<IguanaTweaksTConstruct:clayBucketFired>), Claydust],
+[Claydust, <IguanaTweaksTConstruct:clayBucketWater>.transformReplace(<IguanaTweaksTConstruct:clayBucketFired>), Claydust],
 [Gravel, Gravel, Gravel]]);
 // -
 recipes.addShaped(Grout * 4, [
 [Gravel, Gravel, Gravel],
-[Claydust, <IguanaTweaksTConstruct:clayBucketWater>.giveBack(<IguanaTweaksTConstruct:clayBucketFired>), Claydust],
+[Claydust, <IguanaTweaksTConstruct:clayBucketWater>.transformReplace(<IguanaTweaksTConstruct:clayBucketFired>), Claydust],
 [Sand, Sand, Sand]]);
 // -
 recipes.addShaped(Grout * 4, [
 [Sand, Claydust, Gravel],
-[Sand, <IguanaTweaksTConstruct:clayBucketWater>.giveBack(<IguanaTweaksTConstruct:clayBucketFired>), Gravel],
+[Sand, <IguanaTweaksTConstruct:clayBucketWater>.transformReplace(<IguanaTweaksTConstruct:clayBucketFired>), Gravel],
 [Sand, Claydust, Gravel]]);
 // -
 recipes.addShaped(Grout * 4, [
 [Gravel, Claydust, Sand],
-[Gravel, <IguanaTweaksTConstruct:clayBucketWater>.giveBack(<IguanaTweaksTConstruct:clayBucketFired>), Sand],
+[Gravel, <IguanaTweaksTConstruct:clayBucketWater>.transformReplace(<IguanaTweaksTConstruct:clayBucketFired>), Sand],
 [Gravel, Claydust, Sand]]);
 
 // --- Slime Soil
@@ -1577,196 +1751,75 @@ recipes.addShapeless(<TConstruct:SpeedSlab:6> * 2, [<ore:craftingToolSaw>, <TCon
 // --- Chiseld Brwonstone Slab
 recipes.addShapeless(<TConstruct:SpeedSlab:7> * 2, [<ore:craftingToolSaw>, <TConstruct:SpeedBlock:7>]);
 
-
 // --- Punji Sticks ---
 recipes.addShaped(<TConstruct:trap.punji> * 2, [
 [<minecraft:reeds>, <ore:stickWood>, <minecraft:reeds>],
 [String, <minecraft:reeds>, String],
 [<minecraft:reeds>, <ore:stickWood>, <minecraft:reeds>]]);
 
-// --- Ball of Moss
-mods.thaumcraft.Research.addResearch("BALLOFMOSS", "ARTIFICE", "sano 100, terra 100, instrumentum 100", 13, 6, 12, <TConstruct:materials:6>);
-game.setLocalization("en_US", "tc.research_name.BALLOFMOSS", "Ball of Moss");
-game.setLocalization("en_US", "tc.research_text.BALLOFMOSS", "[TC] Your Tools repair itselfs.");
-mods.thaumcraft.Research.addPrereq("BALLOFMOSS", "SILKYCRYSTAL", false);
-mods.thaumcraft.Research.setConcealed("BALLOFMOSS", true);
-mods.thaumcraft.Research.setRound("BALLOFMOSS", true);
-mods.thaumcraft.Research.addPage("BALLOFMOSS", "TConstruct.research_page.BALLOFMOSS");
-game.setLocalization("en_US", "TConstruct.research_page.BALLOFMOSS", "The Ball of Moss for Tinkers Construct Tools.<BR> Attaching moss to a tool infuses it with life. The tool appers to be capable of regenerating wear and tear.<BR>Effects:<BR> The tool slowly repair itself.<BR>Sunlight speeds up the process.");
-mods.thaumcraft.Infusion.addRecipe("BALLOFMOSS", <Thaumcraft:ItemResource:15>, [<gregtech:gt.metaitem.01:2542>, <TwilightForest:tile.TFPlant:3>, <BiomesOPlenty:moss>, <gregtech:gt.metaitem.01:2542>, <TwilightForest:tile.TFPlant:3>, <BiomesOPlenty:moss>, <gregtech:gt.metaitem.01:2542>, <TwilightForest:tile.TFPlant:3>, <BiomesOPlenty:moss>, <gregtech:gt.metaitem.01:2542>, <TwilightForest:tile.TFPlant:3>, <BiomesOPlenty:moss>], "sano 30, terra 25, instrumentum 35", <TConstruct:materials:6>, 5);
-mods.thaumcraft.Research.addInfusionPage("BALLOFMOSS", <TConstruct:materials:6>);
-mods.thaumcraft.Warp.addToResearch("BALLOFMOSS", 2);
-
-// --- Necrotic Bone
-mods.thaumcraft.Research.addResearch("NECROTICBONE", "ALCHEMY", "exanimis 100, mortuus 100, spiritus 100, venenum 100", -7, -1, 1, <TConstruct:materials:8>);
-game.setLocalization("en_US", "tc.research_name.NECROTICBONE", "Necrotic Bone");
-game.setLocalization("en_US", "tc.research_text.NECROTICBONE", "[TC] Evil way to make Wither Skeleton Bones.");
-mods.thaumcraft.Research.addPrereq("NECROTICBONE", "ENTROPICPROCESSING", false);
-mods.thaumcraft.Research.setConcealed("NECROTICBONE", true);
-mods.thaumcraft.Research.setRound("NECROTICBONE", true);
-mods.thaumcraft.Research.addPage("NECROTICBONE", "TConstruct.research_page.NECROTICBONE");
-game.setLocalization("en_US", "TConstruct.research_page.NECROTICBONE", "The Necrotic Bone is a special drop gained by killing Wither Skeletons, and can be rarely found in dungeon chests. Now you find a evil way to make it out of Skeleton Bones. Currently, the only use for the Necrotic bone is used to craft a Heart Canister and add a modifier to weapons.");
-mods.thaumcraft.Crucible.addRecipe("NECROTICBONE", <TConstruct:materials:8>, <minecraft:bone>, "exanimis 20, mortuus 30, infernus 20, spiritus 20, venenum 20, corpus 5");
-mods.thaumcraft.Research.addCruciblePage("NECROTICBONE", <TConstruct:materials:8>);
-mods.thaumcraft.Warp.addToResearch("NECROTICBONE", 1);
-
-// --- Silky Cloth and Jewel
-mods.thaumcraft.Research.addResearch("SILKYCRYSTAL", "ARTIFICE", "pannus 100, lucrum 100, instrumentum 100, aer 100, praecantatio 100", 13, 8, 12, <TConstruct:materials:26>);
-game.setLocalization("en_US", "tc.research_name.SILKYCRYSTAL", "Silky Jevel");
-game.setLocalization("en_US", "tc.research_text.SILKYCRYSTAL", "[TC] Silky magical.");
-mods.thaumcraft.Research.addPrereq("SILKYCRYSTAL", "LAVACRYSTAL", false);
-mods.thaumcraft.Research.setConcealed("SILKYCRYSTAL", true);
-mods.thaumcraft.Research.setRound("SILKYCRYSTAL", true);
-mods.thaumcraft.Research.addPage("SILKYCRYSTAL", "TConstruct.research_page.SILKYCRYSTAL");
-game.setLocalization("en_US", "TConstruct.research_page.SILKYCRYSTAL", "Silky Cloth is a manufactured item and is a component of the Silky Jewel.<BR><BR>The Silky Jewel is a manufactured item, used to simulate the Silk Touch enchantment in TC tools.");
-mods.thaumcraft.Arcane.addShaped("SILKYCRYSTAL", <TConstruct:materials:25>, "aer 30, aqua 25, ignis 15, terra 15, ordo 10, perditio 10", [
-[String, <ore:foilGold>, String],
-[<ore:foilGold>, <Forestry:craftingMaterial:3>, <ore:foilGold>],
-[String, <ore:foilGold>, String]]);
-mods.thaumcraft.Research.addArcanePage("SILKYCRYSTAL", <TConstruct:materials:25>);
-mods.thaumcraft.Infusion.addRecipe("SILKYCRYSTAL", <minecraft:diamond_block>, [<TConstruct:materials:25>, <Thaumcraft:ItemShard>, <TConstruct:materials:25>, <Thaumcraft:ItemShard:3>, <TConstruct:materials:25>, <Thaumcraft:ItemShard:4>], "ignis 20, terra 20, ordo 35, praecantatio 35, vitreus 20", <TConstruct:materials:26>, 4);
-mods.thaumcraft.Research.addInfusionPage("SILKYCRYSTAL", <TConstruct:materials:26>);
-mods.thaumcraft.Warp.addToResearch("SILKYCRYSTAL", 1);
-
-// --- Lava Crystal
-mods.thaumcraft.Research.addResearch("LAVACRYSTAL", "ARTIFICE", "ignis 100, praecantatio 100, vacuos 100, perditio 100", 12, 9, 12, <TConstruct:materials:7>);
-game.setLocalization("en_US", "tc.research_name.LAVACRYSTAL", "Lava Crystal");
-game.setLocalization("en_US", "tc.research_text.LAVACRYSTAL", "[TC] Fiery magical.");
-mods.thaumcraft.Research.addPrereq("LAVACRYSTAL", "ENCHANTINGTABLE", false);
-mods.thaumcraft.Research.setConcealed("LAVACRYSTAL", true);
-mods.thaumcraft.Research.setRound("LAVACRYSTAL", true);
-mods.thaumcraft.Research.addPage("LAVACRYSTAL", "TConstruct.research_page.LAVACRYSTAL");
-game.setLocalization("en_US", "TConstruct.research_page.LAVACRYSTAL", "A Lava Crystal is a modifier both for tools and weapons. If added, the tool(s) is/are granted with the power of a furnace, meaning it will auto-smelt blocks when harvested. However, adding this to a weapon will not give it the same effect. Instead, it will set mobs on fire for 3 seconds.<BR>This modifier can be stacked with Luck (Fortune) and is not compatible with Silky (Silk Touch).");
-mods.thaumcraft.Infusion.addRecipe("LAVACRYSTAL", <minecraft:fire_charge>, [<minecraft:blaze_rod>, <minecraft:lava_bucket>, <minecraft:fire_charge>, <Thaumcraft:ItemShard:1>, <minecraft:blaze_rod>, <minecraft:lava_bucket>, <minecraft:fire_charge>, <Thaumcraft:ItemShard:1>, <minecraft:blaze_rod>, <minecraft:lava_bucket>, <minecraft:fire_charge>, <Thaumcraft:ItemShard:1>], "ignis 25, perditio 25, vacuos 20, praecantatio 35", <TConstruct:materials:7>, 3);
-mods.thaumcraft.Research.addInfusionPage("LAVACRYSTAL", <TConstruct:materials:7>);
-mods.thaumcraft.Warp.addToResearch("LAVACRYSTAL", 1);
-
-// --- Red Heart
-mods.thaumcraft.Research.addResearch("REDHEART", "ARTIFICE", "ignis 100, praecantatio 100, vacuos 100, perditio 100", 8, 4, 12, <TConstruct:heartCanister:1>);
-game.setLocalization("en_US", "tc.research_name.REDHEART", "Red Heart");
-game.setLocalization("en_US", "tc.research_text.REDHEART", "[TC] 10 Hearts are not enough.");
-mods.thaumcraft.Research.addPrereq("REDHEART", "RUNICAUGMENTATION", false);
-mods.thaumcraft.Research.setConcealed("REDHEART", true);
-mods.thaumcraft.Research.setRound("REDHEART", true);
-mods.thaumcraft.Research.addPage("REDHEART", "TConstruct.research_page.REDHEART.1");
-mods.thaumcraft.Research.addPage("REDHEART", "TConstruct.research_page.REDHEART.2");
-game.setLocalization("en_US", "TConstruct.research_page.REDHEART.1", "The Miniature Red Heart is an item from Tinkers Construct. It is extremely rare and has very little uses, as it is only used to craft the Heart Canister.It is dropped randomly by hostile mobs or crafting via Infusion. The drop rate is 0.2% from regular hostile mobs. The heart may drop anytime a mob dies, the kill does not have to be caused by a player.Its primary use is in crafting the Red Heart Canister, but it can also be eaten to restore 10 life.<BR> The Red Heart Canister which increases the amount of hearts that the player has. To have an effect the canisters must be equipped in the Armor Tab, in the slot on the");
-game.setLocalization("en_US", "TConstruct.research_page.REDHEART.2", "right with the symbol that looks like the red heart canister. Up to 10 can be stacked in this slot to allow for a total of 10 extra hearts (or 20 extra health points). These will not appear above the regular health bar like from the Absorption effect, instead once the health bar is full the red hearts will gradually be replaced by orange hearts.");
-mods.thaumcraft.Infusion.addRecipe("REDHEART", <minecraft:golden_apple>, [<TConstruct:jerky:6>, <minecraft:apple>, <TConstruct:jerky:7>, <TConstruct:materials:8>, <TConstruct:jerky>, <TConstruct:jerky:1>, <TConstruct:jerky:2>, <TConstruct:jerky:3>, <TConstruct:jerky:4>, <TConstruct:jerky:5>], "exanimis 25, ignis 35, lucrum 35, sano 50, praecantatio 50", <TConstruct:heartCanister:1>, 3);
-mods.thaumcraft.Research.addInfusionPage("REDHEART", <TConstruct:heartCanister:1>);
-mods.thaumcraft.Arcane.addShaped("REDHEART", <TConstruct:heartCanister:2>, "aer 50, aqua 50, ignis 50, terra 50, ordo 50, perditio 50", [
-[<TConstruct:materials:8>, <TConstruct:heartCanister>, null],
-[<minecraft:golden_apple>, <TConstruct:heartCanister:1>, null],
-[null, null, null]]);
-mods.thaumcraft.Research.addArcanePage("REDHEART", <TConstruct:heartCanister:2>);
-mods.thaumcraft.Warp.addToResearch("REDHEART", 1);
-
-// --- Yellow Heart
-mods.thaumcraft.Research.addResearch("YELLOWHEART", "ARTIFICE", "ignis 100, praecantatio 100, vacuos 100, perditio 100", 9, 3, 12, <TConstruct:heartCanister:3> );
-game.setLocalization("en_US", "tc.research_name.YELLOWHEART", "Yellow Heart");
-game.setLocalization("en_US", "tc.research_text.YELLOWHEART", "[TC] 20 Hearts are not enough.");
-mods.thaumcraft.Research.addPrereq("YELLOWHEART", "REDHEART", false);
-mods.thaumcraft.Research.setConcealed("YELLOWHEART", true);
-mods.thaumcraft.Research.setRound("YELLOWHEART", true);
-mods.thaumcraft.Research.addPage("YELLOWHEART", "TConstruct.research_page.YELLOWHEART.1");
-mods.thaumcraft.Research.addPage("YELLOWHEART", "TConstruct.research_page.YELLOWHEART.2");
-game.setLocalization("en_US", "TConstruct.research_page.YELLOWHEART.1", "The Miniature Yellow Heart is an item from Tinkers Construct. It can be obtained by killing Boss mobs such as the Wither or King Slime, as well as from killing any Boss Monsters in the Twilight like the Naga, the Lich or the Hydra. Its primary use is in crafting the Yellow Heart Canister, but it can also be eaten to restore 20 life.<BR> The Yellow Heart Canister which increases the amount of hearts that the player has. To have an effect the canisters must be equipped in the Armor Tab, in the slot on the right with the symbol that looks like the yellow heart canister");
-game.setLocalization("en_US", "TConstruct.research_page.YELLOWHEART.2", "Up to 10 can be stacked in this slot to allow for a total of 10 extra hearts (or 20 extra health points). These will not appear above the regular health bar like from the Absorption effect, instead once the health bar is full with orange hearts it will gradually be replaced by yellow hearts.");
-mods.thaumcraft.Infusion.addRecipe("YELLOWHEART", <minecraft:golden_apple:1>, [<TConstruct:heartCanister:1>, <TConstruct:materials:8>, <TConstruct:heartCanister:1>, <TConstruct:materials:8>, <TConstruct:heartCanister:1>, <TConstruct:materials:8>, <TConstruct:heartCanister:1>, <TConstruct:materials:8>, <TConstruct:heartCanister:1>, <TConstruct:materials:8>], "exanimis 50, ignis 75, lucrum 75, sano 100, praecantatio 100", <TConstruct:heartCanister:3>, 3);
-mods.thaumcraft.Research.addInfusionPage("YELLOWHEART", <TConstruct:heartCanister:3>);
-mods.thaumcraft.Arcane.addShaped("YELLOWHEART", <TConstruct:heartCanister:4>, "aer 100, aqua 100, ignis 100, terra 100, ordo 100, perditio 100", [
-[<TConstruct:materials:8>, <TConstruct:heartCanister>, <TConstruct:materials:8>],
-[<minecraft:golden_apple:1>, <TConstruct:heartCanister:3>, <minecraft:golden_apple:1>],
-[null, null, null]]);
-mods.thaumcraft.Research.addArcanePage("YELLOWHEART", <TConstruct:heartCanister:4>);
-mods.thaumcraft.Warp.addToResearch("YELLOWHEART", 2);
-
-
-// --- Green Heart
-mods.thaumcraft.Research.addResearch("GREENHEART", "ARTIFICE", "ignis 100, praecantatio 100, vacuos 100, perditio 100", 9, 1, 12, <TConstruct:heartCanister:5>);
-game.setLocalization("en_US", "tc.research_name.GREENHEART", "Green Heart");
-game.setLocalization("en_US", "tc.research_text.GREENHEART", "[TC] 30 Hearts are not enough.");
-mods.thaumcraft.Research.addPrereq("GREENHEART", "YELLOWHEART", false);
-mods.thaumcraft.Research.setConcealed("GREENHEART", true);
-mods.thaumcraft.Research.setRound("GREENHEART", true);
-mods.thaumcraft.Research.addPage("GREENHEART", "TConstruct.research_page.GREENHEART.1");
-mods.thaumcraft.Research.addPage("GREENHEART", "TConstruct.research_page.GREENHEART.2");
-game.setLocalization("en_US", "TConstruct.research_page.GREENHEART.1", "The Miniature Green Heart is an item from Tinkers Construct. It can be made via Infusion. Its primary use is in crafting the Geen Heart Canister, but it can also be eaten to restore 30 life. <BR> The Green Heart Canister which increases the amount of hearts that the player has. To have an effect the canisters must be equipped in the Armor Tab, in the slot on the right with the symbol that looks like the green heart canister. Up to 10 can be stacked in this slot to allow for a total of 10 extra hearts (or 20 extra health points).");
-game.setLocalization("en_US", "TConstruct.research_page.GREENHEART.2", "These will not appear above the regular health bar like from the Absorption effect, instead once the health bar is full with yellow hearts and will gradually be replaced by green hearts. On top of the Yellow Heart Canisters, a maximum of 10 Red Heart Canisters and 10 Yellow Heart Canisters and 10 green Heart Canisters can be equipped for an additional 10 and 20 health points. This brings maximum health up to 40 hearts (or 80 health points)");
-mods.thaumcraft.Infusion.addRecipe("GREENHEART", <TConstruct:diamondApple>, [<TConstruct:heartCanister:3>, <TConstruct:materials:8>, <TConstruct:heartCanister:3>, <TConstruct:materials:8>, <TConstruct:heartCanister:3>, <TConstruct:materials:8>, <TConstruct:heartCanister:3>, <TConstruct:materials:8>, <TConstruct:heartCanister:3>, <TConstruct:materials:8>], "exanimis 100, ignis 150, lucrum 150, sano 200, praecantatio 200", <TConstruct:heartCanister:5>, 3);
-mods.thaumcraft.Research.addInfusionPage("GREENHEART", <TConstruct:heartCanister:5>);
-mods.thaumcraft.Arcane.addShaped("GREENHEART", <TConstruct:heartCanister:6>, "aer 200, aqua 200, ignis 200, terra 200, ordo 200, perditio 200", [
-[<TConstruct:materials:8>, <TConstruct:heartCanister>, <TConstruct:materials:8>],
-[<TConstruct:diamondApple>, <TConstruct:heartCanister:5>, <TConstruct:diamondApple>],
-[<TConstruct:materials:8>, <TConstruct:diamondApple>, <TConstruct:materials:8>]]);
-mods.thaumcraft.Research.addArcanePage("GREENHEART", <TConstruct:heartCanister:6>);
-mods.thaumcraft.Warp.addToResearch("GREENHEART", 3);
-
-
-
 // --- White Wool Slab 
 recipes.addShapeless(<TConstruct:WoolSlab1> * 2,
-[Shears, <minecraft:wool>]);
+[Shears.transformDamage(), <minecraft:wool>]);
 
 // --- Orange Wool Slab
 recipes.addShapeless(<TConstruct:WoolSlab1:1> * 2,
-[Shears, <minecraft:wool:1>]);
+[Shears.transformDamage(), <minecraft:wool:1>]);
 
 // --- Magenta Wool Slab 
 recipes.addShapeless(<TConstruct:WoolSlab1:2> * 2,
-[Shears, <minecraft:wool:2>]);
+[Shears.transformDamage(), <minecraft:wool:2>]);
 
 // --- Light Wool Slab 
 recipes.addShapeless(<TConstruct:WoolSlab1:3> * 2,
-[Shears, <minecraft:wool:3>]);
+[Shears.transformDamage(), <minecraft:wool:3>]);
 
 // --- Yellow Wool Slab 
 recipes.addShapeless(<TConstruct:WoolSlab1:4> * 2,
-[Shears, <minecraft:wool:4>]);
+[Shears.transformDamage(), <minecraft:wool:4>]);
 
 // --- Lime Wool Slab 
 recipes.addShapeless(<TConstruct:WoolSlab1:5> * 2,
-[Shears, <minecraft:wool:5>]);
+[Shears.transformDamage(), <minecraft:wool:5>]);
 
 // --- Pink Wool Slab 
 recipes.addShapeless(<TConstruct:WoolSlab1:6> * 2,
-[Shears, <minecraft:wool:6>]);
+[Shears.transformDamage(), <minecraft:wool:6>]);
 
 // --- Gray Wool Slab 
 recipes.addShapeless(<TConstruct:WoolSlab1:7> * 2,
-[Shears, <minecraft:wool:7>]);
+[Shears.transformDamage(), <minecraft:wool:7>]);
 
 // --- Light Wool Slab 
 recipes.addShapeless(<TConstruct:WoolSlab2> * 2,
-[Shears, <minecraft:wool:8>]);
+[Shears.transformDamage(), <minecraft:wool:8>]);
 
 // --- Cyan Wool Slab 
 recipes.addShapeless(<TConstruct:WoolSlab2:1> * 2,
-[Shears, <minecraft:wool:9>]);
+[Shears.transformDamage(), <minecraft:wool:9>]);
 
 // --- Purple Wool Slab 
 recipes.addShapeless(<TConstruct:WoolSlab2:2> * 2,
-[Shears, <minecraft:wool:10>]);
+[Shears.transformDamage(), <minecraft:wool:10>]);
 
 // --- Blue Wool Slab 
 recipes.addShapeless(<TConstruct:WoolSlab2:3> * 2,
-[Shears, <minecraft:wool:11>]);
+[Shears.transformDamage(), <minecraft:wool:11>]);
 
 // --- Brown Wool Slab 
 recipes.addShapeless(<TConstruct:WoolSlab2:4> * 2,
-[Shears, <minecraft:wool:12>]);
+[Shears.transformDamage(), <minecraft:wool:12>]);
 
 // --- Green Wool Slab 
 recipes.addShapeless(<TConstruct:WoolSlab2:5> * 2,
-[Shears, <minecraft:wool:13>]);
+[Shears.transformDamage(), <minecraft:wool:13>]);
 
 // --- Red Wool Slab 
 recipes.addShapeless(<TConstruct:WoolSlab2:6> * 2,
-[Shears, <minecraft:wool:14>]);
+[Shears.transformDamage(), <minecraft:wool:14>]);
 
 // --- Black Wool Slab 
 recipes.addShapeless(<TConstruct:WoolSlab2:7> * 2,
-[Shears, <minecraft:wool:15>]);
+[Shears.transformDamage(), <minecraft:wool:15>]);
 
 // --- Oak Barricade
 recipes.addShaped(<TConstruct:trap.barricade.oak>, [
@@ -1796,13 +1849,13 @@ recipes.addShaped(<TConstruct:trap.barricade.jungle>, [
 // --- Slime Channel
 recipes.addShaped(<TConstruct:slime.channel>, [
 [<ore:slimeball>, <ore:slimeball>, <ore:slimeball>],
-[<ore:dustRedstone>, <minecraft:water_bucket>.giveBack(<minecraft:bucket>), <ore:dustRedstone>],
+[<ore:dustRedstone>, <minecraft:water_bucket>.transformReplace(<minecraft:bucket>), <ore:dustRedstone>],
 [<ore:slimeball>, <ore:slimeball>, <ore:slimeball>]]);
 
 // --- Blood Channel
 recipes.addShaped(<TConstruct:blood.channel>, [
 [<TConstruct:strangeFood:1>, <TConstruct:strangeFood:1>, <TConstruct:strangeFood:1>],
-[<ore:dustRedstone>, <minecraft:water_bucket>.giveBack(<minecraft:bucket>), <ore:dustRedstone>],
+[<ore:dustRedstone>, <minecraft:water_bucket>.transformReplace(<minecraft:bucket>), <ore:dustRedstone>],
 [<TConstruct:strangeFood:1>, <TConstruct:strangeFood:1>, <TConstruct:strangeFood:1>]]);
 
 // --- Bounce Pad
@@ -2161,8 +2214,21 @@ recipes.addShapeless(<TConstruct:GlassBlock>, [<ExtraUtilities:decorativeBlock2>
 furnace.addRecipe(<TConstruct:materials:37>, <dreamcraft:item.UnfiredSlimeSoulBrick>);
 
 
-// --- Snoball to water
-//mods.tconstruct.Smeltery.addMelting(<minecraft:snowball>, <liquid:water> * 125, 20, <minecraft:water>);
+
+
+
+
+// --- Add Fuels to the Smeltery ---
+
+
+
+// --- Hot Coolant
+mods.tconstruct.Smeltery.addFuel(<liquid:ic2hotcoolant>, 900, 55);
+
+// --- Pahoehoe Lava
+mods.tconstruct.Smeltery.addFuel(<liquid:ic2pahoehoelava>, 3000, 90);
+
+
 
 
 
@@ -2177,18 +2243,22 @@ AlloySmelter.addRecipe(<TConstruct:materials:1>, <TConstruct:CraftedSoil> * 2, <
 AlloySmelter.addRecipe(<TConstruct:materials:17>, <TConstruct:CraftedSoil:2> * 2, <gregtech:gt.metaitem.01:32307> * 0, 400, 16);
 
 // --- Manyullyn Ingot
-AlloySmelter.addRecipe(<TConstruct:materials:5>, <TConstruct:materials:3>, <TConstruct:materials:4>, 400, 16);
+//AlloySmelter.addRecipe(<TConstruct:materials:5>, <TConstruct:materials:3>, <TConstruct:materials:4>, 400, 16);
 // -
-AlloySmelter.addRecipe(<TConstruct:materials:5>, <TConstruct:materials:3>, <TConstruct:materials:38>, 400, 16);
+//AlloySmelter.addRecipe(<TConstruct:materials:5>, <TConstruct:materials:3>, <TConstruct:materials:38>, 400, 16);
 // -
-AlloySmelter.addRecipe(<TConstruct:materials:5>, <gregtech:gt.metaitem.01:2033>, <TConstruct:materials:4>, 400, 16);
+//AlloySmelter.addRecipe(<TConstruct:materials:5>, <gregtech:gt.metaitem.01:2033>, <TConstruct:materials:4>, 400, 16);
 // -
-AlloySmelter.addRecipe(<TConstruct:materials:5>, <gregtech:gt.metaitem.01:2033>, <TConstruct:materials:38>, 400, 16);
+//AlloySmelter.addRecipe(<TConstruct:materials:5>, <gregtech:gt.metaitem.01:2033>, <TConstruct:materials:38>, 400, 16);
 // -
-AlloySmelter.addRecipe(<TConstruct:materials:5>, <TConstruct:materials:30> * 9, <gregtech:gt.metaitem.01:32306> * 0, 200, 30);
+//AlloySmelter.addRecipe(<TConstruct:materials:5>, <TConstruct:materials:30> * 9, <gregtech:gt.metaitem.01:32306> * 0, 200, 30);
+// -
+//AlloySmelter.addRecipe(<TConstruct:materials:5>, <gregtech:gt.metaitem.01:2033>, <gregtech:gt.metaitem.01:2382>, 400, 16);
+// -
+//AlloySmelter.addRecipe(<TConstruct:materials:5>, <gregtech:gt.metaitem.01:11033>, <gregtech:gt.metaitem.01:11382>, 400, 16);
 
 // --- Ardite Ingot
-AlloySmelter.addRecipe(<TConstruct:materials:4>, <TConstruct:materials:29> * 9, <gregtech:gt.metaitem.01:32306> * 0, 200, 16);
+//AlloySmelter.addRecipe(<TConstruct:materials:4>, <TConstruct:materials:29> * 9, <gregtech:gt.metaitem.01:32306> * 0, 200, 16);
 
 // --- Alumit Ingot
 AlloySmelter.addRecipe(<TConstruct:materials:15>, <TConstruct:materials:32> * 9, <gregtech:gt.metaitem.01:32306> * 0, 200, 8);
@@ -3660,7 +3730,7 @@ Macerator.addRecipe(<TConstruct:materials:42> * 9, <TConstruct:MetalBlock:7>);
 Macerator.addRecipe(<TConstruct:materials:42>, <TConstruct:materials:14>);
 
 // --- Ender Pearl Dust
-Compressor.addRecipe(<gregtech:gt.metaitem.01:2532> * 9, <TConstruct:MetalBlock:10>);
+Macerator.addRecipe(<gregtech:gt.metaitem.01:2532> * 9, <TConstruct:MetalBlock:10>);
 
 
 

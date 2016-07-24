@@ -8,6 +8,7 @@
 import mods.gregtech.Assembler;
 import mods.gregtech.BlastFurnace;
 import mods.ic2.Compressor;
+import mods.ic2.Extractor;
 import mods.gregtech.ImplosionCompressor;
 import mods.gregtech.AlloySmelter;
 
@@ -562,6 +563,13 @@ mods.tconstruct.Casting.removeBasinRecipe(<ExtraUtilities:decorativeBlock1:5>);
 
 // --- Add Recipes ---
 
+
+
+// --- Molecular Transformer from Advanced Solar Panels Mod
+mods.extraUtils.QED.addShapedRecipe(<AdvancedSolarPanel:BlockMolecularTransformer>, [
+[<IC2:blockMachine:12>, <IC2:blockElectric:5>, <IC2:blockMachine:12>],
+[<IC2:itemPartCircuitAdv>, <AdvancedSolarPanel:asp_crafting_items:12>, <IC2:itemPartCircuitAdv>],
+[<IC2:blockMachine:12>, <IC2:blockElectric:5>, <IC2:blockMachine:12>]]);
 
 // --- Ender Quarry
 mods.extraUtils.QED.addShapedRecipe(<ExtraUtilities:enderQuarry>, [
@@ -1167,6 +1175,79 @@ Assembler.addRecipe(<ExtraUtilities:golden_lasso>, <minecraft:ender_eye>, <gregt
 // --- Portable Scanner
 Assembler.addRecipe(<ExtraUtilities:scanner>, <gregtech:gt.metaitem.01:32762>, <minecraft:ender_eye>, 600, 120);
 
+// --- Bedrockium Ingot
+Assembler.addRecipe(<ExtraUtilities:bedrockiumIngot>, <gregtech:gt.metaitem.01:11129>, <gregtech:gt.integrated_circuit:1> * 0, <liquid:ic2uumatter> * 1000, 2, 122880);
+
+// --- Compressed Cobblestone
+Assembler.addRecipe(<ExtraUtilities:cobblestone_compressed>, <gregtech:gt.integrated_circuit:1> * 0, <minecraft:cobblestone> * 9, 100, 16);
+
+// --- Compressed Dirt
+Assembler.addRecipe(<ExtraUtilities:cobblestone_compressed:8>, <minecraft:dirt> * 9, <gregtech:gt.integrated_circuit:1> * 0, 100, 16);
+
+// --- Compressed Gravel
+Assembler.addRecipe(<ExtraUtilities:cobblestone_compressed:12>, <minecraft:gravel> * 9, <gregtech:gt.integrated_circuit:1> * 0, 100, 16);
+
+// --- Compressed Sand
+Assembler.addRecipe(<ExtraUtilities:cobblestone_compressed:14>, <minecraft:sand> * 9, <gregtech:gt.integrated_circuit:1> * 0, 100, 16);
+
+
+
+
+
+
+// --- Extractor recipes ---
+
+
+// --- Compressed Cobblestone
+Extractor.addRecipe(<minecraft:cobblestone> * 9, <ExtraUtilities:cobblestone_compressed>);
+
+// --- Double Compressed Cobblestone
+Extractor.addRecipe(<ExtraUtilities:cobblestone_compressed> * 9, <ExtraUtilities:cobblestone_compressed:1>);
+
+// --- Triple Compressed Cobblestone
+Extractor.addRecipe(<ExtraUtilities:cobblestone_compressed:1> * 9, <ExtraUtilities:cobblestone_compressed:2>);
+
+// --- Quadruple Compressed Cobblestone
+Extractor.addRecipe(<ExtraUtilities:cobblestone_compressed:2> * 9, <ExtraUtilities:cobblestone_compressed:3>);
+
+// --- Quintuple Compressed Cobblestone
+Extractor.addRecipe(<ExtraUtilities:cobblestone_compressed:3> * 9, <ExtraUtilities:cobblestone_compressed:4>);
+
+// --- Sextuple Compressed Cobblestone
+Extractor.addRecipe(<ExtraUtilities:cobblestone_compressed:4> * 9, <ExtraUtilities:cobblestone_compressed:5>);
+
+// --- Septuple Compressed Cobblestone
+Extractor.addRecipe(<ExtraUtilities:cobblestone_compressed:5> * 9, <ExtraUtilities:cobblestone_compressed:6>);
+
+// --- Octuple Compressed Cobblestone
+Extractor.addRecipe(<ExtraUtilities:cobblestone_compressed:6> * 9, <ExtraUtilities:cobblestone_compressed:7>);
+
+// --- Compressed Dirt
+Extractor.addRecipe(<minecraft:dirt> * 9, <ExtraUtilities:cobblestone_compressed:8>);
+
+// --- Double Compressed Dirt
+Extractor.addRecipe(<ExtraUtilities:cobblestone_compressed:8> * 9, <ExtraUtilities:cobblestone_compressed:9>);
+
+// --- Triple Compressed Dirt
+Extractor.addRecipe(<ExtraUtilities:cobblestone_compressed:9> * 9, <ExtraUtilities:cobblestone_compressed:10>);
+
+// --- Quadruple Compressed Dirt
+Extractor.addRecipe(<ExtraUtilities:cobblestone_compressed:10> * 9, QuadDirt);
+
+// --- Compressed Gravel
+Extractor.addRecipe(<minecraft:gravel> * 9, <ExtraUtilities:cobblestone_compressed:12>);
+
+// --- Double Compressed Gravel
+Extractor.addRecipe(<ExtraUtilities:cobblestone_compressed:12> * 9, <ExtraUtilities:cobblestone_compressed:13>);
+
+// --- Compressed Sand
+Extractor.addRecipe(<minecraft:sand> * 9, <ExtraUtilities:cobblestone_compressed:14>);
+
+// --- Double Compressed Sand
+Extractor.addRecipe(<ExtraUtilities:cobblestone_compressed:14> * 9, <ExtraUtilities:cobblestone_compressed:15>);
+
+
+
 
 
 
@@ -1177,130 +1258,46 @@ Assembler.addRecipe(<ExtraUtilities:scanner>, <gregtech:gt.metaitem.01:32762>, <
 // --- Bedrockium Ingot
 ImplosionCompressor.addRecipe(BedrockiumBlock, BedrockiumIngot * 9, 8);
 
-// --- Compressed Cobblestone
-ImplosionCompressor.addRecipe(<ExtraUtilities:cobblestone_compressed>, <minecraft:cobblestone> * 9, 1);
-
 // --- Double Compressed Cobblestone
-ImplosionCompressor.addRecipe(<ExtraUtilities:cobblestone_compressed:1>, <ExtraUtilities:cobblestone_compressed> * 9, 2);
+ImplosionCompressor.addRecipe(<ExtraUtilities:cobblestone_compressed:1>, <ExtraUtilities:cobblestone_compressed> * 9, 1);
 
 // --- Triple Compressed Cobblestone
-ImplosionCompressor.addRecipe(<ExtraUtilities:cobblestone_compressed:2>, <ExtraUtilities:cobblestone_compressed:1> * 9, 4);
+ImplosionCompressor.addRecipe(<ExtraUtilities:cobblestone_compressed:2>, <ExtraUtilities:cobblestone_compressed:1> * 9, 2);
 
 // --- Quadruple Compressed Cobblestone
-ImplosionCompressor.addRecipe(<ExtraUtilities:cobblestone_compressed:3>, <ExtraUtilities:cobblestone_compressed:2> * 9, 6);
+ImplosionCompressor.addRecipe(<ExtraUtilities:cobblestone_compressed:3>, <ExtraUtilities:cobblestone_compressed:2> * 9, 4);
 
 // --- Quintuple Compressed Cobblestone
-ImplosionCompressor.addRecipe(<ExtraUtilities:cobblestone_compressed:4>, <ExtraUtilities:cobblestone_compressed:3> * 9, 8);
+ImplosionCompressor.addRecipe(<ExtraUtilities:cobblestone_compressed:4>, <ExtraUtilities:cobblestone_compressed:3> * 9, 6);
 
 // --- Sextuple Compressed Cobblestone
-ImplosionCompressor.addRecipe(<ExtraUtilities:cobblestone_compressed:5>, <ExtraUtilities:cobblestone_compressed:4> * 9, 10);
+ImplosionCompressor.addRecipe(<ExtraUtilities:cobblestone_compressed:5>, <ExtraUtilities:cobblestone_compressed:4> * 9, 8);
 
 // --- Septuple Compressed Cobblestone
-ImplosionCompressor.addRecipe(<ExtraUtilities:cobblestone_compressed:6>, <ExtraUtilities:cobblestone_compressed:5> * 9, 16);
+ImplosionCompressor.addRecipe(<ExtraUtilities:cobblestone_compressed:6>, <ExtraUtilities:cobblestone_compressed:5> * 9, 10);
 
 // --- Octuple Compressed Cobblestone
-ImplosionCompressor.addRecipe(<ExtraUtilities:cobblestone_compressed:7>, <ExtraUtilities:cobblestone_compressed:6> * 9, 24);
-
-// --- Compressed Dirt
-ImplosionCompressor.addRecipe(<ExtraUtilities:cobblestone_compressed:8>, <minecraft:dirt> * 9, 1);
+ImplosionCompressor.addRecipe(<ExtraUtilities:cobblestone_compressed:7>, <ExtraUtilities:cobblestone_compressed:6> * 9, 16);
 
 // --- Double Compressed Dirt
-ImplosionCompressor.addRecipe(<ExtraUtilities:cobblestone_compressed:9>, <ExtraUtilities:cobblestone_compressed:8> * 9, 2);
+ImplosionCompressor.addRecipe(<ExtraUtilities:cobblestone_compressed:9>, <ExtraUtilities:cobblestone_compressed:8> * 9, 1);
 
 // --- Triple Compressed Dirt
-ImplosionCompressor.addRecipe(<ExtraUtilities:cobblestone_compressed:10>, <ExtraUtilities:cobblestone_compressed:9> * 9, 4);
+ImplosionCompressor.addRecipe(<ExtraUtilities:cobblestone_compressed:10>, <ExtraUtilities:cobblestone_compressed:9> * 9, 2);
 
 // --- Quadruple Compressed Dirt
-ImplosionCompressor.addRecipe(QuadDirt, <ExtraUtilities:cobblestone_compressed:10> * 9, 6);
-
-// --- Compressed Gravel
-ImplosionCompressor.addRecipe(<ExtraUtilities:cobblestone_compressed:12>, <minecraft:gravel> * 9, 1);
+ImplosionCompressor.addRecipe(QuadDirt, <ExtraUtilities:cobblestone_compressed:10> * 9, 4);
 
 // --- Double Compressed Gravel
-ImplosionCompressor.addRecipe(<ExtraUtilities:cobblestone_compressed:13>, <ExtraUtilities:cobblestone_compressed:12> * 9, 2);
-
-// --- Compressed Sand
-ImplosionCompressor.addRecipe(<ExtraUtilities:cobblestone_compressed:14>, <minecraft:sand> * 9, 1);
+ImplosionCompressor.addRecipe(<ExtraUtilities:cobblestone_compressed:13>, <ExtraUtilities:cobblestone_compressed:12> * 9, 1);
 
 // --- Double Compressed Sand
-ImplosionCompressor.addRecipe(<ExtraUtilities:cobblestone_compressed:15>, <ExtraUtilities:cobblestone_compressed:14> * 9, 2);
+ImplosionCompressor.addRecipe(<ExtraUtilities:cobblestone_compressed:15>, <ExtraUtilities:cobblestone_compressed:14> * 9, 1);
+
+
+// --- Ordict Stuff ---
 
 
 
 // --- Precision Shears
 oreDict.craftingToolShears.add(<ExtraUtilities:shears:16>);
-
-
-
-// --- Thaumcraft Stuff ---
-
-
-
-// --- Carved Imminence Stone
-mods.thaumcraft.Research.addResearch("EMINENCESTONE", "ARTIFICE", "alienis 200, sensus 200, terra 100, aer 200", -8, 13, 12, <ExtraUtilities:decorativeBlock1:14>);
-game.setLocalization("en_US", "tc.research_name.EMINENCESTONE", "Carved Imminence Stone");
-game.setLocalization("en_US", "tc.research_text.EMINENCESTONE", "[EU] Portal Stones");
-mods.thaumcraft.Research.addPrereq("EMINENCESTONE", "INFUSION", false);
-mods.thaumcraft.Research.setConcealed("EMINENCESTONE", true);
-mods.thaumcraft.Research.addPage("EMINENCESTONE", "ExtraUtilities.research_page.EMINENCESTONE");
-game.setLocalization("en_US", "ExtraUtilities.research_page.EMINENCESTONE", "The Portal Stone for the Last Millennium Portal or only for decoration.");
-mods.thaumcraft.Arcane.addShaped("EMINENCESTONE", <ExtraUtilities:decorativeBlock1:14> * 2, "aer 50, ignis 50, terra 50, aqua 50, ordo 50, perditio 50", [
-[<gregtech:gt.metaitem.01:17330>, <ProjRed|Illumination:projectred.illumination.lamp:18>, <gregtech:gt.metaitem.01:17330>],
-[<gregtech:gt.metaitem.01:17532>, <Thaumcraft:blockCosmeticSolid:7>, <gregtech:gt.metaitem.01:17532>],
-[<gregtech:gt.metaitem.01:17330>, <ProjRed|Illumination:projectred.illumination.lamp:26>, <gregtech:gt.metaitem.01:17330>]]);
-mods.thaumcraft.Research.addArcanePage("EMINENCESTONE", <ExtraUtilities:decorativeBlock1:14>);
-mods.thaumcraft.Warp.addToResearch("EMINENCESTONE", 1);
-
-// --- Portal to the Last Millennium
-mods.thaumcraft.Research.addResearch("PORTALMILLENIUM", "ARTIFICE", "alienis 200, sensus 200, terra 100, ignis 200 vacuos 200", -10, 13, 12, <ExtraUtilities:dark_portal:2>);
-game.setLocalization("en_US", "tc.research_name.PORTALMILLENIUM", "Portal to the last Millennium");
-game.setLocalization("en_US", "tc.research_text.PORTALMILLENIUM", "[EU] Night and Void");
-mods.thaumcraft.Research.addPrereq("PORTALMILLENIUM", "EMINENCESTONE", false);
-mods.thaumcraft.Research.setConcealed("PORTALMILLENIUM", true);
-mods.thaumcraft.Research.addPage("PORTALMILLENIUM", "ExtraUtilities.research_page.PORTALMILLENIUM");
-game.setLocalization("en_US", "ExtraUtilities.research_page.PORTALMILLENIUM", "This place is known as The Last Millenium. All life, energy, knowledge, passion, struggle, philosophy and meaning is just a few short centuries from being rendered fully pointless. On the plus side, rent is very cheap now.");
-mods.thaumcraft.Infusion.addRecipe("PORTALMILLENIUM", <minecraft:clock>, [<ExtraUtilities:decorativeBlock1:14>, <ExtraUtilities:decorativeBlock1:2>, <ExtraUtilities:decorativeBlock1:14>, <ExtraUtilities:decorativeBlock1:2>, <ExtraUtilities:decorativeBlock1:14>, <ExtraUtilities:decorativeBlock1:2>, <ExtraUtilities:decorativeBlock1:14>, <ExtraUtilities:decorativeBlock1:2>], "alienis 75, sensus 25, praecantatio 75, terra 25, vacuos 75",  <ExtraUtilities:dark_portal:2>, 4);
-mods.thaumcraft.Research.addInfusionPage("PORTALMILLENIUM", <ExtraUtilities:dark_portal:2>);
-mods.thaumcraft.Warp.addToResearch("PORTALMILLENIUM", 3);
-
-// --- Portal to the Deep Dark
-mods.thaumcraft.Research.addResearch("PORTALDEEPDARK", "ARTIFICE", "alienis 200, spiritus 200, metallum 100, fabrico 200 lucrum 200, potentia 200", -12, 13, 12, <ExtraUtilities:dark_portal>);
-game.setLocalization("en_US", "tc.research_name.PORTALDEEPDARK", "Portal to the Deep Dark");
-game.setLocalization("en_US", "tc.research_text.PORTALDEEPDARK", "[EU] Deep, Deeper, Deep Dark");
-mods.thaumcraft.Research.addPrereq("PORTALDEEPDARK", "PORTALMILLENIUM", false);
-mods.thaumcraft.Research.setConcealed("PORTALDEEPDARK", true);
-mods.thaumcraft.Research.addPage("PORTALDEEPDARK", "ExtraUtilities.research_page.PORTALDEEPDARK");
-game.setLocalization("en_US", "ExtraUtilities.research_page.PORTALDEEPDARK", "As an experienced miner you naturally wish to mine deeper and further than ever before into areas of natural wealth. The deep dark is a realm far below the void, filled with natural resources and deadly enemies. Some say that the darkness within this realm is alive and will consume any unlucky adventurer who wanders too far into it. Remember to bring torches. Torches will not protect you completely, however since mobs will spawn at all light levels in the Deep Dark. Magnum torches and Chandeliers will still prevent mob spawning.");
-mods.thaumcraft.Infusion.addRecipe("PORTALDEEPDARK", <ExtraUtilities:dark_portal:2>, [<ExtraUtilities:cobblestone_compressed:4>, <dreamcraft:item.BlackPlutoniumDensePlate>, <ExtraUtilities:decorativeBlock1:5>, <ExtraUtilities:cobblestone_compressed:3>, <ExtraUtilities:decorativeBlock1:5>, <ExtraUtilities:cobblestone_compressed:3>, <ExtraUtilities:decorativeBlock1:5>, <ExtraUtilities:cobblestone_compressed:3>, <dreamcraft:item.BlackPlutoniumDensePlate>, <ExtraUtilities:decorativeBlock1:5>, <ExtraUtilities:cobblestone_compressed:3>, <ExtraUtilities:decorativeBlock1:5>], "alienis 300, spiritus 150, metallum 200, fabrico 150 lucrum 100, potentia 200",  <ExtraUtilities:dark_portal>, 12);
-mods.thaumcraft.Research.addInfusionPage("PORTALDEEPDARK", <ExtraUtilities:dark_portal>);
-mods.thaumcraft.Warp.addToResearch("PORTALDEEPDARK", 8);
-
-// --- Magical Wood
-mods.thaumcraft.Research.addResearch("MAGICALWOOD", "ARTIFICE", "praecantatio 150, lucrum 150, arbor 100, cognitio 150, pannus 100", -8, 15, 12, MagicalWood);
-game.setLocalization("en_US", "tc.research_name.MAGICALWOOD", "Magical Wood");
-game.setLocalization("en_US", "tc.research_text.MAGICALWOOD", "[EU] Twilight Thaumcraft Magic");
-mods.thaumcraft.Research.addPrereq("MAGICALWOOD", "EMINENCESTONE", false);
-mods.thaumcraft.Research.setConcealed("MAGICALWOOD", true);
-mods.thaumcraft.Research.addPage("MAGICALWOOD", "ExtraUtilities.research_page.MAGICALWOOD");
-game.setLocalization("en_US", "ExtraUtilities.research_page.MAGICALWOOD", "Magical Wood is an ingredient in the crafting of the Ender Core. It can be placed near an Enchantment Table to boost the level the table can enchant at by five levels. The amount of magical wood made from the crafting recipe depends on the strength of the enchantments on the Enchanted Books. For example, 4x Protection I gives a single piece of Magical Wood, whereas 4x Protection IV gives 14 pieces of wood.");
-mods.thaumcraft.Arcane.addShaped("MAGICALWOOD", MagicalWood * 4, "aer 10, ignis 10, terra 10, aqua 10, ordo 10, perditio 10", [
-[SilverwoodLog, <TwilightForest:item.carminite>, GreatwoodLog],
-[<gregtech:gt.metaitem.01:17330>, <Automagy:blockBookshelfEnchanted>, <gregtech:gt.metaitem.01:17330>],
-[GreatwoodLog, <TwilightForest:item.carminite>, SilverwoodLog]]);
-mods.thaumcraft.Research.addArcanePage("MAGICALWOOD", MagicalWood);
-mods.thaumcraft.Warp.addToResearch("MAGICALWOOD", 2);
-
-// --- Angel Block
-mods.thaumcraft.Research.addResearch("ANGELBLOCK", "ARTIFICE", "aer 300, lucrum 200, ignis 100, terra 150", -8, 17, 12, <ExtraUtilities:angelBlock>);
-game.setLocalization("en_US", "tc.research_name.ANGELBLOCK", "Angel Block");
-game.setLocalization("en_US", "tc.research_text.ANGELBLOCK", "[EU] A Block in the Air");
-mods.thaumcraft.Research.addPrereq("ANGELBLOCK", "MAGICALWOOD", false);
-mods.thaumcraft.Research.setConcealed("ANGELBLOCK", true);
-mods.thaumcraft.Research.addPage("ANGELBLOCK", "ExtraUtilities.research_page.ANGELBLOCK");
-game.setLocalization("en_US", "ExtraUtilities.research_page.ANGELBLOCK", "The Angel Block is a block added by the Extra Utilities mod. This block is unique in that it does not need another block for it to be built against, so it can be placed in mid-air. When right-clicking the block will be placed in the direction youre looking. The block cant be placed diagonally in mid-air. No tool is required to break the block and it is broken instantly, even without any tools. After breaking the block does not drop, but rather instantly returns to the players inventory.");
-mods.thaumcraft.Arcane.addShaped("ANGELBLOCK", <ExtraUtilities:angelBlock>, "aer 50", [
-[<gregtech:gt.metaitem.01:17540>, <gregtech:gt.metaitem.01:29351>, <gregtech:gt.metaitem.01:17540>],
-[<IC2:itemDensePlates:7>, <Automagy:blockRunedObsidian>, <IC2:itemDensePlates:7>],
-[<gregtech:gt.metaitem.01:17540>, <gregtech:gt.metaitem.01:29351>, <gregtech:gt.metaitem.01:17540>]]);
-mods.thaumcraft.Research.addArcanePage("ANGELBLOCK", <ExtraUtilities:angelBlock>);
-mods.thaumcraft.Warp.addToResearch("ANGELBLOCK", 3);

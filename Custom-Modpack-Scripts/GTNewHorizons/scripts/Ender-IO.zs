@@ -73,6 +73,7 @@ val DarkSteelScrew = <ore:screwDarkSteel>;
 val WCrystal = <EnderIO:itemMaterial:10>;
 val EnderEyeLens = <ore:lensEnderEye>;
 val MvFieldGen = <gregtech:gt.metaitem.01:32671>;
+val LuVFieldGen = <gregtech:gt.metaitem.01:32675>;
 val SPlate = <ore:plateSoularium>;
 val Shears = <minecraft:shears>;
 val IronAxe = <minecraft:iron_axe>;
@@ -295,9 +296,6 @@ recipes.remove(<EnderIO:blockElectricLight:5>);
 // --- Reinforced Obsidian
 recipes.remove(<EnderIO:blockReinforcedObsidian>);
 
-// --- Quiete Clear Glass
-mods.chisel.Groups.removeGroup("glass");
-
 // --- Coordinate Selector
 recipes.remove(<EnderIO:itemCoordSelector>);
 
@@ -394,6 +392,15 @@ recipes.remove(<EnderIO:itemGliderWing:1>);
 // --- Electromagnet
 recipes.remove(<EnderIO:itemMagnet:*>);
 
+// --- Network Conduit
+recipes.remove(<EnderIO:itemOCConduit>);
+
+// --- Dark Steel Ingot
+recipes.removeShaped(<EnderIO:itemAlloy:6>, [
+[<ore:nuggetDarkSteel>, <ore:nuggetDarkSteel>, <ore:nuggetDarkSteel>],
+[<ore:nuggetDarkSteel>, <ore:nuggetDarkSteel>, <ore:nuggetDarkSteel>],
+[<ore:nuggetDarkSteel>, <ore:nuggetDarkSteel>, <ore:nuggetDarkSteel>]]);
+
 
 
 
@@ -455,11 +462,27 @@ recipes.addShaped(<EnderIO:blockCapBank:2>.withTag({type: "ACTIVATED", storedEne
 [EAPlate, MCasing, EAPlate],
 [Capacitor2, <gregtech:gt.metaitem.01:32537>, Capacitor2]]);
 
+// --- Capacitor Bank Upgrade From Basic Capacitor Bank
+recipes.addShaped(<EnderIO:blockCapBank:2>.withTag({type: "ACTIVATED", storedEnergyRF: 0}), [
+[<gregtech:gt.metaitem.01:18315>, GCircuit	, <gregtech:gt.metaitem.01:18315>],
+[<EnderIO:blockCapBank:2>, EAPlate, <EnderIO:blockCapBank:2>]]);
+
 // --- Vibrant Capacitor Bank
 recipes.addShaped(<EnderIO:blockCapBank:3>.withTag({type: "VIBRANT", storedEnergyRF: 0}), [
 [Capacitor3, AdvCircuit, Capacitor3],
 [VCrystal, MCasing, VCrystal],
 [Capacitor3, <gregtech:gt.metaitem.01:32540>, Capacitor3]]);
+
+// --- Vibrant Capacitor Bank Upgrade From Capacitor Bank
+recipes.addShaped(<EnderIO:blockCapBank:3>.withTag({type: "VIBRANT", storedEnergyRF: 0}), [
+[<gregtech:gt.metaitem.01:20315>, AdvCircuit, <gregtech:gt.metaitem.01:20315>],
+[<EnderIO:blockCapBank:2>, VCrystal, <EnderIO:blockCapBank:2>]]);
+
+// --- Vibrant Capacitor Bank Upgrade From Basic Capacitor Bank
+recipes.addShaped(<EnderIO:blockCapBank:3>.withTag({type: "VIBRANT", storedEnergyRF: 0}), [
+[<gregtech:gt.metaitem.01:22315>, AdvCircuit, <gregtech:gt.metaitem.01:22315>],
+[<EnderIO:blockCapBank:1>, EAPlate, <EnderIO:blockCapBank:1>],
+[<EnderIO:blockCapBank:1>, VCrystal, <EnderIO:blockCapBank:1>]]);
 
 // --- Painting Machine
 recipes.addShaped(<EnderIO:blockPainter>, [
@@ -541,7 +564,7 @@ recipes.addShaped(<EnderIO:blockBuffer:1>, [
 recipes.addShaped(<EnderIO:blockInventoryPanel>, [
 [DarkSteelPlate, RAUpgrade, DarkSteelPlate],
 [PCrystal, Display, PCrystal],
-[DarkSteelPlate, SEnder, DarkSteelPlate]]);
+[DarkSteelPlate, ZLogic, DarkSteelPlate]]);
 
 // --- Dark Steel Ball
 recipes.addShaped(<EnderIO:itemMaterial:7> * 4, [
@@ -565,7 +588,7 @@ recipes.addShaped(<EnderIO:blockTravelAnchor>, [
 recipes.addShaped(<EnderIO:blockTelePad>, [
 [DarkSteelPlate, FQuartz, DarkSteelPlate],
 [Capacitor3, <EnderIO:blockTravelAnchor>, Capacitor3],
-[HvMotor, MvFieldGen, HvMotor]]);
+[HvMotor, LuVFieldGen, HvMotor]]);
 
 // --- Slice and Splice
 recipes.addShaped(<EnderIO:blockSliceAndSplice>, [
@@ -652,7 +675,7 @@ recipes.addShaped(<EnderIO:blockReinforcedObsidian>, [
 [DarkSteelPlate, DarkSteelBars, DarkSteelPlate]]);
 
 // --- Coordinate Selector
-recipes.addShaped(<EnderIO:itemCoordSelector>, [
+recipes.addShaped(<EnderIO:itemCoordSelector>.withTag({"bc:x": 0, default: 1 as byte, "bc:y": 0, "bc:z": 0}), [
 [ESteelPlate, EnderEye, ESteelPlate],
 [PIPlate, Compass, PIPlate],
 [ESteelPlate, EnderEye, ESteelPlate]]);
@@ -776,7 +799,7 @@ Assembler.addRecipe(<EnderIO:itemFusedQuartzFrame>, <gregtech:gt.blockmachines:4
 Assembler.addRecipe(<EnderIO:itemConduitFacade>, <EnderIO:itemMaterial:1> * 8, <gregtech:gt.integrated_circuit:8> * 0, 100, 30);
 
 // --- Insulated Conduit
-Assembler.addRecipe(<EnderIO:itemRedstoneConduit:2>, <EnderIO:itemRedstoneConduit>, <EnderIO:itemMaterial:1> * 2, 200, 64);
+Assembler.addRecipe(<EnderIO:itemRedstoneConduit:2>, <EnderIO:itemRedstoneConduit>, <EnderIO:itemMaterial:1> * 2, 100, 64);
 
 // --- Conduit Switch
 Assembler.addRecipe(<EnderIO:itemRedstoneConduit:1>, <EnderIO:itemRedstoneConduit:2>, <minecraft:lever>, 100, 64);
@@ -785,34 +808,37 @@ Assembler.addRecipe(<EnderIO:itemRedstoneConduit:1>, <EnderIO:itemRedstoneCondui
 Assembler.addRecipe(<EnderIO:itemRedstoneConduit>, <gregtech:gt.blockmachines:2000>, <gregtech:gt.metaitem.01:17381>, 100, 64);
 
 // --- Insulated Redstone Conduit
-Assembler.addRecipe(<EnderIO:itemRedstoneConduit:2>, <gregtech:gt.blockmachines:2000>, <gregtech:gt.metaitem.01:17381>, <liquid:molten.plastic> * 144, 200, 64);
+Assembler.addRecipe(<EnderIO:itemRedstoneConduit:2>, <gregtech:gt.blockmachines:2000>, <gregtech:gt.metaitem.01:17381>, <liquid:molten.plastic> * 144, 100, 64);
 
 // --- Energy Conduit
-Assembler.addRecipe(<EnderIO:itemPowerConduit>, <gregtech:gt.blockmachines:1420>, <gregtech:gt.metaitem.01:17369>, <liquid:molten.plastic> * 144, 200, 120);
+Assembler.addRecipe(<EnderIO:itemPowerConduit>, <gregtech:gt.blockmachines:1420>, <gregtech:gt.metaitem.01:17369>, <liquid:molten.plastic> * 144, 100, 120);
 
 // --- Enhanced Energy Conduit
-Assembler.addRecipe(<EnderIO:itemPowerConduit:1>, <gregtech:gt.blockmachines:1580>, <gregtech:gt.metaitem.01:17366>, <liquid:molten.plastic> * 144, 200, 256);
+Assembler.addRecipe(<EnderIO:itemPowerConduit:1>, <gregtech:gt.blockmachines:1580>, <gregtech:gt.metaitem.01:17366>, <liquid:molten.plastic> * 144, 100, 256);
 
 // --- Ender Energy Conduit
-Assembler.addRecipe(<EnderIO:itemPowerConduit:2>, <gregtech:gt.blockmachines:1620>, <gregtech:gt.metaitem.01:17367>, <liquid:molten.plastic> * 144, 200, 480);
+Assembler.addRecipe(<EnderIO:itemPowerConduit:2>, <gregtech:gt.blockmachines:1620>, <gregtech:gt.metaitem.01:17367>, <liquid:molten.plastic> * 144, 100, 480);
 
 // --- Fluid Conduit
-Assembler.addRecipe(<EnderIO:itemLiquidConduit>, <gregtech:gt.blockmachines:5112>, <gregtech:gt.metaitem.01:17365>, <liquid:molten.plastic> * 144, 200, 120);
+Assembler.addRecipe(<EnderIO:itemLiquidConduit>, <gregtech:gt.blockmachines:5112>, <gregtech:gt.metaitem.01:17365>, <liquid:molten.plastic> * 144, 100, 120);
 
 // --- Pressurized Fluid Conduit
-Assembler.addRecipe(<EnderIO:itemLiquidConduit:1>, <gregtech:gt.blockmachines:5132>, <gregtech:gt.metaitem.01:17364>, <liquid:molten.plastic> * 144, 200, 256);
+Assembler.addRecipe(<EnderIO:itemLiquidConduit:1>, <gregtech:gt.blockmachines:5132>, <gregtech:gt.metaitem.01:17364>, <liquid:molten.plastic> * 144, 100, 256);
 
 // --- Ender Fluid Conduit
-Assembler.addRecipe(<EnderIO:itemLiquidConduit:2>, <gregtech:gt.blockmachines:5142>, <gregtech:gt.metaitem.01:17367>, <liquid:molten.plastic> * 144, 200, 480);
+Assembler.addRecipe(<EnderIO:itemLiquidConduit:2>, <gregtech:gt.blockmachines:5142>, <gregtech:gt.metaitem.01:17367>, <liquid:molten.plastic> * 144, 100, 480);
 
 // --- Item Conduit
-Assembler.addRecipe(<EnderIO:itemItemConduit>, <gregtech:gt.blockmachines:5611>, <gregtech:gt.metaitem.01:17378>, <liquid:molten.plastic> * 144, 200, 256);
+Assembler.addRecipe(<EnderIO:itemItemConduit>, <gregtech:gt.blockmachines:5611>, <gregtech:gt.metaitem.01:17378>, <liquid:molten.plastic> * 144, 100, 256);
 
 // --- ME Conduit
-Assembler.addRecipe(<EnderIO:itemMEConduit>, <appliedenergistics2:item.ItemMultiPart:16>, <gregtech:gt.metaitem.01:17020>, <liquid:molten.plastic> * 144, 200, 256);
+Assembler.addRecipe(<EnderIO:itemMEConduit>, <appliedenergistics2:item.ItemMultiPart:16>, <gregtech:gt.metaitem.01:17020>, <liquid:molten.plastic> * 144, 100, 256);
 
 // --- Dense ME Conduit
-Assembler.addRecipe(<EnderIO:itemMEConduit:1>, <EnderIO:itemMEConduit>, <gregtech:gt.metaitem.01:17028>, <liquid:molten.plastic> * 144, 200, 480);
+Assembler.addRecipe(<EnderIO:itemMEConduit:1>, <EnderIO:itemMEConduit>, <gregtech:gt.metaitem.01:17028>, <liquid:molten.plastic> * 144, 100, 480);
+
+// --- Network Conduit
+Assembler.addRecipe(<EnderIO:itemOCConduit>, <appliedenergistics2:item.ItemMultiPart:16>, <gregtech:gt.metaitem.01:17381>, <liquid:molten.plastic> * 144, 100, 480);
 
 // --- Basic Item Filter
 Assembler.addRecipe(<EnderIO:itemBasicFilterUpgrade>, <IC2:itemPartCarbonMesh> * 2, <minecraft:iron_bars>, 300, 30);
@@ -838,16 +864,8 @@ Assembler.addRecipe(<EnderIO:itemExtractSpeedUpgrade:1>, <EnderIO:itemExtractSpe
 // --- Soul Vial
 Assembler.addRecipe(<EnderIO:itemSoulVessel>, <EnderIO:blockFusedQuartz> * 3, <gregtech:gt.metaitem.01:25379>, 200, 48);
 
-
-
-
-// --- Blast Furnace Recipes ---
-
-
-
-// --- Electrical Steel
-BlastFurnace.addRecipe([<gregtech:gt.metaitem.01:11365>], [<gregtech:gt.metaitem.01:2305>, <gregtech:gt.metaitem.01:2020>], 600, 120, 1000);
-
+// --- Dark Clear Glass
+Assembler.addRecipe(<EnderIO:blockFusedQuartz:5>, <minecraft:dye>, <EnderIO:blockFusedQuartz:1>, 100, 48);
 
 
 

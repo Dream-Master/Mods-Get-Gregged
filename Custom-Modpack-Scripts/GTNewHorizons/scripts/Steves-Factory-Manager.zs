@@ -1,7 +1,13 @@
 // --- Created by DreamMasterXXL ---
 
 
-// --- Imports ---
+// --- Importing Stuff ---
+
+
+import mods.gregtech.Assembler;
+
+
+
 
 
 // --- Variables ---
@@ -29,13 +35,13 @@ val PistonHV = <gregtech:gt.metaitem.01:32642>;
 val RedAlloyWire = <ProjRed|Transmission:projectred.transmission.wire>;
 val GTSaw = <gregtech:gt.metatool.01:10>;
 val GTHammer = <gregtech:gt.metatool.01:12>;
-val SensorMV = <gregtech:gt.metaitem.01:32691>;
-val EmitterMV = <gregtech:gt.metaitem.01:32681>;
+val SensorHV = <gregtech:gt.metaitem.01:32692>;
+val EmitterHV = <gregtech:gt.metaitem.01:32682>;
+val PumpHV = <gregtech:gt.metaitem.01:32612>;
 val DataStorageCircuit = <gregtech:gt.metaitem.01:32704>;
 val DataControlCircuit = <gregtech:gt.metaitem.01:32705>;
 val EnergyFlowCircuit = <gregtech:gt.metaitem.01:32706>;
-val RobotArmMV = <gregtech:gt.metaitem.01:32651>;
-val RobotArmLV = <gregtech:gt.metaitem.01:32650>;
+val RobotArmHV = <gregtech:gt.metaitem.01:32652>;
 val Display = <gregtech:gt.metaitem.01:32740>;
 val FieldGeneratorLV = <gregtech:gt.metaitem.01:32670>;
 val Pencil = <OpenBlocks:generic:11>;
@@ -92,6 +98,18 @@ recipes.remove(TCableCamouflage);
 // --- Sign Updater
 recipes.remove(SignUpdater);
 
+// --- RF Node
+recipes.remove(<StevesAddons:cable_rf>);
+
+// --- Energistics Conector
+recipes.remove(<StevesAddons:cable_ae>);
+
+// --- Manager Dublicator
+recipes.remove(<StevesAddons:duplicator>);
+
+// --- Foctory Labler
+recipes.remove(<StevesAddons:labeler>);
+
 
 
 // --- Adding Recipes ---
@@ -99,66 +117,78 @@ recipes.remove(SignUpdater);
 
 // --- Steves Machine Inventory Manager
 recipes.addShaped(SteveManager, [
-[<ore:plateStainlessSteel>, Screen, <ore:plateStainlessSteel>],
-[<ore:plateRedAlloy>, Computer, <ore:plateRedAlloy>],
-[<ore:plateStainlessSteel>, PistonHV, <ore:plateStainlessSteel>]]);
+[<ore:plateStainlessSteel>, <dreamcraft:item.Display>, <ore:plateStainlessSteel>],
+[<ore:plateRedAlloy>, <gregtech:gt.blockcasings2:6>, <ore:plateRedAlloy>],
+[<ore:plateStainlessSteel>, <gregtech:gt.metaitem.01:32602>, <ore:plateStainlessSteel>]]);
 
 // --- Inventory Cable
 recipes.addShaped(InventoryCable * 2, [
-[<ore:plateStainlessSteel>, GTSaw, <ore:plateStainlessSteel>],
-[<ore:pipeMediumStainlessSteel>, RedAlloyWire, <ore:pipeMediumBrass>],
-[<ore:plateStainlessSteel>, GTHammer, <ore:plateStainlessSteel>]]);
+[<ore:plateStainlessSteel>, <ProjRed|Transmission:projectred.transmission.wire:17>, <ore:plateStainlessSteel>],
+[<appliedenergistics2:item.ItemMultiPart:16>, <appliedenergistics2:item.ItemMultiPart:16>, <appliedenergistics2:item.ItemMultiPart:16>],
+[<ore:plateStainlessSteel>, <ProjRed|Transmission:projectred.transmission.wire:17>, <ore:plateStainlessSteel>]]);
 
-// --- Inventory Relay
-recipes.addShapeless(InventoryRelay, [InventoryCable, SensorMV, <ore:oc:motionSensor>]);
 
-// --- Advanced Inventory Relay
-recipes.addShapeless(AdvInventoryRelay, [InventoryRelay, <RandomThings:onlineDetector>]);
+
+
+
+// --- Assembler Recipes ---
+
+
+
+
+// --- Inventory Cable
+Assembler.addRecipe(InventoryCable, <appliedenergistics2:item.ItemMultiPart:16>, <ProjRed|Transmission:projectred.transmission.wire:17>, <liquid:molten.stainlesssteel> * 144, 150, 480);
 
 // --- Redstone Reciever
-recipes.addShapeless(RedstoneReciever, [InventoryCable, SensorMV, <BuildCraft|Silicon:redstoneChipset>]);
+Assembler.addRecipe(RedstoneReciever, InventoryCable, SensorHV, <liquid:molten.redstone> * 288, 200, 480);
 
 // --- Redstone Emmiter
-recipes.addShapeless(RedstoneEmmiter, [InventoryCable, EmitterMV, <BuildCraft|Silicon:redstoneChipset>]);
+Assembler.addRecipe(RedstoneEmmiter, InventoryCable, EmitterHV, <liquid:molten.redstone> * 288, 200, 480);
+
+// --- Inventory Relay
+Assembler.addRecipe(InventoryRelay, InventoryCable, <Railcraft:detector:9>, <liquid:molten.redstone> * 288, 200, 480);
+
+// --- Advanced Inventory Relay
+Assembler.addRecipe(AdvInventoryRelay, InventoryCable, <computronics:computronics.detector>, <liquid:molten.redstone> * 576, 300, 480);
 
 // --- Item Valve
-recipes.addShapeless(ItemValve, [InventoryCable, SensorMV, <OpenBlocks:vacuumhopper>]);
+Assembler.addRecipe(ItemValve, InventoryCable, <OpenBlocks:vacuumhopper>, <liquid:molten.redstone> * 288, 200, 480);
 
 // --- Rapid Item Valve
-recipes.addShapeless(RapidItemValve, [ItemValve, DataStorageCircuit, RobotArmMV]);
+Assembler.addRecipe(RapidItemValve, ItemValve, PumpHV, <liquid:molten.redstone> * 576, 300, 480);
 
 // --- Block Detector
-recipes.addShapeless(BlockDetector, [InventoryCable, <ExtraUtilities:budoff:3>]);
+Assembler.addRecipe(BlockDetector, InventoryCable, <ExtraUtilities:budoff:3>, <liquid:molten.redstone> * 288, 200, 480);
 
 // --- Block Gate
-recipes.addShapeless(BlockGate, [InventoryCable, <OpenBlocks:blockbreaker>, <OpenBlocks:blockPlacer>, RobotArmMV]);
-
-// --- Cable Cluster
-recipes.addShaped(CableCluster, [
-[DataStorageCircuit, DataControlCircuit, DataStorageCircuit],
-[DataStorageCircuit, InventoryCable, DataStorageCircuit],
-[DataStorageCircuit, DataControlCircuit, DataStorageCircuit]]);
-
-// --- Advanced Cable Cluster
-recipes.addShaped(AdvCableCluster, [
-[DataStorageCircuit, EnergyFlowCircuit, DataStorageCircuit],
-[DataStorageCircuit, InventoryCable, DataStorageCircuit],
-[DataStorageCircuit, EnergyFlowCircuit, DataStorageCircuit]]);
-
-// --- Cable Camouflage
-recipes.addShaped(CableCamouflage, [
-[null, Display, null],
-[Display, InventoryCable, Display],
-[null, Display, null]]);
-
-// --- Double Sided Cable Camouflage
-recipes.addShaped(DSCableCamouflage, [
-[<ore:circuitBasic>, Display, <ore:circuitBasic>],
-[Display, InventoryCable, Display],
-[<ore:circuitBasic>, Display, <ore:circuitBasic>]]);
-
-// --- Transforming Cable Camouflage
-recipes.addShapeless(TCableCamouflage, [InventoryCable, FieldGeneratorLV]);
+Assembler.addRecipe(BlockGate, InventoryCable, RobotArmHV, <liquid:molten.redstone> * 288, 200, 480);
 
 // --- Sign Updater
-recipes.addShapeless(SignUpdater, [InventoryCable, Pencil, RobotArmLV]);
+Assembler.addRecipe(SignUpdater, BlockGate, Pencil, <liquid:molten.redstone> * 576, 300, 480);
+
+// --- Advanced Cable Cluster
+Assembler.addRecipe(AdvCableCluster, InventoryCable * 8,  <gregtech:gt.integrated_circuit:1> * 0, 200, 480);
+
+// --- Cable Cluster
+Assembler.addRecipe(CableCluster, InventoryCable, DataControlCircuit * 2, <liquid:molten.redstone> * 288, 200, 480); 
+
+// --- Cable Camouflage
+Assembler.addRecipe(CableCamouflage, InventoryCable, Display * 2, <liquid:molten.redstone> * 288, 200, 480); 
+
+// --- Double Sided Cable Camouflage
+Assembler.addRecipe(DSCableCamouflage, CableCamouflage, <IC2:itemPartCircuitAdv> * 2, <liquid:molten.redstone> * 576, 300, 480); 
+
+// --- Transforming Cable Camouflage
+Assembler.addRecipe(TCableCamouflage, DSCableCamouflage, FieldGeneratorLV, <liquid:molten.redstone> * 864, 400, 480);
+
+// --- RF Node
+Assembler.addRecipe(<StevesAddons:cable_rf>, InventoryCable, <EnderIO:itemPowerConduit>, <liquid:molten.redstone> * 288, 200, 480); 
+
+// --- Energistics Conector
+Assembler.addRecipe(<StevesAddons:cable_ae>, InventoryCable, <appliedenergistics2:tile.BlockInterface>, <liquid:molten.redstone> * 576, 300, 480);
+
+// --- Manager Dublicator
+Assembler.addRecipe(<StevesAddons:duplicator>, <gregtech:gt.metaitem.01:32762>, <gregtech:gt.metaitem.01:32708>, <liquid:molten.redstone> * 144, 150, 480);
+
+// --- Foctory Labler
+Assembler.addRecipe(<StevesAddons:labeler>, <dreamcraft:item.Display>, <IC2:itemPartCircuitAdv> * 2, <liquid:molten.redstone> * 144, 150, 480);

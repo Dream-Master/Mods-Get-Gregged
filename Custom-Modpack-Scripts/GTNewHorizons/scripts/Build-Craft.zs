@@ -398,9 +398,6 @@ recipes.remove(<BuildCraft|Compat:item.buildcraftPipe.pipeitemspropolis>);
 
 
 
-// --- Gears ---
-
-
 // --- Diamond Gear
 recipes.addShapeless(DiamondGear, [<ore:gearGtDiamond>]);
 
@@ -416,22 +413,17 @@ recipes.addShapeless(StoneGear, [<ore:gearGtStone>]);
 // --- Wooden Gear
 recipes.addShapeless(WoodGear, [<ore:gearGtWood>]);
 
-
-
-// --- Engines ---
-
-
 // --- Combustion Engine
 recipes.addShaped(<BuildCraft|Core:engineBlock:2>, [
 [<ore:plateInvar>, <ore:plateLapis>, <ore:plateInvar>],
 [<ore:springInvar>, <minecraft:piston>, <ore:springInvar>],
 [<ore:gearInvar>, <Forestry:sturdyMachine>, <ore:gearInvar>]]);
 
-
-
-// --- Pipes ---
-
-
+// --- Cobblestone Structure Pipe
+recipes.addShaped(<BuildCraft|Transport:item.buildcraftPipe.pipestructurecobblestone>, [
+[CobbleRod, ClearPane, CobbleRod],
+[ClearPane, <minecraft:gravel>, ClearPane],
+[CobbleRod, ClearPane, CobbleRod]]);
 
 // --- Cobblestone-Covered Kinesis Pipe
 recipes.addShaped(PipeCobbleKinesis, [
@@ -486,12 +478,6 @@ recipes.addShaped(PipeDiamondKinesis, [
 [DiamondRod, ClearPane, DiamondRod],
 [ClearPane, PlatinumWire, ClearPane],
 [DiamondRod, ClearPane, DiamondRod]]);
-
-
-
-// ---Items ---
-
-
 
 // --- Tank
 recipes.addShaped(BCTank, [
@@ -554,9 +540,9 @@ recipes.addShaped(ElecectronicLib, [
 
 // --- Flood Gate
 recipes.addShaped(FloodGate, [
-[<IC2:itemCasing:5>, <dreamcraft:item.SteelBars>, <IC2:itemCasing:5>],
+[<IC2:itemCasing:5>, <gregtech:gt.metaitem.01:32610>, <IC2:itemCasing:5>],
 [<dreamcraft:item.SteelBars>, <BuildCraft|Factory:tankBlock>, <dreamcraft:item.SteelBars>],
-[<IC2:itemCasing:5>, <gregtech:gt.metaitem.01:32610>, <IC2:itemCasing:5>]]);
+[<IC2:itemCasing:5>, <dreamcraft:item.SteelBars>, <IC2:itemCasing:5>]]);
 
 
 
@@ -584,6 +570,11 @@ Assembler.addRecipe(<BuildCraft|Builders:templateItem>, <minecraft:paper>, <mine
 
 // --- Blueprint
 Assembler.addRecipe(<BuildCraft|Builders:blueprintItem>, <minecraft:paper>, <minecraft:redstone>, <liquid:dye.watermixed.dyeblue> * 144, 100, 30);
+
+// --- Tank
+Assembler.addRecipe(<BuildCraft|Factory:tankBlock>, <Railcraft:glass>, <gregtech:gt.metaitem.01:28032> * 2, 100, 8);
+// -
+Assembler.addRecipe(<BuildCraft|Factory:tankBlock>, <ExtraUtilities:decorativeBlock2:5>, <gregtech:gt.metaitem.01:28032> * 2, 100, 8);
 
 
 

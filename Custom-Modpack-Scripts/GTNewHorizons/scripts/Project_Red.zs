@@ -303,6 +303,12 @@ recipes.remove(<ProjRed|Transportation:projectred.transportation.pipe:7>);
 // --- Pressure Resistance Tube
 recipes.remove(<ProjRed|Transportation:projectred.transportation.pipe:8>);
 
+// --- Network Vave Pipe
+recipes.remove(<ProjRed|Transportation:projectred.transportation.pipe:9>);
+
+// --- Network Latency Pipe
+recipes.remove(<ProjRed|Transportation:projectred.transportation.pipe:10>);
+
 // --- Item Responder Chip
 recipes.remove(<ProjRed|Transportation:projectred.transportation.routingchip>);
 
@@ -921,6 +927,12 @@ Assembler.addRecipe(<ProjRed|Transportation:projectred.transportation.pipe:7>, <
 // --- Pressure Resistance Tube
 Assembler.addRecipe(<ProjRed|Transportation:projectred.transportation.pipe:8>, <ProjRed|Transportation:projectred.transportation.pipe:7>, <Railcraft:part.plate:1>, 300, 30);
 
+// --- Network Vave Pipe
+Assembler.addRecipe(<ProjRed|Transportation:projectred.transportation.pipe:9>, <ProjRed|Transportation:projectred.transportation.pipe>, <StevesCarts:ModuleComponents:60>, 200, 30);
+
+// --- Network Latency Pipe
+Assembler.addRecipe(<ProjRed|Transportation:projectred.transportation.pipe:10>, <ProjRed|Transportation:projectred.transportation.pipe>, <dreamcraft:item.StonePlate> * 4, 200, 30);
+
 // --- IC Chip
 Assembler.addRecipe(<ProjRed|Fabrication:projectred.fabrication.icchip>, <IC2:itemPartCircuit>, <gregtech:gt.metaitem.01:17526>, <liquid:molten.redstone> * 144, 300, 30); 
 
@@ -1064,7 +1076,10 @@ FormingPress.addRecipe(<ProjRed|Core:projectred.core.part:7>, <ProjRed|Core:proj
 // --- Energized Silicon Ship
 FormingPress.addRecipe(<ProjRed|Core:projectred.core.part:8>, <ProjRed|Core:projectred.core.part>, <ProjRed|Core:projectred.core.part:14>, 600, 30);
 
-// --- Red Silicon Compound
+// --- Silicon
+FormingPress.addRecipe(<ProjRed|Core:projectred.core.part:12>, <gregtech:gt.metaitem.01:2020>, <gregtech:gt.metaitem.01:32307> * 0, 200, 30);
+
+// --- Infused Silicon
 FormingPress.addRecipe(<ProjRed|Core:projectred.core.part:13>, <ProjRed|Core:projectred.core.part:42>, <gregtech:gt.metaitem.01:32307> * 0, 600, 30);
 
 // --- Glowing Silicon Compound
@@ -1089,7 +1104,7 @@ Macerator.addRecipe(<ProjRed|Core:projectred.core.part:56> * 9, <ProjRed|Explora
 
 
 // --- Red Silicon Compound
-Mixer.addRecipe(<ProjRed|Core:projectred.core.part:42>, [<gregtech:gt.metaitem.01:2020>, <minecraft:redstone> * 8], 400, 30);
+Mixer.addRecipe(<ProjRed|Core:projectred.core.part:42>, [<ProjRed|Core:projectred.core.part:12>, <minecraft:redstone> * 8], 400, 30);
 
 // --- Glowing Silicon Compound
 Mixer.addRecipe(<ProjRed|Core:projectred.core.part:43>, [<gregtech:gt.metaitem.01:2020>, <minecraft:glowstone_dust> * 8], 400, 30);
@@ -1206,20 +1221,20 @@ Unpacker.addRecipe(<dreamcraft:item.ElectrotineWire>, <gregtech:gt.metaitem.01:1
 // --- Ruby
 mods.chisel.Groups.addVariation("ruby", <BiomesOPlenty:gemOre:3>);
 // -
-mods.chisel.Groups.addVariation("ruby", <GemBlocksForGreg:rubyBlock>);
+mods.chisel.Groups.addVariation("ruby", <gregtech:gt.blockgem1:9>);
 // -
 mods.chisel.Groups.addVariation("ruby", <ProjRed|Exploration:projectred.exploration.stone:5>);
 
 // --- Sapphire
 mods.chisel.Groups.addVariation("sapphire", <BiomesOPlenty:gemOre:13>);
 // -
-mods.chisel.Groups.addVariation("sapphire", <GemBlocksForGreg:sapphireBlock>);
+mods.chisel.Groups.addVariation("sapphire", <gregtech:gt.blockgem2:12>);
 // -
 mods.chisel.Groups.addVariation("sapphire", <ProjRed|Exploration:projectred.exploration.stone:6>);
 
 // --- Peridot
 mods.chisel.Groups.addVariation("peridot", <BiomesOPlenty:gemOre:5>);
 // -
-mods.chisel.Groups.addVariation("peridot", <GemBlocksForGreg:olivineBlock>);
+mods.chisel.Groups.addVariation("peridot", <gregtech:gt.blockgem2:4>);
 // -
 mods.chisel.Groups.addVariation("peridot", <ProjRed|Exploration:projectred.exploration.stone:7>);

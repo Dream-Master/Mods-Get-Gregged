@@ -17,7 +17,6 @@ import mods.nei.NEI;
 
 
 
-
 // --- Molecular Transformer
 recipes.remove(<AdvancedSolarPanel:BlockMolecularTransformer>);
 
@@ -81,12 +80,6 @@ recipes.remove(<AdvancedSolarPanel:asp_crafting_items:13>);
 // --- Add Recipes ---
 
 
-
-// --- Molecular Transformer
-mods.extraUtils.QED.addShapedRecipe(<AdvancedSolarPanel:BlockMolecularTransformer>, [
-[<IC2:blockMachine:12>, <IC2:blockElectric:5>, <IC2:blockMachine:12>],
-[<IC2:itemPartCircuitAdv>, <AdvancedSolarPanel:asp_crafting_items:12>, <IC2:itemPartCircuitAdv>],
-[<IC2:blockMachine:12>, <IC2:blockElectric:5>, <IC2:blockMachine:12>]]);
 
 // --- MT Core fore Molecular Transformer
 recipes.addShaped(<AdvancedSolarPanel:asp_crafting_items:12>, [

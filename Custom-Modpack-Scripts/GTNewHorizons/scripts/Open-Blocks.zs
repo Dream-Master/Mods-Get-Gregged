@@ -625,7 +625,7 @@ ChemicalBath.addRecipe([<OpenBlocks:goldenEye:100>], <minecraft:ender_eye>, <liq
 
 
 // --- Sponge
-ChemicalReactor.addRecipe(<OpenBlocks:sponge>, null, <minecraft:wool>, <minecraft:slime_ball>, <liquid:water> * 1000, 200);
+ChemicalReactor.addRecipe(<OpenBlocks:sponge>, null, <minecraft:wool>, <minecraft:slime_ball>, <liquid:water> * 1000, 200, 30);
 
 
 
@@ -643,47 +643,13 @@ Mixer.addRecipe(<OpenBlocks:tastyClay>, null, [<minecraft:clay_ball>, <minecraft
 
 
 // --- Golden Egg
-mods.thaumcraft.Research.addResearch("GOLDENEGG", "MAGICBEES", "alienis 200, bestia 200, victus 100, humanus 200", -6, 4, 12, <OpenBlocks:goldenegg>);
-game.setLocalization("en_US", "tc.research_name.GOLDENEGG", "Golden Egg");
-game.setLocalization("en_US", "tc.research_text.GOLDENEGG", "[OB] Make A MiniMe");
+mods.thaumcraft.Research.addResearch("GOLDENEGG", "MAGICBEES", "alienis 15, bestia 12, victus 9, humanus 6", -6, 4, 4, <OpenBlocks:goldenegg>);
+game.setLocalization("tc.research_name.GOLDENEGG", "Golden Egg");
+game.setLocalization("tc.research_text.GOLDENEGG", "[OB] Make A MiniMe");
 mods.thaumcraft.Research.addPrereq("GOLDENEGG", "MB_DimensionalSingularity", false);
 mods.thaumcraft.Research.setConcealed("GOLDENEGG", true);
 mods.thaumcraft.Research.addPage("GOLDENEGG", "OpenBlocks.research_page.GOLDENEGG");
-game.setLocalization("en_US", "OpenBlocks.research_page.GOLDENEGG", "The Golden Egg is a block from the OpenBlocks mod. This block is used to summon the Baby Mini Me. Before it hatches, it will begin to slowly spin in circles. After many spins, it will grow and emit large amounts of light. It will then float into the air, and explode. The explosion is minor, and should only break a single layer of standard resistance blocks. Right before it explodes, it will lift surrounding blocks into the air, then drop them back into place. Pictures of the hatching process can be found below.");
+game.setLocalization("OpenBlocks.research_page.GOLDENEGG", "The Golden Egg is a block from the OpenBlocks mod. This block is used to summon the Baby Mini Me. Before it hatches, it will begin to slowly spin in circles. After many spins, it will grow and emit large amounts of light. It will then float into the air, and explode. The explosion is minor, and should only break a single layer of standard resistance blocks. Right before it explodes, it will lift surrounding blocks into the air, then drop them back into place. Pictures of the hatching process can be found below.");
 mods.thaumcraft.Infusion.addRecipe("GOLDENEGG",<minecraft:egg>, [<gregtech:gt.metaitem.01:22086>, <minecraft:skull:3>, <gregtech:gt.metaitem.01:22086>, <minecraft:skull:3>, <gregtech:gt.metaitem.01:22086>, <minecraft:skull:3>], "alienis 75, bestia 50, victus 50, humanus 25",  <OpenBlocks:goldenegg>, 2);
 mods.thaumcraft.Research.addInfusionPage("GOLDENEGG", <OpenBlocks:goldenegg>);
-mods.thaumcraft.Warp.addToResearch("GOLDENEGG", 1);
-
-// --- Auto Enchanting Table
-mods.thaumcraft.Research.addResearch("AUTOENCHANTINGTABLE", "ARTIFICE", "praecantatio 200, fabrico 200, cognitio 100, potentia 200", 10, 8, 12, <OpenBlocks:autoenchantmenttable>);
-game.setLocalization("en_US", "tc.research_name.AUTOENCHANTINGTABLE", "Auto Enchanting Table");
-game.setLocalization("en_US", "tc.research_text.AUTOENCHANTINGTABLE", "[OB] Auto Enchanting nice");
-mods.thaumcraft.Research.addPrereq("AUTOENCHANTINGTABLE", "ENCHANTINGTABLE", false);
-mods.thaumcraft.Research.setConcealed("AUTOENCHANTINGTABLE", true);
-mods.thaumcraft.Research.addPage("AUTOENCHANTINGTABLE", "OpenBlocks.research_page.AUTOENCHANTINGTABLE.1");
-game.setLocalization("en_US", "OpenBlocks.research_page.AUTOENCHANTINGTABLE.1", "An Auto Enchantment Table can draw the experience from a Tank using the auto drink setting, this is then stored in its internal liquid buffer before usage. Theres also a setting to automatically pull items to work on from an inventory on some side of the enchantment table, as well as resources or books to combine them with. A final setting allows for ejecting the finished item into an inventory at some side of the enchantment table. All of the settings can be set to work with certain sides of the block, this is done by left-clicking the sides of the enchantment table model shown in the individual settings panels.");
-mods.thaumcraft.Research.addPage("AUTOENCHANTINGTABLE", "OpenBlocks.research_page.AUTOENCHANTINGTABLE.2");
-game.setLocalization("en_US", "OpenBlocks.research_page.AUTOENCHANTINGTABLE.2", " The enchantment table model in the panels can also be rotated by holding the right mouse button and dragging the cursor around.");
-mods.thaumcraft.Arcane.addShaped("AUTOENCHANTINGTABLE", <OpenBlocks:autoenchantmenttable>, "aer 50, aqua 50, ignis 50, terra 50", [
-[<gregtech:gt.metaitem.01:17526>, <minecraft:book>, <gregtech:gt.metaitem.01:17526>],
-[<gregtech:gt.metaitem.01:27019>, <minecraft:enchanting_table>, <gregtech:gt.metaitem.01:27019>],
-[<gregtech:gt.metaitem.01:17308>, <minecraft:redstone_block>, <gregtech:gt.metaitem.01:17308>]]);
-mods.thaumcraft.Research.addArcanePage("AUTOENCHANTINGTABLE", <OpenBlocks:autoenchantmenttable>);
-mods.thaumcraft.Warp.addToResearch("AUTOENCHANTINGTABLE", 2);
-
-// --- Luggage
-mods.thaumcraft.Research.addResearch("LUGGAGE", "ARTIFICE", "alienis 200, sensus 200, iter 100, praecantatio 200, fabrico, lucrum 200", 14, 12, 12, Luggage);
-game.setLocalization("en_US", "tc.research_name.LUGGAGE", "Luggage");
-game.setLocalization("en_US", "tc.research_text.LUGGAGE", "[OB] Luggage follow me");
-mods.thaumcraft.Research.addPrereq("LUGGAGE", "ENDERCHEST", false);
-mods.thaumcraft.Research.setConcealed("LUGGAGE", true);
-mods.thaumcraft.Research.addPage("LUGGAGE", "OpenBlocks.research_page.LUGGAGE.1");
-game.setLocalization("en_US", "OpenBlocks.research_page.LUGGAGE.1", "Luggage is a storage block added by OpenBlocks. The block acts like a regular chest, but it is an entity. After a player places it down by right-clicking with it on the ground, it will start following them around. Right-clicking will open the inventory and it picks up items from the ground. By holding shift and right-clicking the luggage entity, it can be turned back into an item and picked up. When picked up, the luggage item will retain all content thats stored in it.");
-mods.thaumcraft.Research.addPage("LUGGAGE", "OpenBlocks.research_page.LUGGAGE.2");
-game.setLocalization("en_US", "OpenBlocks.research_page.LUGGAGE.2", "Though the entity has 20 health points, it cant be hurt. Beware, as Luggage can still be burned by Lava or destroyed by cactus, though this is only in its item form, in entity form it is immune to fire and lava and even if pushed into the void will fall down next to its owner a moment later.Upon being struck by lightning, having a lightning focused wand from the Thaumcraft mod cast on it, or being blown up by a Charged Creeper, the Luggage will become supercharged, changing its texture, and doubling its inventory space.");
-mods.thaumcraft.Arcane.addShaped("LUGGAGE", Luggage, "aer 75, aqua 75, ignis 75, terra 75, perditio 75, ordo 75", [
-[<gregtech:gt.metaitem.01:27019>, <Thaumcraft:ItemGolemCore>, <gregtech:gt.metaitem.01:27019>],
-[<Automagy:crystalBrain:3>, <Thaumcraft:blockChestHungry>, <Automagy:crystalBrain:3>],
-[<gregtech:gt.metaitem.01:27019>, <Thaumcraft:blockCosmeticSolid:2>, <gregtech:gt.metaitem.01:27019>]]);
-mods.thaumcraft.Research.addArcanePage("LUGGAGE", Luggage);
-mods.thaumcraft.Warp.addToResearch("LUGGAGE", 2);
+mods.thaumcraft.Warp.addToResearch("GOLDENEGG", 2);

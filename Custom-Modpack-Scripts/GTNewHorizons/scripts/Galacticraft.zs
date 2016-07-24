@@ -374,7 +374,7 @@ recipes.remove(<GalacticraftMars:item.titanium_boots>);
 recipes.remove(<GalacticraftMars:tile.mars:8>);
 
 // --- Desh Ingot
-recipes.remove(<gregtech:gt.metaitem.01:11884>);
+recipes.remove(<ore:ingotDesh>);
 
 // --- Desh Stick
 recipes.remove(<GalacticraftMars:item.null:1>);
@@ -487,13 +487,8 @@ recipes.remove(<GalacticraftMars:item.deshSpade>);
 // --- Desh Sword
 recipes.remove(<GalacticraftMars:item.deshSword>);
 
-// --- Desh Ingot
-furnace.remove(<GalacticraftMars:item.null:2>);
-// -
-recipes.remove(<GalacticraftMars:item.null:2>);
-
 // --- Desh Block
-recipes.remove(<GemBlocksForGreg:tile.metalBlock7:5>);
+//recipes.remove(<GemBlocksForGreg:tile.metalBlock7:5>);
 
 // --- Sealable Cobblestone Transport Pipe
 recipes.remove(<GalacticraftCore:tile.enclosed:8>);
@@ -527,6 +522,9 @@ furnace.remove(<*>, <GalacticraftMars:item.itemBasicAsteroids:4>);
 
 // --- Ilmenite Ore
 furnace.remove(<*>, <GalacticraftMars:tile.asteroidsBlock:4>);
+
+// --- Ambiete Thermal Controller
+recipes.remove(<GalacticraftCore:item.basicItem:20>);
 
 
 
@@ -689,9 +687,9 @@ recipes.addShaped(<GalacticraftCore:tile.solar:4>, [
 
 // --- Full Solar Panel
 recipes.addShaped(<GalacticraftCore:item.basicItem:1>, [
-[SolarPanel, SolarPanel, SolarPanel],
+[<GalacticraftCore:item.basicItem>, <GalacticraftCore:item.basicItem>, <GalacticraftCore:item.basicItem>],
 [GCAlWire, BWafer, GCAlWire],
-[SolarPanel, SolarPanel, SolarPanel]]);
+[<GalacticraftCore:item.basicItem>, <GalacticraftCore:item.basicItem>, <GalacticraftCore:item.basicItem>]]);
 
 // --- Energy Storage Module
 recipes.addShaped(<GalacticraftCore:tile.machineTiered>, [
@@ -1107,9 +1105,6 @@ recipes.addShaped(<GalacticraftMars:item.grapple>, [
 [String, String, String],
 [<ore:ringMeteoricSteel>, null, null]]);
 
-// --- Desh Ingot
-furnace.addRecipe(<gregtech:gt.metaitem.01:11884>, <gregtech:gt.metaitem.01:2884>);
-
 // --- Astro Miner Base
 recipes.addShaped(<GalacticraftMars:tile.minerBase> * 4, [
 [<ore:compressedTitanium>, <ore:chestSteel>, <ore:compressedTitanium>],
@@ -1128,6 +1123,39 @@ recipes.addShaped(<GalacticraftCore:item.canvas>,  [
 [<ore:platePaper>, <minecraft:string>, <ore:platePaper>],
 [<ore:stickWood>, <ore:platePaper>, null]]);
 
+// --- Ambiete Thermal Controller
+recipes.addShaped(<GalacticraftCore:item.basicItem:20>,  [
+[<ore:circuitAdvanced>, <GalacticraftCore:item.airVent>, <ore:circuitAdvanced>],
+[<GalacticraftCore:item.basicItem:10>, <GalacticraftCore:item.basicItem:9>, <GalacticraftCore:item.basicItem:10>],
+[<GalacticraftCore:item.basicItem:8>, <GalacticraftCore:item.basicItem:13>, <GalacticraftCore:item.basicItem:8>]]);
+
+// --- Schematics Moon Buggy
+recipes.addShapeless(<GalacticraftCore:item.schematic>, [<GalacticraftCore:item.schematic:1>]);
+
+// --- Schematics Tier 2 Rocket
+recipes.addShapeless(<GalacticraftCore:item.schematic:1>, [<GalacticraftCore:item.schematic>]);
+
+// --- Schematics Tier 3 Rocket
+recipes.addShaped(<GalacticraftMars:item.schematic:1>, [
+[<GalacticraftMars:item.schematic>]]);
+// -
+recipes.addShaped(<GalacticraftMars:item.schematic:2>, [
+[null, <GalacticraftMars:item.schematic>]]);
+
+// --- Schematics Cargo Rocket
+recipes.addShaped(<GalacticraftMars:item.schematic>, [
+[<GalacticraftMars:item.schematic:1>]]);
+// -
+recipes.addShaped(<GalacticraftMars:item.schematic:2>, [
+[null, <GalacticraftMars:item.schematic:1>]]);
+
+// --- Schematics Astro Miner
+recipes.addShaped(<GalacticraftMars:item.schematic>, [
+[<GalacticraftMars:item.schematic:2>]]);
+// -
+recipes.addShaped(<GalacticraftMars:item.schematic:1>, [
+[null, <GalacticraftMars:item.schematic:2>]]);
+
 
 
 // --- Add Fuels ---
@@ -1141,6 +1169,20 @@ Fuels.addDieselFuel(<IC2:itemFluidCell>, <IC2:itemFluidCell>.withTag({Fluid: {Fl
 Fuels.addDieselFuel(<IC2:itemCellEmpty>, <gregtech:gt.metaitem.01:30707>, 16);
 // -
 //Fuels.addDieselFuel(null, <GalacticraftCore:tile.crudeOilStill>, 16);
+
+
+
+// --- Oredicted Names ---
+
+
+// --- Desh to Ore Dict
+oreDict.oreDesh.add(<GalacticraftMars:tile.mars:2>);
+
+// --- Stick of Desh
+oreDict.stickDesh.add(<GalacticraftMars:item.null:1>);
+
+// --- Ilmenite to Ore Dict
+oreDict.oreIlmenite.add(<GalacticraftMars:tile.asteroidsBlock:4>);
 
 
 
@@ -1279,13 +1321,16 @@ Assembler.addRecipe(<GalacticraftMars:item.thermalPadding:2>, <GalacticraftMars:
 Assembler.addRecipe(<GalacticraftMars:item.thermalPadding:3>, <GalacticraftMars:item.itemBasicAsteroids:7> * 4, <gregtech:gt.integrated_circuit:4> * 0, 600, 1024);
 
 // --- Heavy Duty Plate Alloy T2
-Assembler.addRecipe(<gregtech:gt.metaitem.01:32463>, HeavyPlating, <GalacticraftCore:item.meteoricIronIngot:1> * 2, <liquid:molten.titanium> * 72, 600, 256);
+//Assembler.addRecipe(<gregtech:gt.metaitem.01:32463>, HeavyPlating, <GalacticraftCore:item.meteoricIronIngot:1> * 2, <liquid:molten.titanium> * 72, 600, 256);
 	
 // --- Heavy Duty Plate Alloy T3
-Assembler.addRecipe(<gregtech:gt.metaitem.01:32464>, <GalacticraftMars:item.null:3>, DeshPlate * 4, <liquid:molten.tungstensteel> * 144, 1200, 480);
+//Assembler.addRecipe(<gregtech:gt.metaitem.01:32464>, <GalacticraftMars:item.null:3>, DeshPlate * 4, <liquid:molten.tungstensteel> * 144, 1200, 480);
 
 // --- Oxygen Mask
 Assembler.addRecipe(<GalacticraftCore:item.oxygenMask>, <IC2:itemArmorHazmatHelmet>, <dreamcraft:item.ReinforcedGlassPlate> * 16, <liquid:glue> * 144, 400, 120);
+
+// --- Solar Panel
+Assembler.addRecipe(<GalacticraftCore:item.basicItem>, SolarPanel, <GalacticraftCore:item.basicItem:9>, 200, 120);
 
 
 
@@ -1333,7 +1378,8 @@ Canner.addRecipe(<GalacticraftCore:item.basicItem:18>, <minecraft:potato> * 16, 
 Compressor.addRecipe(<GalacticraftCore:tile.gcBlockCore:12>, <gregtech:gt.metaitem.01:11340> * 9);
 
 // --- Desh Block
-Compressor.addRecipe(<GemBlocksForGreg:tile.metalBlock7:5>, <gregtech:gt.metaitem.01:11884> * 9);
+//Compressor.addRecipe(<GemBlocksForGreg:tile.metalBlock7:5>, <gregtech:gt.metaitem.01:11884> * 9);
+
 
 
 
@@ -1398,10 +1444,10 @@ ImplosionCompressor.addRecipe([<GalacticraftCore:item.meteoricIronIngot:1>, <gre
 ImplosionCompressor.addRecipe([<GalacticraftMars:item.null:5>, <gregtech:gt.metaitem.01:816>], <gregtech:gt.metaitem.01:19884>, 1);
 
 // --- Heavy Duty Plats Tier 2
-ImplosionCompressor.addRecipe([<GalacticraftMars:item.null:3>, <gregtech:gt.metaitem.01:81> * 2], <gregtech:gt.metaitem.01:32463>, 16);
+//ImplosionCompressor.addRecipe([<GalacticraftMars:item.null:3>, <gregtech:gt.metaitem.01:81> * 2], <gregtech:gt.metaitem.01:32463>, 16);
 
 // --- Heavy Duty Plats Tier 3
-ImplosionCompressor.addRecipe([HeavyDutyPlate, <gregtech:gt.metaitem.01:28> * 2], <gregtech:gt.metaitem.01:32464>, 24);
+//ImplosionCompressor.addRecipe([HeavyDutyPlate, <gregtech:gt.metaitem.01:28> * 2], <gregtech:gt.metaitem.01:32464>, 24);
 
 
 
@@ -1423,7 +1469,7 @@ Macerator.addRecipe(<GalacticraftCore:item.meteoricIronRaw> * 2, <GalacticraftCo
 Macerator.addRecipe(<GalacticraftMars:item.itemBasicAsteroids:4> * 2, <GalacticraftMars:tile.asteroidsBlock:4>);
 
 // --- Desh Dust
-Macerator.addRecipe(<gregtech:gt.metaitem.01:2884> * 9, <GemBlocksForGreg:tile.metalBlock7:5>);
+//Macerator.addRecipe(<gregtech:gt.metaitem.01:2884> * 9, <GemBlocksForGreg:tile.metalBlock7:5>);
 
 
 
@@ -1616,24 +1662,11 @@ PlateBender.addRecipe(<GalacticraftCore:item.canister:1> , <GalacticraftCore:ite
 
 
 // --- Fluid Oxygen
-VacuumFreezer.addRecipe(<IC2:itemFluidCell>.withTag({Fluid: {Amount: 1000, FluidName: "liquidoxygen"}}), <gregtech:gt.metaitem.01:30013> * 12, 2400);
+VacuumFreezer.addRecipe(<IC2:itemFluidCell>.withTag({Fluid: {Amount: 1000, FluidName: "liquidoxygen"}}), <IC2:itemFluidCell>.withTag({Fluid: {FluidName: "compressedoxygen", Amount: 1000}}), 2400);
 
 // --- Fluid Nitrogen
-VacuumFreezer.addRecipe(<IC2:itemFluidCell>.withTag({Fluid: {Amount: 1000, FluidName: "liquidnitrogen"}}), <gregtech:gt.metaitem.01:30012> * 12, 2400);
+VacuumFreezer.addRecipe(<IC2:itemFluidCell>.withTag({Fluid: {Amount: 1000, FluidName: "liquidnitrogen"}}), <IC2:itemFluidCell>.withTag({Fluid: {FluidName: "compressednitrogen", Amount: 1000}}), 2400);
 
-// --- Ilmenite to Ore Dict
-oreDict.oreIlmenite.add(<GalacticraftMars:tile.asteroidsBlock:4>);
-
-
-
-// --- Oredicted Names ---
-
-
-// --- Desh to Ore Dict
-oreDict.oreDesh.add(<GalacticraftMars:tile.mars:2>);
-
-// --- Stick of Desh
-oreDict.stickDesh.add(<GalacticraftMars:item.null:1>);
 
 
 
