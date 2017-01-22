@@ -83,14 +83,14 @@ val TinLantern = <Railcraft:lantern.metal:3>;
 val LeadLantern = <Railcraft:lantern.metal:4>;
 val SteelLantern = <Railcraft:lantern.metal:5>;
 
-val AbyssalBSlab = <Railcraft:slab:27>;
-val BleachedBSlab = <Railcraft:slab:25>;
-val BloodBSlab = <Railcraft:slab:26>;
-val FrostBSlab = <Railcraft:slab:23>;
-val InfernalBSlab = <Railcraft:slab:22>;
-val NetherBSlab = <Railcraft:slab:28>;
-val QuarriedBSlab = <Railcraft:slab:24>;
-val SandyBSlab = <Railcraft:slab:21>;
+val AbyssalBSlab = <Railcraft:slab:28>;
+val BleachedBSlab = <Railcraft:slab:26>;
+val BloodBSlab = <Railcraft:slab:27>;
+val FrostBSlab = <Railcraft:slab:24>;
+val InfernalBSlab = <Railcraft:slab:23>;
+val NetherBSlab = <Railcraft:slab:29>;
+val QuarriedBSlab = <Railcraft:slab:25>;
+val SandyBSlab = <Railcraft:slab:22>;
 val SandstoneBSlab = <minecraft:stone_slab:1>;
 val StoneBSlab = <minecraft:stone_slab>;
 val PressurePlate = <minecraft:stone_pressure_plate>;
@@ -253,6 +253,12 @@ recipes.remove(QuarriedLantern);
 // --- Sandy Block Lantern ---
 recipes.remove(SandyLantern);
 
+// --- Sandstone Block Lantern ---
+recipes.remove(SandstoneLantern);
+
+// --- Stone Lantern ---
+recipes.remove(StoneLantern);
+
 // --- Iron Lantern ---
 recipes.remove(IronLantern);
 
@@ -357,12 +363,6 @@ recipes.remove(<Railcraft:machine.beta:5>);
 
 // --- Liquid Fueled Boiler Firebox ---
 recipes.remove(<Railcraft:machine.beta:6>);
-
-// --- Low Pressure Boiler Tank ---
-recipes.remove(<Railcraft:machine.beta:3>);
-
-// --- High Pressure Boiler Tank ---
-recipes.remove(HPBoilerTank);
 
 // --- Hobbyists Steam Engine ---
 recipes.remove(<Railcraft:machine.beta:7>);
@@ -691,23 +691,17 @@ mods.railcraft.BlastFurnace.removeRecipe(<Railcraft:cube:2>);
 // --- Steel Nuggets
 mods.railcraft.BlastFurnace.removeRecipe(<Railcraft:nugget:1>);
 
+// --- Meteoric Iron
+mods.railcraft.BlastFurnace.removeRecipe(<gregtech:gt.metaitem.01:11340>);
+
 // --- Meteoric Steel
 mods.railcraft.BlastFurnace.removeRecipe(<gregtech:gt.metaitem.01:11341>);
 
 // --- GT Steel
 mods.railcraft.BlastFurnace.removeRecipe(<gregtech:gt.metaitem.01:11305>);
 
-// --- Fiery Steel
-mods.railcraft.BlastFurnace.removeRecipe(<TwilightForest:item.fieryIngot>);
-
 // --- HSLA Steel
 mods.railcraft.BlastFurnace.removeRecipe(<gregtech:gt.metaitem.01:11322>);
-
-// --- Redstone Alloy Ingot
-mods.railcraft.BlastFurnace.removeRecipe(<gregtech:gt.metaitem.01:11381>);
-
-// --- Soularium Ingot
-mods.railcraft.BlastFurnace.removeRecipe(<gregtech:gt.metaitem.01:11379>);
 
 // --- All Recipes
 mods.railcraft.RockCrusher.removeRecipe(<*>);
@@ -720,9 +714,6 @@ mods.thaumcraft.Arcane.removeRecipe(<Railcraft:tool.crowbar.void>);
 
 // --- Infernal Block
 recipes.remove(<Railcraft:brick.infernal:2>);
-
-// --- Electrical Steel
-mods.railcraft.BlastFurnace.removeRecipe(<gregtech:gt.metaitem.01:11365>);
 
 // --- Lapatron Upgrade
 recipes.remove(<Railcraft:upgrade.lapotron>);
@@ -891,27 +882,15 @@ recipes.addShaped(<Railcraft:machine.beta:15>, [
 
 // --- Solid Fueled Boiler Firebox ---
 recipes.addShaped(<Railcraft:machine.beta:5>, [
-[SteelPlate, Cauldron, SteelPlate],
+[IronPlate, Cauldron, IronPlate],
 [BrickBlock, <gregtech:gt.blockcasings3:13>, BrickBlock],
-[SteelPlate, IronFurnace, SteelPlate]]);
+[IronPlate, IronFurnace, IronPlate]]);
 
 // --- Liquid Fueled Boiler Firebox ---
 recipes.addShaped(<Railcraft:machine.beta:6>, [
 [SteelPlate, Cauldron, SteelPlate],
 [<dreamcraft:item.SteelBars>, <gregtech:gt.blockcasings3:13>, <dreamcraft:item.SteelBars>],
 [SteelPlate, IronFurnace, SteelPlate]]);
-
-// --- Low Pressure Boiler Tank ---
-recipes.addShaped(<Railcraft:machine.beta:3>, [
-[<IC2:itemCasing:4>, <IC2:itemCasing:4>, <IC2:itemCasing:4>],
-[IronScrew, HHammer, IronScrew],
-[<IC2:itemCasing:4>, <IC2:itemCasing:4>, <IC2:itemCasing:4>]]);
-
-// --- High Pressure Boiler Tank ---
-recipes.addShaped(HPBoilerTank, [
-[<IC2:itemCasing:5>, <IC2:itemCasing:5>, <IC2:itemCasing:5>],
-[SteelScrew, HHammer, SteelScrew],
-[<IC2:itemCasing:5>, <IC2:itemCasing:5>, <IC2:itemCasing:5>]]);
 
 // --- Hobbyists Steam Engine ---
 recipes.addShaped(<Railcraft:machine.beta:7>, [
@@ -1404,7 +1383,10 @@ recipes.addShaped(<Railcraft:borehead.steel>, [
 [SteelPlate, <ore:gearSteel>, SteelPlate]]);
 
 // --- Diamond Borehead ---
-recipes.addShapeless(<Railcraft:borehead.diamond>, [<gregtech:gt.metaitem.01:32722>]);
+recipes.addShapeless(<Railcraft:borehead.diamond>, [<gregtech:gt.metaitem.01:32722>, <gregtech:gt.metaitem.01:32722>]);
+
+// --- Diamond Borehead ---
+recipes.addShapeless(<gregtech:gt.metaitem.01:32722> * 2, [<Railcraft:borehead.diamond>]);
 
 // --- RC Crowbar ---
 recipes.addShaped(<Railcraft:tool.crowbar>, [
@@ -1642,8 +1624,10 @@ recipes.addShaped(CreosoteWoodSlab * 2, [
 // --- Trackmans Backpach
 recipes.addShaped(<Railcraft:backpack.trackman.t1>, [
 [<harvestcraft:wovencottonItem>, <minecraft:rail>, <harvestcraft:wovencottonItem>],
-[<Backpack:tannedLeather>, <minecraft:rail>, <Backpack:tannedLeather>],
-[<Backpack:tannedLeather>, <Backpack:tannedLeather>, <Backpack:tannedLeather>]]);
+[<ore:itemLeather>, <minecraft:rail>, <ore:itemLeather>],
+[<ore:itemLeather>, <Backpack:tannedLeather>, <ore:itemLeather>]]);
+// - 
+recipes.addShapeless(<Railcraft:backpack.trackman.t1>, [<Railcraft:backpack.trackman.t1>]);
 
 // --- Trackmans Backpach Woven
 mods.forestry.Carpenter.addRecipe(60, <liquid:seedoil> * 5000, 
@@ -1655,8 +1639,10 @@ mods.forestry.Carpenter.addRecipe(60, <liquid:seedoil> * 5000,
 // --- Icemans Backpach
 recipes.addShaped(<Railcraft:backpack.iceman.t1>, [
 [<harvestcraft:wovencottonItem>, <BiomesOPlenty:hardIce>, <harvestcraft:wovencottonItem>],
-[<Backpack:tannedLeather>, <BiomesOPlenty:hardIce>, <Backpack:tannedLeather>],
-[<Backpack:tannedLeather>, <Backpack:tannedLeather>, <Backpack:tannedLeather>]]);
+[<ore:itemLeather>, <BiomesOPlenty:hardIce>, <ore:itemLeather>],
+[<ore:itemLeather>, <Backpack:tannedLeather>, <ore:itemLeather>]]);
+// - 
+recipes.addShapeless(<Railcraft:backpack.iceman.t1>, [<Railcraft:backpack.iceman.t1>]);
 
 // --- Icemans Backpach Woven
 mods.forestry.Carpenter.addRecipe(60, <liquid:seedoil> * 5000, 
@@ -1668,8 +1654,10 @@ mods.forestry.Carpenter.addRecipe(60, <liquid:seedoil> * 5000,
 // --- Aphothecarys Backpach
 recipes.addShaped(<Railcraft:backpack.apothecary.t1>, [
 [<harvestcraft:wovencottonItem>, <minecraft:potion:8229>, <harvestcraft:wovencottonItem>],
-[<Backpack:tannedLeather>, <minecraft:potion:8229>, <Backpack:tannedLeather>],
-[<Backpack:tannedLeather>, <Backpack:tannedLeather>, <Backpack:tannedLeather>]]);
+[<ore:itemLeather>, <minecraft:potion:8229>, <ore:itemLeather>],
+[<ore:itemLeather>, <Backpack:tannedLeather>, <ore:itemLeather>]]);
+// - 
+recipes.addShapeless(<Railcraft:backpack.apothecary.t1>, [<Railcraft:backpack.apothecary.t1>]);
 
 // --- Aphothecarys Backpach Woven
 mods.forestry.Carpenter.addRecipe(60, <liquid:seedoil> * 5000, 
@@ -1761,6 +1749,17 @@ furnace.setFuel(<Railcraft:fluid.creosote.bucket>, 6400);
 // --- Block of Concrete
 AlloySmelter.addRecipe(ConcreteBlock * 5, Stone * 5, Rebar * 4, 300, 0);
 
+// --- Steel Helmet
+AlloySmelter.addRecipe(<Railcraft:armor.steel.helmet>, <gregtech:gt.metaitem.01:11305> * 5, <dreamcraft:item.MoldHelmet> * 0, 600, 30);
+
+// --- Steel Chestplate
+AlloySmelter.addRecipe(<Railcraft:armor.steel.plate>, <gregtech:gt.metaitem.01:11305> * 8, <dreamcraft:item.MoldChestplate> * 0, 600, 30);
+
+// --- Steel Leggings
+AlloySmelter.addRecipe(<Railcraft:armor.steel.legs>, <gregtech:gt.metaitem.01:11305> * 7, <dreamcraft:item.MoldLeggings> * 0, 600, 30);
+
+// --- Steel Boots
+AlloySmelter.addRecipe(<Railcraft:armor.steel.boots>, <gregtech:gt.metaitem.01:11305> * 4, <dreamcraft:item.MoldBoots> * 0, 600, 30);
 
 
 
@@ -1852,12 +1851,6 @@ Assembler.addRecipe(<Railcraft:machine.beta:14>, <Railcraft:part.plate:1> * 2, <
 // --- Steel Tank Valve
 Assembler.addRecipe(<Railcraft:machine.beta:15>, <gregtech:gt.blockmachines:5133> * 2, <dreamcraft:item.SteelBars> * 2, 400, 30);
 
-// --- Low Pressure Boiler
-Assembler.addRecipe(<Railcraft:machine.beta:3>, <IC2:itemCasing:4> * 6, <gregtech:gt.integrated_circuit:6> * 0, 200, 30);
-
-// --- High Pressure Boiler
-Assembler.addRecipe(<Railcraft:machine.beta:4>, <IC2:itemCasing:5> * 6, <gregtech:gt.integrated_circuit:6> * 0, 200, 30);
-
 // --- Work Cart ---
 Assembler.addRecipe(<Railcraft:cart.work>, <minecraft:minecart>, <minecraft:crafting_table>, 400, 4);
 
@@ -1899,7 +1892,14 @@ Assembler.addRecipe(<Railcraft:tool.surveyor>, <Railcraft:tool.signal.tuner>, <m
 
 
 
+// --- Blast Furnace recipes
 
+
+// --- Coal Coke
+mods.railcraft.BlastFurnace.addRecipe(<minecraft:coal>, false, false, 20, <Railcraft:fuel.coke>);
+
+// --- Coal Coke Block
+mods.railcraft.BlastFurnace.addRecipe(<minecraft:coal_block>, false, false, 180, <Railcraft:cube>);
 
 
 // --- Centrifuge Recipes ---
@@ -1951,8 +1951,6 @@ FluidSolidifier.addRecipe(SteelAnvil, <gregtech:gt.metaitem.01:32314> * 0, <liqu
 Macerator.addRecipe(<gregtech:gt.metaitem.01:2032> * 2, <Railcraft:machine.beta>);
 // -
 Macerator.addRecipe(<gregtech:gt.metaitem.01:2032> * 2, <Railcraft:machine.beta:1>);
-// -
-Macerator.addRecipe(<gregtech:gt.metaitem.01:2032> * 6, <Railcraft:machine.beta:3>);
 
 // --- Bronze Dust
 Macerator.addRecipe(<gregtech:gt.metaitem.01:2300> * 10, <Railcraft:machine.beta:2>);
@@ -1963,8 +1961,6 @@ Macerator.addRecipe(<gregtech:gt.metaitem.01:2305> * 2, <Railcraft:machine.beta:
 Macerator.addRecipe(<gregtech:gt.metaitem.01:2305> * 2, <Railcraft:machine.beta:14>);
 // -
 Macerator.addRecipe(<gregtech:gt.metaitem.01:2305> * 10, <Railcraft:machine.beta:15>);
-// -
-Macerator.addRecipe(<gregtech:gt.metaitem.01:2305> * 6, <Railcraft:machine.beta:4>);
 
 
 
@@ -1997,7 +1993,7 @@ PlateBender.addRecipe(<Railcraft:part.rail> * 10, <gregtech:gt.metaitem.01:23316
 
 
 // --- Firestone Cut
-PrecisionLaser.addRecipe(<Railcraft:firestone.cut>, <gregtech:gt.metaitem.01:24500> * 0, <Railcraft:firestone.raw> * 4, 2400, 480);
+PrecisionLaser.addRecipe(<Railcraft:firestone.cut>, <gregtech:gt.metaitem.01:24500> * 0, <Railcraft:firestone.raw>, 2400, 480);
 
 
 
@@ -2031,7 +2027,6 @@ mods.railcraft.Rolling.removeRecipe(<Railcraft:part.rail:3> * 8);
 
 // --- Reinforced Rail ---
 mods.railcraft.Rolling.removeRecipe(<Railcraft:part.rail:4>);
-//mods.railcraft.Rolling.removeRecipe(<Railcraft:part.rail:4> * 32);
 
 // --- Electric Rail ---
 mods.railcraft.Rolling.removeRecipe(<Railcraft:part.rail:5> * 6);
@@ -2058,7 +2053,6 @@ mods.railcraft.Rolling.addShaped(<Railcraft:post:6>, [[null, <Railcraft:slab:6>,
 
 // --- Lead Plates
 mods.railcraft.Rolling.removeRecipe(<Railcraft:part.plate:4> * 4);
-mods.railcraft.Rolling.addShaped(<Railcraft:part.plate:4> * 2, [[<ore:ingotLead>, <ore:ingotLead>, null], [<ore:ingotLead>, <ore:ingotLead>, null]]);
 
 
 
@@ -2093,19 +2087,6 @@ mods.forestry.ThermionicFabricator.addCast(<liquid:glass> * 2000, [
 [<gregtech:gt.metaitem.01:2804>, <gregtech:gt.metaitem.01:2836>, <gregtech:gt.metaitem.01:2804>]], 
 <Forestry:waxCast:*>, <Railcraft:glass> * 4);
 
-
-
-
-
-// --- Ordicted things ---
-
-
-
-// --- Steel Shears
-oreDict.craftingToolShears.add(<Railcraft:tool.steel.shears>);
-
-// --- Lead Plates
-oreDict.plateLead.add(<Railcraft:part.plate:4>);
 
 
 
@@ -2155,9 +2136,9 @@ mods.thaumcraft.Research.addPrereq("RC_Crowbar_Void", "RC_Crowbar", false);
 mods.thaumcraft.Research.clearPages("RC_Crowbar_Void");
 mods.thaumcraft.Research.addPage("RC_Crowbar_Void", "thaumcraft.research.RC_Crowbar_Void.page.1");
 mods.thaumcraft.Arcane.addShaped("RC_Crowbar_Void", <Railcraft:tool.crowbar.void>, "perditio 50, ignis 50, aer 50, terra 50", [
-[<ore:craftingToolHardHammer>, <ore:dyeRed>, <dreamcraft:item.VoidRod>],
-[<ore:dyeRed>, <dreamcraft:item.VoidRod>, <ore:dyeRed>],
-[<dreamcraft:item.VoidRod>, <ore:dyeRed>, <ore:craftingToolFile>]]);
+[<ore:craftingToolHardHammer>, <ore:dyeRed>, <ore:stickVoid>],
+[<ore:dyeRed>, <ore:stickVoid>, <ore:dyeRed>],
+[<ore:stickVoid>, <ore:dyeRed>, <ore:craftingToolFile>]]);
 mods.thaumcraft.Research.addArcanePage("RC_Crowbar_Void", <Railcraft:tool.crowbar.void>);
 mods.thaumcraft.Warp.addToResearch("RC_Crowbar_Void", 2);
 

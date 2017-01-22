@@ -20,7 +20,7 @@ recipes.remove(<witchery:filteredfumefunnel>);
 // --- Fume Filter
 recipes.remove(<witchery:ingredient:73>);
 
-// --- Null Catalyst doublication
+// --- Null Catalyst duplication
 recipes.removeShapeless(<witchery:ingredient:130>, [<witchery:ingredient:130>, <minecraft:magma_cream>, <minecraft:blaze_powder>]);
 
 //recipes.remove(<witchery:distilleryidle>);
@@ -50,23 +50,20 @@ recipes.addShaped(<witchery:ingredient:111>, [
 [null, <witchery:somniancotton>, null]]);
 
 // --- Null Catalyst doublication
-recipes.addShapeless(<witchery:ingredient:130> * 2, [<witchery:ingredient:130>, <minecraft:magma_cream>, <minecraft:blaze_powder>, <ore:dustTinyNetherStar>, <ore:dustTinyNetherStar>]);
+recipes.addShapeless(<witchery:ingredient:130> * 2, [<witchery:ingredient:130>, <minecraft:magma_cream>, <minecraft:blaze_powder>, <ore:dustTinyNetherStar>]);
 
 // --- Oven
 mods.thaumcraft.Research.addResearch("OVEN", "WITHERY", "metallum 15, fabrico 12, instrumentum 9, machina 6", 0, 0, 4, <witchery:witchesovenidle>);
 game.setLocalization("tc.research_name.OVEN", "Witchery Oven");
 game.setLocalization("tc.research_text.OVEN", "[WI] The tales of Hansel and Gretel");
-mods.thaumcraft.Research.addPrereq("OVEN", "INFERNALFURNACE", false);
-mods.thaumcraft.Research.addPrereq("OVEN", "INFUSION", false);
-mods.thaumcraft.Research.setConcealed("OVEN", false);
 mods.thaumcraft.Research.addPage("OVEN", "Witchery.research_page.OVEN.1");
 game.setLocalization("Witchery.research_page.OVEN.1", "The witches oven, made infamous in the tale of Hansel and Gretel, is a very practical device for the would-be witch or warlock. While unable to smelt metals, the oven is particularly good at cooking food and making charcoal; cooking about 10% faster than a furnace. The second, and probably more important feature of a witches oven, is that it is able to capture the by-products produced in the cooking process. Activating the oven to show the interface screen, you will see an additional slot to the right of the fuel slot.");
 mods.thaumcraft.Research.addPage("OVEN", "Witchery.research_page.OVEN.2");
 game.setLocalization("Witchery.research_page.OVEN.2", "Clay jars must be placed in this slot. If there are clay jars present when something is cooked, there is a chance a by-product will be captured in one of the jars. These by-products are important ingredients in other recipes. If there are no clay jars in the oven when something is cooked, no by-products will be produced.");
 mods.thaumcraft.Arcane.addShaped("OVEN", <witchery:witchesovenidle>, "aer 25, ignis 25, terra 25", [
 [<ore:plateSteel>, <ore:plateThaumium>, <ore:plateSteel>],
-[<dreamcraft:item.SteelBars>, <IC2:blockMachine:1>, <dreamcraft:item.SteelBars>],
-[<ExtraUtilities:microblocks:1>.withTag({mat: "Railcraft:cube_2"}), null, <ExtraUtilities:microblocks:1>.withTag({mat: "Railcraft:cube_2"})]]);
+[<dreamcraft:item.SteelBars>, <Thaumcraft:blockMetalDevice>, <dreamcraft:item.SteelBars>],
+[<ExtraUtilities:microblocks:1>.withTag({mat: "Railcraft:cube_2"}), <IC2:blockMachine:1>, <ExtraUtilities:microblocks:1>.withTag({mat: "Railcraft:cube_2"})]]);
 mods.thaumcraft.Research.addArcanePage("OVEN", <witchery:witchesovenidle>);
 
 // --- Fume Funnel

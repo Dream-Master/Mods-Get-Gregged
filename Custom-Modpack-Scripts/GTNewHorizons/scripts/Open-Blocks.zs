@@ -258,9 +258,9 @@ recipes.addShaped(<OpenBlocks:autoanvil>, [
 
 // --- XP Drain
 recipes.addShaped(<OpenBlocks:xpdrain>, [
-[<ore:plateSteel>, <ore:stickAnyIron>, <ore:plateSteel>],
+[<ore:screwAnyIron>, <ore:stickAnyIron>, <ore:screwAnyIron>],
 [<ore:stickAnyIron>, IronBars, <ore:stickAnyIron>],
-[<ore:plateSteel>, <ore:stickAnyIron>, <ore:plateSteel>]]);
+[<ore:screwAnyIron>, <ore:stickAnyIron>, <ore:screwAnyIron>]]);
 
 // --- Path
 recipes.addShaped(<OpenBlocks:path> * 4, [
@@ -326,6 +326,8 @@ recipes.addShaped(<OpenBlocks:sleepingBag>, [
 [Carpet, Carpet, Carpet],
 [Wool, Wool, Wool],
 [TannedLeather, TannedLeather, TannedLeather]]);
+// -
+recipes.addShapeless(<OpenBlocks:sleepingBag>, [<adventurebackpack:backpackComponent:1>]);
 
 // --- Bear Trap
 recipes.addShaped(<OpenBlocks:beartrap>, [
@@ -406,13 +408,13 @@ recipes.addShaped(<OpenBlocks:sonicglasses>, [
 
 
 // --- Rope Ladder
-Assembler.addRecipe(<OpenBlocks:ropeladder>, <minecraft:string> * 64, <gregtech:gt.metaitem.02:22809> * 16, 400, 8);
+Assembler.addRecipe(<OpenBlocks:ropeladder> * 64, <minecraft:string> * 64, <gregtech:gt.metaitem.02:22809> * 64, 600, 8);
 
 // --- Jaded Ladder
 Assembler.addRecipe(<OpenBlocks:ladder>, <minecraft:trapdoor>, <minecraft:ladder>, 200, 30);
 
 // --- Inverted Sky Block
-Assembler.addRecipe(<OpenBlocks:sky:1>, <OpenBlocks:sky>, <gregtech:gt.integrated_circuit:1>, <liquid:molten.redstone> * 144, 200, 16);
+Assembler.addRecipe(<OpenBlocks:sky:1>, <OpenBlocks:sky>, <gregtech:gt.integrated_circuit:1> * 0, <liquid:molten.redstone> * 144, 200, 16);
 
 // --- Paint Mixer
 Assembler.addRecipe(<OpenBlocks:paintmixer>, <gregtech:gt.blockmachines:581>, <IC2:itemCasing:4> * 4, 600, 30);
@@ -427,7 +429,7 @@ Assembler.addRecipe(<OpenBlocks:generic:10>, <TConstruct:blankPattern>, <Railcra
 Assembler.addRecipe(<OpenBlocks:generic:11>, <minecraft:stick>, <gregtech:gt.metaitem.01:1865>, <liquid:molten.rubber> * 144, 100, 8);
 
 // --- Magic Pencil
-Assembler.addRecipe(<OpenBlocks:imaginary>, <OpenBlocks:generic:11>, <gregtech:gt.metaitem.01:17533>, 100, 16);
+Assembler.addRecipe(<OpenBlocks:imaginary>.withTag({Uses: 10.0 as float}), <OpenBlocks:generic:11>, <gregtech:gt.metaitem.01:17533>, 100, 16);
 
 // --- Map Controller Module
 Assembler.addRecipe(<OpenBlocks:generic:6>, <OpenComputers:item:32>, <dreamcraft:item.SimpleCircuitBoard>, <liquid:molten.redstone> * 144, 300, 30);

@@ -25,6 +25,8 @@ val HvMotor = <gregtech:gt.metaitem.01:32602>;
 val LvPump = <gregtech:gt.metaitem.01:32610>;
 val MvPump = <gregtech:gt.metaitem.01:32611>;
 val HvPump = <gregtech:gt.metaitem.01:32612>;
+val LuVFieldGen = <gregtech:gt.metaitem.01:32675>;
+val LuVMotor = <gregtech:gt.metaitem.01:32606>;
 val IronFurnace = <ore:craftingIronFurnace>;
 val MCasing = <EnderIO:itemMachinePart>;
 val Circuit = <ore:circuitBasic>;
@@ -73,7 +75,6 @@ val DarkSteelScrew = <ore:screwDarkSteel>;
 val WCrystal = <EnderIO:itemMaterial:10>;
 val EnderEyeLens = <ore:lensEnderEye>;
 val MvFieldGen = <gregtech:gt.metaitem.01:32671>;
-val LuVFieldGen = <gregtech:gt.metaitem.01:32675>;
 val SPlate = <ore:plateSoularium>;
 val Shears = <minecraft:shears>;
 val IronAxe = <minecraft:iron_axe>;
@@ -424,7 +425,7 @@ recipes.addShaped(<EnderIO:blockCombustionGenerator>, [
 recipes.addShaped(<EnderIO:blockZombieGenerator>, [
 [SteelCasing, GCircuit, SteelCasing],
 [FQuartz, MCasing, FQuartz],
-[LvMotor, ZElectrode, LvMotor]]);
+[MvMotor, ZElectrode, MvMotor]]);
 
 // --- Photovoltaic Cell
 recipes.addShaped(<EnderIO:blockSolarPanel>, [
@@ -462,27 +463,11 @@ recipes.addShaped(<EnderIO:blockCapBank:2>.withTag({type: "ACTIVATED", storedEne
 [EAPlate, MCasing, EAPlate],
 [Capacitor2, <gregtech:gt.metaitem.01:32537>, Capacitor2]]);
 
-// --- Capacitor Bank Upgrade From Basic Capacitor Bank
-recipes.addShaped(<EnderIO:blockCapBank:2>.withTag({type: "ACTIVATED", storedEnergyRF: 0}), [
-[<gregtech:gt.metaitem.01:18315>, GCircuit	, <gregtech:gt.metaitem.01:18315>],
-[<EnderIO:blockCapBank:2>, EAPlate, <EnderIO:blockCapBank:2>]]);
-
 // --- Vibrant Capacitor Bank
 recipes.addShaped(<EnderIO:blockCapBank:3>.withTag({type: "VIBRANT", storedEnergyRF: 0}), [
 [Capacitor3, AdvCircuit, Capacitor3],
 [VCrystal, MCasing, VCrystal],
 [Capacitor3, <gregtech:gt.metaitem.01:32540>, Capacitor3]]);
-
-// --- Vibrant Capacitor Bank Upgrade From Capacitor Bank
-recipes.addShaped(<EnderIO:blockCapBank:3>.withTag({type: "VIBRANT", storedEnergyRF: 0}), [
-[<gregtech:gt.metaitem.01:20315>, AdvCircuit, <gregtech:gt.metaitem.01:20315>],
-[<EnderIO:blockCapBank:2>, VCrystal, <EnderIO:blockCapBank:2>]]);
-
-// --- Vibrant Capacitor Bank Upgrade From Basic Capacitor Bank
-recipes.addShaped(<EnderIO:blockCapBank:3>.withTag({type: "VIBRANT", storedEnergyRF: 0}), [
-[<gregtech:gt.metaitem.01:22315>, AdvCircuit, <gregtech:gt.metaitem.01:22315>],
-[<EnderIO:blockCapBank:1>, EAPlate, <EnderIO:blockCapBank:1>],
-[<EnderIO:blockCapBank:1>, VCrystal, <EnderIO:blockCapBank:1>]]);
 
 // --- Painting Machine
 recipes.addShaped(<EnderIO:blockPainter>, [
@@ -518,7 +503,7 @@ recipes.addShaped(<EnderIO:blockPowerMonitor>, [
 recipes.addShaped(<EnderIO:blockFarmStation>, [
 [PCrystal, <IC2:itemToolHoe:*>, PCrystal],
 [GCircuit, MCasing, GCircuit],
-[LvMotor, ZLogic, LvMotor]]);
+[MvMotor, ZLogic, MvMotor]]);
 
 // --- Wireless Charger
 recipes.addShaped(<EnderIO:blockWirelessCharger>, [
@@ -529,13 +514,13 @@ recipes.addShaped(<EnderIO:blockWirelessCharger>, [
 // --- Fluid Tank
 recipes.addShaped(Tank, [
 [SteelCasing, SteelBars, SteelCasing],
-[SteelBars, BCTank, SteelBars],
+[SteelBars, <gregtech:gt.blockmachines:4461>, SteelBars],
 [SteelCasing, LvPump, SteelCasing]]);
 
 // --- Pressurized Fluid Tank
 recipes.addShaped(<EnderIO:blockTank:1>, [
 [DarkSteelPlate, DarkSteelBars, DarkSteelPlate],
-[DarkSteelBars, IronTank, DarkSteelBars],
+[DarkSteelBars, <gregtech:gt.blockmachines:4460>, DarkSteelBars],
 [DarkSteelPlate, MvPump, DarkSteelPlate]]);
 
 // --- Reservoir
@@ -588,7 +573,7 @@ recipes.addShaped(<EnderIO:blockTravelAnchor>, [
 recipes.addShaped(<EnderIO:blockTelePad>, [
 [DarkSteelPlate, FQuartz, DarkSteelPlate],
 [Capacitor3, <EnderIO:blockTravelAnchor>, Capacitor3],
-[HvMotor, LuVFieldGen, HvMotor]]);
+[LuVMotor, LuVFieldGen, LuVMotor]]);
 
 // --- Slice and Splice
 recipes.addShaped(<EnderIO:blockSliceAndSplice>, [
@@ -829,7 +814,7 @@ Assembler.addRecipe(<EnderIO:itemLiquidConduit:1>, <gregtech:gt.blockmachines:51
 Assembler.addRecipe(<EnderIO:itemLiquidConduit:2>, <gregtech:gt.blockmachines:5142>, <gregtech:gt.metaitem.01:17367>, <liquid:molten.plastic> * 144, 100, 480);
 
 // --- Item Conduit
-Assembler.addRecipe(<EnderIO:itemItemConduit>, <gregtech:gt.blockmachines:5611>, <gregtech:gt.metaitem.01:17378>, <liquid:molten.plastic> * 144, 100, 256);
+Assembler.addRecipe(<EnderIO:itemItemConduit>, <gregtech:gt.blockmachines:5611>, <gregtech:gt.metaitem.01:17378>, <liquid:molten.plastic> * 144, 100, 120);
 
 // --- ME Conduit
 Assembler.addRecipe(<EnderIO:itemMEConduit>, <appliedenergistics2:item.ItemMultiPart:16>, <gregtech:gt.metaitem.01:17020>, <liquid:molten.plastic> * 144, 100, 256);

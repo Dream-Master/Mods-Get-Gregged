@@ -1044,6 +1044,26 @@ recipes.addShaped(Piston, [
 [<CarpentersBlocks:blockCarpentersBlock>, <CarpentersBlocks:blockCarpentersBlock>, <CarpentersBlocks:blockCarpentersBlock>],
 [<ore:gearGtSmallAnyIron>, Fence, <ore:gearGtSmallAnyIron>],
 [Cobble, <ore:plateRedAlloy>, Cobble]]);
+// -
+recipes.addShaped(Piston, [
+[<CarpentersBlocks:blockCarpentersBlock>, <CarpentersBlocks:blockCarpentersBlock>, <CarpentersBlocks:blockCarpentersBlock>],
+[<ore:gearGtSmallAnyIron>, <ExtraTrees:fence:*>, <ore:gearGtSmallAnyIron>],
+[Cobble, <ore:plateRedAlloy>, Cobble]]);
+// -
+recipes.addShaped(Piston, [
+[<CarpentersBlocks:blockCarpentersBlock>, <CarpentersBlocks:blockCarpentersBlock>, <CarpentersBlocks:blockCarpentersBlock>],
+[<ore:gearGtSmallAnyIron>, <Forestry:fences:*>, <ore:gearGtSmallAnyIron>],
+[Cobble, <ore:plateRedAlloy>, Cobble]]);
+// -
+recipes.addShaped(Piston, [
+[<CarpentersBlocks:blockCarpentersBlock>, <CarpentersBlocks:blockCarpentersBlock>, <CarpentersBlocks:blockCarpentersBlock>],
+[<ore:gearGtSmallAnyIron>, <Forestry:fencesFireproof:*>, <ore:gearGtSmallAnyIron>],
+[Cobble, <ore:plateRedAlloy>, Cobble]]);
+// -
+recipes.addShaped(Piston, [
+[<CarpentersBlocks:blockCarpentersBlock>, <CarpentersBlocks:blockCarpentersBlock>, <CarpentersBlocks:blockCarpentersBlock>],
+[<ore:gearGtSmallAnyIron>, <Natura:Natura.fence:*>, <ore:gearGtSmallAnyIron>],
+[Cobble, <ore:plateRedAlloy>, Cobble]]);
 
 // --- Sticky Piston
 recipes.addShaped(SPiston, [
@@ -1087,19 +1107,19 @@ recipes.addShapeless(JackOLantern,
 
 // --- Trapdoor
 recipes.addShaped(Trapdoor, [
-[<minecraft:wooden_slab>, Stick, <minecraft:wooden_slab>],
+[<minecraft:wooden_slab:*>, Stick, <minecraft:wooden_slab:*>],
 [Stick, Flint, Stick],
-[<minecraft:wooden_slab>, Stick, <minecraft:wooden_slab>]]);
+[<minecraft:wooden_slab:*>, Stick, <minecraft:wooden_slab:*>]]);
 // --- 
 recipes.addShaped(Trapdoor * 2, [
-[<minecraft:wooden_slab>, Stick, <minecraft:wooden_slab>],
+[<minecraft:wooden_slab:*>, Stick, <minecraft:wooden_slab:*>],
 [Stick, IronScrew, Stick],
-[<minecraft:wooden_slab>, Stick, <minecraft:wooden_slab>]]);
+[<minecraft:wooden_slab:*>, Stick, <minecraft:wooden_slab:*>]]);
 // ---
 recipes.addShaped(Trapdoor * 3, [
-[<minecraft:wooden_slab>, Stick, <minecraft:wooden_slab>],
+[<minecraft:wooden_slab:*>, Stick, <minecraft:wooden_slab:*>],
 [Stick, SteelScrew, Stick],
-[<minecraft:wooden_slab>, Stick, <minecraft:wooden_slab>]]);
+[<minecraft:wooden_slab:*>, Stick, <minecraft:wooden_slab:*>]]);
 
 // --- Pressure Plate
 recipes.addShapeless(<minecraft:stone_pressure_plate> * 2, [Saw, <minecraft:stone_slab>]);
@@ -2361,6 +2381,26 @@ recipes.addShaped(<minecraft:bed>, [
 [<minecraft:carpet:*>, <minecraft:carpet:*>, <minecraft:carpet:*>],
 [<ore:plankWood>, <ore:plankWood>, <ore:plankWood>],
 [Fence, <ore:craftingToolSoftHammer>, Fence]]);
+// -
+recipes.addShaped(<minecraft:bed>, [
+[<minecraft:carpet:*>, <minecraft:carpet:*>, <minecraft:carpet:*>],
+[<ore:plankWood>, <ore:plankWood>, <ore:plankWood>],
+[<ExtraTrees:fence:*>, <ore:craftingToolSoftHammer>, <ExtraTrees:fence:*>]]);
+// -
+recipes.addShaped(<minecraft:bed>, [
+[<minecraft:carpet:*>, <minecraft:carpet:*>, <minecraft:carpet:*>],
+[<ore:plankWood>, <ore:plankWood>, <ore:plankWood>],
+[<Forestry:fences:*>, <ore:craftingToolSoftHammer>, <Forestry:fences:*>]]);
+// -
+recipes.addShaped(<minecraft:bed>, [
+[<minecraft:carpet:*>, <minecraft:carpet:*>, <minecraft:carpet:*>],
+[<ore:plankWood>, <ore:plankWood>, <ore:plankWood>],
+[<Forestry:fencesFireproof:*>, <ore:craftingToolSoftHammer>, <Forestry:fencesFireproof:*>]]);
+// -
+recipes.addShaped(<minecraft:bed>, [
+[<minecraft:carpet:*>, <minecraft:carpet:*>, <minecraft:carpet:*>],
+[<ore:plankWood>, <ore:plankWood>, <ore:plankWood>],
+[<Natura:Natura.fence:*>, <ore:craftingToolSoftHammer>, <Natura:Natura.fence:*>]]);
 
 // --- Fishing Rod
 recipes.addShaped(<minecraft:fishing_rod>, [
@@ -2652,6 +2692,12 @@ recipes.addShaped(<minecraft:shears>, [
 recipes.addShaped(<minecraft:nether_star> * 16, [
 [<gregtech:gt.metaitem.03:2506>, <ore:craftingToolCrowbar>]]);
 
+// --- Mossy Coblestone
+recipes.addShaped(<minecraft:mossy_cobblestone>, [
+[<BiomesOPlenty:moss>, <BiomesOPlenty:moss>, <BiomesOPlenty:moss>],
+[<BiomesOPlenty:moss>, MossyCobble, <BiomesOPlenty:moss>],
+[<BiomesOPlenty:moss>, <BiomesOPlenty:moss>, <BiomesOPlenty:moss>]]);
+
 
 // --- Charcoal
 mods.railcraft.BlastFurnace.addRecipe(<minecraft:log:*>, false, false, 20, <minecraft:coal:1>);
@@ -2722,6 +2768,29 @@ AlloySmelter.addRecipe(<minecraft:netherbrick>, <gregtech:gt.metaitem.01:2807>, 
 // --- Glass
 AlloySmelter.addRecipe(<minecraft:glass>, <BloodArsenal:glass_shard> * 2, <gregtech:gt.metaitem.01:32308> * 0, 5, 64);
 
+// --- Iron Helmet
+AlloySmelter.addRecipe(<minecraft:iron_helmet>, <minecraft:iron_ingot> * 5, <dreamcraft:item.MoldHelmet> * 0, 200, 30);
+
+// --- Iron Chestplate
+AlloySmelter.addRecipe(<minecraft:iron_chestplate>, <minecraft:iron_ingot> * 8, <dreamcraft:item.MoldChestplate> * 0, 200, 30);
+
+// --- Iron Leggins
+AlloySmelter.addRecipe(<minecraft:iron_leggings>, <minecraft:iron_ingot> * 7, <dreamcraft:item.MoldLeggings> * 0, 200, 30);
+
+// --- Iron Boots
+AlloySmelter.addRecipe(<minecraft:iron_boots>, <minecraft:iron_ingot> * 4, <dreamcraft:item.MoldBoots> * 0, 200, 30);
+
+// --- Gold Helmet
+AlloySmelter.addRecipe(<minecraft:golden_helmet>, <minecraft:gold_ingot> * 5, <dreamcraft:item.MoldHelmet> * 0, 200, 30);
+
+// --- Gold Chestplate
+AlloySmelter.addRecipe(<minecraft:golden_chestplate>, <minecraft:gold_ingot> * 8, <dreamcraft:item.MoldChestplate> * 0, 200, 30);
+
+// --- Gold Leggins
+AlloySmelter.addRecipe(<minecraft:golden_leggings>, <minecraft:gold_ingot> * 7, <dreamcraft:item.MoldLeggings> * 0, 200, 30);
+
+// --- Gold Boots
+AlloySmelter.addRecipe(<minecraft:golden_boots>, <minecraft:gold_ingot> * 4, <dreamcraft:item.MoldBoots> * 0, 200, 30);
 
 
 
@@ -2771,7 +2840,7 @@ Assembler.addRecipe(<minecraft:wooden_door>, <gregtech:gt.metaitem.01:17809> * 4
 // --- Iron Door
 Assembler.addRecipe(<minecraft:iron_door>, <Railcraft:part.plate> * 4, <dreamcraft:item.SteelBars>, <liquid:molten.steel> * 16, 400, 8);
 
-// --- Trapped Door Oak
+// --- Trapped Door
 Assembler.addRecipe(<minecraft:trapdoor> * 4, <minecraft:wooden_slab> * 4, <minecraft:stick> * 4, <liquid:molten.iron> * 16, 600, 4);
 // -
 Assembler.addRecipe(<minecraft:trapdoor> * 6, <minecraft:wooden_slab> * 4, <minecraft:stick> * 4, <liquid:molten.steel> * 16, 600, 4);
@@ -3094,14 +3163,6 @@ FluidExtractor.addRecipe(null, <minecraft:obsidian>, <liquid:obsidian.molten> * 
 ImplosionCompressor.addRecipe([<minecraft:nether_star> * 3, <gregtech:gt.metaitem.01:807> * 4], <gregtech:gt.metaitem.01:2506> * 4, 48);
 
 
-
-
-// --- Ore Dicted Stuff ---
-
-
-
-// --- Shears
-oreDict.craftingToolShears.add(<minecraft:shears>);
 
 
 

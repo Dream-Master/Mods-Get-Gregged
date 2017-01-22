@@ -10,6 +10,7 @@ import mods.gregtech.Centrifuge;
 import mods.ic2.Compressor;
 import mods.ic2.Extractor;
 import mods.gregtech.Extruder;
+import mods.gregtech.FormingPress;
 import mods.gregtech.ImplosionCompressor;
 import mods.ic2.Macerator;
 
@@ -74,12 +75,14 @@ recipes.addShaped(<Avaritia:Dire_Crafting>, [
 [<gregtech:gt.metaitem.01:32652>, <Avaritia:Triple_Craft>, <gregtech:gt.metaitem.01:32652>],
 [<ore:waferAdvanced>, <Avaritia:Crystal_Matrix>, <ore:waferAdvanced>],
 [<gregtech:gt.metaitem.01:32642>, <gregtech:gt.metaitem.01:32705>, <gregtech:gt.metaitem.01:32642>]]);
+// -
+recipes.addShapeless(<Avaritia:Dire_Crafting>, [<GalacticraftCore:tile.rocketWorkbench>]);
 
 // --- Diamond Lattice
 recipes.addShaped(<Avaritia:Resource>, [
-[<ore:screwDiamond>, <ore:gemFlawlessDiamond> , <ore:screwDiamond>],
-[<ore:gemFlawlessDiamond>, <ore:stickDiamond>, <ore:gemFlawlessDiamond>],
-[<ore:screwDiamond>, <ore:gemFlawlessDiamond>, <ore:screwDiamond>]]);
+[<ore:screwDiamond>, <ore:plateDiamond> , <ore:screwDiamond>],
+[<ore:plateDiamond>, <dreamcraft:item.StainlessSteelBars>, <ore:plateDiamond>],
+[<ore:screwDiamond>, <ore:plateDiamond>, <ore:screwDiamond>]]);
 
 
 
@@ -124,15 +127,6 @@ Compressor.addRecipe(<Avaritia:Crystal_Matrix>, <Avaritia:Resource:1> * 9);
 
 
 
-// --- Centrifuge Recipes ---
-
-
-
-// --- Pile of Neutrons
-Centrifuge.addRecipe([<Avaritia:Resource:2>, <Avaritia:Resource:2>, <Avaritia:Resource:2>], null, <gregtech:gt.metaitem.01:2129>, null, null, [5000, 2000, 1000], 1200, 480);
-
-
-
 // --- Extractor Recipes ---
 
 
@@ -155,6 +149,18 @@ Extractor.addRecipe(<Avaritia:Resource:1> * 9, <Avaritia:Crystal_Matrix>);
 
 // --- Neutronium Ingots
 Extruder.addRecipe(<Avaritia:Resource:4> * 9, <Avaritia:Resource_Block>, <gregtech:gt.metaitem.01:32355> * 0, 1200, 1920);
+
+
+
+// --- Forming Presee recipes
+
+
+
+
+
+// --- Diamond Lattice
+FormingPress.addRecipe(<Avaritia:Resource>, <gregtech:gt.metaitem.01:17500> * 4, <dreamcraft:item.StainlessSteelBars>, 200, 120);
+
 
 
 
@@ -210,4 +216,5 @@ Macerator.addRecipe(<Avaritia:Resource:7> * 9, <minecraft:record_11>);
 Macerator.addRecipe(<Avaritia:Resource:7> * 9, <minecraft:record_wait>);
 
 
-//print("ExtremCrafting loaded!");
+// --- Neutronium Compressor
+mods.avaritia.Compressor.add(<Avaritia:Resource:5>, 64, <gregtech:gt.metaitem.01:2394>);

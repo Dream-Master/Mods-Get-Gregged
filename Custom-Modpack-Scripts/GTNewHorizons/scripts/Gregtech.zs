@@ -307,21 +307,51 @@ recipes.remove(<gregtech:gt.metaitem.01:32759>);
 
 // --- Apatite
 recipes.removeShaped(<gregtech:gt.metaitem.01:8530>, [
-[<MagicBees:beeNugget:7>, <MagicBees:beeNugget:7>, <MagicBees:beeNugget:7>],
-[<MagicBees:beeNugget:7>, <MagicBees:beeNugget:7>, <MagicBees:beeNugget:7>],
-[<MagicBees:beeNugget:7>, <MagicBees:beeNugget:7>, <MagicBees:beeNugget:7>]]);
+[<ore:shardApatite>, <ore:shardApatite>, <ore:shardApatite>],
+[<ore:shardApatite>, <ore:shardApatite>, <ore:shardApatite>],
+[<ore:shardApatite>, <ore:shardApatite>, <ore:shardApatite>]]);
 
-// --- Quantum Tank IV
-recipes.remove(<gregtech:gt.blockmachines:123>);
+// --- Silver Ingot
+recipes.removeShaped(<ore:ingotSilver>, [
+[<ore:nuggetSilver>, <ore:nuggetSilver>, <ore:nuggetSilver>],
+[<ore:nuggetSilver>, <ore:nuggetSilver>, <ore:nuggetSilver>],
+[<ore:nuggetSilver>, <ore:nuggetSilver>, <ore:nuggetSilver>]]);
 
-// --- Quantum Chest V
-recipes.remove(<gregtech:gt.blockmachines:124>);
+// --- Lead Ingot
+recipes.removeShaped(<ore:ingotLead>, [
+[<ore:nuggetLead>, <ore:nuggetLead>, <ore:nuggetLead>],
+[<ore:nuggetLead>, <ore:nuggetLead>, <ore:nuggetLead>],
+[<ore:nuggetLead>, <ore:nuggetLead>, <ore:nuggetLead>]]);
 
-// --- Quantum Chest IV
-recipes.remove(<gregtech:gt.blockmachines:128>);
+// --- Draconium Ingot
+recipes.removeShaped(<ore:ingotDraconium>, [
+[<ore:nuggetDraconium>, <ore:nuggetDraconium>, <ore:nuggetDraconium>],
+[<ore:nuggetDraconium>, <ore:nuggetDraconium>, <ore:nuggetDraconium>],
+[<ore:nuggetDraconium>, <ore:nuggetDraconium>, <ore:nuggetDraconium>]]);
 
-// --- Quantum Chest V
-recipes.remove(<gregtech:gt.blockmachines:129>);
+// --- Awakened Draconium Ingot
+recipes.removeShaped(<ore:ingotDraconiumAwakened>, [
+[<ore:nuggetDraconiumAwakened>, <ore:nuggetDraconiumAwakened>, <ore:nuggetDraconiumAwakened>],
+[<ore:nuggetDraconiumAwakened>, <ore:nuggetDraconiumAwakened>, <ore:nuggetDraconiumAwakened>],
+[<ore:nuggetDraconiumAwakened>, <ore:nuggetDraconiumAwakened>, <ore:nuggetDraconiumAwakened>]]);
+
+// --- Vibrant Alloy Ingot 
+recipes.removeShaped(<ore:ingotVibrantAlloy>, [
+[<ore:nuggetVibrantAlloy>, <ore:nuggetVibrantAlloy>, <ore:nuggetVibrantAlloy>],
+[<ore:nuggetVibrantAlloy>, <ore:nuggetVibrantAlloy>, <ore:nuggetVibrantAlloy>],
+[<ore:nuggetVibrantAlloy>, <ore:nuggetVibrantAlloy>, <ore:nuggetVibrantAlloy>]]);
+
+// --- Pulsating Iron Ingot
+recipes.removeShaped(<ore:ingotPulsatingIron>, [
+[<ore:nuggetPulsatingIron>, <ore:nuggetPulsatingIron>, <ore:nuggetPulsatingIron>],
+[<ore:nuggetPulsatingIron>, <ore:nuggetPulsatingIron>, <ore:nuggetPulsatingIron>],
+[<ore:nuggetPulsatingIron>, <ore:nuggetPulsatingIron>, <ore:nuggetPulsatingIron>]]);
+
+// --- Thauminite Ingot
+recipes.removeShaped(<ore:ingotThauminite>, [
+[<thaumicbases:resource>, <thaumicbases:resource>, <thaumicbases:resource>],
+[<thaumicbases:resource>, <thaumicbases:resource>, <thaumicbases:resource>],
+[<thaumicbases:resource>, <thaumicbases:resource>, <thaumicbases:resource>]]);
 
 // --- Iridium IC2
 recipes.remove(<IC2:itemOreIridium>);
@@ -705,70 +735,82 @@ recipes.addShaped(<gregtech:gt.metaitem.01:32753>, [
 [<ore:wireGt01AnnealedCopper>, <dreamcraft:item.IrradiantReinforcedTitaniumPlate>, <ore:wireGt01AnnealedCopper>]]);
 
 // --- Solar Panel 512 EU
-recipes.addShaped(<gregtech:gt.metaitem.01:32754>, [
-[<ore:plateDoubleSilicon>, <gregtech:gt.metaitem.01:32753>, <ore:plateDoubleSilicon>],
-[<ore:circuitMaster>, <IC2:itemPartCarbonPlate>, <ore:circuitMaster>],
-[<ore:wireGt01Kanthal>, <dreamcraft:item.IrradiantReinforcedTungstenPlate>, <ore:wireGt01Kanthal>]]);
+mods.avaritia.ExtremeCrafting.addShaped(<gregtech:gt.metaitem.01:32754>, [
+[null, null, null, null, null, null, null, null, null],
+[null, null, null, null, null, null, null, null, null],
+[null, null, null, <ore:wireGt01Kanthal>, <dreamcraft:item.IrradiantReinforcedTungstenPlate>, <ore:wireGt01Kanthal>, null, null, null],
+[null, null, null, <ore:plateDoubleSilicon>, <IC2:itemPartCarbonPlate>, <ore:plateDoubleSilicon>, null, null, null],
+[null, null, null, <ore:circuitMaster>, <gregtech:gt.metaitem.01:32753>, <ore:circuitMaster>, null, null, null],
+[null, null, null, <ore:plateDoubleSilicon>, <IC2:itemPartCarbonPlate>, <ore:plateDoubleSilicon>, null, null, null],
+[null, null, null, <ore:wireGt01Kanthal>, <dreamcraft:item.IrradiantReinforcedTungstenPlate>, <ore:wireGt01Kanthal>, null, null, null],
+[null, null, null, null, null, null, null, null, null],
+[null, null, null, null, null, null, null, null, null]]);
 
 // --- Solar Panel 2048 EU
-recipes.addShaped(<gregtech:gt.metaitem.01:32755>, [
-[<ore:plateTripleSilicon>, <gregtech:gt.metaitem.01:32754>, <ore:plateTripleSilicon>],
-[<dreamcraft:item.HighEnergyFlowCircuit>, <IC2:itemPartCarbonPlate>, <dreamcraft:item.HighEnergyFlowCircuit>],
-[<ore:wireGt01TungstenSteel>, <dreamcraft:item.IrradiantReinforcedTungstenSteelPlate>, <ore:wireGt01TungstenSteel>]]);
+mods.avaritia.ExtremeCrafting.addShaped(<gregtech:gt.metaitem.01:32755>, [
+[null, null, null, null, null, null, null, null, null],
+[null, null, null, null, null, null, null, null, null],
+[null, null, <ore:wireGt01TungstenSteel>, <ore:plateTripleSilicon>, <dreamcraft:item.IrradiantReinforcedTungstenSteelPlate>, <ore:plateTripleSilicon>, <ore:wireGt01TungstenSteel>, null, null],
+[null, null, null, <ore:plateTripleSilicon>, <IC2:itemPartCarbonPlate>, <ore:plateTripleSilicon>, null, null, null],
+[null, null, <ore:wireGt01TungstenSteel>, <dreamcraft:item.HighEnergyFlowCircuit>, <gregtech:gt.metaitem.01:32754>, <dreamcraft:item.HighEnergyFlowCircuit>, <ore:wireGt01TungstenSteel>, null, null],
+[null, null, null, <ore:plateTripleSilicon>, <IC2:itemPartCarbonPlate>, <ore:plateTripleSilicon>, null, null, null],
+[null, null, <ore:wireGt01TungstenSteel>, <ore:plateTripleSilicon>, <dreamcraft:item.IrradiantReinforcedTungstenSteelPlate>, <ore:plateTripleSilicon>, <ore:wireGt01TungstenSteel>, null, null],
+[null, null, null, null, null, null, null, null, null],
+[null, null, null, null, null, null, null, null, null]]);
 
 // --- Solar Panel 8192 EU
-recipes.addShaped(<gregtech:gt.metaitem.01:32756>, [
-[<ore:plateTripleSilicon>, <gregtech:gt.metaitem.01:32755>, <ore:plateTripleSilicon>],
-[<dreamcraft:item.NanoCircuit>, <IC2:itemPartCarbonPlate>, <dreamcraft:item.NanoCircuit>],
-[<ore:wireGt01Osmium>, <dreamcraft:item.IrradiantReinforcedChromePlate>, <ore:wireGt01Osmium>]]);
+mods.avaritia.ExtremeCrafting.addShaped(<gregtech:gt.metaitem.01:32756>, [
+[null, null, null, null, null, null, null, null, null],
+[null, null, null, null, null, null, null, null, null],
+[null, null, <ore:wireGt01HSSG>, <ore:plateQuadrupleSilicon>, <dreamcraft:item.IrradiantReinforcedChromePlate>, <ore:plateQuadrupleSilicon>, <ore:wireGt01HSSG>, null, null],
+[null, null, <IC2:itemPartCarbonPlate>, <ore:plateQuadrupleSilicon>, <IC2:itemPartCarbonPlate>, <ore:plateQuadrupleSilicon>, <IC2:itemPartCarbonPlate>, null, null],
+[null, null, <ore:wireGt01HSSG>, <dreamcraft:item.NanoCircuit>, <gregtech:gt.metaitem.01:32755>, <dreamcraft:item.NanoCircuit>, <ore:wireGt01HSSG>, null, null],
+[null, null, <IC2:itemPartCarbonPlate>, <ore:plateQuadrupleSilicon>, <IC2:itemPartCarbonPlate>, <ore:plateQuadrupleSilicon>, <IC2:itemPartCarbonPlate>, null, null],
+[null, null, <ore:wireGt01HSSG>, <ore:plateQuadrupleSilicon>, <dreamcraft:item.IrradiantReinforcedChromePlate>, <ore:plateQuadrupleSilicon>, <ore:wireGt01HSSG>, null, null],
+[null, null, null, null, null, null, null, null, null],
+[null, null, null, null, null, null, null, null, null]]);
 
 // --- Solar Panel 32768 EU
-recipes.addShaped(<gregtech:gt.metaitem.01:32757>, [
-[<ore:plateQuadrupleSilicon>, <gregtech:gt.metaitem.01:32756>, <ore:plateQuadrupleSilicon>],
-[<dreamcraft:item.PikoCircuit>, <IC2:itemPartCarbonPlate>, <dreamcraft:item.PikoCircuit>],
-[<ore:wireGt01YttriumBariumCuprate>, <AdvancedSolarPanel:asp_crafting_items:8>, <ore:wireGt01YttriumBariumCuprate>]]);
+mods.avaritia.ExtremeCrafting.addShaped(<gregtech:gt.metaitem.01:32757>, [
+[null, null, null, null, null, null, null, null, null],
+[null, null, null, <ore:wireGt01Naquadah>, <dreamcraft:item.PikoCircuit>, <ore:wireGt01Naquadah>, null, null, null],
+[null, null, <ore:wireGt01Naquadah>, <ore:plateQuintupleSilicon>, <AdvancedSolarPanel:asp_crafting_items:8>, <ore:plateQuintupleSilicon>, <ore:wireGt01Naquadah>, null, null],
+[null, null, <IC2:itemPartCarbonPlate>, <ore:plateQuintupleSilicon>, <IC2:itemPartCarbonPlate>, <ore:plateQuintupleSilicon>, <IC2:itemPartCarbonPlate>, null, null],
+[null, null, <ore:wireGt01Naquadah>, <dreamcraft:item.PikoCircuit>, <gregtech:gt.metaitem.01:32756>, <dreamcraft:item.PikoCircuit>, <ore:wireGt01Naquadah>, null, null],
+[null, null, <IC2:itemPartCarbonPlate>, <ore:plateQuintupleSilicon>, <IC2:itemPartCarbonPlate>, <ore:plateQuintupleSilicon>, <IC2:itemPartCarbonPlate>, null, null],
+[null, null, <ore:wireGt01Naquadah>, <ore:plateQuintupleSilicon>, <AdvancedSolarPanel:asp_crafting_items:8>, <ore:plateQuintupleSilicon>, <ore:wireGt01Naquadah>, null, null],
+[null, null, null, <ore:wireGt01Naquadah>, <dreamcraft:item.PikoCircuit>, <ore:wireGt01Naquadah>, null, null, null],
+[null, null, null, null, null, null, null, null, null]]);
 
 // --- Solar Panel 131072 EU
-recipes.addShaped(<gregtech:gt.metaitem.01:32758>, [
-[<ore:plateQuintupleSilicon>, <gregtech:gt.metaitem.01:32757>, <ore:plateQuintupleSilicon>],
-[<dreamcraft:item.QuantumCircuit>, <IC2:itemPartCarbonPlate>, <dreamcraft:item.QuantumCircuit>],
-[<ore:wireGt01Superconductor>, <dreamcraft:item.IrradiantReinforcedNaquadriaPlate>, <ore:wireGt01Superconductor>]]);
+mods.avaritia.ExtremeCrafting.addShaped(<gregtech:gt.metaitem.01:32758>, [
+[null, null, null, <ore:wireGt01Superconductor>, <ore:plateDenseSilicon>, <ore:wireGt01Superconductor>, null, null, null],
+[null, null, null, <ore:wireGt01Superconductor>, <dreamcraft:item.QuantumCircuit>, <ore:wireGt01Superconductor>, null, null, null],
+[null, null, <ore:wireGt01Superconductor>, <ore:plateDenseSilicon>, <dreamcraft:item.IrradiantReinforcedNaquadriaPlate>, <ore:plateDenseSilicon>, <ore:wireGt01Superconductor>, null, null],
+[null, null, <IC2:itemPartCarbonPlate>, <ore:plateDenseSilicon>, <IC2:itemPartCarbonPlate>, <ore:plateDenseSilicon>, <IC2:itemPartCarbonPlate>, null, null],
+[null, <ore:wireGt01Superconductor>, <dreamcraft:item.IrradiantReinforcedNaquadriaPlate>, <dreamcraft:item.QuantumCircuit>, <gregtech:gt.metaitem.01:32757>, <dreamcraft:item.QuantumCircuit>, <dreamcraft:item.IrradiantReinforcedNaquadriaPlate>, <ore:wireGt01Superconductor>, null],
+[null, null, <IC2:itemPartCarbonPlate>, <ore:plateDenseSilicon>, <IC2:itemPartCarbonPlate>, <ore:plateDenseSilicon>, <IC2:itemPartCarbonPlate>, null, null],
+[null, null, <ore:wireGt01Superconductor>, <ore:plateDenseSilicon>, <dreamcraft:item.IrradiantReinforcedNaquadriaPlate>, <ore:plateDenseSilicon>, <ore:wireGt01Superconductor>, null, null],
+[null, null, null, <ore:wireGt01Superconductor>, <dreamcraft:item.QuantumCircuit>, <ore:wireGt01Superconductor>, null, null, null],
+[null, null, null, <ore:wireGt01Superconductor>, <ore:plateDenseSilicon>, <ore:wireGt01Superconductor>, null, null, null]]);
 
 // --- Solar Panel 524288 EU
-recipes.addShaped(<gregtech:gt.metaitem.01:32759>, [
-[<ore:plateDenseSilicon>, <gregtech:gt.metaitem.01:32758>, <ore:plateDenseSilicon>],
-[<AdvancedSolarPanel:asp_crafting_items:13>, <IC2:itemPartCarbonPlate>, <AdvancedSolarPanel:asp_crafting_items:13>],
-[<ore:itemSuperconductor>, <dreamcraft:item.IrradiantReinforcedNeutroniumPlate>, <ore:itemSuperconductor>]]);
+mods.avaritia.ExtremeCrafting.addShaped(<gregtech:gt.metaitem.01:32759>, [
+[null, null, <ore:itemSuperconductor>, <ore:plateDenseSilicon>, <ore:plateDenseSilicon>, <ore:plateDenseSilicon>, <ore:itemSuperconductor>, null, null],
+[null, null, <ore:itemSuperconductor>, <IC2:itemPartCarbonPlate>, <AdvancedSolarPanel:asp_crafting_items:13>, <IC2:itemPartCarbonPlate>, <ore:itemSuperconductor>, null, null],
+[null, <ore:itemSuperconductor>, <IC2:itemPartCarbonPlate>, <ore:plateDenseSilicon>, <dreamcraft:item.IrradiantReinforcedNeutroniumPlate>, <ore:plateDenseSilicon>, <IC2:itemPartCarbonPlate>, <ore:itemSuperconductor>, null],
+[null, <ore:itemSuperconductor>, <IC2:itemPartCarbonPlate>, <ore:plateDenseSilicon>, <IC2:itemPartCarbonPlate>, <ore:plateDenseSilicon>, <IC2:itemPartCarbonPlate>, <ore:itemSuperconductor>, null],
+[null, <ore:itemSuperconductor>, <dreamcraft:item.IrradiantReinforcedNeutroniumPlate>, <AdvancedSolarPanel:asp_crafting_items:13>, <gregtech:gt.metaitem.01:32758>, <AdvancedSolarPanel:asp_crafting_items:13>, <dreamcraft:item.IrradiantReinforcedNeutroniumPlate>, <ore:itemSuperconductor>, null],
+[null, <ore:itemSuperconductor>, <IC2:itemPartCarbonPlate>, <ore:plateDenseSilicon>, <IC2:itemPartCarbonPlate>, <ore:plateDenseSilicon>, <IC2:itemPartCarbonPlate>, <ore:itemSuperconductor>, null],
+[null, <ore:itemSuperconductor>, <IC2:itemPartCarbonPlate>, <ore:plateDenseSilicon>, <dreamcraft:item.IrradiantReinforcedNeutroniumPlate>, <ore:plateDenseSilicon>, <IC2:itemPartCarbonPlate>, <ore:itemSuperconductor>, null],
+[null, null, <ore:itemSuperconductor>, <IC2:itemPartCarbonPlate>, <AdvancedSolarPanel:asp_crafting_items:13>, <IC2:itemPartCarbonPlate>, <ore:itemSuperconductor>, null, null],
+[null, null, <ore:itemSuperconductor>, <ore:plateDenseSilicon>, <ore:plateDenseSilicon>, <ore:plateDenseSilicon>, <ore:itemSuperconductor>, null, null]]);
 
 // --- Frames
 recipes.addShapeless(<gregtech:gt.blockmachines:4905> * 2, [<MCFrames:mcframes.frame>]);
 
 // --- Scaffolding
 recipes.addShapeless(<gregtech:gt.blockmachines:4905>, [<OpenBlocks:scaffolding>]);
-
-// --- Quantum Tank IV
-recipes.addShaped(<gregtech:gt.blockmachines:123>, [
-[<dreamcraft:item.HighEnergyFlowCircuit>, <gregtech:gt.metaitem.01:32673>, <dreamcraft:item.HighEnergyFlowCircuit>],
-[<ore:plateEuropium>, <gregtech:gt.blockmachines:14>, <ore:plateEuropium>],
-[<dreamcraft:item.HighEnergyFlowCircuit>, <ore:plateEuropium>, <dreamcraft:item.HighEnergyFlowCircuit>]]);
-
-// --- Quantum Tank V
-recipes.addShaped(<gregtech:gt.blockmachines:124>, [
-[<dreamcraft:item.PikoCircuit>, <gregtech:gt.metaitem.01:32674>, <dreamcraft:item.PikoCircuit>],
-[<ore:plateAmericium>, <gregtech:gt.blockmachines:15>, <ore:plateAmericium>],
-[<dreamcraft:item.PikoCircuit>, <ore:plateAmericium>, <dreamcraft:item.PikoCircuit>]]);
-
-// --- Quantum Chest IV
-recipes.addShaped(<gregtech:gt.blockmachines:128>, [
-[<dreamcraft:item.HighEnergyFlowCircuit>, <ore:plateEuropium>, <dreamcraft:item.HighEnergyFlowCircuit>],
-[<ore:plateEuropium>, <gregtech:gt.blockmachines:14>, <ore:plateEuropium>],
-[<dreamcraft:item.HighEnergyFlowCircuit>, <gregtech:gt.metaitem.01:32673>, <dreamcraft:item.HighEnergyFlowCircuit>]]);
-
-// --- Quantum Chest V
-recipes.addShaped(<gregtech:gt.blockmachines:129>, [
-[<dreamcraft:item.PikoCircuit>, <ore:plateAmericium>, <dreamcraft:item.PikoCircuit>],
-[<ore:plateAmericium>, <gregtech:gt.blockmachines:15>, <ore:plateAmericium>],
-[<dreamcraft:item.PikoCircuit>, <gregtech:gt.metaitem.01:32674>, <dreamcraft:item.PikoCircuit>]]);
 
 // --- Glass Dust
 recipes.addShapeless(<gregtech:gt.metaitem.01:1890>, [<ore:craftingToolMortar>, <BloodArsenal:glass_shard>]);
@@ -803,6 +845,66 @@ recipes.addShaped(<gregtech:gt.metaitem.01:17804>, [
 [<ore:craftingToolHardHammer>, null, null],
 [<ore:ingotObsidian>, null, null],
 [<ore:ingotObsidian>, null, null]]);
+
+// --- Mossy Marbel Coblestone
+recipes.addShaped(<gregtech:gt.blockstones:2>, [
+[<BiomesOPlenty:moss>, <BiomesOPlenty:moss>, <BiomesOPlenty:moss>],
+[<BiomesOPlenty:moss>, <gregtech:gt.blockstones:1>, <BiomesOPlenty:moss>],
+[<BiomesOPlenty:moss>, <BiomesOPlenty:moss>, <BiomesOPlenty:moss>]]);
+
+// --- Mossy Marbel Bricks
+recipes.addShaped(<gregtech:gt.blockstones:5>, [
+[<BiomesOPlenty:moss>, <BiomesOPlenty:moss>, <BiomesOPlenty:moss>],
+[<BiomesOPlenty:moss>, <gregtech:gt.blockstones:3>, <BiomesOPlenty:moss>],
+[<BiomesOPlenty:moss>, <BiomesOPlenty:moss>, <BiomesOPlenty:moss>]]);
+
+// --- Mossy Light Concrete Coblestone
+recipes.addShaped(<gregtech:gt.blockconcretes:10>, [
+[<BiomesOPlenty:moss>, <BiomesOPlenty:moss>, <BiomesOPlenty:moss>],
+[<BiomesOPlenty:moss>, <gregtech:gt.blockconcretes:9>, <BiomesOPlenty:moss>],
+[<BiomesOPlenty:moss>, <BiomesOPlenty:moss>, <BiomesOPlenty:moss>]]);
+
+// --- Mossy Light Concrete Bricks
+recipes.addShaped(<gregtech:gt.blockconcretes:13>, [
+[<BiomesOPlenty:moss>, <BiomesOPlenty:moss>, <BiomesOPlenty:moss>],
+[<BiomesOPlenty:moss>, <gregtech:gt.blockconcretes:11>, <BiomesOPlenty:moss>],
+[<BiomesOPlenty:moss>, <BiomesOPlenty:moss>, <BiomesOPlenty:moss>]]);
+
+// --- Mossy Basalt Coblestone
+recipes.addShaped(<gregtech:gt.blockstones:10>, [
+[<BiomesOPlenty:moss>, <BiomesOPlenty:moss>, <BiomesOPlenty:moss>],
+[<BiomesOPlenty:moss>, <gregtech:gt.blockstones:9>, <BiomesOPlenty:moss>],
+[<BiomesOPlenty:moss>, <BiomesOPlenty:moss>, <BiomesOPlenty:moss>]]);
+
+// --- Mossy Basalt Bricks
+recipes.addShaped(<gregtech:gt.blockstones:13>, [
+[<BiomesOPlenty:moss>, <BiomesOPlenty:moss>, <BiomesOPlenty:moss>],
+[<BiomesOPlenty:moss>, <gregtech:gt.blockstones:11>, <BiomesOPlenty:moss>],
+[<BiomesOPlenty:moss>, <BiomesOPlenty:moss>, <BiomesOPlenty:moss>]]);
+
+// --- Mossy Granite Black Coblestone
+recipes.addShaped(<gregtech:gt.blockgranites:2>, [
+[<BiomesOPlenty:moss>, <BiomesOPlenty:moss>, <BiomesOPlenty:moss>],
+[<BiomesOPlenty:moss>, <gregtech:gt.blockgranites:1>, <BiomesOPlenty:moss>],
+[<BiomesOPlenty:moss>, <BiomesOPlenty:moss>, <BiomesOPlenty:moss>]]);
+
+// --- Mossy Granite Black Bricks
+recipes.addShaped(<gregtech:gt.blockgranites:5>, [
+[<BiomesOPlenty:moss>, <BiomesOPlenty:moss>, <BiomesOPlenty:moss>],
+[<BiomesOPlenty:moss>, <gregtech:gt.blockgranites:3>, <BiomesOPlenty:moss>],
+[<BiomesOPlenty:moss>, <BiomesOPlenty:moss>, <BiomesOPlenty:moss>]]);
+
+// --- Mossy Granite Red Coblestone
+recipes.addShaped(<gregtech:gt.blockgranites:10>, [
+[<BiomesOPlenty:moss>, <BiomesOPlenty:moss>, <BiomesOPlenty:moss>],
+[<BiomesOPlenty:moss>, <gregtech:gt.blockgranites:9>, <BiomesOPlenty:moss>],
+[<BiomesOPlenty:moss>, <BiomesOPlenty:moss>, <BiomesOPlenty:moss>]]);
+
+// --- Mossy Granite Red Bricks
+recipes.addShaped(<gregtech:gt.blockgranites:13>, [
+[<BiomesOPlenty:moss>, <BiomesOPlenty:moss>, <BiomesOPlenty:moss>],
+[<BiomesOPlenty:moss>, <gregtech:gt.blockgranites:11>, <BiomesOPlenty:moss>],
+[<BiomesOPlenty:moss>, <BiomesOPlenty:moss>, <BiomesOPlenty:moss>]]);
 
 
 
@@ -859,6 +961,9 @@ AlloySmelter.addRecipe(<gregtech:gt.metaitem.01:11300> * 4, <gregtech:gt.metaite
 // -
 AlloySmelter.addRecipe(<gregtech:gt.metaitem.01:11300> * 4, <gregtech:gt.metaitem.01:9035> * 27, <gregtech:gt.metaitem.01:9057> * 9, 200, 16);
 
+// --- Thauminite Ingot
+AlloySmelter.addRecipe(<thaumicbases:resource:1> , <thaumicbases:resource> * 9, <gregtech:gt.metaitem.01:32306> * 0, 200, 16);
+
 // --- Glass
 AlloySmelter.addRecipe(<minecraft:glass>, <gregtech:gt.metaitem.01:2890>, <gregtech:gt.metaitem.01:32308> * 0, 200, 16);
 // -
@@ -906,7 +1011,14 @@ BlastFurnace.addRecipe([<gregtech:gt.metaitem.01:2819>], [<gregtech:gt.metaitem.
 // -
 BlastFurnace.addRecipe([<gregtech:gt.metaitem.01:2819>], [<gregtech:gt.metaitem.01:11020>, <gregtech:gt.metaitem.01:2865>], 500, 480, 2000);
 
+
+
+
+
+
 // --- Canner Recipes ---
+
+
 
 
 // --- Thorium Fuel Rod
@@ -960,121 +1072,11 @@ Compressor.addRecipe(<gregtech:gt.metaitem.01:17525>, <gregtech:gt.metaitem.01:2
 
 
 
-// --- Engraving laser Recipes ---
-
-
-
-
-// --- Flawless Diamond
-PrecisionLaser.addRecipe(<gregtech:gt.metaitem.02:29500>, <gregtech:gt.metaitem.01:24500> * 0, <minecraft:diamond> * 3, 1200, 480);
-
-// --- Exquisite Diamond
-PrecisionLaser.addRecipe(<gregtech:gt.metaitem.02:30500>, <gregtech:gt.metaitem.01:24500> * 0, <gregtech:gt.metaitem.02:29500> * 3, 2400, 1024);
-
-// --- Flawless Emerald
-PrecisionLaser.addRecipe(<gregtech:gt.metaitem.02:29501>, <gregtech:gt.metaitem.01:24500> * 0, <minecraft:emerald> * 3, 1200, 480);
-
-// --- Exquisite Emerald
-PrecisionLaser.addRecipe(<gregtech:gt.metaitem.02:30501>, <gregtech:gt.metaitem.01:24500> * 0, <gregtech:gt.metaitem.02:29501> * 3, 2400, 1024);
-
-// --- Flawless Ruby
-PrecisionLaser.addRecipe(<gregtech:gt.metaitem.02:29502>, <gregtech:gt.metaitem.01:24500> * 0, <gregtech:gt.metaitem.01:8502> * 3, 1200, 480);
-
-// --- Exquisite Ruby
-PrecisionLaser.addRecipe(<gregtech:gt.metaitem.02:30502>, <gregtech:gt.metaitem.01:24500> * 0, <gregtech:gt.metaitem.02:29502> * 3, 2400, 1024);
-
-// --- Flawless Sapphire
-PrecisionLaser.addRecipe(<gregtech:gt.metaitem.02:29503>, <gregtech:gt.metaitem.01:24500> * 0, <gregtech:gt.metaitem.01:8503> * 3, 1200, 480);
-
-// --- Exquisite Sapphire
-PrecisionLaser.addRecipe(<gregtech:gt.metaitem.02:30503>, <gregtech:gt.metaitem.01:24500> * 0, <gregtech:gt.metaitem.02:29503> * 3, 2400, 1024);
-
-// --- Flawless Green Sapphire
-PrecisionLaser.addRecipe(<gregtech:gt.metaitem.02:29504>, <gregtech:gt.metaitem.01:24500> * 0, <gregtech:gt.metaitem.01:8504> * 3, 1200, 480);
-
-// --- Exquisite Green Sapphire
-PrecisionLaser.addRecipe(<gregtech:gt.metaitem.02:30504>, <gregtech:gt.metaitem.01:24500> * 0, <gregtech:gt.metaitem.02:29504> * 3, 2400, 1024);
-
-// --- Flawless Olivine
-PrecisionLaser.addRecipe(<gregtech:gt.metaitem.02:29505>, <gregtech:gt.metaitem.01:24500> * 0, <gregtech:gt.metaitem.01:8505> * 3, 1200, 480);
-
-// --- Exquisite Olivine
-PrecisionLaser.addRecipe(<gregtech:gt.metaitem.02:30505>, <gregtech:gt.metaitem.01:24500> * 0, <gregtech:gt.metaitem.02:29505> * 3, 2400, 1024);
-
-// --- Flawless Topaz
-PrecisionLaser.addRecipe(<gregtech:gt.metaitem.02:29507>, <gregtech:gt.metaitem.01:24500> * 0, <gregtech:gt.metaitem.01:8507> * 3, 1200, 480);
-
-// --- Exquisite Topaz
-PrecisionLaser.addRecipe(<gregtech:gt.metaitem.02:30507>, <gregtech:gt.metaitem.01:24500> * 0, <gregtech:gt.metaitem.02:29507> * 3, 2400, 1024);
-
-// --- Flawless Tanzanite
-PrecisionLaser.addRecipe(<gregtech:gt.metaitem.02:29508>, <gregtech:gt.metaitem.01:24500> * 0, <gregtech:gt.metaitem.01:8508> * 3, 1200, 480);
-
-// --- Exquisite Tanzanite
-PrecisionLaser.addRecipe(<gregtech:gt.metaitem.02:30508>, <gregtech:gt.metaitem.01:24500> * 0, <gregtech:gt.metaitem.02:29508> * 3, 2400, 1024);
-
-// --- Flawless Amethyst
-PrecisionLaser.addRecipe(<gregtech:gt.metaitem.02:29509>, <gregtech:gt.metaitem.01:24500> * 0, <gregtech:gt.metaitem.01:8509> * 3, 1200, 480);
-
-// --- Exquisite Amethyst
-PrecisionLaser.addRecipe(<gregtech:gt.metaitem.02:30509>, <gregtech:gt.metaitem.01:24500> * 0, <gregtech:gt.metaitem.02:29509> * 3, 2400, 1024);
-
-// --- Flawless Opal
-PrecisionLaser.addRecipe(<gregtech:gt.metaitem.02:29510>, <gregtech:gt.metaitem.01:24500> * 0, <gregtech:gt.metaitem.01:8510> * 3, 1200, 480);
-
-// --- Exquisite Opal
-PrecisionLaser.addRecipe(<gregtech:gt.metaitem.02:30510>, <gregtech:gt.metaitem.01:24500> * 0, <gregtech:gt.metaitem.02:29510> * 3, 2400, 1024);
-
-// --- Flawless Jasper
-PrecisionLaser.addRecipe(<gregtech:gt.metaitem.02:29511>, <gregtech:gt.metaitem.01:24500> * 0, <gregtech:gt.metaitem.01:8511> * 3, 1200, 480);
-
-// --- Exquisite Jasper
-PrecisionLaser.addRecipe(<gregtech:gt.metaitem.02:30511>, <gregtech:gt.metaitem.01:24500> * 0, <gregtech:gt.metaitem.02:29511> * 3, 2400, 1024);
-
-// --- Flawless Fools Ruby
-PrecisionLaser.addRecipe(<gregtech:gt.metaitem.02:29512>, <gregtech:gt.metaitem.01:24500> * 0, <gregtech:gt.metaitem.01:8512> * 3, 1200, 480);
-
-// --- Exquisite Fools Ruby
-PrecisionLaser.addRecipe(<gregtech:gt.metaitem.02:30512>, <gregtech:gt.metaitem.01:24500> * 0, <gregtech:gt.metaitem.02:29512> * 3, 2400, 1024);
-
-// --- Flawless Blue Topaz
-PrecisionLaser.addRecipe(<gregtech:gt.metaitem.02:29513>, <gregtech:gt.metaitem.01:24500> * 0, <gregtech:gt.metaitem.01:8513> * 3, 1200, 480);
-
-// --- Exquisite Blue Topaz
-PrecisionLaser.addRecipe(<gregtech:gt.metaitem.02:30513>, <gregtech:gt.metaitem.01:24500> * 0, <gregtech:gt.metaitem.02:29513> * 3, 2400, 1024);
-
-// --- Flawless Amber
-PrecisionLaser.addRecipe(<gregtech:gt.metaitem.02:29514>, <gregtech:gt.metaitem.01:24500> * 0, <Thaumcraft:ItemResource:6> * 3, 1200, 480);
-
-// --- Exquisite Amber
-PrecisionLaser.addRecipe(<gregtech:gt.metaitem.02:30514>, <gregtech:gt.metaitem.01:24500> * 0, <gregtech:gt.metaitem.02:29514> * 3, 2400, 1024);
-
-// --- Flawless Red Granet
-PrecisionLaser.addRecipe(<gregtech:gt.metaitem.02:29527>, <gregtech:gt.metaitem.01:24500> * 0, <gregtech:gt.metaitem.01:8527> * 3, 1200, 480);
-
-// --- Exquisite Red Granet
-PrecisionLaser.addRecipe(<gregtech:gt.metaitem.02:30527>, <gregtech:gt.metaitem.01:24500> * 0, <gregtech:gt.metaitem.02:29527> * 3, 2400, 1024);
-
-// --- Flawless Yellow Granet
-PrecisionLaser.addRecipe(<gregtech:gt.metaitem.02:29528>, <gregtech:gt.metaitem.01:24500> * 0, <gregtech:gt.metaitem.01:8528> * 3, 1200, 480);
-
-// --- Exquisite Yellow Granet
-PrecisionLaser.addRecipe(<gregtech:gt.metaitem.02:30528>, <gregtech:gt.metaitem.01:24500> * 0, <gregtech:gt.metaitem.02:29528> * 3, 2400, 1024);
-
-// --- Flawless Glass Crystal
-PrecisionLaser.addRecipe(<gregtech:gt.metaitem.02:29890>, <gregtech:gt.metaitem.01:24500> * 0, <gregtech:gt.metaitem.01:8890> * 3, 1200, 480);
-
-// --- Exquisite Glass Crystal
-PrecisionLaser.addRecipe(<gregtech:gt.metaitem.02:30890>, <gregtech:gt.metaitem.01:24500> * 0, <gregtech:gt.metaitem.02:29890> * 3, 2400, 1024);
-
-
-
-
 // --- Extractor Recipes ---
 
 
 // --- Rubber Pulp
-Extractor.addRecipe(<gregtech:gt.metaitem.01:2880> * 2, <TConstruct:strangeFood>);
+Extractor.addRecipe(<gregtech:gt.metaitem.01:2896> * 2, <TConstruct:strangeFood>);
 
 
 
@@ -1333,6 +1335,7 @@ Macerator.addRecipe(<gregtech:gt.metaitem.01:1890>, <TConstruct:GlassPane>);
 
 // --- Glass Dust
 Macerator.addRecipe(<gregtech:gt.metaitem.01:2890>, <BloodArsenal:glass_shard> * 2);
+
 
 
 

@@ -22,8 +22,7 @@ val String = <minecraft:string>;
 val Cotton = <Natura:barleyFood:3>;
 val flour = <ore:dustWheat>;
 
-// --- OREDICT STUFF ---
-flour.add(<harvestcraft:flourItem>);
+
 
 // --- Removing Recipes ---
 
@@ -391,7 +390,7 @@ recipes.addShapeless(<harvestcraft:silkentofuItem>, [<ore:craftingToolRollingPin
 
 // --- Rainbow Curry
 recipes.addShaped(<harvestcraft:rainbowcurryItem>, [
-[<minecraft:red_flower:1>, <minecraft:double_plant:2>, <BiomesOPlenty:flowers2:2>],
+[<minecraft:red_flower:1>, <minecraft:tallgrass:1>, <BiomesOPlenty:flowers2:2>],
 [<BiomesOPlenty:flowers2:3>, <minecraft:red_flower>, <minecraft:yellow_flower>, ],
 [<minecraft:bowl>, <harvestcraft:curryItem>, <harvestcraft:skilletItem>]]);
 
@@ -615,16 +614,6 @@ Extractor.addRecipe(<harvestcraft:beeswaxItem>, <harvestcraft:candleberryItem> *
 
 // --- Salt
 Macerator.addRecipe(<gregtech:gt.metaitem.01:2817> * 9, <harvestcraft:spamcompressedsaltBlockalt>);
-
-
-
-// --- Ordict Support ---
-
-
-
-// -- Beeswax
-oreDict.itemBeeswax.add(<harvestcraft:beeswaxItem>);
-
 
 
 

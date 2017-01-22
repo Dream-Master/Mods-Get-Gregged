@@ -76,6 +76,7 @@ val RedAlloyRod = <ore:stickRedAlloy>;
 val BronzeGear = <ore:gearBronze>;
 val IronPlate = <ore:plateAnyIron>;
 val SteelRing = <ore:ringSteel>;
+val StainlessGear = <ore:gearStainlessSteel>;
 val IronRod = <ore:stickAnyIron>;
 val SteelPlate = <ore:plateSteel>;
 val AlPlate = <ore:plateAluminium>;
@@ -538,11 +539,17 @@ recipes.remove(<ExtraUtilities:scanner>);
 // --- Builder Wand
 recipes.remove(<ExtraUtilities:builderswand>);
 
+// --- Super Builder Wand
+recipes.remove(<ExtraUtilities:creativebuilderswand>);
+
 // --- Precision Shears
 recipes.remove(<ExtraUtilities:shears>);
 
 // --- Etheric Sword
 recipes.remove(<ExtraUtilities:ethericsword>);
+
+// --- Kikoku
+recipes.remove(<ExtraUtilities:lawSword>);
 
 // --- Erosion Shovel
 recipes.remove(<ExtraUtilities:erosionShovel>);
@@ -670,7 +677,7 @@ recipes.addShaped(SpeedUp, [
 // --- Item Filter Upgrade
 recipes.addShaped(ItemFilterUp, [
 [RedAlloyPlate, IronBars, RedAlloyPlate],
-[IronBars, DiamondGear, IronBars],
+[IronBars, StainlessGear, IronBars],
 [RedAlloyPlate, IronBars, RedAlloyPlate]]);
 
 // --- Advanced Item Filter
@@ -984,8 +991,15 @@ recipes.addShaped(<ExtraUtilities:spike_base_diamond> * 2, [
 
 // --- Builder Wand
 recipes.addShaped(<ExtraUtilities:builderswand>, [
-[null, <ore:ingotUnstable>, null],
-[null, <TConstruct:toolRod:6>, null]]);
+[null, null, <ExtraUtilities:unstableingot>],
+[null, <ExtraUtilities:unstableingot>, null],
+[<RandomThings:ingredient:1>, null, null]]);
+
+// --- Super Builder Wand
+recipes.addShaped(<ExtraUtilities:creativebuilderswand>, [
+[null, null, <ExtraUtilities:unstableingot:2>],
+[null, <ExtraUtilities:unstableingot:2>, null],
+[<RandomThings:ingredient:1>, null, null]]);
 
 // --- Precision Shears
 recipes.addShaped(<ExtraUtilities:shears>, [
@@ -994,33 +1008,39 @@ recipes.addShaped(<ExtraUtilities:shears>, [
 
 // --- Etheric Sword
 recipes.addShaped(<ExtraUtilities:ethericsword>, [
-[null, <ore:ingotUnstable>, null],
-[null, <ore:ingotUnstable>, null],
-[null, <TConstruct:toolRod:6>, null]]);
+[null, <ExtraUtilities:unstableingot>, null],
+[null, <ExtraUtilities:unstableingot>, null],
+[null, <RandomThings:ingredient:1>, null]]);
+
+// --- Kikoku
+recipes.addShaped(<ExtraUtilities:lawSword>, [
+[null, <ExtraUtilities:unstableingot:2>, null],
+[null, <ExtraUtilities:unstableingot:2>, null],
+[null, <RandomThings:ingredient:1>, null]]);
 
 // --- Erosion Shovel
 recipes.addShaped(<ExtraUtilities:erosionShovel>, [
 [null, <ore:ingotUnstable>, null],
-[null, <TConstruct:toolRod:6>, null],
-[null, <TConstruct:toolRod:6>, null]]);
+[null, <RandomThings:ingredient:1>, null],
+[null, <RandomThings:ingredient:1>, null]]);
 
 // --- Destruction Pickaxe
 recipes.addShaped(<ExtraUtilities:destructionpickaxe>, [
 [<ore:ingotUnstable>, <ore:ingotUnstable>, <ore:ingotUnstable>],
-[null, <TConstruct:toolRod:6>, null],
-[null, <TConstruct:toolRod:6>, null]]);
+[null, <RandomThings:ingredient:1>, null],
+[null, <RandomThings:ingredient:1>, null]]);
 
 // --- Healing Axe
 recipes.addShaped(<ExtraUtilities:defoliageAxe>, [
 [<ore:ingotUnstable>, <ore:ingotUnstable>, null],
-[<ore:ingotUnstable>, <TConstruct:toolRod:6>, null],
-[null, <TConstruct:toolRod:6>, null]]);
+[<ore:ingotUnstable>, <RandomThings:ingredient:1>, null],
+[null, <RandomThings:ingredient:1>, null]]);
 
 // --- Reversing Hoe
 recipes.addShaped(<ExtraUtilities:temporalHoe>, [
 [<ore:ingotUnstable>, <ore:ingotUnstable>, null],
-[null, <TConstruct:toolRod:6>, null],
-[null, <TConstruct:toolRod:6>, null]]);
+[null, <RandomThings:ingredient:1>, null],
+[null, <RandomThings:ingredient:1>, null]]);
 
 
 
@@ -1094,7 +1114,7 @@ Assembler.addRecipe(<ExtraUtilities:budoff>, <Railcraft:detector:2>, <minecraft:
 Assembler.addRecipe(<ExtraUtilities:budoff:3>, <ExtraUtilities:budoff>, <minecraft:redstone_block> * 4, 200, 120);
  
 // --- Chandelier
-Assembler.addRecipe(Chandelier, <minecraft:torch> * 5, <gregtech:gt.metaitem.02:28500>, <liquid:molten.gold> * 576, 600, 30);
+Assembler.addRecipe(Chandelier, <minecraft:torch> * 5, <gregtech:gt.metaitem.02:28500>, <liquid:molten.tin> * 1440, 600, 30);
 
 // --- Edged Stone Bricks
 Assembler.addRecipe(<ExtraUtilities:decorativeBlock1> * 9, <minecraft:stone> * 4, <minecraft:stonebrick> * 5, 180, 4);
@@ -1106,7 +1126,7 @@ Assembler.addRecipe(<ExtraUtilities:decorativeBlock1:4>, <ExtraUtilities:decorat
 Assembler.addRecipe(<ExtraUtilities:decorativeBlock1:7>, <ExtraUtilities:decorativeBlock1:4>, <gregtech:gt.integrated_circuit:4> * 0, 20, 4);
 
 // --- Gravel Bricks
-Assembler.addRecipe(<ExtraUtilities:decorativeBlock1:6>, <minecraft:gravel>, <gregtech:gt.integrated_circuit:1> * 0, 20, 4);
+Assembler.addRecipe(<ExtraUtilities:decorativeBlock1:6>, <minecraft:gravel>, <gregtech:gt.integrated_circuit:2> * 0, 20, 4);
 
 // --- Frosted Stone
 Assembler.addRecipe(<ExtraUtilities:decorativeBlock1:3> * 4, <minecraft:stone>, <minecraft:ice> * 4, 80, 4);
@@ -1174,9 +1194,6 @@ Assembler.addRecipe(<ExtraUtilities:golden_lasso>, <minecraft:ender_eye>, <gregt
 
 // --- Portable Scanner
 Assembler.addRecipe(<ExtraUtilities:scanner>, <gregtech:gt.metaitem.01:32762>, <minecraft:ender_eye>, 600, 120);
-
-// --- Bedrockium Ingot
-Assembler.addRecipe(<ExtraUtilities:bedrockiumIngot>, <gregtech:gt.metaitem.01:11129>, <gregtech:gt.integrated_circuit:1> * 0, <liquid:ic2uumatter> * 1000, 2, 122880);
 
 // --- Compressed Cobblestone
 Assembler.addRecipe(<ExtraUtilities:cobblestone_compressed>, <gregtech:gt.integrated_circuit:1> * 0, <minecraft:cobblestone> * 9, 100, 16);
@@ -1293,11 +1310,3 @@ ImplosionCompressor.addRecipe(<ExtraUtilities:cobblestone_compressed:13>, <Extra
 
 // --- Double Compressed Sand
 ImplosionCompressor.addRecipe(<ExtraUtilities:cobblestone_compressed:15>, <ExtraUtilities:cobblestone_compressed:14> * 9, 1);
-
-
-// --- Ordict Stuff ---
-
-
-
-// --- Precision Shears
-oreDict.craftingToolShears.add(<ExtraUtilities:shears:16>);
