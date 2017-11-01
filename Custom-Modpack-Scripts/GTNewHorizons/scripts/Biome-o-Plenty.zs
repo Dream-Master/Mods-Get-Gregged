@@ -213,3 +213,60 @@ mods.thaumcraft.Aspects.set(<BiomesOPlenty:bones:1>, "corpus 2, exanimis 6, mort
 
 // --- Large Bone Segment
 mods.thaumcraft.Aspects.set(<BiomesOPlenty:bones:2>, "corpus 3, exanimis 9, mortuus 6");
+
+
+
+// --- Dyes Extractor Recipes ---
+
+
+// --- Cyan
+Extractor.addRecipe(<minecraft:dye:6> * 2, <BiomesOPlenty:flowers:1>);
+
+// --- Black
+Extractor.addRecipe(<BiomesOPlenty:misc:9> * 2, <BiomesOPlenty:flowers:2>);
+
+// --- Light Blue
+Extractor.addRecipe(<minecraft:dye:12> * 2, <BiomesOPlenty:flowers:4>);
+Extractor.addRecipe(<minecraft:dye:12> * 2, <BiomesOPlenty:flowers2:7>);
+
+// --- Orange
+Extractor.addRecipe(<minecraft:dye:14> * 2, <BiomesOPlenty:flowers:5>);
+Extractor.addRecipe(<minecraft:dye:14> * 2, <BiomesOPlenty:flowers2:2>);
+
+// --- Pink
+Extractor.addRecipe(<minecraft:dye:9> * 2, <BiomesOPlenty:flowers:6>);
+Extractor.addRecipe(<minecraft:dye:9> * 2, <BiomesOPlenty:flowers2:0>);
+
+// --- Magenta
+Extractor.addRecipe(<minecraft:dye:13> * 2, <BiomesOPlenty:flowers:7>);
+
+// --- Purple
+Extractor.addRecipe(<minecraft:dye:5> * 2, <BiomesOPlenty:flowers:8>);
+Extractor.addRecipe(<minecraft:dye:5> * 2, <BiomesOPlenty:flowers2:3>);
+
+// --- White
+Extractor.addRecipe(<BiomesOPlenty:misc:8> * 2, <BiomesOPlenty:flowers:9>);
+Extractor.addRecipe(<BiomesOPlenty:misc:8> * 2, <BiomesOPlenty:flowers2:1>);
+
+// --- Light Gray
+Extractor.addRecipe(<minecraft:dye:7> * 2, <BiomesOPlenty:flowers:15>);
+
+// --- Yellow
+Extractor.addRecipe(<minecraft:dye:11> * 2, <BiomesOPlenty:flowers2:4>);
+
+// --- Blue
+Extractor.addRecipe(<BiomesOPlenty:misc:5> * 2, <BiomesOPlenty:flowers2:5>);
+Extractor.addRecipe(<BiomesOPlenty:misc:5> * 2, <BiomesOPlenty:mushrooms:2>);
+
+// --- Roes Red
+Extractor.addRecipe(<minecraft:dye:1> * 2, <BiomesOPlenty:flowers2:8>);
+
+// --- Lime
+Extractor.addRecipe(<minecraft:dye:10> * 2, <BiomesOPlenty:mushrooms:3>);
+
+// --- Brown
+Extractor.addRecipe(<BiomesOPlenty:misc:6> * 2, <BiomesOPlenty:mushrooms:4>);
+Extractor.addRecipe(<BiomesOPlenty:misc:6> * 2, <BiomesOPlenty:plants:7>);
+
+// --- Green
+Extractor.addRecipe(<BiomesOPlenty:misc:7> * 2, <BiomesOPlenty:moss>);
